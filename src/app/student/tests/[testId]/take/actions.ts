@@ -37,7 +37,7 @@ export async function submitAttempt(attemptId: string) {
   ]);
 
   const { score, maxScore, results } = gradeAttempt(
-    questions.map((q) => ({ id: q.id, points: q.points, options: q.options })),
+    questions.map((q) => ({ id: q.id, options: q.options })),
     existingAnswers.map((a) => ({ questionId: a.questionId, selectedOptionId: a.selectedOptionId }))
   );
 

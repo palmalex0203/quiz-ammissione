@@ -3,6 +3,7 @@
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
+import { POINTS_CORRECT } from "@/lib/grading";
 
 export async function startAttempt(formData: FormData): Promise<void> {
   const session = await requireStudent();
@@ -13,7 +14,7 @@ export async function startAttempt(formData: FormData): Promise<void> {
     where: { id: testId },
     include: {
       assignments: { where: { studentId: session.user.id } },
-      questions: { select: { id: true, points: true } },
+      questions: { select: { id: true } },
     },
   });
 
@@ -42,7 +43,7 @@ export async function startAttempt(formData: FormData): Promise<void> {
     }
   }
 
-  const maxScore = test.questions.reduce((sum, q) => sum + q.points, 0);
+  const maxScore = test.questions.length * POINTS_CORRECT;
 
   await prisma.attempt.create({
     data: {

@@ -29,6 +29,9 @@ export default async function TeacherAttemptDetailPage({
   const percentage =
     attempt.maxScore && attempt.maxScore > 0 ? Math.round(((attempt.score ?? 0) / attempt.maxScore) * 100) : 0;
   const sortedAnswers = [...attempt.answers].sort((a, b) => a.question.order - b.question.order);
+  const correctCount = sortedAnswers.filter((a) => a.isCorrect).length;
+  const omittedCount = sortedAnswers.filter((a) => !a.selectedOptionId).length;
+  const incorrectCount = sortedAnswers.length - correctCount - omittedCount;
 
   return (
     <div className="flex flex-col gap-6">
@@ -49,23 +52,42 @@ export default async function TeacherAttemptDetailPage({
         <p className="text-3xl font-semibold text-zinc-900 dark:text-zinc-50">
           {attempt.score} / {attempt.maxScore}
         </p>
-        <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">{percentage}%</p>
+        <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+          {percentage}% &middot; {correctCount} corrette, {incorrectCount} errate, {omittedCount} omesse su{" "}
+          {sortedAnswers.length}
+        </p>
       </div>
 
       <div className="flex flex-col gap-3">
         {sortedAnswers.map((answer, index) => {
           const correctOption = answer.question.options.find((o) => o.isCorrect);
+          const wasOmitted = !answer.selectedOptionId;
           return (
             <div
               key={answer.id}
               className={`rounded-xl border p-5 ${
                 answer.isCorrect
                   ? "border-green-200 bg-green-50 dark:border-green-900/60 dark:bg-green-950/20"
-                  : "border-red-200 bg-red-50 dark:border-red-900/60 dark:bg-red-950/20"
+                  : wasOmitted
+                    ? "border-zinc-200 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900/40"
+                    : "border-red-200 bg-red-50 dark:border-red-900/60 dark:bg-red-950/20"
               }`}
             >
-              <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
-                Domanda {index + 1} &middot; {answer.question.subject}
+              <p className="flex items-center justify-between text-xs font-medium text-zinc-500 dark:text-zinc-400">
+                <span>
+                  Domanda {index + 1} &middot; {answer.question.subject}
+                </span>
+                <span
+                  className={
+                    answer.isCorrect
+                      ? "text-green-700 dark:text-green-400"
+                      : wasOmitted
+                        ? "text-zinc-500 dark:text-zinc-400"
+                        : "text-red-700 dark:text-red-400"
+                  }
+                >
+                  {answer.isCorrect ? "+1,5" : wasOmitted ? "0" : "−0,4"}
+                </span>
               </p>
               <p className="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">
                 {answer.question.text}
