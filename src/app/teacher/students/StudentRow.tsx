@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useActionState, useState } from "react";
 import { resetStudentPassword, deleteStudent, type ActionState } from "./actions";
 
@@ -17,13 +18,21 @@ export function StudentRow({
     <div className="border-b border-zinc-100 py-3 last:border-b-0 dark:border-zinc-900">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div>
-          <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">{student.name}</p>
+          <Link
+            href={`/teacher/results/student/${student.id}`}
+            className="text-sm font-medium text-zinc-900 hover:underline dark:text-zinc-100"
+          >
+            {student.name}
+          </Link>
           <p className="text-xs text-zinc-500 dark:text-zinc-400">{student.email}</p>
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-xs text-zinc-500 dark:text-zinc-400">
-            {student.attemptCount} tentativi
-          </span>
+          <Link
+            href={`/teacher/results/student/${student.id}`}
+            className="text-xs font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+          >
+            {student.attemptCount} tentativi &middot; vedi risultati
+          </Link>
           <button
             type="button"
             onClick={() => setShowReset((v) => !v)}
