@@ -1,0 +1,115 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { prisma } from "@/lib/prisma";
+import { requireStudent } from "@/lib/permissions";
+
+export default async function AttemptResultPage({
+  params,
+}: {
+  params: Promise<{ testId: string; attemptId: string }>;
+}) {
+  const { testId, attemptId } = await params;
+  const session = await requireStudent();
+
+  const attempt = await prisma.attempt.findUnique({
+    where: { id: attemptId },
+    include: {
+      test: true,
+      answers: {
+        include: {
+          question: { include: { options: { orderBy: { order: "asc" } } } },
+        },
+      },
+    },
+  });
+
+  if (
+    !attempt ||
+    attempt.studentId !== session.user.id ||
+    attempt.testId !== testId ||
+    attempt.status !== "SUBMITTED"
+  ) {
+    notFound();
+  }
+
+  const percentage =
+    attempt.maxScore && attempt.maxScore > 0 ? Math.round(((attempt.score ?? 0) / attempt.maxScore) * 100) : 0;
+
+  const sortedAnswers = [...attempt.answers].sort((a, b) => a.question.order - b.question.order);
+  const correctCount = sortedAnswers.filter((a) => a.isCorrect).length;
+
+  return (
+    <div className="flex flex-col gap-6">
+      <div>
+        <Link
+          href="/student/dashboard"
+          className="text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+        >
+          &larr; I miei test
+        </Link>
+        <h1 className="mt-1 text-2xl font-semibold text-zinc-900 dark:text-zinc-50">{attempt.test.title}</h1>
+      </div>
+
+      <div className="rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
+        <p className="text-3xl font-semibold text-zinc-900 dark:text-zinc-50">
+          {attempt.score} / {attempt.maxScore}
+        </p>
+        <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+          {percentage}% &middot; {correctCount} corrette su {sortedAnswers.length}
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-3">
+        {sortedAnswers.map((answer, index) => {
+          const correctOption = answer.question.options.find((o) => o.isCorrect);
+          return (
+            <div
+              key={answer.id}
+              className={`rounded-xl border p-5 ${
+                answer.isCorrect
+                  ? "border-green-200 bg-green-50 dark:border-green-900/60 dark:bg-green-950/20"
+                  : "border-red-200 bg-red-50 dark:border-red-900/60 dark:bg-red-950/20"
+              }`}
+            >
+              <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
+                Domanda {index + 1} &middot; {answer.question.subject}
+              </p>
+              <p className="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                {answer.question.text}
+              </p>
+              <ul className="mt-2 flex flex-col gap-0.5">
+                {answer.question.options.map((option) => {
+                  const wasSelected = option.id === answer.selectedOptionId;
+                  return (
+                    <li
+                      key={option.id}
+                      className={`text-xs ${
+                        option.isCorrect
+                          ? "font-medium text-green-700 dark:text-green-400"
+                          : wasSelected
+                            ? "font-medium text-red-700 dark:text-red-400"
+                            : "text-zinc-500 dark:text-zinc-400"
+                      }`}
+                    >
+                      {option.isCorrect ? "✓ " : wasSelected ? "✗ " : "— "}
+                      {option.text}
+                      {wasSelected && " (la tua risposta)"}
+                    </li>
+                  );
+                })}
+              </ul>
+              {!answer.isCorrect && correctOption && (
+                <p className="mt-2 text-xs text-zinc-600 dark:text-zinc-400">
+                  Risposta corretta: <span className="font-medium">{correctOption.text}</span>
+                </p>
+              )}
+              {!answer.selectedOptionId && (
+                <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">Nessuna risposta data.</p>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
