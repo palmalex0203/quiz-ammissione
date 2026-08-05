@@ -19,6 +19,11 @@ async function main() {
   const teacher = await upsertUser(teacherName, teacherEmail, teacherPassword, "TEACHER");
   console.log(`Insegnante pronto: ${teacher.email}`);
 
+  if (process.env.SEED_SAMPLE_DATA === "false") {
+    console.log("SEED_SAMPLE_DATA=false: salto la creazione di studenti e test di esempio.");
+    return;
+  }
+
   const students = await Promise.all([
     upsertUser("Studente Uno", "studente1@example.com", "studente123", "STUDENT"),
     upsertUser("Studente Due", "studente2@example.com", "studente123", "STUDENT"),
