@@ -45,3 +45,6 @@ next-env.d.ts
 # database locale (SQLite di sviluppo)
 /prisma/dev.db
 /prisma/dev.db-*
+
+.vercel
+.env*
