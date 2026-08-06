@@ -13,14 +13,19 @@ export default async function StudentLayout({ children }: { children: ReactNode 
     <div className="min-h-screen bg-zinc-50 dark:bg-black">
       <header className="border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
-          <nav className="flex gap-5 text-sm font-medium text-zinc-600 dark:text-zinc-400">
-            <Link href="/student/dashboard" className="hover:text-zinc-900 dark:hover:text-zinc-100">
-              I miei test
+          <div className="flex items-center gap-6">
+            <Link href="/student/dashboard" className="shrink-0">
+              <img src="/profor-logo.png" alt="Profor" className="h-7 w-auto dark:brightness-125" />
             </Link>
-            <Link href="/student/history" className="hover:text-zinc-900 dark:hover:text-zinc-100">
-              Storico
-            </Link>
-          </nav>
+            <nav className="flex gap-5 text-sm font-medium text-zinc-600 dark:text-zinc-400">
+              <Link href="/student/dashboard" className="hover:text-zinc-900 dark:hover:text-zinc-100">
+                I miei test
+              </Link>
+              <Link href="/student/history" className="hover:text-zinc-900 dark:hover:text-zinc-100">
+                Storico
+              </Link>
+            </nav>
+          </div>
           <form
             action={async () => {
               "use server";

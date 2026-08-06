@@ -34,10 +34,17 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 px-4 dark:bg-black">
-      <div className="w-full max-w-sm rounded-xl border border-zinc-200 bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-zinc-50 px-4 dark:bg-black">
+      <img
+        src="/profor-logo.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 w-[900px] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-[0.06] dark:opacity-[0.12]"
+      />
+      <div className="relative w-full max-w-sm rounded-xl border border-zinc-200 bg-white p-8 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+        <img src="/profor-logo.png" alt="Profor - Ente di Formazione" className="mb-4 h-10 w-auto" />
         <h1 className="mb-1 text-xl font-semibold text-zinc-900 dark:text-zinc-50">
-          Profor - Preparazione ai Test
+          Preparazione ai Test
         </h1>
         <p className="mb-6 text-sm text-zinc-500 dark:text-zinc-400">Accedi con le tue credenziali</p>
 
