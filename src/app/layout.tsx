@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Simulazioni Test di Ammissione",
+  title: "Profor - Preparazione ai Test",
   description: "Piattaforma per simulazioni dei test di ammissione alle Professioni Sanitarie",
 };
 
