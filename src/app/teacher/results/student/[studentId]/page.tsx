@@ -25,6 +25,8 @@ export default async function StudentResultsPage({
     },
   });
 
+  const GENERATED_FOLDER_KEY = "__generated__";
+
   function percentageOf(a: (typeof attempts)[number]) {
     return a.maxScore && a.maxScore > 0 ? ((a.score ?? 0) / a.maxScore) * 100 : 0;
   }
@@ -60,10 +62,15 @@ export default async function StudentResultsPage({
   const folders: TestFolder[] = [];
   const folderIndex = new Map<string, TestFolder>();
   for (const attempt of attempts) {
-    let folder = folderIndex.get(attempt.testId);
+    const key = attempt.test.isGenerated ? GENERATED_FOLDER_KEY : attempt.testId;
+    let folder = folderIndex.get(key);
     if (!folder) {
-      folder = { testId: attempt.testId, testTitle: attempt.test.title, attempts: [] };
-      folderIndex.set(attempt.testId, folder);
+      folder = {
+        testId: key,
+        testTitle: attempt.test.isGenerated ? "Simulazioni casuali generate" : attempt.test.title,
+        attempts: [],
+      };
+      folderIndex.set(key, folder);
       folders.push(folder);
     }
     folder.attempts.push(attempt);
@@ -163,12 +170,18 @@ export default async function StudentResultsPage({
                 className="rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950"
               >
                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 px-5 py-3 dark:border-zinc-900">
-                  <Link
-                    href={`/teacher/results/test/${folder.testId}`}
-                    className="text-sm font-medium text-zinc-900 hover:underline dark:text-zinc-100"
-                  >
-                    {folder.testTitle}
-                  </Link>
+                  {folder.testId === GENERATED_FOLDER_KEY ? (
+                    <span className="flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                      🎲 {folder.testTitle}
+                    </span>
+                  ) : (
+                    <Link
+                      href={`/teacher/results/test/${folder.testId}`}
+                      className="text-sm font-medium text-zinc-900 hover:underline dark:text-zinc-100"
+                    >
+                      {folder.testTitle}
+                    </Link>
+                  )}
                   <p className="text-xs text-zinc-500 dark:text-zinc-400">
                     {folder.attempts.length} tentativi &middot; media {folderAvg}% &middot; migliore {folderBest}%
                   </p>

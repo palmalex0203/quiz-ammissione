@@ -47,6 +47,9 @@ model Test {
   shuffleQuestions Boolean  @default(false)
   timeLimitMinutes Int?
   maxAttempts      Int?
+  kind             String   @default("SIMULAZIONE")
+  folder           String?
+  isGenerated      Boolean  @default(false)
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
 

@@ -28,7 +28,7 @@ export default async function StudentHistoryPage() {
             <Link
               key={attempt.id}
               href={`/student/tests/${attempt.testId}/result/${attempt.id}`}
-              className="flex items-center justify-between rounded-xl border border-zinc-200 bg-white p-5 hover:border-zinc-300 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:border-zinc-700"
+              className="flex items-center justify-between rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm transition-colors hover:border-orange-200 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:border-orange-500/30"
             >
               <div>
                 <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">{attempt.test.title}</p>

@@ -4,7 +4,8 @@
 // Formato JSON atteso: un array di domande
 // [{ subject: string, text: string, options: [{ text: string, isCorrect: boolean }] }, ...]
 //
-// Uso: npx tsx scripts/import-test.ts <percorso-questions.json> "<Titolo del test>" ["<descrizione>"]
+// Uso: npx tsx scripts/import-test.ts <percorso-questions.json> "<Titolo del test>" ["<descrizione>"] ["<kind>"] ["<folder>"]
+// kind: SIMULAZIONE (default) o ESERCITAZIONE. folder: etichetta di raggruppamento (es. "Chimica").
 import "dotenv/config";
 import { readFileSync } from "node:fs";
 import { prisma } from "../src/lib/prisma";
@@ -18,7 +19,7 @@ type ImportedQuestion = {
 };
 
 async function main() {
-  const [jsonPath, title, description] = process.argv.slice(2);
+  const [jsonPath, title, description, kind, folder] = process.argv.slice(2);
   if (!jsonPath || !title) {
     console.error('Uso: npx tsx scripts/import-test.ts <percorso-questions.json> "<Titolo del test>" ["<descrizione>"]');
     process.exit(1);
@@ -43,6 +44,8 @@ async function main() {
       description: description ?? null,
       createdById: teacher.id,
       isPublished: true,
+      kind: kind ?? "SIMULAZIONE",
+      folder: folder ?? null,
       questions: {
         create: questions.map((q, i) => ({
           type: q.type ?? "MULTIPLE_CHOICE",
