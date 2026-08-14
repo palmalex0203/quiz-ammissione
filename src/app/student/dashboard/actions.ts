@@ -83,7 +83,7 @@ export async function generateRandomSimulation(): Promise<void> {
 
   for (const block of OFFICIAL_STRUCTURE) {
     const pool = await prisma.question.findMany({
-      where: { subject: block.subject, test: { isPublished: true, isGenerated: false } },
+      where: { subject: block.subject, test: { kind: "POOL" } },
       include: { options: true },
     });
     if (pool.length < block.count) {

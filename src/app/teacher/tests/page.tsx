@@ -7,7 +7,7 @@ type TestRow = Awaited<ReturnType<typeof loadTests>>[number];
 
 async function loadTests(teacherId: string) {
   return prisma.test.findMany({
-    where: { createdById: teacherId, isGenerated: false },
+    where: { createdById: teacherId, kind: { in: ["SIMULAZIONE", "ESERCITAZIONE"] } },
     orderBy: { createdAt: "desc" },
     include: { _count: { select: { questions: true, attempts: true } } },
   });
