@@ -67,9 +67,9 @@ export function TakeTestForm({
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex flex-wrap items-center justify-between gap-2">
+      <div className="sticky top-0 z-10 -mx-4 flex flex-wrap items-center justify-between gap-2 border-b border-zinc-200 bg-white/95 px-4 py-3 backdrop-blur supports-[backdrop-filter]:bg-white/80 dark:border-zinc-800 dark:bg-zinc-950/95 dark:supports-[backdrop-filter]:bg-zinc-950/80">
         <div>
-          <h1 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">{testTitle}</h1>
+          <h1 className="text-lg font-semibold text-zinc-900 sm:text-2xl dark:text-zinc-50">{testTitle}</h1>
           <p className="text-sm text-zinc-500 dark:text-zinc-400">
             {answeredCount}/{questions.length} risposte date
           </p>
