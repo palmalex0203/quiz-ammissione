@@ -13,7 +13,10 @@ export default async function ResultsPage({
 
   const [students, tests] = await Promise.all([
     prisma.user.findMany({ where: { role: "STUDENT" }, orderBy: { name: "asc" } }),
-    prisma.test.findMany({ where: { createdById: session.user.id }, orderBy: { title: "asc" } }),
+    prisma.test.findMany({
+      where: { createdById: session.user.id, kind: { in: ["SIMULAZIONE", "ESERCITAZIONE"] } },
+      orderBy: { title: "asc" },
+    }),
   ]);
 
   const where: Prisma.AttemptWhereInput = {
