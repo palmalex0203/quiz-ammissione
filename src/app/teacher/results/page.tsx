@@ -32,8 +32,69 @@ export default async function ResultsPage({
   const attempts = await prisma.attempt.findMany({
     where,
     orderBy: { submittedAt: "desc" },
-    include: { student: true, test: true },
+    include: {
+      student: true,
+      test: true,
+      answers: { include: { question: { select: { subject: true } } } },
+    },
   });
+
+  function percentageOf(a: (typeof attempts)[number]) {
+    return a.maxScore && a.maxScore > 0 ? ((a.score ?? 0) / a.maxScore) * 100 : 0;
+  }
+
+  // Riepilogo per studente: tentativi, media, materia più debole - ordinato dal
+  // rendimento più basso, così l'insegnante vede subito chi ha più bisogno di aiuto.
+  type StudentSummary = {
+    studentId: string;
+    studentName: string;
+    attemptCount: number;
+    avgPercentage: number;
+    weakestSubject: string | null;
+  };
+  const byStudent = new Map<string, typeof attempts>();
+  for (const a of attempts) {
+    const list = byStudent.get(a.studentId) ?? [];
+    list.push(a);
+    byStudent.set(a.studentId, list);
+  }
+  const studentSummaries: StudentSummary[] = [...byStudent.entries()].map(([studentId, studentAttempts]) => {
+    const subjectStats = new Map<string, { correct: number; total: number }>();
+    for (const a of studentAttempts) {
+      for (const answer of a.answers) {
+        const stat = subjectStats.get(answer.question.subject) ?? { correct: 0, total: 0 };
+        stat.total += 1;
+        if (answer.isCorrect) stat.correct += 1;
+        subjectStats.set(answer.question.subject, stat);
+      }
+    }
+    const weakest = [...subjectStats.entries()].sort((a, b) => a[1].correct / a[1].total - b[1].correct / b[1].total)[0];
+    return {
+      studentId,
+      studentName: studentAttempts[0].student.name,
+      attemptCount: studentAttempts.length,
+      avgPercentage: Math.round(
+        studentAttempts.reduce((sum, a) => sum + percentageOf(a), 0) / studentAttempts.length
+      ),
+      weakestSubject: weakest ? weakest[0] : null,
+    };
+  });
+  studentSummaries.sort((a, b) => a.avgPercentage - b.avgPercentage);
+
+  // Andamento per materia su tutta la classe (nel filtro corrente) - ordinato dalla
+  // materia più debole, per individuare a colpo d'occhio le lacune diffuse.
+  const classSubjectStats = new Map<string, { correct: number; total: number }>();
+  for (const a of attempts) {
+    for (const answer of a.answers) {
+      const stat = classSubjectStats.get(answer.question.subject) ?? { correct: 0, total: 0 };
+      stat.total += 1;
+      if (answer.isCorrect) stat.correct += 1;
+      classSubjectStats.set(answer.question.subject, stat);
+    }
+  }
+  const classSubjectRows = [...classSubjectStats.entries()].sort(
+    (a, b) => a[1].correct / a[1].total - b[1].correct / b[1].total
+  );
 
   return (
     <div className="flex flex-col gap-6">
@@ -107,7 +168,87 @@ export default async function ResultsPage({
         )}
       </form>
 
-      <div className="overflow-x-auto rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
+      {studentSummaries.length > 0 && (
+        <section className="flex flex-col gap-3">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+            Panoramica per studente
+          </h2>
+          <div className="overflow-x-auto rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
+            <table className="w-full text-left text-sm">
+              <thead className="border-b border-zinc-200 text-xs text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+                <tr>
+                  <th className="px-4 py-3 font-medium">Studente</th>
+                  <th className="px-4 py-3 font-medium">Tentativi</th>
+                  <th className="px-4 py-3 font-medium">Media</th>
+                  <th className="px-4 py-3 font-medium">Materia più debole</th>
+                </tr>
+              </thead>
+              <tbody>
+                {studentSummaries.map((s) => (
+                  <tr key={s.studentId} className="border-b border-zinc-100 last:border-b-0 dark:border-zinc-900">
+                    <td className="px-4 py-3">
+                      <Link
+                        href={`/teacher/results/student/${s.studentId}`}
+                        className="font-medium text-zinc-900 hover:underline dark:text-zinc-100"
+                      >
+                        {s.studentName}
+                      </Link>
+                    </td>
+                    <td className="px-4 py-3 text-zinc-600 dark:text-zinc-400">{s.attemptCount}</td>
+                    <td className="px-4 py-3">
+                      <span
+                        className={`rounded-full px-2 py-0.5 text-xs font-medium ${
+                          s.avgPercentage < 50
+                            ? "bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-400"
+                            : s.avgPercentage < 70
+                              ? "bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-400"
+                              : "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400"
+                        }`}
+                      >
+                        {s.avgPercentage}%
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 text-zinc-600 dark:text-zinc-400">{s.weakestSubject ?? "—"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
+      {classSubjectRows.length > 0 && (
+        <section className="flex flex-col gap-3">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+            Andamento per materia (tutta la classe)
+          </h2>
+          <div className="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-950">
+            <ul className="flex flex-col gap-2.5">
+              {classSubjectRows.map(([subject, stat]) => {
+                const pct = Math.round((stat.correct / stat.total) * 100);
+                return (
+                  <li key={subject} className="flex items-center gap-3 text-sm">
+                    <span className="w-48 shrink-0 truncate text-zinc-700 dark:text-zinc-300">{subject}</span>
+                    <span className="h-2 flex-1 overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-800">
+                      <span
+                        className="block h-full rounded-full bg-orange-500 dark:bg-orange-400"
+                        style={{ width: `${pct}%` }}
+                      />
+                    </span>
+                    <span className="w-12 shrink-0 text-right text-zinc-500 dark:text-zinc-400">{pct}%</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      <section className="flex flex-col gap-3">
+        <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+          Tutti i tentativi
+        </h2>
+        <div className="overflow-x-auto rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
         <table className="w-full text-left text-sm">
           <thead className="border-b border-zinc-200 text-xs text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
             <tr>
@@ -161,7 +302,8 @@ export default async function ResultsPage({
             })}
           </tbody>
         </table>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
+import { TrendChart } from "./TrendChart";
 
 export default async function StudentResultsPage({
   params,
@@ -103,6 +104,21 @@ export default async function StudentResultsPage({
           <p className="mt-1 text-3xl font-semibold text-zinc-900 dark:text-zinc-50">{folders.length}</p>
         </div>
       </div>
+
+      {attempts.length >= 2 && (
+        <div className="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950">
+          <h2 className="mb-3 text-sm font-medium text-zinc-900 dark:text-zinc-50">Andamento nel tempo</h2>
+          <TrendChart
+            points={[...attempts]
+              .filter((a) => a.submittedAt)
+              .sort((a, b) => a.submittedAt!.getTime() - b.submittedAt!.getTime())
+              .map((a) => ({
+                date: a.submittedAt!.toLocaleDateString("it-IT", { day: "2-digit", month: "2-digit" }),
+                percentage: Math.round(percentageOf(a)),
+              }))}
+          />
+        </div>
+      )}
 
       {(strongestSubject || weakestSubject) && (
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
