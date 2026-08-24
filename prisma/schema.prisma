@@ -56,6 +56,9 @@ model Test {
   questions   Question[]
   assignments TestAssignment[]
   attempts    Attempt[]
+
+  @@index([kind])
+  @@index([createdById])
 }
 
 model Question {
@@ -70,6 +73,9 @@ model Question {
 
   options       AnswerOption[]
   answerRecords AnswerRecord[]
+
+  @@index([testId])
+  @@index([subject])
 }
 
 model AnswerOption {
@@ -107,6 +113,10 @@ model Attempt {
   maxScore    Float?
 
   answers AnswerRecord[]
+
+  @@index([studentId])
+  @@index([testId])
+  @@index([status])
 }
 
 model AnswerRecord {
