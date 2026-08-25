@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useTransition } from "react";
-import { saveAnswer, submitAttempt } from "./actions";
+import { clearAnswer, saveAnswer, submitAttempt } from "./actions";
 
 type Question = {
   id: string;
@@ -63,6 +63,17 @@ export function TakeTestForm({
     });
   }
 
+  function deselectOption(questionId: string) {
+    setAnswers((prev) => {
+      const next = { ...prev };
+      delete next[questionId];
+      return next;
+    });
+    startSaveTransition(async () => {
+      await clearAnswer(attemptId, questionId);
+    });
+  }
+
   const answeredCount = Object.keys(answers).length;
 
   return (
@@ -107,6 +118,9 @@ export function TakeTestForm({
                     type="radio"
                     name={`question-${q.id}`}
                     checked={answers[q.id] === option.id}
+                    onClick={() => {
+                      if (answers[q.id] === option.id) deselectOption(q.id);
+                    }}
                     onChange={() => selectOption(q.id, option.id)}
                     className="h-4 w-4"
                   />

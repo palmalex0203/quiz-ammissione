@@ -24,6 +24,15 @@ export async function saveAnswer(attemptId: string, questionId: string, selected
   });
 }
 
+export async function clearAnswer(attemptId: string, questionId: string) {
+  const session = await requireStudent();
+  const attempt = await getOwnedInProgressAttempt(attemptId, session.user.id);
+
+  await prisma.answerRecord.deleteMany({
+    where: { attemptId: attempt.id, questionId },
+  });
+}
+
 export async function submitAttempt(attemptId: string) {
   const session = await requireStudent();
   const attempt = await getOwnedInProgressAttempt(attemptId, session.user.id);
