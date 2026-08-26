@@ -5,6 +5,12 @@ import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
 import { POINTS_CORRECT } from "@/lib/grading";
 import { PRACTICE_SIZES } from "@/lib/subjects";
+import {
+  isKnownTopic,
+  topicLabel,
+  TOPIC_PRACTICE_SIZE,
+  MIN_TOPIC_QUESTIONS,
+} from "@/lib/topics";
 
 // Struttura ricavata dalle simulazioni ufficiali CINECA già presenti sulla piattaforma:
 // stesso ordine di materie, stesso numero di domande per materia (60 in totale).
@@ -150,6 +156,7 @@ async function createAndStartGeneratedTest(opts: {
       testId: test.id,
       type: q.type,
       subject: q.subject,
+      topic: q.topic,
       text: q.text,
       order: i + 1,
     })),
@@ -225,6 +232,37 @@ export async function generateSubjectPractice(formData: FormData): Promise<void>
     orderedIds: rows.map((r) => r.id),
     // Stesso ritmo delle simulazioni ufficiali: 100 minuti per 60 domande.
     timeLimitMinutes: Math.round((size * 100) / 60),
+  });
+
+  redirect(`/student/tests/${testId}/take`);
+}
+
+export async function generateTopicPractice(formData: FormData): Promise<void> {
+  const session = await requireStudent();
+
+  // Il codice arriva dal form: si verifica che sia uno degli argomenti noti, sia per
+  // non costruire test su argomenti inesistenti sia perché finisce in una query.
+  const topic = String(formData.get("topic") ?? "");
+  if (!isKnownTopic(topic)) throw new Error("Argomento non valido.");
+
+  const rows = await prisma.$queryRaw<{ id: string }[]>`
+    SELECT q.id FROM "Question" q JOIN "Test" t ON q."testId" = t.id
+    WHERE t.kind = 'POOL' AND q.topic = ${topic}
+    ORDER BY RANDOM() LIMIT ${TOPIC_PRACTICE_SIZE}
+  `;
+  // Alcuni argomenti hanno meno domande della misura standard: l'esercitazione si
+  // adatta invece di fallire, purché ce ne siano abbastanza da avere senso.
+  if (rows.length < MIN_TOPIC_QUESTIONS) {
+    throw new Error("Non ci sono ancora abbastanza domande su questo argomento.");
+  }
+
+  const label = topicLabel(topic) ?? topic;
+  const testId = await createAndStartGeneratedTest({
+    studentId: session.user.id,
+    title: `Esercitazione ${label} - ${nowLabel()}`,
+    description: `Esercitazione mirata sull'argomento "${label}", con ${rows.length} domande pescate a caso dal database.`,
+    orderedIds: rows.map((r) => r.id),
+    timeLimitMinutes: Math.round((rows.length * 100) / 60),
   });
 
   redirect(`/student/tests/${testId}/take`);

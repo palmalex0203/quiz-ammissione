@@ -25,6 +25,12 @@ export default async function StudentLayout({ children }: { children: ReactNode 
                 I miei test
               </Link>
               <Link
+                href="/student/practice"
+                className="rounded-full px-3 py-1.5 transition-colors hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-500/10 dark:hover:text-orange-400"
+              >
+                Esercitati
+              </Link>
+              <Link
                 href="/student/history"
                 className="rounded-full px-3 py-1.5 transition-colors hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-500/10 dark:hover:text-orange-400"
               >

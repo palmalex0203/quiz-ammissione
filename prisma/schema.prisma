@@ -67,6 +67,7 @@ model Question {
   test    Test         @relation(fields: [testId], references: [id], onDelete: Cascade)
   type    QuestionType
   subject String
+  topic   String?
   text    String
   order   Int
   points  Int          @default(1)
@@ -76,6 +77,7 @@ model Question {
 
   @@index([testId])
   @@index([subject])
+  @@index([topic])
 }
 
 model AnswerOption {
