@@ -28,7 +28,7 @@ export default async function StudentLayout({ children }: { children: ReactNode 
                 href="/student/history"
                 className="rounded-full px-3 py-1.5 transition-colors hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-500/10 dark:hover:text-orange-400"
               >
-                Storico
+                I miei progressi
               </Link>
             </nav>
           </div>

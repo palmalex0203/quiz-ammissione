@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
 import { POINTS_CORRECT } from "@/lib/grading";
+import { PRACTICE_SIZES } from "@/lib/subjects";
 
 // Struttura ricavata dalle simulazioni ufficiali CINECA già presenti sulla piattaforma:
 // stesso ordine di materie, stesso numero di domande per materia (60 in totale).
@@ -106,40 +107,36 @@ async function pickRandomQuestionIds(): Promise<string[]> {
   return OFFICIAL_STRUCTURE.flatMap((block) => bySubject.get(block.subject) ?? []);
 }
 
-export async function generateRandomSimulation(): Promise<void> {
-  const session = await requireStudent();
-
+// Crea un test generato a partire da un elenco ordinato di id di domande della banca
+// dati, lo assegna allo studente e apre subito un tentativo. Condiviso fra la
+// simulazione completa e l'esercitazione mirata su una singola materia.
+async function createAndStartGeneratedTest(opts: {
+  studentId: string;
+  title: string;
+  description: string;
+  orderedIds: string[];
+  timeLimitMinutes: number;
+}): Promise<string> {
   const teacher = await prisma.user.findFirst({ where: { role: "TEACHER" } });
   if (!teacher) throw new Error("Nessun account insegnante trovato.");
 
-  const orderedIds = await pickRandomQuestionIds();
-
   const questions = await prisma.question.findMany({
-    where: { id: { in: orderedIds } },
+    where: { id: { in: opts.orderedIds } },
     include: { options: { orderBy: { order: "asc" } } },
   });
   const byId = new Map(questions.map((q) => [q.id, q]));
-  const orderedQuestions = orderedIds.map((id) => byId.get(id)!);
-
-  const label = new Date().toLocaleString("it-IT", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+  const orderedQuestions = opts.orderedIds.map((id) => byId.get(id)!);
 
   const test = await prisma.test.create({
     data: {
-      title: `Simulazione generata - ${label}`,
-      description:
-        "Simulazione generata automaticamente pescando domande a caso dal database, con la stessa struttura (materie e numero di domande per materia) delle simulazioni ufficiali.",
+      title: opts.title,
+      description: opts.description,
       createdById: teacher.id,
       isPublished: true,
       kind: "GENERATA",
       isGenerated: true,
-      timeLimitMinutes: 100,
-      assignments: { create: { studentId: session.user.id } },
+      timeLimitMinutes: opts.timeLimitMinutes,
+      assignments: { create: { studentId: opts.studentId } },
     },
   });
 
@@ -172,8 +169,63 @@ export async function generateRandomSimulation(): Promise<void> {
   const maxScore = orderedQuestions.length * POINTS_CORRECT;
 
   await prisma.attempt.create({
-    data: { testId: test.id, studentId: session.user.id, status: "IN_PROGRESS", maxScore },
+    data: { testId: test.id, studentId: opts.studentId, status: "IN_PROGRESS", maxScore },
   });
 
-  redirect(`/student/tests/${test.id}/take`);
+  return test.id;
+}
+
+function nowLabel() {
+  return new Date().toLocaleString("it-IT", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
+export async function generateRandomSimulation(): Promise<void> {
+  const session = await requireStudent();
+
+  const testId = await createAndStartGeneratedTest({
+    studentId: session.user.id,
+    title: `Simulazione generata - ${nowLabel()}`,
+    description:
+      "Simulazione generata automaticamente pescando domande a caso dal database, con la stessa struttura (materie e numero di domande per materia) delle simulazioni ufficiali.",
+    orderedIds: await pickRandomQuestionIds(),
+    timeLimitMinutes: 100,
+  });
+
+  redirect(`/student/tests/${testId}/take`);
+}
+
+export async function generateSubjectPractice(formData: FormData): Promise<void> {
+  const session = await requireStudent();
+
+  // La materia arriva dal form: va confrontata con l'elenco noto, sia per non
+  // costruire test su materie inesistenti sia perché finisce in una query.
+  const subject = String(formData.get("subject") ?? "");
+  const size = PRACTICE_SIZES[subject];
+  if (!size) throw new Error("Materia non valida.");
+
+  const rows = await prisma.$queryRaw<{ id: string }[]>`
+    SELECT q.id FROM "Question" q JOIN "Test" t ON q."testId" = t.id
+    WHERE t.kind = 'POOL' AND q.subject = ${subject}
+    ORDER BY RANDOM() LIMIT ${size}
+  `;
+  if (rows.length < size) {
+    throw new Error(`Domande insufficienti nel database per la materia "${subject}".`);
+  }
+
+  const testId = await createAndStartGeneratedTest({
+    studentId: session.user.id,
+    title: `Esercitazione ${subject} - ${nowLabel()}`,
+    description: `Esercitazione mirata su ${subject}, con ${size} domande pescate a caso dal database.`,
+    orderedIds: rows.map((r) => r.id),
+    // Stesso ritmo delle simulazioni ufficiali: 100 minuti per 60 domande.
+    timeLimitMinutes: Math.round((size * 100) / 60),
+  });
+
+  redirect(`/student/tests/${testId}/take`);
 }
