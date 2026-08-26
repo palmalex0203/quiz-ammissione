@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { deleteQuestion, moveQuestion, updateQuestion } from "./actions";
 import { QuestionForm } from "./QuestionForm";
+import { EmptyState } from "@/components/EmptyState";
 
 type QuestionData = {
   id: string;
@@ -17,7 +18,13 @@ export function QuestionList({ testId, questions }: { testId: string; questions:
   const [editingId, setEditingId] = useState<string | null>(null);
 
   if (questions.length === 0) {
-    return <p className="text-sm text-zinc-500 dark:text-zinc-400">Nessuna domanda ancora.</p>;
+    return (
+      <EmptyState
+        icon="✏️"
+        title="Nessuna domanda ancora"
+        description="Aggiungi la prima domanda con il modulo qui sopra."
+      />
+    );
   }
 
   return (

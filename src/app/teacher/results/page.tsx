@@ -2,6 +2,7 @@ import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
 import type { Prisma } from "@/generated/prisma/client";
+import { EmptyState } from "@/components/EmptyState";
 
 export default async function ResultsPage({
   searchParams,
@@ -264,8 +265,8 @@ export default async function ResultsPage({
           <tbody>
             {attempts.length === 0 && (
               <tr>
-                <td colSpan={4} className="px-4 py-6 text-center text-zinc-500 dark:text-zinc-400">
-                  Nessun tentativo trovato.
+                <td colSpan={4} className="p-3">
+                  <EmptyState icon="📊" title="Nessun tentativo trovato" description="Prova a cambiare i filtri qui sopra." bare />
                 </td>
               </tr>
             )}

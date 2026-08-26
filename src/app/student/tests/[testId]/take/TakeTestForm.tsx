@@ -27,8 +27,18 @@ export function TakeTestForm({
 }) {
   const [answers, setAnswers] = useState<Record<string, string>>(initialAnswers);
   const [isSubmitting, startSubmitTransition] = useTransition();
-  const [, startSaveTransition] = useTransition();
+  const [isSaving, startSaveTransition] = useTransition();
+  const [justSaved, setJustSaved] = useState(false);
   const submittedRef = useRef(false);
+  const savedTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+
+  function flashSaved() {
+    setJustSaved(true);
+    clearTimeout(savedTimeoutRef.current);
+    savedTimeoutRef.current = setTimeout(() => setJustSaved(false), 1500);
+  }
+
+  useEffect(() => () => clearTimeout(savedTimeoutRef.current), []);
 
   const deadline =
     timeLimitMinutes != null ? new Date(startedAt).getTime() + timeLimitMinutes * 60_000 : null;
@@ -60,6 +70,7 @@ export function TakeTestForm({
     setAnswers((prev) => ({ ...prev, [questionId]: optionId }));
     startSaveTransition(async () => {
       await saveAnswer(attemptId, questionId, optionId);
+      flashSaved();
     });
   }
 
@@ -71,6 +82,7 @@ export function TakeTestForm({
     });
     startSaveTransition(async () => {
       await clearAnswer(attemptId, questionId);
+      flashSaved();
     });
   }
 
@@ -81,8 +93,17 @@ export function TakeTestForm({
       <div className="sticky top-0 z-10 -mx-4 flex flex-wrap items-center justify-between gap-2 border-b border-zinc-200 bg-white/95 px-4 py-3 backdrop-blur supports-[backdrop-filter]:bg-white/80 dark:border-zinc-800 dark:bg-zinc-950/95 dark:supports-[backdrop-filter]:bg-zinc-950/80">
         <div>
           <h1 className="text-lg font-semibold text-zinc-900 sm:text-2xl dark:text-zinc-50">{testTitle}</h1>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
-            {answeredCount}/{questions.length} risposte date
+          <p className="flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400">
+            <span>
+              {answeredCount}/{questions.length} risposte date
+            </span>
+            <span
+              className={`text-xs transition-opacity duration-300 ${
+                isSaving || justSaved ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              {isSaving ? "Salvataggio…" : "Salvato ✓"}
+            </span>
           </p>
         </div>
         {remainingMs != null && (

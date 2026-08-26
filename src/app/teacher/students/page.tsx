@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { EmptyState } from "@/components/EmptyState";
 import { AddStudentForm } from "./AddStudentForm";
 import { StudentRow } from "./StudentRow";
 
@@ -17,7 +18,12 @@ export default async function StudentsPage() {
 
       <div className="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950">
         {students.length === 0 ? (
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">Nessuno studente ancora.</p>
+          <EmptyState
+            icon="🎓"
+            title="Nessuno studente ancora"
+            description="Aggiungi il primo studente con il modulo qui sopra."
+            bare
+          />
         ) : (
           students.map((student) => (
             <StudentRow

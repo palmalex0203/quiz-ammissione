@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
+import { EmptyState } from "@/components/EmptyState";
 
 export default async function TestResultsPage({ params }: { params: Promise<{ testId: string }> }) {
   const { testId } = await params;
@@ -134,7 +135,7 @@ export default async function TestResultsPage({ params }: { params: Promise<{ te
         <h2 className="mb-2 text-lg font-medium text-zinc-900 dark:text-zinc-50">Tentativi</h2>
         <div className="flex flex-col gap-2">
           {attempts.length === 0 && (
-            <p className="text-sm text-zinc-500 dark:text-zinc-400">Nessun tentativo ancora.</p>
+            <EmptyState icon="📊" title="Nessun tentativo ancora" description="Quando uno studente svolgerà questo test, apparirà qui." />
           )}
           {attempts.map((attempt) => {
             const percentage =

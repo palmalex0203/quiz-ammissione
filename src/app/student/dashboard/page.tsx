@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
+import { EmptyState } from "@/components/EmptyState";
 import { startAttempt, generateRandomSimulation } from "./actions";
 
 type TestRow = Awaited<ReturnType<typeof loadTests>>[number];
@@ -73,7 +74,11 @@ export default async function StudentDashboardPage() {
       </div>
 
       {tests.length === 0 && (
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">Nessun test disponibile al momento.</p>
+        <EmptyState
+          icon="🗂️"
+          title="Nessun test disponibile al momento"
+          description="Il tuo insegnante non ha ancora assegnato test, ma puoi sempre generare una simulazione casuale qui sopra."
+        />
       )}
 
       {generate.length > 0 && (

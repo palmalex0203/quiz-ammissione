@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
+import { EmptyState } from "@/components/EmptyState";
 
 export default async function StudentHistoryPage() {
   const session = await requireStudent();
@@ -17,7 +18,11 @@ export default async function StudentHistoryPage() {
 
       <div className="flex flex-col gap-3">
         {attempts.length === 0 && (
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">Nessun test svolto ancora.</p>
+          <EmptyState
+            icon="📄"
+            title="Nessun test svolto ancora"
+            description="I test che completerai appariranno qui, con punteggio e data."
+          />
         )}
         {attempts.map((attempt) => {
           const percentage =

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
+import { EmptyState } from "@/components/EmptyState";
 import { deleteTest, togglePublish } from "./actions";
 
 type TestRow = Awaited<ReturnType<typeof loadTests>>[number];
@@ -46,7 +47,11 @@ export default async function TestsPage() {
       </div>
 
       {tests.length === 0 && (
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">Nessun test creato ancora.</p>
+        <EmptyState
+          icon="🗂️"
+          title="Nessun test creato ancora"
+          description="Crea il tuo primo test con il pulsante qui sopra."
+        />
       )}
 
       {simulazioni.length > 0 && (

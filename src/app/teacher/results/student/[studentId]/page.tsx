@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
 import { TrendChart } from "./TrendChart";
+import { EmptyState } from "@/components/EmptyState";
 
 export default async function StudentResultsPage({
   params,
@@ -173,7 +174,7 @@ export default async function StudentResultsPage({
         <h2 className="mb-2 text-lg font-medium text-zinc-900 dark:text-zinc-50">Risultati per test</h2>
         <div className="flex flex-col gap-4">
           {folders.length === 0 && (
-            <p className="text-sm text-zinc-500 dark:text-zinc-400">Nessun tentativo ancora.</p>
+            <EmptyState icon="📊" title="Nessun tentativo ancora" description="Quando questo studente svolgerà un test, i risultati appariranno qui." />
           )}
           {folders.map((folder) => {
             const folderAvg = Math.round(
