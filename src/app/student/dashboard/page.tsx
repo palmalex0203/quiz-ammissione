@@ -2,6 +2,7 @@ import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
 import { EmptyState } from "@/components/EmptyState";
+import { SubmitButton } from "@/components/SubmitButton";
 import { startAttempt, generateRandomSimulation } from "./actions";
 
 type TestRow = Awaited<ReturnType<typeof loadTests>>[number];
@@ -78,12 +79,12 @@ export default async function StudentDashboardPage() {
           </div>
         </div>
         <form action={generateRandomSimulation}>
-          <button
-            type="submit"
+          <SubmitButton
+            pendingText="Genero la simulazione…"
             className="w-full shrink-0 rounded-lg bg-orange-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-orange-700 sm:w-auto dark:bg-orange-500 dark:hover:bg-orange-400"
           >
             Genera e inizia
-          </button>
+          </SubmitButton>
         </form>
       </div>
 
@@ -210,22 +211,22 @@ function TestCard({ test, compact }: { test: TestRow; compact?: boolean }) {
         {inProgress ? (
           <form action={startAttempt}>
             <input type="hidden" name="testId" value={test.id} />
-            <button
-              type="submit"
+            <SubmitButton
+              pendingText="Apro il test…"
               className="rounded-lg bg-orange-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-400"
             >
               Continua
-            </button>
+            </SubmitButton>
           </form>
         ) : canAttempt ? (
           <form action={startAttempt}>
             <input type="hidden" name="testId" value={test.id} />
-            <button
-              type="submit"
+            <SubmitButton
+              pendingText="Avvio il test…"
               className="rounded-lg bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
             >
               {attemptsUsed > 0 ? "Rifai il test" : "Inizia test"}
-            </button>
+            </SubmitButton>
           </form>
         ) : (
           <span className="text-xs font-medium text-zinc-400 dark:text-zinc-600">

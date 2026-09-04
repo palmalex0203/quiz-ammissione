@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
 import { EmptyState } from "@/components/EmptyState";
+import { SubmitButton } from "@/components/SubmitButton";
 import { TOPICS_BY_SUBJECT, MIN_TOPIC_QUESTIONS } from "@/lib/topics";
 import { PRACTICE_SIZES } from "@/lib/subjects";
 import { generateSubjectPractice, generateTopicPractice } from "@/app/student/dashboard/actions";
@@ -66,12 +67,12 @@ export default async function StudentPracticePage() {
               {PRACTICE_SIZES[subject] && (
                 <form action={generateSubjectPractice}>
                   <input type="hidden" name="subject" value={subject} />
-                  <button
-                    type="submit"
+                  <SubmitButton
+                    pendingText="Preparo l'esercitazione…"
                     className="rounded-lg border border-orange-200 bg-orange-50 px-3 py-1.5 text-xs font-semibold text-orange-700 transition-colors hover:bg-orange-100 dark:border-orange-500/25 dark:bg-orange-500/10 dark:text-orange-400 dark:hover:bg-orange-500/20"
                   >
                     Tutta la materia ({PRACTICE_SIZES[subject]} domande)
-                  </button>
+                  </SubmitButton>
                 </form>
               )}
             </div>
@@ -112,12 +113,12 @@ export default async function StudentPracticePage() {
                       )}
                       <form action={generateTopicPractice}>
                         <input type="hidden" name="topic" value={topic.code} />
-                        <button
-                          type="submit"
+                        <SubmitButton
+                          pendingText="Preparo…"
                           className="rounded-lg bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
                         >
                           Allenati
-                        </button>
+                        </SubmitButton>
                       </form>
                     </div>
                   </div>

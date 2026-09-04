@@ -2,6 +2,7 @@ import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
 import { EmptyState } from "@/components/EmptyState";
+import { SubmitButton } from "@/components/SubmitButton";
 import { isPracticeable, PRACTICE_SIZES } from "@/lib/subjects";
 import { generateSubjectPractice } from "@/app/student/dashboard/actions";
 
@@ -95,12 +96,12 @@ export default async function StudentHistoryPage() {
               </div>
               <form action={generateSubjectPractice}>
                 <input type="hidden" name="subject" value={weakest.subject} />
-                <button
-                  type="submit"
+                <SubmitButton
+                  pendingText="Preparo l'esercitazione…"
                   className="w-full shrink-0 rounded-lg bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-amber-700 sm:w-auto dark:bg-amber-500 dark:hover:bg-amber-400"
                 >
                   Allenati ora
-                </button>
+                </SubmitButton>
               </form>
             </div>
           )}

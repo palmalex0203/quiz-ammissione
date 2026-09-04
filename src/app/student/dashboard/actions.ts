@@ -113,6 +113,55 @@ async function pickRandomQuestionIds(): Promise<string[]> {
   return OFFICIAL_STRUCTURE.flatMap((block) => bySubject.get(block.subject) ?? []);
 }
 
+// Da quanti giorni un test generato e mai consegnato è considerato abbandonato.
+// Ampiamente oltre i 100 minuti di una simulazione: chi la sta svolgendo, o l'ha
+// interrotta poco fa per riprenderla, non viene toccato.
+const ABANDONED_AFTER_DAYS = 2;
+
+// Ogni test generato conserva una copia di 60 domande e 300 opzioni. Senza pulizia
+// le prove aperte e mai finite si accumulano all'infinito e appesantiscono il
+// database di tutti: si eliminano quelle vecchie dello studente, che non
+// contengono alcun punteggio, appena ne genera una nuova.
+async function pruneAbandonedTests(studentId: string) {
+  const cutoff = new Date(Date.now() - ABANDONED_AFTER_DAYS * 24 * 60 * 60 * 1000);
+  const abandoned = await prisma.test.findMany({
+    where: {
+      kind: "GENERATA",
+      createdAt: { lt: cutoff },
+      assignments: { some: { studentId } },
+      attempts: { none: { OR: [{ status: "SUBMITTED" }, { startedAt: { gte: cutoff } }] } },
+    },
+    select: { id: true },
+  });
+  if (abandoned.length === 0) return;
+  await prisma.test.deleteMany({ where: { id: { in: abandoned.map((t) => t.id) } } });
+}
+
+// Finestra entro cui una seconda richiesta identica è considerata un doppio click
+// e non una nuova richiesta volontaria. Il pulsante si disabilita già nel browser,
+// ma quel blocco scatta solo al re-render: due click nello stesso istante lo
+// aggirano, e senza questo controllo nascerebbero test doppi.
+const DOUBLE_SUBMIT_WINDOW_MS = 30_000;
+
+// Se lo studente ha già aperto pochi secondi fa un test dello stesso tipo e non
+// l'ha ancora consegnato, restituisce quello invece di crearne un altro.
+async function findRecentDuplicate(studentId: string, title: string) {
+  // Il titolo contiene la data ("Simulazione generata - 04/09/2026, 18:40"): si
+  // confronta solo la parte iniziale, che identifica il tipo di richiesta.
+  const prefix = title.split(" - ")[0];
+  return prisma.test.findFirst({
+    where: {
+      kind: "GENERATA",
+      title: { startsWith: prefix },
+      createdAt: { gte: new Date(Date.now() - DOUBLE_SUBMIT_WINDOW_MS) },
+      assignments: { some: { studentId } },
+      attempts: { some: { studentId, status: "IN_PROGRESS" } },
+    },
+    orderBy: { createdAt: "desc" },
+    select: { id: true },
+  });
+}
+
 // Crea un test generato a partire da un elenco ordinato di id di domande della banca
 // dati, lo assegna allo studente e apre subito un tentativo. Condiviso fra la
 // simulazione completa e l'esercitazione mirata su una singola materia.
@@ -123,8 +172,13 @@ async function createAndStartGeneratedTest(opts: {
   orderedIds: string[];
   timeLimitMinutes: number;
 }): Promise<string> {
+  const duplicate = await findRecentDuplicate(opts.studentId, opts.title);
+  if (duplicate) return duplicate.id;
+
   const teacher = await prisma.user.findFirst({ where: { role: "TEACHER" } });
   if (!teacher) throw new Error("Nessun account insegnante trovato.");
+
+  await pruneAbandonedTests(opts.studentId);
 
   const questions = await prisma.question.findMany({
     where: { id: { in: opts.orderedIds } },
