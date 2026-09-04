@@ -6,6 +6,11 @@ import { startAttempt, generateRandomSimulation } from "./actions";
 
 type TestRow = Awaited<ReturnType<typeof loadTests>>[number];
 
+// Quante simulazioni generate mostrare in dashboard: le altre restano raggiungibili
+// da "I miei progressi". Uno studente ne accumula anche un centinaio e mostrarle
+// tutte rendeva la pagina lentissima da caricare.
+const MAX_GENERATE_IN_DASHBOARD = 5;
+
 async function loadTests(studentId: string) {
   return prisma.test.findMany({
     where: {
@@ -14,7 +19,9 @@ async function loadTests(studentId: string) {
     },
     orderBy: { createdAt: "desc" },
     include: {
-      questions: { select: { id: true } },
+      // Serve solo il numero di domande: con _count si evita di trasferire
+      // migliaia di righe a ogni caricamento della dashboard.
+      _count: { select: { questions: true } },
       attempts: { where: { studentId }, orderBy: { startedAt: "desc" } },
     },
   });
@@ -27,8 +34,15 @@ export default async function StudentDashboardPage() {
   const tests = await loadTests(studentId);
 
   const simulazioni = tests.filter((t) => t.kind === "SIMULAZIONE");
-  const generate = tests.filter((t) => t.kind === "GENERATA");
+  const tutteGenerate = tests.filter((t) => t.kind === "GENERATA");
   const esercitazioni = tests.filter((t) => t.kind === "ESERCITAZIONE");
+
+  // Le simulazioni ancora da finire restano sempre in cima, poi le più recenti.
+  const generate = [
+    ...tutteGenerate.filter((t) => t.attempts.some((a) => a.status === "IN_PROGRESS")),
+    ...tutteGenerate.filter((t) => !t.attempts.some((a) => a.status === "IN_PROGRESS")),
+  ].slice(0, MAX_GENERATE_IN_DASHBOARD);
+  const generateNascoste = tutteGenerate.length - generate.length;
 
   const folders = new Map<string, TestRow[]>();
   for (const t of esercitazioni) {
@@ -91,6 +105,15 @@ export default async function StudentDashboardPage() {
               <TestCard key={test.id} test={test} />
             ))}
           </div>
+          {generateNascoste > 0 && (
+            <p className="text-xs text-zinc-500 dark:text-zinc-400">
+              Altre {generateNascoste} simulazioni generate in precedenza sono in{" "}
+              <Link href="/student/history" className="font-medium underline hover:text-zinc-900 dark:hover:text-zinc-100">
+                I miei progressi
+              </Link>
+              .
+            </p>
+          )}
         </section>
       )}
 
@@ -168,7 +191,7 @@ function TestCard({ test, compact }: { test: TestRow; compact?: boolean }) {
           <p className="mt-0.5 text-xs text-zinc-500 dark:text-zinc-400">{test.description}</p>
         )}
         <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
-          {test.questions.length} domande
+          {test._count.questions} domande
           {test.timeLimitMinutes ? ` · ${test.timeLimitMinutes} min` : ""}
           {test.maxAttempts != null ? ` · ${attemptsUsed}/${test.maxAttempts} tentativi` : ""}
         </p>
