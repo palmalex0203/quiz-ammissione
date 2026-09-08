@@ -1,16 +1,22 @@
 import { PrismaClient } from "@/generated/prisma/client";
-import { PrismaLibSql } from "@prisma/adapter-libsql";
+import { PrismaPg } from "@prisma/adapter-pg";
+import { Pool } from "pg";
 
 declare global {
   var prismaClient: PrismaClient | undefined;
+  var prismaPool: Pool | undefined;
 }
 
 function createPrismaClient() {
-  const adapter = new PrismaLibSql({
-    url: process.env.DATABASE_URL ?? "file:./prisma/dev.db",
-    authToken: process.env.TURSO_AUTH_TOKEN,
-  });
-  return new PrismaClient({ adapter });
+  const connectionString = process.env.DATABASE_URL;
+  if (!connectionString) throw new Error("DATABASE_URL non impostata.");
+
+  // Una sola pool riusata: in sviluppo il ricaricamento a caldo rieseguirebbe
+  // questo modulo a ogni modifica, aprendo connessioni che nessuno chiude.
+  const pool = globalThis.prismaPool ?? new Pool({ connectionString });
+  if (process.env.NODE_ENV !== "production") globalThis.prismaPool = pool;
+
+  return new PrismaClient({ adapter: new PrismaPg(pool) });
 }
 
 export const prisma = globalThis.prismaClient ?? createPrismaClient();
