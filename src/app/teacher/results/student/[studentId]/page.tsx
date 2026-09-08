@@ -21,10 +21,14 @@ export default async function StudentResultsPage({
   const attempts = await prisma.attempt.findMany({
     where: { studentId, status: "SUBMITTED", test: { createdById: session.user.id } },
     orderBy: { submittedAt: "desc" },
-    include: {
-      test: true,
-      answers: { include: { question: { select: { subject: true } } } },
-    },
+    include: { test: true },
+  });
+
+  // Riepilogo per materia dalle statistiche precalcolate alla consegna, invece di
+  // riesaminare tutte le risposte di ogni tentativo.
+  const stats = await prisma.attemptSubjectStat.findMany({
+    where: { attemptId: { in: attempts.map((a) => a.id) } },
+    select: { subject: true, correct: true, total: true },
   });
 
   const GENERATED_FOLDER_KEY = "__generated__";
@@ -40,14 +44,11 @@ export default async function StudentResultsPage({
 
   // Andamento per materia: percentuale di risposte corrette su tutte le domande incontrate
   const subjectStats = new Map<string, { correct: number; total: number }>();
-  for (const attempt of attempts) {
-    for (const answer of attempt.answers) {
-      const subject = answer.question.subject;
-      const stat = subjectStats.get(subject) ?? { correct: 0, total: 0 };
-      stat.total += 1;
-      if (answer.isCorrect) stat.correct += 1;
-      subjectStats.set(subject, stat);
-    }
+  for (const s of stats) {
+    const stat = subjectStats.get(s.subject) ?? { correct: 0, total: 0 };
+    stat.total += s.total;
+    stat.correct += s.correct;
+    subjectStats.set(s.subject, stat);
   }
   const subjectRows = [...subjectStats.entries()].sort(
     (a, b) => a[1].correct / a[1].total - b[1].correct / b[1].total

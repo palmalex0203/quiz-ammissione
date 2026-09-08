@@ -115,10 +115,27 @@ model Attempt {
   maxScore    Float?
 
   answers AnswerRecord[]
+  subjectStats AttemptSubjectStat[]
 
   @@index([studentId])
   @@index([testId])
   @@index([status])
+}
+
+// Risultato per materia di un singolo tentativo, calcolato una volta sola alla
+// consegna. Le pagine di analisi leggono queste poche righe invece di riesaminare
+// tutte le risposte: un tentativo da 60 domande produce ~5 righe invece di 60,
+// e il piano Turso conta le righe esaminate da ogni query.
+model AttemptSubjectStat {
+  id        String  @id @default(cuid())
+  attemptId String
+  attempt   Attempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  subject   String
+  correct   Int
+  total     Int
+
+  @@unique([attemptId, subject])
+  @@index([subject])
 }
 
 model AnswerRecord {

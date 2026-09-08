@@ -50,6 +50,19 @@ export async function submitAttempt(attemptId: string) {
     existingAnswers.map((a) => ({ questionId: a.questionId, selectedOptionId: a.selectedOptionId }))
   );
 
+  // Riepilogo per materia calcolato qui, una volta sola: le pagine di analisi
+  // leggeranno queste poche righe invece di riesaminare tutte le risposte.
+  const subjectOf = new Map(questions.map((q) => [q.id, q.subject]));
+  const perSubject = new Map<string, { correct: number; total: number }>();
+  for (const r of results) {
+    const subject = subjectOf.get(r.questionId);
+    if (!subject) continue;
+    const stat = perSubject.get(subject) ?? { correct: 0, total: 0 };
+    stat.total += 1;
+    if (r.isCorrect) stat.correct += 1;
+    perSubject.set(subject, stat);
+  }
+
   await prisma.$transaction([
     ...results.map((r) =>
       prisma.answerRecord.upsert({
@@ -66,6 +79,17 @@ export async function submitAttempt(attemptId: string) {
     prisma.attempt.update({
       where: { id: attempt.id },
       data: { status: "SUBMITTED", submittedAt: new Date(), score, maxScore },
+    }),
+    // Un tentativo può essere riconsegnato solo una volta, ma la cancellazione
+    // preventiva rende l'operazione ripetibile senza creare duplicati.
+    prisma.attemptSubjectStat.deleteMany({ where: { attemptId: attempt.id } }),
+    prisma.attemptSubjectStat.createMany({
+      data: [...perSubject.entries()].map(([subject, s]) => ({
+        attemptId: attempt.id,
+        subject,
+        correct: s.correct,
+        total: s.total,
+      })),
     }),
   ]);
 

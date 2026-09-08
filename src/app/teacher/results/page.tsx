@@ -36,12 +36,25 @@ export default async function ResultsPage({
   const attempts = await prisma.attempt.findMany({
     where,
     orderBy: { submittedAt: "desc" },
-    include: {
-      student: true,
-      test: true,
-      answers: { include: { question: { select: { subject: true } } } },
-    },
+    include: { student: true, test: true },
   });
+
+  // I riepiloghi per materia si leggono dalle statistiche precalcolate alla consegna:
+  // caricare tutte le risposte significava esaminare decine di migliaia di righe a
+  // ogni apertura della pagina, ed è ciò che ha esaurito la quota del database.
+  const statsByAttempt = new Map<string, { subject: string; correct: number; total: number }[]>();
+  for (let i = 0; i < attempts.length; i += 300) {
+    const chunk = attempts.slice(i, i + 300).map((a) => a.id);
+    const stats = await prisma.attemptSubjectStat.findMany({
+      where: { attemptId: { in: chunk } },
+      select: { attemptId: true, subject: true, correct: true, total: true },
+    });
+    for (const s of stats) {
+      const list = statsByAttempt.get(s.attemptId) ?? [];
+      list.push({ subject: s.subject, correct: s.correct, total: s.total });
+      statsByAttempt.set(s.attemptId, list);
+    }
+  }
 
   function percentageOf(a: (typeof attempts)[number]) {
     return a.maxScore && a.maxScore > 0 ? ((a.score ?? 0) / a.maxScore) * 100 : 0;
@@ -65,11 +78,11 @@ export default async function ResultsPage({
   const studentSummaries: StudentSummary[] = [...byStudent.entries()].map(([studentId, studentAttempts]) => {
     const subjectStats = new Map<string, { correct: number; total: number }>();
     for (const a of studentAttempts) {
-      for (const answer of a.answers) {
-        const stat = subjectStats.get(answer.question.subject) ?? { correct: 0, total: 0 };
-        stat.total += 1;
-        if (answer.isCorrect) stat.correct += 1;
-        subjectStats.set(answer.question.subject, stat);
+      for (const s of statsByAttempt.get(a.id) ?? []) {
+        const stat = subjectStats.get(s.subject) ?? { correct: 0, total: 0 };
+        stat.total += s.total;
+        stat.correct += s.correct;
+        subjectStats.set(s.subject, stat);
       }
     }
     const weakest = [...subjectStats.entries()].sort((a, b) => a[1].correct / a[1].total - b[1].correct / b[1].total)[0];
@@ -89,11 +102,11 @@ export default async function ResultsPage({
   // materia più debole, per individuare a colpo d'occhio le lacune diffuse.
   const classSubjectStats = new Map<string, { correct: number; total: number }>();
   for (const a of attempts) {
-    for (const answer of a.answers) {
-      const stat = classSubjectStats.get(answer.question.subject) ?? { correct: 0, total: 0 };
-      stat.total += 1;
-      if (answer.isCorrect) stat.correct += 1;
-      classSubjectStats.set(answer.question.subject, stat);
+    for (const s of statsByAttempt.get(a.id) ?? []) {
+      const stat = classSubjectStats.get(s.subject) ?? { correct: 0, total: 0 };
+      stat.total += s.total;
+      stat.correct += s.correct;
+      classSubjectStats.set(s.subject, stat);
     }
   }
   const classSubjectRows = [...classSubjectStats.entries()].sort(

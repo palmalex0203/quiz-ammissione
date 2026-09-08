@@ -12,10 +12,14 @@ export default async function StudentHistoryPage() {
   const attempts = await prisma.attempt.findMany({
     where: { studentId: session.user.id, status: "SUBMITTED" },
     orderBy: { submittedAt: "desc" },
-    include: {
-      test: true,
-      answers: { include: { question: { select: { subject: true } } } },
-    },
+    include: { test: true },
+  });
+
+  // Statistiche per materia precalcolate alla consegna: poche righe invece di tutte
+  // le risposte di tutti i test svolti.
+  const stats = await prisma.attemptSubjectStat.findMany({
+    where: { attemptId: { in: attempts.map((a) => a.id) } },
+    select: { subject: true, correct: true, total: true },
   });
 
   function percentageOf(a: (typeof attempts)[number]) {
@@ -29,14 +33,11 @@ export default async function StudentHistoryPage() {
 
   // Percentuale di risposte corrette per materia su tutte le domande incontrate finora.
   const subjectStats = new Map<string, { correct: number; total: number }>();
-  for (const attempt of attempts) {
-    for (const answer of attempt.answers) {
-      const subject = answer.question.subject;
-      const stat = subjectStats.get(subject) ?? { correct: 0, total: 0 };
-      stat.total += 1;
-      if (answer.isCorrect) stat.correct += 1;
-      subjectStats.set(subject, stat);
-    }
+  for (const s of stats) {
+    const stat = subjectStats.get(s.subject) ?? { correct: 0, total: 0 };
+    stat.total += s.total;
+    stat.correct += s.correct;
+    subjectStats.set(s.subject, stat);
   }
   const subjectRows = [...subjectStats.entries()]
     .map(([subject, stat]) => ({ subject, ...stat, pct: Math.round((stat.correct / stat.total) * 100) }))
