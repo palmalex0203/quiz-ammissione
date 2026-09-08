@@ -51,3 +51,4 @@ next-env.d.ts
 
 # backup del database: contengono dati personali degli studenti, mai versionarli
 /backup/
+.neon
