@@ -90,7 +90,7 @@ async function pickRandomQuestionIds(): Promise<string[]> {
         ROW_NUMBER() OVER (PARTITION BY q.subject ORDER BY RANDOM()) as rn
       FROM "Question" q JOIN "Test" t ON q."testId" = t.id
       WHERE t.kind = 'POOL' AND q.subject IN (${subjectsList})
-    )
+    ) AS pescate
     WHERE rn <= (CASE subject ${caseClauses} ELSE 0 END)
   `);
 
