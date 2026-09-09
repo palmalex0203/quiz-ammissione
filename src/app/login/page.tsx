@@ -44,7 +44,7 @@ export default function LoginPage() {
       <div className="relative w-full max-w-sm rounded-2xl border border-zinc-200 bg-white p-8 shadow-lg shadow-zinc-900/5 dark:border-zinc-800 dark:bg-zinc-950">
         <img src="/profor-logo.png" alt="Profor - Ente di Formazione" className="mb-4 h-10 w-auto" />
         <h1 className="mb-1 text-xl font-semibold text-zinc-900 dark:text-zinc-50">
-          Preparazione ai Test
+          Simulatore Ufficiale
         </h1>
         <p className="mb-6 text-sm text-zinc-500 dark:text-zinc-400">Accedi con le tue credenziali</p>
 

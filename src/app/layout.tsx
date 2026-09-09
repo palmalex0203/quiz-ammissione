@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Profor - Preparazione ai Test",
+  title: "Profor - Simulatore Ufficiale",
   description: "Piattaforma per simulazioni dei test di ammissione alle Professioni Sanitarie",
+  // Etichetta sotto l'icona quando il sito viene salvato sulla schermata iniziale
+  // del telefono: lì lo spazio è poco e un titolo lungo verrebbe troncato.
+  appleWebApp: { title: "Simulatore" },
 };
 
 export default function RootLayout({
