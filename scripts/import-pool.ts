@@ -2,15 +2,19 @@
 // di simulazioni casuali (kind = "POOL", isPublished = false). Non è mai visibile né
 // assegnabile come test: né nella lista test dell'insegnante, né nella dashboard studente.
 //
-// Formato JSON atteso: un array di domande [{ subject, text, options: [{text, isCorrect}] }, ...]
+// Formato JSON atteso: un array di domande
+//   [{ subject, topic?, text, options: [{text, isCorrect}] }, ...]
+// "topic" è il codice di argomento (B3, C7, M5, ...): se presente, la domanda compare
+// subito anche nelle esercitazioni per argomento, senza passare da classify-topics.
 //
 // Uso: npx tsx scripts/import-pool.ts <percorso-questions.json> "<Titolo interno>"
 import "dotenv/config";
 import { readFileSync } from "node:fs";
 import { prisma } from "../src/lib/prisma";
+import { isKnownTopic } from "../src/lib/topics";
 
 type ImportedOption = { text: string; isCorrect: boolean };
-type ImportedQuestion = { subject: string; text: string; options: ImportedOption[] };
+type ImportedQuestion = { subject: string; topic?: string | null; text: string; options: ImportedOption[] };
 
 async function main() {
   const [jsonPath, title] = process.argv.slice(2);
@@ -26,6 +30,9 @@ async function main() {
     const correctCount = q.options.filter((o) => o.isCorrect).length;
     if (correctCount !== 1) {
       throw new Error(`Domanda con ${correctCount} risposte corrette (attesa 1): ${q.text.slice(0, 60)}`);
+    }
+    if (q.topic && !isKnownTopic(q.topic)) {
+      throw new Error(`Argomento sconosciuto "${q.topic}": ${q.text.slice(0, 60)}`);
     }
   }
 
@@ -51,6 +58,7 @@ async function main() {
         create: questions.map((q, i) => ({
           type: "MULTIPLE_CHOICE",
           subject: q.subject,
+          topic: q.topic ?? null,
           text: q.text,
           order: i + 1,
           options: {
