@@ -28,14 +28,14 @@ export default async function EditTestPage({ params }: { params: Promise<{ testI
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <Link href="/teacher/tests" className="text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100">
+        <Link href="/teacher/tests" className="text-sm font-medium text-muted hover:text-brand-strong">
           &larr; Tutti i test
         </Link>
-        <h1 className="mt-1 text-2xl font-semibold text-zinc-900 dark:text-zinc-50">{test.title}</h1>
+        <h1 className="mt-1 page-title">{test.title}</h1>
       </div>
 
       <section className="flex flex-col gap-3">
-        <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-50">Impostazioni</h2>
+        <h2 className="section-title">Impostazioni</h2>
         <TestSettingsForm
           test={{
             id: test.id,
@@ -49,7 +49,7 @@ export default async function EditTestPage({ params }: { params: Promise<{ testI
       </section>
 
       <section className="flex flex-col gap-3">
-        <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-50">
+        <h2 className="section-title">
           Domande ({test.questions.length})
         </h2>
         <QuestionList
@@ -66,8 +66,8 @@ export default async function EditTestPage({ params }: { params: Promise<{ testI
       </section>
 
       <section className="flex flex-col gap-3">
-        <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-50">Aggiungi domanda</h2>
-        <div className="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-950">
+        <h2 className="section-title">Aggiungi domanda</h2>
+        <div className="card p-4">
           <QuestionForm testId={test.id} action={addQuestion} submitLabel="Aggiungi domanda" />
         </div>
       </section>

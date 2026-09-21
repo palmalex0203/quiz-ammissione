@@ -84,31 +84,31 @@ export default async function StudentResultsPage({
       <div>
         <Link
           href="/teacher/students"
-          className="text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+          className="text-sm font-medium text-muted hover:text-brand-strong"
         >
           &larr; Studenti
         </Link>
-        <h1 className="mt-1 text-2xl font-semibold text-zinc-900 dark:text-zinc-50">{student.name}</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">{student.email}</p>
+        <h1 className="mt-1 page-title">{student.name}</h1>
+        <p className="text-sm text-muted">{student.email}</p>
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-        <div className="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">Tentativi completati</p>
-          <p className="mt-1 text-3xl font-semibold text-zinc-900 dark:text-zinc-50">{attempts.length}</p>
+        <div className="card p-5">
+          <p className="text-sm text-muted">Tentativi completati</p>
+          <p className="mt-1 font-display text-4xl font-bold tabular-nums">{attempts.length}</p>
         </div>
-        <div className="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">Andamento medio</p>
-          <p className="mt-1 text-3xl font-semibold text-zinc-900 dark:text-zinc-50">{avgPercentage}%</p>
+        <div className="card p-5">
+          <p className="text-sm text-muted">Andamento medio</p>
+          <p className="mt-1 font-display text-4xl font-bold tabular-nums">{avgPercentage}%</p>
         </div>
-        <div className="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">Test svolti</p>
-          <p className="mt-1 text-3xl font-semibold text-zinc-900 dark:text-zinc-50">{folders.length}</p>
+        <div className="card p-5">
+          <p className="text-sm text-muted">Test svolti</p>
+          <p className="mt-1 font-display text-4xl font-bold tabular-nums">{folders.length}</p>
         </div>
       </div>
 
       {attempts.length >= 2 && (
-        <div className="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="card p-5">
           <h2 className="mb-3 text-sm font-medium text-zinc-900 dark:text-zinc-50">Andamento nel tempo</h2>
           <TrendChart
             points={[...attempts]
@@ -125,24 +125,24 @@ export default async function StudentResultsPage({
       {(strongestSubject || weakestSubject) && (
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {strongestSubject && (
-            <div className="rounded-xl border border-green-200 bg-green-50 p-4 dark:border-green-900/60 dark:bg-green-950/20">
+            <div className="rounded-[1.25rem] border border-green-200 bg-green-50 p-4 dark:border-green-900/60 dark:bg-green-950/20">
               <p className="text-xs font-medium uppercase tracking-wide text-green-700 dark:text-green-400">
                 Punto di forza
               </p>
               <p className="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">{strongestSubject[0]}</p>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400">
+              <p className="text-xs text-muted">
                 {Math.round((strongestSubject[1].correct / strongestSubject[1].total) * 100)}% di risposte
                 corrette
               </p>
             </div>
           )}
           {weakestSubject && (
-            <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-900/60 dark:bg-amber-950/20">
+            <div className="rounded-[1.25rem] border border-amber-200 bg-amber-50 p-4 dark:border-amber-900/60 dark:bg-amber-950/20">
               <p className="text-xs font-medium uppercase tracking-wide text-amber-700 dark:text-amber-400">
                 Da rafforzare
               </p>
               <p className="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">{weakestSubject[0]}</p>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400">
+              <p className="text-xs text-muted">
                 {Math.round((weakestSubject[1].correct / weakestSubject[1].total) * 100)}% di risposte corrette
               </p>
             </div>
@@ -152,8 +152,8 @@ export default async function StudentResultsPage({
 
       {subjectRows.length > 0 && (
         <div>
-          <h2 className="mb-2 text-lg font-medium text-zinc-900 dark:text-zinc-50">Andamento per materia</h2>
-          <div className="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-950">
+          <h2 className="section-title mb-2">Andamento per materia</h2>
+          <div className="card p-4">
             <ul className="flex flex-col gap-2">
               {subjectRows.map(([subject, stat]) => {
                 const pct = Math.round((stat.correct / stat.total) * 100);
@@ -172,7 +172,7 @@ export default async function StudentResultsPage({
       )}
 
       <div>
-        <h2 className="mb-2 text-lg font-medium text-zinc-900 dark:text-zinc-50">Risultati per test</h2>
+        <h2 className="section-title mb-2">Risultati per test</h2>
         <div className="flex flex-col gap-4">
           {folders.length === 0 && (
             <EmptyState icon="📊" title="Nessun tentativo ancora" description="Quando questo studente svolgerà un test, i risultati appariranno qui." />
@@ -185,7 +185,7 @@ export default async function StudentResultsPage({
             return (
               <div
                 key={folder.testId}
-                className="rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950"
+                className="card"
               >
                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 px-5 py-3 dark:border-zinc-900">
                   {folder.testId === GENERATED_FOLDER_KEY ? (
@@ -195,12 +195,12 @@ export default async function StudentResultsPage({
                   ) : (
                     <Link
                       href={`/teacher/results/test/${folder.testId}`}
-                      className="text-sm font-medium text-zinc-900 hover:underline dark:text-zinc-100"
+                      className="text-sm font-semibold hover:text-brand-strong"
                     >
                       {folder.testTitle}
                     </Link>
                   )}
-                  <p className="text-xs text-zinc-500 dark:text-zinc-400">
+                  <p className="text-xs text-muted">
                     {folder.attempts.length} tentativi &middot; media {folderAvg}% &middot; migliore {folderBest}%
                   </p>
                 </div>

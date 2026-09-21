@@ -12,11 +12,11 @@ export default async function StudentsPage() {
 
   return (
     <div className="flex flex-col gap-6">
-      <h1 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">Studenti</h1>
+      <h1 className="page-title">Studenti</h1>
 
       <AddStudentForm />
 
-      <div className="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950">
+      <div className="card p-5">
         {students.length === 0 ? (
           <EmptyState
             icon="🎓"

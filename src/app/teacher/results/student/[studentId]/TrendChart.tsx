@@ -16,7 +16,7 @@ export function TrendChart({ points }: { points: Point[] }) {
 
   if (points.length < 2) {
     return (
-      <p className="text-sm text-zinc-500 dark:text-zinc-400">
+      <p className="text-sm text-muted">
         Servono almeno due tentativi per mostrare un andamento nel tempo.
       </p>
     );

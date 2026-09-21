@@ -92,7 +92,7 @@ export function QuestionForm({
             onChange={(e) => setSubject(e.target.value)}
             placeholder="es. Biologia, Chimica, Logica..."
             required
-            className="rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-zinc-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+            className="field"
           />
         </div>
         <div className="flex flex-col gap-1">
@@ -101,7 +101,7 @@ export function QuestionForm({
             name="type"
             value={type}
             onChange={(e) => handleTypeChange(e.target.value as QuestionType)}
-            className="rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-zinc-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+            className="field"
           >
             <option value="MULTIPLE_CHOICE">Scelta multipla</option>
             <option value="TRUE_FALSE">Vero/Falso</option>
@@ -117,7 +117,7 @@ export function QuestionForm({
           onChange={(e) => setText(e.target.value)}
           rows={2}
           required
-          className="rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-zinc-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+          className="field"
         />
       </div>
 
@@ -141,7 +141,7 @@ export function QuestionForm({
               disabled={type === "TRUE_FALSE"}
               placeholder={`Opzione ${i + 1}`}
               required
-              className="flex-1 rounded-md border border-zinc-300 px-3 py-1.5 text-sm outline-none focus:border-zinc-500 disabled:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:disabled:bg-zinc-800"
+              className="field field-sm flex-1 disabled:opacity-60"
             />
             {type === "MULTIPLE_CHOICE" && options.length > 2 && (
               <button
@@ -158,7 +158,7 @@ export function QuestionForm({
           <button
             type="button"
             onClick={addOption}
-            className="self-start text-xs font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            className="self-start text-xs font-semibold text-muted hover:text-brand-strong"
           >
             + Aggiungi opzione
           </button>
@@ -171,7 +171,7 @@ export function QuestionForm({
         <button
           type="submit"
           disabled={isPending}
-          className="self-start rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-700 disabled:opacity-60 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
+          className="btn btn-ink self-start disabled:opacity-60"
         >
           {isPending ? "Salvataggio..." : submitLabel}
         </button>
@@ -179,7 +179,7 @@ export function QuestionForm({
           <button
             type="button"
             onClick={onDone}
-            className="text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+            className="text-sm font-medium text-muted hover:text-brand-strong"
           >
             Annulla
           </button>

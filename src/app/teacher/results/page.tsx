@@ -115,18 +115,18 @@ export default async function ResultsPage({
 
   return (
     <div className="flex flex-col gap-6">
-      <h1 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">Risultati</h1>
+      <h1 className="page-title">Risultati</h1>
 
       <form
         method="GET"
-        className="flex flex-wrap items-end gap-3 rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-950"
+        className="flex flex-wrap items-end gap-3 card p-4"
       >
         <div className="flex flex-col gap-1">
           <label className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Studente</label>
           <select
             name="studentId"
             defaultValue={params.studentId ?? ""}
-            className="rounded-md border border-zinc-300 px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+            className="field"
           >
             <option value="">Tutti</option>
             {students.map((s) => (
@@ -141,7 +141,7 @@ export default async function ResultsPage({
           <select
             name="testId"
             defaultValue={params.testId ?? ""}
-            className="rounded-md border border-zinc-300 px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+            className="field"
           >
             <option value="">Tutti</option>
             {tests.map((t) => (
@@ -157,7 +157,7 @@ export default async function ResultsPage({
             type="date"
             name="from"
             defaultValue={params.from ?? ""}
-            className="rounded-md border border-zinc-300 px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+            className="field"
           />
         </div>
         <div className="flex flex-col gap-1">
@@ -166,12 +166,12 @@ export default async function ResultsPage({
             type="date"
             name="to"
             defaultValue={params.to ?? ""}
-            className="rounded-md border border-zinc-300 px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+            className="field"
           />
         </div>
         <button
           type="submit"
-          className="rounded-lg bg-orange-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-400"
+          className="btn btn-brand"
         >
           Filtra
         </button>
@@ -187,12 +187,12 @@ export default async function ResultsPage({
 
       {studentSummaries.length > 0 && (
         <section className="flex flex-col gap-3">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+          <h2 className="section-title">
             Panoramica per studente
           </h2>
-          <div className="overflow-x-auto rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
+          <div className="card overflow-x-auto">
             <table className="w-full text-left text-sm">
-              <thead className="border-b border-zinc-200 text-xs text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+              <thead className="border-b border-line text-xs uppercase tracking-wider text-muted">
                 <tr>
                   <th className="px-4 py-3 font-medium">Studente</th>
                   <th className="px-4 py-3 font-medium">Tentativi</th>
@@ -202,7 +202,7 @@ export default async function ResultsPage({
               </thead>
               <tbody>
                 {studentSummaries.map((s) => (
-                  <tr key={s.studentId} className="border-b border-zinc-100 last:border-b-0 dark:border-zinc-900">
+                  <tr key={s.studentId} className="border-b border-line last:border-b-0">
                     <td className="px-4 py-3">
                       <Link
                         href={`/teacher/results/student/${s.studentId}`}
@@ -236,10 +236,10 @@ export default async function ResultsPage({
 
       {classSubjectRows.length > 0 && (
         <section className="flex flex-col gap-3">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+          <h2 className="section-title">
             Andamento per materia (tutta la classe)
           </h2>
-          <div className="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-950">
+          <div className="card p-4">
             <ul className="flex flex-col gap-2.5">
               {classSubjectRows.map(([subject, stat]) => {
                 const pct = Math.round((stat.correct / stat.total) * 100);
@@ -262,12 +262,12 @@ export default async function ResultsPage({
       )}
 
       <section className="flex flex-col gap-3">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+        <h2 className="section-title">
           Tutti i tentativi
         </h2>
-        <div className="overflow-x-auto rounded-xl border border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="card overflow-x-auto">
         <table className="w-full text-left text-sm">
-          <thead className="border-b border-zinc-200 text-xs text-zinc-500 dark:border-zinc-800 dark:text-zinc-400">
+          <thead className="border-b border-line text-xs uppercase tracking-wider text-muted">
             <tr>
               <th className="px-4 py-3 font-medium">Studente</th>
               <th className="px-4 py-3 font-medium">Test</th>
@@ -289,7 +289,7 @@ export default async function ResultsPage({
                   ? Math.round(((attempt.score ?? 0) / attempt.maxScore) * 100)
                   : 0;
               return (
-                <tr key={attempt.id} className="border-b border-zinc-100 last:border-b-0 dark:border-zinc-900">
+                <tr key={attempt.id} className="border-b border-line last:border-b-0">
                   <td className="px-4 py-3">
                     <Link
                       href={`/teacher/results/student/${attempt.studentId}`}

@@ -38,21 +38,21 @@ export default async function TeacherAttemptDetailPage({
       <div>
         <Link
           href="/teacher/results"
-          className="text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+          className="text-sm font-medium text-muted hover:text-brand-strong"
         >
           &larr; Tutti i risultati
         </Link>
-        <h1 className="mt-1 text-2xl font-semibold text-zinc-900 dark:text-zinc-50">{attempt.test.title}</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <h1 className="mt-1 page-title">{attempt.test.title}</h1>
+        <p className="text-sm text-muted">
           {attempt.student.name} &middot; {attempt.submittedAt?.toLocaleString("it-IT")}
         </p>
       </div>
 
-      <div className="rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950">
-        <p className="text-3xl font-semibold text-zinc-900 dark:text-zinc-50">
+      <div className="card p-6">
+        <p className="font-display text-4xl font-bold tabular-nums">
           {attempt.score} / {attempt.maxScore}
         </p>
-        <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="mt-1 text-sm text-muted">
           {percentage}% &middot; {correctCount} corrette, {incorrectCount} errate, {omittedCount} omesse su{" "}
           {sortedAnswers.length}
         </p>
@@ -65,7 +65,7 @@ export default async function TeacherAttemptDetailPage({
           return (
             <div
               key={answer.id}
-              className={`rounded-xl border p-5 ${
+              className={`rounded-3xl border p-5 ${
                 answer.isCorrect
                   ? "border-green-200 bg-green-50 dark:border-green-900/60 dark:bg-green-950/20"
                   : wasOmitted
@@ -119,7 +119,7 @@ export default async function TeacherAttemptDetailPage({
                 </p>
               )}
               {!answer.selectedOptionId && (
-                <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">Nessuna risposta data.</p>
+                <p className="mt-2 text-xs text-muted">Nessuna risposta data.</p>
               )}
             </div>
           );

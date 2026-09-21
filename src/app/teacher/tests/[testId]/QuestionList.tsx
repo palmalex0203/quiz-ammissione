@@ -32,7 +32,7 @@ export function QuestionList({ testId, questions }: { testId: string; questions:
       {questions.map((q, index) => (
         <div
           key={q.id}
-          className="rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-950"
+          className="card p-4"
         >
           {editingId === q.id ? (
             <QuestionForm
@@ -101,7 +101,7 @@ export function QuestionList({ testId, questions }: { testId: string; questions:
                 <button
                   type="button"
                   onClick={() => setEditingId(q.id)}
-                  className="text-xs font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+                  className="text-xs font-semibold text-muted hover:text-brand-strong"
                 >
                   Modifica
                 </button>

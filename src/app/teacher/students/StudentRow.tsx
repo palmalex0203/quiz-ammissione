@@ -20,23 +20,23 @@ export function StudentRow({
         <div>
           <Link
             href={`/teacher/results/student/${student.id}`}
-            className="text-sm font-medium text-zinc-900 hover:underline dark:text-zinc-100"
+            className="text-sm font-semibold hover:text-brand-strong"
           >
             {student.name}
           </Link>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400">{student.email}</p>
+          <p className="text-xs text-muted">{student.email}</p>
         </div>
         <div className="flex items-center gap-3">
           <Link
             href={`/teacher/results/student/${student.id}`}
-            className="text-xs font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            className="text-xs font-semibold text-muted hover:text-brand-strong"
           >
             {student.attemptCount} tentativi &middot; vedi risultati
           </Link>
           <button
             type="button"
             onClick={() => setShowReset((v) => !v)}
-            className="text-xs font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            className="text-xs font-semibold text-muted hover:text-brand-strong"
           >
             Reimposta password
           </button>
@@ -61,12 +61,12 @@ export function StudentRow({
             placeholder="Nuova password"
             required
             minLength={6}
-            className="rounded-md border border-zinc-300 px-2 py-1 text-sm outline-none focus:border-zinc-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+            className="field field-sm"
           />
           <button
             type="submit"
             disabled={isPending}
-            className="rounded-md bg-zinc-900 px-3 py-1 text-xs font-medium text-white hover:bg-zinc-700 disabled:opacity-60 dark:bg-zinc-100 dark:text-zinc-900"
+            className="btn btn-sm btn-ink disabled:opacity-60"
           >
             {isPending ? "Salvataggio..." : "Salva"}
           </button>

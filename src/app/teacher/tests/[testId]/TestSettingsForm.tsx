@@ -22,7 +22,7 @@ export function TestSettingsForm({
   return (
     <form
       action={formAction}
-      className="flex flex-col gap-4 rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-950"
+      className="flex flex-col gap-4 card p-6"
     >
       <input type="hidden" name="testId" value={test.id} />
 
@@ -35,7 +35,7 @@ export function TestSettingsForm({
           name="title"
           defaultValue={test.title}
           required
-          className="rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-zinc-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+          className="field"
         />
       </div>
 
@@ -48,7 +48,7 @@ export function TestSettingsForm({
           name="description"
           defaultValue={test.description ?? ""}
           rows={2}
-          className="rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-zinc-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+          className="field"
         />
       </div>
 
@@ -63,7 +63,7 @@ export function TestSettingsForm({
             type="number"
             min={1}
             defaultValue={test.timeLimitMinutes ?? ""}
-            className="rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-zinc-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+            className="field"
           />
         </div>
         <div className="flex flex-col gap-1">
@@ -76,7 +76,7 @@ export function TestSettingsForm({
             type="number"
             min={1}
             defaultValue={test.maxAttempts ?? ""}
-            className="rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-zinc-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+            className="field"
           />
         </div>
       </div>
@@ -96,7 +96,7 @@ export function TestSettingsForm({
       <button
         type="submit"
         disabled={isPending}
-        className="self-start rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-700 disabled:opacity-60 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
+        className="btn btn-ink self-start disabled:opacity-60"
       >
         {isPending ? "Salvataggio..." : "Salva impostazioni"}
       </button>
