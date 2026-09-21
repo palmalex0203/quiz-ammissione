@@ -25,7 +25,7 @@ export default function LoginPage() {
     setIsSubmitting(false);
 
     if (result?.error) {
-      setError("Email o password non corretti.");
+      setError("Email o password non corretti. Controlla e riprova.");
       return;
     }
 
@@ -34,23 +34,33 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-zinc-50 px-4 dark:bg-black">
-      <img
-        src="/profor-logo.png"
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-1/2 w-[900px] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-[0.06] dark:opacity-[0.12]"
-      />
-      <div className="relative w-full max-w-sm rounded-2xl border border-zinc-200 bg-white p-8 shadow-lg shadow-zinc-900/5 dark:border-zinc-800 dark:bg-zinc-950">
-        <img src="/profor-logo.png" alt="Profor - Ente di Formazione" className="mb-4 h-10 w-auto" />
-        <h1 className="mb-1 text-xl font-semibold text-zinc-900 dark:text-zinc-50">
-          Simulatore Ufficiale
-        </h1>
-        <p className="mb-6 text-sm text-zinc-500 dark:text-zinc-400">Accedi con le tue credenziali</p>
+    <div className="app-shell flex min-h-screen items-center justify-center bg-background px-4 py-10">
+      <div className="grid w-full max-w-3xl overflow-hidden rounded-[2rem] border border-line bg-card sm:grid-cols-[1.05fr_1fr]">
+        <div className="flex flex-col justify-between gap-8 bg-brand p-8 text-white">
+          <img
+            src="/profor-logo.png"
+            alt="Profor - Ente di Formazione"
+            className="h-9 w-auto self-start rounded-xl bg-white px-3 py-1.5"
+          />
+          <div>
+            <h1 className="font-display text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+              Simulatore Ufficiale
+            </h1>
+            <p className="mt-2 text-sm text-white/90">
+              Allenati per il test di ammissione alle Professioni Sanitarie: 60 domande, 100 minuti, come il giorno
+              della prova.
+            </p>
+          </div>
+        </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <div className="flex flex-col gap-1">
-            <label htmlFor="email" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-8">
+          <div>
+            <p className="font-display text-xl font-bold">Accedi</p>
+            <p className="text-sm text-muted">Usa le credenziali che ti ha dato la segreteria.</p>
+          </div>
+
+          <div className="flex flex-col gap-1.5">
+            <label htmlFor="email" className="text-sm font-semibold">
               Email
             </label>
             <input
@@ -60,12 +70,12 @@ export default function LoginPage() {
               autoComplete="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="rounded-lg border border-zinc-300 px-3 py-2 text-sm outline-none transition-colors focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+              className="rounded-xl border border-line bg-background px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-brand focus:ring-2 focus:ring-brand/20"
             />
           </div>
 
-          <div className="flex flex-col gap-1">
-            <label htmlFor="password" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+          <div className="flex flex-col gap-1.5">
+            <label htmlFor="password" className="text-sm font-semibold">
               Password
             </label>
             <input
@@ -75,18 +85,18 @@ export default function LoginPage() {
               autoComplete="current-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="rounded-lg border border-zinc-300 px-3 py-2 text-sm outline-none transition-colors focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100"
+              className="rounded-xl border border-line bg-background px-3.5 py-2.5 text-sm outline-none transition-colors focus:border-brand focus:ring-2 focus:ring-brand/20"
             />
           </div>
 
-          {error && <p className="text-sm text-red-600 dark:text-red-400">{error}</p>}
+          {error && (
+            <p role="alert" className="rounded-xl bg-red-50 px-3 py-2 text-sm text-red-700 dark:bg-red-500/10 dark:text-red-300">
+              {error}
+            </p>
+          )}
 
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="mt-2 rounded-lg bg-orange-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-orange-700 disabled:opacity-60 dark:bg-orange-500 dark:hover:bg-orange-400"
-          >
-            {isSubmitting ? "Accesso in corso..." : "Accedi"}
+          <button type="submit" disabled={isSubmitting} className="btn btn-brand mt-2 w-full disabled:opacity-60">
+            {isSubmitting ? "Accesso in corso…" : "Accedi"}
           </button>
         </form>
       </div>

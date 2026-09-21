@@ -75,77 +75,100 @@ export function TakeTestForm({
   }
 
   const answeredCount = Object.keys(answers).length;
+  const progressPct = questions.length > 0 ? Math.round((answeredCount / questions.length) * 100) : 0;
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="sticky top-0 z-10 -mx-4 flex flex-wrap items-center justify-between gap-2 border-b border-zinc-200 bg-white/95 px-4 py-3 backdrop-blur supports-[backdrop-filter]:bg-white/80 dark:border-zinc-800 dark:bg-zinc-950/95 dark:supports-[backdrop-filter]:bg-zinc-950/80">
-        <div>
-          <h1 className="text-lg font-semibold text-zinc-900 sm:text-2xl dark:text-zinc-50">{testTitle}</h1>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
-            {answeredCount}/{questions.length} risposte date
-          </p>
-        </div>
-        {remainingMs != null && (
-          <div
-            className={`rounded-md px-3 py-1 text-sm font-medium ${
-              remainingMs < 60_000
-                ? "bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-400"
-                : "bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
-            }`}
-          >
-            {formatTime(remainingMs)}
+      <div className="sticky top-0 z-30 -mx-4 flex flex-col gap-3 border-b border-line bg-background/90 px-4 py-3 backdrop-blur sm:-mx-6 sm:px-6">
+        <div className="flex items-center justify-between gap-3">
+          <div className="min-w-0">
+            <h1 className="truncate font-display text-lg font-bold tracking-tight sm:text-2xl">{testTitle}</h1>
+            <p className="text-sm text-muted">
+              {answeredCount} di {questions.length} risposte date
+              <span className="hidden sm:inline"> · tocca di nuovo una risposta per toglierla</span>
+            </p>
           </div>
-        )}
+          {remainingMs != null && (
+            <div
+              role="timer"
+              aria-label="Tempo rimanente"
+              className={`shrink-0 rounded-full px-3.5 py-1.5 font-display text-sm font-bold tabular-nums ${
+                remainingMs < 5 * 60_000
+                  ? "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300"
+                  : "bg-card text-foreground ring-1 ring-line"
+              }`}
+            >
+              {formatTime(remainingMs)}
+            </div>
+          )}
+        </div>
+        <div className="h-1.5 overflow-hidden rounded-full bg-brand-soft" aria-hidden="true">
+          <div className="h-full rounded-full bg-brand transition-[width]" style={{ width: `${progressPct}%` }} />
+        </div>
       </div>
 
       <div className="flex flex-col gap-4">
-        {questions.map((q, index) => (
-          <div
-            key={q.id}
-            className="rounded-xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950"
-          >
-            <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
-              Domanda {index + 1} &middot; {q.subject}
-            </p>
-            <p className="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">{q.text}</p>
-            <div className="mt-3 flex flex-col gap-2">
-              {q.options.map((option) => (
-                <label
-                  key={option.id}
-                  className="flex cursor-pointer items-center gap-2 rounded-md border border-zinc-200 px-3 py-2 text-sm hover:bg-zinc-50 dark:border-zinc-800 dark:hover:bg-zinc-900"
-                >
-                  <input
-                    type="radio"
-                    name={`question-${q.id}`}
-                    checked={answers[q.id] === option.id}
-                    onClick={() => {
-                      if (answers[q.id] === option.id) deselectOption(q.id);
-                    }}
-                    onChange={() => selectOption(q.id, option.id)}
-                    className="h-4 w-4"
-                  />
-                  <span className="text-zinc-800 dark:text-zinc-200">{option.text}</span>
-                </label>
-              ))}
-            </div>
-          </div>
-        ))}
+        {questions.map((q, index) => {
+          const answered = answers[q.id] != null;
+          return (
+            <fieldset key={q.id} className="card flex flex-col gap-3 p-5">
+              <legend className="sr-only">Domanda {index + 1}</legend>
+              <div className="flex items-center justify-between gap-3">
+                <span className="pill pill-brand">{q.subject}</span>
+                <span className={`text-xs font-semibold tabular-nums ${answered ? "text-brand-strong" : "text-muted"}`}>
+                  {index + 1} / {questions.length}
+                </span>
+              </div>
+              <p className="whitespace-pre-line text-[15px] font-semibold leading-relaxed">{q.text}</p>
+              <div className="flex flex-col gap-2">
+                {q.options.map((option, optionIndex) => {
+                  const selected = answers[q.id] === option.id;
+                  return (
+                    <label
+                      key={option.id}
+                      className={`flex cursor-pointer items-center gap-3 rounded-2xl border-[1.5px] px-3 py-2.5 text-sm transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand ${
+                        selected
+                          ? "border-brand bg-brand-tint"
+                          : "border-line bg-card hover:border-brand/40 hover:bg-brand-tint/60"
+                      }`}
+                    >
+                      <input
+                        type="radio"
+                        name={`question-${q.id}`}
+                        checked={selected}
+                        onClick={() => {
+                          if (answers[q.id] === option.id) deselectOption(q.id);
+                        }}
+                        onChange={() => selectOption(q.id, option.id)}
+                        className="sr-only"
+                      />
+                      <span
+                        aria-hidden="true"
+                        className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-[10px] text-xs font-bold ${
+                          selected ? "bg-brand text-white" : "bg-brand-tint text-brand-strong"
+                        }`}
+                      >
+                        {String.fromCharCode(65 + optionIndex)}
+                      </span>
+                      <span>{option.text}</span>
+                    </label>
+                  );
+                })}
+              </div>
+            </fieldset>
+          );
+        })}
       </div>
 
-      <div className="flex items-center gap-3">
-        <button
-          type="button"
-          onClick={doSubmit}
-          disabled={isSubmitting}
-          className="rounded-md bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 disabled:opacity-60 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
-        >
-          {isSubmitting ? "Invio in corso..." : "Invia test"}
+      <div className="card flex flex-col items-start gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-sm text-muted">
+          {answeredCount < questions.length
+            ? `${questions.length - answeredCount} domande senza risposta: valgono 0 punti.`
+            : "Hai risposto a tutte le domande."}
+        </p>
+        <button type="button" onClick={doSubmit} disabled={isSubmitting} className="btn btn-brand disabled:opacity-60">
+          {isSubmitting ? "Invio in corso…" : "Consegna il test"}
         </button>
-        {answeredCount < questions.length && (
-          <p className="text-xs text-zinc-500 dark:text-zinc-400">
-            {questions.length - answeredCount} domande senza risposta.
-          </p>
-        )}
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { redirect } from "next/navigation";
-import Link from "next/link";
 import { auth, signOut } from "@/lib/auth";
+import { AppHeader } from "@/components/AppHeader";
 
 export default async function TeacherLayout({ children }: { children: ReactNode }) {
   const session = await auth();
@@ -9,57 +9,26 @@ export default async function TeacherLayout({ children }: { children: ReactNode 
     redirect("/login");
   }
 
+  async function signOutAction() {
+    "use server";
+    await signOut({ redirectTo: "/login" });
+  }
+
   return (
-    <div className="app-shell min-h-screen bg-zinc-50 dark:bg-black">
-      <header className="sticky top-0 z-10 border-b border-zinc-200/80 bg-white/90 backdrop-blur dark:border-zinc-800/80 dark:bg-zinc-950/90">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-          <div className="flex items-center gap-6">
-            <Link href="/teacher/dashboard" className="shrink-0">
-              <img src="/profor-logo.png" alt="Profor" className="h-7 w-auto dark:brightness-125" />
-            </Link>
-            <nav className="flex gap-1 text-sm font-medium text-zinc-600 dark:text-zinc-400">
-              <Link
-                href="/teacher/dashboard"
-                className="rounded-full px-3 py-1.5 transition-colors hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-500/10 dark:hover:text-orange-400"
-              >
-                Dashboard
-              </Link>
-              <Link
-                href="/teacher/students"
-                className="rounded-full px-3 py-1.5 transition-colors hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-500/10 dark:hover:text-orange-400"
-              >
-                Studenti
-              </Link>
-              <Link
-                href="/teacher/tests"
-                className="rounded-full px-3 py-1.5 transition-colors hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-500/10 dark:hover:text-orange-400"
-              >
-                Test
-              </Link>
-              <Link
-                href="/teacher/results"
-                className="rounded-full px-3 py-1.5 transition-colors hover:bg-orange-50 hover:text-orange-700 dark:hover:bg-orange-500/10 dark:hover:text-orange-400"
-              >
-                Risultati
-              </Link>
-            </nav>
-          </div>
-          <form
-            action={async () => {
-              "use server";
-              await signOut({ redirectTo: "/login" });
-            }}
-          >
-            <button
-              type="submit"
-              className="text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
-            >
-              Esci ({session.user.name})
-            </button>
-          </form>
-        </div>
-      </header>
-      <main className="mx-auto max-w-5xl px-6 py-8">{children}</main>
+    <div className="app-shell min-h-screen bg-background">
+      <AppHeader
+        home="/teacher/dashboard"
+        maxWidth="max-w-5xl"
+        userName={session.user.name ?? "Docente"}
+        signOutAction={signOutAction}
+        links={[
+          { href: "/teacher/dashboard", label: "Dashboard" },
+          { href: "/teacher/students", label: "Studenti" },
+          { href: "/teacher/tests", label: "Test" },
+          { href: "/teacher/results", label: "Risultati" },
+        ]}
+      />
+      <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">{children}</main>
     </div>
   );
 }

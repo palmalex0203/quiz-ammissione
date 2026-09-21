@@ -50,8 +50,8 @@ export default async function StudentHistoryPage() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h1 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">I miei progressi</h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <h1 className="page-title">I miei progressi</h1>
+        <p className="text-sm text-muted">
           Come stai andando materia per materia, e tutti i test che hai svolto.
         </p>
       </div>
@@ -65,28 +65,28 @@ export default async function StudentHistoryPage() {
       ) : (
         <>
           <div className="grid grid-cols-2 gap-4">
-            <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-              <p className="text-sm text-zinc-500 dark:text-zinc-400">Test completati</p>
-              <p className="mt-1 text-3xl font-semibold text-zinc-900 dark:text-zinc-50">
+            <div className="card p-5">
+              <p className="text-sm text-muted">Test completati</p>
+              <p className="mt-1 font-display text-4xl font-bold tabular-nums">
                 {attempts.length}
               </p>
             </div>
-            <div className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-              <p className="text-sm text-zinc-500 dark:text-zinc-400">Punteggio medio</p>
-              <p className="mt-1 text-3xl font-semibold text-zinc-900 dark:text-zinc-50">
+            <div className="card p-5">
+              <p className="text-sm text-muted">Punteggio medio</p>
+              <p className="mt-1 font-display text-4xl font-bold tabular-nums">
                 {avgPercentage}%
               </p>
             </div>
           </div>
 
           {weakest && (
-            <div className="flex flex-col gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-6 dark:border-amber-500/25 dark:bg-amber-500/5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-col gap-3 rounded-3xl border border-brand/25 bg-brand-tint p-6 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-start gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-amber-100 text-xl dark:bg-amber-500/20">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-soft text-xl">
                   🎯
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                  <p className="text-sm font-semibold">
                     Materia da rafforzare: {weakest.subject}
                   </p>
                   <p className="mt-0.5 max-w-md text-xs text-zinc-600 dark:text-zinc-400">
@@ -99,7 +99,7 @@ export default async function StudentHistoryPage() {
                 <input type="hidden" name="subject" value={weakest.subject} />
                 <SubmitButton
                   pendingText="Preparo l'esercitazione…"
-                  className="w-full shrink-0 rounded-lg bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-amber-700 sm:w-auto dark:bg-amber-500 dark:hover:bg-amber-400"
+                  className="btn btn-brand w-full shrink-0 sm:w-auto"
                 >
                   Allenati ora
                 </SubmitButton>
@@ -109,15 +109,15 @@ export default async function StudentHistoryPage() {
 
           {subjectRows.length > 0 && (
             <section className="flex flex-col gap-3">
-              <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+              <h2 className="section-title">
                 Risposte corrette per materia
               </h2>
-              <div className="flex flex-col gap-4 rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+              <div className="flex flex-col gap-4 card p-5">
                 {subjectRows.map((row) => (
                   <div key={row.subject} className="flex flex-col gap-1.5">
                     <div className="flex items-baseline justify-between gap-3 text-sm">
                       <span className="font-medium text-zinc-800 dark:text-zinc-200">{row.subject}</span>
-                      <span className="shrink-0 text-xs text-zinc-500 dark:text-zinc-400">
+                      <span className="shrink-0 text-xs text-muted">
                         {row.correct}/{row.total} corrette &middot; {row.pct}%
                       </span>
                     </div>
@@ -140,7 +140,7 @@ export default async function StudentHistoryPage() {
           )}
 
           <section className="flex flex-col gap-3">
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+            <h2 className="section-title">
               Test svolti
             </h2>
             <div className="flex flex-col gap-3">
@@ -148,13 +148,13 @@ export default async function StudentHistoryPage() {
                 <Link
                   key={attempt.id}
                   href={`/student/tests/${attempt.testId}/result/${attempt.id}`}
-                  className="flex items-center justify-between gap-3 rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm transition-colors hover:border-orange-200 dark:border-zinc-800 dark:bg-zinc-950 dark:hover:border-orange-500/30"
+                  className="flex items-center justify-between gap-3 card card-link p-5"
                 >
                   <div className="min-w-0">
-                    <p className="truncate text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                    <p className="truncate text-sm font-semibold">
                       {attempt.test.title}
                     </p>
-                    <p className="mt-0.5 text-xs text-zinc-500 dark:text-zinc-400">
+                    <p className="mt-0.5 text-xs text-muted">
                       {attempt.submittedAt?.toLocaleString("it-IT")}
                     </p>
                   </div>

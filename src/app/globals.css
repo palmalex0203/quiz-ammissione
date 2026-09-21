@@ -1,28 +1,73 @@
 @import "tailwindcss";
 
+/*
+ * Stile "Aula luminosa" (restyling settembre 2026): fondo caldo, arancione Profor
+ * come colore d'azione, forme morbide. Tutti i colori passano da questi token,
+ * così il tema scuro si ottiene ridefinendo solo i valori.
+ */
 :root {
-  --background: #fafaf9;
-  --foreground: #171717;
+  --background: #fffaf6;
+  --foreground: #2a1d14;
+  --muted: #8a7465;
+  --card: #ffffff;
+  --line: #f3e4d8;
   --brand: #ea5b17;
-  --brand-soft: #fff2e8;
+  --brand-strong: #c2440c;
+  --brand-soft: #fde9dc;
+  --brand-tint: #fff4ec;
+  --ink: #2a1d14;
+  --on-ink: #fffaf6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #15100c;
+    --foreground: #f3e9e1;
+    --muted: #b09a8a;
+    --card: #1f1813;
+    --line: #3a2c22;
+    --brand: #f06a28;
+    --brand-strong: #ff9a62;
+    --brand-soft: rgba(240, 106, 40, 0.2);
+    --brand-tint: rgba(240, 106, 40, 0.1);
+    --ink: #f3e9e1;
+    --on-ink: #15100c;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-line: var(--line);
   --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
   --color-brand-soft: var(--brand-soft);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-tint: var(--brand-tint);
+  --color-ink: var(--ink);
+  --color-on-ink: var(--on-ink);
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0b0a09;
-    --foreground: #ededed;
-    --brand: #fb8a44;
-    --brand-soft: rgba(234, 91, 23, 0.12);
-  }
+/*
+ * I grigi "zinc" usati nelle pagine vengono spostati verso il caldo: le pagine che
+ * non sono state ridisegnate (area insegnante) si intonano da sole al nuovo stile.
+ */
+@theme {
+  --color-zinc-50: #fbf7f3;
+  --color-zinc-100: #f5ede6;
+  --color-zinc-200: #ecdfd4;
+  --color-zinc-300: #dccbbd;
+  --color-zinc-400: #b39e8e;
+  --color-zinc-500: #8a7465;
+  --color-zinc-600: #6b584b;
+  --color-zinc-700: #4f4037;
+  --color-zinc-800: #342a23;
+  --color-zinc-900: #231b15;
+  --color-zinc-950: #17110d;
 }
 
 body {
@@ -31,5 +76,108 @@ body {
 }
 
 .app-shell {
-  background-image: radial-gradient(ellipse 1200px 500px at 50% -10%, var(--brand-soft), transparent);
+  background-image: radial-gradient(ellipse 1100px 420px at 50% -8%, var(--brand-tint), transparent);
+}
+
+@layer components {
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 1.25rem;
+  }
+  .card-link {
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .card-link:hover {
+    border-color: color-mix(in srgb, var(--brand) 40%, var(--line));
+  }
+
+  .page-title {
+    font-family: var(--font-display);
+    font-size: 1.875rem;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 999px;
+    padding: 0.625rem 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color 0.15s, color 0.15s, transform 0.1s;
+  }
+  .btn:active {
+    transform: scale(0.98);
+  }
+  .btn:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+  }
+  .btn-sm {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.8125rem;
+  }
+  .btn-brand {
+    background: var(--brand);
+    color: #fff;
+  }
+  .btn-brand:hover {
+    background: #d24e10;
+  }
+  .btn-ink {
+    background: var(--ink);
+    color: var(--on-ink);
+  }
+  .btn-ink:hover {
+    opacity: 0.88;
+  }
+  .btn-soft {
+    background: var(--brand-soft);
+    color: var(--brand-strong);
+  }
+  .btn-soft:hover {
+    background: color-mix(in srgb, var(--brand) 22%, transparent);
+  }
+  .btn-on-brand {
+    background: #fff;
+    color: #c2440c;
+  }
+  .btn-on-brand:hover {
+    background: #fff4ec;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 999px;
+    padding: 0.2rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .pill-brand {
+    background: var(--brand-soft);
+    color: var(--brand-strong);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .card-link {
+    transition: none;
+  }
 }
