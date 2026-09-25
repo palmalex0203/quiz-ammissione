@@ -8,6 +8,7 @@ const LINKS: NavLink[] = [
   { href: "/teacher/dashboard", label: "Dashboard", icon: "home" },
   { href: "/teacher/students", label: "Studenti", icon: "users" },
   { href: "/teacher/tests", label: "Test", icon: "docs" },
+  { href: "/teacher/appunti", label: "Appunti", icon: "book" },
   { href: "/teacher/results", label: "Risultati", icon: "chart" },
 ];
 

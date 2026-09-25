@@ -27,8 +27,12 @@ export default async function StudentPracticePage({
   const { session, track } = await requireStudentTrack();
   const studentId = session.user.id;
 
-  const [pool, subjectTotals, tests] = await Promise.all([
+  const [pool, appunti, subjectTotals, tests] = await Promise.all([
     poolCounts(track.id),
+    prisma.topicNote.findMany({
+      where: { track: track.id, isPublished: true },
+      select: { topic: true },
+    }),
     prisma.attemptSubjectStat.groupBy({
       by: ["subject"],
       where: { attempt: { studentId, status: "SUBMITTED", test: { track: track.id } } },
@@ -56,6 +60,8 @@ export default async function StudentPracticePage({
     }),
   ]);
 
+  const conAppunto = new Set(appunti.map((a) => a.topic));
+
   const subjectPct = new Map(
     subjectTotals
       .filter((s) => (s._sum.total ?? 0) > 0)
@@ -74,8 +80,9 @@ export default async function StudentPracticePage({
   }
 
   const subjectNames = track.subjects.map((s) => s.name);
+  const abbastanzaDomande = (code: string) => (pool.byTopic.get(code) ?? 0) >= MIN_TOPIC_QUESTIONS;
   const topicsWithQuestions = (subject: string) =>
-    topicsOf(track.id, subject).filter((t) => (pool.byTopic.get(t.code) ?? 0) >= MIN_TOPIC_QUESTIONS);
+    topicsOf(track.id, subject).filter((t) => abbastanzaDomande(t.code) || conAppunto.has(t.code));
 
   // Alle materie del percorso si aggiungono le cartelle di esercitazioni del docente
   // che non corrispondono a una materia (per esempio "Cultura generale").
@@ -182,7 +189,10 @@ export default async function StudentPracticePage({
           <section className="flex flex-col gap-3">
             <div>
               <h2 className="section-title">Argomenti</h2>
-              <p className="text-sm text-muted">Domande pescate a caso dalla banca dati: ogni allenamento è diverso.</p>
+              <p className="text-sm text-muted">
+                Domande pescate a caso dalla banca dati: ogni allenamento è diverso. Dove c&apos;è
+                &ldquo;Ripassa&rdquo; trovi anche l&apos;appunto dell&apos;argomento.
+              </p>
             </div>
             <div className="flex flex-col gap-2">
               {topics.map((topic) => {
@@ -196,7 +206,9 @@ export default async function StudentPracticePage({
                     <div className="min-w-0">
                       <p className="text-sm font-semibold">{topic.label}</p>
                       <p className="mt-0.5 text-xs text-muted">
-                        {pool.byTopic.get(topic.code)} domande disponibili
+                        {abbastanzaDomande(topic.code)
+                          ? `${pool.byTopic.get(topic.code)} domande disponibili`
+                          : "Nessuna domanda per ora"}
                         {pct != null && ` · ${stat!.correct} giuste su ${stat!.total} già svolte`}
                       </p>
                     </div>
@@ -214,12 +226,19 @@ export default async function StudentPracticePage({
                           {pct}%
                         </span>
                       )}
-                      <form action={generateTopicPractice}>
-                        <input type="hidden" name="topic" value={topic.code} />
-                        <SubmitButton pendingText="Preparo…" className="btn btn-sm btn-ink">
-                          Allenati
-                        </SubmitButton>
-                      </form>
+                      {conAppunto.has(topic.code) && (
+                        <Link href={`/student/appunti/${topic.code}`} className="btn btn-sm btn-soft">
+                          Ripassa
+                        </Link>
+                      )}
+                      {abbastanzaDomande(topic.code) && (
+                        <form action={generateTopicPractice}>
+                          <input type="hidden" name="topic" value={topic.code} />
+                          <SubmitButton pendingText="Preparo…" className="btn btn-sm btn-ink">
+                            Allenati
+                          </SubmitButton>
+                        </form>
+                      )}
                     </div>
                   </div>
                 );

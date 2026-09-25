@@ -211,9 +211,103 @@ body {
     border-radius: 1rem;
     animation: skeleton-pulse 1.4s ease-in-out infinite;
   }
+
+  /*
+   * Testo lungo degli appunti: interlinea generosa, titoli che si distinguono
+   * dal corpo e tabelle che scorrono da sole se non ci stanno.
+   */
+  .prose {
+    line-height: 1.7;
+  }
+  .prose > * + * {
+    margin-top: 1rem;
+  }
+  .prose h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    text-wrap: balance;
+  }
+  .prose h3 {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+  }
+  .prose h1 {
+    display: none; /* il titolo è già nell'intestazione della pagina */
+  }
+  .prose ul,
+  .prose ol {
+    padding-left: 1.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .prose ul {
+    list-style: disc;
+  }
+  .prose ol {
+    list-style: decimal;
+  }
+  .prose li::marker {
+    color: var(--brand);
+  }
+  .prose strong {
+    font-weight: 700;
+  }
+  .prose blockquote {
+    border-left: 3px solid var(--brand);
+    background: var(--brand-tint);
+    border-radius: 0 1rem 1rem 0;
+    padding: 0.9rem 1.1rem;
+  }
+  .prose blockquote > * + * {
+    margin-top: 0.5rem;
+  }
+  .prose hr {
+    border: 0;
+    border-top: 1px solid var(--line);
+  }
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+  .prose th,
+  .prose td {
+    border: 1px solid var(--line);
+    padding: 0.5rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  .prose th {
+    background: var(--brand-tint);
+    font-weight: 700;
+  }
+  .prose code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background: var(--brand-tint);
+    border-radius: 0.35rem;
+    padding: 0.1rem 0.3rem;
+  }
+  .prose a {
+    color: var(--brand-strong);
+    text-decoration: underline;
+  }
+
+  /* Le tabelle larghe scorrono invece di allargare la pagina. */
+  .prose-table-scroll {
+    overflow-x: auto;
+  }
 }
 
-/* L'invito a installare l'app non serve a chi l'ha già installata né su desktop. */
+  /* L'invito a installare l'app non serve a chi l'ha già installata né su desktop. */
 @media (display-mode: standalone), (min-width: 1024px) {
   .install-hint {
     display: none;

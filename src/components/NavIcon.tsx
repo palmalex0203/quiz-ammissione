@@ -1,4 +1,4 @@
-export type IconName = "target" | "grid" | "chart" | "home" | "users" | "docs";
+export type IconName = "target" | "grid" | "chart" | "home" | "users" | "docs" | "book";
 
 /**
  * Icone della navigazione: tratto semplice, stessa griglia da 24, così le voci
@@ -49,6 +49,12 @@ export function NavIcon({ name }: { name: IconName }) {
           <circle cx="9" cy="8" r="3.2" />
           <path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5" />
           <path d="M16 5.5a3 3 0 0 1 0 5.6M17.5 19c0-2.2-.8-3.9-2-5" />
+        </>
+      )}
+      {name === "book" && (
+        <>
+          <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H10a2.5 2.5 0 0 1 2 1 2.5 2.5 0 0 1 2-1h4.5A1.5 1.5 0 0 1 20 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2.5 2.5 0 0 0-2 1 2.5 2.5 0 0 0-2-1H5.5A1.5 1.5 0 0 1 4 17.5z" />
+          <path d="M12 5v14" />
         </>
       )}
       {name === "docs" && (

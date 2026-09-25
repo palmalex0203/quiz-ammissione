@@ -143,6 +143,28 @@ model AttemptSubjectStat {
   @@index([subject])
 }
 
+// Appunti di ripasso, uno per argomento di programma. Il testo è markdown scritto
+// dall'insegnante (o preparato e poi revisionato da lui): resta modificabile dalla
+// sua area senza toccare il codice, e diventa visibile agli studenti solo quando
+// viene pubblicato.
+model TopicNote {
+  id          String   @id @default(cuid())
+  topic       String   @unique
+  track       String
+  subject     String
+  title       String
+  body        String
+  // Note di revisione per l'insegnante (punti da controllare, dati aggiunti da
+  // fuori le fonti): non vengono mai mostrate agli studenti.
+  reviewNotes String?
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([track])
+  @@index([isPublished])
+}
+
 model AnswerRecord {
   id               String        @id @default(cuid())
   attemptId        String
