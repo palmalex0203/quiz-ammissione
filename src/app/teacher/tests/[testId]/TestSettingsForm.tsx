@@ -2,6 +2,7 @@
 
 import { useActionState } from "react";
 import { updateTestSettings, type ActionState } from "./actions";
+import { TrackField } from "@/components/TrackField";
 
 const initialState: ActionState = {};
 
@@ -13,6 +14,7 @@ export function TestSettingsForm({
     title: string;
     description: string | null;
     shuffleQuestions: boolean;
+    track: string;
     timeLimitMinutes: number | null;
     maxAttempts: number | null;
   };
@@ -51,6 +53,8 @@ export function TestSettingsForm({
           className="field"
         />
       </div>
+
+      <TrackField value={test.track} />
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-1">

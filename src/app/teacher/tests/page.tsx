@@ -2,6 +2,7 @@ import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
 import { EmptyState } from "@/components/EmptyState";
+import { ALL_TRACKS, trackOf, type Track } from "@/lib/tracks";
 import { deleteTest, togglePublish } from "./actions";
 
 type TestRow = Awaited<ReturnType<typeof loadTests>>[number];
@@ -18,16 +19,12 @@ export default async function TestsPage() {
   const session = await requireTeacher();
   const tests = await loadTests(session.user.id);
 
-  const simulazioni = tests.filter((t) => t.kind !== "ESERCITAZIONE");
-  const esercitazioni = tests.filter((t) => t.kind === "ESERCITAZIONE");
-
-  const folders = new Map<string, TestRow[]>();
-  for (const t of esercitazioni) {
-    const key = t.folder ?? "Altro";
-    const list = folders.get(key) ?? [];
-    list.push(t);
-    folders.set(key, list);
-  }
+  // I test sono divisi per percorso: sono due programmi diversi, con banche dati e
+  // punteggi diversi, e vanno letti separatamente.
+  const byTrack = ALL_TRACKS.map((track) => ({
+    track,
+    tests: tests.filter((t) => trackOf(t.track).id === track.id),
+  })).filter((group) => group.tests.length > 0);
 
   return (
     <div className="flex flex-col gap-8">
@@ -35,13 +32,11 @@ export default async function TestsPage() {
         <div>
           <h1 className="page-title">Test</h1>
           <p className="text-sm text-muted">
-            {tests.length} test totali &middot; {simulazioni.length} simulazioni &middot; {esercitazioni.length} esercitazioni
+            {tests.length} test totali &middot;{" "}
+            {byTrack.map((g) => `${g.tests.length} ${g.track.label}`).join(" · ") || "nessun percorso attivo"}
           </p>
         </div>
-        <Link
-          href="/teacher/tests/new"
-          className="btn btn-brand"
-        >
+        <Link href="/teacher/tests/new" className="btn btn-brand">
           + Nuovo test
         </Link>
       </div>
@@ -54,24 +49,54 @@ export default async function TestsPage() {
         />
       )}
 
+      {byTrack.map(({ track, tests: trackTests }) => (
+        <TrackSection key={track.id} track={track} tests={trackTests} showTrackName={byTrack.length > 1} />
+      ))}
+    </div>
+  );
+}
+
+function TrackSection({
+  track,
+  tests,
+  showTrackName,
+}: {
+  track: Track;
+  tests: TestRow[];
+  showTrackName: boolean;
+}) {
+  const simulazioni = tests.filter((t) => t.kind !== "ESERCITAZIONE");
+  const esercitazioni = tests.filter((t) => t.kind === "ESERCITAZIONE");
+
+  const folders = new Map<string, TestRow[]>();
+  for (const t of esercitazioni) {
+    const key = t.folder ?? "Altro";
+    folders.set(key, [...(folders.get(key) ?? []), t]);
+  }
+
+  return (
+    <section className="flex flex-col gap-4">
+      {showTrackName && (
+        <div className="flex items-baseline gap-2 border-b border-line pb-2">
+          <h2 className="font-display text-xl font-bold tracking-tight">{track.label}</h2>
+          <span className="text-xs text-muted">{track.tagline}</span>
+        </div>
+      )}
+
       {simulazioni.length > 0 && (
-        <section className="flex flex-col gap-3">
-          <h2 className="section-title">
-            Simulazioni ufficiali
-          </h2>
+        <div className="flex flex-col gap-3">
+          <h3 className="section-title">Simulazioni</h3>
           <div className="flex flex-col gap-3">
             {simulazioni.map((test) => (
               <TestCard key={test.id} test={test} />
             ))}
           </div>
-        </section>
+        </div>
       )}
 
       {folders.size > 0 && (
-        <section className="flex flex-col gap-3">
-          <h2 className="section-title">
-            Esercitazioni per materia
-          </h2>
+        <div className="flex flex-col gap-3">
+          <h3 className="section-title">Esercitazioni per materia</h3>
           <div className="flex flex-col gap-3">
             {[...folders.entries()].map(([folder, folderTests]) => (
               <details
@@ -85,9 +110,7 @@ export default async function TestsPage() {
                     </span>
                     <div>
                       <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">{folder}</p>
-                      <p className="text-xs text-muted">
-                        {folderTests.length} esercitazioni
-                      </p>
+                      <p className="text-xs text-muted">{folderTests.length} esercitazioni</p>
                     </div>
                   </div>
                   <span className="text-zinc-400 transition-transform group-open:rotate-180 dark:text-zinc-600">
@@ -102,9 +125,9 @@ export default async function TestsPage() {
               </details>
             ))}
           </div>
-        </section>
+        </div>
       )}
-    </div>
+    </section>
   );
 }
 
@@ -140,10 +163,7 @@ function TestCard({ test, compact }: { test: TestRow; compact?: boolean }) {
       <div className="flex items-center gap-3">
         <form action={togglePublish}>
           <input type="hidden" name="testId" value={test.id} />
-          <button
-            type="submit"
-            className="text-xs font-semibold text-muted hover:text-brand-strong"
-          >
+          <button type="submit" className="text-xs font-semibold text-muted hover:text-brand-strong">
             {test.isPublished ? "Rendi bozza" : "Pubblica"}
           </button>
         </form>

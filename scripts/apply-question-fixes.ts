@@ -37,6 +37,7 @@ import "dotenv/config";
 import { readFileSync } from "node:fs";
 import { prisma } from "../src/lib/prisma";
 import { gradeAttempt } from "../src/lib/grading";
+import { trackOf } from "../src/lib/tracks";
 import { isKnownTopic } from "../src/lib/topics";
 
 type Fix = {
@@ -263,7 +264,7 @@ async function computeRegrades(keyChanges: Map<string, string>) {
       where: { id: attemptId },
       select: {
         id: true, score: true, testId: true,
-        student: { select: { name: true } }, test: { select: { title: true } },
+        student: { select: { name: true } }, test: { select: { title: true, track: true } },
         answers: { select: { questionId: true, selectedOptionId: true } },
       },
     });
@@ -277,7 +278,9 @@ async function computeRegrades(keyChanges: Map<string, string>) {
         id: q.id,
         options: q.options.map((o) => ({ id: o.id, isCorrect: keyChanges.has(q.id) ? o.id === keyChanges.get(q.id) : o.isCorrect })),
       })),
-      attempt.answers
+      attempt.answers,
+      // Ogni percorso ha il suo punteggio: si rivaluta con quello del test.
+      trackOf(attempt.test.track).scoring
     );
     const subjectOf = new Map(qs.map((q) => [q.id, q.subject]));
     const subjects = new Map<string, { correct: number; total: number }>();

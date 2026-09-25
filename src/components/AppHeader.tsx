@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -14,21 +15,29 @@ export function AppHeader({
   userName,
   signOutAction,
   maxWidth,
+  aside,
+  className = "",
 }: {
   home: string;
   links: { href: string; label: string }[];
   userName: string;
   signOutAction: () => Promise<void>;
   maxWidth: string;
+  // Spazio accanto al logo: lo studente ci mette il selettore del percorso.
+  aside?: ReactNode;
+  className?: string;
 }) {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-20 border-b border-line bg-card/85 backdrop-blur">
+    <header className={`sticky top-0 z-20 border-b border-line bg-card/85 backdrop-blur ${className}`}>
       <div className={`mx-auto flex ${maxWidth} flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-3 sm:px-6`}>
-        <Link href={home} className="shrink-0">
-          <img src="/profor-logo.png" alt="Profor" className="h-7 w-auto dark:brightness-125" />
-        </Link>
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+          <Link href={home} className="shrink-0">
+            <img src="/profor-logo.png" alt="Profor" className="h-7 w-auto dark:brightness-125" />
+          </Link>
+          {aside}
+        </div>
 
         <nav className="order-3 -mx-1 flex w-full gap-1 overflow-x-auto text-sm font-medium sm:order-none sm:mx-0 sm:w-auto sm:flex-1">
           {links.map((link) => {

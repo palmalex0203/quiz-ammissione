@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
 import { ProgressRing } from "@/components/ProgressRing";
+import { formatPoints, trackOf } from "@/lib/tracks";
 
 export default async function AttemptResultPage({
   params,
@@ -36,6 +37,9 @@ export default async function AttemptResultPage({
   const percentage =
     attempt.maxScore && attempt.maxScore > 0 ? Math.round(((attempt.score ?? 0) / attempt.maxScore) * 100) : 0;
 
+  // I punti mostrati sono quelli del percorso a cui appartiene il test.
+  const scoring = trackOf(attempt.test.track).scoring;
+
   const sortedAnswers = [...attempt.answers].sort((a, b) => a.question.order - b.question.order);
   const correctCount = sortedAnswers.filter((a) => a.isCorrect).length;
   const omittedCount = sortedAnswers.filter((a) => !a.selectedOptionId).length;
@@ -59,10 +63,10 @@ export default async function AttemptResultPage({
           </p>
           <div className="flex flex-wrap gap-2">
             <span className="pill bg-green-100 text-green-800 dark:bg-green-500/15 dark:text-green-300">
-              {correctCount} corrette · +1,5
+              {correctCount} corrette · {formatPoints(scoring.correct)}
             </span>
             <span className="pill bg-red-100 text-red-800 dark:bg-red-500/15 dark:text-red-300">
-              {incorrectCount} errate · −0,4
+              {incorrectCount} errate · {formatPoints(scoring.incorrect)}
             </span>
             <span className="pill bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300">
               {omittedCount} senza risposta · 0
@@ -101,7 +105,11 @@ export default async function AttemptResultPage({
                         : "bg-zinc-100 text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
                   }`}
                 >
-                  {status === "correct" ? "Corretta +1,5" : status === "wrong" ? "Errata −0,4" : "Senza risposta 0"}
+                  {status === "correct"
+                    ? `Corretta ${formatPoints(scoring.correct)}`
+                    : status === "wrong"
+                      ? `Errata ${formatPoints(scoring.incorrect)}`
+                      : "Senza risposta 0"}
                 </span>
               </div>
               <p className="mt-2 whitespace-pre-line text-sm font-semibold leading-relaxed">{answer.question.text}</p>

@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
+import { DEFAULT_TRACK, isTrackId } from "@/lib/tracks";
 
 export type ActionState = { error?: string };
 
@@ -12,6 +13,8 @@ export async function createTest(_prevState: ActionState, formData: FormData): P
 
   const title = String(formData.get("title") ?? "").trim();
   const description = String(formData.get("description") ?? "").trim();
+  const trackValue = formData.get("track");
+  const track = isTrackId(trackValue) ? trackValue : DEFAULT_TRACK;
 
   if (!title) {
     return { error: "Il titolo è obbligatorio." };
@@ -21,6 +24,7 @@ export async function createTest(_prevState: ActionState, formData: FormData): P
     data: {
       title,
       description: description || null,
+      track,
       createdById: session.user.id,
     },
   });

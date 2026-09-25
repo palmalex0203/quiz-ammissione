@@ -14,7 +14,15 @@ type QuestionData = {
   options: { id: string; text: string; isCorrect: boolean }[];
 };
 
-export function QuestionList({ testId, questions }: { testId: string; questions: QuestionData[] }) {
+export function QuestionList({
+  testId,
+  questions,
+  subjects,
+}: {
+  testId: string;
+  questions: QuestionData[];
+  subjects?: string[];
+}) {
   const [editingId, setEditingId] = useState<string | null>(null);
 
   if (questions.length === 0) {
@@ -36,6 +44,7 @@ export function QuestionList({ testId, questions }: { testId: string; questions:
         >
           {editingId === q.id ? (
             <QuestionForm
+              subjects={subjects}
               testId={testId}
               action={updateQuestion}
               submitLabel="Salva modifiche"

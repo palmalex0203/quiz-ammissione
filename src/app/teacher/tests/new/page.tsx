@@ -2,6 +2,7 @@
 
 import { useActionState } from "react";
 import { createTest, type ActionState } from "../actions";
+import { TrackField } from "@/components/TrackField";
 
 const initialState: ActionState = {};
 
@@ -38,6 +39,8 @@ export default function NewTestPage() {
             className="field"
           />
         </div>
+
+        <TrackField />
 
         {state.error && <p className="text-sm text-red-600 dark:text-red-400">{state.error}</p>}
 

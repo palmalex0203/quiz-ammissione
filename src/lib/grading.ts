@@ -1,3 +1,5 @@
+import { DEFAULT_TRACK, TRACKS, type Scoring } from "@/lib/tracks";
+
 export type GradableQuestion = {
   id: string;
   options: { id: string; isCorrect: boolean }[];
@@ -17,15 +19,20 @@ export type GradedAnswer = {
   outcome: AnswerOutcome;
 };
 
-export const POINTS_CORRECT = 1.5;
-export const POINTS_INCORRECT = -0.4;
-export const POINTS_OMITTED = 0;
+// Ogni percorso ha il suo punteggio (vedi src/lib/tracks.ts). Quando non viene
+// indicato si usa quello di Professioni Sanitarie, il percorso storico: i test
+// creati prima dell'introduzione dei percorsi appartengono tutti a quello.
+export const DEFAULT_SCORING: Scoring = TRACKS[DEFAULT_TRACK].scoring;
 
-export function gradeAttempt(questions: GradableQuestion[], answers: SubmittedAnswer[]) {
+export function gradeAttempt(
+  questions: GradableQuestion[],
+  answers: SubmittedAnswer[],
+  scoring: Scoring = DEFAULT_SCORING
+) {
   const answerByQuestion = new Map(answers.map((a) => [a.questionId, a.selectedOptionId]));
 
   let score = 0;
-  const maxScore = questions.length * POINTS_CORRECT;
+  const maxScore = questions.length * scoring.correct;
 
   const results: GradedAnswer[] = questions.map((question) => {
     const selectedOptionId = answerByQuestion.get(question.id) ?? null;
@@ -35,13 +42,13 @@ export function gradeAttempt(questions: GradableQuestion[], answers: SubmittedAn
     let outcome: AnswerOutcome;
     if (selectedOptionId == null) {
       outcome = "OMITTED";
-      score += POINTS_OMITTED;
+      score += scoring.omitted;
     } else if (isCorrect) {
       outcome = "CORRECT";
-      score += POINTS_CORRECT;
+      score += scoring.correct;
     } else {
       outcome = "INCORRECT";
-      score += POINTS_INCORRECT;
+      score += scoring.incorrect;
     }
 
     return { questionId: question.id, selectedOptionId, isCorrect, outcome };
@@ -50,5 +57,5 @@ export function gradeAttempt(questions: GradableQuestion[], answers: SubmittedAn
   // Evita rumore da virgola mobile (es. 51.900000000000006)
   score = Math.round(score * 100) / 100;
 
-  return { score, maxScore, results };
+  return { score, maxScore: Math.round(maxScore * 100) / 100, results };
 }

@@ -1,24 +1,22 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
-import { requireStudent } from "@/lib/permissions";
+import { requireStudentTrack } from "@/lib/track-session";
 import { EmptyState } from "@/components/EmptyState";
 import { SubmitButton } from "@/components/SubmitButton";
 import { ProgressRing } from "@/components/ProgressRing";
 import { StudentTestCard } from "@/components/StudentTestCard";
-import { TOPICS_BY_SUBJECT, MIN_TOPIC_QUESTIONS } from "@/lib/topics";
-import { PRACTICE_SIZES } from "@/lib/subjects";
+import { poolCounts } from "@/lib/question-pool";
+import { topicsOf, MIN_TOPIC_QUESTIONS } from "@/lib/topics";
+import { paperOf, type Track } from "@/lib/tracks";
 import { generateSubjectPractice, generateTopicPractice } from "@/app/student/dashboard/actions";
 
-// Materie nell'ordine del test ufficiale. Le cartelle di esercitazioni del docente
-// che non corrispondono a una materia (es. Cultura generale) diventano riquadri in più.
-const SUBJECT_ORDER = ["Comprensione del testo", "Logica", "Biologia", "Chimica", "Fisica e Matematica"];
 const SIMULAZIONI = "simulazioni";
 
 /*
- * Esercitati è una griglia di riquadri: uno per materia e uno per le simulazioni
- * svolte in classe. Toccandone uno (?materia=...) si aprono gli argomenti della
- * materia, per allenarsi con domande pescate a caso, e le esercitazioni preparate
- * dal docente.
+ * Esercitati è una griglia di riquadri: uno per materia del percorso aperto e uno
+ * per le simulazioni svolte in classe. Toccandone uno (?materia=...) si aprono gli
+ * argomenti della materia, per allenarsi con domande pescate a caso, e le
+ * esercitazioni preparate dal docente.
  */
 export default async function StudentPracticePage({
   searchParams,
@@ -26,25 +24,20 @@ export default async function StudentPracticePage({
   searchParams: Promise<{ materia?: string }>;
 }) {
   const { materia } = await searchParams;
-  const session = await requireStudent();
+  const { session, track } = await requireStudentTrack();
   const studentId = session.user.id;
 
-  const [poolRows, subjectTotals, tests] = await Promise.all([
-    // Quante domande ha ogni argomento: quelli troppo scarni non vengono proposti.
-    prisma.$queryRaw<{ topic: string; n: bigint }[]>`
-      SELECT q.topic as topic, COUNT(*) as n
-      FROM "Question" q JOIN "Test" t ON q."testId" = t.id
-      WHERE t.kind = 'POOL' AND q.topic IS NOT NULL
-      GROUP BY q.topic
-    `,
+  const [pool, subjectTotals, tests] = await Promise.all([
+    poolCounts(track.id),
     prisma.attemptSubjectStat.groupBy({
       by: ["subject"],
-      where: { attempt: { studentId, status: "SUBMITTED" } },
+      where: { attempt: { studentId, status: "SUBMITTED", test: { track: track.id } } },
       _sum: { correct: true, total: true },
     }),
     prisma.test.findMany({
       where: {
         isPublished: true,
+        track: track.id,
         kind: { in: ["SIMULAZIONE", "ESERCITAZIONE"] },
         OR: [{ assignments: { none: {} } }, { assignments: { some: { studentId } } }],
       },
@@ -63,7 +56,6 @@ export default async function StudentPracticePage({
     }),
   ]);
 
-  const poolCount = new Map(poolRows.map((r) => [r.topic, Number(r.n)]));
   const subjectPct = new Map(
     subjectTotals
       .filter((s) => (s._sum.total ?? 0) > 0)
@@ -81,40 +73,64 @@ export default async function StudentPracticePage({
     esercitazioniByFolder.set(key, [...(esercitazioniByFolder.get(key) ?? []), t]);
   }
 
-  const topicsOf = (subject: string) =>
-    (TOPICS_BY_SUBJECT[subject] ?? []).filter((t) => (poolCount.get(t.code) ?? 0) >= MIN_TOPIC_QUESTIONS);
+  const subjectNames = track.subjects.map((s) => s.name);
+  const topicsWithQuestions = (subject: string) =>
+    topicsOf(track.id, subject).filter((t) => (pool.byTopic.get(t.code) ?? 0) >= MIN_TOPIC_QUESTIONS);
 
+  // Alle materie del percorso si aggiungono le cartelle di esercitazioni del docente
+  // che non corrispondono a una materia (per esempio "Cultura generale").
   const tiles = [
-    ...SUBJECT_ORDER,
-    ...[...esercitazioniByFolder.keys()].filter((f) => !SUBJECT_ORDER.includes(f)),
+    ...subjectNames,
+    ...[...esercitazioniByFolder.keys()].filter((f) => !subjectNames.includes(f)),
   ];
 
   if (materia === SIMULAZIONI) {
+    // Le simulazioni con una cartella (per esempio "Prove ufficiali") restano
+    // raggruppate: è l'archivio delle prove già somministrate.
+    const groups = new Map<string, typeof simulazioni>();
+    for (const t of simulazioni) {
+      const key = t.folder ?? "Simulazioni in classe";
+      groups.set(key, [...(groups.get(key) ?? []), t]);
+    }
+
     return (
       <div className="flex flex-col gap-6">
         <BackLink />
         <div>
           <h1 className="page-title">Simulazioni in classe</h1>
           <p className="mt-1 text-sm text-muted">
-            Le simulazioni complete preparate dal docente, le stesse svolte a lezione.
+            Le simulazioni complete di {track.label} preparate dal docente, le stesse svolte a lezione.
           </p>
         </div>
         {simulazioni.length === 0 ? (
-          <EmptyState icon="📋" title="Nessuna simulazione per ora" description="Il docente non ne ha ancora pubblicate." />
+          <EmptyState
+            icon="📋"
+            title="Nessuna simulazione per ora"
+            description="Il docente non ne ha ancora pubblicate per questo percorso."
+          />
         ) : (
-          <div className="flex flex-col gap-3">
-            {simulazioni.map((t) => (
-              <StudentTestCard key={t.id} test={t} />
-            ))}
-          </div>
+          [...groups.entries()].map(([folder, list]) => (
+            <section key={folder} className="flex flex-col gap-3">
+              {groups.size > 1 && <h2 className="section-title">{folder}</h2>}
+              <div className="flex flex-col gap-3">
+                {list.map((t) => (
+                  <StudentTestCard key={t.id} test={t} />
+                ))}
+              </div>
+            </section>
+          ))
         )}
       </div>
     );
   }
 
   if (materia && tiles.includes(materia)) {
-    const topics = topicsOf(materia);
+    const topics = topicsWithQuestions(materia);
     const esercitazioni = esercitazioniByFolder.get(materia) ?? [];
+    const paper = paperOf(track, materia);
+    const available = pool.bySubject.get(materia) ?? 0;
+    const practiceSize = paper?.questions ?? track.practiceSizes[materia];
+    const canPractice = practiceSize != null && available >= practiceSize;
 
     // Risultati per argomento, calcolati solo per la materia aperta.
     const stats = new Map<string, { correct: number; total: number }>();
@@ -144,15 +160,19 @@ export default async function StudentPracticePage({
             <div>
               <h1 className="page-title">{materia}</h1>
               <p className="mt-1 text-sm text-muted">
-                {subjectPct.has(materia) ? "Percentuale di risposte corrette nei test svolti." : "Non hai ancora risposto a domande di questa materia."}
+                {subjectPct.has(materia)
+                  ? "Percentuale di risposte corrette nei test svolti."
+                  : "Non hai ancora risposto a domande di questa materia."}
               </p>
             </div>
           </div>
-          {PRACTICE_SIZES[materia] && (
+          {canPractice && (
             <form action={generateSubjectPractice}>
               <input type="hidden" name="subject" value={materia} />
-              <SubmitButton pendingText="Preparo l'esercitazione…" className="btn btn-brand w-full sm:w-auto">
-                Tutta la materia · {PRACTICE_SIZES[materia]} domande
+              <SubmitButton pendingText="Preparo la prova…" className="btn btn-brand w-full sm:w-auto">
+                {paper
+                  ? `Prova ufficiale · ${paper.questions} domande · ${paper.minutes} min`
+                  : `Tutta la materia · ${practiceSize} domande`}
               </SubmitButton>
             </form>
           )}
@@ -176,7 +196,7 @@ export default async function StudentPracticePage({
                     <div className="min-w-0">
                       <p className="text-sm font-semibold">{topic.label}</p>
                       <p className="mt-0.5 text-xs text-muted">
-                        {poolCount.get(topic.code)} domande disponibili
+                        {pool.byTopic.get(topic.code)} domande disponibili
                         {pct != null && ` · ${stat!.correct} giuste su ${stat!.total} già svolte`}
                       </p>
                     </div>
@@ -222,8 +242,8 @@ export default async function StudentPracticePage({
           </section>
         )}
 
-        {topics.length === 0 && esercitazioni.length === 0 && !PRACTICE_SIZES[materia] && (
-          <EmptyState icon="🎯" title="Niente da allenare qui per ora" description="Torna più tardi: il docente sta preparando il materiale." />
+        {topics.length === 0 && esercitazioni.length === 0 && !canPractice && (
+          <PoolInPreparazione track={track} subject={materia} />
         )}
       </div>
     );
@@ -233,7 +253,9 @@ export default async function StudentPracticePage({
     <div className="flex flex-col gap-6">
       <div>
         <h1 className="page-title">Esercitati</h1>
-        <p className="mt-1 text-sm text-muted">Scegli una materia per vedere gli argomenti e le esercitazioni.</p>
+        <p className="mt-1 text-sm text-muted">
+          {track.label} · scegli una materia per vedere gli argomenti e le esercitazioni.
+        </p>
       </div>
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -254,8 +276,9 @@ export default async function StudentPracticePage({
         </Link>
 
         {tiles.map((subject) => {
-          const topicCount = topicsOf(subject).length;
+          const topicCount = topicsWithQuestions(subject).length;
           const eserc = esercitazioniByFolder.get(subject)?.length ?? 0;
+          const available = pool.bySubject.get(subject) ?? 0;
           const details = [
             topicCount > 0 ? `${topicCount} argomenti` : null,
             eserc > 0 ? `${eserc} ${eserc === 1 ? "esercitazione" : "esercitazioni"}` : null,
@@ -269,13 +292,29 @@ export default async function StudentPracticePage({
               <ProgressRing value={subjectPct.get(subject) ?? null} size={48} />
               <div>
                 <p className="font-display text-lg font-bold leading-tight">{subject}</p>
-                <p className="mt-1 text-xs text-muted">{details.length > 0 ? details.join(" · ") : "Allenamento sulla materia"}</p>
+                <p className="mt-1 text-xs text-muted">
+                  {details.length > 0
+                    ? details.join(" · ")
+                    : available > 0
+                      ? `${available} domande disponibili`
+                      : "In preparazione"}
+                </p>
               </div>
             </Link>
           );
         })}
       </div>
     </div>
+  );
+}
+
+function PoolInPreparazione({ track, subject }: { track: Track; subject: string }) {
+  return (
+    <EmptyState
+      icon="🧪"
+      title="Banca dati in preparazione"
+      description={`Le domande di ${subject} per ${track.label} non sono ancora caricate. Appena ci saranno, qui troverai gli argomenti e la prova di materia.`}
+    />
   );
 }
 

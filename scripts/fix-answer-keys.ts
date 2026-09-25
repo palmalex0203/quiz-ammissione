@@ -23,6 +23,7 @@
 import "dotenv/config";
 import { prisma } from "../src/lib/prisma";
 import { gradeAttempt } from "../src/lib/grading";
+import { trackOf } from "../src/lib/tracks";
 
 const APPLY = process.argv.includes("--apply");
 const REGRADE = process.argv.includes("--regrade");
@@ -106,7 +107,7 @@ async function main() {
       where: { id: attemptId },
       select: {
         id: true, score: true, testId: true,
-        student: { select: { name: true } }, test: { select: { title: true } },
+        student: { select: { name: true } }, test: { select: { title: true, track: true } },
         answers: { select: { questionId: true, selectedOptionId: true } },
       },
     });
@@ -120,7 +121,8 @@ async function main() {
       id: q.id,
       options: q.options.map((o) => ({ id: o.id, isCorrect: fixes.has(q.id) ? o.id === fixes.get(q.id) : o.isCorrect })),
     }));
-    const payload = gradeAttempt(corrected, attempt.answers);
+    // Ogni percorso ha il suo punteggio: si rivaluta con quello del test.
+    const payload = gradeAttempt(corrected, attempt.answers, trackOf(attempt.test.track).scoring);
     const subjectOf = new Map(qs.map((q) => [q.id, q.subject]));
     const subjects = new Map<string, { correct: number; total: number }>();
     for (const r of payload.results) {

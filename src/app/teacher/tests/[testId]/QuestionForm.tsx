@@ -24,12 +24,15 @@ export function QuestionForm({
   initial,
   onDone,
   submitLabel,
+  subjects = [],
 }: {
   testId: string;
   action: (prevState: ActionState, formData: FormData) => Promise<ActionState>;
   initial?: { questionId?: string; subject: string; type: QuestionType; text: string; options: Option[] };
   onDone?: () => void;
   submitLabel: string;
+  // Materie del percorso del test: suggerite, non obbligatorie.
+  subjects?: string[];
 }) {
   const [state, formAction, isPending] = useActionState(action, initialState);
   const [subject, setSubject] = useState(initial?.subject ?? "");
@@ -88,12 +91,18 @@ export function QuestionForm({
           <label className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Materia</label>
           <input
             name="subject"
+            list="materie-percorso"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            placeholder="es. Biologia, Chimica, Logica..."
+            placeholder={subjects[0] ? `es. ${subjects.slice(0, 2).join(", ")}...` : "es. Biologia, Chimica..."}
             required
             className="field"
           />
+          <datalist id="materie-percorso">
+            {subjects.map((s) => (
+              <option key={s} value={s} />
+            ))}
+          </datalist>
         </div>
         <div className="flex flex-col gap-1">
           <label className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Tipo</label>

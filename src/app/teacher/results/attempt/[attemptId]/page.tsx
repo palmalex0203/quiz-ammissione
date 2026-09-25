@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
+import { formatPoints, trackOf } from "@/lib/tracks";
 
 export default async function TeacherAttemptDetailPage({
   params,
@@ -28,6 +29,7 @@ export default async function TeacherAttemptDetailPage({
 
   const percentage =
     attempt.maxScore && attempt.maxScore > 0 ? Math.round(((attempt.score ?? 0) / attempt.maxScore) * 100) : 0;
+  const scoring = trackOf(attempt.test.track).scoring;
   const sortedAnswers = [...attempt.answers].sort((a, b) => a.question.order - b.question.order);
   const correctCount = sortedAnswers.filter((a) => a.isCorrect).length;
   const omittedCount = sortedAnswers.filter((a) => !a.selectedOptionId).length;
@@ -86,7 +88,7 @@ export default async function TeacherAttemptDetailPage({
                         : "text-red-700 dark:text-red-400"
                   }
                 >
-                  {answer.isCorrect ? "+1,5" : wasOmitted ? "0" : "−0,4"}
+                  {answer.isCorrect ? formatPoints(scoring.correct) : wasOmitted ? "0" : formatPoints(scoring.incorrect)}
                 </span>
               </p>
               <p className="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">

@@ -1,9 +1,14 @@
-// Macroargomenti di programma, ripresi dalle esercitazioni già create
-// dall'insegnante: il codice (B1, C3, ...) è ciò che viene salvato su
-// Question.topic, l'etichetta resta modificabile senza toccare il database.
+import { DEFAULT_TRACK, type TrackId } from "@/lib/tracks";
+
+// Macroargomenti di programma. Il codice (B3, C7, SF-BIO-01, ...) è ciò che viene
+// salvato su Question.topic, l'etichetta resta modificabile senza toccare il
+// database. I codici sono unici fra tutti i percorsi, così una domanda porta con sé
+// anche il percorso a cui appartiene.
 export type Topic = { code: string; label: string };
 
-export const TOPICS_BY_SUBJECT: Record<string, Topic[]> = {
+// Professioni Sanitarie: macroargomenti ripresi dalle esercitazioni già create
+// dall'insegnante.
+const PROFESSIONI_SANITARIE: Record<string, Topic[]> = {
   Biologia: [
     { code: "B7", label: "La cellula: organuli, membrana e trasporti" },
     { code: "B1", label: "Ciclo cellulare e mitosi" },
@@ -47,9 +52,59 @@ export const TOPICS_BY_SUBJECT: Record<string, Topic[]> = {
   ],
 };
 
-const ALL_TOPICS = new Map<string, { topic: Topic; subject: string }>();
-for (const [subject, topics] of Object.entries(TOPICS_BY_SUBJECT)) {
-  for (const topic of topics) ALL_TOPICS.set(topic.code, { topic, subject });
+// Semestre filtro: aree del syllabus MUR delle tre prove nazionali. Sono i titoli
+// delle macroaree, non l'elenco puntuale del programma: vanno riviste sul syllabus
+// ufficiale dell'anno prima di classificare le domande.
+const SEMESTRE_FILTRO: Record<string, Topic[]> = {
+  "Chimica e propedeutica biochimica": [
+    { code: "SF-CHI-01", label: "Struttura della materia e proprietà periodiche" },
+    { code: "SF-CHI-02", label: "Legami chimici e forze intermolecolari" },
+    { code: "SF-CHI-03", label: "Reazioni chimiche e calcoli stechiometrici" },
+    { code: "SF-CHI-04", label: "Soluzioni e proprietà colligative" },
+    { code: "SF-CHI-05", label: "Termodinamica, cinetica ed equilibrio chimico" },
+    { code: "SF-CHI-06", label: "Acidi, basi, pH e sistemi tampone" },
+    { code: "SF-CHI-07", label: "Ossidoriduzioni ed elettrochimica" },
+    { code: "SF-CHI-08", label: "Il carbonio: idrocarburi e gruppi funzionali" },
+    { code: "SF-CHI-09", label: "Biomolecole e reazioni negli organismi viventi" },
+  ],
+  Fisica: [
+    { code: "SF-FIS-01", label: "Grandezze fisiche, unità di misura e misure" },
+    { code: "SF-FIS-02", label: "Cinematica" },
+    { code: "SF-FIS-03", label: "Dinamica e statica" },
+    { code: "SF-FIS-04", label: "Lavoro, energia e quantità di moto" },
+    { code: "SF-FIS-05", label: "Fluidi" },
+    { code: "SF-FIS-06", label: "Termodinamica" },
+    { code: "SF-FIS-07", label: "Onde, suono e ottica" },
+    { code: "SF-FIS-08", label: "Elettricità e magnetismo" },
+    { code: "SF-FIS-09", label: "Radiazioni e applicazioni biomediche" },
+  ],
+  Biologia: [
+    { code: "SF-BIO-01", label: "Le basi dell'organizzazione biologica e molecolare della vita" },
+    { code: "SF-BIO-02", label: "La cellula: membrane, organuli e trasporti" },
+    { code: "SF-BIO-03", label: "Bioenergetica e metabolismo cellulare" },
+    { code: "SF-BIO-04", label: "Il flusso dell'informazione: DNA, RNA e sintesi proteica" },
+    { code: "SF-BIO-05", label: "Divisione cellulare, riproduzione e sviluppo" },
+    { code: "SF-BIO-06", label: "Trasmissione e controllo dei caratteri: genetica ed epigenetica" },
+    { code: "SF-BIO-07", label: "Dai tessuti all'organismo: omeostasi e regolazione" },
+    { code: "SF-BIO-08", label: "Microrganismi, difese dell'organismo e ambiente" },
+    { code: "SF-BIO-09", label: "Evoluzione e biodiversità" },
+  ],
+};
+
+export const TOPICS_BY_TRACK: Record<TrackId, Record<string, Topic[]>> = {
+  PROFESSIONI_SANITARIE,
+  SEMESTRE_FILTRO,
+};
+
+export function topicsOf(trackId: TrackId, subject: string): Topic[] {
+  return TOPICS_BY_TRACK[trackId]?.[subject] ?? [];
+}
+
+const ALL_TOPICS = new Map<string, { topic: Topic; subject: string; trackId: TrackId }>();
+for (const [trackId, bySubject] of Object.entries(TOPICS_BY_TRACK) as [TrackId, Record<string, Topic[]>][]) {
+  for (const [subject, topics] of Object.entries(bySubject)) {
+    for (const topic of topics) ALL_TOPICS.set(topic.code, { topic, subject, trackId });
+  }
 }
 
 export function topicLabel(code: string): string | undefined {
@@ -58,6 +113,10 @@ export function topicLabel(code: string): string | undefined {
 
 export function topicSubject(code: string): string | undefined {
   return ALL_TOPICS.get(code)?.subject;
+}
+
+export function topicTrack(code: string): TrackId {
+  return ALL_TOPICS.get(code)?.trackId ?? DEFAULT_TRACK;
 }
 
 export function isKnownTopic(code: string): boolean {

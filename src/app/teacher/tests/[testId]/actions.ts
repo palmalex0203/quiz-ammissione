@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
+import { isTrackId } from "@/lib/tracks";
 
 export type ActionState = { error?: string };
 
@@ -39,6 +40,7 @@ export async function updateTestSettings(_prevState: ActionState, formData: Form
   const shuffleQuestions = formData.get("shuffleQuestions") === "on";
   const timeLimitRaw = String(formData.get("timeLimitMinutes") ?? "").trim();
   const maxAttemptsRaw = String(formData.get("maxAttempts") ?? "").trim();
+  const trackValue = formData.get("track");
 
   if (!title) {
     return { error: "Il titolo è obbligatorio." };
@@ -49,6 +51,7 @@ export async function updateTestSettings(_prevState: ActionState, formData: Form
     data: {
       title,
       description: description || null,
+      ...(isTrackId(trackValue) ? { track: trackValue } : {}),
       shuffleQuestions,
       timeLimitMinutes: timeLimitRaw ? Number(timeLimitRaw) : null,
       maxAttempts: maxAttemptsRaw ? Number(maxAttemptsRaw) : null,

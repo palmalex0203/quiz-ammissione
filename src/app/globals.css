@@ -17,6 +17,11 @@
   --brand-tint: #fff4ec;
   --ink: #2a1d14;
   --on-ink: #fffaf6;
+  /* Barra laterale: scura in entrambi i temi, con il suo testo chiaro. */
+  --sidebar: #2b1e15;
+  --sidebar-fg: #f6ece4;
+  --sidebar-muted: #b8a08f;
+  --sidebar-line: rgba(246, 236, 228, 0.12);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,6 +37,10 @@
     --brand-tint: rgba(240, 106, 40, 0.1);
     --ink: #f3e9e1;
     --on-ink: #15100c;
+    --sidebar: #1b1410;
+    --sidebar-fg: #f3e9e1;
+    --sidebar-muted: #a89282;
+    --sidebar-line: rgba(243, 233, 225, 0.1);
   }
 }
 
@@ -47,6 +56,10 @@
   --color-brand-tint: var(--brand-tint);
   --color-ink: var(--ink);
   --color-on-ink: var(--on-ink);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-fg: var(--sidebar-fg);
+  --color-sidebar-muted: var(--sidebar-muted);
+  --color-sidebar-line: var(--sidebar-line);
   --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-bricolage), var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;

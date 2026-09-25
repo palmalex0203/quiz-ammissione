@@ -6,6 +6,7 @@ import { TestSettingsForm } from "../TestSettingsForm";
 import { QuestionList } from "../QuestionList";
 import { QuestionForm } from "../QuestionForm";
 import { addQuestion } from "../actions";
+import { trackOf } from "@/lib/tracks";
 
 export default async function EditTestPage({ params }: { params: Promise<{ testId: string }> }) {
   const { testId } = await params;
@@ -20,6 +21,8 @@ export default async function EditTestPage({ params }: { params: Promise<{ testI
       },
     },
   });
+
+  const subjects = trackOf(test?.track).subjects.map((s) => s.name);
 
   if (!test || test.createdById !== session.user.id) {
     notFound();
@@ -42,6 +45,7 @@ export default async function EditTestPage({ params }: { params: Promise<{ testI
             title: test.title,
             description: test.description,
             shuffleQuestions: test.shuffleQuestions,
+            track: test.track,
             timeLimitMinutes: test.timeLimitMinutes,
             maxAttempts: test.maxAttempts,
           }}
@@ -53,6 +57,7 @@ export default async function EditTestPage({ params }: { params: Promise<{ testI
           Domande ({test.questions.length})
         </h2>
         <QuestionList
+          subjects={subjects}
           testId={test.id}
           questions={test.questions.map((q) => ({
             id: q.id,
@@ -68,7 +73,7 @@ export default async function EditTestPage({ params }: { params: Promise<{ testI
       <section className="flex flex-col gap-3">
         <h2 className="section-title">Aggiungi domanda</h2>
         <div className="card p-4">
-          <QuestionForm testId={test.id} action={addQuestion} submitLabel="Aggiungi domanda" />
+          <QuestionForm testId={test.id} subjects={subjects} action={addQuestion} submitLabel="Aggiungi domanda" />
         </div>
       </section>
     </div>

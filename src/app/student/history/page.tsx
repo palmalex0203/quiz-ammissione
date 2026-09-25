@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
-import { requireStudent } from "@/lib/permissions";
 import { EmptyState } from "@/components/EmptyState";
 import { SubmitButton } from "@/components/SubmitButton";
-import { isPracticeable, PRACTICE_SIZES } from "@/lib/subjects";
+import { requireStudentTrack } from "@/lib/track-session";
+import { isPracticeable } from "@/lib/tracks";
 import { generateSubjectPractice } from "@/app/student/dashboard/actions";
 
 export default async function StudentHistoryPage() {
-  const session = await requireStudent();
+  const { session, track } = await requireStudentTrack();
 
   const attempts = await prisma.attempt.findMany({
-    where: { studentId: session.user.id, status: "SUBMITTED" },
+    where: { studentId: session.user.id, status: "SUBMITTED", test: { track: track.id } },
     orderBy: { submittedAt: "desc" },
     include: { test: true },
   });
@@ -45,14 +45,14 @@ export default async function StudentHistoryPage() {
 
   // Si consiglia solo una materia su cui è davvero possibile allenarsi, e solo con
   // abbastanza domande alle spalle perché la percentuale voglia dire qualcosa.
-  const weakest = subjectRows.find((r) => isPracticeable(r.subject) && r.total >= 5);
+  const weakest = subjectRows.find((r) => isPracticeable(track, r.subject) && r.total >= 5);
 
   return (
     <div className="flex flex-col gap-8">
       <div>
         <h1 className="page-title">I miei progressi</h1>
         <p className="text-sm text-muted">
-          Come stai andando materia per materia, e tutti i test che hai svolto.
+          {track.label} · come stai andando materia per materia, e tutti i test che hai svolto.
         </p>
       </div>
 
@@ -91,7 +91,7 @@ export default async function StudentHistoryPage() {
                   </p>
                   <p className="mt-0.5 max-w-md text-xs text-zinc-600 dark:text-zinc-400">
                     Qui sei al {weakest.pct}% di risposte corrette, il tuo risultato più basso.
-                    Allenati con {PRACTICE_SIZES[weakest.subject]} domande solo su questa materia.
+                    Allenati con {track.practiceSizes[weakest.subject]} domande solo su questa materia.
                   </p>
                 </div>
               </div>

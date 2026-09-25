@@ -47,8 +47,8 @@ export default function LoginPage() {
               Simulatore Ufficiale
             </h1>
             <p className="mt-2 text-sm text-white/90">
-              Allenati per il test di ammissione alle Professioni Sanitarie: 60 domande, 100 minuti, come il giorno
-              della prova.
+              Allenati come il giorno della prova: Professioni Sanitarie e Semestre filtro, ognuno con le sue
+              materie e il suo punteggio.
             </p>
           </div>
         </div>

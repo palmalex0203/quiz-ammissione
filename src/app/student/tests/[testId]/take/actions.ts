@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
 import { gradeAttempt } from "@/lib/grading";
+import { trackOf } from "@/lib/tracks";
 
 async function getOwnedInProgressAttempt(attemptId: string, studentId: string) {
   const attempt = await prisma.attempt.findUnique({ where: { id: attemptId } });
@@ -37,7 +38,8 @@ export async function submitAttempt(attemptId: string) {
   const session = await requireStudent();
   const attempt = await getOwnedInProgressAttempt(attemptId, session.user.id);
 
-  const [questions, existingAnswers] = await Promise.all([
+  const [test, questions, existingAnswers] = await Promise.all([
+    prisma.test.findUnique({ where: { id: attempt.testId }, select: { track: true } }),
     prisma.question.findMany({
       where: { testId: attempt.testId },
       include: { options: { select: { id: true, isCorrect: true } } },
@@ -45,9 +47,11 @@ export async function submitAttempt(attemptId: string) {
     prisma.answerRecord.findMany({ where: { attemptId: attempt.id } }),
   ]);
 
+  // Ogni percorso ha il suo punteggio: quello del test, non quello aperto adesso.
   const { score, maxScore, results } = gradeAttempt(
     questions.map((q) => ({ id: q.id, options: q.options })),
-    existingAnswers.map((a) => ({ questionId: a.questionId, selectedOptionId: a.selectedOptionId }))
+    existingAnswers.map((a) => ({ questionId: a.questionId, selectedOptionId: a.selectedOptionId })),
+    trackOf(test?.track).scoring
   );
 
   // Riepilogo per materia calcolato qui, una volta sola: le pagine di analisi

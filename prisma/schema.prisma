@@ -30,6 +30,8 @@ model User {
   email        String   @unique
   passwordHash String
   role         Role
+  // Percorso scelto dallo studente (vedi src/lib/tracks.ts).
+  track        String   @default("PROFESSIONI_SANITARIE")
   createdAt    DateTime @default(now())
 
   testsCreated Test[]           @relation("TestCreator")
@@ -48,6 +50,8 @@ model Test {
   timeLimitMinutes Int?
   maxAttempts      Int?
   kind             String   @default("SIMULAZIONE")
+  // Percorso a cui appartiene il test e la sua banca dati.
+  track            String   @default("PROFESSIONI_SANITARIE")
   folder           String?
   isGenerated      Boolean  @default(false)
   createdAt        DateTime @default(now())
@@ -58,6 +62,7 @@ model Test {
   attempts    Attempt[]
 
   @@index([kind])
+  @@index([track])
   @@index([createdById])
 }
 

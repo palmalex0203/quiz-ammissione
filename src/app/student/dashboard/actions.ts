@@ -3,24 +3,23 @@
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
-import { POINTS_CORRECT } from "@/lib/grading";
-import { PRACTICE_SIZES } from "@/lib/subjects";
+import { currentTrack } from "@/lib/track-session";
+import {
+  maxScoreFor,
+  paperOf,
+  simulationSize,
+  trackOf,
+  type Track,
+  type TrackId,
+} from "@/lib/tracks";
 import {
   isKnownTopic,
   topicLabel,
+  topicTrack,
   TOPIC_PRACTICE_SIZE,
   MIN_TOPIC_QUESTIONS,
 } from "@/lib/topics";
-
-// Struttura ricavata dalle simulazioni ufficiali CINECA già presenti sulla piattaforma:
-// stesso ordine di materie, stesso numero di domande per materia (60 in totale).
-const OFFICIAL_STRUCTURE: { subject: string; count: number }[] = [
-  { subject: "Comprensione del testo", count: 4 },
-  { subject: "Logica", count: 5 },
-  { subject: "Biologia", count: 23 },
-  { subject: "Chimica", count: 15 },
-  { subject: "Fisica e Matematica", count: 13 },
-];
+import { wrongQuestionIds, REVIEW_SIZE } from "@/lib/review";
 
 export async function startAttempt(formData: FormData): Promise<void> {
   const session = await requireStudent();
@@ -60,7 +59,8 @@ export async function startAttempt(formData: FormData): Promise<void> {
     }
   }
 
-  const maxScore = test.questions.length * POINTS_CORRECT;
+  // Il punteggio pieno dipende dal percorso del test, non da quello aperto adesso.
+  const maxScore = maxScoreFor(trackOf(test.track), test.questions.length);
 
   await prisma.attempt.create({
     data: {
@@ -78,27 +78,32 @@ export async function startAttempt(formData: FormData): Promise<void> {
 // (window function ORDER BY RANDOM() per materia), invece di scaricare l'intera banca
 // dati di ogni materia in memoria e mescolarla in JavaScript: molto più veloce,
 // soprattutto su un database remoto dove ogni query ha un costo di rete fisso.
-async function pickRandomQuestionIds(): Promise<string[]> {
-  const subjectsList = OFFICIAL_STRUCTURE.map((b) => `'${b.subject.replace(/'/g, "''")}'`).join(",");
-  const caseClauses = OFFICIAL_STRUCTURE.map(
-    (b) => `WHEN '${b.subject.replace(/'/g, "''")}' THEN ${b.count}`
-  ).join(" ");
+async function pickRandomQuestionIds(track: Track): Promise<string[]> {
+  const blocks = track.simulation.blocks;
+  const quoted = (s: string) => `'${s.replace(/'/g, "''")}'`;
+  const subjectsList = blocks.map((b) => quoted(b.subject)).join(",");
+  const caseClauses = blocks.map((b) => `WHEN ${quoted(b.subject)} THEN ${b.count}`).join(" ");
 
-  const rows = await prisma.$queryRawUnsafe<{ id: string; subject: string }[]>(`
+  const rows = await prisma.$queryRawUnsafe<{ id: string; subject: string }[]>(
+    `
     SELECT id, subject FROM (
       SELECT q.id, q.subject,
         ROW_NUMBER() OVER (PARTITION BY q.subject ORDER BY RANDOM()) as rn
       FROM "Question" q JOIN "Test" t ON q."testId" = t.id
-      WHERE t.kind = 'POOL' AND q.subject IN (${subjectsList})
+      WHERE t.kind = 'POOL' AND t.track = $1 AND q.subject IN (${subjectsList})
     ) AS pescate
     WHERE rn <= (CASE subject ${caseClauses} ELSE 0 END)
-  `);
+  `,
+    track.id
+  );
 
   const countBySubject = new Map<string, number>();
   for (const r of rows) countBySubject.set(r.subject, (countBySubject.get(r.subject) ?? 0) + 1);
-  for (const block of OFFICIAL_STRUCTURE) {
+  for (const block of blocks) {
     if ((countBySubject.get(block.subject) ?? 0) < block.count) {
-      throw new Error(`Domande insufficienti nel database per la materia "${block.subject}".`);
+      throw new Error(
+        `La banca dati di ${track.label} non ha ancora abbastanza domande di "${block.subject}".`
+      );
     }
   }
 
@@ -110,15 +115,15 @@ async function pickRandomQuestionIds(): Promise<string[]> {
     list.push(r.id);
     bySubject.set(r.subject, list);
   }
-  return OFFICIAL_STRUCTURE.flatMap((block) => bySubject.get(block.subject) ?? []);
+  return blocks.flatMap((block) => bySubject.get(block.subject) ?? []);
 }
 
 // Da quanti giorni un test generato e mai consegnato è considerato abbandonato.
-// Ampiamente oltre i 100 minuti di una simulazione: chi la sta svolgendo, o l'ha
+// Ampiamente oltre la durata di una simulazione: chi la sta svolgendo, o l'ha
 // interrotta poco fa per riprenderla, non viene toccato.
 const ABANDONED_AFTER_DAYS = 2;
 
-// Ogni test generato conserva una copia di 60 domande e 300 opzioni. Senza pulizia
+// Ogni test generato conserva una copia delle domande e delle opzioni. Senza pulizia
 // le prove aperte e mai finite si accumulano all'infinito e appesantiscono il
 // database di tutti: si eliminano quelle vecchie dello studente, che non
 // contengono alcun punteggio, appena ne genera una nuova.
@@ -167,10 +172,12 @@ async function findRecentDuplicate(studentId: string, title: string) {
 // simulazione completa e l'esercitazione mirata su una singola materia.
 async function createAndStartGeneratedTest(opts: {
   studentId: string;
+  trackId: TrackId;
   title: string;
   description: string;
   orderedIds: string[];
-  timeLimitMinutes: number;
+  // null = nessun cronometro: il ripasso non è una prova a tempo.
+  timeLimitMinutes: number | null;
 }): Promise<string> {
   const duplicate = await findRecentDuplicate(opts.studentId, opts.title);
   if (duplicate) return duplicate.id;
@@ -194,6 +201,7 @@ async function createAndStartGeneratedTest(opts: {
       createdById: teacher.id,
       isPublished: true,
       kind: "GENERATA",
+      track: opts.trackId,
       isGenerated: true,
       timeLimitMinutes: opts.timeLimitMinutes,
       assignments: { create: { studentId: opts.studentId } },
@@ -227,7 +235,7 @@ async function createAndStartGeneratedTest(opts: {
   );
   await prisma.answerOption.createMany({ data: optionsData });
 
-  const maxScore = orderedQuestions.length * POINTS_CORRECT;
+  const maxScore = maxScoreFor(trackOf(opts.trackId), orderedQuestions.length);
 
   await prisma.attempt.create({
     data: { testId: test.id, studentId: opts.studentId, status: "IN_PROGRESS", maxScore },
@@ -246,16 +254,22 @@ function nowLabel() {
   });
 }
 
+// Tempo proporzionato al ritmo della prova ufficiale del percorso.
+function minutesFor(track: Track, questions: number): number {
+  return Math.max(1, Math.round((questions * track.simulation.minutes) / simulationSize(track)));
+}
+
 export async function generateRandomSimulation(): Promise<void> {
   const session = await requireStudent();
+  const track = await currentTrack(session.user.id);
 
   const testId = await createAndStartGeneratedTest({
     studentId: session.user.id,
-    title: `Simulazione generata - ${nowLabel()}`,
-    description:
-      "Simulazione generata automaticamente pescando domande a caso dal database, con la stessa struttura (materie e numero di domande per materia) delle simulazioni ufficiali.",
-    orderedIds: await pickRandomQuestionIds(),
-    timeLimitMinutes: 100,
+    trackId: track.id,
+    title: `Simulazione ${track.label} - ${nowLabel()}`,
+    description: `Simulazione generata pescando domande a caso dalla banca dati ${track.label}, con la struttura della prova ufficiale. ${track.simulation.description}`,
+    orderedIds: await pickRandomQuestionIds(track),
+    timeLimitMinutes: track.simulation.minutes,
   });
 
   redirect(`/student/tests/${testId}/take`);
@@ -263,29 +277,35 @@ export async function generateRandomSimulation(): Promise<void> {
 
 export async function generateSubjectPractice(formData: FormData): Promise<void> {
   const session = await requireStudent();
+  const track = await currentTrack(session.user.id);
 
-  // La materia arriva dal form: va confrontata con l'elenco noto, sia per non
-  // costruire test su materie inesistenti sia perché finisce in una query.
+  // La materia arriva dal form: va confrontata con l'elenco del percorso, sia per
+  // non costruire test su materie inesistenti sia perché finisce in una query.
   const subject = String(formData.get("subject") ?? "");
-  const size = PRACTICE_SIZES[subject];
+  const paper = paperOf(track, subject);
+  const size = paper?.questions ?? track.practiceSizes[subject];
   if (!size) throw new Error("Materia non valida.");
 
   const rows = await prisma.$queryRaw<{ id: string }[]>`
     SELECT q.id FROM "Question" q JOIN "Test" t ON q."testId" = t.id
-    WHERE t.kind = 'POOL' AND q.subject = ${subject}
+    WHERE t.kind = 'POOL' AND t.track = ${track.id} AND q.subject = ${subject}
     ORDER BY RANDOM() LIMIT ${size}
   `;
   if (rows.length < size) {
-    throw new Error(`Domande insufficienti nel database per la materia "${subject}".`);
+    throw new Error(`La banca dati di ${track.label} non ha ancora abbastanza domande di "${subject}".`);
   }
 
+  // Dove l'esame prevede una prova di materia (semestre filtro) si usano le sue
+  // regole: stesse domande, stessi minuti della prova vera.
   const testId = await createAndStartGeneratedTest({
     studentId: session.user.id,
-    title: `Esercitazione ${subject} - ${nowLabel()}`,
-    description: `Esercitazione mirata su ${subject}, con ${size} domande pescate a caso dal database.`,
+    trackId: track.id,
+    title: `${paper ? "Prova" : "Esercitazione"} ${subject} - ${nowLabel()}`,
+    description: paper
+      ? `Prova di ${subject} nel formato ufficiale: ${paper.questions} domande in ${paper.minutes} minuti.`
+      : `Esercitazione mirata su ${subject}, con ${size} domande pescate a caso dalla banca dati.`,
     orderedIds: rows.map((r) => r.id),
-    // Stesso ritmo delle simulazioni ufficiali: 100 minuti per 60 domande.
-    timeLimitMinutes: Math.round((size * 100) / 60),
+    timeLimitMinutes: paper?.minutes ?? minutesFor(track, size),
   });
 
   redirect(`/student/tests/${testId}/take`);
@@ -299,9 +319,12 @@ export async function generateTopicPractice(formData: FormData): Promise<void> {
   const topic = String(formData.get("topic") ?? "");
   if (!isKnownTopic(topic)) throw new Error("Argomento non valido.");
 
+  // Il percorso lo decide l'argomento stesso: ogni codice appartiene a uno solo.
+  const track = trackOf(topicTrack(topic));
+
   const rows = await prisma.$queryRaw<{ id: string }[]>`
     SELECT q.id FROM "Question" q JOIN "Test" t ON q."testId" = t.id
-    WHERE t.kind = 'POOL' AND q.topic = ${topic}
+    WHERE t.kind = 'POOL' AND t.track = ${track.id} AND q.topic = ${topic}
     ORDER BY RANDOM() LIMIT ${TOPIC_PRACTICE_SIZE}
   `;
   // Alcuni argomenti hanno meno domande della misura standard: l'esercitazione si
@@ -313,10 +336,34 @@ export async function generateTopicPractice(formData: FormData): Promise<void> {
   const label = topicLabel(topic) ?? topic;
   const testId = await createAndStartGeneratedTest({
     studentId: session.user.id,
+    trackId: track.id,
     title: `Esercitazione ${label} - ${nowLabel()}`,
-    description: `Esercitazione mirata sull'argomento "${label}", con ${rows.length} domande pescate a caso dal database.`,
+    description: `Esercitazione mirata sull'argomento "${label}", con ${rows.length} domande pescate a caso dalla banca dati.`,
     orderedIds: rows.map((r) => r.id),
-    timeLimitMinutes: Math.round((rows.length * 100) / 60),
+    timeLimitMinutes: minutesFor(track, rows.length),
+  });
+
+  redirect(`/student/tests/${testId}/take`);
+}
+
+// Ripasso errori: le domande sbagliate e non ancora recuperate tornano in un test
+// senza cronometro, dalla più recente alla più vecchia.
+export async function generateErrorReview(): Promise<void> {
+  const session = await requireStudent();
+  const track = await currentTrack(session.user.id);
+
+  const ids = await wrongQuestionIds(session.user.id, track.id, REVIEW_SIZE);
+  if (ids.length === 0) {
+    throw new Error("Non ci sono errori da ripassare: per ora hai rimesso a posto tutto.");
+  }
+
+  const testId = await createAndStartGeneratedTest({
+    studentId: session.user.id,
+    trackId: track.id,
+    title: `Ripasso errori - ${nowLabel()}`,
+    description: `Le ${ids.length} domande che hai sbagliato e non hai ancora recuperato. Senza tempo: prenditela con calma.`,
+    orderedIds: ids,
+    timeLimitMinutes: null,
   });
 
   redirect(`/student/tests/${testId}/take`);
