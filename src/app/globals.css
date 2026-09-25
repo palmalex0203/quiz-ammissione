@@ -213,6 +213,13 @@ body {
   }
 }
 
+/* L'invito a installare l'app non serve a chi l'ha già installata né su desktop. */
+@media (display-mode: standalone), (min-width: 1024px) {
+  .install-hint {
+    display: none;
+  }
+}
+
 @keyframes skeleton-pulse {
   50% {
     opacity: 0.5;

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Figtree } from "next/font/google";
 import "./globals.css";
 
@@ -15,10 +15,21 @@ const bricolage = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   title: "Profor - Simulatore Ufficiale",
-  description: "Piattaforma per simulazioni dei test di ammissione alle Professioni Sanitarie",
-  // Etichetta sotto l'icona quando il sito viene salvato sulla schermata iniziale
-  // del telefono: lì lo spazio è poco e un titolo lungo verrebbe troncato.
-  appleWebApp: { title: "Simulatore" },
+  description:
+    "Simulazioni ed esercitazioni per i test di ammissione: Professioni Sanitarie e Semestre filtro",
+  applicationName: "Simulatore",
+  // Installato sulla schermata iniziale dell'iPhone: si apre a tutto schermo e
+  // l'etichetta sotto l'icona è corta, perché lì lo spazio è poco.
+  appleWebApp: { capable: true, title: "Simulatore", statusBarStyle: "default" },
+};
+
+// Tinta della barra di stato quando l'app è aperta a tutto schermo: uguale alla
+// barra in alto della pagina, così le due non si vedono attaccate.
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#1f1813" },
+  ],
 };
 
 export default function RootLayout({

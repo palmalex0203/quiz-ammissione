@@ -4,6 +4,7 @@ import { requireStudentTrack } from "@/lib/track-session";
 import { SubmitButton } from "@/components/SubmitButton";
 import { ProgressRing } from "@/components/ProgressRing";
 import { ExamFormat } from "@/components/ExamFormat";
+import { InstallHint } from "@/components/InstallHint";
 import { poolCounts } from "@/lib/question-pool";
 import { wrongAnswerCount, REVIEW_SIZE } from "@/lib/review";
 import { isPracticeable, simulationSize } from "@/lib/tracks";
@@ -271,6 +272,8 @@ export default async function StudentDashboardPage() {
           </form>
         </div>
       )}
+
+      <InstallHint />
 
       <p className="text-center text-xs text-muted">
         {simulationSize(track)} domande nella prova completa · {track.simulation.minutes} minuti
