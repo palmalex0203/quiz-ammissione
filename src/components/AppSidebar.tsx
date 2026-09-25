@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NavIcon, type IconName } from "@/components/NavIcon";
+import { LinkSpinner } from "@/components/LinkSpinner";
 
 export type NavLink = { href: string; label: string; icon: IconName };
 
@@ -53,6 +54,7 @@ export function AppSidebar({
             >
               <NavIcon name={link.icon} />
               {link.label}
+              <LinkSpinner />
             </Link>
           );
         })}
