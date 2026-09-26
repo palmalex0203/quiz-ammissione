@@ -24,9 +24,9 @@ export function BottomNav({ links }: { links: NavLink[] }) {
       // Gli ultimi millimetri in fondo allo schermo non sono davvero toccabili: ci
       // passano la riga di sistema dell'iPhone e la barra di Safari, che si
       // prendono il tocco al posto della pagina. Qui si somma quello spazio (che
-      // vale zero dove non serve) a un margine fisso, così la fascia dei pulsanti
-      // resta staccata dal bordo.
-      style={{ paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 0.5rem)" }}
+      // vale zero dove non serve) a un centimetro abbondante, così la fascia dei
+      // pulsanti resta ben staccata dal bordo.
+      style={{ paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 1rem)" }}
     >
       <div className="mx-auto flex max-w-lg">
         {links.map((link) => {

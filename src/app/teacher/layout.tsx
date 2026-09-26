@@ -44,7 +44,7 @@ export default async function TeacherLayout({ children }: { children: ReactNode 
           signOutAction={signOutAction}
         />
         {/* pb-24: spazio per la barra delle sezioni, che su telefono è fissa in basso */}
-        <main className="mx-auto w-full max-w-5xl px-4 py-8 pb-28 sm:px-6 lg:py-10 lg:pb-10">{children}</main>
+        <main className="mx-auto w-full max-w-5xl px-4 py-8 pb-32 sm:px-6 lg:py-10 lg:pb-10">{children}</main>
         <BottomNav links={LINKS} />
       </div>
     </div>
