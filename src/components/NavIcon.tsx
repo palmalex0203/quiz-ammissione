@@ -4,7 +4,7 @@ export type IconName = "target" | "grid" | "chart" | "home" | "users" | "docs" |
  * Icone della navigazione: tratto semplice, stessa griglia da 24, così le voci
  * restano allineate e leggibili anche piccole.
  */
-export function NavIcon({ name }: { name: IconName }) {
+export function NavIcon({ name, className = "h-[1.15rem] w-[1.15rem]" }: { name: IconName; className?: string }) {
   return (
     <svg
       aria-hidden="true"
@@ -14,7 +14,7 @@ export function NavIcon({ name }: { name: IconName }) {
       strokeWidth="1.8"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-[1.15rem] w-[1.15rem] shrink-0"
+      className={`shrink-0 ${className}`}
     >
       {name === "target" && (
         <>

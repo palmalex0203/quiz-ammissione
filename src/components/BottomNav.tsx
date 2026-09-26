@@ -21,10 +21,12 @@ export function BottomNav({ links }: { links: NavLink[] }) {
     <nav
       aria-label="Sezioni"
       className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-card/95 backdrop-blur lg:hidden"
-      // Sui telefoni senza tasto casa la barra di sistema mangia l'ultimo mezzo
-      // centimetro: qui si aggiunge esattamente quello spazio, e nient'altro dove
-      // non serve.
-      style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
+      // Gli ultimi millimetri in fondo allo schermo non sono davvero toccabili: ci
+      // passano la riga di sistema dell'iPhone e la barra di Safari, che si
+      // prendono il tocco al posto della pagina. Qui si somma quello spazio (che
+      // vale zero dove non serve) a un margine fisso, così la fascia dei pulsanti
+      // resta staccata dal bordo.
+      style={{ paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 0.5rem)" }}
     >
       <div className="mx-auto flex max-w-lg">
         {links.map((link) => {
@@ -34,12 +36,15 @@ export function BottomNav({ links }: { links: NavLink[] }) {
               key={link.href}
               href={link.href}
               aria-current={active ? "page" : undefined}
-              className={`flex flex-1 flex-col items-center gap-1 px-1 py-2 transition-colors ${
+              // min-h e touch-action: il bersaglio deve restare abbondante anche
+              // con l'etichetta corta, e il tocco non deve essere interpretato come
+              // l'inizio di un doppio tocco per ingrandire.
+              className={`flex min-h-[3.25rem] flex-1 flex-col items-center justify-center gap-1 px-1 pt-2 [touch-action:manipulation] transition-colors ${
                 active ? "text-brand-strong" : "text-muted hover:text-foreground"
               }`}
             >
-              <NavIcon name={link.icon} />
-              <span className="text-[0.625rem] font-semibold leading-tight">{link.short ?? link.label}</span>
+              <NavIcon name={link.icon} className="h-6 w-6" />
+              <span className="text-[0.6875rem] font-semibold leading-tight">{link.short ?? link.label}</span>
             </Link>
           );
         })}
