@@ -11,7 +11,14 @@ marked.use({ gfm: true });
  * citazioni in blocco, che negli appunti sono i riquadri "Cosa ti chiedono".
  */
 export function renderMarkdown(source: string): string {
-  return marked.parse(source.replace(/</g, "&lt;"), { async: false });
+  const html = marked.parse(source.replace(/</g, "&lt;"), { async: false });
+
+  // Una tabella di quattro colonne non ci sta in un telefono: invece di schiacciarla
+  // o di far scorrere tutta la pagina di lato, la si chiude in un riquadro che
+  // scorre per conto suo.
+  return html
+    .replace(/<table>/g, '<div class="prose-table-scroll"><table>')
+    .replace(/<\/table>/g, "</table></div>");
 }
 
 // Prima riga utile del testo, per l'anteprima nell'elenco.

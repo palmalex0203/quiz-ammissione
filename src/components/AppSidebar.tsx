@@ -6,7 +6,13 @@ import { usePathname } from "next/navigation";
 import { NavIcon, type IconName } from "@/components/NavIcon";
 import { LinkSpinner } from "@/components/LinkSpinner";
 
-export type NavLink = { href: string; label: string; icon: IconName };
+export type NavLink = {
+  href: string;
+  label: string;
+  icon: IconName;
+  // Versione corta per la barra in basso su telefono.
+  short?: string;
+};
 
 /**
  * Barra laterale su schermo largo: logo, percorso, sezioni e uscita. Sotto i 1024px

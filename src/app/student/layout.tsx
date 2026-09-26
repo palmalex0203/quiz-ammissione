@@ -3,13 +3,14 @@ import { redirect } from "next/navigation";
 import { auth, signOut } from "@/lib/auth";
 import { AppHeader } from "@/components/AppHeader";
 import { AppSidebar, type NavLink } from "@/components/AppSidebar";
+import { BottomNav } from "@/components/BottomNav";
 import { TrackSwitcher } from "@/components/TrackSwitcher";
 import { currentTrackId } from "@/lib/track-session";
 
 const LINKS: NavLink[] = [
   { href: "/student/dashboard", label: "Pratica", icon: "target" },
   { href: "/student/practice", label: "Esercitati", icon: "grid" },
-  { href: "/student/history", label: "I miei progressi", icon: "chart" },
+  { href: "/student/history", label: "I miei progressi", icon: "chart", short: "Progressi" },
 ];
 
 export default async function StudentLayout({ children }: { children: ReactNode }) {
@@ -44,9 +45,10 @@ export default async function StudentLayout({ children }: { children: ReactNode 
           userName={userName}
           signOutAction={signOutAction}
           aside={<TrackSwitcher current={trackId} />}
-          links={LINKS.map(({ href, label }) => ({ href, label }))}
         />
-        <main className="mx-auto w-full max-w-4xl px-4 py-8 sm:px-6 lg:py-10">{children}</main>
+        {/* pb-24: spazio per la barra delle sezioni, che su telefono è fissa in basso */}
+        <main className="mx-auto w-full max-w-4xl px-4 py-8 pb-24 sm:px-6 lg:py-10 lg:pb-10">{children}</main>
+        <BottomNav links={LINKS} />
       </div>
     </div>
   );

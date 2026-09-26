@@ -303,7 +303,9 @@ body {
 
   /* Le tabelle larghe scorrono invece di allargare la pagina. */
   .prose-table-scroll {
+    max-width: 100%;
     overflow-x: auto;
+    border-radius: 0.75rem;
   }
 }
 

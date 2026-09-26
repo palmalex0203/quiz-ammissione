@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { auth, signOut } from "@/lib/auth";
 import { AppHeader } from "@/components/AppHeader";
 import { AppSidebar, type NavLink } from "@/components/AppSidebar";
+import { BottomNav } from "@/components/BottomNav";
 
 const LINKS: NavLink[] = [
   { href: "/teacher/dashboard", label: "Dashboard", icon: "home" },
@@ -41,9 +42,10 @@ export default async function TeacherLayout({ children }: { children: ReactNode 
           maxWidth="max-w-5xl"
           userName={userName}
           signOutAction={signOutAction}
-          links={LINKS.map(({ href, label }) => ({ href, label }))}
         />
-        <main className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-6 lg:py-10">{children}</main>
+        {/* pb-24: spazio per la barra delle sezioni, che su telefono è fissa in basso */}
+        <main className="mx-auto w-full max-w-5xl px-4 py-8 pb-24 sm:px-6 lg:py-10 lg:pb-10">{children}</main>
+        <BottomNav links={LINKS} />
       </div>
     </div>
   );
