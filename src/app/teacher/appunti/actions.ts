@@ -1,8 +1,9 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
+import { revalidatePath, updateTag } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
+import { NOTES_TAG } from "@/lib/notes";
 
 export type ActionState = { error?: string; salvato?: boolean };
 
@@ -22,6 +23,9 @@ export async function updateNote(_prevState: ActionState, formData: FormData): P
 
   await prisma.topicNote.update({ where: { topic }, data: { title, body } });
 
+  // Gli studenti leggono l'appunto dalla cache: senza questo, la modifica
+  // resterebbe invisibile fino alla scadenza.
+  updateTag(NOTES_TAG);
   revalidatePath(`/teacher/appunti/${topic}`);
   revalidatePath("/teacher/appunti");
   revalidatePath(`/student/appunti/${topic}`);
@@ -39,6 +43,7 @@ export async function togglePublishNote(formData: FormData): Promise<void> {
 
   await prisma.topicNote.update({ where: { topic }, data: { isPublished: !nota.isPublished } });
 
+  updateTag(NOTES_TAG);
   revalidatePath("/teacher/appunti");
   revalidatePath(`/teacher/appunti/${topic}`);
   revalidatePath(`/student/appunti/${topic}`);

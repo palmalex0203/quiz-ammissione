@@ -6,6 +6,7 @@ import { SubmitButton } from "@/components/SubmitButton";
 import { ProgressRing } from "@/components/ProgressRing";
 import { StudentTestCard } from "@/components/StudentTestCard";
 import { poolCounts } from "@/lib/question-pool";
+import { publishedNoteTopics } from "@/lib/notes";
 import { topicsOf, MIN_TOPIC_QUESTIONS } from "@/lib/topics";
 import { paperOf, type Track } from "@/lib/tracks";
 import { generateSubjectPractice, generateTopicPractice } from "@/app/student/dashboard/actions";
@@ -29,10 +30,7 @@ export default async function StudentPracticePage({
 
   const [pool, appunti, subjectTotals, tests] = await Promise.all([
     poolCounts(track.id),
-    prisma.topicNote.findMany({
-      where: { track: track.id, isPublished: true },
-      select: { topic: true },
-    }),
+    publishedNoteTopics(track.id),
     prisma.attemptSubjectStat.groupBy({
       by: ["subject"],
       where: { attempt: { studentId, status: "SUBMITTED", test: { track: track.id } } },
@@ -60,7 +58,7 @@ export default async function StudentPracticePage({
     }),
   ]);
 
-  const conAppunto = new Set(appunti.map((a) => a.topic));
+  const conAppunto = new Set(appunti);
 
   const subjectPct = new Map(
     subjectTotals

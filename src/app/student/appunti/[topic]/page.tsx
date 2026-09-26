@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { prisma } from "@/lib/prisma";
 import { requireStudentTrack } from "@/lib/track-session";
 import { SubmitButton } from "@/components/SubmitButton";
-import { renderMarkdown } from "@/lib/markdown";
+import { publishedNote } from "@/lib/notes";
 import { topicLabel, MIN_TOPIC_QUESTIONS } from "@/lib/topics";
 import { poolCounts } from "@/lib/question-pool";
 import { generateTopicPractice } from "@/app/student/dashboard/actions";
@@ -12,18 +11,18 @@ import { generateTopicPractice } from "@/app/student/dashboard/actions";
  * L'appunto di ripasso di un argomento. In fondo c'è il pulsante per allenarsi
  * subito sullo stesso argomento: leggere e poi provare è il motivo per cui questa
  * pagina sta dentro l'app invece che in un file a parte.
+ *
+ * Il testo arriva dalla cache degli appunti (lib/notes.ts), già convertito in
+ * HTML: aprire un appunto non interroga il database.
  */
 export default async function StudentNotePage({ params }: { params: Promise<{ topic: string }> }) {
   const { topic } = await params;
   const { track } = await requireStudentTrack();
 
-  const [nota, pool] = await Promise.all([
-    prisma.topicNote.findUnique({ where: { topic } }),
-    poolCounts(track.id),
-  ]);
+  const [nota, pool] = await Promise.all([publishedNote(topic), poolCounts(track.id)]);
 
   // Una bozza, o un appunto di un altro percorso, per lo studente non esiste.
-  if (!nota || !nota.isPublished || nota.track !== track.id) notFound();
+  if (!nota || nota.track !== track.id) notFound();
 
   const domande = pool.byTopic.get(topic) ?? 0;
 
@@ -38,11 +37,12 @@ export default async function StudentNotePage({ params }: { params: Promise<{ to
         </Link>
         <h1 className="page-title mt-2">{topicLabel(nota.topic) ?? nota.title}</h1>
         <p className="mt-1 text-sm text-muted">
-          Appunto di ripasso · {nota.subject} · aggiornato il {nota.updatedAt.toLocaleDateString("it-IT")}
+          Appunto di ripasso · {nota.subject} · aggiornato il{" "}
+          {new Date(nota.updatedAt).toLocaleDateString("it-IT")}
         </p>
       </div>
 
-      <article className="card prose p-6 sm:p-8" dangerouslySetInnerHTML={{ __html: renderMarkdown(nota.body) }} />
+      <article className="card prose p-6 sm:p-8" dangerouslySetInnerHTML={{ __html: nota.html }} />
 
       {domande >= MIN_TOPIC_QUESTIONS && (
         <div className="flex flex-col justify-between gap-3 rounded-3xl bg-brand p-6 text-white sm:flex-row sm:items-center">
