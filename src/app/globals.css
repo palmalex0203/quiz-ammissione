@@ -309,10 +309,30 @@ body {
   }
 }
 
+  /*
+   * Barra delle sezioni sul fondo dello schermo.
+   *
+   * In Safari il browser lascia già fuori la striscia di sistema, e basta un
+   * margine piccolo. Ad app installata sulla schermata iniziale, invece, la pagina
+   * arriva fino al bordo del telefono: lì sotto passa la riga di sistema, che si
+   * prende i tocchi al posto nostro. In quel caso si tiene il valore più grande fra
+   * lo spazio dichiarato dal telefono e 2,75rem, così i pulsanti stanno alti a
+   * sufficienza su qualsiasi modello, con o senza tasto casa.
+   */
+  .bottom-nav {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 1rem);
+  }
+
   /* L'invito a installare l'app non serve a chi l'ha già installata né su desktop. */
 @media (display-mode: standalone), (min-width: 1024px) {
   .install-hint {
     display: none;
+  }
+}
+
+@media (display-mode: standalone) {
+  .bottom-nav {
+    padding-bottom: max(calc(env(safe-area-inset-bottom, 0px) + 1rem), 2.75rem);
   }
 }
 

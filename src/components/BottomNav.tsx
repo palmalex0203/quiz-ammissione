@@ -20,13 +20,10 @@ export function BottomNav({ links }: { links: NavLink[] }) {
   return (
     <nav
       aria-label="Sezioni"
-      className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-card/95 backdrop-blur lg:hidden"
-      // Gli ultimi millimetri in fondo allo schermo non sono davvero toccabili: ci
-      // passano la riga di sistema dell'iPhone e la barra di Safari, che si
-      // prendono il tocco al posto della pagina. Qui si somma quello spazio (che
-      // vale zero dove non serve) a un centimetro abbondante, così la fascia dei
-      // pulsanti resta ben staccata dal bordo.
-      style={{ paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 1rem)" }}
+      // Lo stacco dal fondo dello schermo è in .bottom-nav (globals.css): cambia fra
+      // browser e app installata, e una regola CSS sa distinguerli, una proprietà
+      // scritta qui no.
+      className="bottom-nav fixed inset-x-0 bottom-0 z-30 border-t border-line bg-card/95 backdrop-blur lg:hidden"
     >
       <div className="mx-auto flex max-w-lg">
         {links.map((link) => {
