@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
 import { formatPoints, trackOf } from "@/lib/tracks";
+import { testQuestionOrder } from "@/lib/test-questions";
 
 export default async function TeacherAttemptDetailPage({
   params,
@@ -30,7 +31,11 @@ export default async function TeacherAttemptDetailPage({
   const percentage =
     attempt.maxScore && attempt.maxScore > 0 ? Math.round(((attempt.score ?? 0) / attempt.maxScore) * 100) : 0;
   const scoring = trackOf(attempt.test.track).scoring;
-  const sortedAnswers = [...attempt.answers].sort((a, b) => a.question.order - b.question.order);
+  // L'ordine è quello del test, non quello che la domanda ha nella banca dati.
+  const posizione = await testQuestionOrder(attempt.testId);
+  const sortedAnswers = [...attempt.answers].sort(
+    (a, b) => (posizione.get(a.questionId) ?? 0) - (posizione.get(b.questionId) ?? 0)
+  );
   const correctCount = sortedAnswers.filter((a) => a.isCorrect).length;
   const omittedCount = sortedAnswers.filter((a) => !a.selectedOptionId).length;
   const incorrectCount = sortedAnswers.length - correctCount - omittedCount;

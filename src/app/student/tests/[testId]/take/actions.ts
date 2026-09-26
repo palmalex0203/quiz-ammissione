@@ -5,6 +5,7 @@ import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
 import { gradeAttempt } from "@/lib/grading";
 import { trackOf } from "@/lib/tracks";
+import { testQuestions } from "@/lib/test-questions";
 
 async function getOwnedInProgressAttempt(attemptId: string, studentId: string) {
   const attempt = await prisma.attempt.findUnique({ where: { id: attemptId } });
@@ -14,24 +15,58 @@ async function getOwnedInProgressAttempt(attemptId: string, studentId: string) {
   return attempt;
 }
 
-export async function saveAnswer(attemptId: string, questionId: string, selectedOptionId: string) {
+/** Una risposta cambiata: null vuol dire tolta. */
+export type AnswerChange = { questionId: string; selectedOptionId: string | null };
+
+/**
+ * Salva un gruppo di risposte in un colpo solo.
+ *
+ * Prima ogni tocco era una chiamata al server a sé: una simulazione da 60 domande
+ * ne faceva una sessantina, e con trenta studenti diventano ~1.800 risvegli del
+ * database, che è quello che il piano fattura. Il browser adesso accumula le
+ * risposte per qualche secondo e le manda insieme; qui diventano due istruzioni
+ * SQL al massimo, dentro una transazione.
+ *
+ * L'ordine conta: prima si cancellano le risposte tolte, poi si scrivono quelle
+ * date, altrimenti una domanda prima tolta e poi rifatta nello stesso gruppo
+ * verrebbe cancellata dopo essere stata scritta.
+ */
+export async function saveAnswers(attemptId: string, changes: AnswerChange[]): Promise<void> {
+  if (changes.length === 0) return;
+
   const session = await requireStudent();
   const attempt = await getOwnedInProgressAttempt(attemptId, session.user.id);
 
-  await prisma.answerRecord.upsert({
-    where: { attemptId_questionId: { attemptId: attempt.id, questionId } },
-    update: { selectedOptionId },
-    create: { attemptId: attempt.id, questionId, selectedOptionId },
-  });
-}
+  const tolte = changes.filter((c) => c.selectedOptionId === null).map((c) => c.questionId);
+  const date = changes.filter((c) => c.selectedOptionId !== null);
 
-export async function clearAnswer(attemptId: string, questionId: string) {
-  const session = await requireStudent();
-  const attempt = await getOwnedInProgressAttempt(attemptId, session.user.id);
+  const istruzioni = [];
 
-  await prisma.answerRecord.deleteMany({
-    where: { attemptId: attempt.id, questionId },
-  });
+  if (tolte.length > 0) {
+    istruzioni.push(
+      prisma.answerRecord.deleteMany({ where: { attemptId: attempt.id, questionId: { in: tolte } } })
+    );
+  }
+
+  if (date.length > 0) {
+    // Una sola INSERT per tutte le risposte del gruppo: unnest trasforma i tre
+    // elenchi in righe, e ON CONFLICT aggiorna quelle già presenti.
+    const ids = date.map(() => crypto.randomUUID());
+    const domande = date.map((c) => c.questionId);
+    const opzioni = date.map((c) => c.selectedOptionId as string);
+    istruzioni.push(
+      prisma.$executeRaw`
+        INSERT INTO "AnswerRecord" ("id", "attemptId", "questionId", "selectedOptionId")
+        SELECT nuova.id, ${attempt.id}, nuova."questionId", nuova."selectedOptionId"
+        FROM unnest(${ids}::text[], ${domande}::text[], ${opzioni}::text[])
+          AS nuova(id, "questionId", "selectedOptionId")
+        ON CONFLICT ("attemptId", "questionId")
+        DO UPDATE SET "selectedOptionId" = EXCLUDED."selectedOptionId"
+      `
+    );
+  }
+
+  await prisma.$transaction(istruzioni);
 }
 
 export async function submitAttempt(attemptId: string) {
@@ -40,10 +75,7 @@ export async function submitAttempt(attemptId: string) {
 
   const [test, questions, existingAnswers] = await Promise.all([
     prisma.test.findUnique({ where: { id: attempt.testId }, select: { track: true } }),
-    prisma.question.findMany({
-      where: { testId: attempt.testId },
-      include: { options: { select: { id: true, isCorrect: true } } },
-    }),
+    testQuestions(attempt.testId),
     prisma.answerRecord.findMany({ where: { attemptId: attempt.id } }),
   ]);
 

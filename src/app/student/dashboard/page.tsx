@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
+import { questionCountOf, questionCountSelect } from "@/lib/test-questions";
 import { requireStudentTrack } from "@/lib/track-session";
 import { SubmitButton } from "@/components/SubmitButton";
 import { ProgressRing } from "@/components/ProgressRing";
@@ -38,7 +39,7 @@ export default async function StudentDashboardPage() {
       select: {
         id: true,
         _count: { select: { answers: { where: { selectedOptionId: { not: null } } } } },
-        test: { select: { id: true, title: true, _count: { select: { questions: true } } } },
+        test: { select: { id: true, title: true, _count: { select: questionCountSelect } } },
       },
     }),
     prisma.attempt.findFirst({
@@ -183,7 +184,7 @@ export default async function StudentDashboardPage() {
             {resume ? (
               <>
                 <p className="truncate text-xs text-muted">
-                  {resume.test.title} · {resume._count.answers} di {resume.test._count.questions} risposte
+                  {resume.test.title} · {resume._count.answers} di {questionCountOf(resume.test._count)} risposte
                 </p>
                 <form action={startAttempt} className="mt-2">
                   <input type="hidden" name="testId" value={resume.test.id} />

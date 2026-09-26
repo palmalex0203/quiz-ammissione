@@ -3,17 +3,16 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
 import { EmptyState } from "@/components/EmptyState";
+import { testQuestions } from "@/lib/test-questions";
 
 export default async function TestResultsPage({ params }: { params: Promise<{ testId: string }> }) {
   const { testId } = await params;
   const session = await requireTeacher();
 
-  const test = await prisma.test.findUnique({
-    where: { id: testId },
-    include: {
-      questions: { orderBy: { order: "asc" } },
-    },
-  });
+  const [test, domande] = await Promise.all([
+    prisma.test.findUnique({ where: { id: testId } }),
+    testQuestions(testId),
+  ]);
 
   if (!test || test.createdById !== session.user.id) {
     notFound();
@@ -48,7 +47,7 @@ export default async function TestResultsPage({ params }: { params: Promise<{ te
       answersByQuestion.set(answer.questionId, qStat);
     }
   }
-  for (const question of test.questions) {
+  for (const question of domande) {
     const stat = answersByQuestion.get(question.id);
     if (!stat) continue;
     const subjectStat = answersBySubject.get(question.subject) ?? { correct: 0, total: 0 };
@@ -57,7 +56,7 @@ export default async function TestResultsPage({ params }: { params: Promise<{ te
     answersBySubject.set(question.subject, subjectStat);
   }
 
-  const questionRows = test.questions
+  const questionRows = domande
     .map((q) => ({ question: q, stat: answersByQuestion.get(q.id) ?? { correct: 0, total: 0 } }))
     .filter((r) => r.stat.total > 0)
     .sort((a, b) => a.stat.correct / a.stat.total - b.stat.correct / b.stat.total);

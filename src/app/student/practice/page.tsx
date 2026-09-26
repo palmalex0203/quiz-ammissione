@@ -7,6 +7,7 @@ import { ProgressRing } from "@/components/ProgressRing";
 import { StudentTestCard } from "@/components/StudentTestCard";
 import { poolCounts } from "@/lib/question-pool";
 import { publishedNoteTopics } from "@/lib/notes";
+import { questionCountSelect } from "@/lib/test-questions";
 import { topicsOf, MIN_TOPIC_QUESTIONS } from "@/lib/topics";
 import { paperOf, type Track } from "@/lib/tracks";
 import { generateSubjectPractice, generateTopicPractice } from "@/app/student/dashboard/actions";
@@ -52,7 +53,7 @@ export default async function StudentPracticePage({
         folder: true,
         timeLimitMinutes: true,
         maxAttempts: true,
-        _count: { select: { questions: true } },
+        _count: { select: questionCountSelect },
         attempts: { where: { studentId }, orderBy: { startedAt: "desc" }, select: { id: true, status: true } },
       },
     }),

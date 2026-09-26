@@ -20,6 +20,7 @@ import {
   MIN_TOPIC_QUESTIONS,
 } from "@/lib/topics";
 import { wrongQuestionIds, REVIEW_SIZE } from "@/lib/review";
+import { questionCountOf, questionCountSelect } from "@/lib/test-questions";
 
 export async function startAttempt(formData: FormData): Promise<void> {
   const session = await requireStudent();
@@ -30,7 +31,7 @@ export async function startAttempt(formData: FormData): Promise<void> {
     where: { id: testId },
     include: {
       assignments: { where: { studentId: session.user.id } },
-      questions: { select: { id: true } },
+      _count: { select: questionCountSelect },
     },
   });
 
@@ -60,7 +61,7 @@ export async function startAttempt(formData: FormData): Promise<void> {
   }
 
   // Il punteggio pieno dipende dal percorso del test, non da quello aperto adesso.
-  const maxScore = maxScoreFor(trackOf(test.track), test.questions.length);
+  const maxScore = maxScoreFor(trackOf(test.track), questionCountOf(test._count));
 
   await prisma.attempt.create({
     data: {
@@ -123,10 +124,10 @@ async function pickRandomQuestionIds(track: Track): Promise<string[]> {
 // interrotta poco fa per riprenderla, non viene toccato.
 const ABANDONED_AFTER_DAYS = 2;
 
-// Ogni test generato conserva una copia delle domande e delle opzioni. Senza pulizia
-// le prove aperte e mai finite si accumulano all'infinito e appesantiscono il
-// database di tutti: si eliminano quelle vecchie dello studente, che non
-// contengono alcun punteggio, appena ne genera una nuova.
+// Le prove aperte e mai finite si accumulerebbero all'infinito: si eliminano quelle
+// vecchie dello studente, che non contengono alcun punteggio, appena ne genera una
+// nuova. Adesso che le domande sono richiamate e non copiate pesano molto meno, ma
+// restano comunque righe che nessuno leggerà mai più.
 async function pruneAbandonedTests(studentId: string) {
   const cutoff = new Date(Date.now() - ABANDONED_AFTER_DAYS * 24 * 60 * 60 * 1000);
   const abandoned = await prisma.test.findMany({
@@ -187,12 +188,16 @@ async function createAndStartGeneratedTest(opts: {
 
   await pruneAbandonedTests(opts.studentId);
 
-  const questions = await prisma.question.findMany({
+  // Le domande non si copiano: il test ne registra il riferimento e l'ordine.
+  // Si controlla solo che esistano ancora tutte, perché fra il momento in cui sono
+  // state pescate e adesso l'insegnante potrebbe averne tolta qualcuna.
+  const esistenti = await prisma.question.findMany({
     where: { id: { in: opts.orderedIds } },
-    include: { options: { orderBy: { order: "asc" } } },
+    select: { id: true },
   });
-  const byId = new Map(questions.map((q) => [q.id, q]));
-  const orderedQuestions = opts.orderedIds.map((id) => byId.get(id)!);
+  const disponibili = new Set(esistenti.map((q) => q.id));
+  const orderedIds = opts.orderedIds.filter((id) => disponibili.has(id));
+  if (orderedIds.length === 0) throw new Error("Le domande pescate non sono più disponibili.");
 
   const test = await prisma.test.create({
     data: {
@@ -208,34 +213,11 @@ async function createAndStartGeneratedTest(opts: {
     },
   });
 
-  // Inserimento in blocco (createMany) invece di create annidate: su un database
-  // remoto una create annidata con ~60 domande e ~300 opzioni emette centinaia di
-  // INSERT separate; createMany le raggruppa in pochissime query.
-  const questionIds = orderedQuestions.map(() => crypto.randomUUID());
-  await prisma.question.createMany({
-    data: orderedQuestions.map((q, i) => ({
-      id: questionIds[i],
-      testId: test.id,
-      type: q.type,
-      subject: q.subject,
-      topic: q.topic,
-      text: q.text,
-      order: i + 1,
-    })),
+  await prisma.testQuestion.createMany({
+    data: orderedIds.map((questionId, i) => ({ testId: test.id, questionId, order: i + 1 })),
   });
 
-  const optionsData = orderedQuestions.flatMap((q, i) =>
-    q.options.map((o, j) => ({
-      id: crypto.randomUUID(),
-      questionId: questionIds[i],
-      text: o.text,
-      isCorrect: o.isCorrect,
-      order: j + 1,
-    }))
-  );
-  await prisma.answerOption.createMany({ data: optionsData });
-
-  const maxScore = maxScoreFor(trackOf(opts.trackId), orderedQuestions.length);
+  const maxScore = maxScoreFor(trackOf(opts.trackId), orderedIds.length);
 
   await prisma.attempt.create({
     data: { testId: test.id, studentId: opts.studentId, status: "IN_PROGRESS", maxScore },

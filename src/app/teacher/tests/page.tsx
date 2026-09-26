@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
+import { questionCountOf, questionCountSelect } from "@/lib/test-questions";
 import { requireTeacher } from "@/lib/permissions";
 import { EmptyState } from "@/components/EmptyState";
 import { ALL_TRACKS, trackOf, type Track } from "@/lib/tracks";
@@ -11,7 +12,7 @@ async function loadTests(teacherId: string) {
   return prisma.test.findMany({
     where: { createdById: teacherId, kind: { in: ["SIMULAZIONE", "ESERCITAZIONE"] } },
     orderBy: { createdAt: "desc" },
-    include: { _count: { select: { questions: true, attempts: true } } },
+    include: { _count: { select: { ...questionCountSelect, attempts: true } } },
   });
 }
 
@@ -157,7 +158,7 @@ function TestCard({ test, compact }: { test: TestRow; compact?: boolean }) {
           </span>
         </div>
         <p className="mt-1 text-xs text-muted">
-          {test._count.questions} domande &middot; {test._count.attempts} tentativi
+          {questionCountOf(test._count)} domande &middot; {test._count.attempts} tentativi
         </p>
       </div>
       <div className="flex items-center gap-3">

@@ -57,7 +57,12 @@ model Test {
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
 
+  // Domande scritte dall'insegnante dentro questo test (e le domande della banca
+  // dati, che stanno nel test POOL del percorso).
   questions   Question[]
+  // Domande prese in prestito dalla banca dati: le usano i test generati, che le
+  // richiamano invece di copiarle. Un test usa l'una o l'altra forma, mai entrambe.
+  pescate     TestQuestion[]
   assignments TestAssignment[]
   attempts    Attempt[]
 
@@ -79,10 +84,30 @@ model Question {
 
   options       AnswerOption[]
   answerRecords AnswerRecord[]
+  usiNeiTest    TestQuestion[]
 
   @@index([testId])
   @@index([subject])
   @@index([topic])
+}
+
+// Una domanda della banca dati richiamata da un test generato, alla sua posizione.
+//
+// Prima ogni test generato conservava una *copia* delle domande e delle opzioni:
+// una simulazione da 60 domande scriveva ~360 righe e ~175 KB che restavano nel
+// database per sempre. Qui il test tiene solo un riferimento e l'ordine, cioè una
+// riga minuscola per domanda. Vedi src/lib/test-questions.ts.
+model TestQuestion {
+  id         String   @id @default(cuid())
+  testId     String
+  test       Test     @relation(fields: [testId], references: [id], onDelete: Cascade)
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  order      Int
+
+  @@unique([testId, questionId])
+  @@index([testId])
+  @@index([questionId])
 }
 
 model AnswerOption {

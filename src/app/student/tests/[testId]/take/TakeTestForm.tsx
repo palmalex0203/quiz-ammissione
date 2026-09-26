@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState, useTransition } from "react";
-import { clearAnswer, saveAnswer, submitAttempt } from "./actions";
+import { submitAttempt } from "./actions";
+import { useAnswerQueue, type SaveState } from "./useAnswerQueue";
 
 type Question = {
   id: string;
@@ -27,8 +28,12 @@ export function TakeTestForm({
 }) {
   const [answers, setAnswers] = useState<Record<string, string>>(initialAnswers);
   const [isSubmitting, startSubmitTransition] = useTransition();
-  const [, startSaveTransition] = useTransition();
   const submittedRef = useRef(false);
+  const [saveError, setSaveError] = useState(false);
+
+  // Le risposte non partono una alla volta: si accumulano e vanno insieme, con
+  // ritentativi se la rete salta. Vedi useAnswerQueue.ts.
+  const { enqueue, drain, state: saveState } = useAnswerQueue(attemptId);
 
   const deadline =
     timeLimitMinutes != null ? new Date(startedAt).getTime() + timeLimitMinutes * 60_000 : null;
@@ -37,7 +42,15 @@ export function TakeTestForm({
   function doSubmit() {
     if (submittedRef.current) return;
     submittedRef.current = true;
+    setSaveError(false);
     startSubmitTransition(async () => {
+      // Prima di consegnare si aspetta che tutte le risposte siano arrivate:
+      // consegnare con la coda piena vorrebbe dire buttarle via.
+      if (!(await drain())) {
+        submittedRef.current = false;
+        setSaveError(true);
+        return;
+      }
       await submitAttempt(attemptId);
     });
   }
@@ -58,9 +71,7 @@ export function TakeTestForm({
 
   function selectOption(questionId: string, optionId: string) {
     setAnswers((prev) => ({ ...prev, [questionId]: optionId }));
-    startSaveTransition(async () => {
-      await saveAnswer(attemptId, questionId, optionId);
-    });
+    enqueue(questionId, optionId);
   }
 
   function deselectOption(questionId: string) {
@@ -69,9 +80,7 @@ export function TakeTestForm({
       delete next[questionId];
       return next;
     });
-    startSaveTransition(async () => {
-      await clearAnswer(attemptId, questionId);
-    });
+    enqueue(questionId, null);
   }
 
   const answeredCount = Object.keys(answers).length;
@@ -88,6 +97,7 @@ export function TakeTestForm({
               <span className="hidden sm:inline"> · tocca di nuovo una risposta per toglierla</span>
             </p>
           </div>
+          <SaveBadge state={saveState} />
           {remainingMs != null && (
             <div
               role="timer"
@@ -166,11 +176,48 @@ export function TakeTestForm({
             ? `${questions.length - answeredCount} domande senza risposta: valgono 0 punti.`
             : "Hai risposto a tutte le domande."}
         </p>
-        <button type="button" onClick={doSubmit} disabled={isSubmitting} className="btn btn-brand disabled:opacity-60">
-          {isSubmitting ? "Invio in corso…" : "Consegna il test"}
-        </button>
+        <div className="flex flex-col items-start gap-2 sm:items-end">
+          {saveError && (
+            <p role="alert" className="text-sm font-semibold text-red-700 dark:text-red-300">
+              Alcune risposte non sono ancora arrivate. Controlla la connessione e riprova.
+            </p>
+          )}
+          <button type="button" onClick={doSubmit} disabled={isSubmitting} className="btn btn-brand disabled:opacity-60">
+            {isSubmitting ? "Invio in corso…" : "Consegna il test"}
+          </button>
+        </div>
       </div>
     </div>
+  );
+}
+
+/*
+ * Lo stato dei salvataggi. Quando è tutto a posto resta discreto: è quando le
+ * risposte non stanno arrivando che lo studente deve accorgersene, perché è lì
+ * che rischia di perdere il lavoro.
+ */
+function SaveBadge({ state }: { state: SaveState }) {
+  if (state === "salvato") {
+    return (
+      <span className="hidden shrink-0 text-xs font-semibold text-muted sm:inline" aria-live="polite">
+        Salvato
+      </span>
+    );
+  }
+  if (state === "invio") {
+    return (
+      <span className="hidden shrink-0 text-xs font-semibold text-muted sm:inline" aria-live="polite">
+        Salvataggio…
+      </span>
+    );
+  }
+  return (
+    <span
+      aria-live="assertive"
+      className="shrink-0 rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800 dark:bg-amber-500/20 dark:text-amber-200"
+    >
+      Non salvato · riprovo
+    </span>
   );
 }
 

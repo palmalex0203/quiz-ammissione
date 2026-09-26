@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
 import { ProgressRing } from "@/components/ProgressRing";
 import { formatPoints, trackOf } from "@/lib/tracks";
+import { testQuestionOrder } from "@/lib/test-questions";
 
 export default async function AttemptResultPage({
   params,
@@ -40,7 +41,11 @@ export default async function AttemptResultPage({
   // I punti mostrati sono quelli del percorso a cui appartiene il test.
   const scoring = trackOf(attempt.test.track).scoring;
 
-  const sortedAnswers = [...attempt.answers].sort((a, b) => a.question.order - b.question.order);
+  // L'ordine è quello del test, non quello che la domanda ha nella banca dati.
+  const posizione = await testQuestionOrder(attempt.testId);
+  const sortedAnswers = [...attempt.answers].sort(
+    (a, b) => (posizione.get(a.questionId) ?? 0) - (posizione.get(b.questionId) ?? 0)
+  );
   const correctCount = sortedAnswers.filter((a) => a.isCorrect).length;
   const omittedCount = sortedAnswers.filter((a) => !a.selectedOptionId).length;
   const incorrectCount = sortedAnswers.length - correctCount - omittedCount;
