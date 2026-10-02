@@ -1,0 +1,179 @@
+Semestre Aperto - Esami
+!CCDF50001!
+1
+0
+z
+FISICA (2° APPELLO)
+Anno Accademico 2025/2026
+DOMANDE A RISPOSTA MULTIPLA
+1. In un gas reale:
+A) Fra le particelle non esistono interazioni a distanza
+B) Il covolume non è trascurabile
+C) Gli urti tra particelle sono perfettamente elastici
+D) Le particelle sono puntiformi
+E) Vale la relazione PV = nRT
+2. Una zattera di legno a base quadrata di lato 4 m e altezza 50 cm galleggia sull’acqua
+portando un carico di 400 Kg. Sapendo che la densità del legno è 0,8 g/cm
+3
+, quale è la
+altezza della zattera immersa in acqua?
+A) 45 cm
+B) 42,5 cm
+C) 40 cm
+D) 37,5 cm
+E) 35 cm
+3. La grandezza fisica Energia Cinetica di un corpo
+A) si misura in Kg/sec
+2
+B) si misura in watt
+C) si misura in Joule
+D) è costante nel moto uniformemente accelerato
+E) è nulla nel moto rettilineo uniforme
+4. Un volume di 10 dm
+3 
+corrisponde a:
+A) 100 millilitri
+B) 100 litri
+C) 10 litri
+D) 1 litro
+E) 10 millilitri
+5. La somma di due vettori a e b è tale da produrre come risultato un vettore di modulo |a – b|.
+Possiamo affermare che i due vettori:
+A) Formano un angolo acuto
+B) Hanno la stessa direzione e lo stesso verso
+C) Formano un angolo ottuso
+D) Hanno la stessa direzione e versi opposti
+E) Sono perpendicolari
+6. Cosa vuol dire che un suono ha un livello sonoro di 0 Decibel?
+A) Che la sua intensità è molto al di sotto del livello di udibilità
+B) Che la sua intensità è 0
+C) Niente: non può esistere un suono che ha un livello sonoro di 0 Decibel
+D) Che ha una frequenza di 1 KHz
+E) Che la sua intensità è 10
+−12 
+W/m 
+2
+
+----- pagina 1 -----
+2
+7. Due corpi di massa M 1 e M 2 hanno la stessa capacità termica. Se assorbono dall’ambiente
+la stessa quantità di calore Q, subiscono rispettivamente una variazione di temperatura
+∆T1 e ∆T2. Si può affermare che:
+A) Per determinare le variazioni di temperatura è necessario sapere se la trasformazione
+avviene a pressione o a volume costante.
+B) ∆T 1 > ∆T 2
+C) ∆T 1 = ∆T 2
+D) ∆T 1 < ∆T 2
+E) E’ necessario conoscere le masse dei due corpi per determinare le variazioni di
+temperatura.
+8. Data una carica puntiforme quali sono le superfici equipotenziali
+A) Superfici cubiche con la carica al centro
+B) Piani a distanza crescente dalla carica
+C) Sfere concentriche alla carica
+D) Ellissi di cui la carica occupa uno dei fuochi
+E) Superfici piramidali con la carica al centro
+9. Un’onda sonora di frequenza f si propaga con velocità v dentro un lungo tubo di sezione
+A. Se si raddoppia la frequenza dell’onda sonora, a parità del resto, la potenza mediata su
+un periodo trasportata dall’onda:
+A) Si dimezza
+B) Resta inalterata
+C) Diventa un quarto
+D) Raddoppia
+E) Aumenta di un fattore 4
+10. La variazione di energia interna di un gas perfetto che va da uno stato A (PA, V A, TA) a uno
+stato B (PB, VB , TB ) vale:
+A) nc V ∆P
+B) nc V ∆T
+C) nc P ∆T
+D) nc V ∆T
+E) nc P ∆P
+11. Le linee di campo elettrico all’interno di un condensatore piano ideale sono:
+A) Dirette dall’armatura positiva a quella negativa perpendicolarmente ad esse
+B) Cilindriche attorno alle armature
+C) Dirette dall’armatura negativa a quella positiva perpendicolarmente ad esse
+D) Parallele alle superfici affacciate alle armature
+E) A raggiera
+12. A quale pressione, in atmosfere, è sottoposto un sub che si trova a 50 m sotto il livello
+del mare?
+A) 60
+B) 5
+C) 50
+D) 30
+E) 6
+
+----- pagina 2 -----
+Semestre Aperto - Esami
+!CCDF50001!
+3
+0
+|
+13. Nel sistema S. I. quale è l’unità di misura della grandezza fisica “Numero di Reynolds”?
+A) Kg × m/s
+2
+B) Ohm
+C) (Ohm)
+−1
+D) È una grandezza fisica adimensionale
+E) Pa × s/m
+14. Un raggio di luce nel passaggio attraverso una lastra di vetro a facce piane e parallele
+viene:
+A) Deviato in modo da allontanarsi dalla normale alla lastra.
+B) Deviato in modo da avvicinarsi alla normale alla lastra.
+C) Deviato in modo da avvicinarsi alla superficie della lastra.
+D) Traslato parallelamente a sé stesso.
+E) Tutte le risposte proposte sono errate.
+15. Una nave percorre in successione 10 Km verso Nord, 6 Km verso Est e infine 18 Km
+verso Sud. Quanto vale il modulo dello spostamento risultante?
+A) 15 Km
+B) 10 Km
+C) 5 Km
+D) 25 Km
+E) 20 Km
+DOMANDE A RISPOSTA CON MODALITA' A COMPLETAMENTO
+16. Un elettrone si sposta tra 2 punti di un campo elettrico, tra i quali esiste una d.d.p. di
+3 x 10
+4 
+volt. La variazione di energia dell’elettrone è pari a …… KeV.
+17. Una velocità di 30 m/s espressa in Km/h vale ……
+18. Le linee di forza del campo magnetico sono ……
+19. Il grafico s–t di un moto uniformemente accelerato è di forma ……
+20. La forza elettrica Fe tra due cariche secondo la legge di Coulomb è inversamente
+proporzionale al quadrato della …… che le separa.
+21. Il funzionamento delle fibre ottiche come guide di luce si basa sul fenomeno della ……
+totale.
+22. L'altezza dal suolo alla quale la velocità di un grave in caduta libera senza attriti,
+inizialmente a riposo a 12 m, uguaglia la metà di quella finale, è …… m
+23. Se un sistema termodinamico passa dallo stato A allo stato B lungo una trasformazione
+irreversibile, la sua variazione di entropia è ……. quella calcolata lungo una
+trasformazione reversibile che congiunga gli stessi stati A e B.
+24. Sulla superficie della luna le onde sonore …… si propagano
+25. Dalle densità ρ_olivo = 850 kg/m³ e ρ_acqua = 1000 kg/m³ si ricava che la frazione di
+volume immerso di un tronco di legno di ulivo in acqua dolce è pari a ……
+
+----- pagina 3 -----
+4
+26. Un gas va dallo stato A allo stato B lungo una trasformazione isobara reversibile,
+compiendo un lavoro pari a 100 J. Il lavoro compiuto nella trasformazione inversa sarà
+…… J
+27. Un suono di intensità acustica pari a 60 dB è superiore alla soglia di udibilità di un fattore
+……
+28. Una zattera di legno (densità 800 kg/cm 
+3
+) che ha base quadrata di lato 4m e altezza 50 cm
+galleggia sull’acqua (densità 1000 kg/cm 
+3
+). Quale è il massimo peso (espresso in N) con
+cui si può caricare la zattera senza che affondi?
+29. Sapendo che 1 metro è uguale a 100 centimetri, un’accelerazione di 320 cm/s²
+corrisponde a …… m/s² nel Sistema Internazionale.
+30. Lo scambio di calore può avvenire tramite conduzione, convezione e ……
+31. Un’ambulanza si muove con velocità costante v su una strada rettilinea, a sirena
+spiegata; la sirena emette un allarme sonoro di frequenza f. Un pedone fermo sul bordo
+della strada vede l’ambulanza che si avvicina e sente l’allarme sonoro con una frequenza
+f’ maggiore di f del 5%. Sapendo che la velocità del suono in aria è c ~ 1200 Km/hr, e
+considerando nel calcolo soltanto temini al primo ordine in v/c, la velocità v vale ……
+Km/hr
+********** FINE DELLE DOMANDE **********
+
+----- pagina 4 -----
+

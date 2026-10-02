@@ -75,9 +75,18 @@ const PROFESSIONI_SANITARIE: Track = {
 };
 
 // Semestre filtro: tre prove in sequenza (Chimica, Fisica, Biologia), 31 domande
-// ciascuna — 21 a risposta multipla e 10 a completamento — in 50 minuti. Il
-// punteggio è quello delle prove nazionali: +1 corretta, -0,25 errata, 0 non data.
-// Fonte: syllabus MUR del semestre filtro, aggiornato per l'anno 2026/27.
+// ciascuna in 45 minuti, con 15 minuti di intervallo fra una prova e l'altra.
+// Punteggio: +1 corretta, −0,1 errata, 0 non data.
+//
+// Fonte: "Linee guida per gli esami del semestre aperto" del MUR (ottobre 2025) e i
+// fascicoli ufficiali degli esami, che stanno in content/semestre-filtro/.
+//
+// Da sapere: nelle prove vere 15 domande su 31 sono a risposta multipla con cinque
+// opzioni e le altre 16 sono a completamento, cioè lo studente scrive la risposta
+// (una parola, un numero o un'espressione, al massimo 16 caratteri) e un errore di
+// ortografia la rende sbagliata. La piattaforma oggi sa fare solo la scelta
+// multipla: finché non ci sarà un tipo di domanda a completamento, le simulazioni
+// coprono metà dell'esame vero.
 const SEMESTRE_FILTRO: Track = {
   id: "SEMESTRE_FILTRO",
   label: "Semestre filtro",
@@ -94,21 +103,21 @@ const SEMESTRE_FILTRO: Track = {
       { subject: "Fisica", count: 31 },
       { subject: "Biologia", count: 31 },
     ],
-    minutes: 150,
+    minutes: 135,
     description:
-      "Le tre prove in fila come all'esame: 93 domande in tutto, 50 minuti a materia.",
+      "Le tre prove in fila come all'esame: 93 domande in tutto, 45 minuti a materia.",
   },
   papers: [
-    { subject: "Chimica e propedeutica biochimica", questions: 31, minutes: 50 },
-    { subject: "Fisica", questions: 31, minutes: 50 },
-    { subject: "Biologia", questions: 31, minutes: 50 },
+    { subject: "Chimica e propedeutica biochimica", questions: 31, minutes: 45 },
+    { subject: "Fisica", questions: 31, minutes: 45 },
+    { subject: "Biologia", questions: 31, minutes: 45 },
   ],
   practiceSizes: {
     "Chimica e propedeutica biochimica": 31,
     Fisica: 31,
     Biologia: 31,
   },
-  scoring: { correct: 1, incorrect: -0.25, omitted: 0 },
+  scoring: { correct: 1, incorrect: -0.1, omitted: 0 },
 };
 
 export const TRACKS: Record<TrackId, Track> = {

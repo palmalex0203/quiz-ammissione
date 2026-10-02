@@ -1,0 +1,171 @@
+Semestre Aperto - Esami
+!CCDB50001!
+1
+0
+f
+BIOLOGIA (2° APPELLO)
+Anno Accademico 2025/2026
+DOMANDE A RISPOSTA MULTIPLA
+1. I processi di fagocitosi e autofagia:
+A) contribuiscono a proteggere la cellula da parassiti extracellulari e intracellulari
+B) sono lo stesso processo indicato con termini diversi
+C) avvengono solo in cellule specializzate
+D) il primo coinvolge lisosomi, il secondo no
+E) sono processi alternativi, nelle cellule avviene o l’uno o l’altro
+2. Un gene è:
+A) Una proteina che controlla le caratteristiche ereditarie
+B) Una sequenza di DNA che contiene le informazioni solo per RNA non codificanti
+C) Una molecola di RNA che trasporta informazioni genetiche dalla cellula al nucleo
+D) Una sequenza di DNA che regola esclusivamente l'espressione di altre sequenze di
+DNA, senza codificare proteine
+E) Una sequenza di DNA che contiene le informazioni per la sintesi di una catena
+polipeptidica o di una molecola di RNA
+3. Il massimo livello di compattamento della cromatina è costituito da:
+A) Fibra da 300 nm
+B) Fibra da 30 nm
+C) Fibra da 11 nm
+D) Solenoide
+E) Cromosoma metafasico
+4. In quale/i dei seguenti comparti di una cellula eucariotica animale è prodotto l’RNA
+ribosomale?
+A) Nel reticolo endoplasmatico rugoso
+B) Nel nucleolo e nei mitocondri
+C) Nel citoplasma e nel nucleolo
+D) Nel reticolo endoplasmatico liscio
+E) Nei mitocondri e nel reticolo endoplasmatico liscio
+5. Se in una metafase mitotica di una cellula di un ipotetico organismo aploide n=12 si
+osservano 24 cromatidi fratelli, quante coppie di cromosomi omologhi sono presenti?
+A) 12
+B) 48
+C) 36
+D) 0
+E) 24
+
+----- pagina 1 -----
+2
+6. Due cromosomi omologhi di una qualsiasi coppia:
+A) Definiscono il sesso dell'individuo
+B) Hanno dimensioni diverse
+C) Si appaiono durante la fase S
+D) Sono caratterizzati da identica sequenza di loci genici
+E) Sono caratterizzati da identica sequenza di basi azotate nel loro DNA
+7. Nei procarioti l’RNA ribosomale è rappresentato da molecole con i seguenti coefficienti di
+sedimentazione
+A) 23, 16 e 5 Svedberg
+B) 18, 28 e 5 Svedberg
+C) 18, 28, 5.8 e 5 Svedberg
+D) 12 e 16 Svedberg
+E) 16 e 23 Svedberg
+8. Quali di queste affermazioni sugli oggetti biologici NON è corretta?
+A) I virus hanno un citoscheletro ancestrale
+B) Le cellule procariotiche sono prive di citoscheletro complesso ma hanno un sistema di
+proteine strutturali con funzioni analoghe a quelle del citoscheletro eucariotico
+C) Il citoscheletro è una componente strutturale presente in tutte le cellule eucariotiche
+D) Alcuni organismi monocellulari sintetizzano molecole di ATP utilizzando l'energia liberata
+dalla fermentazione
+E) Alcune cellule procariotiche possono operare la fotosintesi
+9. Le membrane biologiche sono pochissimo permeabili a:
+A) N2
+B) O2
+C) H2O
+D) CO2
+E) Ioni Ca2+
+10. Le molecole segnale che agiscono tramite recettori intracellulari sono:
+A) Fattori di crescita
+B) Ormoni peptidici
+C) Neurormoni
+D) Ormoni steroidei
+E) Neurotrasmettitori
+11. Quale delle seguenti affermazioni evidenzia una differenza significativa tra enzimi proteici
+e ribozimi?
+A) Sono evolutivamente correlati e strutturalmente simili
+B) Agiscono in compartimenti cellulari separati
+C) La loro attività non richiede energia
+D) Richiedono siti attivi con caratteristiche diverse
+E) Hanno un'attività catalitica intercambiabile tra proteine e RNA
+12. La fibronectina è:
+A) Un polisaccaride presente nella matrice extracellulare
+B) Una glicoproteina della matrice extracellulare che collega le integrine (proteine
+transmembrana) a componenti della matrice extracellulare, come il collagene
+C) Un enzima che degrada le proteine presenti nella matrice extracellulare
+D) Una proteina integrale di membrana
+E) Una proteina del citoscheletro
+
+----- pagina 2 -----
+Semestre Aperto - Esami
+!CCDB50001!
+3
+0
+h
+13. Il segnale di localizzazione lisosomiale di una proteina neosintetizzata è:
+A) Una serina fosforilata
+B) Un residuo di mannosio fosforilato di una sua catena oligosaccaridica
+C) Un’ancora lipidica a cui viene legata la proteina nel reticolo
+D) Una sequenza amminoacidica amino terminale della proteina da smistare
+E) Una tirosina fosforilata
+14. Indicare quale affermazione NON è corretta nel contesto della replicazione del DNA, a
+livello della forcella di replicazione:
+A) L'enzima elicasi separa i due filamenti del DNA rompendo i legami a idrogeno tra le basi
+azotate complementari e creando una struttura a Y (forcella replicativa)
+B) La sintesi del filamento guida (leading strand) procede in maniera continua in direzione
+5’-3’, mentre la sintesi del filamento ritardato (lagging strand) avviene in modo
+discontinuo tramite la formazione di brevi segmenti di DNA chiamati frammenti di
+Okazaki
+C) Le proteine SSB si legano ai filamenti di DNA separati prevenendo la loro riassociazione
+D) La DNA polimerasi si lega al filamento di DNA per iniziare la trascrizione del DNA in
+RNA
+E) Viene sintetizzato un breve segmento di RNA (primer) che fornisce l’estremità 3’-OH
+necessaria per l’inizio della sintesi del DNA da parte della DNA polimerasi
+15. In quale fase della meiosi ha luogo la separazione dei cromosomi omologhi?
+A) Metafase II
+B) Anafase II
+C) Anafase I
+D) Profase I
+E) Metafase I
+DOMANDE A RISPOSTA CON MODALITA' A COMPLETAMENTO
+16. Due geni che occupano lo stesso locus (posizione) su ciascuno dei cromosomi omologhi
+e si differenziano per una variazione anche minima nella sequenza nucleotidica - come
+una singola sostituzione di base - vengono definiti ……
+17. La metilazione del DNA e le modificazioni degli istoni costituiscono un tipo di regolazione
+definita ……
+18. E’ vero o falso che le ripetizioni Fenilalanina-Glicina presenti nelle nucleoporine sono
+fondamentali per garantire la direzionalità del trasporto di proteine nucleo/citosol? ……
+19. Il legame peptidico si forma tra il gruppo carbossilico dell’amminoacido donatore e il
+gruppo amminico dell’amminoacido accettore con liberazione di una molecola di …… e la
+formazione di un legame covalente C-N
+20. Durante la replicazione del DNA, l’enzima che elimina il superavvolgimento del DNA
+creato dall’apertura dei filamenti nella forcella replicativa è la ……
+21. La frazione di DNA eucariotico che si rinatura in modo estremamente rapido viene
+definita altamente ……
+
+----- pagina 3 -----
+4
+22. Il motivo strutturale denominato “coiled-coil” che caratterizza molti domini proteici è
+generalmente costituito da due a quattro …… che si avvolgono l’una attorno all’altra
+formando una sovrastruttura stabile attraverso interazioni idrofobiche.
+23. Negli eucarioti, il fattore di trascrizione che ha attività enzimatica (chinasica ed elicasica)
+è il fattore ……
+24. Il processo di necrosi induce un fenomeno …… locale perché il contenuto della cellula
+viene rilasciato nell’ambiente circostante.
+25. La matrice extracellulare viene degradata da enzimi prodotti dalle cellule che sono
+chiamati ……
+26. La coda citosolica della proteina transmembrana SREBP, acronimo per Sterol Response
+Element Binding Protein, viene separata proteoliticamente dal resto della proteina nel
+complesso di Golgi e trasportata al ……
+27. Durante la trasduzione del segnale, i secondi …… come cAMP, IP3, DAG e Ca
+2+
+contribuiscono all’amplificazione del segnale, permettendo a un singolo evento di legame
+ligando-recettore di attivare molteplici risposte intracellulari.
+28. Nelle cellule animali, la sintesi, la modificazione e il trasporto di proteine e lipidi sono
+processi coordinati dal sistema endomembranoso, che è composto dal reticolo
+endoplasmatico, dall’apparato del Golgi, dalle vescicole di …… e dai lisosomi.
+29. Il codone di inizio del processo della traduzione, AUG, lega un tRNA iniziatore che
+trasporta l’amminoacido …… nel sito P del ribosoma
+30. I geni eucariotici contengono regioni codificanti (esoni) e regioni non codificanti (introni)
+mentre nei geni procariotici non sono presenti gli ……
+31. Sintesi di ormoni steroidei, produzione di particelle lipoproteiche, reazioni di
+disintossicazione sono caratteristiche del reticolo endoplasmico ……
+********** FINE DELLE DOMANDE **********
+
+----- pagina 4 -----
+
