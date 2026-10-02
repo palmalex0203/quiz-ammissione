@@ -20,6 +20,7 @@ import {
   MIN_TOPIC_QUESTIONS,
 } from "@/lib/topics";
 import { wrongQuestionIds, REVIEW_SIZE } from "@/lib/review";
+import { pickQuestionIds } from "@/lib/question-picker";
 import { questionCountOf, questionCountSelect } from "@/lib/test-questions";
 
 export async function startAttempt(formData: FormData): Promise<void> {
@@ -73,50 +74,6 @@ export async function startAttempt(formData: FormData): Promise<void> {
   });
 
   redirect(`/student/tests/${testId}/take`);
-}
-
-// Pesca gli ID delle domande casuali direttamente nel database con un'unica query
-// (window function ORDER BY RANDOM() per materia), invece di scaricare l'intera banca
-// dati di ogni materia in memoria e mescolarla in JavaScript: molto più veloce,
-// soprattutto su un database remoto dove ogni query ha un costo di rete fisso.
-async function pickRandomQuestionIds(track: Track): Promise<string[]> {
-  const blocks = track.simulation.blocks;
-  const quoted = (s: string) => `'${s.replace(/'/g, "''")}'`;
-  const subjectsList = blocks.map((b) => quoted(b.subject)).join(",");
-  const caseClauses = blocks.map((b) => `WHEN ${quoted(b.subject)} THEN ${b.count}`).join(" ");
-
-  const rows = await prisma.$queryRawUnsafe<{ id: string; subject: string }[]>(
-    `
-    SELECT id, subject FROM (
-      SELECT q.id, q.subject,
-        ROW_NUMBER() OVER (PARTITION BY q.subject ORDER BY RANDOM()) as rn
-      FROM "Question" q JOIN "Test" t ON q."testId" = t.id
-      WHERE t.kind = 'POOL' AND t.track = $1 AND q.subject IN (${subjectsList})
-    ) AS pescate
-    WHERE rn <= (CASE subject ${caseClauses} ELSE 0 END)
-  `,
-    track.id
-  );
-
-  const countBySubject = new Map<string, number>();
-  for (const r of rows) countBySubject.set(r.subject, (countBySubject.get(r.subject) ?? 0) + 1);
-  for (const block of blocks) {
-    if ((countBySubject.get(block.subject) ?? 0) < block.count) {
-      throw new Error(
-        `La banca dati di ${track.label} non ha ancora abbastanza domande di "${block.subject}".`
-      );
-    }
-  }
-
-  // Riordina gli id secondo l'ordine ufficiale delle materie (la query sopra li
-  // restituisce raggruppati per materia ma non necessariamente nell'ordine voluto).
-  const bySubject = new Map<string, string[]>();
-  for (const r of rows) {
-    const list = bySubject.get(r.subject) ?? [];
-    list.push(r.id);
-    bySubject.set(r.subject, list);
-  }
-  return blocks.flatMap((block) => bySubject.get(block.subject) ?? []);
 }
 
 // Da quanti giorni un test generato e mai consegnato è considerato abbandonato.
@@ -250,7 +207,7 @@ export async function generateRandomSimulation(): Promise<void> {
     trackId: track.id,
     title: `Simulazione ${track.label} - ${nowLabel()}`,
     description: `Simulazione generata pescando domande a caso dalla banca dati ${track.label}, con la struttura della prova ufficiale. ${track.simulation.description}`,
-    orderedIds: await pickRandomQuestionIds(track),
+    orderedIds: await pickQuestionIds(track.id, track.simulation.blocks, track.label),
     timeLimitMinutes: track.simulation.minutes,
   });
 
@@ -268,14 +225,8 @@ export async function generateSubjectPractice(formData: FormData): Promise<void>
   const size = paper?.questions ?? track.practiceSizes[subject];
   if (!size) throw new Error("Materia non valida.");
 
-  const rows = await prisma.$queryRaw<{ id: string }[]>`
-    SELECT q.id FROM "Question" q JOIN "Test" t ON q."testId" = t.id
-    WHERE t.kind = 'POOL' AND t.track = ${track.id} AND q.subject = ${subject}
-    ORDER BY RANDOM() LIMIT ${size}
-  `;
-  if (rows.length < size) {
-    throw new Error(`La banca dati di ${track.label} non ha ancora abbastanza domande di "${subject}".`);
-  }
+  // Una prova di materia rispetta i pesi del programma: pickQuestionIds ci pensa.
+  const orderedIds = await pickQuestionIds(track.id, [{ subject, count: size }], track.label);
 
   // Dove l'esame prevede una prova di materia (semestre filtro) si usano le sue
   // regole: stesse domande, stessi minuti della prova vera.
@@ -286,7 +237,7 @@ export async function generateSubjectPractice(formData: FormData): Promise<void>
     description: paper
       ? `Prova di ${subject} nel formato ufficiale: ${paper.questions} domande in ${paper.minutes} minuti.`
       : `Esercitazione mirata su ${subject}, con ${size} domande pescate a caso dalla banca dati.`,
-    orderedIds: rows.map((r) => r.id),
+    orderedIds,
     timeLimitMinutes: paper?.minutes ?? minutesFor(track, size),
   });
 

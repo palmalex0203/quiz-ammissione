@@ -4,7 +4,9 @@ import { DEFAULT_TRACK, type TrackId } from "@/lib/tracks";
 // salvato su Question.topic, l'etichetta resta modificabile senza toccare il
 // database. I codici sono unici fra tutti i percorsi, così una domanda porta con sé
 // anche il percorso a cui appartiene.
-export type Topic = { code: string; label: string };
+// cfu: il peso dell'argomento nel programma ufficiale, dove esiste. Serve a comporre
+// una prova con la stessa distribuzione di quella vera invece che a caso.
+export type Topic = { code: string; label: string; cfu?: number };
 
 // Professioni Sanitarie: macroargomenti ripresi dalle esercitazioni già create
 // dall'insegnante.
@@ -52,42 +54,38 @@ const PROFESSIONI_SANITARIE: Record<string, Topic[]> = {
   ],
 };
 
-// Semestre filtro: aree del syllabus MUR delle tre prove nazionali. Sono i titoli
-// delle macroaree, non l'elenco puntuale del programma: vanno riviste sul syllabus
-// ufficiale dell'anno prima di classificare le domande.
+// Semestre filtro: le unità didattiche del syllabus MUR 2026/2027, pubblicato il
+// 19 giugno 2026. Sono sette per materia, non una tassonomia nostra: titoli e pesi
+// vengono dai documenti ufficiali, che stanno in content/semestre-filtro/syllabus/.
+// I CFU di ogni materia sommano a 6, ed è con quelli che si decide quante domande
+// di ciascun argomento entrano in una prova da 31.
 const SEMESTRE_FILTRO: Record<string, Topic[]> = {
   "Chimica e propedeutica biochimica": [
-    { code: "SF-CHI-01", label: "Struttura della materia e proprietà periodiche" },
-    { code: "SF-CHI-02", label: "Legami chimici e forze intermolecolari" },
-    { code: "SF-CHI-03", label: "Reazioni chimiche e calcoli stechiometrici" },
-    { code: "SF-CHI-04", label: "Soluzioni e proprietà colligative" },
-    { code: "SF-CHI-05", label: "Termodinamica, cinetica ed equilibrio chimico" },
-    { code: "SF-CHI-06", label: "Acidi, basi, pH e sistemi tampone" },
-    { code: "SF-CHI-07", label: "Ossidoriduzioni ed elettrochimica" },
-    { code: "SF-CHI-08", label: "Il carbonio: idrocarburi e gruppi funzionali" },
-    { code: "SF-CHI-09", label: "Biomolecole e reazioni negli organismi viventi" },
+    { code: "SF-CHI-01", label: "Struttura dell'atomo, legami chimici, stati della materia e termodinamica", cfu: 1 },
+    { code: "SF-CHI-02", label: "Miscele, soluzioni e proprietà colligative", cfu: 1 },
+    { code: "SF-CHI-03", label: "Reazioni negli organismi viventi: cinetica ed equilibrio chimico", cfu: 0.5 },
+    { code: "SF-CHI-04", label: "Acidi, basi, sali, pH e tamponi; ossidoriduzioni ed elettrochimica", cfu: 1 },
+    { code: "SF-CHI-05", label: "Il carbonio: idrocarburi, alogenuri alchilici e composti aromatici", cfu: 0.5 },
+    { code: "SF-CHI-06", label: "Gruppi funzionali e isomerie", cfu: 1 },
+    { code: "SF-CHI-07", label: "Amminoacidi, proteine, carboidrati, lipidi e acidi nucleici", cfu: 1 },
   ],
   Fisica: [
-    { code: "SF-FIS-01", label: "Grandezze fisiche, unità di misura e misure" },
-    { code: "SF-FIS-02", label: "Cinematica" },
-    { code: "SF-FIS-03", label: "Dinamica e statica" },
-    { code: "SF-FIS-04", label: "Lavoro, energia e quantità di moto" },
-    { code: "SF-FIS-05", label: "Fluidi" },
-    { code: "SF-FIS-06", label: "Termodinamica" },
-    { code: "SF-FIS-07", label: "Onde, suono e ottica" },
-    { code: "SF-FIS-08", label: "Elettricità e magnetismo" },
-    { code: "SF-FIS-09", label: "Radiazioni e applicazioni biomediche" },
+    { code: "SF-FIS-01", label: "Introduzione ai metodi della fisica", cfu: 0.2 },
+    { code: "SF-FIS-02", label: "Meccanica", cfu: 1.4 },
+    { code: "SF-FIS-03", label: "Meccanica dei fluidi", cfu: 1.2 },
+    { code: "SF-FIS-04", label: "Onde meccaniche", cfu: 0.4 },
+    { code: "SF-FIS-05", label: "Termodinamica", cfu: 1 },
+    { code: "SF-FIS-06", label: "Elettricità e magnetismo", cfu: 1.2 },
+    { code: "SF-FIS-07", label: "Fisica delle radiazioni", cfu: 0.6 },
   ],
   Biologia: [
-    { code: "SF-BIO-01", label: "Le basi dell'organizzazione biologica e molecolare della vita" },
-    { code: "SF-BIO-02", label: "La cellula: membrane, organuli e trasporti" },
-    { code: "SF-BIO-03", label: "Bioenergetica e metabolismo cellulare" },
-    { code: "SF-BIO-04", label: "Il flusso dell'informazione: DNA, RNA e sintesi proteica" },
-    { code: "SF-BIO-05", label: "Divisione cellulare, riproduzione e sviluppo" },
-    { code: "SF-BIO-06", label: "Trasmissione e controllo dei caratteri: genetica ed epigenetica" },
-    { code: "SF-BIO-07", label: "Dai tessuti all'organismo: omeostasi e regolazione" },
-    { code: "SF-BIO-08", label: "Microrganismi, difese dell'organismo e ambiente" },
-    { code: "SF-BIO-09", label: "Evoluzione e biodiversità" },
+    { code: "SF-BIO-01", label: "Le basi dell'organizzazione biologica e molecolare della vita", cfu: 0.5 },
+    { code: "SF-BIO-02", label: "Trasmissione e controllo dell'informazione genetica ed epigenetica", cfu: 0.5 },
+    { code: "SF-BIO-03", label: "Il flusso dell'informazione", cfu: 1 },
+    { code: "SF-BIO-04", label: "Trasmissione e controllo dei caratteri selvatici e mutati", cfu: 0.75 },
+    { code: "SF-BIO-05", label: "Le strutture cellulari: biogenesi, morfologia e funzioni", cfu: 1.75 },
+    { code: "SF-BIO-06", label: "La cellula e l'ambiente: segnalazione e trasduzione del segnale", cfu: 0.75 },
+    { code: "SF-BIO-07", label: "Il controllo della proliferazione e della sopravvivenza cellulare", cfu: 0.75 },
   ],
 };
 
@@ -130,3 +128,37 @@ export const TOPIC_PRACTICE_SIZE = 15;
 // Sotto questa soglia un argomento non viene proposto: troppo poche domande per
 // un'esercitazione sensata (e si ripeterebbero sempre le stesse).
 export const MIN_TOPIC_QUESTIONS = 5;
+
+/**
+ * Come si spartiscono `totale` domande fra gli argomenti di una materia, in
+ * proporzione al peso che hanno nel programma ufficiale.
+ *
+ * Serve perché una prova di Fisica da 31 domande non è un sorteggio uniforme: la
+ * meccanica dei fluidi vale 1,2 CFU su 6, cioè un quinto dell'esame, e in una prova
+ * vera ci sono circa sei domande di fluidi. Senza pesi uscirebbero quattro domande
+ * di "introduzione ai metodi", che nel programma vale 0,2 CFU.
+ *
+ * I resti si assegnano col metodo del resto più alto, così la somma torna esatta.
+ * Se la materia non ha pesi (è il caso di Professioni Sanitarie) torna una mappa
+ * vuota e chi chiama pesca come prima.
+ */
+export function topicQuotas(trackId: TrackId, subject: string, totale: number): Map<string, number> {
+  const pesati = topicsOf(trackId, subject).filter((t) => typeof t.cfu === "number" && t.cfu > 0);
+  if (pesati.length === 0 || totale <= 0) return new Map();
+
+  const sommaCfu = pesati.reduce((s, t) => s + (t.cfu as number), 0);
+  const parti = pesati.map((t) => {
+    const esatto = (totale * (t.cfu as number)) / sommaCfu;
+    const intero = Math.floor(esatto);
+    return { code: t.code, intero, resto: esatto - intero };
+  });
+
+  let avanzo = totale - parti.reduce((s, p) => s + p.intero, 0);
+  for (const p of [...parti].sort((a, b) => b.resto - a.resto)) {
+    if (avanzo <= 0) break;
+    p.intero += 1;
+    avanzo -= 1;
+  }
+
+  return new Map(parti.map((p) => [p.code, p.intero]));
+}

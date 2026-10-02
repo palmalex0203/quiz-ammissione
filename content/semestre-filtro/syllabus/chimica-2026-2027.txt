@@ -1,0 +1,249 @@
+Warning: TT: undefined function: 32
+Warning: TT: undefined function: 32
+Warning: TT: undefined function: 32
+INSEGNAMENTO DI CHIMICA E PROPEDEUTICA BIOCHIMICA
+Lingua di Insegnamento: Italiano
+Prerequisiti: sono richieste conoscenze di matema/ca, fisica, chimica e biologia che rispondono alla
+preparazione promossa dalle is/tuzioni scolas/che che organizzano a7vità educa/ve e dida7che
+coeren/ con le Indicazioni nazionali per i licei e con le Linee guida per gli is/tu/ tecnici e per gli
+is/tu/ professionali.
+Obiettivi Generali del Corso Integrato
+Fornire le basi per la comprensione delle leggi fondamentali che governano la materia e le sue
+trasformazioni con par/colare a?enzione ai fenomeni biologici a livello atomico e molecolare,
+in relazione alle applicazioni biomediche.
+Obiettivi specifici del Corso Integrato
+Conoscenza e comprensione
+Al termine del corso lo studente sarà in grado di:
+- descrivere la stru?ura della materia e le sue trasformazioni, interpretando i fenomeni chimici
+e molecolari di interesse biologico, con par/colare riferimento agli equilibri acido-base, ai
+sistemi tamponi, alle leggi dei gas, ai fenomeni osmo/ci, alle proprietà colliga/ve delle soluzioni
+e alle reazioni di ossidoriduzione;
+- riconoscere le principali classi di compos/ organici e i rela/vi diversi gruppi funzionali,
+descrivendone le proprietà chimico-fisiche e la rea7vità in relazione alla stru?ura e alla
+funzione delle macromolecole biologiche;
+- descrivere la stru?ura e la funzione delle principali biomolecole (carboidra/, lipidi, proteine
+e acidi nucleici).
+- comprendere come le cara?eris/che stru?urali delle biomolecole ne determinino le
+proprietà e le funzioni nei sistemi biologici.
+Capacità di applicare conoscenza e comprensione
+Al termine del corso lo studente sarà in grado di:
+- iden/ficare i principali /pi di legame chimico e bilanciare semplici reazioni chimiche.
+- eseguire calcoli rela/vi a moli, concentrazioni, diluizioni, pH, osmolarità e proprietà delle
+soluzioni.
+- applicare i principi della termodinamica alla comprensione dei processi chimici e biologici;
+- interpretare fenomeni biologici quali la respirazione, il mantenimento dell’equilibrio
+osmo/co, gli equilibri acido-base dei fluidi biologici
+- rappresentare e riconoscere le stru?ure dei principali compos/ organici di interesse
+biologico e delle biomolecole
+- correlare la stru?ura dei gruppi funzionali organici alla rea7vità chimica e ai principali
+processi biochimici.
+Autonomia di giudizio
+Al termine del corso lo studente sarà in grado di:
+
+
+1. interpretare cri/camente da/ e informazioni di chimica e biochimica
+2. u/lizzare le conoscenze acquisite per interpretare da/ sperimentali e affrontare in modo
+cri/co semplici problemi di natura chimica.
+3. U/lizzare le conoscenze acquisite per analizzare problemi di interesse biologico e
+biomedico.
+Abilità comunica6ve:
+Al termine del corso lo studente sarà in grado di:
+1. U/lizzare corre?amente il linguaggio scien/fico della chimica
+2. Descrivere e discutere fenomeni chimici e biologici in forma orale e scri?a in modo chiaro
+e appropriato
+Capacità di apprendimento
+Al termine del corso lo studente sarà in grado di:
+1. Integrare autonomamente le conoscenze acquisite con contenu/ più avanza/ delle
+discipline biochimiche e biomediche.
+2. Consultare e u/lizzare in modo cri/co tes/ e fon/ scien/fiche per l’approfondimento
+degli argomen/ tra?a/.
+Obiettivi specifici di apprendimento
+Obiettivi formativi specifici descritti per unità didattiche:
+Unità didattica 1. La struttura dell’atomo, i legami chimici, stati di aggregazione della materia e
+termodinamica dei sistemi aperti. (impegno didattico valutato in CFU = 1)
+Descrivere e interpretare:
+- La cos/tuzione della materia. Fondamen/ della teoria atomica. Stru?ura dell’atomo:
+protoni, neutroni e ele?roni. Numero atomico e numero di massa. Gli isotopi. Cenni alle
+proprietà magne/che del nucleo come base per lo strumento diagnos/co della Risonanza
+Magne/ca Nucleare.
+- I numeri quan/ci, gli orbitali, il principio di esclusione di Pauli. Regola di Hund. La
+configurazione ele?ronica con par/colare riferimento agli elemen/ principalmente
+presen/ negli organismi viven/.
+- Il sistema periodico degli elemen/. Proprietà periodiche: configurazione ele?ronica
+esterna, volume atomico, potenziale di ionizzazione, affinità ele?ronica,
+ele?ronega/vità. La regola dell’o?e?o.
+- Molecole, ioni e ioni poliatomici. Massa molecolare. Definizione di mole e numero di
+Avogadro. Unità di massa atomica e massa molecolare.
+- Il legame chimico. Orbitale di legame. Legame covalente: omopolare, eteropolare,
+legame di coordinazione. Cenni sul legame metallico. Il legame ionico. Ibridazione degli
+orbitali: sp, sp
+2
+, sp
+3
+. Orbitali molecolari sigma e pi-greco. Distanza e energia di legame.
+Angolo di legame e geometria molecolare. Esempi di molecole polari e apolari
+biologicamente rilevan/.
+- Interazioni deboli (legame idrogeno e forze di van der Waals) e interazioni idrofobiche.
+
+
+- Numero di ossidazione. Esempi di formule di stru?ura e nomenclatura di compos/ binari
+e ternari biologicamente rilevan/ con atomi di carbonio, ossigeno, azoto, zolfo e fosforo
+(ossidi, idrossidi, perossidi, acidi, basi, e sali).
+- Cenni sullo stato solido: solidi ionici, molecolari, covalen/ e metallici
+- Lo stato aeriforme. Temperatura assoluta. Leggi di Boyle, Charles e Gay Lussac.
+Applicazione della legge dei gas alla respirazione. Equazione di stato dei gas perfe7.
+Cenni sulla teoria cine/ca dei gas. La legge di Maxwell-Boltzmann.
+- Lo stato liquido: ebollizione, calore di evaporazione. Tensione superficiale. L’equilibrio
+gas-liquido: la pressione di vapore. Confronto di diagramma di fase di acqua e anidride
+carbonica. Rilevanza dei cambiamen/ di fase di interesse biomedico: l’evaporazione del
+sudore e la termoregolazione.
+- Principi di termodinamica e bioenerge/ca. Definizioni delle funzioni di stato. Entalpia.
+Trasformazioni esotermiche ed endotermiche (cambiamen/ di stato). Entropia. Energia
+libera di Gibbs. Trasformazioni esoergoniche ed endoergoniche. Variazione di energia
+libera come criterio di spontaneità ed equilibrio nei sistemi aper/.
+Unità didattica 2. Miscele, soluzioni e le proprietà colligative delle soluzioni (impegno didattico
+valutato in CFU=1)
+Descrivere e interpretare:
+- Miscele omogenee ed eterogenee di interesse biologico: soluzioni, sospensioni, colloidi e
+aerosol.
+- Soluzioni gassose, liquide e solide.
+- L’acqua come solvente polare. Solubilità: solu/ ionici e non ionici. Proprietà degli
+ele?roli/. Gli ele?roli/ nei fluidi biologici. Solubilità dei gas nei liquidi: la legge di Henry.
+- Unità di misura della concentrazione delle soluzioni: percentuali peso/peso,
+peso/volume, volume/volume. Molarità, molalità, frazione molare. Cenni sulle soluzioni
+non ideali: il comportamento dei solu/ nello spazio intracellulare e coefficiente di
+a7vità. Il conce?o di equivalente in ambito biomedico.
+- La concentrazione nelle miscele di gas: la legge di Dalton. L’aria e la sua composizione,
+aria inspirata e aria espirata.
+- Definizione di proprietà colliga/ve. Interazioni tra solvente e soluto. La legge di Raoult.
+Abbassamento della pressione di vapore. Innalzamento della temperatura di ebollizione.
+Abbassamento della temperatura di congelamento. Pressione osmo/ca e passaggio di
+solu/ a?raverso le membrane.
+- Soluzioni ele?roli/che e fa?ore corre7vo di van't Hoff. Diffusione, osmosi, osmolarità e
+osmolalità. Confronto tra le proprietà osmo/che delle soluzioni.
+- Pressione osmo/ca dei liquidi intracellulari ed extracellulari. Soluzioni isotoniche,
+ipertoniche e ipotoniche. Soluzione fisiologica e glucosata. Esempi di implicazioni
+fisiopatologiche del disequilibrio osmo/co (emolisi e edema).
+Unità didattica 3. Le reazioni chimiche negli organismi viventi: caratteristiche generali, cinetica
+e equilibrio chimico. (impegno didattico valutato in CFU=0,5)
+Descrivere e interpretare:
+- Definizioni delle reazioni chimiche. Conservazione di massa, energia, carica ele?rica e
+bilanciamento delle reazioni chimiche.
+
+
+- Definizione di cine/ca di reazione. Reazioni a più stadi. Fa?ori che influenzano la velocità
+di una reazione. Ordine di reazione e molecolarità. La legge di Arrhenius e la teoria degli
+ur/ efficaci. L’energia di a7vazione. La teoria dello stato di transizione.
+- Definizione di catalizzatore e cenni sui catalizzatori biologici, gli enzimi.
+- L’equilibrio chimico. Reazioni reversibili ed irreversibili. Costante di equilibrio e legge
+d'azione di massa. Variazione di energia libera e equilibrio di reazione.
+- Differenza tra equilibrio chimico e stato stazionario. Principio dell'equilibrio mobile. Il
+quoziente di reazione. Effe?o della temperatura sulla costante di equilibrio. Equilibri
+mul/pli. Esempi di equilibrio eterogeneo solido-liquido (precipitazione di ura/). Prodo?o
+di solubilità, effe?o dello ione in comune. Esempi di rilevanza biomedica (calcoli renali).
+Unità didattica 4. Acidi, basi, sali, pH, soluzioni tampone; reazioni di ossido-riduzione ed
+elettrochimica (impegno didattico valutato in CFU= 1)
+Descrivere e interpretare:
+- La teoria di Arrhenius. La teoria di Bronsted e Lowry. Cenni sulla teoria di Lewis. La
+reazione di auto-protolisi dell'acqua. La Kw. Il conce?o di pH e pOH. Costan/ di
+dissociazione, Ka e Kb. Acidi e basi for/, acidi e basi deboli, pKa e pKb. Indicatori di pH. Il
+pH di una soluzione di acido/base forte o di acido/base debole. Acidi polipro/ci e basi
+polipro/che. Reazioni acido-base. I sali, comportamento acido o basico dei sali in acqua.
+Solubilità e pH, esempi di interesse biomedico: ossalato di calcio, fosfato di calcio e urato
+di sodio.
+- Soluzioni tampone, esempi di tamponi di acidi deboli e basi deboli. L’equazione di
+Henderson e Hasselbalch. Efficienza di un sistema tampone.
+- L’equilibrio acido-base nei fluidi biologici: il pH del sangue e i tamponi del sangue. Il
+tampone acido carbonico(CO2)/bicarbonato, il tampone diidrogeno fosfato/
+idrogenofosfato, le proteine come sistemi tampone. L’importanza e la funzione dei
+tamponi in ambito biomedico (acidosi e alcalosi).
+- Le reazioni di ossido-riduzione. Cella galvanica e definizione di anodo e catodo. Le
+semireazioni e i potenziali redox standard. L’equazione di Nernst. Relazione tra variazione
+di energia libera di Gibbs e differenza di potenziale. Reazioni spontanee e lavoro chimico.
+Esempi di reazioni di ossido-riduzione in ambito biologico. Ossigeno come acce?ore di
+ele?roni: bilancio termodinamico della respirazione cellulare. Le reazioni di Fenton e
+Haber-Weiss come esempio di reazioni di ossido-riduzione non enzima/che dell’ossigeno
+in presenza dello ione Ferro per la formazione del radicale idrossilico.
+Unità didattica 5. Proprietà del carbonio e reattività dei composti organici, idrocarburi,
+alogenuri alchilici, idrocarburi aromatici e derivati (impegno didattico valutato in CFU= 0.5)
+Descrivere e interpretare:
+- Proprietà e ibridazione del carbonio. Rappresentazione dei compos/ carboniosi.
+Idrocarburi saturi ed insaturi, ciclici ed eterociclici. Regole generali di nomenclatura
+IUPAC.
+- Stereochimica: diasteroisomeri, enan/omeri, epimeri e miscele racemiche. Cenni sulle
+regole di priorità e convenzione R/S. Potere o7co rotatorio specifico. Convenzione
+destrogira/levogira. Convenzione di Fischer.
+- Ro?ura omoli/ca del legame chimico e reazioni radicaliche.
+
+
+- Ro?ura eteroli/ca del legame chimico. Carboca/oni e carboanioni e loro stabilità. Effe?o
+indu7vo: ele?ron donatore, ele?ron a?ra?ore. Delocalizzazione degli ele?roni.
+Nucleofili ed ele?rofili biologicamente rilevan/. Reazioni di sos/tuzione nucleofila con
+meccanismo SN2 e SN1 e reazioni di eliminazione.
+- Alcani e cicloalcani: stru?ura, nomenclatura, proprietà chimico-fisiche e rilevanza
+biomedica. Tensione di legame nei cicloalcani. Reazioni: ossidazione.
+- Alcheni: stru?ura, nomenclatura, proprietà chimico-fisiche e rilevanza biomedica.
+Delocalizzazione ele?ronica e dieni coniuga/. Reazioni: addizione ele?rofila.
+- Idrocarburi aroma/ci: stru?ura, nomenclatura, proprietà chimico-fisiche e rilevanza
+biomedica. Il benzene e compos/ aroma/ci eterociclici (pirimidine) e policiclici (purine).
+Regola di Huckel. Cenni sulle reazioni dei compos/ deriva/ del benzene: sos/tuzione
+ele?rofila aroma/ca. Effe?o a7vante e disa7vante dei sos/tuen/. Tossicità dei compos/
+aroma/ci.
+Unità didattica 6. I gruppi funzionali e isomerie: alcoli, fenoli, eteri, tioli e tioeteri; aldeidi e
+chetoni; acidi carbossilici e derivati, ammine e ammidi (impegno didattico valutato in CFU= 1)
+Descrivere e interpretare:
+- Alcoli e /oli: stru?ura, nomenclatura, proprietà chimico-fisiche e rilevanza biologica.
+Reazioni: disidratazione, ossidazione, sos/tuzione nucleofila. Etanolo. Fenolo e deriva/:
+acidità del fenolo. Esempi di alcoli e /oli di rilevanza biologica. Eteri e /oeteri. Epossidi.
+- Ammine: stru?ura, nomenclatura, proprietà chimico-fisiche e rilevanza biomedica.
+Basicità e nucleofilicità. Reazioni: alchilazione, formazione di sali. Nitrosammine. Colina e
+altri esempi di ammine di rilevanza biologica.
+- Aldeidi e Chetoni: stru?ura, nomenclatura, proprietà chimico-fisiche e rilevanza
+biologica. Reazioni: ossidazione, riduzione, addizione nucleofila, condensazione aldolica.
+Emiacetali ed emichetali, acetali e chetali, immine o basi di Schiff. Proprietà dell’idrogeno
+in alfa al carbonile. Tautomeria cheto-enolica e sua importanza biologica (urato, citosina
+e fosfoenolpiruvato). Chinoni ed idrochinoni: ubichinone e suo ruolo come trasportatore
+di ele?roni.
+- Acidi carbossilici e loro deriva/ di interesse biologico (anidridi, esteri e /oesteri, ammidi,
+acilfosfa/): stru?ura, nomenclatura, proprietà chimico-fisiche, acidità. Reazioni con
+esempi biologici: salificazione, decarbossilazione, sos/tuzione nucleofila acilica;
+esterificazione di Fischer; idrolisi degli esteri e transesterificazione; condensazione di
+Claisen di esteri e /oesteri. Formazione dei la?oni. Decarbossilazione dei chetoacidi.
+Idrolisi delle ammidi
+Unità didattica 7. Amminoacidi e proteine, carboidrati, lipidi, nucleotidi, polinucleotidi e acidi
+nucleici (impegno didattico valutato in CFU= 1)
+Descrivere e interpretare:
+- Amminoacidi: Stru?ura, nomenclatura e nomi abbrevia/. Classificazione in base alla
+catena laterale e alle sue proprietà. Iden/ficazione e cara?eris/che delle catene laterali
+degli amminoacidi proteici. Stereochimica degli amminoacidi e rappresentazione
+secondo la convenzione di Fischer. Proprietà acido-base degli amminoacidi e punto
+isoele?rico. Amminoacidi essenziali e non essenziali.
+- ll legame pep/dico e la sua formazione dalla reazione di un amminoacido esterificato con
+il gruppo amminico di un altro amminoacido. Cara?eris/che del legame pep/dico.
+
+
+Definizione dei livelli stru?urali delle proteine: stru?ura primaria, secondaria, terziaria e
+quaternaria. Interazioni deboli e pon/ disolfuro.
+- Carboidra/: stru?ura, nomenclatura e stereochimica dei carboidra/. Monosaccaridi:
+isomeri, epimeri, anomeri e tautomeri. Ciclizzazione dei monosaccaridi. Mutarotazione.
+Reazioni dei monosaccaridi: ossidazione, riduzione, reazione di Maillard e prodo7 di
+Amadori, condensazione. Il legame glicosidico. Disaccaridi. Oligosaccaridi e loro deriva/.
+Amminozuccheri. Polisaccaridi: omopolisaccaridi (amido, cellulosa, glicogeno) ed
+eteropolisaccaridi (glicosamminoglicani).
+- Acidi grassi saturi e insaturi: stru?ura, nomenclatura, proprietà fisiche e reazioni. I
+trigliceridi e le loro funzioni: oli e grassi. Lipidi complessi: glicerofosfolipidi, sfingolipidi,
+glicolipidi. Colesterolo e cenni sui suoi deriva/ di interesse biologico (ormoni steroidei,
+acidi biliari e vitamina D)
+- Basi azotate, nucleosidi e nucleo/di: stru?ura, nomenclatura. Importanza biologica
+dell’ATP. I dinucleo/di nelle reazioni di ossido-riduzione biologiche (NAD
++
+/NADH,
+FAD/FADH2).
+- Il legame fosfodiestere e la stru?ura degli acidi nucleici: DNA e RNA.
+- Modificazioni non enzima/che delle macromolecole biologiche. Deaminazione della
+citosina. Principali reazioni del radicale idrossilico con lipidi, proteine e DNA. A7vità an/-
+ossidante non enzima/ca dei /oli (gluta/one) e delle molecole contenen/ doppi legami
+coniuga/ (tocoferolo, carotenoidi).
+
+
+
