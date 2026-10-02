@@ -1,0 +1,188 @@
+[
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "Un retrovirus si distingue dagli altri virus a RNA perché:",
+    "options": [
+      { "text": "Porta con sé una trascrittasi inversa che copia il suo genoma a RNA in DNA, poi integrato nel genoma della cellula ospite da una integrasi", "isCorrect": true },
+      { "text": "Replica il proprio RNA direttamente nel citoplasma senza passare dal DNA", "isCorrect": false },
+      { "text": "Ha un genoma a DNA a doppio filamento che entra nel nucleo", "isCorrect": false },
+      { "text": "Non possiede capside e si trasmette come RNA nudo", "isCorrect": false },
+      { "text": "Uccide sempre la cellula ospite entro poche ore dall'ingresso", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "Nel ciclo lisogenico di un batteriofago:",
+    "options": [
+      { "text": "Il genoma virale si integra nel cromosoma batterico e viene replicato con esso come profago, finché un segnale non induce il passaggio al ciclo litico", "isCorrect": true },
+      { "text": "Il virus si replica subito e lisa la cellula entro pochi minuti", "isCorrect": false },
+      { "text": "Il genoma virale resta nel citoplasma e viene degradato dalle nucleasi batteriche", "isCorrect": false },
+      { "text": "Il batterio fagocita il virus e lo digerisce nei lisosomi", "isCorrect": false },
+      { "text": "Il virus perde il capside e si trasforma in un plasmide permanente", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "La colorazione di Gram distingue due gruppi di batteri perché:",
+    "options": [
+      { "text": "I Gram positivi hanno uno spesso strato di peptidoglicano che trattiene il colorante, i Gram negativi uno strato sottile più una membrana esterna e si decolorano", "isCorrect": true },
+      { "text": "I Gram negativi hanno uno strato di peptidoglicano più spesso dei Gram positivi", "isCorrect": false },
+      { "text": "Solo i Gram positivi possiedono una membrana esterna ricca di lipopolisaccaride", "isCorrect": false },
+      { "text": "La differenza sta nella presenza o assenza del nucleo", "isCorrect": false },
+      { "text": "I Gram negativi sono privi di parete cellulare", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "Trasformazione, coniugazione e trasduzione sono i tre modi del trasferimento genico orizzontale nei batteri, e si distinguono perché:",
+    "options": [
+      { "text": "Nella trasformazione il DNA nudo viene captato dall'ambiente, nella coniugazione passa per contatto diretto tramite pilo, nella trasduzione è un batteriofago a trasportarlo", "isCorrect": true },
+      { "text": "Nella trasformazione il DNA è portato da un fago, nella trasduzione viene captato dall'ambiente", "isCorrect": false },
+      { "text": "Tutte e tre richiedono il contatto diretto fra due cellule batteriche", "isCorrect": false },
+      { "text": "Avvengono tutte durante la divisione cellulare, da madre a figlia", "isCorrect": false },
+      { "text": "Riguardano esclusivamente il DNA plasmidico e mai quello cromosomico", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "A sostegno dell'origine endosimbiontica dei mitocondri si porta il fatto che:",
+    "options": [
+      { "text": "Hanno una doppia membrana, un genoma circolare proprio, ribosomi di tipo procariotico e si dividono per scissione indipendentemente dalla cellula", "isCorrect": true },
+      { "text": "Sono delimitati da una sola membrana, come i perossisomi", "isCorrect": false },
+      { "text": "Il loro genoma è lineare e associato a istoni, come quello nucleare", "isCorrect": false },
+      { "text": "Vengono costruiti ex novo a ogni ciclo cellulare a partire dal reticolo", "isCorrect": false },
+      { "text": "I loro ribosomi sono identici a quelli del citosol eucariotico", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "Nella struttura di una proteina, il livello terziario è determinato:",
+    "options": [
+      { "text": "Dal ripiegamento complessivo di una singola catena, retto soprattutto da interazioni fra le catene laterali, in particolare dal nucleo idrofobico e dai ponti disolfuro", "isCorrect": true },
+      { "text": "Dalla sequenza degli amminoacidi lungo la catena", "isCorrect": false },
+      { "text": "Dall'associazione di più catene polipeptidiche distinte", "isCorrect": false },
+      { "text": "Esclusivamente dai legami a idrogeno dello scheletro, come nell'alfa elica", "isCorrect": false },
+      { "text": "Dalla presenza di gruppi prostetici non proteici", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "Chinasi e fosfatasi formano una coppia di enzimi opposti perché:",
+    "options": [
+      { "text": "Le chinasi trasferiscono un gruppo fosfato dall'ATP al substrato, le fosfatasi lo rimuovono, e l'equilibrio fra le due decide lo stato di attività della proteina", "isCorrect": true },
+      { "text": "Le chinasi rimuovono il fosfato e le fosfatasi lo aggiungono", "isCorrect": false },
+      { "text": "Le chinasi agiscono sulle proteine e le fosfatasi esclusivamente sui lipidi", "isCorrect": false },
+      { "text": "Le chinasi aggiungono gruppi acetile e le fosfatasi gruppi fosfato", "isCorrect": false },
+      { "text": "Entrambe idrolizzano legami peptidici, in posizioni diverse della catena", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "Un enzima accelera una reazione perché:",
+    "options": [
+      { "text": "Abbassa l'energia di attivazione stabilizzando lo stato di transizione, senza modificare l'equilibrio né il bilancio energetico complessivo", "isCorrect": true },
+      { "text": "Fornisce alla reazione l'energia che le manca per avvenire", "isCorrect": false },
+      { "text": "Sposta l'equilibrio della reazione verso i prodotti", "isCorrect": false },
+      { "text": "Rende spontanea una reazione che altrimenti non lo sarebbe", "isCorrect": false },
+      { "text": "Viene consumato stechiometricamente insieme al substrato", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "La doppia elica descritta da Watson e Crick è tenuta insieme da:",
+    "options": [
+      { "text": "Legami a idrogeno fra basi complementari, due fra A e T e tre fra G e C, più l'impilamento fra basi adiacenti; i due filamenti sono antiparalleli", "isCorrect": true },
+      { "text": "Legami fosfodiesterici fra le basi dei due filamenti opposti", "isCorrect": false },
+      { "text": "Tre legami a idrogeno fra A e T e due fra G e C", "isCorrect": false },
+      { "text": "Ponti disolfuro fra gli zuccheri dei due filamenti", "isCorrect": false },
+      { "text": "Legami ionici fra i gruppi fosfato dei due filamenti paralleli", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "Fra le modificazioni post-traduzionali, la glicosilazione si distingue perché:",
+    "options": [
+      { "text": "Aggiunge catene oligosaccaridiche, soprattutto a proteine della via secretoria, influenzandone ripiegamento, stabilità e riconoscimento", "isCorrect": true },
+      { "text": "Aggiunge gruppi fosfato ai residui di serina, treonina e tirosina", "isCorrect": false },
+      { "text": "Rimuove gruppi acetile dalle lisine degli istoni", "isCorrect": false },
+      { "text": "Marca la proteina per la degradazione proteasomica", "isCorrect": false },
+      { "text": "Taglia la catena polipeptidica in frammenti attivi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "Anabolismo e catabolismo si distinguono perché:",
+    "options": [
+      { "text": "L'anabolismo costruisce molecole complesse consumando energia, spesso per condensazione, il catabolismo le demolisce liberandola, spesso per idrolisi", "isCorrect": true },
+      { "text": "L'anabolismo demolisce e il catabolismo costruisce", "isCorrect": false },
+      { "text": "Entrambi liberano energia, ma in compartimenti diversi", "isCorrect": false },
+      { "text": "L'anabolismo avviene solo nei procarioti e il catabolismo solo negli eucarioti", "isCorrect": false },
+      { "text": "Nessuno dei due richiede enzimi, essendo processi spontanei", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "Riguardo alle differenze fra RNA e DNA, quale affermazione NON è corretta?",
+    "options": [
+      { "text": "L'RNA è sempre a singolo filamento e non assume mai strutture tridimensionali ripiegate", "isCorrect": true },
+      { "text": "Lo zucchero dell'RNA è il ribosio, che porta un ossidrile in posizione 2'", "isCorrect": false },
+      { "text": "Nell'RNA l'uracile sostituisce la timina", "isCorrect": false },
+      { "text": "Alcuni RNA hanno attività catalitica propria", "isCorrect": false },
+      { "text": "Gran parte degli RNA cellulari non codifica proteine", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "Il capside di un virus svolge la funzione di:",
+    "options": [
+      { "text": "Proteggere l'acido nucleico e mediare il riconoscimento e l'ingresso nella cellula ospite", "isCorrect": true },
+      { "text": "Fornire al virus gli enzimi per sintetizzare le proprie proteine", "isCorrect": false },
+      { "text": "Produrre l'ATP necessario alla replicazione virale", "isCorrect": false },
+      { "text": "Replicare autonomamente il genoma virale all'esterno della cellula", "isCorrect": false },
+      { "text": "Delimitare il nucleo del virus, separandolo dal citoplasma virale", "isCorrect": false }
+    ]
+  },
+
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "L'enzima che copia un genoma a RNA in DNA, caratteristico dei retrovirus, è la trascrittasi ……",
+    "options": [{ "text": "inversa", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "Il genoma di un batteriofago integrato nel cromosoma batterico prende il nome di ……",
+    "options": [{ "text": "profago", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "Il polimero che costituisce la parete dei batteri, spesso nei Gram positivi, è il ……",
+    "options": [{ "text": "peptidoglicano", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "Le appendici che i batteri usano per il contatto durante la coniugazione si chiamano ……",
+    "options": [{ "text": "pili", "isCorrect": true }, { "text": "pilo", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "Le molecole di DNA circolare extracromosomico dei batteri si chiamano ……",
+    "options": [{ "text": "plasmidi", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "Il legame che unisce due amminoacidi consecutivi in una proteina è il legame ……",
+    "options": [{ "text": "peptidico", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "La regione dell'enzima in cui si lega il substrato e avviene la catalisi è il sito ……",
+    "options": [{ "text": "attivo", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "L'energia che un enzima abbassa per accelerare la reazione è l'energia di ……",
+    "options": [{ "text": "attivazione", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "Lo zucchero a cinque atomi di carbonio presente nei nucleotidi del DNA è il ……",
+    "options": [{ "text": "desossiribosio", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "La base azotata che nell'RNA prende il posto della timina è l'……",
+    "options": [{ "text": "uracile", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "Quanti legami a idrogeno uniscono la guanina alla citosina? ……",
+    "options": [{ "text": "3", "isCorrect": true }, { "text": "tre", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "Le molecole di RNA dotate di attività catalitica propria si chiamano ……",
+    "options": [{ "text": "ribozimi", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "La reazione che unisce due monomeri liberando una molecola d'acqua si chiama ……",
+    "options": [{ "text": "condensazione", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "Il dominio della vita che comprende i procarioti adattati ad ambienti estremi, distinto dai batteri, è quello degli ……",
+    "options": [{ "text": "archei", "isCorrect": true }, { "text": "archaea", "isCorrect": true }, { "text": "archeobatteri", "isCorrect": true }] }
+]

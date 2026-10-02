@@ -1,0 +1,227 @@
+[
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "L'inserzione di due nucleotidi all'interno della regione codificante di un gene produce con ogni probabilità:",
+    "options": [
+      { "text": "Uno slittamento del modulo di lettura, con una sequenza amminoacidica completamente diversa a valle e spesso un codone di stop prematuro", "isCorrect": true },
+      { "text": "La sostituzione di un singolo amminoacido, lasciando intatto il resto della proteina", "isCorrect": false },
+      { "text": "Nessun effetto, perché il codice genetico è degenerato", "isCorrect": false },
+      { "text": "L'eliminazione di un intero esone durante lo splicing", "isCorrect": false },
+      { "text": "La duplicazione dell'intero gene nel cromosoma omologo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "Nelle malattie da espansione di triplette, il fenomeno dell'anticipazione consiste nel fatto che:",
+    "options": [
+      { "text": "La ripetizione tende ad allungarsi passando di generazione in generazione, e la malattia compare prima e più grave nei discendenti", "isCorrect": true },
+      { "text": "La malattia si manifesta solo negli individui omozigoti", "isCorrect": false },
+      { "text": "Il gene coinvolto viene silenziato per metilazione in tutti i portatori", "isCorrect": false },
+      { "text": "La mutazione si trasmette esclusivamente per via materna", "isCorrect": false },
+      { "text": "La ripetizione si accorcia a ogni generazione fino a scomparire", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "Fra i due meccanismi che riparano una rottura del DNA a doppio filamento:",
+    "options": [
+      { "text": "La ricombinazione omologa usa il cromatidio fratello come stampo ed è fedele, mentre la saldatura delle estremità non omologhe è disponibile in ogni fase del ciclo ma può perdere o aggiungere nucleotidi", "isCorrect": true },
+      { "text": "La ricombinazione omologa è quella soggetta a errori e la saldatura delle estremità è fedele", "isCorrect": false },
+      { "text": "Entrambi funzionano solo nella fase G1 del ciclo cellulare", "isCorrect": false },
+      { "text": "Entrambi richiedono necessariamente la presenza del cromosoma omologo e non del cromatidio fratello", "isCorrect": false },
+      { "text": "Nessuno dei due esiste negli eucarioti: le rotture a doppio filamento sono sempre letali", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "Il sistema di riparazione degli appaiamenti errati (mismatch repair) deve distinguere il filamento appena sintetizzato da quello parentale perché:",
+    "options": [
+      { "text": "L'errore sta nel filamento nuovo, e correggere invece quello parentale fisserebbe la mutazione in modo permanente", "isCorrect": true },
+      { "text": "Il filamento parentale non può essere tagliato dalle nucleasi", "isCorrect": false },
+      { "text": "Solo il filamento parentale è accessibile alle polimerasi riparative", "isCorrect": false },
+      { "text": "Il filamento nuovo è sempre più lungo di quello parentale", "isCorrect": false },
+      { "text": "La distinzione serve a scegliere fra riparazione e apoptosi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "Dominanza incompleta e codominanza si distinguono perché:",
+    "options": [
+      { "text": "Nella dominanza incompleta l'eterozigote mostra un fenotipo intermedio, nella codominanza entrambi gli alleli si esprimono pienamente e si osservano tutti e due i prodotti", "isCorrect": true },
+      { "text": "Nella codominanza l'eterozigote mostra un fenotipo intermedio", "isCorrect": false },
+      { "text": "La dominanza incompleta riguarda solo i caratteri legati al sesso", "isCorrect": false },
+      { "text": "La codominanza si osserva soltanto negli omozigoti", "isCorrect": false },
+      { "text": "Nella dominanza incompleta uno dei due alleli non viene trascritto", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "Da un incrocio fra un individuo di gruppo AB e uno di gruppo 0 ci si attende una progenie:",
+    "options": [
+      { "text": "Metà di gruppo A e metà di gruppo B", "isCorrect": true },
+      { "text": "Tutta di gruppo AB", "isCorrect": false },
+      { "text": "Metà di gruppo AB e metà di gruppo 0", "isCorrect": false },
+      { "text": "Un quarto A, un quarto B, un quarto AB, un quarto 0", "isCorrect": false },
+      { "text": "Tutta di gruppo 0", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "Un rapporto fenotipico 9:7 nella seconda generazione di un incrocio diibrido indica di norma:",
+    "options": [
+      { "text": "Epistasi fra due geni che agiscono nella stessa via, in cui serve almeno un allele dominante di entrambi perché compaia il fenotipo", "isCorrect": true },
+      { "text": "Associazione completa fra i due geni", "isCorrect": false },
+      { "text": "Dominanza incompleta per entrambi i caratteri", "isCorrect": false },
+      { "text": "Eredità legata al cromosoma X", "isCorrect": false },
+      { "text": "Imprinting genomico del gene materno", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "Due geni distano 12 unità di mappa. Da un reincrocio di prova ci si attende:",
+    "options": [
+      { "text": "Circa il 12% di progenie ricombinante e l'88% parentale", "isCorrect": true },
+      { "text": "Circa il 50% di progenie ricombinante, come per geni su cromosomi diversi", "isCorrect": false },
+      { "text": "Circa l'88% di progenie ricombinante", "isCorrect": false },
+      { "text": "Nessuna progenie ricombinante, perché i geni sono associati", "isCorrect": false },
+      { "text": "Circa il 24% di progenie ricombinante, doppio della distanza di mappa", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "Penetranza ed espressività descrivono fenomeni diversi, e precisamente:",
+    "options": [
+      { "text": "La penetranza è la quota di individui con un dato genotipo che ne mostrano il fenotipo, l'espressività è quanto intensamente il fenotipo si manifesta in chi lo mostra", "isCorrect": true },
+      { "text": "La penetranza è l'intensità del fenotipo, l'espressività la quota di individui che lo mostrano", "isCorrect": false },
+      { "text": "Riguardano entrambe soltanto i caratteri recessivi", "isCorrect": false },
+      { "text": "La penetranza dipende dal genotipo, l'espressività esclusivamente dal caso", "isCorrect": false },
+      { "text": "Sono due nomi della stessa grandezza, usati in contesti diversi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "L'imprinting genomico comporta che:",
+    "options": [
+      { "text": "Per alcuni geni si esprime soltanto la copia ereditata da uno dei due genitori, perché l'altra è silenziata da marcature epigenetiche stabilite nella gametogenesi", "isCorrect": true },
+      { "text": "Un allele mutato venga automaticamente corretto sulla copia sana", "isCorrect": false },
+      { "text": "Entrambi gli alleli vengano espressi al doppio del livello normale", "isCorrect": false },
+      { "text": "Il gene cambi posizione nel genoma a ogni generazione", "isCorrect": false },
+      { "text": "La sequenza del DNA del gene silenziato sia diversa da quella del gene attivo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "La trisomia 21 libera, la forma più frequente, deriva da:",
+    "options": [
+      { "text": "Una non disgiunzione meiotica, nella grande maggioranza dei casi durante la meiosi I materna", "isCorrect": true },
+      { "text": "Una traslocazione robertsoniana ereditata da un genitore portatore", "isCorrect": false },
+      { "text": "Una duplicazione del braccio lungo del cromosoma 21 in un solo omologo", "isCorrect": false },
+      { "text": "Un errore di replicazione del DNA nelle prime divisioni dello zigote", "isCorrect": false },
+      { "text": "Una mutazione puntiforme in un gene del cromosoma 21", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "In un albero genealogico, quale insieme di indizi orienta verso un'eredità recessiva legata al cromosoma X?",
+    "options": [
+      { "text": "Colpiti quasi solo maschi, nessuna trasmissione da padre a figlio maschio, e maschi affetti figli di madri sane portatrici", "isCorrect": true },
+      { "text": "Colpiti in egual misura maschi e femmine, con trasmissione in ogni generazione", "isCorrect": false },
+      { "text": "Trasmissione da padre affetto a tutti i figli maschi e a nessuna figlia", "isCorrect": false },
+      { "text": "Trasmissione da madre affetta a tutta la prole, maschi e femmine", "isCorrect": false },
+      { "text": "Comparsa esclusivamente nelle femmine omozigoti, mai nei maschi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "Una malattia a trasmissione mitocondriale si riconosce in un albero genealogico perché:",
+    "options": [
+      { "text": "Una madre affetta la trasmette a tutti i figli, maschi e femmine, mentre un padre affetto non la trasmette a nessuno", "isCorrect": true },
+      { "text": "Un padre affetto la trasmette a tutte le figlie e a nessun figlio maschio", "isCorrect": false },
+      { "text": "Colpisce solo i maschi, come le malattie legate al cromosoma Y", "isCorrect": false },
+      { "text": "Compare solo negli individui omozigoti per l'allele mutato", "isCorrect": false },
+      { "text": "Salta sistematicamente una generazione su due", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "I caratteri poligenici, come la statura, si distinguono per il fatto che:",
+    "options": [
+      { "text": "Dipendono da molti geni a effetto additivo e dall'ambiente, e nella popolazione si distribuiscono con continuità invece che in classi nette", "isCorrect": true },
+      { "text": "Dipendono da un solo gene con molti alleli diversi", "isCorrect": false },
+      { "text": "Non seguono mai le leggi di Mendel per nessuno dei geni coinvolti", "isCorrect": false },
+      { "text": "Si manifestano soltanto negli individui eterozigoti", "isCorrect": false },
+      { "text": "Sono tutti legati ai cromosomi sessuali", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "Un portatore sano di traslocazione robertsoniana fra i cromosomi 14 e 21:",
+    "options": [
+      { "text": "Ha 45 cromosomi e fenotipo normale, ma un rischio aumentato di figli con trisomia 21 da traslocazione", "isCorrect": true },
+      { "text": "Ha 47 cromosomi e fenotipo normale", "isCorrect": false },
+      { "text": "Ha 46 cromosomi e manifesta sempre la sindrome di Down", "isCorrect": false },
+      { "text": "Non può avere figli affetti, perché la traslocazione è bilanciata", "isCorrect": false },
+      { "text": "Trasmette la traslocazione soltanto alle figlie femmine", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "La pleiotropia consiste nel fatto che:",
+    "options": [
+      { "text": "Un solo gene influenza più caratteri fenotipici apparentemente indipendenti fra loro", "isCorrect": true },
+      { "text": "Più geni concorrono a determinare un solo carattere", "isCorrect": false },
+      { "text": "Un gene maschera l'espressione di un gene diverso", "isCorrect": false },
+      { "text": "Uno stesso gene esiste in più di due forme alleliche nella popolazione", "isCorrect": false },
+      { "text": "Un carattere si manifesta solo in presenza di un dato fattore ambientale", "isCorrect": false }
+    ]
+  },
+
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "Una sostituzione nucleotidica che porta alla comparsa di un amminoacido diverso nella proteina si dice mutazione di ……",
+    "options": [{ "text": "senso", "isCorrect": true }, { "text": "missenso", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "Una sostituzione che trasforma un codone codificante in un codone di stop si dice mutazione ……",
+    "options": [{ "text": "nonsenso", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "Una sostituzione che non cambia l'amminoacido, grazie alla degenerazione del codice, si dice mutazione ……",
+    "options": [{ "text": "silente", "isCorrect": true }, { "text": "sinonima", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "Un individuo che porta due alleli diversi dello stesso gene si dice ……",
+    "options": [{ "text": "eterozigote", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "La seconda legge di Mendel enuncia l'assortimento …… dei caratteri",
+    "options": [{ "text": "indipendente", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "Il fenomeno per cui un gene maschera l'espressione fenotipica di un gene diverso si chiama ……",
+    "options": [{ "text": "epistasi", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "Il fenomeno per cui un solo gene influenza più caratteri distinti si chiama ……",
+    "options": [{ "text": "pleiotropia", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "La quota di individui portatori di un dato genotipo che ne manifestano effettivamente il fenotipo si chiama ……",
+    "options": [{ "text": "penetranza", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "La mancata separazione di cromosomi omologhi o di cromatidi fratelli durante la divisione si chiama non ……",
+    "options": [{ "text": "disgiunzione", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "Quanti cromosomi contiene un gamete umano normale? ……",
+    "options": [{ "text": "23", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "Il cariotipo di una femmina umana normale si scrive 46,……",
+    "options": [{ "text": "XX", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "La condizione in cui manca un singolo cromosoma rispetto al corredo normale si chiama ……",
+    "options": [{ "text": "monosomia", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "La tecnica che, colorando i cromosomi, ne rivela il caratteristico disegno a bande si chiama ……",
+    "options": [{ "text": "bandeggio", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "Un carattere trasmesso da una madre affetta a tutta la prole e mai da un padre affetto segue un'eredità ……",
+    "options": [{ "text": "mitocondriale", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "Il riarrangiamento in cui un segmento cromosomico si stacca e si reinserisce girato di 180 gradi si chiama ……",
+    "options": [{ "text": "inversione", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "Il meccanismo che ripara una rottura a doppio filamento usando il cromatidio fratello come stampo è la ricombinazione ……",
+    "options": [{ "text": "omologa", "isCorrect": true }] }
+]

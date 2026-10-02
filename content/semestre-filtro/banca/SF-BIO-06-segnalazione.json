@@ -1,0 +1,202 @@
+[
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "Le integrine collegano la cellula alla matrice extracellulare e trasmettono segnali in entrambe le direzioni perché:",
+    "options": [
+      { "text": "Legano con il dominio esterno componenti della matrice e con quello citosolico, tramite proteine adattatrici, i filamenti di actina, così che la tensione meccanica diventa segnale e lo stato interno cambia l'affinità esterna", "isCorrect": true },
+      { "text": "Sono canali ionici che si aprono quando la matrice viene deformata", "isCorrect": false },
+      { "text": "Hanno attività tirosin-chinasica intrinseca nel dominio extracellulare", "isCorrect": false },
+      { "text": "Sono proteine solubili secrete nella matrice che poi rientrano per endocitosi", "isCorrect": false },
+      { "text": "Trasportano collagene dall'interno della cellula verso l'esterno", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "Caderine e integrine si distinguono per il partner a cui ancorano la cellula:",
+    "options": [
+      { "text": "Le caderine mediano adesione fra cellula e cellula, in modo calcio-dipendente e omofilico; le integrine ancorano la cellula alla matrice extracellulare", "isCorrect": true },
+      { "text": "Le caderine ancorano alla matrice, le integrine mediano adesione fra cellule", "isCorrect": false },
+      { "text": "Entrambe mediano solo adesione fra cellule, ma in compartimenti diversi", "isCorrect": false },
+      { "text": "Le caderine sono proteine solubili della matrice, le integrine proteine citosoliche", "isCorrect": false },
+      { "text": "Le caderine funzionano solo in assenza di calcio", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "Le giunzioni occludenti di un epitelio svolgono il compito di:",
+    "options": [
+      { "text": "Sigillare lo spazio fra cellule adiacenti impedendo il passaggio di soluti fra i due versanti e mantenendo la polarità della membrana", "isCorrect": true },
+      { "text": "Mettere in comunicazione diretta i citoplasmi di cellule vicine", "isCorrect": false },
+      { "text": "Ancorare i filamenti intermedi alla lamina basale", "isCorrect": false },
+      { "text": "Collegare i filamenti di actina di cellule contigue", "isCorrect": false },
+      { "text": "Degradare la matrice extracellulare durante la migrazione", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "Le giunzioni comunicanti si distinguono da desmosomi ed emidesmosomi perché:",
+    "options": [
+      { "text": "Formano canali che mettono in continuità i citoplasmi, lasciando passare ioni e piccole molecole, mentre le altre sono giunzioni di ancoraggio", "isCorrect": true },
+      { "text": "Ancorano i filamenti intermedi, mentre le altre formano canali", "isCorrect": false },
+      { "text": "Sono le uniche a richiedere il calcio per formarsi", "isCorrect": false },
+      { "text": "Collegano la cellula alla lamina basale e non alle cellule vicine", "isCorrect": false },
+      { "text": "Lasciano passare anche proteine e acidi nucleici fra una cellula e l'altra", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "Una segnalazione si dice paracrina quando:",
+    "options": [
+      { "text": "La molecola segnale diffonde nel liquido interstiziale e agisce sulle cellule vicine", "isCorrect": true },
+      { "text": "La molecola segnale viaggia nel sangue e raggiunge bersagli lontani", "isCorrect": false },
+      { "text": "La cellula risponde al segnale che essa stessa ha prodotto", "isCorrect": false },
+      { "text": "Il segnale passa solo per contatto diretto fra due membrane", "isCorrect": false },
+      { "text": "Il segnale viene liberato in una fessura sinaptica", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "Gli ormoni steroidei e l'ossido nitrico agiscono su recettori intracellulari perché:",
+    "options": [
+      { "text": "Sono molecole piccole e lipofile, capaci di attraversare da sole il doppio strato lipidico", "isCorrect": true },
+      { "text": "Vengono trasportati nel citosol da canali ionici dedicati", "isCorrect": false },
+      { "text": "Entrano nella cellula per endocitosi mediata da recettore", "isCorrect": false },
+      { "text": "Sono peptidi di piccole dimensioni riconosciuti da trasportatori di membrana", "isCorrect": false },
+      { "text": "Si legano prima a una proteina G che li internalizza", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "Nella trasduzione mediata da un recettore accoppiato a proteine G:",
+    "options": [
+      { "text": "Il recettore attivato si comporta da GEF per la subunità alfa, che scambia GDP con GTP, si stacca e regola l'effettore finché la propria attività GTPasica non la spegne", "isCorrect": true },
+      { "text": "La subunità alfa è attiva quando lega GDP e inattiva quando lega GTP", "isCorrect": false },
+      { "text": "Il recettore fosforila direttamente la proteina G su residui di tirosina", "isCorrect": false },
+      { "text": "La proteina G apre un canale ionico mediante contatto diretto col ligando", "isCorrect": false },
+      { "text": "Il segnale termina solo con la degradazione proteasomica della subunità alfa", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "GEF e GAP regolano le GTPasi in modo opposto, e precisamente:",
+    "options": [
+      { "text": "Le GEF favoriscono lo scambio di GDP con GTP e accendono la GTPasi, le GAP ne stimolano l'attività idrolitica e la spengono", "isCorrect": true },
+      { "text": "Le GEF stimolano l'idrolisi del GTP e le GAP lo scambio con GDP", "isCorrect": false },
+      { "text": "Entrambe accendono la GTPasi, ma su scale temporali diverse", "isCorrect": false },
+      { "text": "Le GEF fosforilano la GTPasi, le GAP la defosforilano", "isCorrect": false },
+      { "text": "Le GAP legano il GTP al posto della GTPasi, sottraendolo al ciclo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "L'amplificazione del segnale in una cascata di trasduzione dipende dal fatto che:",
+    "options": [
+      { "text": "Ogni enzima attivato ne attiva molte copie del successivo, così che poche molecole di ligando producono migliaia di molecole di secondo messaggero e di bersagli modificati", "isCorrect": true },
+      { "text": "Il ligando entra nella cellula e si moltiplica nel citosol", "isCorrect": false },
+      { "text": "Il recettore si duplica a ogni attivazione", "isCorrect": false },
+      { "text": "Ogni passaggio della cascata dimezza il numero di molecole coinvolte", "isCorrect": false },
+      { "text": "Il segnale viene trascritto in RNA e poi tradotto molte volte", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "La desensitizzazione recettoriale, come nell'adattamento alla luce dei fotorecettori, consiste nel fatto che:",
+    "options": [
+      { "text": "Un recettore a lungo stimolato viene fosforilato e legato da arrestine che lo disaccoppiano dall'effettore, riducendo la risposta a stimolo costante", "isCorrect": true },
+      { "text": "Il recettore aumenta progressivamente la propria affinità per il ligando", "isCorrect": false },
+      { "text": "La cellula sintetizza altri recettori per rispondere più intensamente", "isCorrect": false },
+      { "text": "Il ligando viene degradato prima di raggiungere il recettore", "isCorrect": false },
+      { "text": "Il secondo messaggero si accumula indefinitamente nel citosol", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "L'attivazione di un recettore tirosin-chinasico comincia con:",
+    "options": [
+      { "text": "La dimerizzazione indotta dal ligando e la transfosforilazione reciproca delle code citosoliche, che crea siti d'attracco per proteine con domini SH2", "isCorrect": true },
+      { "text": "Il distacco della subunità alfa di una proteina G trimerica", "isCorrect": false },
+      { "text": "L'apertura di un canale ionico nella stessa molecola recettoriale", "isCorrect": false },
+      { "text": "L'ingresso del recettore nel nucleo dove agisce da fattore di trascrizione", "isCorrect": false },
+      { "text": "Il taglio proteolitico del dominio extracellulare", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "Nella via Ras-MAP chinasi, Ras è un punto critico per l'oncogenesi perché:",
+    "options": [
+      { "text": "È una GTPasi monomerica e una mutazione che ne abolisce l'idrolisi del GTP la lascia costitutivamente attiva, con la cascata accesa anche senza fattore di crescita", "isCorrect": true },
+      { "text": "È un fattore di trascrizione che si lega direttamente al DNA", "isCorrect": false },
+      { "text": "È il recettore di membrana che lega il fattore di crescita", "isCorrect": false },
+      { "text": "È un oncosoppressore la cui perdita libera la proliferazione", "isCorrect": false },
+      { "text": "È una fosfatasi che spegne il recettore tirosin-chinasico", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "La matrice extracellulare viene rimodellata e degradata soprattutto da:",
+    "options": [
+      { "text": "Metalloproteasi secrete dalle cellule, la cui attività è tenuta in equilibrio da inibitori specifici", "isCorrect": true },
+      { "text": "Enzimi lisosomiali liberati per esocitosi costitutiva in ogni tessuto", "isCorrect": false },
+      { "text": "Caspasi esecutrici attivate nelle cellule circostanti", "isCorrect": false },
+      { "text": "Proteasomi presenti nello spazio extracellulare", "isCorrect": false },
+      { "text": "Integrine dotate di attività proteolitica intrinseca", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "Riguardo alla segnalazione dell'insulina, quale affermazione NON è corretta?",
+    "options": [
+      { "text": "L'insulina attraversa la membrana e si lega a un recettore nucleare che agisce da fattore di trascrizione", "isCorrect": true },
+      { "text": "Il recettore dell'insulina è un recettore con attività tirosin-chinasica", "isCorrect": false },
+      { "text": "Il recettore attivato fosforila proteine substrato che reclutano altri effettori", "isCorrect": false },
+      { "text": "La via dei fosfoinositidi partecipa alla trasmissione del segnale a valle", "isCorrect": false },
+      { "text": "Una delle risposte è l'aumento dell'ingresso di glucosio nelle cellule bersaglio", "isCorrect": false }
+    ]
+  },
+
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "I recettori transmembrana che ancorano la cellula alla matrice extracellulare e collegano l'esterno al citoscheletro sono le ……",
+    "options": [{ "text": "integrine", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "Le proteine di adesione fra cellula e cellula che richiedono calcio e si legano in modo omofilico sono le ……",
+    "options": [{ "text": "caderine", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "Le giunzioni che mettono in comunicazione diretta i citoplasmi di cellule adiacenti si dicono giunzioni ……",
+    "options": [{ "text": "comunicanti", "isCorrect": true }, { "text": "gap", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "Le proteine che formano i canali delle giunzioni comunicanti nei vertebrati sono le ……",
+    "options": [{ "text": "connessine", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "La segnalazione in cui una cellula risponde al segnale che essa stessa ha prodotto si dice ……",
+    "options": [{ "text": "autocrina", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "Il secondo messaggero prodotto dall'adenilato ciclasi a partire dall'ATP è il ……",
+    "options": [{ "text": "cAMP", "isCorrect": true }, { "text": "AMP ciclico", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "Il secondo messaggero che, liberato dalla fosfolipasi C, provoca l'uscita di calcio dal reticolo endoplasmatico si indica con la sigla ……",
+    "options": [{ "text": "IP3", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "Lo ione che funziona da secondo messaggero e viene rilasciato dai depositi del reticolo endoplasmatico è il ……",
+    "options": [{ "text": "calcio", "isCorrect": true }, { "text": "Ca2+", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "Le proteine regolatorie che favoriscono lo scambio di GDP con GTP su una GTPasi si indicano con la sigla ……",
+    "options": [{ "text": "GEF", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "Le proteine regolatorie che stimolano l'attività GTPasica spegnendo il segnale si indicano con la sigla ……",
+    "options": [{ "text": "GAP", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "La GTPasi monomerica a monte della cascata delle MAP chinasi, spesso mutata nei tumori, è ……",
+    "options": [{ "text": "Ras", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "Il dominio proteico che riconosce e si lega a una tirosina fosforilata del recettore attivato si indica con la sigla ……",
+    "options": [{ "text": "SH2", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "Le proteine che, legandosi al recettore fosforilato, lo disaccoppiano dall'effettore e lo desensitizzano sono le ……",
+    "options": [{ "text": "arrestine", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "Il gas lipofilo che agisce da messaggero diffondendo fra cellule vicine e provocando vasodilatazione è l'ossido ……",
+    "options": [{ "text": "nitrico", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "La glicoproteina della matrice extracellulare che collega le integrine al collagene è la ……",
+    "options": [{ "text": "fibronectina", "isCorrect": true }] }
+]

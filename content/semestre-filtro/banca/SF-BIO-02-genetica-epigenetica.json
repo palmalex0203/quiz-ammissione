@@ -1,0 +1,185 @@
+[
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "Il nucleosoma, unità fondamentale della cromatina, è costituito da:",
+    "options": [
+      { "text": "Circa 147 paia di basi di DNA avvolte attorno a un ottamero di istoni, due copie ciascuno di H2A, H2B, H3 e H4", "isCorrect": true },
+      { "text": "Circa 147 paia di basi avvolte attorno a un tetramero di istoni H1", "isCorrect": false },
+      { "text": "Un tratto di DNA appaiato a una molecola di RNA strutturale", "isCorrect": false },
+      { "text": "Due molecole di DNA appaiate fra loro e stabilizzate da proteine non istoniche", "isCorrect": false },
+      { "text": "Circa 30 paia di basi avvolte attorno a un dimero di H3 e H4", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "L'istone H1 si distingue dagli altri istoni perché:",
+    "options": [
+      { "text": "Non fa parte dell'ottamero: si lega al DNA di collegamento all'ingresso e all'uscita dal nucleosoma e favorisce il ripiegamento nella fibra da 30 nm", "isCorrect": true },
+      { "text": "È presente in due copie dentro l'ottamero, come gli altri", "isCorrect": false },
+      { "text": "È l'unico istone che non lega il DNA", "isCorrect": false },
+      { "text": "Costituisce da solo il centro attorno a cui si avvolgono 147 paia di basi", "isCorrect": false },
+      { "text": "Si trova soltanto nei cromosomi dei procarioti", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "L'acetilazione delle lisine delle code istoniche favorisce la trascrizione perché:",
+    "options": [
+      { "text": "Neutralizza la carica positiva delle lisine, allenta la presa dell'istone sul DNA e crea siti di attracco per proteine che aprono la cromatina", "isCorrect": true },
+      { "text": "Aumenta la carica positiva degli istoni rafforzando il legame col DNA", "isCorrect": false },
+      { "text": "Taglia il DNA liberandolo dal nucleosoma", "isCorrect": false },
+      { "text": "Metila le citosine del promotore rendendolo accessibile", "isCorrect": false },
+      { "text": "Sostituisce l'istone H1 con una proteina non istonica", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "La metilazione del DNA nei mammiferi:",
+    "options": [
+      { "text": "Riguarda soprattutto le citosine dei dinucleotidi CpG e, quando interessa le isole CpG di un promotore, si associa al silenziamento stabile del gene", "isCorrect": true },
+      { "text": "Riguarda soprattutto le adenine ed è sempre associata ad attivazione trascrizionale", "isCorrect": false },
+      { "text": "Modifica la sequenza delle basi rendendo la mutazione irreversibile", "isCorrect": false },
+      { "text": "Avviene solo sugli istoni e mai direttamente sul DNA", "isCorrect": false },
+      { "text": "Si perde completamente a ogni replicazione e non viene mai ereditata", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "Eucromatina ed eterocromatina si distinguono perché:",
+    "options": [
+      { "text": "L'eucromatina è poco condensata e trascrizionalmente attiva, l'eterocromatina è densamente impaccata e in gran parte silente", "isCorrect": true },
+      { "text": "L'eucromatina è densamente impaccata e silente", "isCorrect": false },
+      { "text": "L'eterocromatina è priva di istoni", "isCorrect": false },
+      { "text": "L'eucromatina si trova solo nei procarioti", "isCorrect": false },
+      { "text": "L'eterocromatina contiene RNA al posto del DNA", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "I complessi di rimodellamento della cromatina agiscono perché:",
+    "options": [
+      { "text": "Usano l'energia dell'ATP per far scorrere, rimuovere o riorganizzare i nucleosomi, cambiando l'accessibilità del DNA sottostante", "isCorrect": true },
+      { "text": "Tagliano il DNA fra un nucleosoma e l'altro per liberare i promotori", "isCorrect": false },
+      { "text": "Metilano le code istoniche senza consumare energia", "isCorrect": false },
+      { "text": "Sostituiscono gli istoni con proteine della lamina nucleare", "isCorrect": false },
+      { "text": "Degradano gli istoni acetilati nel proteasoma", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "Il DNA centromerico e quello telomerico svolgono funzioni diverse, e precisamente:",
+    "options": [
+      { "text": "Il centromerico è la sede su cui si assembla il cinetocore per l'attacco al fuso, il telomerico protegge le estremità del cromosoma dalla degradazione e dalla fusione", "isCorrect": true },
+      { "text": "Il centromerico protegge le estremità, il telomerico lega il fuso", "isCorrect": false },
+      { "text": "Entrambi contengono la maggior parte dei geni codificanti del cromosoma", "isCorrect": false },
+      { "text": "Il telomerico è il punto in cui inizia sempre la replicazione del cromosoma", "isCorrect": false },
+      { "text": "Il centromerico viene perso a ogni divisione e ricostruito dalla telomerasi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "Minisatelliti e microsatelliti sono sequenze ripetute in tandem che:",
+    "options": [
+      { "text": "Variano molto nel numero di ripetizioni fra individuo e individuo, e proprio per questo si usano nell'identificazione genetica", "isCorrect": true },
+      { "text": "Sono identiche in tutti gli individui della specie", "isCorrect": false },
+      { "text": "Codificano le principali famiglie geniche, come le globine", "isCorrect": false },
+      { "text": "Si trovano esclusivamente nel DNA mitocondriale", "isCorrect": false },
+      { "text": "Sono sequenze presenti in copia singola nel genoma", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "LINE e SINE si distinguono perché:",
+    "options": [
+      { "text": "Le LINE sono lunghe e alcune codificano gli enzimi necessari alla propria mobilizzazione, le SINE sono corte e dipendono dal macchinario fornito da altri elementi", "isCorrect": true },
+      { "text": "Le SINE sono più lunghe delle LINE e autonome", "isCorrect": false },
+      { "text": "Le LINE sono sequenze ripetute in tandem e le SINE sequenze singole", "isCorrect": false },
+      { "text": "Entrambe si trovano solo nelle regioni centromeriche", "isCorrect": false },
+      { "text": "Le LINE sono costituite da RNA e le SINE da DNA", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "Le famiglie geniche, come quella delle globine, si sono formate perché:",
+    "options": [
+      { "text": "Duplicazioni successive di un gene ancestrale hanno generato copie che poi sono divergute, acquisendo funzioni e regolazioni distinte, talvolta lasciando pseudogeni", "isCorrect": true },
+      { "text": "Lo stesso gene viene trascritto in momenti diversi dello sviluppo senza alcuna duplicazione", "isCorrect": false },
+      { "text": "Derivano dalla trasposizione di un gene virale integrato", "isCorrect": false },
+      { "text": "Sono il risultato dello splicing alternativo di un unico gene", "isCorrect": false },
+      { "text": "Nascono dalla fusione di geni provenienti da cromosomi diversi a ogni generazione", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "Riguardo all'organizzazione del genoma umano, quale affermazione NON è corretta?",
+    "options": [
+      { "text": "La maggior parte del genoma è costituita da sequenze codificanti proteine", "isCorrect": true },
+      { "text": "Una quota rilevante è formata da sequenze ripetute intersperse", "isCorrect": false },
+      { "text": "Esistono pseudogeni, copie non funzionali di geni esistenti", "isCorrect": false },
+      { "text": "Molte sequenze non codificanti hanno funzione regolativa", "isCorrect": false },
+      { "text": "I geni eucariotici sono in genere interrotti da introni", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "Le condensine intervengono nella compattazione dei cromosomi perché:",
+    "options": [
+      { "text": "Sono complessi che, consumando ATP, estrudono anse di cromatina e organizzano il cromosoma mitotico nella sua forma condensata", "isCorrect": true },
+      { "text": "Sostituiscono gli istoni con protamine durante la mitosi", "isCorrect": false },
+      { "text": "Tengono uniti i cromatidi fratelli fino all'anafase", "isCorrect": false },
+      { "text": "Metilano le code istoniche compattando la cromatina senza consumo di energia", "isCorrect": false },
+      { "text": "Formano la lamina nucleare attorno al cromosoma condensato", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "Si dice che una modificazione è epigenetica quando:",
+    "options": [
+      { "text": "Cambia in modo ereditabile l'espressione dei geni senza alterare la sequenza nucleotidica del DNA", "isCorrect": true },
+      { "text": "Modifica stabilmente la sequenza del DNA in una cellula somatica", "isCorrect": false },
+      { "text": "Riguarda soltanto le mutazioni presenti nei gameti", "isCorrect": false },
+      { "text": "Viene persa a ogni divisione cellulare senza eccezioni", "isCorrect": false },
+      { "text": "Interessa esclusivamente il DNA mitocondriale", "isCorrect": false }
+    ]
+  },
+
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "L'unità fondamentale di impacchettamento della cromatina, formata da DNA avvolto su un ottamero istonico, è il ……",
+    "options": [{ "text": "nucleosoma", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "Quanti istoni compongono l'ottamero del nucleosoma, contando le copie? ……",
+    "options": [{ "text": "8", "isCorrect": true }, { "text": "otto", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "L'istone che lega il DNA di collegamento e favorisce la formazione della fibra da 30 nm è l'istone ……",
+    "options": [{ "text": "H1", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "La forma di cromatina poco condensata e trascrizionalmente attiva si chiama ……",
+    "options": [{ "text": "eucromatina", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "La base azotata del DNA che viene metilata nei dinucleotidi CpG dei mammiferi è la ……",
+    "options": [{ "text": "citosina", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "La modificazione delle lisine istoniche che allenta la cromatina e favorisce la trascrizione è l'……",
+    "options": [{ "text": "acetilazione", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "La regione del cromosoma su cui si assembla il cinetocore per l'attacco al fuso è il ……",
+    "options": [{ "text": "centromero", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "Le strutture che proteggono le estremità dei cromosomi lineari dalla degradazione e dalla fusione sono i ……",
+    "options": [{ "text": "telomeri", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "Le sequenze ripetute in tandem di poche basi, molto variabili fra individui e usate in genetica forense, sono i ……",
+    "options": [{ "text": "microsatelliti", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "Le sequenze ripetute intersperse lunghe, alcune delle quali autonome, si indicano con la sigla ……",
+    "options": [{ "text": "LINE", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "Le copie non funzionali di geni esistenti, prive di prodotto attivo, si chiamano ……",
+    "options": [{ "text": "pseudogeni", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "I complessi proteici che, consumando ATP, estrudono anse di cromatina condensando il cromosoma mitotico sono le ……",
+    "options": [{ "text": "condensine", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "Gli elementi genetici capaci di spostarsi da una posizione all'altra del genoma si chiamano elementi ……",
+    "options": [{ "text": "mobili", "isCorrect": true }, { "text": "trasponibili", "isCorrect": true }] }
+]

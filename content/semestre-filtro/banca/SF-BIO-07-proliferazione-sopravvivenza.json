@@ -1,0 +1,230 @@
+[
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Il superamento del punto di restrizione e l'ingresso in fase S dipendono dal fatto che:",
+    "options": [
+      { "text": "La ciclina D con Cdk4/6 fosforila Rb, che libera E2F e lascia trascrivere i geni necessari alla replicazione", "isCorrect": true },
+      { "text": "Rb fosforilato sequestra E2F impedendo la trascrizione", "isCorrect": false },
+      { "text": "Il complesso APC/C degrada E2F all'inizio della fase S", "isCorrect": false },
+      { "text": "p53 attiva direttamente la ciclina D in risposta ai fattori di crescita", "isCorrect": false },
+      { "text": "La securina viene degradata liberando la separasi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Le chinasi dipendenti da ciclina sono regolate soprattutto perché:",
+    "options": [
+      { "text": "La loro concentrazione resta pressoché costante mentre quella delle cicline che le attivano oscilla nel ciclo, e vi si sommano fosforilazioni attivanti e inibitorie e inibitori dedicati", "isCorrect": true },
+      { "text": "La loro concentrazione oscilla nel ciclo mentre quella delle cicline resta costante", "isCorrect": false },
+      { "text": "Vengono sintetizzate ex novo a ogni fase e degradate subito dopo", "isCorrect": false },
+      { "text": "Sono attive solo quando legate al DNA nei punti di controllo", "isCorrect": false },
+      { "text": "La loro attività dipende unicamente dalla disponibilità di ATP", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "In risposta a un danno al DNA, p53 stabilizzato può:",
+    "options": [
+      { "text": "Indurre l'inibitore p21, che blocca i complessi ciclina-CDK e arresta il ciclo per dar tempo alla riparazione, oppure, se il danno è irreparabile, avviare l'apoptosi", "isCorrect": true },
+      { "text": "Accelerare l'ingresso in fase S per diluire il danno fra le cellule figlie", "isCorrect": false },
+      { "text": "Riparare direttamente le rotture del DNA grazie alla propria attività nucleasica", "isCorrect": false },
+      { "text": "Degradare Rb liberando E2F", "isCorrect": false },
+      { "text": "Attivare la telomerasi per proteggere le estremità cromosomiche", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "La differenza fra un proto-oncogene e un gene oncosoppressore si coglie nel fatto che:",
+    "options": [
+      { "text": "Il proto-oncogene diventa pericoloso per mutazioni che gli fanno acquistare funzione e basta colpire un allele, l'oncosoppressore per mutazioni che gli fanno perdere funzione e di norma vanno persi entrambi", "isCorrect": true },
+      { "text": "Il proto-oncogene richiede la perdita di entrambi gli alleli, l'oncosoppressore di uno solo", "isCorrect": false },
+      { "text": "Entrambi agiscono solo se ereditati dal genitore materno", "isCorrect": false },
+      { "text": "Il proto-oncogene è presente solo nelle cellule tumorali, l'oncosoppressore in quelle sane", "isCorrect": false },
+      { "text": "L'oncosoppressore codifica sempre una proteina di membrana, il proto-oncogene una nucleare", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Durante la mitosi, i microtubuli del cinetocore si distinguono da quelli astrali e interpolari perché:",
+    "options": [
+      { "text": "Si agganciano al cinetocore dei cromatidi, attraverso il complesso NDC80, e ne governano l'allineamento e la separazione", "isCorrect": true },
+      { "text": "Collegano i due poli del fuso scorrendo l'uno sull'altro", "isCorrect": false },
+      { "text": "Ancorano il centrosoma alla corteccia cellulare orientando il fuso", "isCorrect": false },
+      { "text": "Formano l'anello contrattile della citodieresi", "isCorrect": false },
+      { "text": "Costituiscono la lamina nucleare durante la profase", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "La separazione dei cromatidi fratelli all'anafase avviene perché:",
+    "options": [
+      { "text": "L'APC/C poliubiquitina la securina, la cui degradazione libera la separasi, che taglia la coesina che teneva uniti i cromatidi", "isCorrect": true },
+      { "text": "La separasi degrada direttamente i microtubuli del cinetocore", "isCorrect": false },
+      { "text": "La coesina viene fosforilata dalla ciclina B-Cdk1 e si dissocia da sola", "isCorrect": false },
+      { "text": "La securina taglia la coesina una volta attivata dall'APC/C", "isCorrect": false },
+      { "text": "I cinetocori perdono il complesso NDC80 e i cromatidi si allontanano per diffusione", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Il punto di controllo del fuso impedisce l'anafase finché:",
+    "options": [
+      { "text": "Anche un solo cinetocore resta privo di attacco bipolare ai microtubuli, tenendo inibito l'APC/C", "isCorrect": true },
+      { "text": "Il DNA non è stato completamente replicato", "isCorrect": false },
+      { "text": "La lamina nucleare non si è riassemblata attorno ai due nuclei figli", "isCorrect": false },
+      { "text": "La citodieresi non è stata completata", "isCorrect": false },
+      { "text": "I centrosomi non si sono duplicati", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Quale evento distingue in modo essenziale la meiosi I dalla mitosi?",
+    "options": [
+      { "text": "Gli omologhi si appaiano, scambiano tratti per crossing over e all'anafase si separano l'uno dall'altro, mentre i cromatidi fratelli restano uniti", "isCorrect": true },
+      { "text": "I cromatidi fratelli si separano all'anafase, come nella mitosi", "isCorrect": false },
+      { "text": "Il DNA viene replicato due volte prima della divisione", "isCorrect": false },
+      { "text": "L'involucro nucleare non si disassembla in alcun momento", "isCorrect": false },
+      { "text": "Il fuso è formato da microfilamenti di actina invece che da microtubuli", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Il crossing over contribuisce alla variabilità genetica perché:",
+    "options": [
+      { "text": "Ricombina alleli di geni associati sullo stesso cromosoma, producendo combinazioni assenti nei genitori", "isCorrect": true },
+      { "text": "Aumenta il numero di cromosomi presenti nel gamete", "isCorrect": false },
+      { "text": "Introduce mutazioni puntiformi nei geni scambiati", "isCorrect": false },
+      { "text": "Determina l'assortimento indipendente dei cromosomi non omologhi", "isCorrect": false },
+      { "text": "Converte i cromatidi fratelli in cromosomi omologhi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Nella gametogenesi umana, ovogenesi e spermatogenesi differiscono perché:",
+    "options": [
+      { "text": "Da un ovocita primario deriva un solo ovocita maturo più i globuli polari, mentre da uno spermatocita primario derivano quattro spermatozoi, e l'ovogenesi resta bloccata per anni in profase I", "isCorrect": true },
+      { "text": "Da un ovocita primario derivano quattro cellule uova mature", "isCorrect": false },
+      { "text": "La spermatogenesi comporta una sola divisione meiotica invece di due", "isCorrect": false },
+      { "text": "L'ovogenesi si completa interamente durante la vita fetale", "isCorrect": false },
+      { "text": "La spermatogenesi produce cellule diploidi e l'ovogenesi cellule aploidi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Necrosi e apoptosi si distinguono anzitutto perché:",
+    "options": [
+      { "text": "Nella necrosi la cellula si gonfia, si rompe e riversa il contenuto scatenando infiammazione, nell'apoptosi si raggrinzisce in corpi apoptotici che vengono fagocitati senza infiammazione", "isCorrect": true },
+      { "text": "L'apoptosi provoca sempre una forte reazione infiammatoria locale", "isCorrect": false },
+      { "text": "La necrosi richiede ATP e una cascata enzimatica programmata", "isCorrect": false },
+      { "text": "Nella necrosi il DNA viene tagliato in frammenti regolari da endonucleasi dedicate", "isCorrect": false },
+      { "text": "L'apoptosi avviene solo nelle cellule tumorali", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Nella via apoptotica intrinseca, la permeabilizzazione della membrana mitocondriale esterna porta a:",
+    "options": [
+      { "text": "L'uscita del citocromo c, che con APAF1 forma l'apoptosoma e attiva la caspasi iniziatrice 9", "isCorrect": true },
+      { "text": "L'ingresso di calcio nel mitocondrio e l'arresto della glicolisi", "isCorrect": false },
+      { "text": "L'attivazione diretta della caspasi 8 da parte dei recettori di morte", "isCorrect": false },
+      { "text": "La fusione del mitocondrio con il lisosoma", "isCorrect": false },
+      { "text": "La traslocazione di p53 nella matrice mitocondriale", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Nella famiglia BCL2, il rapporto fra membri pro- e anti-apoptotici determina il destino della cellula perché:",
+    "options": [
+      { "text": "I membri anti-apoptotici sequestrano quelli pro-apoptotici, e quando questi ultimi prevalgono BAX e BAK si oligomerizzano e permeabilizzano la membrana mitocondriale", "isCorrect": true },
+      { "text": "I membri anti-apoptotici tagliano direttamente le caspasi esecutrici", "isCorrect": false },
+      { "text": "I membri pro-apoptotici sono recettori di membrana che legano il ligando di morte", "isCorrect": false },
+      { "text": "Entrambi i gruppi agiscono come fattori di trascrizione nel nucleo", "isCorrect": false },
+      { "text": "I membri pro-apoptotici degradano il citocromo c impedendone l'uscita", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Caspasi iniziatrici ed esecutrici si distinguono perché:",
+    "options": [
+      { "text": "Le iniziatrici si attivano per avvicinamento dentro complessi di segnalazione e tagliano le esecutrici, che a loro volta demoliscono i substrati cellulari", "isCorrect": true },
+      { "text": "Le esecutrici attivano le iniziatrici per retroazione positiva", "isCorrect": false },
+      { "text": "Le iniziatrici agiscono nel nucleo e le esecutrici nel citosol", "isCorrect": false },
+      { "text": "Le iniziatrici sono attive costitutivamente e le esecutrici sempre inibite", "isCorrect": false },
+      { "text": "Le esecutrici tagliano il DNA e le iniziatrici le proteine", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Una cellula staminale si definisce tale perché:",
+    "options": [
+      { "text": "Sa rinnovare sé stessa mantenendo il proprio stato indifferenziato e insieme generare progenie che si differenzia", "isCorrect": true },
+      { "text": "Si divide più rapidamente di qualunque altra cellula dell'organismo", "isCorrect": false },
+      { "text": "Non va mai incontro ad apoptosi", "isCorrect": false },
+      { "text": "È sempre totipotente e può ricostruire un organismo intero", "isCorrect": false },
+      { "text": "Si divide esclusivamente per meiosi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Riguardo alla divisione asimmetrica, quale affermazione NON è corretta?",
+    "options": [
+      { "text": "Richiede che le due cellule figlie ricevano un numero diverso di cromosomi", "isCorrect": true },
+      { "text": "Comporta la ripartizione ineguale di determinanti citoplasmatici fra le due figlie", "isCorrect": false },
+      { "text": "Dipende dall'orientamento del fuso rispetto alla polarità della cellula", "isCorrect": false },
+      { "text": "È uno dei modi con cui una staminale genera una figlia staminale e una destinata a differenziarsi", "isCorrect": false },
+      { "text": "Coinvolge il citoscheletro e i segnali provenienti dalla nicchia circostante", "isCorrect": false }
+    ]
+  },
+
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "Le proteine la cui concentrazione oscilla nel ciclo cellulare e che attivano le CDK sono le ……",
+    "options": [{ "text": "cicline", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "Il fattore di trascrizione liberato dalla fosforilazione di Rb, che accende i geni della fase S, è ……",
+    "options": [{ "text": "E2F", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "L'inibitore delle CDK indotto da p53 in risposta al danno al DNA è ……",
+    "options": [{ "text": "p21", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "Il complesso che, poliubiquitinando securina e cicline, dà il via all'anafase si indica con la sigla ……",
+    "options": [{ "text": "APC/C", "isCorrect": true }, { "text": "APC", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "La proteasi che taglia la coesina permettendo la separazione dei cromatidi fratelli è la ……",
+    "options": [{ "text": "separasi", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "Il complesso proteico che tiene uniti i cromatidi fratelli dalla fase S fino all'anafase è la ……",
+    "options": [{ "text": "coesina", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "La struttura proteica che si assembla sul centromero e aggancia i microtubuli del fuso è il ……",
+    "options": [{ "text": "cinetocore", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "La fase della mitosi in cui i cromatidi fratelli si separano e migrano ai poli opposti è l'……",
+    "options": [{ "text": "anafase", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "La divisione del citoplasma che conclude la divisione cellulare si chiama ……",
+    "options": [{ "text": "citodieresi", "isCorrect": true }, { "text": "citochinesi", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "La proteina che, uscita dal mitocondrio, forma l'apoptosoma insieme ad APAF1 è il citocromo ……",
+    "options": [{ "text": "c", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "La caspasi iniziatrice attivata dall'apoptosoma nella via intrinseca è la caspasi ……",
+    "options": [{ "text": "9", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "La caspasi iniziatrice reclutata dai recettori di morte nella via estrinseca è la caspasi ……",
+    "options": [{ "text": "8", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "Le due proteine della famiglia BCL2 che, oligomerizzandosi, permeabilizzano la membrana mitocondriale esterna sono BAX e ……",
+    "options": [{ "text": "BAK", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "Lo scambio di tratti fra cromosomi omologhi durante la profase della prima divisione meiotica si chiama crossing ……",
+    "options": [{ "text": "over", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "Le cellule di piccole dimensioni scartate durante l'ovogenesi, che non diventeranno gameti funzionali, sono i globuli ……",
+    "options": [{ "text": "polari", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "L'oncosoppressore detto \"guardiano del genoma\", mutato nella maggioranza dei tumori umani, è ……",
+    "options": [{ "text": "p53", "isCorrect": true }, { "text": "TP53", "isCorrect": true }] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "La fase del ciclo cellulare in cui avviene la duplicazione del DNA si indica con la lettera ……",
+    "options": [{ "text": "S", "isCorrect": true }] }
+]
