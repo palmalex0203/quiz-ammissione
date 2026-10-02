@@ -1,0 +1,938 @@
+[
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Bilanciando la combustione del glucosio, C6H12O6 + x O2 che dà y CO2 + z H2O, i coefficienti x, y e z valgono rispettivamente:",
+    "options": [
+      {
+        "text": "6, 6, 6",
+        "isCorrect": true
+      },
+      {
+        "text": "6, 12, 6",
+        "isCorrect": false
+      },
+      {
+        "text": "12, 6, 12",
+        "isCorrect": false
+      },
+      {
+        "text": "3, 6, 6",
+        "isCorrect": false
+      },
+      {
+        "text": "6, 6, 12",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Nel bilanciare un'equazione chimica si impone la conservazione di:",
+    "options": [
+      {
+        "text": "Massa e carica elettrica: il numero di atomi di ciascun elemento e la carica netta complessiva devono essere identici nei due membri",
+        "isCorrect": true
+      },
+      {
+        "text": "Massa e numero di molecole, che deve restare lo stesso prima e dopo la reazione",
+        "isCorrect": false
+      },
+      {
+        "text": "Solo il numero di moli totali, che non può variare",
+        "isCorrect": false
+      },
+      {
+        "text": "Solo il volume, che si conserva anche nelle reazioni fra gas",
+        "isCorrect": false
+      },
+      {
+        "text": "Massa e temperatura, che restano costanti in ogni trasformazione chimica",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "L'ordine di reazione e la molecolarità coincidono solo in un caso. Quale?",
+    "options": [
+      {
+        "text": "Quando la reazione avviene in un solo stadio elementare: l'ordine è una grandezza sperimentale, la molecolarità il numero di specie che collidono nello stadio elementare",
+        "isCorrect": true
+      },
+      {
+        "text": "Quando la reazione coinvolge due reagenti, perché allora entrambe valgono 2",
+        "isCorrect": false
+      },
+      {
+        "text": "Quando la reazione è catalizzata da un enzima, che impone sempre coincidenza",
+        "isCorrect": false
+      },
+      {
+        "text": "Coincidono sempre: sono due nomi per la stessa grandezza",
+        "isCorrect": false
+      },
+      {
+        "text": "Quando la reazione è all'equilibrio, perché velocità diretta e inversa si uguagliano",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "In una reazione a più stadi la velocità complessiva è determinata:",
+    "options": [
+      {
+        "text": "Dallo stadio più lento, detto stadio cineticamente determinante, che ha la barriera di attivazione più alta",
+        "isCorrect": true
+      },
+      {
+        "text": "Dallo stadio più rapido, che consuma per primo i reagenti",
+        "isCorrect": false
+      },
+      {
+        "text": "Dalla media aritmetica delle velocità di tutti gli stadi",
+        "isCorrect": false
+      },
+      {
+        "text": "Dal primo stadio, qualunque sia la sua velocità",
+        "isCorrect": false
+      },
+      {
+        "text": "Dalla variazione di energia libera complessiva della reazione",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Secondo l'equazione di Arrhenius, un aumento di temperatura accelera una reazione principalmente perché:",
+    "options": [
+      {
+        "text": "Cresce in modo esponenziale la frazione di molecole che possiede energia almeno pari a quella di attivazione, e quindi il numero di urti efficaci",
+        "isCorrect": true
+      },
+      {
+        "text": "Diminuisce l'energia di attivazione della reazione",
+        "isCorrect": false
+      },
+      {
+        "text": "Aumenta il numero totale di urti, che è l'unico fattore in gioco",
+        "isCorrect": false
+      },
+      {
+        "text": "Cambia il meccanismo di reazione, che diventa a uno stadio solo",
+        "isCorrect": false
+      },
+      {
+        "text": "Aumenta la costante di equilibrio, e con essa la velocità",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Nella teoria degli urti efficaci, perché non tutti gli urti fra molecole di reagente producono prodotto?",
+    "options": [
+      {
+        "text": "Perché l'urto deve avere energia almeno pari all'energia di attivazione e anche l'orientamento reciproco corretto: solo allora si forma il complesso attivato",
+        "isCorrect": true
+      },
+      {
+        "text": "Perché solo una molecola su un milione è chimicamente reattiva, per natura",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché gli urti efficaci richiedono la presenza di un catalizzatore",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché l'energia di attivazione deve essere superata solo dal prodotto, non dai reagenti",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché gli urti con energia troppo elevata distruggono le molecole invece di farle reagire",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "L'energia di attivazione di una reazione è definita come:",
+    "options": [
+      {
+        "text": "La differenza di energia fra il complesso attivato, cioè lo stato di transizione, e i reagenti",
+        "isCorrect": true
+      },
+      {
+        "text": "La differenza di energia fra prodotti e reagenti",
+        "isCorrect": false
+      },
+      {
+        "text": "L'energia liberata nella formazione dei prodotti",
+        "isCorrect": false
+      },
+      {
+        "text": "La differenza di energia fra il complesso attivato e i prodotti",
+        "isCorrect": false
+      },
+      {
+        "text": "L'energia totale contenuta nei legami dei reagenti",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Un enzima accelera una reazione di un fattore un milione. Che effetto ha sulla costante di equilibrio?",
+    "options": [
+      {
+        "text": "Nessuno: abbassa l'energia di attivazione di entrambi i versi in misura uguale, quindi accelera il raggiungimento dell'equilibrio senza spostarne la posizione",
+        "isCorrect": true
+      },
+      {
+        "text": "La aumenta di un milione di volte, perché la reazione diretta diventa più favorita",
+        "isCorrect": false
+      },
+      {
+        "text": "La diminuisce, perché l'enzima consuma parte dell'energia libera disponibile",
+        "isCorrect": false
+      },
+      {
+        "text": "La rende indipendente dalla temperatura",
+        "isCorrect": false
+      },
+      {
+        "text": "La porta a 1, perché l'enzima rende la reazione perfettamente reversibile",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Che cosa significa, a livello molecolare, che un catalizzatore non viene consumato dalla reazione?",
+    "options": [
+      {
+        "text": "Partecipa a uno o più stadi formando intermedi, ma viene rigenerato nella sua forma originaria al termine del ciclo catalitico, e può quindi agire su molte molecole di substrato",
+        "isCorrect": true
+      },
+      {
+        "text": "Non interagisce in alcun modo con i reagenti, ma si limita a riscaldare l'ambiente di reazione",
+        "isCorrect": false
+      },
+      {
+        "text": "Viene consumato ma si riforma spontaneamente dai prodotti dopo un tempo lungo",
+        "isCorrect": false
+      },
+      {
+        "text": "Si lega in modo covalente e irreversibile al prodotto finale",
+        "isCorrect": false
+      },
+      {
+        "text": "Abbassa l'energia libera dei prodotti senza prendere parte al meccanismo",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Per la reazione aA + bB che dà cC + dD, la legge d'azione di massa stabilisce che all'equilibrio:",
+    "options": [
+      {
+        "text": "Il rapporto fra il prodotto delle concentrazioni dei prodotti e quello dei reagenti, ciascuna elevata al proprio coefficiente stechiometrico, è costante a temperatura costante",
+        "isCorrect": true
+      },
+      {
+        "text": "Le concentrazioni di reagenti e prodotti diventano uguali fra loro",
+        "isCorrect": false
+      },
+      {
+        "text": "La somma delle concentrazioni dei prodotti è uguale a quella dei reagenti",
+        "isCorrect": false
+      },
+      {
+        "text": "Le reazioni diretta e inversa si arrestano entrambe",
+        "isCorrect": false
+      },
+      {
+        "text": "Il rapporto fra le concentrazioni è costante solo se i coefficienti stechiometrici sono tutti uguali a uno",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Che cosa descrive la relazione delta G standard = -RT ln K?",
+    "options": [
+      {
+        "text": "Lega la posizione dell'equilibrio alla variazione di energia libera standard: se K è maggiore di 1 il delta G standard è negativo, e all'equilibrio prevalgono i prodotti",
+        "isCorrect": true
+      },
+      {
+        "text": "Stabilisce che la velocità della reazione è proporzionale alla costante di equilibrio",
+        "isCorrect": false
+      },
+      {
+        "text": "Afferma che il delta G standard è sempre nullo all'equilibrio, qualunque sia K",
+        "isCorrect": false
+      },
+      {
+        "text": "Lega l'energia di attivazione alla costante di equilibrio",
+        "isCorrect": false
+      },
+      {
+        "text": "Esprime la dipendenza della costante di equilibrio dalla concentrazione iniziale dei reagenti",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Che differenza c'è fra un equilibrio chimico e uno stato stazionario, come quelli che caratterizzano il metabolismo?",
+    "options": [
+      {
+        "text": "All'equilibrio le concentrazioni sono costanti e il delta G è nullo, in un sistema chiuso; nello stato stazionario sono costanti perché il flusso in entrata uguaglia quello in uscita, ma il sistema è aperto, il delta G non è nullo e serve un continuo apporto di energia",
+        "isCorrect": true
+      },
+      {
+        "text": "Nessuna: lo stato stazionario è il nome che si dà all'equilibrio nei sistemi biologici",
+        "isCorrect": false
+      },
+      {
+        "text": "All'equilibrio le reazioni si fermano, nello stato stazionario continuano",
+        "isCorrect": false
+      },
+      {
+        "text": "Nello stato stazionario le concentrazioni variano continuamente, all'equilibrio no",
+        "isCorrect": false
+      },
+      {
+        "text": "L'equilibrio riguarda i sistemi aperti, lo stato stazionario quelli chiusi",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Si confronta il quoziente di reazione Q con la costante di equilibrio K e si trova Q minore di K. Il sistema:",
+    "options": [
+      {
+        "text": "Evolve verso i prodotti, perché questi sono ancora in difetto rispetto alla condizione di equilibrio",
+        "isCorrect": true
+      },
+      {
+        "text": "Evolve verso i reagenti, per riportare Q al valore di K",
+        "isCorrect": false
+      },
+      {
+        "text": "È già all'equilibrio e non si sposta",
+        "isCorrect": false
+      },
+      {
+        "text": "Non può evolvere in alcun senso: la reazione è bloccata",
+        "isCorrect": false
+      },
+      {
+        "text": "Aumenta il valore di K fino a farlo coincidere con Q",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Una reazione esotermica all'equilibrio viene riscaldata. Secondo il principio dell'equilibrio mobile:",
+    "options": [
+      {
+        "text": "L'equilibrio si sposta verso i reagenti e la costante di equilibrio diminuisce, perché il sistema reagisce assorbendo il calore fornito",
+        "isCorrect": true
+      },
+      {
+        "text": "L'equilibrio si sposta verso i prodotti, perché il calore accelera la reazione diretta",
+        "isCorrect": false
+      },
+      {
+        "text": "L'equilibrio non si sposta, perché la temperatura non compare nell'espressione di K",
+        "isCorrect": false
+      },
+      {
+        "text": "La costante di equilibrio aumenta, ma la posizione dell'equilibrio resta invariata",
+        "isCorrect": false
+      },
+      {
+        "text": "Si arresta la reazione inversa e il sistema diventa irreversibile",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "La temperatura è l'unica grandezza che modifica il valore della costante di equilibrio. Perché l'aggiunta di un reagente non la cambia?",
+    "options": [
+      {
+        "text": "Perché l'aggiunta altera il quoziente di reazione e il sistema si risposta fino a ripristinare lo stesso valore di K, che dipende solo dal delta G standard e dalla temperatura",
+        "isCorrect": true
+      },
+      {
+        "text": "Perché l'aggiunta di reagente non sposta l'equilibrio in alcun modo",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché la costante di equilibrio dipende dalla pressione e non dalle concentrazioni",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché la costante di equilibrio è un valore medio che si aggiusta lentamente nel tempo",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché nelle reazioni in soluzione la concentrazione dei reagenti non compare in K",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "In una soluzione satura di ossalato di calcio si aggiunge cloruro di calcio. Che cosa succede?",
+    "options": [
+      {
+        "text": "Lo ione calcio in comune fa superare il prodotto di solubilità e una parte dell'ossalato di calcio precipita: è il meccanismo alla base della formazione dei calcoli renali",
+        "isCorrect": true
+      },
+      {
+        "text": "La solubilità dell'ossalato di calcio aumenta, perché cresce la forza ionica",
+        "isCorrect": false
+      },
+      {
+        "text": "Non cambia nulla, perché il prodotto di solubilità non dipende dalle concentrazioni degli ioni",
+        "isCorrect": false
+      },
+      {
+        "text": "L'ossalato di calcio si decompone liberando anidride carbonica",
+        "isCorrect": false
+      },
+      {
+        "text": "Il pH della soluzione aumenta e il precipitato si ridissolve",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Che cosa esprime il prodotto di solubilità Kps di un sale poco solubile?",
+    "options": [
+      {
+        "text": "La costante dell'equilibrio eterogeneo fra il solido e i suoi ioni in soluzione: il prodotto delle concentrazioni ioniche, elevate ai rispettivi coefficienti, nella soluzione satura",
+        "isCorrect": true
+      },
+      {
+        "text": "La massa massima di sale che si può pesare prima di preparare la soluzione",
+        "isCorrect": false
+      },
+      {
+        "text": "Il prodotto fra la solubilità del sale e la sua massa molare",
+        "isCorrect": false
+      },
+      {
+        "text": "La costante di velocità con cui il sale si dissolve",
+        "isCorrect": false
+      },
+      {
+        "text": "Il rapporto fra la concentrazione del solido e quella degli ioni in soluzione",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Nel soggetto iperuricemico la precipitazione di urato di sodio nelle articolazioni è favorita:",
+    "options": [
+      {
+        "text": "Dal superamento del prodotto di solubilità, che la temperatura più bassa delle articolazioni periferiche e l'abbassamento del pH locale rendono più probabile",
+        "isCorrect": true
+      },
+      {
+        "text": "Dall'aumento della temperatura locale, che riduce sempre la solubilità dei sali",
+        "isCorrect": false
+      },
+      {
+        "text": "Dall'alcalinizzazione del liquido sinoviale, che rende l'urato meno solubile",
+        "isCorrect": false
+      },
+      {
+        "text": "Dalla carenza di sodio circolante, che costringe l'urato a precipitare",
+        "isCorrect": false
+      },
+      {
+        "text": "Dalla presenza di catalizzatori enzimatici che accelerano la cristallizzazione",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Una reazione ha delta G standard molto negativo ma a temperatura ambiente non si osserva. Come si spiega?",
+    "options": [
+      {
+        "text": "Termodinamica e cinetica sono indipendenti: la reazione è spontanea ma ha un'energia di attivazione troppo alta perché avvenga a velocità apprezzabile senza catalizzatore",
+        "isCorrect": true
+      },
+      {
+        "text": "Il delta G standard negativo indica che la reazione è impossibile",
+        "isCorrect": false
+      },
+      {
+        "text": "La reazione è all'equilibrio, e all'equilibrio nessuna reazione procede",
+        "isCorrect": false
+      },
+      {
+        "text": "Un delta G molto negativo corrisponde sempre a una costante di equilibrio minore di 1",
+        "isCorrect": false
+      },
+      {
+        "text": "Significa che la reazione avviene solo a temperature inferiori a quella ambiente",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "text": "Che cosa distingue una reazione reversibile da una irreversibile?",
+    "options": [
+      {
+        "text": "Nella reversibile si instaura un equilibrio in cui coesistono reagenti e prodotti; nell'irreversibile i prodotti vengono sottratti o la costante è talmente grande che la reazione va praticamente a completezza",
+        "isCorrect": true
+      },
+      {
+        "text": "Nella reversibile la reazione avviene in entrambi i versi contemporaneamente, nell'irreversibile il verso cambia nel tempo",
+        "isCorrect": false
+      },
+      {
+        "text": "La reversibile è catalizzata da enzimi, l'irreversibile avviene senza catalisi",
+        "isCorrect": false
+      },
+      {
+        "text": "La reversibile ha delta G nullo in ogni istante, l'irreversibile ha delta G positivo",
+        "isCorrect": false
+      },
+      {
+        "text": "La reversibile avviene in un solo stadio, l'irreversibile in più stadi",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "L'energia di attivazione di una reazione chimica è definita come la differenza di energia fra il complesso attivato e i ……",
+    "options": [
+      {
+        "text": "reagenti",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Una sostanza che accelera una reazione abbassandone l'energia di attivazione senza venire consumata si chiama ……",
+    "options": [
+      {
+        "text": "catalizzatore",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "I catalizzatori biologici, che accelerano le reazioni della cellula con grande specificità, si chiamano ……",
+    "options": [
+      {
+        "text": "enzimi",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "La dipendenza della costante di velocità dalla temperatura e dall'energia di attivazione è espressa dall'equazione di ……",
+    "options": [
+      {
+        "text": "Arrhenius",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "La specie di massima energia che si forma lungo il cammino di reazione si chiama complesso ……",
+    "options": [
+      {
+        "text": "attivato",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "In una reazione a più stadi la velocità complessiva è imposta dallo stadio più ……",
+    "options": [
+      {
+        "text": "lento",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Il numero di molecole che partecipano a un singolo stadio elementare di reazione si chiama ……",
+    "options": [
+      {
+        "text": "molecolarita",
+        "isCorrect": true
+      },
+      {
+        "text": "molecolarità",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Un catalizzatore accelera una reazione perché ne abbassa l'energia di ……",
+    "options": [
+      {
+        "text": "attivazione",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "All'equilibrio il rapporto fra le concentrazioni di prodotti e reagenti, elevate ai coefficienti stechiometrici, è espresso dalla legge d'azione di ……",
+    "options": [
+      {
+        "text": "massa",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Un sistema all'equilibrio perturbato dall'esterno reagisce in modo da opporsi alla perturbazione: lo afferma il principio dell'equilibrio ……",
+    "options": [
+      {
+        "text": "mobile",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Il principio dell'equilibrio mobile è noto anche come principio di ……",
+    "options": [
+      {
+        "text": "Le Chatelier",
+        "isCorrect": true
+      },
+      {
+        "text": "LeChatelier",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Il rapporto fra le concentrazioni di prodotti e reagenti calcolato in condizioni qualsiasi, da confrontare con K per prevedere il verso della reazione, si chiama …… di reazione.",
+    "options": [
+      {
+        "text": "quoziente",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "La costante dell'equilibrio fra un sale poco solubile e i suoi ioni in soluzione satura si chiama prodotto di ……",
+    "options": [
+      {
+        "text": "solubilita",
+        "isCorrect": true
+      },
+      {
+        "text": "solubilità",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "In una soluzione l'aggiunta di uno ione già presente in un sale poco solubile provoca una …… della solubilità del sale.",
+    "options": [
+      {
+        "text": "riduzione",
+        "isCorrect": true
+      },
+      {
+        "text": "diminuzione",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "L'effetto per cui la presenza di uno ione condiviso abbassa la solubilità di un sale si chiama effetto dello ione ……",
+    "options": [
+      {
+        "text": "comune",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Nel metabolismo le concentrazioni degli intermedi restano costanti non perché il sistema sia all'equilibrio, ma perché si trova in stato ……",
+    "options": [
+      {
+        "text": "stazionario",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "All'equilibrio chimico la variazione di energia libera di reazione vale ……",
+    "options": [
+      {
+        "text": "zero",
+        "isCorrect": true
+      },
+      {
+        "text": "0",
+        "isCorrect": true
+      },
+      {
+        "text": "nulla",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Una costante di equilibrio maggiore di uno indica che all'equilibrio prevalgono i ……",
+    "options": [
+      {
+        "text": "prodotti",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "L'unica grandezza che modifica il valore numerico della costante di equilibrio di una reazione è la ……",
+    "options": [
+      {
+        "text": "temperatura",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "La precipitazione di urato di sodio o di ossalato di calcio nelle vie urinarie dà origine ai ……",
+    "options": [
+      {
+        "text": "calcoli",
+        "isCorrect": true
+      },
+      {
+        "text": "calcoli renali",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "La branca della chimica che studia la velocità delle reazioni e i meccanismi con cui avvengono si chiama ……",
+    "options": [
+      {
+        "text": "cinetica",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Un urto fra molecole di reagente produce prodotto solo se ha energia sufficiente e orientamento corretto: in tal caso si dice urto ……",
+    "options": [
+      {
+        "text": "efficace",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "La somma degli esponenti a cui compaiono le concentrazioni nell'equazione cinetica sperimentale si chiama …… di reazione.",
+    "options": [
+      {
+        "text": "ordine",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Una reazione la cui velocità non dipende dalla concentrazione del reagente è di ordine ……",
+    "options": [
+      {
+        "text": "zero",
+        "isCorrect": true
+      },
+      {
+        "text": "0",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Un catalizzatore accelera in egual misura la reazione diretta e quella inversa, e perciò non modifica la …… di equilibrio.",
+    "options": [
+      {
+        "text": "costante",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Un equilibrio in cui le specie coinvolte si trovano in fasi diverse, come un solido e i suoi ioni in soluzione, si dice equilibrio ……",
+    "options": [
+      {
+        "text": "eterogeneo",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Nella combustione completa del glucosio il coefficiente stechiometrico dell'ossigeno molecolare vale ……",
+    "options": [
+      {
+        "text": "6",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Nel bilanciare l'equazione di una reazione fra ioni, oltre alla massa va conservata anche la ……",
+    "options": [
+      {
+        "text": "carica",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "Una reazione in cui reagenti e prodotti coesistono perché procede nei due versi si dice ……",
+    "options": [
+      {
+        "text": "reversibile",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "type": "COMPLETAMENTO",
+    "text": "La relazione che lega la variazione di energia libera standard alla costante di equilibrio contiene il logaritmo ……",
+    "options": [
+      {
+        "text": "naturale",
+        "isCorrect": true
+      },
+      {
+        "text": "neperiano",
+        "isCorrect": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,995 @@
+[
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Quanti atomi di carbonio insaturi contiene un cicloalchene di formula bruta C6H10?",
+    "options": [
+      {
+        "text": "2",
+        "isCorrect": true
+      },
+      {
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "text": "4",
+        "isCorrect": false
+      },
+      {
+        "text": "6",
+        "isCorrect": false
+      },
+      {
+        "text": "3",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Perché il carbonio, pur non essendo fra gli elementi più abbondanti sulla Terra, è l'elemento su cui si costruisce la chimica della vita?",
+    "options": [
+      {
+        "text": "Ha quattro elettroni di valenza e raggio piccolo: forma quattro legami covalenti stabili, anche con se stesso, in catene, anelli e geometrie diverse secondo l'ibridazione sp, sp2 o sp3",
+        "isCorrect": true
+      },
+      {
+        "text": "Perché è l'unico elemento capace di formare legami covalenti con l'idrogeno",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché la sua elevata elettronegatività gli consente di attrarre elettroni da qualunque altro elemento",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché può assumere numeri di ossidazione solo positivi, e questo lo rende un buon riducente",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché forma esclusivamente legami ionici, molto più stabili di quelli covalenti",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Secondo la nomenclatura IUPAC, il nome corretto del composto CH3-CH(CH3)-CH2-CH3 è:",
+    "options": [
+      {
+        "text": "2-metilbutano",
+        "isCorrect": true
+      },
+      {
+        "text": "3-metilbutano",
+        "isCorrect": false
+      },
+      {
+        "text": "2-metilpropano",
+        "isCorrect": false
+      },
+      {
+        "text": "2-etilpropano",
+        "isCorrect": false
+      },
+      {
+        "text": "pentano",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Che cosa distingue due enantiomeri da due diastereoisomeri?",
+    "options": [
+      {
+        "text": "Gli enantiomeri sono immagini speculari non sovrapponibili e hanno identiche proprietà fisiche tranne il segno del potere ottico rotatorio; i diastereoisomeri non sono immagini speculari e differiscono in punto di fusione, solubilità e reattività",
+        "isCorrect": true
+      },
+      {
+        "text": "Gli enantiomeri differiscono per la formula bruta, i diastereoisomeri no",
+        "isCorrect": false
+      },
+      {
+        "text": "Gli enantiomeri hanno un solo centro chirale, i diastereoisomeri sempre più di cinque",
+        "isCorrect": false
+      },
+      {
+        "text": "Gli enantiomeri sono separabili per distillazione frazionata, i diastereoisomeri no",
+        "isCorrect": false
+      },
+      {
+        "text": "I diastereoisomeri sono immagini speculari, gli enantiomeri sono isomeri di posizione",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Glucosio e galattosio differiscono per la configurazione di un solo centro chirale, il C4. Come si chiama questa relazione?",
+    "options": [
+      {
+        "text": "Sono epimeri, un caso particolare di diastereoisomeri",
+        "isCorrect": true
+      },
+      {
+        "text": "Sono enantiomeri, perché la configurazione è invertita",
+        "isCorrect": false
+      },
+      {
+        "text": "Sono tautomeri, perché si interconvertono spontaneamente",
+        "isCorrect": false
+      },
+      {
+        "text": "Sono anomeri, perché differiscono al carbonio anomerico",
+        "isCorrect": false
+      },
+      {
+        "text": "Non sono isomeri, perché hanno formule brute diverse",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Una miscela racemica è ottenuta mescolando quantità uguali dei due enantiomeri di un composto chirale. Che cosa si osserva al polarimetro?",
+    "options": [
+      {
+        "text": "Nessuna rotazione del piano della luce polarizzata, perché i contributi opposti dei due enantiomeri si annullano",
+        "isCorrect": true
+      },
+      {
+        "text": "Una rotazione doppia rispetto a quella del singolo enantiomero",
+        "isCorrect": false
+      },
+      {
+        "text": "Una rotazione destrogira, perché la forma destrogira è sempre prevalente",
+        "isCorrect": false
+      },
+      {
+        "text": "Una rotazione che varia nel tempo mentre i due enantiomeri si interconvertono",
+        "isCorrect": false
+      },
+      {
+        "text": "Nessuna rotazione, perché la miscela non contiene centri chirali",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Le convenzioni D/L di Fischer e R/S di Cahn, Ingold e Prelog:",
+    "options": [
+      {
+        "text": "Sono sistemi indipendenti: la prima confronta la configurazione con quella della gliceraldeide di riferimento, la seconda la assegna in assoluto con le regole di priorità, e una stessa molecola può essere D e S",
+        "isCorrect": true
+      },
+      {
+        "text": "Sono equivalenti: ogni composto D è anche R e ogni L è anche S",
+        "isCorrect": false
+      },
+      {
+        "text": "La prima si applica agli zuccheri, la seconda ai soli amminoacidi",
+        "isCorrect": false
+      },
+      {
+        "text": "Indicano entrambe il senso in cui il composto ruota il piano della luce polarizzata",
+        "isCorrect": false
+      },
+      {
+        "text": "Si applicano solo a molecole con un unico centro chirale",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Un composto è destrogiro. Che informazione dà questo dato sulla sua configurazione assoluta?",
+    "options": [
+      {
+        "text": "Nessuna in via diretta: il segno della rotazione ottica è una proprietà sperimentale che non si deduce dalla configurazione R o S, ma va misurata",
+        "isCorrect": true
+      },
+      {
+        "text": "Che la configurazione è necessariamente R",
+        "isCorrect": false
+      },
+      {
+        "text": "Che la configurazione è necessariamente S",
+        "isCorrect": false
+      },
+      {
+        "text": "Che appartiene alla serie D secondo la convenzione di Fischer",
+        "isCorrect": false
+      },
+      {
+        "text": "Che la molecola possiede un numero pari di centri chirali",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "La rottura omolitica di un legame covalente:",
+    "options": [
+      {
+        "text": "Ripartisce il doppietto fra i due frammenti, che restano con un elettrone spaiato ciascuno: si formano radicali, come nella perossidazione lipidica",
+        "isCorrect": true
+      },
+      {
+        "text": "Assegna entrambi gli elettroni a uno dei due frammenti, generando uno ione positivo e uno negativo",
+        "isCorrect": false
+      },
+      {
+        "text": "Produce sempre un carbocatione e un nucleofilo",
+        "isCorrect": false
+      },
+      {
+        "text": "Avviene solo in presenza di un acido forte",
+        "isCorrect": false
+      },
+      {
+        "text": "Non richiede energia, perché i radicali sono più stabili delle molecole da cui derivano",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Fra i carbocationi seguenti, quale è il più stabile?",
+    "options": [
+      {
+        "text": "Il carbocatione terziario, perché i tre gruppi alchilici donano densità elettronica per effetto induttivo e iperconiugazione",
+        "isCorrect": true
+      },
+      {
+        "text": "Il carbocatione metilico, perché è il più piccolo",
+        "isCorrect": false
+      },
+      {
+        "text": "Il carbocatione primario, perché ha meno ingombro sterico",
+        "isCorrect": false
+      },
+      {
+        "text": "Il carbocatione secondario, perché è intermedio e quindi il più favorito",
+        "isCorrect": false
+      },
+      {
+        "text": "Sono tutti equivalenti: la stabilità dipende solo dal solvente",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Che cosa differenzia il meccanismo SN2 da quello SN1?",
+    "options": [
+      {
+        "text": "L'SN2 è bimolecolare, il nucleofilo attacca dal lato opposto al gruppo uscente in un solo stadio e la configurazione si inverte; l'SN1 passa per un carbocatione intermedio, ha velocità indipendente dal nucleofilo e porta a racemizzazione",
+        "isCorrect": true
+      },
+      {
+        "text": "L'SN1 è bimolecolare e procede con inversione di configurazione, l'SN2 passa per un carbocatione",
+        "isCorrect": false
+      },
+      {
+        "text": "Entrambi passano per un carbocatione, ma l'SN2 lo forma più lentamente",
+        "isCorrect": false
+      },
+      {
+        "text": "L'SN2 è favorito dai substrati terziari, l'SN1 da quelli primari",
+        "isCorrect": false
+      },
+      {
+        "text": "Differiscono solo per il solvente usato, non per il meccanismo",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Un alogenuro alchilico terziario reagisce con un nucleofilo debole in solvente protico polare. Quale meccanismo prevale, e perché?",
+    "options": [
+      {
+        "text": "SN1: il substrato terziario forma un carbocatione relativamente stabile, che il solvente polare solvata, e l'ingombro sterico impedisce l'attacco dorsale richiesto dall'SN2",
+        "isCorrect": true
+      },
+      {
+        "text": "SN2, perché i substrati terziari sono i più accessibili all'attacco nucleofilo",
+        "isCorrect": false
+      },
+      {
+        "text": "SN2, perché il solvente protico aumenta sempre la nucleofilicità del reagente",
+        "isCorrect": false
+      },
+      {
+        "text": "Nessuno dei due: gli alogenuri terziari sono inerti alla sostituzione",
+        "isCorrect": false
+      },
+      {
+        "text": "SN1, ma con inversione completa della configurazione al carbonio",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "L'effetto induttivo di un sostituente elettron-attrattore su un acido carbossilico:",
+    "options": [
+      {
+        "text": "Stabilizza per dispersione di carica la base coniugata, rendendo l'acido più forte: l'acido cloroacetico è infatti più acido dell'acido acetico",
+        "isCorrect": true
+      },
+      {
+        "text": "Destabilizza la base coniugata e rende l'acido più debole",
+        "isCorrect": false
+      },
+      {
+        "text": "Non ha effetto sull'acidità, che dipende solo dal gruppo funzionale",
+        "isCorrect": false
+      },
+      {
+        "text": "Trasforma l'acido in una base secondo Brønsted",
+        "isCorrect": false
+      },
+      {
+        "text": "Aumenta l'acidità solo se il sostituente si trova a più di cinque atomi di distanza",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Perché il ciclopropano è molto più reattivo del cicloesano?",
+    "options": [
+      {
+        "text": "L'anello a tre termini impone angoli di legame di 60 gradi, lontanissimi dai 109,5 dell'ibridazione sp3: la tensione angolare accumulata viene liberata nell'apertura dell'anello",
+        "isCorrect": true
+      },
+      {
+        "text": "Perché il ciclopropano contiene un doppio legame e il cicloesano no",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché il cicloesano è aromatico e perciò particolarmente stabile",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché il ciclopropano è un composto ionico e il cicloesano covalente",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché nel ciclopropano i carboni sono ibridati sp e la geometria è lineare",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "L'addizione di HBr al 2-metilpropene porta prevalentemente al 2-bromo-2-metilpropano. Perché?",
+    "options": [
+      {
+        "text": "Perché il protone si addiziona al carbonio meno sostituito, generando il carbocatione terziario, più stabile: è la regola di Markovnikov, che riflette il controllo del carbocatione intermedio",
+        "isCorrect": true
+      },
+      {
+        "text": "Perché il bromo, essendo voluminoso, si lega sempre al carbonio meno sostituito",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché la reazione procede con meccanismo radicalico, che non distingue i due carboni",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché l'addizione agli alcheni avviene sempre in modo anti-Markovnikov",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché il doppio legame si rompe omoliticamente dando due radicali equivalenti",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Perché il benzene, pur avendo tre doppi legami formali, non dà le reazioni di addizione tipiche degli alcheni?",
+    "options": [
+      {
+        "text": "Perché i sei elettroni pi-greco sono delocalizzati su tutto l'anello planare: l'addizione distruggerebbe l'aromaticità, e il benzene reagisce invece per sostituzione elettrofila, che la conserva",
+        "isCorrect": true
+      },
+      {
+        "text": "Perché i doppi legami del benzene sono in realtà legami sigma",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché il benzene è una molecola ionica e non reagisce con gli elettrofili",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché i carboni del benzene sono ibridati sp3 e non hanno orbitali p disponibili",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché l'anello è troppo teso per accogliere nuovi sostituenti",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "La regola di Hückel stabilisce che un sistema è aromatico quando:",
+    "options": [
+      {
+        "text": "È ciclico, planare, con delocalizzazione completa e contiene 4n+2 elettroni pi-greco",
+        "isCorrect": true
+      },
+      {
+        "text": "È ciclico e contiene 4n elettroni pi-greco",
+        "isCorrect": false
+      },
+      {
+        "text": "Contiene almeno sei atomi di carbonio, qualunque sia la loro ibridazione",
+        "isCorrect": false
+      },
+      {
+        "text": "È ciclico e contiene almeno un eteroatomo",
+        "isCorrect": false
+      },
+      {
+        "text": "È planare e contiene un numero pari di doppi legami coniugati",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Fra le basi azotate, pirimidine e purine si distinguono strutturalmente perché:",
+    "options": [
+      {
+        "text": "Le pirimidine sono eterocicli aromatici a un solo anello esatomico con due azoti; le purine sono biciclici, con un anello pirimidinico fuso a un anello imidazolico",
+        "isCorrect": true
+      },
+      {
+        "text": "Le purine hanno un solo anello, le pirimidine due anelli condensati",
+        "isCorrect": false
+      },
+      {
+        "text": "Le pirimidine non sono aromatiche, le purine sì",
+        "isCorrect": false
+      },
+      {
+        "text": "Le purine contengono ossigeno nell'anello, le pirimidine solo azoto",
+        "isCorrect": false
+      },
+      {
+        "text": "Le pirimidine sono cicloalcani, le purine idrocarburi aromatici policiclici",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "In una sostituzione elettrofila aromatica, un gruppo ossidrilico legato all'anello si comporta da:",
+    "options": [
+      {
+        "text": "Sostituente attivante e orientante in posizione orto e para, perché dona per risonanza densità elettronica all'anello",
+        "isCorrect": true
+      },
+      {
+        "text": "Sostituente disattivante e orientante in meta, perché l'ossigeno è elettronegativo",
+        "isCorrect": false
+      },
+      {
+        "text": "Sostituente attivante ma orientante in meta",
+        "isCorrect": false
+      },
+      {
+        "text": "Sostituente che impedisce del tutto la sostituzione elettrofila",
+        "isCorrect": false
+      },
+      {
+        "text": "Sostituente disattivante e orientante in orto e para",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "La tossicità di molti idrocarburi aromatici policiclici, come il benzo[a]pirene del fumo di sigaretta, si spiega perché:",
+    "options": [
+      {
+        "text": "Il metabolismo li trasforma in epossidi, elettrofili reattivi che si legano in modo covalente alle basi del DNA formando addotti mutageni",
+        "isCorrect": true
+      },
+      {
+        "text": "Sono molecole così stabili che si accumulano nei tessuti senza reagire mai",
+        "isCorrect": false
+      },
+      {
+        "text": "Liberano radicali liberi direttamente, senza bisogno di alcuna trasformazione metabolica",
+        "isCorrect": false
+      },
+      {
+        "text": "Si comportano da acidi forti e abbassano il pH intracellulare",
+        "isCorrect": false
+      },
+      {
+        "text": "Idrolizzano i legami fosfodiesterici del DNA grazie alla loro basicità",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Che cosa accomuna una reazione di eliminazione E1 e una sostituzione SN1?",
+    "options": [
+      {
+        "text": "Entrambe passano per lo stesso carbocatione intermedio, e competono: il nucleofilo può attaccare il carbonio positivo o strappare un protone al carbonio adiacente formando un alchene",
+        "isCorrect": true
+      },
+      {
+        "text": "Entrambe richiedono l'attacco dorsale simultaneo del nucleofilo",
+        "isCorrect": false
+      },
+      {
+        "text": "Entrambe procedono senza intermedi, in un solo stadio concertato",
+        "isCorrect": false
+      },
+      {
+        "text": "Entrambe hanno velocità proporzionale alla concentrazione del nucleofilo",
+        "isCorrect": false
+      },
+      {
+        "text": "Entrambe producono esclusivamente un alchene come prodotto finale",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Nei dieni coniugati, come nella catena del retinale, la delocalizzazione elettronica ha come conseguenza che:",
+    "options": [
+      {
+        "text": "Il sistema è più stabile della somma dei doppi legami isolati e assorbe la luce a lunghezze d'onda maggiori, tanto più quanto più lungo è il sistema coniugato",
+        "isCorrect": true
+      },
+      {
+        "text": "Il sistema è meno stabile dei doppi legami isolati e assorbe solo nell'ultravioletto lontano",
+        "isCorrect": false
+      },
+      {
+        "text": "I doppi legami diventano liberi di ruotare come legami semplici",
+        "isCorrect": false
+      },
+      {
+        "text": "La molecola perde la capacità di assorbire radiazione elettromagnetica",
+        "isCorrect": false
+      },
+      {
+        "text": "Gli elettroni pi-greco si localizzano fra due soli atomi, rendendo la molecola più reattiva",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "text": "Gli alcani sono poco reattivi e per questo costituiscono le code idrofobiche dei lipidi. La reazione a cui vanno comunque incontro nell'organismo e nella combustione è:",
+    "options": [
+      {
+        "text": "L'ossidazione, che nelle forme estreme porta a CO2 e acqua liberando grandi quantità di energia",
+        "isCorrect": true
+      },
+      {
+        "text": "L'addizione elettrofila, come negli alcheni",
+        "isCorrect": false
+      },
+      {
+        "text": "La sostituzione nucleofila al carbonio, molto rapida in acqua",
+        "isCorrect": false
+      },
+      {
+        "text": "La sostituzione elettrofila aromatica",
+        "isCorrect": false
+      },
+      {
+        "text": "L'idrolisi acida, che li scinde in alcoli e acidi carbossilici",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Il numero di atomi di carbonio insaturi in un cicloalchene con formula bruta C6H10 è ……",
+    "options": [
+      {
+        "text": "2",
+        "isCorrect": true
+      },
+      {
+        "text": "due",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Il doppio legame C=C nell'etene impedisce la rotazione degli atomi attorno all'asse di tale legame e rende la molecola ……",
+    "options": [
+      {
+        "text": "planare",
+        "isCorrect": true
+      },
+      {
+        "text": "piana",
+        "isCorrect": true
+      },
+      {
+        "text": "rigida",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Gli idrocarburi che contengono soltanto legami semplici carbonio-carbonio si dicono ……",
+    "options": [
+      {
+        "text": "saturi",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Un idrocarburo ciclico che contiene nell'anello un atomo diverso dal carbonio si dice ……",
+    "options": [
+      {
+        "text": "eterociclico",
+        "isCorrect": true
+      },
+      {
+        "text": "eterociclo",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Due stereoisomeri che sono immagini speculari non sovrapponibili si chiamano ……",
+    "options": [
+      {
+        "text": "enantiomeri",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Due diastereoisomeri che differiscono per la configurazione di un solo centro chirale si chiamano ……",
+    "options": [
+      {
+        "text": "epimeri",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Una miscela contenente quantità uguali dei due enantiomeri, e perciò priva di attività ottica, si dice ……",
+    "options": [
+      {
+        "text": "racemica",
+        "isCorrect": true
+      },
+      {
+        "text": "racemo",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Un composto che ruota il piano della luce polarizzata in senso orario si dice ……",
+    "options": [
+      {
+        "text": "destrogiro",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "La configurazione assoluta di un centro chirale si assegna, secondo le regole di priorità, con le lettere R e ……",
+    "options": [
+      {
+        "text": "S",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "La rottura di un legame covalente che assegna il doppietto a uno solo dei due frammenti si dice ……",
+    "options": [
+      {
+        "text": "eterolitica",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Un atomo di carbonio che porta una carica positiva e ha solo sei elettroni di valenza si chiama ……",
+    "options": [
+      {
+        "text": "carbocatione",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Fra i carbocationi, il più stabile è quello ……",
+    "options": [
+      {
+        "text": "terziario",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Una specie ricca di elettroni che attacca un centro povero di elettroni si chiama ……",
+    "options": [
+      {
+        "text": "nucleofilo",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Una specie povera di elettroni, che li accetta da un nucleofilo, si chiama ……",
+    "options": [
+      {
+        "text": "elettrofilo",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Nella sostituzione nucleofila SN2 la configurazione del carbonio attaccato subisce una ……",
+    "options": [
+      {
+        "text": "inversione",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "La sostituzione nucleofila che passa attraverso la formazione di un carbocatione intermedio si indica con la sigla ……",
+    "options": [
+      {
+        "text": "SN1",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "La reazione in cui due atomi o gruppi vengono rimossi da carboni adiacenti con formazione di un doppio legame si chiama ……",
+    "options": [
+      {
+        "text": "eliminazione",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Nei cicloalcani piccoli come il ciclopropano l'allontanamento degli angoli di legame dal valore tetraedrico genera una …… angolare.",
+    "options": [
+      {
+        "text": "tensione",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "La reazione tipica degli alcheni, in cui il doppio legame viene attaccato da un reagente povero di elettroni, si chiama addizione ……",
+    "options": [
+      {
+        "text": "elettrofila",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Nell'addizione di un acido alogenidrico a un alchene asimmetrico, l'orientamento del prodotto prevalente è previsto dalla regola di ……",
+    "options": [
+      {
+        "text": "Markovnikov",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Un sistema ciclico planare e coniugato è aromatico se contiene un numero di elettroni pi-greco pari a 4n+……",
+    "options": [
+      {
+        "text": "2",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "La reazione caratteristica del benzene, che conserva l'aromaticità dell'anello, è la …… elettrofila aromatica.",
+    "options": [
+      {
+        "text": "sostituzione",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Le basi azotate costituite da due anelli condensati, come l'adenina e la guanina, appartengono alla classe delle ……",
+    "options": [
+      {
+        "text": "purine",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Le basi azotate costituite da un unico anello esatomico con due atomi di azoto appartengono alla classe delle ……",
+    "options": [
+      {
+        "text": "pirimidine",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Un frammento molecolare con un elettrone spaiato, prodotto dalla rottura omolitica di un legame, si chiama ……",
+    "options": [
+      {
+        "text": "radicale",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Un sostituente che per effetto induttivo sottrae densità elettronica all'anello e lo disattiva verso l'elettrofilo si dice elettron-……",
+    "options": [
+      {
+        "text": "attrattore",
+        "isCorrect": true
+      },
+      {
+        "text": "attiratore",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "La trasformazione metabolica che rende cancerogeni gli idrocarburi aromatici policiclici li converte in ……",
+    "options": [
+      {
+        "text": "epossidi",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Nella nomenclatura IUPAC il composto CH3-CH(CH3)-CH2-CH3 si chiama …… -metilbutano.",
+    "options": [
+      {
+        "text": "2",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "type": "COMPLETAMENTO",
+    "text": "Una molecola che non è sovrapponibile alla propria immagine speculare si dice ……",
+    "options": [
+      {
+        "text": "chirale",
+        "isCorrect": true
+      }
+    ]
+  }
+]
