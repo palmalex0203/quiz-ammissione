@@ -15,7 +15,9 @@ export default async function ResultsPage({
   const [students, tests] = await Promise.all([
     prisma.user.findMany({ where: { role: "STUDENT" }, orderBy: { name: "asc" } }),
     prisma.test.findMany({
-      where: { createdById: session.user.id, kind: { in: ["SIMULAZIONE", "ESERCITAZIONE"] } },
+      // Anche le prove ufficiali: i tentativi comparivano già nell'elenco, ma senza
+      // di loro il filtro per test non permetteva di isolarli.
+      where: { createdById: session.user.id, kind: { in: ["SIMULAZIONE", "ESERCITAZIONE", "UFFICIALE"] } },
       orderBy: { title: "asc" },
     }),
   ]);

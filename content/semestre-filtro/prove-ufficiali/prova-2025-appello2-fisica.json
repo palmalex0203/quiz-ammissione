@@ -1,0 +1,214 @@
+[
+  {
+    "subject": "Fisica", "topic": "SF-FIS-05",
+    "text": "In un gas reale:",
+    "options": [
+      { "text": "Fra le particelle non esistono interazioni a distanza", "isCorrect": false },
+      { "text": "Il covolume non è trascurabile", "isCorrect": true },
+      { "text": "Gli urti tra particelle sono perfettamente elastici", "isCorrect": false },
+      { "text": "Le particelle sono puntiformi", "isCorrect": false },
+      { "text": "Vale la relazione PV = nRT", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Una zattera di legno a base quadrata di lato 4 m e altezza 50 cm galleggia sull'acqua portando un carico di 400 kg. Sapendo che la densità del legno è 0,8 g/cm3, quale è l'altezza della zattera immersa in acqua?",
+    "options": [
+      { "text": "45 cm", "isCorrect": false },
+      { "text": "42,5 cm", "isCorrect": true },
+      { "text": "40 cm", "isCorrect": false },
+      { "text": "37,5 cm", "isCorrect": false },
+      { "text": "35 cm", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "La grandezza fisica Energia Cinetica di un corpo:",
+    "options": [
+      { "text": "si misura in kg/sec2", "isCorrect": false },
+      { "text": "si misura in watt", "isCorrect": false },
+      { "text": "si misura in Joule", "isCorrect": true },
+      { "text": "è costante nel moto uniformemente accelerato", "isCorrect": false },
+      { "text": "è nulla nel moto rettilineo uniforme", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-01",
+    "text": "Un volume di 10 dm3 corrisponde a:",
+    "options": [
+      { "text": "100 millilitri", "isCorrect": false },
+      { "text": "100 litri", "isCorrect": false },
+      { "text": "10 litri", "isCorrect": true },
+      { "text": "1 litro", "isCorrect": false },
+      { "text": "10 millilitri", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-01",
+    "text": "La somma di due vettori a e b è tale da produrre come risultato un vettore di modulo |a – b|. Possiamo affermare che i due vettori:",
+    "options": [
+      { "text": "Formano un angolo acuto", "isCorrect": false },
+      { "text": "Hanno la stessa direzione e lo stesso verso", "isCorrect": false },
+      { "text": "Formano un angolo ottuso", "isCorrect": false },
+      { "text": "Hanno la stessa direzione e versi opposti", "isCorrect": true },
+      { "text": "Sono perpendicolari", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-04",
+    "text": "Cosa vuol dire che un suono ha un livello sonoro di 0 Decibel?",
+    "options": [
+      { "text": "Che la sua intensità è molto al di sotto del livello di udibilità", "isCorrect": false },
+      { "text": "Che la sua intensità è 0", "isCorrect": false },
+      { "text": "Niente: non può esistere un suono che ha un livello sonoro di 0 Decibel", "isCorrect": false },
+      { "text": "Che ha una frequenza di 1 KHz", "isCorrect": false },
+      { "text": "Che la sua intensità è 10 alla meno 12 W/m2", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-05",
+    "text": "Due corpi di massa M1 e M2 hanno la stessa capacità termica. Se assorbono dall'ambiente la stessa quantità di calore Q, subiscono rispettivamente una variazione di temperatura ΔT1 e ΔT2. Si può affermare che:",
+    "options": [
+      { "text": "Per determinare le variazioni di temperatura è necessario sapere se la trasformazione avviene a pressione o a volume costante", "isCorrect": false },
+      { "text": "ΔT1 > ΔT2", "isCorrect": false },
+      { "text": "ΔT1 = ΔT2", "isCorrect": true },
+      { "text": "ΔT1 < ΔT2", "isCorrect": false },
+      { "text": "È necessario conoscere le masse dei due corpi per determinare le variazioni di temperatura", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Data una carica puntiforme, quali sono le superfici equipotenziali?",
+    "options": [
+      { "text": "Superfici cubiche con la carica al centro", "isCorrect": false },
+      { "text": "Piani a distanza crescente dalla carica", "isCorrect": false },
+      { "text": "Sfere concentriche alla carica", "isCorrect": true },
+      { "text": "Ellissi di cui la carica occupa uno dei fuochi", "isCorrect": false },
+      { "text": "Superfici piramidali con la carica al centro", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-04",
+    "text": "Un'onda sonora di frequenza f si propaga con velocità v dentro un lungo tubo di sezione A. Se si raddoppia la frequenza dell'onda sonora, a parità del resto, la potenza mediata su un periodo trasportata dall'onda:",
+    "options": [
+      { "text": "Si dimezza", "isCorrect": false },
+      { "text": "Resta inalterata", "isCorrect": false },
+      { "text": "Diventa un quarto", "isCorrect": false },
+      { "text": "Raddoppia", "isCorrect": false },
+      { "text": "Aumenta di un fattore 4", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-05",
+    "text": "La variazione di energia interna di un gas perfetto che va da uno stato A (PA, VA, TA) a uno stato B (PB, VB, TB) vale:",
+    "options": [
+      { "text": "n cV ΔP", "isCorrect": false },
+      { "text": "n cV ΔT", "isCorrect": true },
+      { "text": "n cP ΔT", "isCorrect": false },
+      { "text": "n cP ΔP", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Le linee di campo elettrico all'interno di un condensatore piano ideale sono:",
+    "options": [
+      { "text": "Dirette dall'armatura positiva a quella negativa perpendicolarmente ad esse", "isCorrect": true },
+      { "text": "Cilindriche attorno alle armature", "isCorrect": false },
+      { "text": "Dirette dall'armatura negativa a quella positiva perpendicolarmente ad esse", "isCorrect": false },
+      { "text": "Parallele alle superfici affacciate alle armature", "isCorrect": false },
+      { "text": "A raggiera", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "A quale pressione, in atmosfere, è sottoposto un sub che si trova a 50 m sotto il livello del mare?",
+    "options": [
+      { "text": "60", "isCorrect": false },
+      { "text": "5", "isCorrect": false },
+      { "text": "50", "isCorrect": false },
+      { "text": "30", "isCorrect": false },
+      { "text": "6", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-01",
+    "text": "Nel Sistema Internazionale quale è l'unità di misura della grandezza fisica \"Numero di Reynolds\"?",
+    "options": [
+      { "text": "kg × m/s2", "isCorrect": false },
+      { "text": "Ohm", "isCorrect": false },
+      { "text": "(Ohm) alla meno 1", "isCorrect": false },
+      { "text": "È una grandezza fisica adimensionale", "isCorrect": true },
+      { "text": "Pa × s/m", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Un raggio di luce nel passaggio attraverso una lastra di vetro a facce piane e parallele viene:",
+    "options": [
+      { "text": "Deviato in modo da allontanarsi dalla normale alla lastra", "isCorrect": false },
+      { "text": "Deviato in modo da avvicinarsi alla normale alla lastra", "isCorrect": false },
+      { "text": "Deviato in modo da avvicinarsi alla superficie della lastra", "isCorrect": false },
+      { "text": "Traslato parallelamente a sé stesso", "isCorrect": true },
+      { "text": "Tutte le risposte proposte sono errate", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-01",
+    "text": "Una nave percorre in successione 10 km verso Nord, 6 km verso Est e infine 18 km verso Sud. Quanto vale il modulo dello spostamento risultante?",
+    "options": [
+      { "text": "15 km", "isCorrect": false },
+      { "text": "10 km", "isCorrect": true },
+      { "text": "5 km", "isCorrect": false },
+      { "text": "25 km", "isCorrect": false },
+      { "text": "20 km", "isCorrect": false }
+    ]
+  },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Un elettrone si sposta tra 2 punti di un campo elettrico, tra i quali esiste una d.d.p. di 3 x 10 alla 4 volt. La variazione di energia dell'elettrone è pari a …… keV.",
+    "options": [ { "text": "30", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-01", "type": "COMPLETAMENTO",
+    "text": "Una velocità di 30 m/s espressa in km/h vale ……",
+    "options": [ { "text": "108", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Le linee di forza del campo magnetico sono ……",
+    "options": [ { "text": "chiuse", "isCorrect": true }, { "text": "linee chiuse", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Il grafico s-t di un moto uniformemente accelerato è di forma ……",
+    "options": [ { "text": "parabolica", "isCorrect": true }, { "text": "parabola", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "La forza elettrica Fe tra due cariche secondo la legge di Coulomb è inversamente proporzionale al quadrato della …… che le separa.",
+    "options": [ { "text": "distanza", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Il funzionamento delle fibre ottiche come guide di luce si basa sul fenomeno della …… totale.",
+    "options": [ { "text": "riflessione", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "L'altezza dal suolo alla quale la velocità di un grave in caduta libera senza attriti, inizialmente a riposo a 12 m, uguaglia la metà di quella finale, è …… m",
+    "options": [ { "text": "9", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "text": "Se un sistema termodinamico passa dallo stato A allo stato B lungo una trasformazione irreversibile, la sua variazione di entropia è …… quella calcolata lungo una trasformazione reversibile che congiunga gli stessi stati A e B.",
+    "options": [ { "text": "uguale a", "isCorrect": true }, { "text": "uguale", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "text": "Sulla superficie della luna le onde sonore …… si propagano",
+    "options": [ { "text": "non", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Dalle densità 850 kg/m3 dell'olivo e 1000 kg/m3 dell'acqua si ricava che la frazione di volume immerso di un tronco di legno di ulivo in acqua dolce è pari a ……",
+    "options": [ { "text": "0,85", "isCorrect": true }, { "text": "0.85", "isCorrect": true }, { "text": "85%", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "text": "Un gas va dallo stato A allo stato B lungo una trasformazione isobara reversibile, compiendo un lavoro pari a 100 J. Il lavoro compiuto nella trasformazione inversa sarà …… J",
+    "options": [ { "text": "-100", "isCorrect": true }, { "text": "meno 100", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "text": "Un suono di intensità acustica pari a 60 dB è superiore alla soglia di udibilità di un fattore ……",
+    "options": [ { "text": "10^6", "isCorrect": true }, { "text": "1000000", "isCorrect": true }, { "text": "un milione", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Una zattera di legno (densità 800 kg/m3) che ha base quadrata di lato 4 m e altezza 50 cm galleggia sull'acqua (densità 1000 kg/m3). Quale è il massimo peso, espresso in N, con cui si può caricare la zattera senza che affondi? ……",
+    "options": [ { "text": "15680", "isCorrect": true }, { "text": "15696", "isCorrect": true }, { "text": "16000", "isCorrect": true }, { "text": "1,6x10^4", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-01", "type": "COMPLETAMENTO",
+    "text": "Sapendo che 1 metro è uguale a 100 centimetri, un'accelerazione di 320 cm/s2 corrisponde a …… m/s2 nel Sistema Internazionale.",
+    "options": [ { "text": "3,2", "isCorrect": true }, { "text": "3.2", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "text": "Lo scambio di calore può avvenire tramite conduzione, convezione e ……",
+    "options": [ { "text": "irraggiamento", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "text": "Un'ambulanza si muove con velocità costante v su una strada rettilinea, a sirena spiegata; la sirena emette un allarme sonoro di frequenza f. Un pedone fermo sul bordo della strada vede l'ambulanza che si avvicina e sente l'allarme sonoro con una frequenza f' maggiore di f del 5%. Sapendo che la velocità del suono in aria è c ~ 1200 km/h, e considerando nel calcolo soltanto termini al primo ordine in v/c, la velocità v vale …… km/h",
+    "options": [ { "text": "60", "isCorrect": true } ] }
+]

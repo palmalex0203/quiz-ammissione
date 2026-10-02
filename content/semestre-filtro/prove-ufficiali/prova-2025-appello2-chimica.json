@@ -1,0 +1,215 @@
+[
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07",
+    "text": "Nel nostro organismo il galattosio può essere convertito in glucosio. Quale è la relazione tra i due saccaridi?",
+    "options": [
+      { "text": "sono enantiomeri", "isCorrect": false },
+      { "text": "sono tautomeri", "isCorrect": false },
+      { "text": "non sono epimeri", "isCorrect": false },
+      { "text": "sono epimeri", "isCorrect": true },
+      { "text": "non sono isomeri", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-03",
+    "text": "In una soluzione l'aggiunta di uno ione già presente in un sale poco solubile produce:",
+    "options": [
+      { "text": "una reazione di ossidoriduzione", "isCorrect": false },
+      { "text": "aumento del pH", "isCorrect": false },
+      { "text": "diminuzione della temperatura", "isCorrect": false },
+      { "text": "aumento della solubilità del sale", "isCorrect": false },
+      { "text": "riduzione della solubilità del sale", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-01",
+    "text": "Gli isotopi di un elemento sono atomi che hanno lo stesso numero:",
+    "options": [
+      { "text": "atomico", "isCorrect": true },
+      { "text": "di massa", "isCorrect": false },
+      { "text": "di elettroni e neutroni", "isCorrect": false },
+      { "text": "di elettroni nel nucleo", "isCorrect": false },
+      { "text": "di neutroni", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-01",
+    "text": "Quale tra le seguenti è la formula chimica del cloruro di sodio?",
+    "options": [
+      { "text": "NaCl", "isCorrect": true },
+      { "text": "Na2Cl", "isCorrect": false },
+      { "text": "K2Cl", "isCorrect": false },
+      { "text": "NaCl2", "isCorrect": false },
+      { "text": "KCl", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07",
+    "text": "Quale delle seguenti affermazioni riguardanti il glicogeno è corretta?",
+    "options": [
+      { "text": "È un polisaccaride lineare e la sua struttura non presenta ramificazioni", "isCorrect": false },
+      { "text": "È la forma in cui viene accumulato il glucosio, principalmente nel fegato e nei muscoli", "isCorrect": true },
+      { "text": "Col termine \"glicemia\" si intende la concentrazione di glicogeno nel sangue", "isCorrect": false },
+      { "text": "È la forma in cui viene accumulato il glucosio, principalmente nel cervello", "isCorrect": false },
+      { "text": "È formato quasi interamente da glucosio e da una piccola percentuale di galattosio", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-01",
+    "text": "L'atomo con la struttura elettronica 1s2 2s2 2p5 è:",
+    "options": [
+      { "text": "Ossigeno", "isCorrect": false },
+      { "text": "Azoto", "isCorrect": false },
+      { "text": "Neon", "isCorrect": false },
+      { "text": "Fluoro", "isCorrect": true },
+      { "text": "Argon", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-06",
+    "text": "L'idrolisi consiste nella:",
+    "options": [
+      { "text": "formazione di un legame chimico in presenza di acqua", "isCorrect": false },
+      { "text": "solubilizzazione di un composto molecolare", "isCorrect": false },
+      { "text": "rottura di un legame intramolecolare in presenza di idrogeno", "isCorrect": false },
+      { "text": "scissione di molecole per effetto dell'acqua", "isCorrect": true },
+      { "text": "scissione di molecole applicando un campo elettrico", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04",
+    "text": "Quali sono i tamponi del sangue?",
+    "options": [
+      { "text": "CO2/HCO3-, H2PO4-/HPO4(2-), proteina/proteinato", "isCorrect": true },
+      { "text": "CO2/HCO3-, H3PO4/HPO4(2-), proteina/proteinato", "isCorrect": false },
+      { "text": "CO2/HCO3-, H3PO4/H2PO4-, proteina/proteinato", "isCorrect": false },
+      { "text": "CO2/HCO3-, NH3/NH4+, proteina/proteinato", "isCorrect": false },
+      { "text": "CO2/HCO3-, HSO4-/SO4(2-), proteina/proteinato", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04",
+    "text": "A 0,5 litri di una soluzione 0,2 M di acido acetico vengono aggiunte 0,1 moli di NaOH con la formazione di acetato di sodio. La soluzione risultante sarà:",
+    "options": [
+      { "text": "Acida per il fenomeno dell'idrolisi salina", "isCorrect": false },
+      { "text": "Acida per l'eccesso di acido acetico", "isCorrect": false },
+      { "text": "Basica per il fenomeno dell'idrolisi salina", "isCorrect": true },
+      { "text": "Neutra perché neutralizzata perfettamente", "isCorrect": false },
+      { "text": "Basica per l'eccesso di NaOH", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04",
+    "text": "Tutte le reazioni in cui si verifica un trasferimento di elettroni da una specie chimica ad un'altra sono dette:",
+    "options": [
+      { "text": "dismutazioni", "isCorrect": false },
+      { "text": "elettrochimiche", "isCorrect": false },
+      { "text": "elettrolitiche", "isCorrect": false },
+      { "text": "semireazioni", "isCorrect": false },
+      { "text": "ossidoriduzioni", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07",
+    "text": "Indicare quale tra queste affermazioni è corretta:",
+    "options": [
+      { "text": "Il glicogeno è un omopolisaccaride", "isCorrect": true },
+      { "text": "L'amido è un polisaccaride di riserva presente nei tessuti animali", "isCorrect": false },
+      { "text": "Il glicogeno è caratterizzato da un solo tipo di legame glicosidico", "isCorrect": false },
+      { "text": "L'amido è un eteropolisaccaride", "isCorrect": false },
+      { "text": "Il glicogeno è immagazzinato principalmente nel cervello", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07",
+    "text": "Quale di questi steroidi non è un ormone?",
+    "options": [
+      { "text": "Colesterolo", "isCorrect": true },
+      { "text": "Estradiolo", "isCorrect": false },
+      { "text": "Cortisone", "isCorrect": false },
+      { "text": "Testosterone", "isCorrect": false },
+      { "text": "Cortisolo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07",
+    "text": "Indicare quale affermazione sui lipidi è corretta:",
+    "options": [
+      { "text": "gli acidi grassi insaturi sono generalmente solidi a temperatura ambiente", "isCorrect": false },
+      { "text": "gli acidi grassi saturi presenti nel nostro organismo sono solamente 2: acido stearico e acido palmitico", "isCorrect": false },
+      { "text": "sono generalmente idrofobi e lipofili", "isCorrect": true },
+      { "text": "sono generalmente insolubili in solventi organici", "isCorrect": false },
+      { "text": "nessuno steroide è un lipide", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04",
+    "text": "Qual è il pH di una soluzione 0,1 mM di HCl?",
+    "options": [
+      { "text": "2", "isCorrect": false },
+      { "text": "4", "isCorrect": true },
+      { "text": "6", "isCorrect": false },
+      { "text": "5", "isCorrect": false },
+      { "text": "3", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-02",
+    "text": "La pressione di vapore di un liquido in una miscela dipende dalla sua pressione di vapore allo stato puro e dalla sua concentrazione espressa come:",
+    "options": [
+      { "text": "% Peso/peso (massa/massa)", "isCorrect": false },
+      { "text": "% Peso/volume", "isCorrect": false },
+      { "text": "Molalità", "isCorrect": false },
+      { "text": "Molarità", "isCorrect": false },
+      { "text": "Frazione molare", "isCorrect": true }
+    ]
+  },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-05", "type": "COMPLETAMENTO",
+    "text": "Il numero di C insaturi in un cicloalchene con formula bruta C6H10 è ……",
+    "options": [ { "text": "2", "isCorrect": true }, { "text": "due", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-02", "type": "COMPLETAMENTO",
+    "text": "La pressione osmotica è la pressione che bisogna esercitare sulla soluzione perché non venga …… dal solvente",
+    "options": [ { "text": "diluita", "isCorrect": true }, { "text": "attraversata", "isCorrect": true }, { "text": "invasa", "isCorrect": true }, { "text": "penetrata", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04", "type": "COMPLETAMENTO",
+    "text": "L'equazione di Henderson Hasselbalch si utilizza per calcolare il pH di una soluzione ……",
+    "options": [ { "text": "tampone", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04", "type": "COMPLETAMENTO",
+    "text": "Secondo la teoria di Bronsted un composto in grado di rilasciare ioni H+ è un ……",
+    "options": [ { "text": "acido", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-01", "type": "COMPLETAMENTO",
+    "text": "Come è noto il ghiaccio galleggia nell'acqua perché ha una …… minore.",
+    "options": [ { "text": "densita", "isCorrect": true }, { "text": "densità", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-02", "type": "COMPLETAMENTO",
+    "text": "La temperatura di ebollizione della soluzione fisiologica è …… della temperatura di ebollizione dell'acqua distillata.",
+    "options": [ { "text": "maggiore", "isCorrect": true }, { "text": "superiore", "isCorrect": true }, { "text": "piu alta", "isCorrect": true }, { "text": "più alta", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-05", "type": "COMPLETAMENTO",
+    "text": "Il doppio legame C=C nell'etene impedisce la rotazione degli atomi attorno all'asse di tale legame e rende la molecola ……",
+    "options": [ { "text": "planare", "isCorrect": true }, { "text": "piana", "isCorrect": true }, { "text": "rigida", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04", "type": "COMPLETAMENTO",
+    "text": "La costante di dissociazione dell'acqua Kw è indipendente dalla temperatura? ……",
+    "options": [ { "text": "no", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07", "type": "COMPLETAMENTO",
+    "text": "Circa un terzo degli aminoacidi del collagene è costituito dall'aminoacido ……",
+    "options": [ { "text": "glicina", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04", "type": "COMPLETAMENTO",
+    "text": "Per bilanciare le reazioni redox in soluzione acida si applica il metodo delle ……",
+    "options": [ { "text": "semireazioni", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-03", "type": "COMPLETAMENTO",
+    "text": "L'energia di attivazione di una reazione chimica è definita come la differenza di energia tra il complesso attivato e i ……",
+    "options": [ { "text": "reagenti", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-01", "type": "COMPLETAMENTO",
+    "text": "Negli isotopi di un elemento è diverso il numero di …… nel nucleo.",
+    "options": [ { "text": "neutroni", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-02", "type": "COMPLETAMENTO",
+    "text": "La solubilità dei gas nei liquidi è governata dalla legge di ……",
+    "options": [ { "text": "Henry", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-01", "type": "COMPLETAMENTO",
+    "text": "L'entalpia è particolarmente utile nello studio delle reazioni chimiche a pressione costante dove è uguale al …… scambiato",
+    "options": [ { "text": "calore", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-01", "type": "COMPLETAMENTO",
+    "text": "Il numero di ossidazione di un atomo in una molecola è la carica formale che l'atomo assume attribuendo gli elettroni di legame all'elemento più ……",
+    "options": [ { "text": "elettronegativo", "isCorrect": true } ] },
+  { "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-06", "type": "COMPLETAMENTO",
+    "text": "L'urea è il prodotto finale del catabolismo delle proteine e viene eliminata principalmente attraverso i reni. Dal punto di vista chimico è la diammide dell'acido ……",
+    "options": [ { "text": "carbonico", "isCorrect": true } ] }
+]

@@ -1,0 +1,215 @@
+[
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05",
+    "text": "I processi di fagocitosi e autofagia:",
+    "options": [
+      { "text": "contribuiscono a proteggere la cellula da parassiti extracellulari e intracellulari", "isCorrect": true },
+      { "text": "sono lo stesso processo indicato con termini diversi", "isCorrect": false },
+      { "text": "avvengono solo in cellule specializzate", "isCorrect": false },
+      { "text": "il primo coinvolge lisosomi, il secondo no", "isCorrect": false },
+      { "text": "sono processi alternativi, nelle cellule avviene o l'uno o l'altro", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-03",
+    "text": "Un gene è:",
+    "options": [
+      { "text": "Una proteina che controlla le caratteristiche ereditarie", "isCorrect": false },
+      { "text": "Una sequenza di DNA che contiene le informazioni solo per RNA non codificanti", "isCorrect": false },
+      { "text": "Una molecola di RNA che trasporta informazioni genetiche dalla cellula al nucleo", "isCorrect": false },
+      { "text": "Una sequenza di DNA che regola esclusivamente l'espressione di altre sequenze di DNA, senza codificare proteine", "isCorrect": false },
+      { "text": "Una sequenza di DNA che contiene le informazioni per la sintesi di una catena polipeptidica o di una molecola di RNA", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "Il massimo livello di compattamento della cromatina è costituito da:",
+    "options": [
+      { "text": "Fibra da 300 nm", "isCorrect": false },
+      { "text": "Fibra da 30 nm", "isCorrect": false },
+      { "text": "Fibra da 11 nm", "isCorrect": false },
+      { "text": "Solenoide", "isCorrect": false },
+      { "text": "Cromosoma metafasico", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05",
+    "text": "In quale/i dei seguenti comparti di una cellula eucariotica animale è prodotto l'RNA ribosomale?",
+    "options": [
+      { "text": "Nel reticolo endoplasmatico rugoso", "isCorrect": false },
+      { "text": "Nel nucleolo e nei mitocondri", "isCorrect": true },
+      { "text": "Nel citoplasma e nel nucleolo", "isCorrect": false },
+      { "text": "Nel reticolo endoplasmatico liscio", "isCorrect": false },
+      { "text": "Nei mitocondri e nel reticolo endoplasmatico liscio", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Se in una metafase mitotica di una cellula di un ipotetico organismo aploide n=12 si osservano 24 cromatidi fratelli, quante coppie di cromosomi omologhi sono presenti?",
+    "options": [
+      { "text": "12", "isCorrect": false },
+      { "text": "48", "isCorrect": false },
+      { "text": "36", "isCorrect": false },
+      { "text": "0", "isCorrect": true },
+      { "text": "24", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "Due cromosomi omologhi di una qualsiasi coppia:",
+    "options": [
+      { "text": "Definiscono il sesso dell'individuo", "isCorrect": false },
+      { "text": "Hanno dimensioni diverse", "isCorrect": false },
+      { "text": "Si appaiono durante la fase S", "isCorrect": false },
+      { "text": "Sono caratterizzati da identica sequenza di loci genici", "isCorrect": true },
+      { "text": "Sono caratterizzati da identica sequenza di basi azotate nel loro DNA", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-03",
+    "text": "Nei procarioti l'RNA ribosomale è rappresentato da molecole con i seguenti coefficienti di sedimentazione:",
+    "options": [
+      { "text": "23, 16 e 5 Svedberg", "isCorrect": true },
+      { "text": "18, 28 e 5 Svedberg", "isCorrect": false },
+      { "text": "18, 28, 5.8 e 5 Svedberg", "isCorrect": false },
+      { "text": "12 e 16 Svedberg", "isCorrect": false },
+      { "text": "16 e 23 Svedberg", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05",
+    "text": "Quali di queste affermazioni sugli oggetti biologici NON è corretta?",
+    "options": [
+      { "text": "I virus hanno un citoscheletro ancestrale", "isCorrect": true },
+      { "text": "Le cellule procariotiche sono prive di citoscheletro complesso ma hanno un sistema di proteine strutturali con funzioni analoghe a quelle del citoscheletro eucariotico", "isCorrect": false },
+      { "text": "Il citoscheletro è una componente strutturale presente in tutte le cellule eucariotiche", "isCorrect": false },
+      { "text": "Alcuni organismi monocellulari sintetizzano molecole di ATP utilizzando l'energia liberata dalla fermentazione", "isCorrect": false },
+      { "text": "Alcune cellule procariotiche possono operare la fotosintesi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05",
+    "text": "Le membrane biologiche sono pochissimo permeabili a:",
+    "options": [
+      { "text": "N2", "isCorrect": false },
+      { "text": "O2", "isCorrect": false },
+      { "text": "H2O", "isCorrect": false },
+      { "text": "CO2", "isCorrect": false },
+      { "text": "Ioni Ca2+", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "Le molecole segnale che agiscono tramite recettori intracellulari sono:",
+    "options": [
+      { "text": "Fattori di crescita", "isCorrect": false },
+      { "text": "Ormoni peptidici", "isCorrect": false },
+      { "text": "Neurormoni", "isCorrect": false },
+      { "text": "Ormoni steroidei", "isCorrect": true },
+      { "text": "Neurotrasmettitori", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "Quale delle seguenti affermazioni evidenzia una differenza significativa tra enzimi proteici e ribozimi?",
+    "options": [
+      { "text": "Sono evolutivamente correlati e strutturalmente simili", "isCorrect": false },
+      { "text": "Agiscono in compartimenti cellulari separati", "isCorrect": false },
+      { "text": "La loro attività non richiede energia", "isCorrect": false },
+      { "text": "Richiedono siti attivi con caratteristiche diverse", "isCorrect": true },
+      { "text": "Hanno un'attività catalitica intercambiabile tra proteine e RNA", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "La fibronectina è:",
+    "options": [
+      { "text": "Un polisaccaride presente nella matrice extracellulare", "isCorrect": false },
+      { "text": "Una glicoproteina della matrice extracellulare che collega le integrine (proteine transmembrana) a componenti della matrice extracellulare, come il collagene", "isCorrect": true },
+      { "text": "Un enzima che degrada le proteine presenti nella matrice extracellulare", "isCorrect": false },
+      { "text": "Una proteina integrale di membrana", "isCorrect": false },
+      { "text": "Una proteina del citoscheletro", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05",
+    "text": "Il segnale di localizzazione lisosomiale di una proteina neosintetizzata è:",
+    "options": [
+      { "text": "Una serina fosforilata", "isCorrect": false },
+      { "text": "Un residuo di mannosio fosforilato di una sua catena oligosaccaridica", "isCorrect": true },
+      { "text": "Un'ancora lipidica a cui viene legata la proteina nel reticolo", "isCorrect": false },
+      { "text": "Una sequenza amminoacidica amino terminale della proteina da smistare", "isCorrect": false },
+      { "text": "Una tirosina fosforilata", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-03",
+    "text": "Indicare quale affermazione NON è corretta nel contesto della replicazione del DNA, a livello della forcella di replicazione:",
+    "options": [
+      { "text": "L'enzima elicasi separa i due filamenti del DNA rompendo i legami a idrogeno tra le basi azotate complementari e creando una struttura a Y (forcella replicativa)", "isCorrect": false },
+      { "text": "La sintesi del filamento guida (leading strand) procede in maniera continua in direzione 5'-3', mentre la sintesi del filamento ritardato (lagging strand) avviene in modo discontinuo tramite la formazione di brevi segmenti di DNA chiamati frammenti di Okazaki", "isCorrect": false },
+      { "text": "Le proteine SSB si legano ai filamenti di DNA separati prevenendo la loro riassociazione", "isCorrect": false },
+      { "text": "La DNA polimerasi si lega al filamento di DNA per iniziare la trascrizione del DNA in RNA", "isCorrect": true },
+      { "text": "Viene sintetizzato un breve segmento di RNA (primer) che fornisce l'estremità 3'-OH necessaria per l'inizio della sintesi del DNA da parte della DNA polimerasi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "In quale fase della meiosi ha luogo la separazione dei cromosomi omologhi?",
+    "options": [
+      { "text": "Metafase II", "isCorrect": false },
+      { "text": "Anafase II", "isCorrect": false },
+      { "text": "Anafase I", "isCorrect": true },
+      { "text": "Profase I", "isCorrect": false },
+      { "text": "Metafase I", "isCorrect": false }
+    ]
+  },
+  { "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "Due geni che occupano lo stesso locus (posizione) su ciascuno dei cromosomi omologhi e si differenziano per una variazione anche minima nella sequenza nucleotidica - come una singola sostituzione di base - vengono definiti ……",
+    "options": [ { "text": "alleli", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "La metilazione del DNA e le modificazioni degli istoni costituiscono un tipo di regolazione definita ……",
+    "options": [ { "text": "epigenetica", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-05", "type": "COMPLETAMENTO",
+    "text": "È vero o falso che le ripetizioni Fenilalanina-Glicina presenti nelle nucleoporine sono fondamentali per garantire la direzionalità del trasporto di proteine nucleo/citosol? ……",
+    "options": [ { "text": "falso", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "Il legame peptidico si forma tra il gruppo carbossilico dell'amminoacido donatore e il gruppo amminico dell'amminoacido accettore con liberazione di una molecola di …… e la formazione di un legame covalente C-N",
+    "options": [ { "text": "acqua", "isCorrect": true }, { "text": "H2O", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "text": "Durante la replicazione del DNA, l'enzima che elimina il superavvolgimento del DNA creato dall'apertura dei filamenti nella forcella replicativa è la ……",
+    "options": [ { "text": "topoisomerasi", "isCorrect": true }, { "text": "DNA girasi", "isCorrect": true }, { "text": "girasi", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-02", "type": "COMPLETAMENTO",
+    "text": "La frazione di DNA eucariotico che si rinatura in modo estremamente rapido viene definita altamente ……",
+    "options": [ { "text": "ripetitiva", "isCorrect": true }, { "text": "ripetitivo", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "Il motivo strutturale denominato \"coiled-coil\" che caratterizza molti domini proteici è generalmente costituito da due a quattro …… che si avvolgono l'una attorno all'altra formando una sovrastruttura stabile attraverso interazioni idrofobiche.",
+    "options": [ { "text": "alfa eliche", "isCorrect": true }, { "text": "eliche alfa", "isCorrect": true }, { "text": "eliche", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "text": "Negli eucarioti, il fattore di trascrizione che ha attività enzimatica (chinasica ed elicasica) è il fattore ……",
+    "options": [ { "text": "TFIIH", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "Il processo di necrosi induce un fenomeno …… locale perché il contenuto della cellula viene rilasciato nell'ambiente circostante.",
+    "options": [ { "text": "infiammatorio", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "La matrice extracellulare viene degradata da enzimi prodotti dalle cellule che sono chiamati ……",
+    "options": [ { "text": "metalloproteasi", "isCorrect": true }, { "text": "proteasi", "isCorrect": true }, { "text": "MMP", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "La coda citosolica della proteina transmembrana SREBP, acronimo per Sterol Response Element Binding Protein, viene separata proteoliticamente dal resto della proteina nel complesso di Golgi e trasportata al ……",
+    "options": [ { "text": "nucleo", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "Durante la trasduzione del segnale, i secondi …… come cAMP, IP3, DAG e Ca2+ contribuiscono all'amplificazione del segnale, permettendo a un singolo evento di legame ligando-recettore di attivare molteplici risposte intracellulari.",
+    "options": [ { "text": "messaggeri", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-05", "type": "COMPLETAMENTO",
+    "text": "Nelle cellule animali, la sintesi, la modificazione e il trasporto di proteine e lipidi sono processi coordinati dal sistema endomembranoso, che è composto dal reticolo endoplasmatico, dall'apparato del Golgi, dalle vescicole di …… e dai lisosomi.",
+    "options": [ { "text": "trasporto", "isCorrect": true }, { "text": "secrezione", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "text": "Il codone di inizio del processo della traduzione, AUG, lega un tRNA iniziatore che trasporta l'amminoacido …… nel sito P del ribosoma",
+    "options": [ { "text": "metionina", "isCorrect": true }, { "text": "met", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "text": "I geni eucariotici contengono regioni codificanti (esoni) e regioni non codificanti (introni) mentre nei geni procariotici non sono presenti gli ……",
+    "options": [ { "text": "introni", "isCorrect": true } ] },
+  { "subject": "Biologia", "topic": "SF-BIO-05", "type": "COMPLETAMENTO",
+    "text": "Sintesi di ormoni steroidei, produzione di particelle lipoproteiche, reazioni di disintossicazione sono caratteristiche del reticolo endoplasmico ……",
+    "options": [ { "text": "liscio", "isCorrect": true } ] }
+]

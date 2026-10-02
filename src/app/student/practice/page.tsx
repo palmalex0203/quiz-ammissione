@@ -9,6 +9,7 @@ import { poolCounts } from "@/lib/question-pool";
 import { publishedNoteTopics } from "@/lib/notes";
 import { questionCountSelect } from "@/lib/test-questions";
 import { topicsOf, MIN_TOPIC_QUESTIONS } from "@/lib/topics";
+import { proveUfficialiOf } from "@/lib/prove-ufficiali";
 import { paperOf, type Track } from "@/lib/tracks";
 import { generateSubjectPractice, generateTopicPractice } from "@/app/student/dashboard/actions";
 
@@ -78,6 +79,7 @@ export default async function StudentPracticePage({
     esercitazioniByFolder.set(key, [...(esercitazioniByFolder.get(key) ?? []), t]);
   }
 
+  const prove = proveUfficialiOf(track.id);
   const subjectNames = track.subjects.map((s) => s.name);
   const abbastanzaDomande = (code: string) => (pool.byTopic.get(code) ?? 0) >= MIN_TOPIC_QUESTIONS;
   const topicsWithQuestions = (subject: string) =>
@@ -292,6 +294,27 @@ export default async function StudentPracticePage({
             </p>
           </div>
         </Link>
+
+        {prove.length > 0 && (
+          <Link
+            href="/student/prove-ufficiali"
+            className="card card-link col-span-2 flex flex-row-reverse items-center justify-between gap-4 p-5 transition-transform hover:-translate-y-0.5 sm:col-span-3"
+          >
+            <span
+              aria-hidden="true"
+              className="flex h-11 w-11 items-center justify-center rounded-2xl bg-brand-soft text-xl"
+            >
+              🗂️
+            </span>
+            <div>
+              <p className="font-display text-lg font-bold leading-tight">Prove ufficiali anni precedenti</p>
+              <p className="mt-1 text-xs text-muted">
+                {prove.length} {prove.length === 1 ? "fascicolo" : "fascicoli"} del Ministero · da scaricare o
+                da svolgere col tempo vero
+              </p>
+            </div>
+          </Link>
+        )}
 
         {tiles.map((subject) => {
           const topicCount = topicsWithQuestions(subject).length;
