@@ -17,6 +17,7 @@ import { prisma } from "@/lib/prisma";
 
 export type TestQuestionRow = {
   id: string;
+  type: "MULTIPLE_CHOICE" | "TRUE_FALSE" | "COMPLETAMENTO";
   subject: string;
   topic: string | null;
   text: string;
@@ -41,14 +42,14 @@ export async function testQuestions(testId: string): Promise<TestQuestionRow[]> 
       orderBy: { order: "asc" },
       select: {
         question: {
-          select: { id: true, subject: true, topic: true, text: true, options: optionSelect },
+          select: { id: true, type: true, subject: true, topic: true, text: true, options: optionSelect },
         },
       },
     }),
     prisma.question.findMany({
       where: { testId },
       orderBy: { order: "asc" },
-      select: { id: true, subject: true, topic: true, text: true, options: optionSelect },
+      select: { id: true, type: true, subject: true, topic: true, text: true, options: optionSelect },
     }),
   ]);
 

@@ -6,6 +6,7 @@ import { requireStudent } from "@/lib/permissions";
 import { gradeAttempt } from "@/lib/grading";
 import { trackOf } from "@/lib/tracks";
 import { testQuestions } from "@/lib/test-questions";
+import { COMPLETION_MAX_LENGTH } from "@/lib/completion";
 
 async function getOwnedInProgressAttempt(attemptId: string, studentId: string) {
   const attempt = await prisma.attempt.findUnique({ where: { id: attemptId } });
@@ -15,8 +16,16 @@ async function getOwnedInProgressAttempt(attemptId: string, studentId: string) {
   return attempt;
 }
 
-/** Una risposta cambiata: null vuol dire tolta. */
-export type AnswerChange = { questionId: string; selectedOptionId: string | null };
+/**
+ * Una risposta cambiata. Nelle domande a scelta multipla porta l'opzione scelta,
+ * in quelle a completamento il testo scritto; con tutti e due a null la risposta
+ * è stata tolta.
+ */
+export type AnswerChange = {
+  questionId: string;
+  selectedOptionId: string | null;
+  typedAnswer: string | null;
+};
 
 /**
  * Salva un gruppo di risposte in un colpo solo.
@@ -37,8 +46,11 @@ export async function saveAnswers(attemptId: string, changes: AnswerChange[]): P
   const session = await requireStudent();
   const attempt = await getOwnedInProgressAttempt(attemptId, session.user.id);
 
-  const tolte = changes.filter((c) => c.selectedOptionId === null).map((c) => c.questionId);
-  const date = changes.filter((c) => c.selectedOptionId !== null);
+  const vuota = (c: AnswerChange) =>
+    c.selectedOptionId == null && (c.typedAnswer == null || c.typedAnswer.trim() === "");
+
+  const tolte = changes.filter(vuota).map((c) => c.questionId);
+  const date = changes.filter((c) => !vuota(c));
 
   const istruzioni = [];
 
@@ -49,19 +61,21 @@ export async function saveAnswers(attemptId: string, changes: AnswerChange[]): P
   }
 
   if (date.length > 0) {
-    // Una sola INSERT per tutte le risposte del gruppo: unnest trasforma i tre
+    // Una sola INSERT per tutte le risposte del gruppo: unnest trasforma gli
     // elenchi in righe, e ON CONFLICT aggiorna quelle già presenti.
     const ids = date.map(() => crypto.randomUUID());
     const domande = date.map((c) => c.questionId);
-    const opzioni = date.map((c) => c.selectedOptionId as string);
+    const opzioni = date.map((c) => c.selectedOptionId);
+    const scritte = date.map((c) => (c.typedAnswer == null ? null : c.typedAnswer.slice(0, COMPLETION_MAX_LENGTH)));
     istruzioni.push(
       prisma.$executeRaw`
-        INSERT INTO "AnswerRecord" ("id", "attemptId", "questionId", "selectedOptionId")
-        SELECT nuova.id, ${attempt.id}, nuova."questionId", nuova."selectedOptionId"
-        FROM unnest(${ids}::text[], ${domande}::text[], ${opzioni}::text[])
-          AS nuova(id, "questionId", "selectedOptionId")
+        INSERT INTO "AnswerRecord" ("id", "attemptId", "questionId", "selectedOptionId", "typedAnswer")
+        SELECT nuova.id, ${attempt.id}, nuova."questionId", nuova."selectedOptionId", nuova."typedAnswer"
+        FROM unnest(${ids}::text[], ${domande}::text[], ${opzioni}::text[], ${scritte}::text[])
+          AS nuova(id, "questionId", "selectedOptionId", "typedAnswer")
         ON CONFLICT ("attemptId", "questionId")
-        DO UPDATE SET "selectedOptionId" = EXCLUDED."selectedOptionId"
+        DO UPDATE SET "selectedOptionId" = EXCLUDED."selectedOptionId",
+                      "typedAnswer" = EXCLUDED."typedAnswer"
       `
     );
   }
@@ -81,8 +95,12 @@ export async function submitAttempt(attemptId: string) {
 
   // Ogni percorso ha il suo punteggio: quello del test, non quello aperto adesso.
   const { score, maxScore, results } = gradeAttempt(
-    questions.map((q) => ({ id: q.id, options: q.options })),
-    existingAnswers.map((a) => ({ questionId: a.questionId, selectedOptionId: a.selectedOptionId })),
+    questions.map((q) => ({ id: q.id, type: q.type, options: q.options })),
+    existingAnswers.map((a) => ({
+      questionId: a.questionId,
+      selectedOptionId: a.selectedOptionId,
+      typedAnswer: a.typedAnswer,
+    })),
     trackOf(test?.track).scoring
   );
 
@@ -103,11 +121,12 @@ export async function submitAttempt(attemptId: string) {
     ...results.map((r) =>
       prisma.answerRecord.upsert({
         where: { attemptId_questionId: { attemptId: attempt.id, questionId: r.questionId } },
-        update: { selectedOptionId: r.selectedOptionId, isCorrect: r.isCorrect },
+        update: { selectedOptionId: r.selectedOptionId, typedAnswer: r.typedAnswer, isCorrect: r.isCorrect },
         create: {
           attemptId: attempt.id,
           questionId: r.questionId,
           selectedOptionId: r.selectedOptionId,
+          typedAnswer: r.typedAnswer,
           isCorrect: r.isCorrect,
         },
       })

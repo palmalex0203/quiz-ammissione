@@ -3,9 +3,11 @@
 import { useEffect, useRef, useState, useTransition } from "react";
 import { submitAttempt } from "./actions";
 import { useAnswerQueue, type SaveState } from "./useAnswerQueue";
+import { COMPLETION_MAX_LENGTH } from "@/lib/completion";
 
 type Question = {
   id: string;
+  type: "MULTIPLE_CHOICE" | "TRUE_FALSE" | "COMPLETAMENTO";
   subject: string;
   text: string;
   options: { id: string; text: string }[];
@@ -18,6 +20,7 @@ export function TakeTestForm({
   startedAt,
   questions,
   initialAnswers,
+  initialTyped,
 }: {
   testTitle: string;
   attemptId: string;
@@ -25,8 +28,12 @@ export function TakeTestForm({
   startedAt: string;
   questions: Question[];
   initialAnswers: Record<string, string>;
+  initialTyped: Record<string, string>;
 }) {
   const [answers, setAnswers] = useState<Record<string, string>>(initialAnswers);
+  // Le risposte scritte stanno separate da quelle scelte: una domanda a
+  // completamento non ha un'opzione, ha un testo.
+  const [typed, setTyped] = useState<Record<string, string>>(initialTyped);
   const [isSubmitting, startSubmitTransition] = useTransition();
   const submittedRef = useRef(false);
   const [saveError, setSaveError] = useState(false);
@@ -71,7 +78,7 @@ export function TakeTestForm({
 
   function selectOption(questionId: string, optionId: string) {
     setAnswers((prev) => ({ ...prev, [questionId]: optionId }));
-    enqueue(questionId, optionId);
+    enqueue(questionId, { selectedOptionId: optionId, typedAnswer: null });
   }
 
   function deselectOption(questionId: string) {
@@ -80,10 +87,17 @@ export function TakeTestForm({
       delete next[questionId];
       return next;
     });
-    enqueue(questionId, null);
+    enqueue(questionId, { selectedOptionId: null, typedAnswer: null });
   }
 
-  const answeredCount = Object.keys(answers).length;
+  function writeAnswer(questionId: string, value: string) {
+    const testo = value.slice(0, COMPLETION_MAX_LENGTH);
+    setTyped((prev) => ({ ...prev, [questionId]: testo }));
+    enqueue(questionId, { selectedOptionId: null, typedAnswer: testo.trim() === "" ? null : testo });
+  }
+
+  const answeredCount =
+    Object.keys(answers).length + Object.values(typed).filter((t) => t.trim() !== "").length;
   const progressPct = questions.length > 0 ? Math.round((answeredCount / questions.length) * 100) : 0;
 
   return (
@@ -119,7 +133,8 @@ export function TakeTestForm({
 
       <div className="flex flex-col gap-4">
         {questions.map((q, index) => {
-          const answered = answers[q.id] != null;
+          const answered =
+            q.type === "COMPLETAMENTO" ? (typed[q.id] ?? "").trim() !== "" : answers[q.id] != null;
           return (
             <fieldset key={q.id} className="card flex flex-col gap-3 p-5">
               <legend className="sr-only">Domanda {index + 1}</legend>
@@ -130,6 +145,13 @@ export function TakeTestForm({
                 </span>
               </div>
               <p className="whitespace-pre-line text-[15px] font-semibold leading-relaxed">{q.text}</p>
+              {q.type === "COMPLETAMENTO" ? (
+                <CompletionInput
+                  questionId={q.id}
+                  value={typed[q.id] ?? ""}
+                  onChange={(v) => writeAnswer(q.id, v)}
+                />
+              ) : (
               <div className="flex flex-col gap-2">
                 {q.options.map((option, optionIndex) => {
                   const selected = answers[q.id] === option.id;
@@ -165,6 +187,7 @@ export function TakeTestForm({
                   );
                 })}
               </div>
+              )}
             </fieldset>
           );
         })}
@@ -218,6 +241,49 @@ function SaveBadge({ state }: { state: SaveState }) {
     >
       Non salvato · riprovo
     </span>
+  );
+}
+
+/*
+ * Il campo delle domande a completamento. All'esame vero si scrive in stampatello
+ * su una griglia di sedici caselle: qui si tiene lo stesso limite e lo si mostra,
+ * perché far entrare la risposta in sedici caratteri fa parte dell'esercizio.
+ */
+function CompletionInput({
+  questionId,
+  value,
+  onChange,
+}: {
+  questionId: string;
+  value: string;
+  onChange: (value: string) => void;
+}) {
+  const rimasti = COMPLETION_MAX_LENGTH - value.length;
+  return (
+    <div className="flex flex-col gap-1.5">
+      <label htmlFor={`completamento-${questionId}`} className="text-xs font-semibold text-muted">
+        Scrivi la risposta
+      </label>
+      <div className="flex items-center gap-3">
+        <input
+          id={`completamento-${questionId}`}
+          type="text"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          maxLength={COMPLETION_MAX_LENGTH}
+          autoComplete="off"
+          autoCapitalize="off"
+          spellCheck={false}
+          className="field w-full max-w-xs font-mono text-base uppercase tracking-wider"
+        />
+        <span aria-hidden="true" className="shrink-0 text-xs tabular-nums text-muted">
+          {rimasti}
+        </span>
+      </div>
+      <p className="text-xs text-muted">
+        Una parola, un numero o una breve espressione, al massimo {COMPLETION_MAX_LENGTH} caratteri.
+      </p>
+    </div>
   );
 }
 

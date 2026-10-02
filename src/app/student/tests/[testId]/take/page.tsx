@@ -29,6 +29,10 @@ export default async function TakeTestPage({ params }: { params: Promise<{ testI
       .filter((a) => a.selectedOptionId)
       .map((a) => [a.questionId, a.selectedOptionId as string])
   );
+  // Le risposte scritte (domande a completamento) viaggiano a parte.
+  const initialTyped = Object.fromEntries(
+    existingAnswers.filter((a) => a.typedAnswer).map((a) => [a.questionId, a.typedAnswer as string])
+  );
 
   const questions = test.shuffleQuestions ? seededShuffle(domande, attempt.id) : domande;
 
@@ -40,12 +44,15 @@ export default async function TakeTestPage({ params }: { params: Promise<{ testI
       startedAt={attempt.startedAt.toISOString()}
       questions={questions.map((q) => ({
         id: q.id,
+        type: q.type,
         subject: q.subject,
         text: q.text,
-        // Al browser non si manda quale opzione è giusta.
-        options: q.options.map((o) => ({ id: o.id, text: o.text })),
+        // Al browser non si manda quale opzione è giusta. Nelle domande a
+        // completamento le "opzioni" sono le risposte ammesse: non si mandano affatto.
+        options: q.type === "COMPLETAMENTO" ? [] : q.options.map((o) => ({ id: o.id, text: o.text })),
       }))}
       initialAnswers={initialAnswers}
+      initialTyped={initialTyped}
     />
   );
 }

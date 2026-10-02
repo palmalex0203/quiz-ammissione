@@ -4,6 +4,8 @@ import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
 import { ProgressRing } from "@/components/ProgressRing";
 import { formatPoints, trackOf } from "@/lib/tracks";
+import { CompletionReview } from "@/components/CompletionReview";
+import { rispostaData } from "@/lib/completion";
 import { testQuestionOrder } from "@/lib/test-questions";
 
 export default async function AttemptResultPage({
@@ -47,7 +49,7 @@ export default async function AttemptResultPage({
     (a, b) => (posizione.get(a.questionId) ?? 0) - (posizione.get(b.questionId) ?? 0)
   );
   const correctCount = sortedAnswers.filter((a) => a.isCorrect).length;
-  const omittedCount = sortedAnswers.filter((a) => !a.selectedOptionId).length;
+  const omittedCount = sortedAnswers.filter((a) => !rispostaData(a)).length;
   const incorrectCount = sortedAnswers.length - correctCount - omittedCount;
 
   return (
@@ -84,7 +86,8 @@ export default async function AttemptResultPage({
 
       <div className="flex flex-col gap-3">
         {sortedAnswers.map((answer, index) => {
-          const wasOmitted = !answer.selectedOptionId;
+          const completamento = answer.question.type === "COMPLETAMENTO";
+          const wasOmitted = !rispostaData(answer);
           const status = answer.isCorrect ? "correct" : wasOmitted ? "omitted" : "wrong";
           return (
             <div
@@ -118,41 +121,48 @@ export default async function AttemptResultPage({
                 </span>
               </div>
               <p className="mt-2 whitespace-pre-line text-sm font-semibold leading-relaxed">{answer.question.text}</p>
-              <ul className="mt-3 flex flex-col gap-1.5">
-                {answer.question.options.map((option, optionIndex) => {
-                  const wasSelected = option.id === answer.selectedOptionId;
-                  return (
-                    <li
-                      key={option.id}
-                      className={`flex items-start gap-2.5 text-sm ${
-                        option.isCorrect
-                          ? "font-semibold text-green-800 dark:text-green-300"
-                          : wasSelected
-                            ? "font-semibold text-red-800 dark:text-red-300"
-                            : "text-muted"
-                      }`}
-                    >
-                      <span
-                        aria-hidden="true"
-                        className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-[11px] font-bold ${
+              {completamento ? (
+                <CompletionReview
+                  typed={answer.typedAnswer}
+                  accepted={answer.question.options.filter((o) => o.isCorrect).map((o) => o.text)}
+                />
+              ) : (
+                <ul className="mt-3 flex flex-col gap-1.5">
+                  {answer.question.options.map((option, optionIndex) => {
+                    const wasSelected = option.id === answer.selectedOptionId;
+                    return (
+                      <li
+                        key={option.id}
+                        className={`flex items-start gap-2.5 text-sm ${
                           option.isCorrect
-                            ? "bg-green-600 text-white"
+                            ? "font-semibold text-green-800 dark:text-green-300"
                             : wasSelected
-                              ? "bg-red-600 text-white"
-                              : "bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
+                              ? "font-semibold text-red-800 dark:text-red-300"
+                              : "text-muted"
                         }`}
                       >
-                        {String.fromCharCode(65 + optionIndex)}
-                      </span>
-                      <span className="pt-0.5">
-                        {option.text}
-                        {option.isCorrect && <span className="sr-only"> (risposta corretta)</span>}
-                        {wasSelected && <span className="font-normal"> — la tua risposta</span>}
-                      </span>
-                    </li>
-                  );
-                })}
-              </ul>
+                        <span
+                          aria-hidden="true"
+                          className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-[11px] font-bold ${
+                            option.isCorrect
+                              ? "bg-green-600 text-white"
+                              : wasSelected
+                                ? "bg-red-600 text-white"
+                                : "bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400"
+                          }`}
+                        >
+                          {String.fromCharCode(65 + optionIndex)}
+                        </span>
+                        <span className="pt-0.5">
+                          {option.text}
+                          {option.isCorrect && <span className="sr-only"> (risposta corretta)</span>}
+                          {wasSelected && <span className="font-normal"> — la tua risposta</span>}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
             </div>
           );
         })}

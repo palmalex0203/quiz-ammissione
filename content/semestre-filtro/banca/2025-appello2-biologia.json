@@ -1,0 +1,136 @@
+[
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-05",
+    "text": "I processi di fagocitosi e autofagia:",
+    "options": [
+      { "text": "contribuiscono a proteggere la cellula da parassiti extracellulari e intracellulari", "isCorrect": true },
+      { "text": "sono lo stesso processo indicato con termini diversi", "isCorrect": false },
+      { "text": "avvengono solo in cellule specializzate", "isCorrect": false },
+      { "text": "il primo coinvolge lisosomi, il secondo no", "isCorrect": false },
+      { "text": "sono processi alternativi, nelle cellule avviene o l'uno o l'altro", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-05",
+    "text": "In quale/i dei seguenti comparti di una cellula eucariotica animale è prodotto l'RNA ribosomale?",
+    "options": [
+      { "text": "Nel reticolo endoplasmatico rugoso", "isCorrect": false },
+      { "text": "Nel nucleolo e nei mitocondri", "isCorrect": true },
+      { "text": "Nel citoplasma e nel nucleolo", "isCorrect": false },
+      { "text": "Nel reticolo endoplasmatico liscio", "isCorrect": false },
+      { "text": "Nei mitocondri e nel reticolo endoplasmatico liscio", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-05",
+    "text": "Quali di queste affermazioni sugli oggetti biologici NON è corretta?",
+    "options": [
+      { "text": "I virus hanno un citoscheletro ancestrale", "isCorrect": true },
+      { "text": "Le cellule procariotiche sono prive di citoscheletro complesso ma hanno un sistema di proteine strutturali con funzioni analoghe a quelle del citoscheletro eucariotico", "isCorrect": false },
+      { "text": "Il citoscheletro è una componente strutturale presente in tutte le cellule eucariotiche", "isCorrect": false },
+      { "text": "Alcuni organismi monocellulari sintetizzano molecole di ATP utilizzando l'energia liberata dalla fermentazione", "isCorrect": false },
+      { "text": "Alcune cellule procariotiche possono operare la fotosintesi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-05",
+    "text": "Le membrane biologiche sono pochissimo permeabili a:",
+    "options": [
+      { "text": "N2", "isCorrect": false },
+      { "text": "O2", "isCorrect": false },
+      { "text": "H2O", "isCorrect": false },
+      { "text": "CO2", "isCorrect": false },
+      { "text": "Ioni Ca2+", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-05",
+    "text": "La fibronectina è:",
+    "options": [
+      { "text": "Un polisaccaride presente nella matrice extracellulare", "isCorrect": false },
+      { "text": "Una glicoproteina della matrice extracellulare che collega le integrine (proteine transmembrana) a componenti della matrice extracellulare, come il collagene", "isCorrect": true },
+      { "text": "Un enzima che degrada le proteine presenti nella matrice extracellulare", "isCorrect": false },
+      { "text": "Una proteina integrale di membrana", "isCorrect": false },
+      { "text": "Una proteina del citoscheletro", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-05",
+    "text": "Il segnale di localizzazione lisosomiale di una proteina neosintetizzata è:",
+    "options": [
+      { "text": "Una serina fosforilata", "isCorrect": false },
+      { "text": "Un residuo di mannosio fosforilato di una sua catena oligosaccaridica", "isCorrect": true },
+      { "text": "Un'ancora lipidica a cui viene legata la proteina nel reticolo", "isCorrect": false },
+      { "text": "Una sequenza amminoacidica amino terminale della proteina da smistare", "isCorrect": false },
+      { "text": "Una tirosina fosforilata", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-05",
+    "type": "COMPLETAMENTO",
+    "text": "La matrice extracellulare viene degradata da enzimi prodotti dalle cellule che sono chiamati ……",
+    "options": [
+      { "text": "metalloproteasi", "isCorrect": true },
+      { "text": "MMP", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-05",
+    "type": "COMPLETAMENTO",
+    "text": "La coda citosolica della proteina transmembrana SREBP, acronimo per Sterol Response Element Binding Protein, viene separata proteoliticamente dal resto della proteina nel complesso di Golgi e trasportata al ……",
+    "options": [
+      { "text": "nucleo", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "Un gene è:",
+    "options": [
+      { "text": "Una proteina che controlla le caratteristiche ereditarie", "isCorrect": false },
+      { "text": "Una sequenza di DNA che contiene le informazioni solo per RNA non codificanti", "isCorrect": false },
+      { "text": "Una molecola di RNA che trasporta informazioni genetiche dalla cellula al nucleo", "isCorrect": false },
+      { "text": "Una sequenza di DNA che regola esclusivamente l'espressione di altre sequenze di DNA, senza codificare proteine", "isCorrect": false },
+      { "text": "Una sequenza di DNA che contiene le informazioni per la sintesi di una catena polipeptidica o di una molecola di RNA", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
+    "text": "Durante la replicazione del DNA, l'enzima che elimina il superavvolgimento del DNA creato dall'apertura dei filamenti nella forcella replicativa è la ……",
+    "options": [
+      { "text": "topoisomerasi", "isCorrect": true },
+      { "text": "DNA girasi", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-02",
+    "text": "Il massimo livello di compattamento della cromatina è costituito da:",
+    "options": [
+      { "text": "Fibra da 300 nm", "isCorrect": false },
+      { "text": "Fibra da 30 nm", "isCorrect": false },
+      { "text": "Fibra da 11 nm", "isCorrect": false },
+      { "text": "Solenoide", "isCorrect": false },
+      { "text": "Cromosoma metafasico", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-06",
+    "type": "COMPLETAMENTO",
+    "text": "Durante la trasduzione del segnale, i secondi …… come cAMP, IP3, DAG e Ca2+ contribuiscono all'amplificazione del segnale.",
+    "options": [
+      { "text": "messaggeri", "isCorrect": true }
+    ]
+  }
+]

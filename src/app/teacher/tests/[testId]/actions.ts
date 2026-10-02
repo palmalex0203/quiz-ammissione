@@ -2,7 +2,9 @@
 
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
+import type { QuestionType } from "@/generated/prisma/client";
 import { requireTeacher } from "@/lib/permissions";
+import { COMPLETION_MAX_LENGTH } from "@/lib/completion";
 import { isTrackId } from "@/lib/tracks";
 
 export type ActionState = { error?: string };
@@ -75,15 +77,9 @@ export async function addQuestion(_prevState: ActionState, formData: FormData): 
   if (!subject || !text) {
     return { error: "Materia e testo della domanda sono obbligatori." };
   }
-  if (type !== "MULTIPLE_CHOICE" && type !== "TRUE_FALSE") {
-    return { error: "Tipo di domanda non valido." };
-  }
-  if (!options || options.length < 2) {
-    return { error: "Servono almeno due opzioni di risposta." };
-  }
-  if (options.filter((o) => o.isCorrect).length !== 1) {
-    return { error: "Seleziona esattamente una risposta corretta." };
-  }
+  const valida = validaRisposte(type, options);
+  if (!valida.ok) return { error: valida.errore };
+  const { tipo, risposte } = valida;
 
   const lastQuestion = await prisma.question.findFirst({
     where: { testId },
@@ -95,11 +91,11 @@ export async function addQuestion(_prevState: ActionState, formData: FormData): 
     data: {
       testId,
       subject,
-      type,
+      type: tipo,
       text,
       order: nextOrder,
       options: {
-        create: options.map((o, i) => ({ text: o.text, isCorrect: o.isCorrect, order: i + 1 })),
+        create: risposte.map((o, i) => ({ text: o.text, isCorrect: o.isCorrect, order: i + 1 })),
       },
     },
   });
@@ -122,15 +118,9 @@ export async function updateQuestion(_prevState: ActionState, formData: FormData
   if (!subject || !text) {
     return { error: "Materia e testo della domanda sono obbligatori." };
   }
-  if (type !== "MULTIPLE_CHOICE" && type !== "TRUE_FALSE") {
-    return { error: "Tipo di domanda non valido." };
-  }
-  if (!options || options.length < 2) {
-    return { error: "Servono almeno due opzioni di risposta." };
-  }
-  if (options.filter((o) => o.isCorrect).length !== 1) {
-    return { error: "Seleziona esattamente una risposta corretta." };
-  }
+  const valida = validaRisposte(type, options);
+  if (!valida.ok) return { error: valida.errore };
+  const { tipo, risposte } = valida;
 
   await prisma.$transaction([
     prisma.answerOption.deleteMany({ where: { questionId } }),
@@ -138,10 +128,10 @@ export async function updateQuestion(_prevState: ActionState, formData: FormData
       where: { id: questionId },
       data: {
         subject,
-        type,
+        type: tipo,
         text,
         options: {
-          create: options.map((o, i) => ({ text: o.text, isCorrect: o.isCorrect, order: i + 1 })),
+          create: risposte.map((o, i) => ({ text: o.text, isCorrect: o.isCorrect, order: i + 1 })),
         },
       },
     }),
@@ -184,4 +174,42 @@ export async function moveQuestion(formData: FormData): Promise<void> {
   ]);
 
   revalidatePath(`/teacher/tests/${testId}/edit`);
+}
+
+/*
+ * Le regole cambiano col tipo di domanda. A scelta multipla (e vero/falso) le
+ * opzioni sono alternative e una sola è giusta. A completamento non ci sono
+ * alternative: ogni riga è una risposta che si accetta, e valgono tutte.
+ *
+ * Torna o l'errore da mostrare, o i valori già controllati e col tipo giusto.
+ */
+type Risposta = { text: string; isCorrect: boolean };
+type Validazione =
+  | { ok: false; errore: string }
+  | { ok: true; tipo: QuestionType; risposte: Risposta[] };
+
+function validaRisposte(type: string, options: Risposta[] | null): Validazione {
+  if (type !== "MULTIPLE_CHOICE" && type !== "TRUE_FALSE" && type !== "COMPLETAMENTO") {
+    return { ok: false, errore: "Tipo di domanda non valido." };
+  }
+
+  if (type === "COMPLETAMENTO") {
+    const ammesse = (options ?? [])
+      .filter((o) => o.text.trim() !== "")
+      .map((o) => ({ text: o.text.trim(), isCorrect: true }));
+    if (ammesse.length === 0) return { ok: false, errore: "Serve almeno una risposta accettata." };
+    if (ammesse.some((o) => o.text.length > COMPLETION_MAX_LENGTH)) {
+      return {
+        ok: false,
+        errore: `All'esame si scrive in ${COMPLETION_MAX_LENGTH} caselle: nessuna risposta accettata può essere più lunga.`,
+      };
+    }
+    return { ok: true, tipo: type, risposte: ammesse };
+  }
+
+  if (!options || options.length < 2) return { ok: false, errore: "Servono almeno due opzioni di risposta." };
+  if (options.filter((o) => o.isCorrect).length !== 1) {
+    return { ok: false, errore: "Seleziona esattamente una risposta corretta." };
+  }
+  return { ok: true, tipo: type, risposte: options };
 }

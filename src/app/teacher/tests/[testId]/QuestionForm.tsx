@@ -4,7 +4,7 @@ import { useActionState, useEffect, useRef, useState } from "react";
 import type { ActionState } from "./actions";
 
 type Option = { text: string; isCorrect: boolean };
-type QuestionType = "MULTIPLE_CHOICE" | "TRUE_FALSE";
+type QuestionType = "MULTIPLE_CHOICE" | "TRUE_FALSE" | "COMPLETAMENTO";
 
 const initialState: ActionState = {};
 
@@ -17,6 +17,11 @@ const trueFalseOptions: Option[] = [
   { text: "Vero", isCorrect: false },
   { text: "Falso", isCorrect: false },
 ];
+
+// In una domanda a completamento non ci sono opzioni fra cui scegliere: le righe
+// sono le risposte che si accettano come giuste, e valgono tutte. Se ne mette una
+// sola, quando non ci sono varianti.
+const emptyCompletionAnswers: Option[] = [{ text: "", isCorrect: true }];
 
 export function QuestionForm({
   testId,
@@ -61,7 +66,13 @@ export function QuestionForm({
 
   function handleTypeChange(next: QuestionType) {
     setType(next);
-    setOptions(next === "TRUE_FALSE" ? trueFalseOptions.map((o) => ({ ...o })) : emptyMcOptions.map((o) => ({ ...o })));
+    const partenza =
+      next === "TRUE_FALSE"
+        ? trueFalseOptions
+        : next === "COMPLETAMENTO"
+          ? emptyCompletionAnswers
+          : emptyMcOptions;
+    setOptions(partenza.map((o) => ({ ...o })));
   }
 
   function setOptionText(index: number, value: string) {
@@ -73,11 +84,15 @@ export function QuestionForm({
   }
 
   function addOption() {
-    setOptions((prev) => (prev.length >= 6 ? prev : [...prev, { text: "", isCorrect: false }]));
+    const max = type === "COMPLETAMENTO" ? 8 : 6;
+    setOptions((prev) =>
+      prev.length >= max ? prev : [...prev, { text: "", isCorrect: type === "COMPLETAMENTO" }]
+    );
   }
 
   function removeOption(index: number) {
-    setOptions((prev) => (prev.length <= 2 ? prev : prev.filter((_, i) => i !== index)));
+    const min = type === "COMPLETAMENTO" ? 1 : 2;
+    setOptions((prev) => (prev.length <= min ? prev : prev.filter((_, i) => i !== index)));
   }
 
   return (
@@ -114,6 +129,7 @@ export function QuestionForm({
           >
             <option value="MULTIPLE_CHOICE">Scelta multipla</option>
             <option value="TRUE_FALSE">Vero/Falso</option>
+            <option value="COMPLETAMENTO">A completamento</option>
           </select>
         </div>
       </div>
@@ -132,27 +148,37 @@ export function QuestionForm({
 
       <div className="flex flex-col gap-2">
         <label className="text-xs font-medium text-zinc-600 dark:text-zinc-400">
-          Opzioni (seleziona quella corretta)
+          {type === "COMPLETAMENTO" ? "Risposte accettate" : "Opzioni (seleziona quella corretta)"}
         </label>
+        {type === "COMPLETAMENTO" && (
+          <p className="text-xs text-muted">
+            Lo studente scrive la risposta. Vale giusta se corrisponde a una di queste righe: maiuscole,
+            accenti e spazi non contano, l&apos;ortografia sì. Metti una riga per ogni variante che
+            accetti (un sinonimo, una sigla, un numero con o senza unità). La prima è quella mostrata
+            nella correzione.
+          </p>
+        )}
         {options.map((option, i) => (
           <div key={i} className="flex items-center gap-2">
-            <input
-              type="radio"
-              name="correctOption"
-              checked={option.isCorrect}
-              onChange={() => setCorrect(i)}
-              className="h-4 w-4"
-            />
+            {type !== "COMPLETAMENTO" && (
+              <input
+                type="radio"
+                name="correctOption"
+                checked={option.isCorrect}
+                onChange={() => setCorrect(i)}
+                className="h-4 w-4"
+              />
+            )}
             <input
               type="text"
               value={option.text}
               onChange={(e) => setOptionText(i, e.target.value)}
               disabled={type === "TRUE_FALSE"}
-              placeholder={`Opzione ${i + 1}`}
+              placeholder={type === "COMPLETAMENTO" ? `Risposta accettata ${i + 1}` : `Opzione ${i + 1}`}
               required
               className="field field-sm flex-1 disabled:opacity-60"
             />
-            {type === "MULTIPLE_CHOICE" && options.length > 2 && (
+            {type !== "TRUE_FALSE" && options.length > (type === "COMPLETAMENTO" ? 1 : 2) && (
               <button
                 type="button"
                 onClick={() => removeOption(i)}
@@ -163,13 +189,13 @@ export function QuestionForm({
             )}
           </div>
         ))}
-        {type === "MULTIPLE_CHOICE" && options.length < 6 && (
+        {type !== "TRUE_FALSE" && options.length < (type === "COMPLETAMENTO" ? 8 : 6) && (
           <button
             type="button"
             onClick={addOption}
             className="self-start text-xs font-semibold text-muted hover:text-brand-strong"
           >
-            + Aggiungi opzione
+            {type === "COMPLETAMENTO" ? "+ Aggiungi variante accettata" : "+ Aggiungi opzione"}
           </button>
         )}
       </div>

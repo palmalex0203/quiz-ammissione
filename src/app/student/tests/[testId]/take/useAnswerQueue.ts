@@ -32,10 +32,15 @@ const RITENTATIVI_MS = [1_000, 3_000, 8_000, 20_000];
 
 export type SaveState = "salvato" | "invio" | "attesa";
 
+// Quello che la coda tiene per ogni domanda: l’opzione scelta nelle domande a
+// scelta multipla, il testo scritto in quelle a completamento. Tutti e due a null
+// vuol dire risposta tolta.
+export type Risposta = Omit<AnswerChange, "questionId">;
+
 export function useAnswerQueue(attemptId: string) {
   // La coda è un ref e non uno stato: viene letta e riscritta dentro timer e
   // callback, dove uno stato arriverebbe vecchio.
-  const codaRef = useRef(new Map<string, string | null>());
+  const codaRef = useRef(new Map<string, Risposta>());
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const inCorsoRef = useRef(false);
   const falliteRef = useRef(0);
@@ -69,10 +74,7 @@ export function useAnswerQueue(attemptId: string) {
       // Quello che lo studente tocca mentre un gruppo è in volo riempie di nuovo
       // la coda: il ciclo continua finché non è vuota.
       while (codaRef.current.size > 0) {
-        gruppo = [...codaRef.current].map(([questionId, selectedOptionId]) => ({
-          questionId,
-          selectedOptionId,
-        }));
+        gruppo = [...codaRef.current].map(([questionId, risposta]) => ({ questionId, ...risposta }));
         codaRef.current.clear();
         await saveAnswers(attemptId, gruppo);
         gruppo = [];
@@ -85,7 +87,12 @@ export function useAnswerQueue(attemptId: string) {
       // Le risposte tornano in coda, ma senza coprire quelle date nel frattempo:
       // la più recente è sempre quella giusta.
       for (const c of gruppo) {
-        if (!codaRef.current.has(c.questionId)) codaRef.current.set(c.questionId, c.selectedOptionId);
+        if (!codaRef.current.has(c.questionId)) {
+          codaRef.current.set(c.questionId, {
+            selectedOptionId: c.selectedOptionId,
+            typedAnswer: c.typedAnswer,
+          });
+        }
       }
       inCorsoRef.current = false;
       const attesa = RITENTATIVI_MS[Math.min(falliteRef.current, RITENTATIVI_MS.length - 1)];
@@ -102,8 +109,8 @@ export function useAnswerQueue(attemptId: string) {
 
   /** Mette in coda una risposta (o la sua rimozione) e programma l'invio. */
   const enqueue = useCallback(
-    (questionId: string, selectedOptionId: string | null) => {
-      codaRef.current.set(questionId, selectedOptionId);
+    (questionId: string, risposta: Risposta) => {
+      codaRef.current.set(questionId, risposta);
       aggiornaStato();
 
       if (codaRef.current.size >= GRUPPO_PIENO) {

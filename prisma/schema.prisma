@@ -17,6 +17,11 @@ enum Role {
 enum QuestionType {
   MULTIPLE_CHOICE
   TRUE_FALSE
+  // A completamento: lo studente scrive la risposta invece di sceglierla. Sono 16
+  // domande su 31 nelle prove del semestre filtro. Le risposte accettate stanno
+  // ugualmente in AnswerOption, una riga per variante ammessa, tutte con
+  // isCorrect = true: la prima e quella "giusta" da mostrare nella correzione.
+  COMPLETAMENTO
 }
 
 enum AttemptStatus {
@@ -198,6 +203,9 @@ model AnswerRecord {
   question         Question      @relation(fields: [questionId], references: [id], onDelete: Cascade)
   selectedOptionId String?
   selectedOption   AnswerOption? @relation(fields: [selectedOptionId], references: [id])
+  // Il testo scritto dallo studente nelle domande a completamento. Si conserva
+  // com’è stato digitato: serve a fargli vedere nella correzione cosa aveva messo.
+  typedAnswer      String?
   isCorrect        Boolean?
 
   @@unique([attemptId, questionId])

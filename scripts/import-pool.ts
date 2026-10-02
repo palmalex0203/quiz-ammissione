@@ -4,6 +4,12 @@
 //
 // Formato JSON atteso: un array di domande
 //   [{ subject, topic?, text, options: [{text, isCorrect}] }, ...]
+// Per una domanda a completamento (lo studente scrive la risposta invece di
+// sceglierla) si aggiunge "type": "COMPLETAMENTO" e si elencano in "options" le
+// risposte accettate, tutte con isCorrect: true — la prima è quella mostrata
+// nella correzione:
+//   { subject, topic?, type: "COMPLETAMENTO", text,
+//     options: [{ text: "topoisomerasi", isCorrect: true }] }
 // "topic" è il codice di argomento (B3, C7, M5, ...): se presente, la domanda compare
 // subito anche nelle esercitazioni per argomento, senza passare da classify-topics.
 //
@@ -15,10 +21,18 @@ import "dotenv/config";
 import { readFileSync } from "node:fs";
 import { prisma } from "../src/lib/prisma";
 import { isKnownTopic } from "../src/lib/topics";
+import { COMPLETION_MAX_LENGTH } from "../src/lib/completion";
 import { DEFAULT_TRACK, isTrackId, TRACKS, TRACK_IDS } from "../src/lib/tracks";
 
 type ImportedOption = { text: string; isCorrect: boolean };
-type ImportedQuestion = { subject: string; topic?: string | null; text: string; options: ImportedOption[] };
+type ImportedQuestion = {
+  subject: string;
+  topic?: string | null;
+  // Assente = scelta multipla, che è quello che sono quasi tutte.
+  type?: "MULTIPLE_CHOICE" | "COMPLETAMENTO";
+  text: string;
+  options: ImportedOption[];
+};
 
 async function main() {
   const [jsonPath, title, trackArg] = process.argv.slice(2);
@@ -40,10 +54,25 @@ async function main() {
   const questions: ImportedQuestion[] = JSON.parse(readFileSync(jsonPath, "utf-8"));
 
   for (const q of questions) {
-    if (q.options.length < 2) throw new Error(`Domanda con meno di 2 opzioni: ${q.text.slice(0, 60)}`);
-    const correctCount = q.options.filter((o) => o.isCorrect).length;
-    if (correctCount !== 1) {
-      throw new Error(`Domanda con ${correctCount} risposte corrette (attesa 1): ${q.text.slice(0, 60)}`);
+    if (q.type === "COMPLETAMENTO") {
+      // Qui le "opzioni" non sono alternative: sono le risposte ammesse, e valgono
+      // tutte. Ne basta una, ma devono stare nelle caselle del modulo vero.
+      const ammesse = q.options.filter((o) => o.isCorrect);
+      if (ammesse.length === 0) {
+        throw new Error(`Domanda a completamento senza risposte accettate: ${q.text.slice(0, 60)}`);
+      }
+      const troppoLunga = ammesse.find((o) => o.text.trim().length > COMPLETION_MAX_LENGTH);
+      if (troppoLunga) {
+        throw new Error(
+          `Risposta accettata di ${troppoLunga.text.trim().length} caratteri (massimo ${COMPLETION_MAX_LENGTH}): "${troppoLunga.text}"`
+        );
+      }
+    } else {
+      if (q.options.length < 2) throw new Error(`Domanda con meno di 2 opzioni: ${q.text.slice(0, 60)}`);
+      const correctCount = q.options.filter((o) => o.isCorrect).length;
+      if (correctCount !== 1) {
+        throw new Error(`Domanda con ${correctCount} risposte corrette (attesa 1): ${q.text.slice(0, 60)}`);
+      }
     }
     if (q.topic && !isKnownTopic(q.topic)) {
       throw new Error(`Argomento sconosciuto "${q.topic}": ${q.text.slice(0, 60)}`);
@@ -76,7 +105,7 @@ async function main() {
       track,
       questions: {
         create: questions.map((q, i) => ({
-          type: "MULTIPLE_CHOICE",
+          type: q.type ?? "MULTIPLE_CHOICE",
           subject: q.subject,
           topic: q.topic ?? null,
           text: q.text,

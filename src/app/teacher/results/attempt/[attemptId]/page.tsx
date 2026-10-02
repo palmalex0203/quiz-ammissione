@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
 import { formatPoints, trackOf } from "@/lib/tracks";
+import { CompletionReview } from "@/components/CompletionReview";
+import { rispostaData } from "@/lib/completion";
 import { testQuestionOrder } from "@/lib/test-questions";
 
 export default async function TeacherAttemptDetailPage({
@@ -37,7 +39,7 @@ export default async function TeacherAttemptDetailPage({
     (a, b) => (posizione.get(a.questionId) ?? 0) - (posizione.get(b.questionId) ?? 0)
   );
   const correctCount = sortedAnswers.filter((a) => a.isCorrect).length;
-  const omittedCount = sortedAnswers.filter((a) => !a.selectedOptionId).length;
+  const omittedCount = sortedAnswers.filter((a) => !rispostaData(a)).length;
   const incorrectCount = sortedAnswers.length - correctCount - omittedCount;
 
   return (
@@ -68,7 +70,8 @@ export default async function TeacherAttemptDetailPage({
       <div className="flex flex-col gap-3">
         {sortedAnswers.map((answer, index) => {
           const correctOption = answer.question.options.find((o) => o.isCorrect);
-          const wasOmitted = !answer.selectedOptionId;
+          const completamento = answer.question.type === "COMPLETAMENTO";
+          const wasOmitted = !rispostaData(answer);
           return (
             <div
               key={answer.id}
@@ -99,27 +102,34 @@ export default async function TeacherAttemptDetailPage({
               <p className="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">
                 {answer.question.text}
               </p>
-              <ul className="mt-2 flex flex-col gap-0.5">
-                {answer.question.options.map((option) => {
-                  const wasSelected = option.id === answer.selectedOptionId;
-                  return (
-                    <li
-                      key={option.id}
-                      className={`text-xs ${
-                        option.isCorrect
-                          ? "font-medium text-green-700 dark:text-green-400"
-                          : wasSelected
-                            ? "font-medium text-red-700 dark:text-red-400"
-                            : "text-zinc-500 dark:text-zinc-400"
-                      }`}
-                    >
-                      {option.isCorrect ? "✓ " : wasSelected ? "✗ " : "— "}
-                      {option.text}
-                      {wasSelected && " (risposta data)"}
-                    </li>
-                  );
-                })}
-              </ul>
+              {completamento ? (
+                <CompletionReview
+                  typed={answer.typedAnswer}
+                  accepted={answer.question.options.filter((o) => o.isCorrect).map((o) => o.text)}
+                />
+              ) : (
+                <ul className="mt-2 flex flex-col gap-0.5">
+                  {answer.question.options.map((option) => {
+                    const wasSelected = option.id === answer.selectedOptionId;
+                    return (
+                      <li
+                        key={option.id}
+                        className={`text-xs ${
+                          option.isCorrect
+                            ? "font-medium text-green-700 dark:text-green-400"
+                            : wasSelected
+                              ? "font-medium text-red-700 dark:text-red-400"
+                              : "text-zinc-500 dark:text-zinc-400"
+                        }`}
+                      >
+                        {option.isCorrect ? "✓ " : wasSelected ? "✗ " : "— "}
+                        {option.text}
+                        {wasSelected && " (risposta data)"}
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
               {!answer.isCorrect && correctOption && (
                 <p className="mt-2 text-xs text-zinc-600 dark:text-zinc-400">
                   Risposta corretta: <span className="font-medium">{correctOption.text}</span>

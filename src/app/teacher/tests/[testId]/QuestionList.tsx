@@ -1,5 +1,6 @@
 "use client";
 
+import { etichettaTipo } from "@/lib/completion";
 import { useState } from "react";
 import { deleteQuestion, moveQuestion, updateQuestion } from "./actions";
 import { QuestionForm } from "./QuestionForm";
@@ -8,7 +9,7 @@ import { EmptyState } from "@/components/EmptyState";
 type QuestionData = {
   id: string;
   subject: string;
-  type: "MULTIPLE_CHOICE" | "TRUE_FALSE";
+  type: "MULTIPLE_CHOICE" | "TRUE_FALSE" | "COMPLETAMENTO";
   text: string;
   order: number;
   options: { id: string; text: string; isCorrect: boolean }[];
@@ -61,7 +62,7 @@ export function QuestionList({
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">
-                  {q.subject} &middot; {q.type === "MULTIPLE_CHOICE" ? "Scelta multipla" : "Vero/Falso"}
+                  {q.subject} &middot; {etichettaTipo(q.type)}
                 </p>
                 <p className="mt-1 text-sm text-zinc-900 dark:text-zinc-100">{q.text}</p>
                 <ul className="mt-2 flex flex-col gap-0.5">
