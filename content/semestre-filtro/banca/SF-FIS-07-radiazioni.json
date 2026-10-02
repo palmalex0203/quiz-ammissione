@@ -1,0 +1,308 @@
+[
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Un'onda elettromagnetica è costituita da:",
+    "options": [
+      { "text": "Un campo elettrico e un campo magnetico oscillanti, perpendicolari fra loro e alla direzione di propagazione, che si sostengono a vicenda e viaggiano anche nel vuoto", "isCorrect": true },
+      { "text": "Un campo elettrico oscillante che trascina con sé le particelle del mezzo", "isCorrect": false },
+      { "text": "Una successione di particelle cariche in movimento", "isCorrect": false },
+      { "text": "Un campo magnetico costante e un campo elettrico oscillante paralleli fra loro", "isCorrect": false },
+      { "text": "Un'oscillazione meccanica del mezzo materiale attraversato", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Che cosa distingue un'onda elettromagnetica da un'onda sonora?",
+    "options": [
+      { "text": "L'onda elettromagnetica è trasversale e si propaga anche nel vuoto, quella sonora è meccanica, longitudinale nei fluidi e richiede un mezzo materiale", "isCorrect": true },
+      { "text": "L'onda elettromagnetica è longitudinale, quella sonora trasversale", "isCorrect": false },
+      { "text": "L'onda sonora si propaga nel vuoto, quella elettromagnetica no", "isCorrect": false },
+      { "text": "Solo l'onda sonora trasporta energia", "isCorrect": false },
+      { "text": "Le due hanno la stessa velocità di propagazione in tutti i mezzi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Ordinando le regioni dello spettro elettromagnetico per frequenza crescente si ottiene:",
+    "options": [
+      { "text": "Onde radio, microonde, infrarosso, visibile, ultravioletto, raggi X, raggi gamma", "isCorrect": true },
+      { "text": "Raggi gamma, raggi X, ultravioletto, visibile, infrarosso, microonde, onde radio", "isCorrect": false },
+      { "text": "Onde radio, infrarosso, microonde, visibile, raggi X, ultravioletto, raggi gamma", "isCorrect": false },
+      { "text": "Microonde, onde radio, visibile, infrarosso, ultravioletto, raggi gamma, raggi X", "isCorrect": false },
+      { "text": "Infrarosso, visibile, ultravioletto, onde radio, microonde, raggi X, raggi gamma", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Fra due radiazioni elettromagnetiche, quella di lunghezza d'onda maggiore:",
+    "options": [
+      { "text": "Ha frequenza minore e trasporta fotoni di energia minore", "isCorrect": true },
+      { "text": "Ha frequenza maggiore e fotoni più energetici", "isCorrect": false },
+      { "text": "Ha la stessa frequenza, perché nel vuoto la velocità è la stessa", "isCorrect": false },
+      { "text": "Ha velocità di propagazione maggiore nel vuoto", "isCorrect": false },
+      { "text": "Trasporta fotoni di energia maggiore ma in numero minore", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "L'energia di un fotone:",
+    "options": [
+      { "text": "È direttamente proporzionale alla frequenza della radiazione, secondo la costante di Planck", "isCorrect": true },
+      { "text": "È direttamente proporzionale alla lunghezza d'onda", "isCorrect": false },
+      { "text": "Dipende dall'intensità della radiazione e non dalla frequenza", "isCorrect": false },
+      { "text": "È la stessa per tutte le radiazioni, perché tutte viaggiano alla velocità della luce", "isCorrect": false },
+      { "text": "È inversamente proporzionale alla frequenza", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Che cosa distingue una radiazione ionizzante da una non ionizzante?",
+    "options": [
+      { "text": "L'energia dei suoi fotoni, che nella ionizzante è sufficiente a strappare elettroni agli atomi: raggi X e gamma lo sono, onde radio, microonde e infrarosso no", "isCorrect": true },
+      { "text": "L'intensità complessiva del fascio, indipendentemente dalla frequenza", "isCorrect": false },
+      { "text": "La natura ondulatoria o corpuscolare della radiazione", "isCorrect": false },
+      { "text": "La capacità di propagarsi nel vuoto, che hanno solo le ionizzanti", "isCorrect": false },
+      { "text": "La lunghezza d'onda maggiore, che caratterizza le ionizzanti", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "La legge di Lambert-Beer descrive:",
+    "options": [
+      { "text": "L'attenuazione esponenziale di un fascio di radiazione che attraversa un mezzo assorbente, in funzione dello spessore e della concentrazione", "isCorrect": true },
+      { "text": "La deviazione di un raggio luminoso al passaggio fra due mezzi", "isCorrect": false },
+      { "text": "La diminuzione dell'attività di un campione radioattivo nel tempo", "isCorrect": false },
+      { "text": "La relazione fra energia del fotone e frequenza della radiazione", "isCorrect": false },
+      { "text": "La formazione delle immagini attraverso una lente sottile", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Un decadimento alfa trasforma il nucleo emettendo un nucleo di elio. Il nuovo nucleo ha:",
+    "options": [
+      { "text": "Numero atomico diminuito di 2 e numero di massa diminuito di 4", "isCorrect": true },
+      { "text": "Numero atomico aumentato di 1 e numero di massa invariato", "isCorrect": false },
+      { "text": "Numero atomico diminuito di 4 e numero di massa diminuito di 2", "isCorrect": false },
+      { "text": "Numero atomico e numero di massa invariati", "isCorrect": false },
+      { "text": "Numero atomico diminuito di 1 e numero di massa diminuito di 2", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Nel decadimento beta meno:",
+    "options": [
+      { "text": "Un neutrone del nucleo si trasforma in un protone con emissione di un elettrone: il numero atomico aumenta di 1 e il numero di massa resta invariato", "isCorrect": true },
+      { "text": "Un protone si trasforma in neutrone e il numero atomico diminuisce di 1", "isCorrect": false },
+      { "text": "Il nucleo emette un nucleo di elio e perde 4 unità di massa", "isCorrect": false },
+      { "text": "Il nucleo emette solo energia, senza cambiare composizione", "isCorrect": false },
+      { "text": "Il numero di massa aumenta di 1 e il numero atomico resta invariato", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "L'emissione gamma si distingue dagli altri decadimenti perché:",
+    "options": [
+      { "text": "Non cambia né il numero atomico né quello di massa: il nucleo si limita a passare da uno stato eccitato a uno di energia inferiore emettendo un fotone", "isCorrect": true },
+      { "text": "Trasforma un neutrone in protone", "isCorrect": false },
+      { "text": "Riduce di 4 unità il numero di massa", "isCorrect": false },
+      { "text": "Comporta l'emissione di una particella dotata di massa", "isCorrect": false },
+      { "text": "Avviene solo nei nuclei leggeri", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Ordinando i tre tipi di radiazione per potere penetrante crescente si ottiene:",
+    "options": [
+      { "text": "Alfa, beta, gamma: le alfa sono fermate da un foglio di carta, le beta da pochi millimetri di alluminio, le gamma richiedono spessori notevoli di piombo", "isCorrect": true },
+      { "text": "Gamma, beta, alfa", "isCorrect": false },
+      { "text": "Beta, alfa, gamma", "isCorrect": false },
+      { "text": "Alfa, gamma, beta", "isCorrect": false },
+      { "text": "Hanno tutte e tre lo stesso potere penetrante", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Dopo tre tempi di dimezzamento, la quantità di nuclei radioattivi ancora presenti in un campione è:",
+    "options": [
+      { "text": "Un ottavo di quella iniziale", "isCorrect": true },
+      { "text": "Un terzo di quella iniziale", "isCorrect": false },
+      { "text": "Un sesto di quella iniziale", "isCorrect": false },
+      { "text": "Un nono di quella iniziale", "isCorrect": false },
+      { "text": "Zero: il campione è completamente decaduto", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Il tempo di dimezzamento di un isotopo radioattivo:",
+    "options": [
+      { "text": "È il tempo in cui metà dei nuclei presenti decade, ed è una caratteristica dell'isotopo indipendente dalla quantità iniziale e dalle condizioni esterne", "isCorrect": true },
+      { "text": "Dipende dalla quantità iniziale di materiale radioattivo", "isCorrect": false },
+      { "text": "Può essere modificato riscaldando o comprimendo il campione", "isCorrect": false },
+      { "text": "È il tempo necessario perché tutto il campione decada", "isCorrect": false },
+      { "text": "È uguale per tutti gli isotopi radioattivi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "L'attività di un campione radioattivo si misura in becquerel e rappresenta:",
+    "options": [
+      { "text": "Il numero di decadimenti che avvengono nell'unità di tempo", "isCorrect": true },
+      { "text": "L'energia totale emessa dal campione", "isCorrect": false },
+      { "text": "La dose assorbita dai tessuti esposti", "isCorrect": false },
+      { "text": "Il numero di nuclei radioattivi ancora presenti", "isCorrect": false },
+      { "text": "Il tempo necessario perché il campione si dimezzi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Quando un raggio di luce passa dall'aria al vetro, mezzo otticamente più denso:",
+    "options": [
+      { "text": "Rallenta e si avvicina alla normale alla superficie di separazione", "isCorrect": true },
+      { "text": "Accelera e si allontana dalla normale", "isCorrect": false },
+      { "text": "Rallenta e si allontana dalla normale", "isCorrect": false },
+      { "text": "Prosegue senza deviare, qualunque sia l'angolo di incidenza", "isCorrect": false },
+      { "text": "Viene completamente riflesso", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Un raggio di luce attraversa una lastra di vetro a facce piane e parallele. All'uscita risulta:",
+    "options": [
+      { "text": "Traslato parallelamente a sé stesso", "isCorrect": true },
+      { "text": "Deviato in modo da avvicinarsi alla normale alla lastra", "isCorrect": false },
+      { "text": "Deviato in modo da allontanarsi dalla normale alla lastra", "isCorrect": false },
+      { "text": "Deviato in modo da avvicinarsi alla superficie della lastra", "isCorrect": false },
+      { "text": "Riflesso totalmente verso la sorgente", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "L'indice di rifrazione assoluto di un mezzo è definito come:",
+    "options": [
+      { "text": "Il rapporto fra la velocità della luce nel vuoto e la velocità della luce in quel mezzo, ed è sempre maggiore o uguale a 1", "isCorrect": true },
+      { "text": "Il rapporto fra la velocità della luce nel mezzo e quella nel vuoto", "isCorrect": false },
+      { "text": "Il rapporto fra l'angolo di incidenza e l'angolo di rifrazione", "isCorrect": false },
+      { "text": "La densità del mezzo rispetto a quella dell'acqua", "isCorrect": false },
+      { "text": "Il prodotto della frequenza per la lunghezza d'onda nel mezzo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Il funzionamento delle fibre ottiche come guide di luce si basa:",
+    "options": [
+      { "text": "Sulla riflessione totale, che si verifica quando la luce incide dall'interno sulla superficie di separazione con un mezzo meno rifrangente oltre l'angolo limite", "isCorrect": true },
+      { "text": "Sulla rifrazione successiva attraverso strati di indice crescente", "isCorrect": false },
+      { "text": "Sull'assorbimento e la riemissione della luce da parte del vetro", "isCorrect": false },
+      { "text": "Sull'interferenza costruttiva fra i raggi riflessi dalle due pareti", "isCorrect": false },
+      { "text": "Sulla polarizzazione della luce all'ingresso della fibra", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Un oggetto è posto a distanza maggiore del doppio della distanza focale davanti a una lente convergente sottile. L'immagine che si forma è:",
+    "options": [
+      { "text": "Reale, capovolta e rimpicciolita, dalla parte opposta della lente", "isCorrect": true },
+      { "text": "Virtuale, diritta e ingrandita, dalla stessa parte dell'oggetto", "isCorrect": false },
+      { "text": "Reale, diritta e ingrandita", "isCorrect": false },
+      { "text": "Virtuale, capovolta e rimpicciolita", "isCorrect": false },
+      { "text": "Non si forma alcuna immagine", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "Nella legge dei punti coniugati per una lente sottile, 1/p + 1/q = 1/f, un oggetto posto a 30 cm da una lente di focale 10 cm forma l'immagine a:",
+    "options": [
+      { "text": "15 cm dalla lente", "isCorrect": true },
+      { "text": "20 cm dalla lente", "isCorrect": false },
+      { "text": "40 cm dalla lente", "isCorrect": false },
+      { "text": "7,5 cm dalla lente", "isCorrect": false },
+      { "text": "10 cm dalla lente", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "La legge della riflessione stabilisce che:",
+    "options": [
+      { "text": "Il raggio incidente, la normale e il raggio riflesso giacciono sullo stesso piano, e l'angolo di riflessione è uguale a quello di incidenza", "isCorrect": true },
+      { "text": "L'angolo di riflessione è sempre maggiore di quello di incidenza", "isCorrect": false },
+      { "text": "Il raggio riflesso è perpendicolare a quello incidente", "isCorrect": false },
+      { "text": "L'angolo di riflessione dipende dall'indice di rifrazione del mezzo", "isCorrect": false },
+      { "text": "Il raggio riflesso torna sempre lungo la direzione di provenienza", "isCorrect": false }
+    ]
+  },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Il funzionamento delle fibre ottiche come guide di luce si basa sul fenomeno della …… totale.",
+    "options": [ { "text": "riflessione", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "In un'onda elettromagnetica il campo elettrico e il campo magnetico oscillano fra loro ……",
+    "options": [ { "text": "perpendicolari", "isCorrect": true }, { "text": "ortogonali", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "La velocità della luce nel vuoto, in metri al secondo, vale circa 3 per 10 elevato a ……",
+    "options": [ { "text": "8", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Il quanto di energia associato alla radiazione elettromagnetica si chiama ……",
+    "options": [ { "text": "fotone", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "L'energia di un fotone è uguale alla frequenza moltiplicata per la costante di ……",
+    "options": [ { "text": "Planck", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Nello spettro elettromagnetico, la regione che precede immediatamente il visibile dal lato delle frequenze minori è l'……",
+    "options": [ { "text": "infrarosso", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "La radiazione elettromagnetica di frequenza immediatamente superiore a quella del visibile si chiama ……",
+    "options": [ { "text": "ultravioletto", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Fra le regioni dello spettro elettromagnetico, quella di frequenza più alta è costituita dai raggi ……",
+    "options": [ { "text": "gamma", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Le radiazioni i cui fotoni hanno energia sufficiente a strappare elettroni agli atomi si dicono ……",
+    "options": [ { "text": "ionizzanti", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "La legge che descrive l'attenuazione esponenziale di un fascio luminoso in un mezzo assorbente si chiama legge di Lambert-……",
+    "options": [ { "text": "Beer", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Il tempo necessario perché metà dei nuclei di un campione radioattivo decada si chiama ……",
+    "options": [ { "text": "emivita", "isCorrect": true }, { "text": "dimezzamento", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Dopo tre tempi di dimezzamento resta attivo un …… dei nuclei iniziali.",
+    "options": [ { "text": "ottavo", "isCorrect": true }, { "text": "1/8", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "L'unità di misura dell'attività di un campione radioattivo, pari a un decadimento al secondo, è il ……",
+    "options": [ { "text": "becquerel", "isCorrect": true }, { "text": "Bq", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "La particella emessa in un decadimento alfa è un nucleo di ……",
+    "options": [ { "text": "elio", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "In un decadimento alfa il numero di massa del nucleo diminuisce di ……",
+    "options": [ { "text": "4", "isCorrect": true }, { "text": "quattro", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Nel decadimento beta meno un neutrone si trasforma in un ……",
+    "options": [ { "text": "protone", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Nell'emissione gamma il numero atomico del nucleo ……",
+    "options": [ { "text": "non cambia", "isCorrect": true }, { "text": "resta invariato", "isCorrect": true }, { "text": "non varia", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Fra alfa, beta e gamma, la radiazione con il maggiore potere penetrante è la ……",
+    "options": [ { "text": "gamma", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Il rapporto fra la velocità della luce nel vuoto e quella nel mezzo si chiama indice di ……",
+    "options": [ { "text": "rifrazione", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Passando dall'aria al vetro un raggio di luce si …… alla normale.",
+    "options": [ { "text": "avvicina", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Nella riflessione l'angolo di riflessione è …… all'angolo di incidenza.",
+    "options": [ { "text": "uguale", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "L'angolo di incidenza oltre il quale si verifica la riflessione totale si chiama angolo ……",
+    "options": [ { "text": "limite", "isCorrect": true }, { "text": "critico", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "L'immagine che una lente convergente forma di un oggetto posto oltre il doppio della focale è reale e ……",
+    "options": [ { "text": "capovolta", "isCorrect": true }, { "text": "rovesciata", "isCorrect": true }, { "text": "invertita", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Un oggetto posto a 30 cm da una lente convergente di focale 10 cm forma l'immagine a …… cm dalla lente.",
+    "options": [ { "text": "15", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Un raggio che attraversa una lastra di vetro a facce piane e parallele esce …… a sé stesso.",
+    "options": [ { "text": "parallelo", "isCorrect": true }, { "text": "traslato", "isCorrect": true } ] }
+]

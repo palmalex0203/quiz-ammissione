@@ -1,0 +1,655 @@
+[
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Un volume di 10 dm3 corrisponde a:",
+    "options": [
+      {
+        "text": "10 litri",
+        "isCorrect": true
+      },
+      {
+        "text": "1 litro",
+        "isCorrect": false
+      },
+      {
+        "text": "100 litri",
+        "isCorrect": false
+      },
+      {
+        "text": "100 millilitri",
+        "isCorrect": false
+      },
+      {
+        "text": "10 millilitri",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Un'accelerazione di 320 cm/s2 corrisponde, nel Sistema Internazionale, a:",
+    "options": [
+      {
+        "text": "3,2 m/s2",
+        "isCorrect": true
+      },
+      {
+        "text": "32 m/s2",
+        "isCorrect": false
+      },
+      {
+        "text": "0,32 m/s2",
+        "isCorrect": false
+      },
+      {
+        "text": "32000 m/s2",
+        "isCorrect": false
+      },
+      {
+        "text": "320 m/s2",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Una massa di 2,5 g espressa in chilogrammi vale:",
+    "options": [
+      {
+        "text": "2,5 x 10 alla meno 3 kg",
+        "isCorrect": true
+      },
+      {
+        "text": "2,5 x 10 alla 3 kg",
+        "isCorrect": false
+      },
+      {
+        "text": "0,25 kg",
+        "isCorrect": false
+      },
+      {
+        "text": "2,5 x 10 alla meno 6 kg",
+        "isCorrect": false
+      },
+      {
+        "text": "25 kg",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Quale di queste NON è un'unità fondamentale del Sistema Internazionale?",
+    "options": [
+      {
+        "text": "Il newton",
+        "isCorrect": true
+      },
+      {
+        "text": "Il kelvin",
+        "isCorrect": false
+      },
+      {
+        "text": "La mole",
+        "isCorrect": false
+      },
+      {
+        "text": "L'ampere",
+        "isCorrect": false
+      },
+      {
+        "text": "La candela",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Scomponendo il newton nelle unità fondamentali si ottiene:",
+    "options": [
+      {
+        "text": "kg · m / s2",
+        "isCorrect": true
+      },
+      {
+        "text": "kg / (m · s2)",
+        "isCorrect": false
+      },
+      {
+        "text": "kg · m2 / s2",
+        "isCorrect": false
+      },
+      {
+        "text": "kg · m / s",
+        "isCorrect": false
+      },
+      {
+        "text": "kg · s2 / m",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Che cosa distingue una grandezza intensiva da una estensiva?",
+    "options": [
+      {
+        "text": "L'intensiva non dipende dalla quantità di materia considerata, come la temperatura o la densità; l'estensiva è additiva e cresce con il sistema, come massa, volume ed energia",
+        "isCorrect": true
+      },
+      {
+        "text": "L'intensiva è sempre vettoriale, l'estensiva sempre scalare",
+        "isCorrect": false
+      },
+      {
+        "text": "L'intensiva si misura con strumenti diretti, l'estensiva solo per via indiretta",
+        "isCorrect": false
+      },
+      {
+        "text": "L'estensiva non dipende dalla quantità di materia, l'intensiva sì",
+        "isCorrect": false
+      },
+      {
+        "text": "L'intensiva ha dimensioni fisiche, l'estensiva è sempre adimensionale",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Quale di queste grandezze è una grandezza vettoriale?",
+    "options": [
+      {
+        "text": "L'accelerazione",
+        "isCorrect": true
+      },
+      {
+        "text": "La temperatura",
+        "isCorrect": false
+      },
+      {
+        "text": "L'energia cinetica",
+        "isCorrect": false
+      },
+      {
+        "text": "La massa",
+        "isCorrect": false
+      },
+      {
+        "text": "Il tempo",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Due vettori di uguale modulo a vengono sommati e il risultato ha modulo a radice di 2. L'angolo compreso fra i due vettori vale:",
+    "options": [
+      {
+        "text": "90 gradi",
+        "isCorrect": true
+      },
+      {
+        "text": "0 gradi",
+        "isCorrect": false
+      },
+      {
+        "text": "180 gradi",
+        "isCorrect": false
+      },
+      {
+        "text": "60 gradi",
+        "isCorrect": false
+      },
+      {
+        "text": "45 gradi",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Sommando due vettori si ottiene un vettore il cui modulo è la differenza dei loro moduli. I due vettori:",
+    "options": [
+      {
+        "text": "Hanno la stessa direzione e versi opposti",
+        "isCorrect": true
+      },
+      {
+        "text": "Hanno la stessa direzione e lo stesso verso",
+        "isCorrect": false
+      },
+      {
+        "text": "Sono perpendicolari fra loro",
+        "isCorrect": false
+      },
+      {
+        "text": "Formano un angolo acuto",
+        "isCorrect": false
+      },
+      {
+        "text": "Formano un angolo ottuso qualsiasi",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Una nave percorre in successione 10 km verso Nord, 6 km verso Est e infine 18 km verso Sud. Il modulo dello spostamento risultante vale:",
+    "options": [
+      {
+        "text": "10 km",
+        "isCorrect": true
+      },
+      {
+        "text": "34 km",
+        "isCorrect": false
+      },
+      {
+        "text": "14 km",
+        "isCorrect": false
+      },
+      {
+        "text": "8 km",
+        "isCorrect": false
+      },
+      {
+        "text": "6 km",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Il prodotto scalare di due vettori:",
+    "options": [
+      {
+        "text": "È un numero, pari al prodotto dei moduli per il coseno dell'angolo compreso, e si annulla quando i vettori sono perpendicolari",
+        "isCorrect": true
+      },
+      {
+        "text": "È un vettore perpendicolare al piano dei due, di modulo pari al prodotto dei moduli per il seno dell'angolo",
+        "isCorrect": false
+      },
+      {
+        "text": "È un numero pari al prodotto dei moduli per il seno dell'angolo compreso",
+        "isCorrect": false
+      },
+      {
+        "text": "È sempre uguale al prodotto dei moduli, qualunque sia l'angolo",
+        "isCorrect": false
+      },
+      {
+        "text": "È massimo quando i due vettori sono perpendicolari",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Il prodotto vettoriale di due vettori paralleli:",
+    "options": [
+      {
+        "text": "È il vettore nullo, perché il seno dell'angolo compreso vale zero",
+        "isCorrect": true
+      },
+      {
+        "text": "Ha modulo massimo, pari al prodotto dei moduli",
+        "isCorrect": false
+      },
+      {
+        "text": "È un numero pari al prodotto dei moduli",
+        "isCorrect": false
+      },
+      {
+        "text": "È un vettore giacente sulla stessa retta dei due",
+        "isCorrect": false
+      },
+      {
+        "text": "Non è definito",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Un vettore di modulo 10 forma un angolo di 30 gradi con l'asse x. La sua componente lungo x vale circa:",
+    "options": [
+      {
+        "text": "8,7",
+        "isCorrect": true
+      },
+      {
+        "text": "5",
+        "isCorrect": false
+      },
+      {
+        "text": "10",
+        "isCorrect": false
+      },
+      {
+        "text": "3,3",
+        "isCorrect": false
+      },
+      {
+        "text": "17,3",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Il numero 0,00047 scritto in notazione scientifica diventa:",
+    "options": [
+      {
+        "text": "4,7 x 10 alla meno 4",
+        "isCorrect": true
+      },
+      {
+        "text": "47 x 10 alla meno 5",
+        "isCorrect": false
+      },
+      {
+        "text": "4,7 x 10 alla meno 3",
+        "isCorrect": false
+      },
+      {
+        "text": "4,7 x 10 alla 4",
+        "isCorrect": false
+      },
+      {
+        "text": "0,47 x 10 alla meno 3",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "text": "Il numero di Reynolds, che distingue il moto laminare da quello turbolento, nel Sistema Internazionale si misura:",
+    "options": [
+      {
+        "text": "Non si misura in alcuna unità: è una grandezza adimensionale",
+        "isCorrect": true
+      },
+      {
+        "text": "In pascal per secondo diviso metro",
+        "isCorrect": false
+      },
+      {
+        "text": "In chilogrammi per metro al secondo quadrato",
+        "isCorrect": false
+      },
+      {
+        "text": "In ohm",
+        "isCorrect": false
+      },
+      {
+        "text": "In metri cubi al secondo",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Sapendo che 1 metro è uguale a 100 centimetri, un'accelerazione di 320 cm/s2 corrisponde a …… m/s2 nel Sistema Internazionale.",
+    "options": [
+      {
+        "text": "3,2",
+        "isCorrect": true
+      },
+      {
+        "text": "3.2",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Una velocità di 30 m/s espressa in km/h vale ……",
+    "options": [
+      {
+        "text": "108",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Una velocità di 72 km/h espressa in m/s vale ……",
+    "options": [
+      {
+        "text": "20",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Un volume di 1 dm3 corrisponde a …… litri.",
+    "options": [
+      {
+        "text": "1",
+        "isCorrect": true
+      },
+      {
+        "text": "uno",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "L'unità di misura fondamentale della temperatura nel Sistema Internazionale è il ……",
+    "options": [
+      {
+        "text": "kelvin",
+        "isCorrect": true
+      },
+      {
+        "text": "K",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Quante sono le grandezze fondamentali del Sistema Internazionale? ……",
+    "options": [
+      {
+        "text": "7",
+        "isCorrect": true
+      },
+      {
+        "text": "sette",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Una grandezza che non dipende dalla quantità di materia del sistema, come la densità o la temperatura, si dice ……",
+    "options": [
+      {
+        "text": "intensiva",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Una grandezza individuata da un solo numero, senza direzione né verso, si dice ……",
+    "options": [
+      {
+        "text": "scalare",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Il prodotto fra i moduli di due vettori e il coseno dell'angolo compreso si chiama prodotto ……",
+    "options": [
+      {
+        "text": "scalare",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Il prodotto vettoriale di due vettori paralleli dà come risultato il vettore ……",
+    "options": [
+      {
+        "text": "nullo",
+        "isCorrect": true
+      },
+      {
+        "text": "zero",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Il prodotto vettoriale di due vettori è un vettore …… al piano che li contiene.",
+    "options": [
+      {
+        "text": "perpendicolare",
+        "isCorrect": true
+      },
+      {
+        "text": "ortogonale",
+        "isCorrect": true
+      },
+      {
+        "text": "normale",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Due vettori di uguale modulo danno una somma di modulo nullo quando fra loro formano un angolo di …… gradi.",
+    "options": [
+      {
+        "text": "180",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Il numero di Reynolds, che distingue il moto laminare da quello turbolento, è una grandezza ……",
+    "options": [
+      {
+        "text": "adimensionale",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Il numero 0,00047 in notazione scientifica si scrive 4,7 per 10 elevato a ……",
+    "options": [
+      {
+        "text": "-4",
+        "isCorrect": true
+      },
+      {
+        "text": "meno 4",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Il seno di un angolo di 30 gradi vale ……",
+    "options": [
+      {
+        "text": "0,5",
+        "isCorrect": true
+      },
+      {
+        "text": "0.5",
+        "isCorrect": true
+      },
+      {
+        "text": "1/2",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "Un vettore di modulo 10 inclinato di 60 gradi sull'asse x ha componente lungo x pari a ……",
+    "options": [
+      {
+        "text": "5",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "type": "COMPLETAMENTO",
+    "text": "L'unità di misura della forza nel Sistema Internazionale, pari a kg per m al secondo quadrato, è il ……",
+    "options": [
+      {
+        "text": "newton",
+        "isCorrect": true
+      },
+      {
+        "text": "N",
+        "isCorrect": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,429 @@
+[
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Secondo la legge di Coulomb, la forza fra due cariche puntiformi:",
+    "options": [
+      { "text": "È direttamente proporzionale al prodotto delle cariche e inversamente proporzionale al quadrato della distanza che le separa", "isCorrect": true },
+      { "text": "È inversamente proporzionale alla distanza che le separa", "isCorrect": false },
+      { "text": "È proporzionale alla somma delle due cariche", "isCorrect": false },
+      { "text": "È direttamente proporzionale al quadrato della distanza", "isCorrect": false },
+      { "text": "Non dipende dal mezzo in cui le cariche sono immerse", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Raddoppiando la distanza fra due cariche puntiformi, la forza elettrica fra loro:",
+    "options": [
+      { "text": "Si riduce a un quarto", "isCorrect": true },
+      { "text": "Si dimezza", "isCorrect": false },
+      { "text": "Raddoppia", "isCorrect": false },
+      { "text": "Quadruplica", "isCorrect": false },
+      { "text": "Resta invariata", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Date una carica puntiforme, le superfici equipotenziali del campo che genera sono:",
+    "options": [
+      { "text": "Sfere concentriche alla carica", "isCorrect": true },
+      { "text": "Piani a distanza crescente dalla carica", "isCorrect": false },
+      { "text": "Superfici cubiche con la carica al centro", "isCorrect": false },
+      { "text": "Ellissoidi di cui la carica occupa un fuoco", "isCorrect": false },
+      { "text": "Superfici coniche con vertice sulla carica", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Le linee di campo elettrico all'interno di un condensatore piano ideale sono:",
+    "options": [
+      { "text": "Dirette dall'armatura positiva a quella negativa, perpendicolari alle armature e parallele fra loro", "isCorrect": true },
+      { "text": "Dirette dall'armatura negativa a quella positiva, perpendicolari alle armature", "isCorrect": false },
+      { "text": "Parallele alle superfici delle armature", "isCorrect": false },
+      { "text": "Disposte a raggiera a partire dal centro", "isCorrect": false },
+      { "text": "Cilindriche attorno alle armature", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Il campo elettrico in un punto è definito come:",
+    "options": [
+      { "text": "Il rapporto fra la forza che agirebbe su una carica di prova posta in quel punto e il valore della carica stessa", "isCorrect": true },
+      { "text": "Il prodotto della forza per la carica di prova", "isCorrect": false },
+      { "text": "Il lavoro necessario a portare una carica unitaria in quel punto dall'infinito", "isCorrect": false },
+      { "text": "La differenza di potenziale fra quel punto e un punto di riferimento", "isCorrect": false },
+      { "text": "Una grandezza scalare che misura l'energia immagazzinata nel punto", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Qual è la differenza fra campo elettrico e potenziale elettrico?",
+    "options": [
+      { "text": "Il campo è una grandezza vettoriale, forza per unità di carica; il potenziale è scalare, energia potenziale per unità di carica, e il campo è diretto verso i potenziali decrescenti", "isCorrect": true },
+      { "text": "Il campo è scalare e il potenziale vettoriale", "isCorrect": false },
+      { "text": "Sono la stessa grandezza espressa in unità diverse", "isCorrect": false },
+      { "text": "Il campo si misura in volt, il potenziale in newton", "isCorrect": false },
+      { "text": "Il potenziale esiste solo dove il campo è nullo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Un elettrone attraversa due punti di un campo elettrico fra i quali esiste una differenza di potenziale di 3 x 10 alla 4 volt. La variazione di energia dell'elettrone vale:",
+    "options": [
+      { "text": "30 keV", "isCorrect": true },
+      { "text": "3 keV", "isCorrect": false },
+      { "text": "300 keV", "isCorrect": false },
+      { "text": "3 MeV", "isCorrect": false },
+      { "text": "30 eV", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "In un conduttore metallico in equilibrio elettrostatico:",
+    "options": [
+      { "text": "Il campo elettrico all'interno è nullo e la carica in eccesso si dispone tutta sulla superficie esterna", "isCorrect": true },
+      { "text": "Il campo elettrico all'interno è massimo al centro", "isCorrect": false },
+      { "text": "La carica in eccesso si distribuisce uniformemente in tutto il volume", "isCorrect": false },
+      { "text": "Il potenziale varia da punto a punto all'interno del conduttore", "isCorrect": false },
+      { "text": "Le cariche si muovono continuamente lungo linee chiuse", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Che cosa distingue l'induzione elettrostatica in un conduttore dalla polarizzazione in un dielettrico?",
+    "options": [
+      { "text": "Nel conduttore gli elettroni liberi si spostano effettivamente da una parte all'altra; nel dielettrico le cariche restano legate e si limitano a spostarsi di poco dentro ogni molecola, orientando i dipoli", "isCorrect": true },
+      { "text": "Nel dielettrico gli elettroni liberi migrano, nel conduttore no", "isCorrect": false },
+      { "text": "L'induzione riguarda i soli materiali magnetici", "isCorrect": false },
+      { "text": "La polarizzazione comporta il passaggio di una corrente continua nel dielettrico", "isCorrect": false },
+      { "text": "Sono lo stesso fenomeno, con nomi diversi a seconda del materiale", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "L'intensità di corrente elettrica è definita come:",
+    "options": [
+      { "text": "La quantità di carica che attraversa una sezione del conduttore nell'unità di tempo, e si misura in ampere", "isCorrect": true },
+      { "text": "La velocità media degli elettroni nel conduttore", "isCorrect": false },
+      { "text": "Il prodotto della carica per il tempo di transito", "isCorrect": false },
+      { "text": "La differenza di potenziale fra i due estremi del conduttore", "isCorrect": false },
+      { "text": "La quantità di energia dissipata nell'unità di tempo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "La prima legge di Ohm stabilisce che in un conduttore ohmico:",
+    "options": [
+      { "text": "La differenza di potenziale applicata e l'intensità di corrente sono direttamente proporzionali, e la costante di proporzionalità è la resistenza", "isCorrect": true },
+      { "text": "La resistenza è proporzionale alla lunghezza del conduttore e inversamente alla sezione", "isCorrect": false },
+      { "text": "La potenza dissipata è proporzionale al quadrato della corrente", "isCorrect": false },
+      { "text": "La corrente è inversamente proporzionale alla differenza di potenziale", "isCorrect": false },
+      { "text": "La resistenza non dipende dal materiale di cui è fatto il conduttore", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "La seconda legge di Ohm afferma che la resistenza di un filo conduttore:",
+    "options": [
+      { "text": "È proporzionale alla resistività del materiale e alla lunghezza del filo, e inversamente proporzionale all'area della sezione", "isCorrect": true },
+      { "text": "È proporzionale all'area della sezione e inversamente proporzionale alla lunghezza", "isCorrect": false },
+      { "text": "Dipende solo dalla differenza di potenziale applicata", "isCorrect": false },
+      { "text": "È inversamente proporzionale al quadrato della lunghezza", "isCorrect": false },
+      { "text": "Non dipende dal materiale di cui il filo è costituito", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Applicando 12 V ai capi di una resistenza di 4 ohm, l'intensità di corrente e la potenza dissipata valgono rispettivamente:",
+    "options": [
+      { "text": "3 A e 36 W", "isCorrect": true },
+      { "text": "48 A e 576 W", "isCorrect": false },
+      { "text": "3 A e 12 W", "isCorrect": false },
+      { "text": "0,33 A e 4 W", "isCorrect": false },
+      { "text": "3 A e 4 W", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Due resistenze da 6 ohm collegate in parallelo equivalgono a una resistenza di:",
+    "options": [
+      { "text": "3 ohm", "isCorrect": true },
+      { "text": "12 ohm", "isCorrect": false },
+      { "text": "6 ohm", "isCorrect": false },
+      { "text": "0,33 ohm", "isCorrect": false },
+      { "text": "36 ohm", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Che cosa hanno in comune due resistenze collegate in serie?",
+    "options": [
+      { "text": "Sono attraversate dalla stessa intensità di corrente, mentre la differenza di potenziale totale si ripartisce fra le due", "isCorrect": true },
+      { "text": "Sono sottoposte alla stessa differenza di potenziale", "isCorrect": false },
+      { "text": "Dissipano necessariamente la stessa potenza", "isCorrect": false },
+      { "text": "La resistenza equivalente è minore di ciascuna delle due", "isCorrect": false },
+      { "text": "La corrente si ripartisce fra le due in parti uguali", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "L'effetto Joule consiste nel fatto che:",
+    "options": [
+      { "text": "Il passaggio di corrente in un conduttore ohmico dissipa energia sotto forma di calore, con potenza pari al prodotto della resistenza per il quadrato della corrente", "isCorrect": true },
+      { "text": "Il passaggio di corrente genera un campo magnetico attorno al conduttore", "isCorrect": false },
+      { "text": "Un conduttore in moto in un campo magnetico sviluppa una forza elettromotrice", "isCorrect": false },
+      { "text": "La resistenza di un conduttore diminuisce al crescere della temperatura", "isCorrect": false },
+      { "text": "Le cariche in eccesso si dispongono sulla superficie di un conduttore", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "La capacità di un condensatore è definita come:",
+    "options": [
+      { "text": "Il rapporto fra la carica accumulata su un'armatura e la differenza di potenziale fra le armature, e si misura in farad", "isCorrect": true },
+      { "text": "Il prodotto della carica per la differenza di potenziale", "isCorrect": false },
+      { "text": "L'energia immagazzinata per unità di carica", "isCorrect": false },
+      { "text": "Il rapporto fra la differenza di potenziale e la carica accumulata", "isCorrect": false },
+      { "text": "La massima corrente che il condensatore può erogare", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Inserendo un dielettrico fra le armature di un condensatore piano, a parità di geometria:",
+    "options": [
+      { "text": "La capacità aumenta di un fattore pari alla costante dielettrica relativa del materiale, perché la polarizzazione indebolisce il campo fra le armature", "isCorrect": true },
+      { "text": "La capacità diminuisce, perché il dielettrico isola le armature", "isCorrect": false },
+      { "text": "La capacità resta invariata, perché dipende solo dalla geometria", "isCorrect": false },
+      { "text": "Il condensatore si scarica immediatamente", "isCorrect": false },
+      { "text": "La capacità diventa infinita, perché nessuna corrente può più passare", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "La capacità di un condensatore piano, a parità di dielettrico:",
+    "options": [
+      { "text": "Cresce con l'area delle armature e diminuisce al crescere della loro distanza", "isCorrect": true },
+      { "text": "Cresce con la distanza fra le armature", "isCorrect": false },
+      { "text": "Dipende dalla carica accumulata sulle armature", "isCorrect": false },
+      { "text": "Dipende dalla differenza di potenziale applicata", "isCorrect": false },
+      { "text": "Diminuisce all'aumentare dell'area delle armature", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Due condensatori uguali collegati in parallelo:",
+    "options": [
+      { "text": "Danno una capacità equivalente pari alla somma delle due, al contrario di quanto accade per le resistenze in parallelo", "isCorrect": true },
+      { "text": "Danno una capacità equivalente pari alla metà di quella di uno solo", "isCorrect": false },
+      { "text": "Danno una capacità equivalente uguale a quella di uno solo", "isCorrect": false },
+      { "text": "Non possono essere collegati in parallelo", "isCorrect": false },
+      { "text": "Danno una capacità equivalente pari al prodotto delle due", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "L'esperimento di Oersted dimostrò che:",
+    "options": [
+      { "text": "Una corrente elettrica genera attorno a sé un campo magnetico, capace di deviare l'ago di una bussola", "isCorrect": true },
+      { "text": "Un campo magnetico variabile genera una corrente in un circuito chiuso", "isCorrect": false },
+      { "text": "Due fili percorsi da corrente nello stesso verso si respingono", "isCorrect": false },
+      { "text": "La carica elettrica si conserva nei fenomeni di elettrizzazione", "isCorrect": false },
+      { "text": "Il campo elettrico all'interno di un conduttore è nullo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "La forza di Lorentz su una carica in moto in un campo magnetico:",
+    "options": [
+      { "text": "È perpendicolare sia alla velocità sia al campo, è massima quando i due vettori sono perpendicolari e si annulla quando sono paralleli", "isCorrect": true },
+      { "text": "È sempre parallela alla velocità della carica", "isCorrect": false },
+      { "text": "È massima quando velocità e campo sono paralleli", "isCorrect": false },
+      { "text": "Agisce anche su una carica ferma nel campo magnetico", "isCorrect": false },
+      { "text": "È diretta sempre lungo le linee del campo magnetico", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Perché la forza magnetica su una carica in moto non compie mai lavoro?",
+    "options": [
+      { "text": "Perché è in ogni istante perpendicolare alla velocità, quindi può cambiare la direzione del moto ma non il modulo della velocità né l'energia cinetica", "isCorrect": true },
+      { "text": "Perché il campo magnetico non contiene energia", "isCorrect": false },
+      { "text": "Perché la forza magnetica è sempre nulla su una carica in movimento", "isCorrect": false },
+      { "text": "Perché la forza è parallela allo spostamento ma di verso opposto", "isCorrect": false },
+      { "text": "Perché la carica si muove sempre lungo una superficie equipotenziale", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Una carica entra con velocità perpendicolare in un campo magnetico uniforme. La traiettoria che descrive è:",
+    "options": [
+      { "text": "Una circonferenza, il cui raggio cresce con la quantità di moto della particella e diminuisce al crescere della carica e del campo", "isCorrect": true },
+      { "text": "Una retta, perché la forza magnetica è nulla", "isCorrect": false },
+      { "text": "Una parabola, come nel moto di un proiettile", "isCorrect": false },
+      { "text": "Una spirale che si avvolge sempre più stretta fino a fermarsi", "isCorrect": false },
+      { "text": "Una retta inclinata rispetto alla direzione iniziale", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Le linee di forza del campo magnetico:",
+    "options": [
+      { "text": "Sono linee chiuse, perché non esistono poli magnetici isolati da cui possano partire o su cui possano terminare", "isCorrect": true },
+      { "text": "Partono dal polo nord e terminano all'infinito", "isCorrect": false },
+      { "text": "Sono linee aperte, come quelle del campo elettrico generato da una carica", "isCorrect": false },
+      { "text": "Si intersecano nei punti dove il campo è più intenso", "isCorrect": false },
+      { "text": "Esistono solo all'interno dei materiali ferromagnetici", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "La legge di Faraday-Neumann stabilisce che in un circuito si genera una forza elettromotrice indotta quando:",
+    "options": [
+      { "text": "Il flusso del campo magnetico concatenato con il circuito varia nel tempo, e la forza elettromotrice è pari all'opposto della rapidità di quella variazione", "isCorrect": true },
+      { "text": "Il circuito è immerso in un campo magnetico costante, qualunque sia la sua intensità", "isCorrect": false },
+      { "text": "Nel circuito passa una corrente continua", "isCorrect": false },
+      { "text": "Il circuito è attraversato da un campo elettrico costante", "isCorrect": false },
+      { "text": "Il flusso magnetico concatenato è massimo e costante", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "La legge di Lenz, cioè il segno meno nella legge di Faraday-Neumann, esprime il fatto che:",
+    "options": [
+      { "text": "La corrente indotta circola nel verso tale da opporsi alla variazione di flusso che l'ha generata: è una conseguenza della conservazione dell'energia", "isCorrect": true },
+      { "text": "La corrente indotta circola sempre in senso orario", "isCorrect": false },
+      { "text": "La corrente indotta rinforza la variazione di flusso che l'ha prodotta", "isCorrect": false },
+      { "text": "La forza elettromotrice indotta è sempre negativa", "isCorrect": false },
+      { "text": "Il flusso magnetico concatenato con un circuito non può mai variare", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Avvicinando rapidamente il polo nord di una calamita a una spira conduttrice chiusa:",
+    "options": [
+      { "text": "Nella spira si genera una corrente indotta nel verso che crea un polo nord rivolto verso la calamita, opponendosi all'avvicinamento", "isCorrect": true },
+      { "text": "Nella spira non succede nulla, perché la calamita non tocca il conduttore", "isCorrect": false },
+      { "text": "Nella spira si genera una corrente che attira la calamita, accelerandola", "isCorrect": false },
+      { "text": "La spira si magnetizza in modo permanente", "isCorrect": false },
+      { "text": "Nella spira si genera una corrente continua che persiste anche a calamita ferma", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "In un circuito, un generatore elettrico ideale:",
+    "options": [
+      { "text": "Mantiene costante la differenza di potenziale ai propri morsetti qualunque sia la corrente erogata, perché ha resistenza interna nulla", "isCorrect": true },
+      { "text": "Mantiene costante la corrente erogata qualunque sia il carico", "isCorrect": false },
+      { "text": "Crea cariche elettriche dal nulla", "isCorrect": false },
+      { "text": "Ha resistenza interna infinita", "isCorrect": false },
+      { "text": "Funziona solo con circuiti in parallelo", "isCorrect": false }
+    ]
+  },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "La forza elettrica fra due cariche, secondo la legge di Coulomb, è inversamente proporzionale al quadrato della …… che le separa.",
+    "options": [ { "text": "distanza", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Le linee di forza del campo magnetico sono ……",
+    "options": [ { "text": "chiuse", "isCorrect": true }, { "text": "linee chiuse", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Un elettrone che si sposta fra due punti fra i quali esiste una differenza di potenziale di 3 x 10 alla 4 volt subisce una variazione di energia pari a …… keV",
+    "options": [ { "text": "30", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "L'unità di misura della carica elettrica nel Sistema Internazionale è il ……",
+    "options": [ { "text": "coulomb", "isCorrect": true }, { "text": "C", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "L'unità di misura dell'intensità di corrente nel Sistema Internazionale è l'……",
+    "options": [ { "text": "ampere", "isCorrect": true }, { "text": "A", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "L'unità di misura della differenza di potenziale è il ……",
+    "options": [ { "text": "volt", "isCorrect": true }, { "text": "V", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "L'unità di misura della resistenza elettrica è l'……",
+    "options": [ { "text": "ohm", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "L'unità di misura della capacità elettrica è il ……",
+    "options": [ { "text": "farad", "isCorrect": true }, { "text": "F", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Le superfici equipotenziali del campo generato da una carica puntiforme sono …… concentriche.",
+    "options": [ { "text": "sfere", "isCorrect": true }, { "text": "sferiche", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "In un conduttore in equilibrio elettrostatico il campo elettrico interno vale ……",
+    "options": [ { "text": "zero", "isCorrect": true }, { "text": "0", "isCorrect": true }, { "text": "nullo", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "In un conduttore carico in equilibrio la carica in eccesso si dispone tutta sulla ……",
+    "options": [ { "text": "superficie", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Il campo elettrico all'interno di un condensatore piano ideale è diretto dall'armatura positiva a quella ……",
+    "options": [ { "text": "negativa", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Un materiale isolante inserito fra le armature di un condensatore si chiama ……",
+    "options": [ { "text": "dielettrico", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Inserendo un dielettrico fra le armature, la capacità del condensatore ……",
+    "options": [ { "text": "aumenta", "isCorrect": true }, { "text": "cresce", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "La legge secondo cui la differenza di potenziale è uguale al prodotto della resistenza per l'intensità di corrente si chiama prima legge di ……",
+    "options": [ { "text": "Ohm", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "La grandezza caratteristica di un materiale che compare nella seconda legge di Ohm si chiama ……",
+    "options": [ { "text": "resistivita", "isCorrect": true }, { "text": "resistività", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "L'intensità di corrente che attraversa una resistenza di 4 ohm sottoposta a 12 V vale …… ampere.",
+    "options": [ { "text": "3", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Due resistenze da 6 ohm collegate in parallelo equivalgono a una resistenza di …… ohm.",
+    "options": [ { "text": "3", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Due resistenze collegate in serie sono attraversate dalla stessa intensità di ……",
+    "options": [ { "text": "corrente", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "La dissipazione di energia in calore dovuta al passaggio di corrente in un conduttore si chiama effetto ……",
+    "options": [ { "text": "Joule", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "La potenza dissipata per effetto Joule è proporzionale al …… dell'intensità di corrente.",
+    "options": [ { "text": "quadrato", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "L'esperimento che per primo mostrò che una corrente genera un campo magnetico è dovuto a ……",
+    "options": [ { "text": "Oersted", "isCorrect": true }, { "text": "Oerstedt", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "La forza che un campo magnetico esercita su una carica in movimento si chiama forza di ……",
+    "options": [ { "text": "Lorentz", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Il lavoro compiuto dalla forza magnetica su una carica in moto vale sempre ……",
+    "options": [ { "text": "zero", "isCorrect": true }, { "text": "0", "isCorrect": true }, { "text": "nullo", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Una carica che entra perpendicolarmente in un campo magnetico uniforme descrive una traiettoria ……",
+    "options": [ { "text": "circolare", "isCorrect": true }, { "text": "circonferenza", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "La forza di Lorentz su una carica è nulla quando velocità e campo magnetico sono fra loro ……",
+    "options": [ { "text": "paralleli", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "La legge che lega la forza elettromotrice indotta alla variazione del flusso magnetico si chiama legge di Faraday-……",
+    "options": [ { "text": "Neumann", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "La legge che stabilisce il verso della corrente indotta, opposta alla causa che la genera, è la legge di ……",
+    "options": [ { "text": "Lenz", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Perché in un circuito si generi una corrente indotta, il flusso magnetico concatenato deve ……",
+    "options": [ { "text": "variare", "isCorrect": true }, { "text": "cambiare", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Lo spostamento delle cariche libere di un conduttore per avvicinamento di un corpo carico si chiama induzione ……",
+    "options": [ { "text": "elettrostatica", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "L'orientamento dei dipoli molecolari di un isolante in un campo elettrico si chiama ……",
+    "options": [ { "text": "polarizzazione", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Più condensatori collegati in parallelo danno una capacità equivalente pari alla …… delle singole capacità.",
+    "options": [ { "text": "somma", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Raddoppiando la distanza fra due cariche puntiformi, la forza di Coulomb si riduce a un ……",
+    "options": [ { "text": "quarto", "isCorrect": true }, { "text": "1/4", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "La capacità di un condensatore piano è proporzionale all'area delle armature e inversamente proporzionale alla loro ……",
+    "options": [ { "text": "distanza", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "La grandezza vettoriale definita come forza per unità di carica di prova si chiama campo ……",
+    "options": [ { "text": "elettrico", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "L'energia potenziale elettrica per unità di carica si chiama ……",
+    "options": [ { "text": "potenziale", "isCorrect": true } ] }
+]

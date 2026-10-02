@@ -1,0 +1,456 @@
+[
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "La pressione in un punto di un fluido in quiete è definita come:",
+    "options": [
+      { "text": "Il rapporto fra il modulo della forza esercitata perpendicolarmente su una superficie e l'area di quella superficie", "isCorrect": true },
+      { "text": "Il prodotto della forza per l'area della superficie su cui agisce", "isCorrect": false },
+      { "text": "Il rapporto fra la forza parallela alla superficie e l'area", "isCorrect": false },
+      { "text": "Il peso della colonna di fluido sovrastante, indipendentemente dalla superficie", "isCorrect": false },
+      { "text": "Una grandezza vettoriale diretta verso il basso", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "La legge di Stevino afferma che la pressione in un liquido in quiete:",
+    "options": [
+      { "text": "Cresce con la profondità secondo il prodotto densità per g per profondità, e non dipende dalla forma del recipiente", "isCorrect": true },
+      { "text": "Dipende dalla quantità totale di liquido contenuta nel recipiente", "isCorrect": false },
+      { "text": "È la stessa a ogni profondità, purché il liquido sia incomprimibile", "isCorrect": false },
+      { "text": "Dipende dalla forma e dalla sezione del recipiente", "isCorrect": false },
+      { "text": "Diminuisce con la profondità per effetto della spinta di Archimede", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "A quale pressione, in atmosfere, è sottoposto complessivamente un sub che si trova a 50 m sotto il livello del mare?",
+    "options": [
+      { "text": "Circa 6", "isCorrect": true },
+      { "text": "Circa 5", "isCorrect": false },
+      { "text": "Circa 50", "isCorrect": false },
+      { "text": "Circa 30", "isCorrect": false },
+      { "text": "Circa 60", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "A quanti metri di colonna d'acqua corrisponde approssimativamente una pressione di 1 atmosfera?",
+    "options": [
+      { "text": "10 m", "isCorrect": true },
+      { "text": "1 m", "isCorrect": false },
+      { "text": "76 m", "isCorrect": false },
+      { "text": "100 m", "isCorrect": false },
+      { "text": "0,76 m", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Nel cosiddetto paradosso idrostatico, due recipienti di forma molto diversa ma riempiti alla stessa altezza mostrano la stessa pressione sul fondo. Come si spiega?",
+    "options": [
+      { "text": "La pressione dipende solo dall'altezza della colonna di liquido e dalla sua densità, non dal volume complessivo né dalla forma delle pareti", "isCorrect": true },
+      { "text": "La pressione dipende dal peso totale del liquido, che nei due casi è uguale", "isCorrect": false },
+      { "text": "Si tratta di un'illusione dovuta alla tensione superficiale", "isCorrect": false },
+      { "text": "La pressione dipende dalla superficie del fondo, che nei due casi è diversa", "isCorrect": false },
+      { "text": "In realtà le pressioni sono diverse e il paradosso è solo apparente", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Il principio di Pascal, su cui si basa il torchio idraulico, afferma che:",
+    "options": [
+      { "text": "Una pressione esercitata su una porzione di fluido incomprimibile si trasmette inalterata a tutto il fluido e alle pareti del recipiente", "isCorrect": true },
+      { "text": "La forza esercitata su un pistone si trasmette inalterata all'altro pistone", "isCorrect": false },
+      { "text": "La pressione si trasmette solo lungo la direzione in cui viene applicata", "isCorrect": false },
+      { "text": "Un corpo immerso riceve una spinta pari al peso del fluido spostato", "isCorrect": false },
+      { "text": "La pressione in un fluido è la stessa a tutte le profondità", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "In un torchio idraulico il pistone piccolo ha area 5 cm2 e quello grande 100 cm2. Applicando 50 N al pistone piccolo, sul grande si ottiene una forza di:",
+    "options": [
+      { "text": "1000 N", "isCorrect": true },
+      { "text": "500 N", "isCorrect": false },
+      { "text": "2,5 N", "isCorrect": false },
+      { "text": "50 N", "isCorrect": false },
+      { "text": "100 N", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Il principio di Archimede stabilisce che un corpo immerso in un fluido riceve una spinta verso l'alto pari:",
+    "options": [
+      { "text": "Al peso del volume di fluido spostato", "isCorrect": true },
+      { "text": "Al peso del corpo immerso", "isCorrect": false },
+      { "text": "Alla differenza fra il peso del corpo e quello del fluido", "isCorrect": false },
+      { "text": "Al volume del corpo moltiplicato per la sua densità", "isCorrect": false },
+      { "text": "Alla pressione idrostatica alla profondità del baricentro", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Un tronco di ulivo di densità 850 kg/m3 galleggia in acqua dolce di densità 1000 kg/m3. La frazione di volume immersa è:",
+    "options": [
+      { "text": "0,85", "isCorrect": true },
+      { "text": "0,15", "isCorrect": false },
+      { "text": "1,18", "isCorrect": false },
+      { "text": "0,5", "isCorrect": false },
+      { "text": "Dipende dalla forma del tronco", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Una zattera di legno a base quadrata di lato 4 m e altezza 50 cm, di densità 800 kg/m3, galleggia in acqua portando un carico di 400 kg. L'altezza della parte immersa è:",
+    "options": [
+      { "text": "42,5 cm", "isCorrect": true },
+      { "text": "40 cm", "isCorrect": false },
+      { "text": "45 cm", "isCorrect": false },
+      { "text": "37,5 cm", "isCorrect": false },
+      { "text": "35 cm", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Perché un corpo galleggia in un fluido?",
+    "options": [
+      { "text": "Perché la sua densità media è minore di quella del fluido: si immerge solo quanto basta perché il peso del fluido spostato ne eguagli il peso", "isCorrect": true },
+      { "text": "Perché la sua massa è minore di quella del fluido in cui è immerso", "isCorrect": false },
+      { "text": "Perché il suo volume è maggiore di quello del fluido spostato", "isCorrect": false },
+      { "text": "Perché la spinta di Archimede è sempre maggiore del peso, qualunque sia il corpo", "isCorrect": false },
+      { "text": "Perché la tensione superficiale lo sostiene indipendentemente dalla densità", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "L'esperimento di Torricelli dimostrò che:",
+    "options": [
+      { "text": "La pressione atmosferica al livello del mare equilibra una colonna di mercurio alta circa 76 cm, e sopra di essa resta il vuoto", "isCorrect": true },
+      { "text": "La pressione atmosferica equilibra una colonna di mercurio alta 10 m", "isCorrect": false },
+      { "text": "Il mercurio è incomprimibile a qualunque pressione", "isCorrect": false },
+      { "text": "La pressione di un liquido dipende dalla forma del recipiente", "isCorrect": false },
+      { "text": "Un corpo immerso riceve una spinta pari al peso del fluido spostato", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "La portata di un condotto è definita come:",
+    "options": [
+      { "text": "Il volume di fluido che attraversa una sezione nell'unità di tempo, pari al prodotto dell'area della sezione per la velocità media", "isCorrect": true },
+      { "text": "La massa di fluido contenuta nel condotto", "isCorrect": false },
+      { "text": "Il rapporto fra la velocità del fluido e l'area della sezione", "isCorrect": false },
+      { "text": "La pressione esercitata dal fluido sulle pareti del condotto", "isCorrect": false },
+      { "text": "La velocità massima raggiunta dal fluido sull'asse del condotto", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "L'equazione di continuità, applicata a un fluido incomprimibile in moto stazionario, afferma che:",
+    "options": [
+      { "text": "Il prodotto dell'area della sezione per la velocità resta costante: dove il condotto si restringe il fluido accelera", "isCorrect": true },
+      { "text": "La velocità resta costante lungo tutto il condotto", "isCorrect": false },
+      { "text": "Dove il condotto si restringe il fluido rallenta", "isCorrect": false },
+      { "text": "La pressione resta costante lungo tutto il condotto", "isCorrect": false },
+      { "text": "La portata aumenta dove la sezione aumenta", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Se la sezione di un tubo si dimezza, la velocità del fluido incomprimibile che lo percorre:",
+    "options": [
+      { "text": "Raddoppia", "isCorrect": true },
+      { "text": "Si dimezza", "isCorrect": false },
+      { "text": "Resta invariata", "isCorrect": false },
+      { "text": "Quadruplica", "isCorrect": false },
+      { "text": "Si riduce a un quarto", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Il teorema di Bernoulli esprime, per un fluido ideale in moto stazionario:",
+    "options": [
+      { "text": "La conservazione dell'energia per unità di volume: la somma di pressione, termine cinetico e termine gravitazionale resta costante lungo un tubo di flusso", "isCorrect": true },
+      { "text": "La conservazione della massa lungo un tubo di flusso", "isCorrect": false },
+      { "text": "La proporzionalità fra portata e quarta potenza del raggio", "isCorrect": false },
+      { "text": "La conservazione della quantità di moto del fluido", "isCorrect": false },
+      { "text": "La costanza della pressione in tutti i punti del fluido", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "In corrispondenza di una stenosi, cioè di un restringimento di un vaso sanguigno:",
+    "options": [
+      { "text": "La velocità del sangue aumenta e la pressione laterale diminuisce, tanto che nei casi estremi il vaso può tendere a collassare", "isCorrect": true },
+      { "text": "La velocità diminuisce e la pressione laterale aumenta", "isCorrect": false },
+      { "text": "Velocità e pressione aumentano entrambe", "isCorrect": false },
+      { "text": "La portata aumenta proporzionalmente alla riduzione di sezione", "isCorrect": false },
+      { "text": "Velocità e pressione restano invariate, perché il sangue è incomprimibile", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "In un aneurisma, dilatazione localizzata di un'arteria, il teorema di Bernoulli prevede che:",
+    "options": [
+      { "text": "La velocità del sangue diminuisca e la pressione laterale aumenti, aggravando la dilatazione in un circolo vizioso", "isCorrect": true },
+      { "text": "La velocità aumenti e la pressione diminuisca", "isCorrect": false },
+      { "text": "La pressione resti invariata perché la portata non cambia", "isCorrect": false },
+      { "text": "La portata diminuisca proporzionalmente alla dilatazione", "isCorrect": false },
+      { "text": "La pressione diminuisca, favorendo la chiusura spontanea della dilatazione", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "In un fluido reale in moto laminare dentro un condotto cilindrico, il profilo delle velocità è:",
+    "options": [
+      { "text": "Parabolico, con velocità massima sull'asse e nulla a contatto con la parete", "isCorrect": true },
+      { "text": "Uniforme su tutta la sezione, come in un fluido ideale", "isCorrect": false },
+      { "text": "Parabolico, con velocità massima alla parete e nulla sull'asse", "isCorrect": false },
+      { "text": "Lineare, crescente dalla parete verso l'asse", "isCorrect": false },
+      { "text": "Irregolare e variabile nel tempo in ogni punto", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Che cosa misura la viscosità di un fluido?",
+    "options": [
+      { "text": "La resistenza che il fluido oppone allo scorrimento relativo dei suoi strati, cioè l'attrito interno; si misura in pascal per secondo", "isCorrect": true },
+      { "text": "La densità del fluido rispetto a quella dell'acqua", "isCorrect": false },
+      { "text": "La pressione che il fluido esercita sulle pareti del condotto", "isCorrect": false },
+      { "text": "La tendenza del fluido a formare gocce sferiche", "isCorrect": false },
+      { "text": "La velocità massima che il fluido può raggiungere in un condotto", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Secondo la legge di Poiseuille, dimezzando il raggio di un vaso, a parità di tutto il resto, la portata:",
+    "options": [
+      { "text": "Si riduce a un sedicesimo, perché dipende dalla quarta potenza del raggio", "isCorrect": true },
+      { "text": "Si dimezza", "isCorrect": false },
+      { "text": "Si riduce a un quarto", "isCorrect": false },
+      { "text": "Si riduce a un ottavo", "isCorrect": false },
+      { "text": "Resta invariata, perché la portata dipende solo dalla differenza di pressione", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "La resistenza idraulica di un condotto, secondo la legge di Poiseuille:",
+    "options": [
+      { "text": "Cresce con la viscosità e con la lunghezza del condotto e diminuisce con la quarta potenza del raggio", "isCorrect": true },
+      { "text": "Cresce con il raggio e diminuisce con la lunghezza", "isCorrect": false },
+      { "text": "Dipende solo dalla differenza di pressione applicata", "isCorrect": false },
+      { "text": "È inversamente proporzionale al quadrato del raggio", "isCorrect": false },
+      { "text": "Non dipende dalla viscosità del fluido", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Perché il letto capillare, pur essendo fatto di vasi strettissimi, oppone complessivamente una resistenza modesta?",
+    "options": [
+      { "text": "Perché i capillari sono disposti in parallelo e in numero enorme: le resistenze in parallelo si combinano in modo che la resistenza totale sia minore della più piccola delle singole", "isCorrect": true },
+      { "text": "Perché la viscosità del sangue si annulla nei vasi di piccolo calibro", "isCorrect": false },
+      { "text": "Perché i capillari sono disposti in serie e le resistenze in serie si compensano", "isCorrect": false },
+      { "text": "Perché nei capillari il moto diventa turbolento e la resistenza cala", "isCorrect": false },
+      { "text": "Perché la legge di Poiseuille non si applica ai vasi di diametro inferiore al millimetro", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Due resistenze idrauliche collegate in serie:",
+    "options": [
+      { "text": "Si sommano, e sono attraversate dalla stessa portata", "isCorrect": true },
+      { "text": "Si combinano come i reciproci, dando una resistenza minore di ciascuna", "isCorrect": false },
+      { "text": "Sono sottoposte alla stessa differenza di pressione", "isCorrect": false },
+      { "text": "Danno una resistenza pari alla media delle due", "isCorrect": false },
+      { "text": "Si annullano a vicenda se hanno lo stesso valore", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Il numero di Reynolds serve a prevedere:",
+    "options": [
+      { "text": "Se il moto di un fluido sarà laminare o turbolento, mettendo a confronto le forze d'inerzia con quelle viscose", "isCorrect": true },
+      { "text": "La portata di un condotto a partire dal suo raggio", "isCorrect": false },
+      { "text": "La spinta di Archimede su un corpo immerso", "isCorrect": false },
+      { "text": "La pressione di curvatura di una bolla", "isCorrect": false },
+      { "text": "La velocità del suono in un fluido", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Che cosa cambia quando il moto di un fluido passa da laminare a turbolento?",
+    "options": [
+      { "text": "Gli strati non scorrono più ordinatamente l'uno sull'altro ma si mescolano con vortici: la relazione fra portata e differenza di pressione non è più lineare e la resistenza aumenta", "isCorrect": true },
+      { "text": "La portata diventa proporzionale alla quarta potenza del raggio", "isCorrect": false },
+      { "text": "La viscosità del fluido si annulla", "isCorrect": false },
+      { "text": "La resistenza al moto diminuisce sensibilmente", "isCorrect": false },
+      { "text": "Il profilo delle velocità diventa esattamente parabolico", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "La tensione superficiale di un liquido nasce dal fatto che:",
+    "options": [
+      { "text": "Le molecole in superficie non sono circondate da altre molecole su tutti i lati: la risultante delle forze di coesione le tira verso l'interno e la superficie tende a ridursi al minimo", "isCorrect": true },
+      { "text": "Le molecole in superficie sono più pesanti di quelle interne", "isCorrect": false },
+      { "text": "L'aria sovrastante preme sulla superficie comprimendola", "isCorrect": false },
+      { "text": "Le molecole di superficie formano legami covalenti fra loro", "isCorrect": false },
+      { "text": "La densità del liquido è maggiore in superficie che in profondità", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "La legge di Laplace applicata agli alveoli polmonari prevede che:",
+    "options": [
+      { "text": "La pressione interna necessaria a mantenerli aperti cresce al diminuire del raggio: senza surfattante gli alveoli piccoli tenderebbero a svuotarsi in quelli grandi", "isCorrect": true },
+      { "text": "La pressione interna cresce al crescere del raggio", "isCorrect": false },
+      { "text": "La pressione non dipende dal raggio ma solo dalla tensione superficiale", "isCorrect": false },
+      { "text": "Gli alveoli grandi collassano per primi", "isCorrect": false },
+      { "text": "La tensione superficiale è nulla all'interfaccia aria-liquido alveolare", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "In un capillare di vetro immerso nell'acqua il livello sale, mentre nel mercurio scende. Il motivo è che:",
+    "options": [
+      { "text": "Nell'acqua le forze di adesione con il vetro prevalgono sulla coesione fra le molecole, nel mercurio accade il contrario", "isCorrect": true },
+      { "text": "L'acqua è meno densa del mercurio, e i liquidi leggeri salgono sempre nei capillari", "isCorrect": false },
+      { "text": "L'acqua ha tensione superficiale maggiore del mercurio", "isCorrect": false },
+      { "text": "Il mercurio è un metallo e conduce la corrente, l'acqua no", "isCorrect": false },
+      { "text": "La pressione atmosferica agisce solo sull'acqua", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Un fluido ideale si distingue da uno reale perché:",
+    "options": [
+      { "text": "È incomprimibile e privo di viscosità, quindi scorre senza attrito interno e senza perdita di carico", "isCorrect": true },
+      { "text": "Ha densità nulla", "isCorrect": false },
+      { "text": "Ha viscosità molto elevata, tale da rendere il moto sempre laminare", "isCorrect": false },
+      { "text": "È comprimibile, a differenza dei fluidi reali", "isCorrect": false },
+      { "text": "Non esercita pressione sulle pareti del recipiente", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Che cosa distingue un fluido da un solido dal punto di vista meccanico?",
+    "options": [
+      { "text": "Il fluido non sostiene sforzi di taglio in condizioni statiche: sottoposto a una forza tangenziale scorre indefinitamente, assumendo la forma del recipiente", "isCorrect": true },
+      { "text": "Il fluido è sempre incomprimibile, il solido no", "isCorrect": false },
+      { "text": "Il fluido non ha massa propria", "isCorrect": false },
+      { "text": "Il solido non esercita pressione sulle superfici con cui è a contatto", "isCorrect": false },
+      { "text": "Il fluido non è soggetto alla forza di gravità", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Una zattera di legno di densità 800 kg/m3, base quadrata di lato 4 m e altezza 50 cm, galleggia in acqua di densità 1000 kg/m3. Il massimo carico sopportabile senza affondare è circa:",
+    "options": [
+      { "text": "1600 kg, cioè circa 1,6 x 10 alla 4 N", "isCorrect": true },
+      { "text": "800 kg, cioè circa 8 x 10 alla 3 N", "isCorrect": false },
+      { "text": "6400 kg, cioè circa 6,4 x 10 alla 4 N", "isCorrect": false },
+      { "text": "8000 kg, cioè circa 8 x 10 alla 4 N", "isCorrect": false },
+      { "text": "400 kg, cioè circa 4 x 10 alla 3 N", "isCorrect": false }
+    ]
+  },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "La pressione è definita come il rapporto fra la forza perpendicolare e l'…… della superficie su cui agisce.",
+    "options": [ { "text": "area", "isCorrect": true }, { "text": "superficie", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "L'unità di misura della pressione nel Sistema Internazionale è il ……",
+    "options": [ { "text": "pascal", "isCorrect": true }, { "text": "Pa", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "La legge che lega la pressione di un liquido in quiete alla profondità si chiama legge di ……",
+    "options": [ { "text": "Stevino", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Una pressione di circa 1 atmosfera è esercitata da una colonna d'acqua alta …… metri.",
+    "options": [ { "text": "10", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "La pressione totale a cui è sottoposto un sub a 50 m di profondità nel mare vale circa …… atmosfere.",
+    "options": [ { "text": "6", "isCorrect": true }, { "text": "sei", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Il principio secondo cui una pressione applicata a un fluido incomprimibile si trasmette inalterata in ogni punto si chiama principio di ……",
+    "options": [ { "text": "Pascal", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "La spinta che un fluido esercita verso l'alto su un corpo immerso è descritta dal principio di ……",
+    "options": [ { "text": "Archimede", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "La spinta di Archimede è uguale al …… del volume di fluido spostato.",
+    "options": [ { "text": "peso", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Dalle densità 850 kg/m3 del legno di ulivo e 1000 kg/m3 dell'acqua dolce si ricava che la frazione di volume immerso di un tronco che galleggia è pari a ……",
+    "options": [ { "text": "0,85", "isCorrect": true }, { "text": "0.85", "isCorrect": true }, { "text": "85%", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Un corpo galleggia quando la sua …… media è minore di quella del fluido.",
+    "options": [ { "text": "densita", "isCorrect": true }, { "text": "densità", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "L'esperimento con cui si misurò per la prima volta la pressione atmosferica, con una colonna di mercurio, è l'esperimento di ……",
+    "options": [ { "text": "Torricelli", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "La pressione atmosferica al livello del mare equilibra una colonna di mercurio alta …… millimetri.",
+    "options": [ { "text": "760", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Il volume di fluido che attraversa una sezione nell'unità di tempo si chiama ……",
+    "options": [ { "text": "portata", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "L'equazione secondo cui il prodotto della sezione per la velocità resta costante si chiama equazione di ……",
+    "options": [ { "text": "continuita", "isCorrect": true }, { "text": "continuità", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Se la sezione di un condotto si dimezza, la velocità di un fluido incomprimibile ……",
+    "options": [ { "text": "raddoppia", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Il teorema che esprime la conservazione dell'energia per un fluido ideale in moto stazionario si chiama teorema di ……",
+    "options": [ { "text": "Bernoulli", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "In corrispondenza di una stenosi la velocità del sangue aumenta e la pressione laterale ……",
+    "options": [ { "text": "diminuisce", "isCorrect": true }, { "text": "cala", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "La dilatazione localizzata della parete di un'arteria, in cui la pressione laterale aumenta, si chiama ……",
+    "options": [ { "text": "aneurisma", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "La grandezza che misura l'attrito interno di un fluido si chiama ……",
+    "options": [ { "text": "viscosita", "isCorrect": true }, { "text": "viscosità", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "In un fluido reale in moto laminare dentro un tubo cilindrico, il profilo delle velocità ha forma ……",
+    "options": [ { "text": "parabolica", "isCorrect": true }, { "text": "parabolico", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Nel moto laminare la velocità del fluido a contatto con la parete del condotto vale ……",
+    "options": [ { "text": "zero", "isCorrect": true }, { "text": "0", "isCorrect": true }, { "text": "nulla", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "La legge che lega la portata di un condotto alla quarta potenza del raggio si chiama legge di ……",
+    "options": [ { "text": "Poiseuille", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Secondo la legge di Poiseuille la portata è proporzionale alla …… potenza del raggio.",
+    "options": [ { "text": "quarta", "isCorrect": true }, { "text": "4", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Dimezzando il raggio di un vaso, a parità di tutto il resto, la portata si riduce a un ……",
+    "options": [ { "text": "sedicesimo", "isCorrect": true }, { "text": "1/16", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Più resistenze idrauliche collegate in serie si ……",
+    "options": [ { "text": "sommano", "isCorrect": true }, { "text": "addizionano", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "I capillari del circolo sistemico sono disposti fra loro in ……",
+    "options": [ { "text": "parallelo", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Il regime di moto in cui gli strati di fluido scorrono ordinatamente l'uno sull'altro senza mescolarsi si dice ……",
+    "options": [ { "text": "laminare", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Il regime di moto caratterizzato da vortici e mescolamento disordinato si dice ……",
+    "options": [ { "text": "turbolento", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "La forza che tende a ridurre al minimo l'area della superficie libera di un liquido si chiama tensione ……",
+    "options": [ { "text": "superficiale", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "La legge che lega la pressione di curvatura di una superficie sferica alla tensione superficiale e al raggio si chiama legge di ……",
+    "options": [ { "text": "Laplace", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Secondo la legge di Laplace, a parità di tensione superficiale, la pressione interna di una bolla è tanto maggiore quanto più il raggio è ……",
+    "options": [ { "text": "piccolo", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "La sostanza che riduce la tensione superficiale negli alveoli polmonari impedendone il collasso si chiama ……",
+    "options": [ { "text": "surfattante", "isCorrect": true }, { "text": "surfactante", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "La risalita di un liquido in un tubo molto sottile per effetto dell'adesione alle pareti si chiama ……",
+    "options": [ { "text": "capillarita", "isCorrect": true }, { "text": "capillarità", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Un fluido privo di viscosità e incomprimibile si dice fluido ……",
+    "options": [ { "text": "ideale", "isCorrect": true }, { "text": "perfetto", "isCorrect": true } ] }
+]

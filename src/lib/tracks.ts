@@ -19,6 +19,13 @@ export type TrackSubject = { name: string; short: string };
 // Una prova singola così come si svolge all'esame vero.
 export type Paper = { subject: string; questions: number; minutes: number };
 
+// Di che tipo sono le domande di una prova vera. I numeri sono quelli dell'esame
+// (per il semestre filtro 15 e 16 su 31); quello che conta è la proporzione, perché
+// un'esercitazione più corta la rispetta comunque.
+export type TypeMix = Partial<Record<QuestionKind, number>>;
+
+export type QuestionKind = "MULTIPLE_CHOICE" | "COMPLETAMENTO";
+
 export type Track = {
   id: TrackId;
   label: string;
@@ -32,6 +39,9 @@ export type Track = {
   papers: Paper[];
   // Quante domande ha un'esercitazione su una singola materia.
   practiceSizes: Record<string, number>;
+  // Com'è ripartita una prova fra i tipi di domanda. Assente = nessun vincolo:
+  // si pesca quello che c'è, com'è sempre stato per Professioni Sanitarie.
+  typeMix?: TypeMix;
   scoring: Scoring;
 };
 
@@ -84,9 +94,8 @@ const PROFESSIONI_SANITARIE: Track = {
 // Da sapere: nelle prove vere 15 domande su 31 sono a risposta multipla con cinque
 // opzioni e le altre 16 sono a completamento, cioè lo studente scrive la risposta
 // (una parola, un numero o un'espressione, al massimo 16 caratteri) e un errore di
-// ortografia la rende sbagliata. La piattaforma oggi sa fare solo la scelta
-// multipla: finché non ci sarà un tipo di domanda a completamento, le simulazioni
-// coprono metà dell'esame vero.
+// ortografia la rende sbagliata. È il `typeMix` qui sotto, e il generatore lo
+// rispetta: una prova esce con quel conto esatto, non con quello che capita.
 const SEMESTRE_FILTRO: Track = {
   id: "SEMESTRE_FILTRO",
   label: "Semestre filtro",
@@ -117,6 +126,7 @@ const SEMESTRE_FILTRO: Track = {
     Fisica: 31,
     Biologia: 31,
   },
+  typeMix: { MULTIPLE_CHOICE: 15, COMPLETAMENTO: 16 },
   scoring: { correct: 1, incorrect: -0.1, omitted: 0 },
 };
 
@@ -147,6 +157,41 @@ export function isPracticeable(track: Track, subject: string): boolean {
 
 export function paperOf(track: Track, subject: string): Paper | undefined {
   return track.papers.find((p) => p.subject === subject);
+}
+
+/**
+ * Quante domande di ciascun tipo deve avere una prova di `totale` domande.
+ *
+ * I pesi del percorso sono quelli dell'esame vero (15 e 16 su 31): qui vengono
+ * riscalati sulla lunghezza richiesta, perché un'esercitazione può essere più
+ * corta. I resti si assegnano al tipo che ne ha di più, così la somma torna
+ * sempre esatta. Mappa vuota se il percorso non impone una ripartizione.
+ */
+export function typeQuotas(trackId: TrackId, totale: number): Map<QuestionKind, number> {
+  const mix = TRACKS[trackId].typeMix;
+  if (!mix || totale <= 0) return new Map();
+
+  const pesi = Object.entries(mix).filter(([, peso]) => typeof peso === "number" && peso > 0) as [
+    QuestionKind,
+    number,
+  ][];
+  const somma = pesi.reduce((s, [, peso]) => s + peso, 0);
+  if (somma === 0) return new Map();
+
+  const parti = pesi.map(([tipo, peso]) => {
+    const esatto = (totale * peso) / somma;
+    const intero = Math.floor(esatto);
+    return { tipo, intero, resto: esatto - intero };
+  });
+
+  let avanzo = totale - parti.reduce((s, p) => s + p.intero, 0);
+  for (const p of [...parti].sort((a, b) => b.resto - a.resto)) {
+    if (avanzo <= 0) break;
+    p.intero += 1;
+    avanzo -= 1;
+  }
+
+  return new Map(parti.map((p) => [p.tipo, p.intero]));
 }
 
 // Quante domande ha la simulazione completa del percorso.

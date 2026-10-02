@@ -1,0 +1,595 @@
+[
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Nel moto rettilineo uniformemente accelerato il grafico dello spazio in funzione del tempo è:",
+    "options": [
+      { "text": "Una parabola", "isCorrect": true },
+      { "text": "Una retta inclinata", "isCorrect": false },
+      { "text": "Una retta orizzontale", "isCorrect": false },
+      { "text": "Un'iperbole", "isCorrect": false },
+      { "text": "Una sinusoide", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "In un grafico velocità-tempo, l'area compresa fra la curva e l'asse dei tempi rappresenta:",
+    "options": [
+      { "text": "Lo spazio percorso", "isCorrect": true },
+      { "text": "L'accelerazione media", "isCorrect": false },
+      { "text": "La velocità media", "isCorrect": false },
+      { "text": "L'energia cinetica", "isCorrect": false },
+      { "text": "La quantità di moto", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Che cosa distingue la velocità media dalla velocità istantanea?",
+    "options": [
+      { "text": "La media è il rapporto fra lo spostamento totale e l'intervallo di tempo impiegato; l'istantanea è il limite di quel rapporto per intervalli sempre più piccoli, cioè la pendenza della tangente al grafico orario", "isCorrect": true },
+      { "text": "La media si misura in m/s, l'istantanea in km/h", "isCorrect": false },
+      { "text": "La media è una grandezza scalare, l'istantanea è sempre nulla", "isCorrect": false },
+      { "text": "La media vale solo nel moto uniforme, l'istantanea solo in quello accelerato", "isCorrect": false },
+      { "text": "Coincidono sempre, qualunque sia il tipo di moto", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Un'automobile che viaggia a 20 m/s frena uniformemente e si arresta dopo 50 m. L'accelerazione vale:",
+    "options": [
+      { "text": "-4 m/s2", "isCorrect": true },
+      { "text": "-2 m/s2", "isCorrect": false },
+      { "text": "-8 m/s2", "isCorrect": false },
+      { "text": "-0,4 m/s2", "isCorrect": false },
+      { "text": "-10 m/s2", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Un corpo cade liberamente da fermo, senza attrito. Dopo 2 secondi la sua velocità è circa (g = 9,8 m/s2):",
+    "options": [
+      { "text": "20 m/s", "isCorrect": true },
+      { "text": "10 m/s", "isCorrect": false },
+      { "text": "5 m/s", "isCorrect": false },
+      { "text": "40 m/s", "isCorrect": false },
+      { "text": "2 m/s", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Due corpi di massa diversa vengono lasciati cadere da fermi nel vuoto dalla stessa altezza. Che cosa si osserva?",
+    "options": [
+      { "text": "Arrivano a terra nello stesso istante, perché l'accelerazione di gravità non dipende dalla massa del corpo", "isCorrect": true },
+      { "text": "Arriva prima il corpo più pesante, perché su di esso agisce una forza maggiore", "isCorrect": false },
+      { "text": "Arriva prima il corpo più leggero, perché ha minore inerzia", "isCorrect": false },
+      { "text": "Dipende dal volume dei due corpi anche nel vuoto", "isCorrect": false },
+      { "text": "Il corpo più pesante arriva con la stessa velocità ma in metà tempo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Nel moto parabolico di un proiettile, trascurando l'attrito dell'aria:",
+    "options": [
+      { "text": "La componente orizzontale della velocità resta costante, mentre quella verticale varia con accelerazione g diretta verso il basso", "isCorrect": true },
+      { "text": "Entrambe le componenti della velocità restano costanti", "isCorrect": false },
+      { "text": "La componente orizzontale diminuisce progressivamente per effetto della gravità", "isCorrect": false },
+      { "text": "L'accelerazione è diretta lungo la traiettoria", "isCorrect": false },
+      { "text": "Nel punto più alto la velocità è nulla", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "In un moto circolare uniforme:",
+    "options": [
+      { "text": "Il modulo della velocità è costante ma il vettore velocità cambia continuamente direzione, e l'accelerazione centripeta è diretta verso il centro", "isCorrect": true },
+      { "text": "La velocità è costante in modulo e direzione, quindi l'accelerazione è nulla", "isCorrect": false },
+      { "text": "L'accelerazione è diretta lungo la tangente alla traiettoria", "isCorrect": false },
+      { "text": "L'accelerazione è diretta verso l'esterno, in direzione centrifuga", "isCorrect": false },
+      { "text": "Il periodo dipende dal raggio ma non dalla velocità", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Un corpo percorre una circonferenza di raggio 20 m alla velocità costante di 10 m/s. L'accelerazione centripeta vale:",
+    "options": [
+      { "text": "5 m/s2", "isCorrect": true },
+      { "text": "0,5 m/s2", "isCorrect": false },
+      { "text": "2 m/s2", "isCorrect": false },
+      { "text": "200 m/s2", "isCorrect": false },
+      { "text": "Zero, perché il modulo della velocità non cambia", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Il primo principio della dinamica afferma che:",
+    "options": [
+      { "text": "Un corpo non soggetto a forze, o soggetto a forze la cui risultante è nulla, persevera nel suo stato di quiete o di moto rettilineo uniforme", "isCorrect": true },
+      { "text": "Un corpo soggetto a una forza costante si muove di moto rettilineo uniforme", "isCorrect": false },
+      { "text": "Ogni corpo tende naturalmente a fermarsi se non viene continuamente spinto", "isCorrect": false },
+      { "text": "L'accelerazione di un corpo è proporzionale alla forza applicata", "isCorrect": false },
+      { "text": "A ogni azione corrisponde una reazione uguale e contraria", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Su un corpo di massa 2 kg agisce una forza risultante di 10 N. L'accelerazione vale:",
+    "options": [
+      { "text": "5 m/s2", "isCorrect": true },
+      { "text": "20 m/s2", "isCorrect": false },
+      { "text": "0,2 m/s2", "isCorrect": false },
+      { "text": "2 m/s2", "isCorrect": false },
+      { "text": "10 m/s2", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Un libro appoggiato su un tavolo è fermo. Secondo il terzo principio, la reazione alla forza peso del libro:",
+    "options": [
+      { "text": "È l'attrazione che il libro esercita sulla Terra, applicata alla Terra e non al libro: la forza normale del tavolo è invece un'altra forza, che equilibra il peso", "isCorrect": true },
+      { "text": "È la forza normale esercitata dal tavolo sul libro", "isCorrect": false },
+      { "text": "È la forza di attrito statico fra libro e tavolo", "isCorrect": false },
+      { "text": "Non esiste, perché il corpo è in equilibrio", "isCorrect": false },
+      { "text": "È il peso del tavolo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Che differenza c'è fra massa e peso?",
+    "options": [
+      { "text": "La massa è una proprietà intrinseca del corpo, misura della sua inerzia, e si esprime in kg; il peso è la forza con cui il corpo è attratto da un pianeta, si esprime in newton e cambia con g", "isCorrect": true },
+      { "text": "Sono la stessa grandezza, espressa in unità diverse", "isCorrect": false },
+      { "text": "La massa è una forza, il peso è una quantità di materia", "isCorrect": false },
+      { "text": "Il peso è costante ovunque, la massa cambia da pianeta a pianeta", "isCorrect": false },
+      { "text": "La massa è vettoriale, il peso è scalare", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "La forza di attrito dinamico fra due superfici:",
+    "options": [
+      { "text": "È proporzionale alla forza normale che le preme l'una contro l'altra e, in prima approssimazione, non dipende dall'area di contatto né dalla velocità", "isCorrect": true },
+      { "text": "È proporzionale all'area di contatto fra le due superfici", "isCorrect": false },
+      { "text": "Cresce proporzionalmente alla velocità del corpo", "isCorrect": false },
+      { "text": "È sempre maggiore della forza di attrito statico massimo", "isCorrect": false },
+      { "text": "È diretta nello stesso verso del moto", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Perché una cassa ferma su un piano inclinato comincia a scivolare solo quando l'inclinazione supera un certo valore?",
+    "options": [
+      { "text": "Perché l'attrito statico può assumere qualunque valore fino a un massimo pari a mu(s) per la forza normale: oltre quell'angolo la componente del peso lungo il piano lo supera", "isCorrect": true },
+      { "text": "Perché la forza peso aumenta all'aumentare dell'inclinazione", "isCorrect": false },
+      { "text": "Perché l'attrito statico è costante e il peso diminuisce con l'angolo", "isCorrect": false },
+      { "text": "Perché la forza normale aumenta con l'inclinazione", "isCorrect": false },
+      { "text": "Perché l'attrito dinamico è sempre maggiore di quello statico", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Secondo la legge di Hooke, una molla ideale allungata di 10 cm da una forza di 20 N ha costante elastica:",
+    "options": [
+      { "text": "200 N/m", "isCorrect": true },
+      { "text": "2 N/m", "isCorrect": false },
+      { "text": "20 N/m", "isCorrect": false },
+      { "text": "0,5 N/m", "isCorrect": false },
+      { "text": "2000 N/m", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Il segno meno nella legge di Hooke, F = -kx, indica che:",
+    "options": [
+      { "text": "La forza elastica è sempre diretta in verso opposto alla deformazione, cioè tende a riportare il corpo nella posizione di equilibrio", "isCorrect": true },
+      { "text": "La forza elastica compie sempre lavoro negativo", "isCorrect": false },
+      { "text": "La costante elastica k è una grandezza negativa", "isCorrect": false },
+      { "text": "La molla si accorcia sempre, qualunque forza si applichi", "isCorrect": false },
+      { "text": "L'energia potenziale elastica è negativa", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Quando il lavoro compiuto da una forza è nullo pur essendo la forza diversa da zero e il corpo in movimento?",
+    "options": [
+      { "text": "Quando la forza è in ogni istante perpendicolare allo spostamento, come la forza centripeta nel moto circolare uniforme", "isCorrect": true },
+      { "text": "Quando la forza è parallela allo spostamento", "isCorrect": false },
+      { "text": "Quando il corpo si muove a velocità costante, qualunque sia la direzione della forza", "isCorrect": false },
+      { "text": "Quando la forza è conservativa", "isCorrect": false },
+      { "text": "Non è mai possibile: una forza che agisce su un corpo in moto compie sempre lavoro", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Che cosa caratterizza una forza conservativa?",
+    "options": [
+      { "text": "Il lavoro che compie dipende solo dalle posizioni iniziale e finale e non dal cammino percorso; lungo un percorso chiuso è nullo, e per essa si può definire un'energia potenziale", "isCorrect": true },
+      { "text": "Compie sempre un lavoro positivo, qualunque sia il percorso", "isCorrect": false },
+      { "text": "Mantiene costante la quantità di moto del sistema", "isCorrect": false },
+      { "text": "Il lavoro che compie dipende dalla lunghezza del cammino percorso", "isCorrect": false },
+      { "text": "Ha modulo costante nel tempo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Quale di queste forze NON è conservativa?",
+    "options": [
+      { "text": "La forza di attrito", "isCorrect": true },
+      { "text": "La forza peso", "isCorrect": false },
+      { "text": "La forza elastica", "isCorrect": false },
+      { "text": "La forza gravitazionale", "isCorrect": false },
+      { "text": "La forza elettrostatica di Coulomb", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Il teorema dell'energia cinetica afferma che:",
+    "options": [
+      { "text": "Il lavoro totale compiuto da tutte le forze agenti su un corpo è uguale alla variazione della sua energia cinetica", "isCorrect": true },
+      { "text": "L'energia cinetica di un corpo isolato resta sempre costante", "isCorrect": false },
+      { "text": "Il lavoro delle forze conservative è uguale all'energia cinetica finale", "isCorrect": false },
+      { "text": "L'energia cinetica è uguale all'energia potenziale in ogni istante", "isCorrect": false },
+      { "text": "La potenza sviluppata è uguale alla variazione di energia cinetica", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Un'automobile di 1000 kg viaggia a 20 m/s. La sua energia cinetica vale:",
+    "options": [
+      { "text": "200 kJ", "isCorrect": true },
+      { "text": "20 kJ", "isCorrect": false },
+      { "text": "400 kJ", "isCorrect": false },
+      { "text": "2 kJ", "isCorrect": false },
+      { "text": "20000 kJ", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Se la velocità di un corpo raddoppia, la sua energia cinetica:",
+    "options": [
+      { "text": "Quadruplica, perché dipende dal quadrato della velocità", "isCorrect": true },
+      { "text": "Raddoppia", "isCorrect": false },
+      { "text": "Resta invariata", "isCorrect": false },
+      { "text": "Si dimezza", "isCorrect": false },
+      { "text": "Diventa otto volte maggiore", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "La grandezza fisica energia cinetica di un corpo:",
+    "options": [
+      { "text": "Si misura in joule", "isCorrect": true },
+      { "text": "Si misura in watt", "isCorrect": false },
+      { "text": "Si misura in kg/s2", "isCorrect": false },
+      { "text": "È costante nel moto uniformemente accelerato", "isCorrect": false },
+      { "text": "È nulla nel moto rettilineo uniforme", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Un motore solleva una massa di 50 kg per 2 m in 4 secondi. La potenza media sviluppata è circa:",
+    "options": [
+      { "text": "245 W", "isCorrect": true },
+      { "text": "980 W", "isCorrect": false },
+      { "text": "100 W", "isCorrect": false },
+      { "text": "25 W", "isCorrect": false },
+      { "text": "3920 W", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Un corpo è lasciato cadere da fermo da un'altezza di 12 m. A quale altezza dal suolo la sua velocità è metà di quella con cui arriverà a terra?",
+    "options": [
+      { "text": "9 m", "isCorrect": true },
+      { "text": "6 m", "isCorrect": false },
+      { "text": "3 m", "isCorrect": false },
+      { "text": "4 m", "isCorrect": false },
+      { "text": "8 m", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Un pendolo ideale oscilla senza attrito. Nel punto più basso della traiettoria:",
+    "options": [
+      { "text": "L'energia potenziale è minima e l'energia cinetica massima, mentre la loro somma resta costante", "isCorrect": true },
+      { "text": "Energia cinetica ed energia potenziale sono entrambe massime", "isCorrect": false },
+      { "text": "L'energia cinetica è nulla e quella potenziale massima", "isCorrect": false },
+      { "text": "L'energia meccanica totale è maggiore che nei punti estremi", "isCorrect": false },
+      { "text": "La velocità è nulla e l'accelerazione massima", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Perché in presenza di attrito l'energia meccanica non si conserva?",
+    "options": [
+      { "text": "Perché l'attrito compie lavoro negativo lungo tutto il percorso e trasforma energia meccanica in energia interna, che si manifesta come riscaldamento delle superfici", "isCorrect": true },
+      { "text": "Perché l'attrito distrugge energia, violando il principio di conservazione dell'energia", "isCorrect": false },
+      { "text": "Perché l'attrito modifica la massa del corpo in movimento", "isCorrect": false },
+      { "text": "Perché l'attrito è una forza conservativa che accumula energia potenziale", "isCorrect": false },
+      { "text": "In realtà si conserva sempre, anche in presenza di attrito", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "La quantità di moto di un corpo di massa 3 kg che si muove a 4 m/s vale:",
+    "options": [
+      { "text": "12 kg·m/s", "isCorrect": true },
+      { "text": "0,75 kg·m/s", "isCorrect": false },
+      { "text": "24 kg·m/s", "isCorrect": false },
+      { "text": "7 kg·m/s", "isCorrect": false },
+      { "text": "48 kg·m/s", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Il teorema dell'impulso stabilisce che:",
+    "options": [
+      { "text": "L'impulso di una forza, cioè il prodotto della forza per l'intervallo di tempo in cui agisce, è uguale alla variazione della quantità di moto del corpo", "isCorrect": true },
+      { "text": "L'impulso è uguale alla variazione di energia cinetica", "isCorrect": false },
+      { "text": "L'impulso di una forza è sempre nullo nei sistemi isolati", "isCorrect": false },
+      { "text": "L'impulso è il rapporto fra la forza e il tempo in cui agisce", "isCorrect": false },
+      { "text": "L'impulso è uguale al lavoro compiuto dalla forza", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Perché l'airbag riduce i danni in un urto, pur non cambiando la variazione di quantità di moto del passeggero?",
+    "options": [
+      { "text": "Perché allunga il tempo in cui avviene l'arresto: a parità di impulso richiesto, una durata maggiore significa una forza media molto minore", "isCorrect": true },
+      { "text": "Perché riduce la massa efficace del passeggero", "isCorrect": false },
+      { "text": "Perché annulla la quantità di moto prima dell'urto", "isCorrect": false },
+      { "text": "Perché aumenta la forza ma la distribuisce su un tempo minore", "isCorrect": false },
+      { "text": "Perché trasforma l'urto da anelastico a perfettamente elastico", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Un corpo di 2 kg che viaggia a 6 m/s urta un corpo fermo di 4 kg e i due restano attaccati. La velocità comune dopo l'urto è:",
+    "options": [
+      { "text": "2 m/s", "isCorrect": true },
+      { "text": "3 m/s", "isCorrect": false },
+      { "text": "6 m/s", "isCorrect": false },
+      { "text": "1,5 m/s", "isCorrect": false },
+      { "text": "4 m/s", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "In un urto perfettamente anelastico fra due corpi isolati:",
+    "options": [
+      { "text": "La quantità di moto totale si conserva, l'energia cinetica no: una parte si trasforma in deformazione e calore", "isCorrect": true },
+      { "text": "Si conservano sia la quantità di moto sia l'energia cinetica", "isCorrect": false },
+      { "text": "Non si conserva nulla, perché i corpi restano attaccati", "isCorrect": false },
+      { "text": "Si conserva l'energia cinetica ma non la quantità di moto", "isCorrect": false },
+      { "text": "I due corpi rimbalzano con velocità invertite", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Un fucile rincula quando spara. La ragione fisica è che:",
+    "options": [
+      { "text": "Il sistema fucile-proiettile è isolato nella direzione del tiro: la quantità di moto totale resta nulla, quindi il fucile acquista quantità di moto uguale e opposta a quella del proiettile", "isCorrect": true },
+      { "text": "L'energia cinetica del proiettile si trasferisce interamente al fucile", "isCorrect": false },
+      { "text": "L'aria compressa dallo sparo spinge indietro il fucile", "isCorrect": false },
+      { "text": "La forza peso del proiettile si scarica sul fucile", "isCorrect": false },
+      { "text": "La quantità di moto del sistema aumenta durante lo sparo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "In un sistema isolato il centro di massa:",
+    "options": [
+      { "text": "Si muove di moto rettilineo uniforme, o resta fermo, qualunque cosa accada alle singole parti del sistema", "isCorrect": true },
+      { "text": "Resta sempre immobile, anche se il sistema inizialmente si muoveva", "isCorrect": false },
+      { "text": "Accelera se le parti del sistema si urtano fra loro", "isCorrect": false },
+      { "text": "Coincide sempre con il baricentro geometrico del sistema", "isCorrect": false },
+      { "text": "Si trova necessariamente dentro il corpo materiale del sistema", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Il momento di una forza rispetto a un punto è dato da:",
+    "options": [
+      { "text": "Il prodotto del modulo della forza per il braccio, cioè la distanza fra il punto e la retta d'azione della forza", "isCorrect": true },
+      { "text": "Il prodotto della forza per il tempo in cui agisce", "isCorrect": false },
+      { "text": "Il prodotto della forza per lo spostamento del punto di applicazione", "isCorrect": false },
+      { "text": "Il rapporto fra la forza e la distanza dal punto", "isCorrect": false },
+      { "text": "Il prodotto della massa per l'accelerazione angolare", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Perché una porta si apre più facilmente spingendola lontano dai cardini?",
+    "options": [
+      { "text": "Perché il momento della forza cresce con il braccio: a parità di forza applicata, maggiore è la distanza dall'asse di rotazione, maggiore è l'effetto rotatorio", "isCorrect": true },
+      { "text": "Perché lontano dai cardini la forza applicata è maggiore", "isCorrect": false },
+      { "text": "Perché l'attrito dei cardini diminuisce con la distanza", "isCorrect": false },
+      { "text": "Perché la massa efficace della porta è minore in periferia", "isCorrect": false },
+      { "text": "Perché il momento è inversamente proporzionale al braccio", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Quali condizioni devono valere perché un corpo rigido sia in equilibrio statico?",
+    "options": [
+      { "text": "La risultante di tutte le forze deve essere nulla e deve essere nullo anche il momento risultante rispetto a un qualunque polo", "isCorrect": true },
+      { "text": "È sufficiente che la risultante delle forze sia nulla", "isCorrect": false },
+      { "text": "È sufficiente che il momento risultante sia nullo", "isCorrect": false },
+      { "text": "Tutte le forze applicate devono avere lo stesso modulo", "isCorrect": false },
+      { "text": "Il corpo deve essere appoggiato su un piano orizzontale privo di attrito", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "L'avambraccio che solleva un peso con il bicipite è una leva:",
+    "options": [
+      { "text": "Di terzo genere, con la potenza fra il fulcro e la resistenza: è svantaggiosa dal punto di vista della forza ma guadagna in velocità e ampiezza del movimento", "isCorrect": true },
+      { "text": "Di primo genere, con il fulcro fra potenza e resistenza, ed è sempre vantaggiosa", "isCorrect": false },
+      { "text": "Di secondo genere, con la resistenza fra fulcro e potenza, ed è vantaggiosa", "isCorrect": false },
+      { "text": "Di terzo genere, ed è vantaggiosa dal punto di vista della forza", "isCorrect": false },
+      { "text": "Non è una leva, perché il muscolo non applica un momento", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Nel corpo umano l'articolazione fra cranio e colonna vertebrale, che sostiene il capo, è un esempio di leva:",
+    "options": [
+      { "text": "Di primo genere, perché il fulcro si trova fra la resistenza (il peso del capo) e la potenza (i muscoli nucali)", "isCorrect": true },
+      { "text": "Di secondo genere, perché la resistenza è fra fulcro e potenza", "isCorrect": false },
+      { "text": "Di terzo genere, come quasi tutte le leve dello scheletro", "isCorrect": false },
+      { "text": "Di primo genere, ma sempre svantaggiosa", "isCorrect": false },
+      { "text": "Non assimilabile ad alcuna leva", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Il bicipite si inserisce a 4 cm dal gomito e sorregge un peso posto a 32 cm dallo stesso punto. Trascurando il peso dell'avambraccio, la forza muscolare necessaria è:",
+    "options": [
+      { "text": "Otto volte il peso sostenuto", "isCorrect": true },
+      { "text": "Un ottavo del peso sostenuto", "isCorrect": false },
+      { "text": "Uguale al peso sostenuto", "isCorrect": false },
+      { "text": "Quattro volte il peso sostenuto", "isCorrect": false },
+      { "text": "Trentadue volte il peso sostenuto", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "La forza gravitazionale fra due corpi, secondo la legge di Newton:",
+    "options": [
+      { "text": "È direttamente proporzionale al prodotto delle masse e inversamente proporzionale al quadrato della distanza fra i loro centri", "isCorrect": true },
+      { "text": "È inversamente proporzionale alla distanza fra i due corpi", "isCorrect": false },
+      { "text": "È proporzionale alla somma delle due masse", "isCorrect": false },
+      { "text": "È direttamente proporzionale al quadrato della distanza", "isCorrect": false },
+      { "text": "Dipende dal mezzo interposto fra i due corpi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Se la distanza fra due masse viene triplicata, la forza gravitazionale fra loro:",
+    "options": [
+      { "text": "Diventa un nono di quella iniziale", "isCorrect": true },
+      { "text": "Diventa un terzo di quella iniziale", "isCorrect": false },
+      { "text": "Triplica", "isCorrect": false },
+      { "text": "Diventa nove volte maggiore", "isCorrect": false },
+      { "text": "Resta invariata", "isCorrect": false }
+    ]
+  },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Il grafico s-t di un moto uniformemente accelerato è di forma ……",
+    "options": [ { "text": "parabolica", "isCorrect": true }, { "text": "parabola", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Il grafico velocità-tempo di un moto rettilineo uniforme è una retta ……",
+    "options": [ { "text": "orizzontale", "isCorrect": true }, { "text": "costante", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "In un grafico velocità-tempo, l'area sottesa dalla curva rappresenta lo …… percorso.",
+    "options": [ { "text": "spazio", "isCorrect": true }, { "text": "spostamento", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "L'altezza dal suolo alla quale la velocità di un grave in caduta libera senza attriti, inizialmente a riposo a 12 m, uguaglia la metà di quella finale, è …… m",
+    "options": [ { "text": "9", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Nel vuoto due corpi di massa diversa lasciati cadere dalla stessa quota arrivano a terra nello stesso ……",
+    "options": [ { "text": "istante", "isCorrect": true }, { "text": "momento", "isCorrect": true }, { "text": "tempo", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Il valore approssimato dell'accelerazione di gravità alla superficie terrestre, in m/s2, è ……",
+    "options": [ { "text": "9,8", "isCorrect": true }, { "text": "9.8", "isCorrect": true }, { "text": "9,81", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Nel moto parabolico la componente …… della velocità resta costante.",
+    "options": [ { "text": "orizzontale", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Nel moto circolare uniforme l'accelerazione è diretta verso il centro e si chiama accelerazione ……",
+    "options": [ { "text": "centripeta", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "L'accelerazione centripeta di un corpo che percorre a 10 m/s una circonferenza di raggio 20 m vale …… m/s2",
+    "options": [ { "text": "5", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Il tempo impiegato a compiere un giro completo nel moto circolare uniforme si chiama ……",
+    "options": [ { "text": "periodo", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Il principio secondo cui un corpo non soggetto a forze mantiene il proprio stato di moto si chiama principio d'……",
+    "options": [ { "text": "inerzia", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "La grandezza fisica che misura l'inerzia di un corpo è la sua ……",
+    "options": [ { "text": "massa", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Secondo il secondo principio della dinamica, l'accelerazione di un corpo è uguale alla forza risultante divisa per la ……",
+    "options": [ { "text": "massa", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "L'accelerazione impressa da una forza di 10 N a un corpo di 2 kg vale …… m/s2",
+    "options": [ { "text": "5", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "La forza che una superficie esercita perpendicolarmente su un corpo appoggiato si chiama reazione ……",
+    "options": [ { "text": "normale", "isCorrect": true }, { "text": "vincolare", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "La forza di attrito dinamico è proporzionale alla forza …… che preme le due superfici l'una contro l'altra.",
+    "options": [ { "text": "normale", "isCorrect": true }, { "text": "premente", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "La costante elastica di una molla che si allunga di 10 cm sotto una forza di 20 N vale …… N/m",
+    "options": [ { "text": "200", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "La legge che lega la forza elastica di una molla ideale alla sua deformazione si chiama legge di ……",
+    "options": [ { "text": "Hooke", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "L'unità di misura del lavoro e dell'energia nel Sistema Internazionale è il ……",
+    "options": [ { "text": "joule", "isCorrect": true }, { "text": "J", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Il lavoro compiuto nell'unità di tempo si chiama ……",
+    "options": [ { "text": "potenza", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "L'unità di misura della potenza nel Sistema Internazionale è il ……",
+    "options": [ { "text": "watt", "isCorrect": true }, { "text": "W", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Il lavoro compiuto da una forza perpendicolare in ogni istante allo spostamento vale ……",
+    "options": [ { "text": "zero", "isCorrect": true }, { "text": "0", "isCorrect": true }, { "text": "nullo", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Una forza il cui lavoro lungo un percorso chiuso è sempre nullo si dice ……",
+    "options": [ { "text": "conservativa", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "La forza di attrito non è conservativa perché trasforma l'energia meccanica in energia ……",
+    "options": [ { "text": "interna", "isCorrect": true }, { "text": "termica", "isCorrect": true }, { "text": "calore", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Il lavoro totale delle forze agenti su un corpo è uguale alla variazione della sua energia ……",
+    "options": [ { "text": "cinetica", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Se la velocità di un corpo raddoppia, la sua energia cinetica diventa …… volte maggiore.",
+    "options": [ { "text": "4", "isCorrect": true }, { "text": "quattro", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "L'energia cinetica di un corpo di 1000 kg che viaggia a 20 m/s vale …… kJ",
+    "options": [ { "text": "200", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "La somma dell'energia cinetica e dell'energia potenziale di un corpo si chiama energia ……",
+    "options": [ { "text": "meccanica", "isCorrect": true }, { "text": "totale", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "L'energia potenziale gravitazionale di un corpo di massa m posto a quota h vale m per h per ……",
+    "options": [ { "text": "g", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Il prodotto della massa per la velocità di un corpo si chiama quantità di ……",
+    "options": [ { "text": "moto", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Il prodotto di una forza per il tempo durante il quale agisce si chiama ……",
+    "options": [ { "text": "impulso", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "In un sistema isolato la grandezza vettoriale che si conserva negli urti è la quantità di ……",
+    "options": [ { "text": "moto", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "In un urto perfettamente anelastico non si conserva l'energia ……",
+    "options": [ { "text": "cinetica", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Un corpo di 2 kg a 6 m/s urta un corpo fermo di 4 kg restandovi attaccato: la velocità comune dopo l'urto vale …… m/s",
+    "options": [ { "text": "2", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Il punto in cui si può pensare concentrata tutta la massa di un sistema si chiama centro di ……",
+    "options": [ { "text": "massa", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "La distanza fra il fulcro e la retta d'azione di una forza si chiama ……",
+    "options": [ { "text": "braccio", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Perché un corpo rigido sia in equilibrio rotazionale, il momento risultante delle forze deve essere ……",
+    "options": [ { "text": "nullo", "isCorrect": true }, { "text": "zero", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "La leva in cui la potenza si trova fra il fulcro e la resistenza, come l'avambraccio sollevato dal bicipite, è di …… genere.",
+    "options": [ { "text": "terzo", "isCorrect": true }, { "text": "3", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Nella legge di gravitazione universale la forza è inversamente proporzionale al …… della distanza.",
+    "options": [ { "text": "quadrato", "isCorrect": true } ] },
+  { "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Triplicando la distanza fra due masse, la forza gravitazionale si riduce a un ……",
+    "options": [ { "text": "nono", "isCorrect": true }, { "text": "1/9", "isCorrect": true } ] }
+]
