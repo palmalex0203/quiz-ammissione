@@ -6,6 +6,7 @@ import { requireStudent } from "@/lib/permissions";
 import { gradeAttempt } from "@/lib/grading";
 import { trackOf } from "@/lib/tracks";
 import { testQuestions } from "@/lib/test-questions";
+import { sezioneAperta, sezioniDi } from "@/lib/test-sections";
 import { COMPLETION_MAX_LENGTH } from "@/lib/completion";
 
 async function getOwnedInProgressAttempt(attemptId: string, studentId: string) {
@@ -14,6 +15,25 @@ async function getOwnedInProgressAttempt(attemptId: string, studentId: string) {
     throw new Error("Tentativo non valido.");
   }
   return attempt;
+}
+
+/**
+ * Le domande su cui il tentativo può ancora scrivere: quelle della sezione aperta.
+ *
+ * Restituisce null quando il test non è diviso in sezioni, cioè nella grande
+ * maggioranza dei casi: lì non c'è niente da limitare e si evita il lavoro.
+ */
+async function domandeScrivibili(attempt: {
+  testId: string;
+  sezione: number;
+}): Promise<Set<string> | null> {
+  const [test, questions] = await Promise.all([
+    prisma.test.findUnique({ where: { id: attempt.testId }, select: { track: true, timeLimitMinutes: true } }),
+    testQuestions(attempt.testId),
+  ]);
+  const sezioni = sezioniDi(trackOf(test?.track), questions, test?.timeLimitMinutes ?? null);
+  if (sezioni.length <= 1) return null;
+  return new Set(sezioneAperta(sezioni, attempt.sezione)?.domande ?? []);
 }
 
 /**
@@ -45,6 +65,16 @@ export async function saveAnswers(attemptId: string, changes: AnswerChange[]): P
 
   const session = await requireStudent();
   const attempt = await getOwnedInProgressAttempt(attemptId, session.user.id);
+
+  // Una materia consegnata non si tocca più. Le risposte che arrivano in ritardo
+  // per una sezione chiusa — una ritrasmissione della coda, una scheda rimasta
+  // aperta — si lasciano cadere in silenzio invece di far fallire il salvataggio
+  // delle altre: per il browser sarebbe un errore da ritentare all'infinito.
+  const scrivibili = await domandeScrivibili(attempt);
+  if (scrivibili) {
+    changes = changes.filter((c) => scrivibili.has(c.questionId));
+    if (changes.length === 0) return;
+  }
 
   const vuota = (c: AnswerChange) =>
     c.selectedOptionId == null && (c.typedAnswer == null || c.typedAnswer.trim() === "");
@@ -86,7 +116,41 @@ export async function saveAnswers(attemptId: string, changes: AnswerChange[]): P
 export async function submitAttempt(attemptId: string) {
   const session = await requireStudent();
   const attempt = await getOwnedInProgressAttempt(attemptId, session.user.id);
+  await consegnaTentativo(attempt);
+  redirect(`/student/tests/${attempt.testId}/result/${attempt.id}`);
+}
 
+/**
+ * Chiude una sezione della prova.
+ *
+ * Se è l'ultima il tentativo viene consegnato e corretto; altrimenti si apre la
+ * sezione successiva e il suo cronometro riparte da adesso. In entrambi i casi si
+ * esce con un redirect, che costringe la pagina a rileggere lo stato dal server:
+ * è lui a decidere quale materia è aperta, non il browser.
+ */
+export async function consegnaSezione(attemptId: string) {
+  const session = await requireStudent();
+  const attempt = await getOwnedInProgressAttempt(attemptId, session.user.id);
+
+  const [test, questions] = await Promise.all([
+    prisma.test.findUnique({ where: { id: attempt.testId }, select: { track: true, timeLimitMinutes: true } }),
+    testQuestions(attempt.testId),
+  ]);
+  const sezioni = sezioniDi(trackOf(test?.track), questions, test?.timeLimitMinutes ?? null);
+
+  if (attempt.sezione >= sezioni.length - 1) {
+    await consegnaTentativo(attempt);
+    redirect(`/student/tests/${attempt.testId}/result/${attempt.id}`);
+  }
+
+  await prisma.attempt.update({
+    where: { id: attempt.id },
+    data: { sezione: attempt.sezione + 1, sezioneIniziataIl: new Date() },
+  });
+  redirect(`/student/tests/${attempt.testId}/take`);
+}
+
+async function consegnaTentativo(attempt: { id: string; testId: string }) {
   const [test, questions, existingAnswers] = await Promise.all([
     prisma.test.findUnique({ where: { id: attempt.testId }, select: { track: true } }),
     testQuestions(attempt.testId),
@@ -147,6 +211,4 @@ export async function submitAttempt(attemptId: string) {
       })),
     }),
   ]);
-
-  redirect(`/student/tests/${attempt.testId}/result/${attempt.id}`);
 }

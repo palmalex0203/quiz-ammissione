@@ -149,6 +149,14 @@ model Attempt {
   score       Float?
   maxScore    Float?
 
+  // Le prove del semestre filtro si svolgono una materia per volta, come all'esame:
+  // qui si tiene quale sezione è aperta e da quando. Senza questi due campi il
+  // cronometro della materia ripartirebbe a ogni ricaricamento della pagina e una
+  // materia consegnata si potrebbe riaprire. Nei test di una materia sola restano
+  // al valore di partenza e non cambiano niente. Vedi src/lib/test-sections.ts.
+  sezione           Int       @default(0)
+  sezioneIniziataIl DateTime?
+
   answers AnswerRecord[]
   subjectStats AttemptSubjectStat[]
 

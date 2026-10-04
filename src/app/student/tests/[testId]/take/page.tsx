@@ -3,6 +3,8 @@ import { prisma } from "@/lib/prisma";
 import { requireStudent } from "@/lib/permissions";
 import { seededShuffle } from "@/lib/shuffle";
 import { testQuestions } from "@/lib/test-questions";
+import { inizioSezione, sezioneAperta, sezioniDi } from "@/lib/test-sections";
+import { trackOf } from "@/lib/tracks";
 import { TakeTestForm } from "./TakeTestForm";
 
 export default async function TakeTestPage({ params }: { params: Promise<{ testId: string }> }) {
@@ -34,14 +36,25 @@ export default async function TakeTestPage({ params }: { params: Promise<{ testI
     existingAnswers.filter((a) => a.typedAnswer).map((a) => [a.questionId, a.typedAnswer as string])
   );
 
-  const questions = test.shuffleQuestions ? seededShuffle(domande, attempt.id) : domande;
+  // Le sezioni si ricavano dall'ordine vero delle domande, prima di qualunque
+  // mescolamento: sono blocchi di materia, e mescolare l'intero test li scioglierebbe.
+  const sezioni = sezioniDi(trackOf(test.track), domande, test.timeLimitMinutes);
+  const corrente = sezioneAperta(sezioni, attempt.sezione);
+  const aSezioni = sezioni.length > 1;
+
+  const diQuestaSezione = corrente ? new Set(corrente.domande) : null;
+  const visibili = diQuestaSezione ? domande.filter((q) => diQuestaSezione.has(q.id)) : domande;
+  // Il mescolamento resta dentro la sezione, dove l'ordine delle domande non conta.
+  const questions = test.shuffleQuestions ? seededShuffle(visibili, attempt.id) : visibili;
 
   return (
     <TakeTestForm
       testTitle={test.title}
       attemptId={attempt.id}
-      timeLimitMinutes={test.timeLimitMinutes}
-      startedAt={attempt.startedAt.toISOString()}
+      timeLimitMinutes={aSezioni ? (corrente?.minutes ?? null) : test.timeLimitMinutes}
+      startedAt={inizioSezione(attempt).toISOString()}
+      // La numerazione segue il fascicolo: nella seconda materia si riparte da 1,
+      // perché all'esame ogni prova ha la sua numerazione.
       questions={questions.map((q) => ({
         id: q.id,
         type: q.type,
@@ -53,6 +66,12 @@ export default async function TakeTestPage({ params }: { params: Promise<{ testI
       }))}
       initialAnswers={initialAnswers}
       initialTyped={initialTyped}
+      sezioni={
+        aSezioni
+          ? sezioni.map((s) => ({ subject: s.subject, domande: s.domande.length, minutes: s.minutes }))
+          : null
+      }
+      sezioneCorrente={attempt.sezione}
     />
   );
 }
