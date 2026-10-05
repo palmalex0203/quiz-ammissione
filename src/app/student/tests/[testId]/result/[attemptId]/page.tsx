@@ -67,6 +67,8 @@ export default async function AttemptResultPage({
       )
     : [];
   const provaUnica = prove.length === 1 ? prove[0] : null;
+  // Solo le prove intere fanno un voto: un'esercitazione corta resta un punteggio.
+  const conVoto = prove.filter((p) => p.voto);
 
   return (
     <div className="flex flex-col gap-6">
@@ -118,18 +120,18 @@ export default async function AttemptResultPage({
         </div>
       </div>
 
-      {prove.length > 1 && (
+      {conVoto.length > 1 && (
         <section className="flex flex-col gap-3">
           <div>
             <h2 className="section-title">Il voto, una prova per volta</h2>
             <p className="text-sm text-muted">
-              Le {prove.length} prove sono {prove.length} esami distinti e fanno{" "}
-              {prove.length} voti distinti: sommare i punteggi non vuol dire niente. Si supera da
+              Le {conVoto.length} prove sono {conVoto.length} esami distinti e fanno{" "}
+              {conVoto.length} voti distinti: sommare i punteggi non vuol dire niente. Si supera da
               18/30 in su.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {prove.map((prova) => (
+            {conVoto.map((prova) => (
               <CartaProva key={prova.subject} prova={prova} />
             ))}
           </div>

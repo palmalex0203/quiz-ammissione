@@ -1,4 +1,4 @@
-import type { Track } from "@/lib/tracks";
+import { paperOf, type Track } from "@/lib/tracks";
 
 /*
  * Dal punteggio grezzo al voto d'esame.
@@ -53,6 +53,45 @@ export function formatPunti(punti: number): string {
   return punti.toLocaleString("it-IT", { maximumFractionDigits: 2 }).replace("-", "−");
 }
 
+/**
+ * Un voto in trentesimi si dà solo a una prova intera, cioè lunga quanto quella
+ * vera: 31 domande.
+ *
+ * Un'esercitazione da quindici domande vale al massimo quindici punti, quindi il
+ * diciotto è fuori portata: scriverle accanto «3,9/30, non superata» direbbe una
+ * cosa falsa su un allenamento andato come doveva andare. Lì si mostrano i punti
+ * e la percentuale, come si è sempre fatto.
+ */
+export function provaIntera(track: Track, subject: string, domande: number): boolean {
+  const prova = paperOf(track, subject);
+  return prova !== undefined && domande === prova.questions;
+}
+
+/** I punti grezzi di una prova: le corrette valgono, le errate tolgono. */
+function punti(corrette: number, errate: number, track: Track): number {
+  // Arrotondato al centesimo: 0,1 per volta in virgola mobile fa 2,9000000000000004.
+  return (
+    Math.round((corrette * track.scoring.correct + errate * track.scoring.incorrect) * 100) / 100
+  );
+}
+
+/**
+ * Il voto di una prova a partire dal riepilogo per materia salvato alla consegna.
+ *
+ * Lo storico non rilegge tutte le risposte di tutti i tentativi: gli bastano le
+ * poche righe di AttemptSubjectStat, dove `answered` conta le risposte date. Le
+ * errate sono quelle date e non corrette — ed è l'unico motivo per cui quel
+ * numero viene salvato.
+ */
+export function votoDaRiepilogo(
+  stat: { subject: string; correct: number; answered: number; total: number },
+  track: Track
+): VotoProva | null {
+  if (!provaIntera(track, stat.subject, stat.total)) return null;
+  const errate = Math.max(0, stat.answered - stat.correct);
+  return votoProva(punti(stat.correct, errate, track), track);
+}
+
 export type RisultatoProva = {
   subject: string;
   corrette: number;
@@ -86,12 +125,9 @@ export function risultatiPerProva(
   }
 
   for (const prova of per.values()) {
-    // Arrotondato al centesimo: 0,1 per volta in virgola mobile fa 2,9000000000000004.
-    prova.punti =
-      Math.round(
-        (prova.corrette * track.scoring.correct + prova.errate * track.scoring.incorrect) * 100
-      ) / 100;
-    prova.voto = votoProva(prova.punti, track);
+    prova.punti = punti(prova.corrette, prova.errate, track);
+    const domande = prova.corrette + prova.errate + prova.omesse;
+    prova.voto = provaIntera(track, prova.subject, domande) ? votoProva(prova.punti, track) : null;
   }
 
   return [...per.values()];

@@ -3,8 +3,9 @@ import { prisma } from "@/lib/prisma";
 import { EmptyState } from "@/components/EmptyState";
 import { SubmitButton } from "@/components/SubmitButton";
 import { requireStudentTrack } from "@/lib/track-session";
-import { isPracticeable } from "@/lib/tracks";
+import { isPracticeable, subjectShort } from "@/lib/tracks";
 import { generateSubjectPractice } from "@/app/student/dashboard/actions";
+import { votoDaRiepilogo, type VotoProva } from "@/lib/esame";
 
 export default async function StudentHistoryPage() {
   const { session, track } = await requireStudentTrack();
@@ -19,7 +20,7 @@ export default async function StudentHistoryPage() {
   // le risposte di tutti i test svolti.
   const stats = await prisma.attemptSubjectStat.findMany({
     where: { attemptId: { in: attempts.map((a) => a.id) } },
-    select: { subject: true, correct: true, total: true },
+    select: { attemptId: true, subject: true, correct: true, answered: true, total: true },
   });
 
   function percentageOf(a: (typeof attempts)[number]) {
@@ -42,6 +43,24 @@ export default async function StudentHistoryPage() {
   const subjectRows = [...subjectStats.entries()]
     .map(([subject, stat]) => ({ subject, ...stat, pct: Math.round((stat.correct / stat.total) * 100) }))
     .sort((a, b) => a.pct - b.pct);
+
+  // Nel semestre filtro ogni materia è un esame a sé: nello storico si vedono i
+  // voti delle singole prove, perché il totale sommerebbe esami distinti. Il voto
+  // si ricava dalle stesse righe per materia, senza rileggere le risposte.
+  const ordineMaterie = new Map(track.subjects.map((s, i) => [s.name, i]));
+  const votiDi = new Map<string, { subject: string; voto: VotoProva }[]>();
+  if (track.esame) {
+    for (const s of stats) {
+      const voto = votoDaRiepilogo(s, track);
+      if (!voto) continue;
+      const lista = votiDi.get(s.attemptId) ?? [];
+      lista.push({ subject: s.subject, voto });
+      votiDi.set(s.attemptId, lista);
+    }
+    for (const lista of votiDi.values()) {
+      lista.sort((a, b) => (ordineMaterie.get(a.subject) ?? 99) - (ordineMaterie.get(b.subject) ?? 99));
+    }
+  }
 
   // Si consiglia solo una materia su cui è davvero possibile allenarsi, e solo con
   // abbastanza domande alle spalle perché la percentuale voglia dire qualcosa.
@@ -144,25 +163,46 @@ export default async function StudentHistoryPage() {
               Test svolti
             </h2>
             <div className="flex flex-col gap-3">
-              {attempts.map((attempt) => (
-                <Link
-                  key={attempt.id}
-                  href={`/student/tests/${attempt.testId}/result/${attempt.id}`}
-                  className="flex items-center justify-between gap-3 card card-link p-5"
-                >
-                  <div className="min-w-0">
-                    <p className="truncate text-sm font-semibold">
-                      {attempt.test.title}
-                    </p>
-                    <p className="mt-0.5 text-xs text-muted">
-                      {attempt.submittedAt?.toLocaleString("it-IT")}
-                    </p>
-                  </div>
-                  <p className="shrink-0 text-sm font-medium text-zinc-700 dark:text-zinc-300">
-                    {attempt.score} / {attempt.maxScore} &middot; {Math.round(percentageOf(attempt))}%
-                  </p>
-                </Link>
-              ))}
+              {attempts.map((attempt) => {
+                const voti = votiDi.get(attempt.id) ?? [];
+                return (
+                  <Link
+                    key={attempt.id}
+                    href={`/student/tests/${attempt.testId}/result/${attempt.id}`}
+                    className="flex items-center justify-between gap-3 card card-link p-5"
+                  >
+                    <div className="min-w-0">
+                      <p className="truncate text-sm font-semibold">
+                        {attempt.test.title}
+                      </p>
+                      <p className="mt-0.5 text-xs text-muted">
+                        {attempt.submittedAt?.toLocaleString("it-IT")}
+                      </p>
+                    </div>
+                    {voti.length > 0 ? (
+                      <div className="flex shrink-0 flex-wrap justify-end gap-1.5">
+                        {voti.map((v) => (
+                          <span
+                            key={v.subject}
+                            className={`pill ${
+                              v.voto.superata
+                                ? "bg-green-100 text-green-800 dark:bg-green-500/15 dark:text-green-300"
+                                : "bg-red-100 text-red-800 dark:bg-red-500/15 dark:text-red-300"
+                            }`}
+                          >
+                            {voti.length > 1 && `${subjectShort(track, v.subject)} `}
+                            {v.voto.etichetta}
+                          </span>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="shrink-0 text-sm font-medium text-zinc-700 dark:text-zinc-300">
+                        {attempt.score} / {attempt.maxScore} &middot; {Math.round(percentageOf(attempt))}%
+                      </p>
+                    )}
+                  </Link>
+                );
+              })}
             </div>
           </section>
         </>

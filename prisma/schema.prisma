@@ -175,6 +175,11 @@ model AttemptSubjectStat {
   attempt   Attempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
   subject   String
   correct   Int
+  // Quante risposte sono state date, giuste o sbagliate. Senza questo numero una
+  // risposta errata (che nel semestre filtro toglie 0,1) e una lasciata in bianco
+  // (che non toglie niente) sono indistinguibili, e il voto della singola prova
+  // non si può più ricalcolare dallo storico. Vedi src/lib/esame.ts.
+  answered  Int     @default(0)
   total     Int
 
   @@unique([attemptId, subject])

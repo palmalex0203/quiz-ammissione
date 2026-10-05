@@ -46,7 +46,8 @@ export default async function TeacherAttemptDetailPage({
 
   // Nel semestre filtro ogni materia è un esame a sé: il voto che conta è quello
   // della singola prova, non il totale.
-  const prove = track.esame
+  // Solo le prove intere fanno un voto: un'esercitazione corta resta un punteggio.
+  const prove = (track.esame
     ? risultatiPerProva(
         sortedAnswers.map((a) => ({
           subject: a.question.subject,
@@ -55,7 +56,8 @@ export default async function TeacherAttemptDetailPage({
         })),
         track
       )
-    : [];
+    : []
+  ).filter((p) => p.voto);
 
   return (
     <div className="flex flex-col gap-6">

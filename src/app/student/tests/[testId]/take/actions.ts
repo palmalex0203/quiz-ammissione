@@ -171,12 +171,15 @@ async function consegnaTentativo(attempt: { id: string; testId: string }) {
   // Riepilogo per materia calcolato qui, una volta sola: le pagine di analisi
   // leggeranno queste poche righe invece di riesaminare tutte le risposte.
   const subjectOf = new Map(questions.map((q) => [q.id, q.subject]));
-  const perSubject = new Map<string, { correct: number; total: number }>();
+  const perSubject = new Map<string, { correct: number; answered: number; total: number }>();
   for (const r of results) {
     const subject = subjectOf.get(r.questionId);
     if (!subject) continue;
-    const stat = perSubject.get(subject) ?? { correct: 0, total: 0 };
+    const stat = perSubject.get(subject) ?? { correct: 0, answered: 0, total: 0 };
     stat.total += 1;
+    // Le risposte date si contano a parte dalle corrette: è la differenza fra
+    // sbagliare e lasciare in bianco, che vale 0,1 punti a domanda.
+    if (r.outcome !== "OMITTED") stat.answered += 1;
     if (r.isCorrect) stat.correct += 1;
     perSubject.set(subject, stat);
   }
@@ -207,6 +210,7 @@ async function consegnaTentativo(attempt: { id: string; testId: string }) {
         attemptId: attempt.id,
         subject,
         correct: s.correct,
+        answered: s.answered,
         total: s.total,
       })),
     }),
