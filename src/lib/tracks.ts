@@ -26,6 +26,11 @@ export type TypeMix = Partial<Record<QuestionKind, number>>;
 
 export type QuestionKind = "MULTIPLE_CHOICE" | "COMPLETAMENTO";
 
+// Come l'esame vero traduce in voto il punteggio di una singola prova. Assente
+// dove non c'è un voto: a Professioni Sanitarie la prova fa una graduatoria, non
+// un trenta. Vedi src/lib/esame.ts.
+export type Esame = { scala: number; sufficienza: number; lode: boolean };
+
 export type Track = {
   id: TrackId;
   label: string;
@@ -42,6 +47,8 @@ export type Track = {
   // Com'è ripartita una prova fra i tipi di domanda. Assente = nessun vincolo:
   // si pesca quello che c'è, com'è sempre stato per Professioni Sanitarie.
   typeMix?: TypeMix;
+  // Ogni prova è un esame a sé e fa un voto a sé: qui come si calcola.
+  esame?: Esame;
   scoring: Scoring;
 };
 
@@ -127,6 +134,8 @@ const SEMESTRE_FILTRO: Track = {
     Biologia: 31,
   },
   typeMix: { MULTIPLE_CHOICE: 15, COMPLETAMENTO: 16 },
+  // 31 domande, 31 punti al massimo: trenta più il punto della lode.
+  esame: { scala: 30, sufficienza: 18, lode: true },
   scoring: { correct: 1, incorrect: -0.1, omitted: 0 },
 };
 

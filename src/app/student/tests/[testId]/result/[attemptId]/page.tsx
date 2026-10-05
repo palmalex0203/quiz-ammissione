@@ -7,6 +7,7 @@ import { formatPoints, trackOf } from "@/lib/tracks";
 import { CompletionReview } from "@/components/CompletionReview";
 import { rispostaData } from "@/lib/completion";
 import { testQuestionOrder } from "@/lib/test-questions";
+import { formatPunti, risultatiPerProva, type RisultatoProva } from "@/lib/esame";
 
 export default async function AttemptResultPage({
   params,
@@ -41,7 +42,8 @@ export default async function AttemptResultPage({
     attempt.maxScore && attempt.maxScore > 0 ? Math.round(((attempt.score ?? 0) / attempt.maxScore) * 100) : 0;
 
   // I punti mostrati sono quelli del percorso a cui appartiene il test.
-  const scoring = trackOf(attempt.test.track).scoring;
+  const track = trackOf(attempt.test.track);
+  const scoring = track.scoring;
 
   // L'ordine è quello del test, non quello che la domanda ha nella banca dati.
   const posizione = await testQuestionOrder(attempt.testId);
@@ -51,6 +53,20 @@ export default async function AttemptResultPage({
   const correctCount = sortedAnswers.filter((a) => a.isCorrect).length;
   const omittedCount = sortedAnswers.filter((a) => !rispostaData(a)).length;
   const incorrectCount = sortedAnswers.length - correctCount - omittedCount;
+
+  // Nel semestre filtro ogni materia è un esame a sé: il punteggio totale non è
+  // un voto, lo sono i tre punteggi delle tre prove.
+  const prove = track.esame
+    ? risultatiPerProva(
+        sortedAnswers.map((a) => ({
+          subject: a.question.subject,
+          corretta: a.isCorrect === true,
+          data: rispostaData(a),
+        })),
+        track
+      )
+    : [];
+  const provaUnica = prove.length === 1 ? prove[0] : null;
 
   return (
     <div className="flex flex-col gap-6">
@@ -64,10 +80,30 @@ export default async function AttemptResultPage({
       <div className="card flex flex-col gap-5 p-6 sm:flex-row sm:items-center">
         <ProgressRing value={percentage} size={92} />
         <div className="flex flex-col gap-3">
-          <p className="font-display text-4xl font-bold tracking-tight tabular-nums">
-            {attempt.score}
-            <span className="text-xl text-muted"> / {attempt.maxScore}</span>
-          </p>
+          {provaUnica?.voto ? (
+            <div>
+              <p className="font-display text-4xl font-bold tracking-tight tabular-nums">
+                {provaUnica.voto.etichetta}
+              </p>
+              <p className="mt-1 text-sm text-muted">
+                {formatPunti(provaUnica.punti)} punti su {attempt.maxScore} ·{" "}
+                <span
+                  className={
+                    provaUnica.voto.superata
+                      ? "font-semibold text-green-700 dark:text-green-300"
+                      : "font-semibold text-red-700 dark:text-red-300"
+                  }
+                >
+                  {provaUnica.voto.superata ? "prova superata" : "sotto il 18, non superata"}
+                </span>
+              </p>
+            </div>
+          ) : (
+            <p className="font-display text-4xl font-bold tracking-tight tabular-nums">
+              {attempt.score}
+              <span className="text-xl text-muted"> / {attempt.maxScore}</span>
+            </p>
+          )}
           <div className="flex flex-wrap gap-2">
             <span className="pill bg-green-100 text-green-800 dark:bg-green-500/15 dark:text-green-300">
               {correctCount} corrette · {formatPoints(scoring.correct)}
@@ -81,6 +117,24 @@ export default async function AttemptResultPage({
           </div>
         </div>
       </div>
+
+      {prove.length > 1 && (
+        <section className="flex flex-col gap-3">
+          <div>
+            <h2 className="section-title">Il voto, una prova per volta</h2>
+            <p className="text-sm text-muted">
+              Le {prove.length} prove sono {prove.length} esami distinti e fanno{" "}
+              {prove.length} voti distinti: sommare i punteggi non vuol dire niente. Si supera da
+              18/30 in su.
+            </p>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {prove.map((prova) => (
+              <CartaProva key={prova.subject} prova={prova} />
+            ))}
+          </div>
+        </section>
+      )}
 
       <h2 className="section-title">Correzione domanda per domanda</h2>
 
@@ -167,6 +221,39 @@ export default async function AttemptResultPage({
           );
         })}
       </div>
+    </div>
+  );
+}
+
+/*
+ * Il voto di una singola prova. Il numero grande è quello che finirebbe sul
+ * libretto; sotto restano i punti grezzi, perché è lì che si vede il costo degli
+ * errori rispetto alle risposte lasciate in bianco.
+ */
+function CartaProva({ prova }: { prova: RisultatoProva }) {
+  const superata = prova.voto?.superata ?? false;
+  return (
+    <div
+      className={`flex flex-col gap-2 rounded-[1.25rem] border p-4 ${
+        superata
+          ? "border-green-200 bg-green-50/70 dark:border-green-900/60 dark:bg-green-950/20"
+          : "border-red-200 bg-red-50/70 dark:border-red-900/60 dark:bg-red-950/20"
+      }`}
+    >
+      <p className="text-xs font-semibold uppercase tracking-wide text-muted">{prova.subject}</p>
+      <p className="font-display text-3xl font-bold tracking-tight tabular-nums">
+        {prova.voto?.etichetta ?? formatPunti(prova.punti)}
+      </p>
+      <p
+        className={`text-xs font-semibold ${
+          superata ? "text-green-700 dark:text-green-300" : "text-red-700 dark:text-red-300"
+        }`}
+      >
+        {superata ? "Superata" : "Non superata"} · {formatPunti(prova.punti)} punti
+      </p>
+      <p className="text-xs text-muted">
+        {prova.corrette} corrette · {prova.errate} errate · {prova.omesse} in bianco
+      </p>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import { formatPoints, trackOf } from "@/lib/tracks";
 import { CompletionReview } from "@/components/CompletionReview";
 import { rispostaData } from "@/lib/completion";
 import { testQuestionOrder } from "@/lib/test-questions";
+import { formatPunti, risultatiPerProva } from "@/lib/esame";
 
 export default async function TeacherAttemptDetailPage({
   params,
@@ -32,7 +33,8 @@ export default async function TeacherAttemptDetailPage({
 
   const percentage =
     attempt.maxScore && attempt.maxScore > 0 ? Math.round(((attempt.score ?? 0) / attempt.maxScore) * 100) : 0;
-  const scoring = trackOf(attempt.test.track).scoring;
+  const track = trackOf(attempt.test.track);
+  const scoring = track.scoring;
   // L'ordine è quello del test, non quello che la domanda ha nella banca dati.
   const posizione = await testQuestionOrder(attempt.testId);
   const sortedAnswers = [...attempt.answers].sort(
@@ -41,6 +43,19 @@ export default async function TeacherAttemptDetailPage({
   const correctCount = sortedAnswers.filter((a) => a.isCorrect).length;
   const omittedCount = sortedAnswers.filter((a) => !rispostaData(a)).length;
   const incorrectCount = sortedAnswers.length - correctCount - omittedCount;
+
+  // Nel semestre filtro ogni materia è un esame a sé: il voto che conta è quello
+  // della singola prova, non il totale.
+  const prove = track.esame
+    ? risultatiPerProva(
+        sortedAnswers.map((a) => ({
+          subject: a.question.subject,
+          corretta: a.isCorrect === true,
+          data: rispostaData(a),
+        })),
+        track
+      )
+    : [];
 
   return (
     <div className="flex flex-col gap-6">
@@ -65,6 +80,22 @@ export default async function TeacherAttemptDetailPage({
           {percentage}% &middot; {correctCount} corrette, {incorrectCount} errate, {omittedCount} omesse su{" "}
           {sortedAnswers.length}
         </p>
+        {prove.length > 0 && (
+          <div className="mt-4 flex flex-wrap gap-2 border-t border-line pt-4">
+            {prove.map((prova) => (
+              <span
+                key={prova.subject}
+                className={`pill ${
+                  prova.voto?.superata
+                    ? "bg-green-100 text-green-800 dark:bg-green-500/15 dark:text-green-300"
+                    : "bg-red-100 text-red-800 dark:bg-red-500/15 dark:text-red-300"
+                }`}
+              >
+                {prova.subject}: {prova.voto?.etichetta ?? formatPunti(prova.punti)}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="flex flex-col gap-3">
