@@ -1,0 +1,291 @@
+[
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "A una molla orizzontale (di massa trascurabile) è attaccato un cubetto di legno di massa m = 7 Kg che oscilla con un periodo di π/3 secondi. Quanto vale il coefficiente k della molla in unità SI?",
+    "options": [
+      { "text": "252π", "isCorrect": false },
+      { "text": "126", "isCorrect": false },
+      { "text": "28", "isCorrect": false },
+      { "text": "252", "isCorrect": true },
+      { "text": "4", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "L'indice di rifrazione di un mezzo dipende dalla sua costante dielettrica ε e dalla sua permeabilità magnetica μ, secondo la legge:",
+    "options": [
+      { "text": "n = 1/(εμ)", "isCorrect": false },
+      { "text": "n = ε/μ", "isCorrect": false },
+      { "text": "n = √(εμ)", "isCorrect": true },
+      { "text": "n = εμ", "isCorrect": false },
+      { "text": "n = 1/√(εμ)", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Un condotto cilindrico orizzontale di raggio R e lunghezza L è percorso da un fluido viscoso, con portata Q, in regime di moto laminare. In queste condizioni viene misurata tra i capi del condotto una caduta di pressione ΔP. Se, a parità delle altre condizioni, vengono raddoppiati sia il raggio che la lunghezza del condotto, la quantità ΔP:",
+    "options": [
+      { "text": "Diventa il doppio", "isCorrect": false },
+      { "text": "Diventa un ottavo", "isCorrect": true },
+      { "text": "Resta invariata", "isCorrect": false },
+      { "text": "Diventa un quarto", "isCorrect": false },
+      { "text": "Diventa il quadruplo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-01",
+    "text": "Facendo uso dei multipli e dei sottomultipli, si può affermare che:",
+    "options": [
+      { "text": "10⁻⁹ Km = 1 dm", "isCorrect": false },
+      { "text": "10⁻⁹ Km = 1 nm", "isCorrect": false },
+      { "text": "10⁻⁹ Km = 1 μm", "isCorrect": true },
+      { "text": "10⁻⁹ Km = 1 mm", "isCorrect": false },
+      { "text": "10⁻⁹ Km = 1 cm", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Applicando una forza uguale a due corpi diversi, i due corpi acquistano:",
+    "options": [
+      { "text": "la stessa accelerazione", "isCorrect": false },
+      { "text": "quesito senza soluzione univoca o corretta", "isCorrect": false },
+      { "text": "accelerazioni direttamente proporzionali alle masse", "isCorrect": false },
+      { "text": "la stessa velocità", "isCorrect": false },
+      { "text": "accelerazioni inversamente proporzionali alle masse", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Un fluido si definisce incompressibile:",
+    "options": [
+      { "text": "Quando al suo interno, a parità di altezza, la pressione non dipende dalla posizione", "isCorrect": false },
+      { "text": "Quando la sua densità non dipende dalla temperatura", "isCorrect": false },
+      { "text": "Quando la sua densità rimane costante anche se sottoposto a variazioni di pressione", "isCorrect": true },
+      { "text": "Quando per esso vale il principio di conservazione dell'energia cinetica", "isCorrect": false },
+      { "text": "Quando il suo coefficiente di viscosità è trascurabile.", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03",
+    "text": "Una zattera di legno (densità del legno: 0,8 g/cm3) che ha una base quadrata di lato 4 m e altezza 50 cm, galleggia sull'acqua. Quale percentuale dell'altezza totale della zattera è immersa in acqua?",
+    "options": [
+      { "text": "10%", "isCorrect": false },
+      { "text": "80%", "isCorrect": true },
+      { "text": "50%", "isCorrect": false },
+      { "text": "Nessuna delle risposte proposte è corretta.", "isCorrect": false },
+      { "text": "20%", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-01",
+    "text": "Indicando con [M] una quantità che ha le dimensioni di una massa, con [L] una quantità che ha le dimensioni di una lunghezza e con [T] una quantità che ha le dimensioni di un tempo, che dimensioni ha una forza?",
+    "options": [
+      { "text": "[M][L][T]⁻¹", "isCorrect": false },
+      { "text": "[M][L]²[T]⁻²", "isCorrect": false },
+      { "text": "[L][T]⁻²", "isCorrect": false },
+      { "text": "[M][L][T]", "isCorrect": false },
+      { "text": "[M][L][T]⁻²", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Le potenze utilizzate dai seguenti elettrodomestici sono:\n• P (ferro da stiro) = 1 KW\n• P (televisore) = 150 W\n• P (lavatrice) = 2,5 KW\n• P (forno elettrico) = 1500 W\nSe vengono collegati alla rete domestica (220V), quale degli elettrodomestici è attraversato da una corrente di intensità maggiore?",
+    "options": [
+      { "text": "Il ferro da stiro", "isCorrect": false },
+      { "text": "Il forno elettrico", "isCorrect": false },
+      { "text": "La lavatrice", "isCorrect": true },
+      { "text": "Il televisore", "isCorrect": false },
+      { "text": "Sono attraversati tutti dalla stessa corrente", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-05",
+    "text": "Secondo la teoria cinetica dei gas, se la temperatura delle molecole di un gas triplica allora",
+    "options": [
+      { "text": "Non è possibile rispondere se non si conoscono le pressioni iniziale e finale del gas", "isCorrect": false },
+      { "text": "Non è possibile rispondere se non si conosce la temperatura iniziale del gas", "isCorrect": false },
+      { "text": "L'energia cinetica media delle molecole raddoppia", "isCorrect": false },
+      { "text": "L'energia cinetica media delle molecole triplica", "isCorrect": true },
+      { "text": "L'energia cinetica media delle molecole diventa 9 volte maggiore di quella iniziale", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02",
+    "text": "Il moto di un punto materiale in cui sono costanti la curvatura della traiettoria e la velocità scalare è un moto:",
+    "options": [
+      { "text": "uniformemente accelerato", "isCorrect": false },
+      { "text": "elicoidale", "isCorrect": false },
+      { "text": "armonico", "isCorrect": false },
+      { "text": "quesito senza soluzione univoca o corretta.", "isCorrect": false },
+      { "text": "circolare uniforme", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-04",
+    "text": "Quale di queste quantità fisiche NON viene trasportata da un'onda acustica che si propaga in un mezzo materiale:",
+    "options": [
+      { "text": "Informazione", "isCorrect": false },
+      { "text": "Potenza", "isCorrect": false },
+      { "text": "Quantità di moto", "isCorrect": false },
+      { "text": "Massa", "isCorrect": true },
+      { "text": "Energia", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-05",
+    "text": "Dette rispettivamente T1 e T2 la temperatura della sorgente fredda e della sorgente calda, in un ciclo di Carnot il rendimento:",
+    "options": [
+      { "text": "vale 1 − T1/T2, con T1 e T2 espresse in gradi centigradi.", "isCorrect": false },
+      { "text": "vale 1 − T2/T1, con le temperature espresse in K.", "isCorrect": false },
+      { "text": "è maggiore di 1.", "isCorrect": false },
+      { "text": "è un numero negativo.", "isCorrect": false },
+      { "text": "vale 1 − T1/T2, con le temperature espresse in K.", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07",
+    "text": "La velocità di propagazione delle onde e. m.:",
+    "options": [
+      { "text": "350.209 km/s", "isCorrect": false },
+      { "text": "è costante", "isCorrect": false },
+      { "text": "dipende dall'indice di rifrazione del mezzo in cui viaggiano", "isCorrect": true },
+      { "text": "nessuna delle risposte precedenti è corretta", "isCorrect": false },
+      { "text": "dipende dalla frequenza dell'onda", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06",
+    "text": "Qual è la differenza di potenziale tra due punti all'interno di un conduttore isolato caricato con carica di 10 nC e di capacità 5 nF?",
+    "options": [
+      { "text": "0 V", "isCorrect": true },
+      { "text": "2 mV", "isCorrect": false },
+      { "text": "50 mV", "isCorrect": false },
+      { "text": "10 mV", "isCorrect": false },
+      { "text": "2 V", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Il lavoro meccanico di una forza è definito come il prodotto …… tra il vettore forza e il vettore spostamento.",
+    "options": [
+      { "text": "scalare", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Una carica elettrica in movimento genera un campo elettromagnetico in cui i vettori campo elettrico e campo magnetico sono sempre …… l'uno rispetto all'altro",
+    "options": [
+      { "text": "perpendicolari", "isCorrect": true },
+      { "text": "ortogonali", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "L'energia di un fotone è direttamente proporzionale alla sua ……",
+    "options": [
+      { "text": "frequenza", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Una carica elettrica entra in una regione di spazio, dove è presente un campo magnetico uniforme, con velocità ortogonale alla direzione del campo. La carica descriverà un'orbita ……",
+    "options": [
+      { "text": "circolare", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "text": "Quando un pendolo viene sollecitato da una forza esterna comincia ad oscillare. Le sue oscillazioni però si smorzano rapidamente al cessare della forza esterna. Ciò avviene perché sul pendolo agiscono forze di tipo ……",
+    "options": [
+      { "text": "dissipativo", "isCorrect": true },
+      { "text": "dissipative", "isCorrect": true },
+      { "text": "attrito", "isCorrect": true },
+      { "text": "viscoso", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-07", "type": "COMPLETAMENTO",
+    "text": "Se un oggetto è posto tra il centro e il fuoco di una lente convergente, si otterrà un'immagine …… e ingrandita.",
+    "options": [
+      { "text": "virtuale", "isCorrect": true },
+      { "text": "diritta", "isCorrect": true },
+      { "text": "dritta", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "text": "In una trasformazione isocora la variazione di energia interna ∆U coincide con il …… scambiato dal sistema.",
+    "options": [
+      { "text": "calore", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "text": "Un'onda sonora di frequenza f si propaga in un mezzo con velocità v. la sua lunghezza d'onda λ vale ……",
+    "options": [
+      { "text": "v/f", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "text": "In fisica ondulatoria, la frequenza f è calcolata come l'inverso del …… di un'onda.",
+    "options": [
+      { "text": "periodo", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-02", "type": "COMPLETAMENTO",
+    "text": "Una sferetta di cera di massa 20g correndo su un piano privo d'attrito con velocità costante di 2 m/sec urta, rimanendo attaccata, una sfera di acciaio di massa 40g. Dopo l'urto le due sfere procedono insieme alla velocità di …… m/sec",
+    "options": [
+      { "text": "0,67", "isCorrect": true },
+      { "text": "0,666", "isCorrect": true },
+      { "text": "0,6667", "isCorrect": true },
+      { "text": "2/3", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-01", "type": "COMPLETAMENTO",
+    "text": "Per convertire una pressione da Pascal (Pa) a nanoPascal (nPa), si moltiplica il valore in Pascal per 10 elevato alla potenza di ……",
+    "options": [
+      { "text": "9", "isCorrect": true },
+      { "text": "nove", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "Per un fluido con densità ρ = 1000 kg/m³ e g = 9,81 m/s² su un'altezza di 5 m, la pressione manometrica sul fondo vale …… Pa",
+    "options": [
+      { "text": "49050", "isCorrect": true },
+      { "text": "49.050", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-03", "type": "COMPLETAMENTO",
+    "text": "In un condotto orizzontale scorre un fluido di densità ρ = 10³ Kg/m³ che, ai fini della domanda, può essere considerato ideale; la portata è Q = 100 cm³/s. Nel punto 1 la sezione del condotto è S1 = 1 cm², mentre nel punto 2 la sezione è S2 = 2 cm². Quanto è la differenza di pressione P2 – P1, espressa in N/m²? ……",
+    "options": [
+      { "text": "375", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-01", "type": "COMPLETAMENTO",
+    "text": "In un mm³ di sangue sono disciolti 4 μg di una certa proteina. In un litro di sangue saranno disciolti …… g di quella proteina",
+    "options": [
+      { "text": "4", "isCorrect": true },
+      { "text": "quattro", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "La legge che stabilisce che la tensione è proporzionale alla corrente attraverso un conduttore, con una costante di proporzionalità chiamata …… , è conosciuta come legge di Ohm.",
+    "options": [
+      { "text": "resistenza", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Fisica", "topic": "SF-FIS-06", "type": "COMPLETAMENTO",
+    "text": "Due conduttori uguali di resistenza 1000 Ohm sono posti in parallelo e il loro complesso è posto in serie con un conduttore di resistenza 500 Ohm. La resistenza totale del collegamento è …… Ohm.",
+    "options": [
+      { "text": "1000", "isCorrect": true }
+    ]
+  }
+]

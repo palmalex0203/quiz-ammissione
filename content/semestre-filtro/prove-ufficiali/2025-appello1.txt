@@ -1,0 +1,503 @@
+Semestre Aperto - Esami
+1
+BIOLOGIA (1° APPELLO)
+Anno Accademico 2025/2026
+DOMANDE A RISPOSTA MULTIPLA
+1. Dove vengono specificamente riconosciute e modificate le idrolasi destinate al
+compartimento lisosomiale?
+A) corpi multivescicolari
+B) compartimento intermedio
+C) granuli di secrezione
+D) reticolo endoplasmico rugoso
+E) cis-Golgi
+2. Il sistema dei gruppi sanguigni AB0 è un classico esempio di:
+A) Dominanza incompleta
+B) Eredità legata all’X
+C) Codominanza
+D) Eredità poligenica
+E) Penetranza incompleta
+3. Tre classi di proteine E (E1, E2, E3), nella via dell’ubiquitinazione, giocano un ruolo
+fondamentale nel processo di degradazione proteica. In particolare, le proteine E3:
+A) Riconoscono le proteine da degradare e le legano all’ubiquitina, marcandole così per la
+degradazione nel proteasoma
+B) Agiscono da enzimi attivatori dell’ubiquitina
+C) Trasportano le proteine ubiquitinate a livello dei lisosomi per la degradazione
+D) Trasportano l’ubiquitina al proteasoma
+E) Degradano direttamente le proteine marcate con ubiquitina
+4. Lo stadio della mitosi in cui i cromosomi si allineano sulla piastra equatoriale tra i due
+poli del fuso è chiamato…….., mentre quello in cui i cromosomi iniziano a separarsi è
+chiamato…
+A) profase, telofase
+B) metafase, profase
+C) profase, anafase
+D) metafase, telofase
+E) metafase, anafase
+5. Nella grande maggioranza delle cellule somatiche di un organismo:
+1) la membrana plasmatica è meno estesa della membrana del reticolo endoplasmico,
+2) la membrana nucleare esterna è parte del reticolo endoplasmico,
+3) la membrana mitocondriale interna è quantitativamente più estesa della
+membrana mitocondriale esterna.
+A) Tutte le affermazioni sono esatte
+B) Solo la 1 e la 2 sono esatte
+C) Solo la 1 e la 3 sono esatte
+D) Solo la 2 è esatta
+E) Solo la 1 è esatta
+
+----- pagina 1 -----
+2
+6. I meccanismi di maturazione del pre-mRNA negli eucarioti comprendono:
+A) Splicing
+B) Aggiunta di una coda di poli(A) all’estremità 3’ dell’mRNA
+C) Aggiunta di un cappuccio di 7-metilguanosina all’estremità 5’ dell’mRNA
+D) Tutte le risposte sono corrette
+E) Splicing alternativo
+7. Le amminoacil-tRNA sintetasi:
+A) Idrolizzano GTP per catalizzare il legame tra l’amminoacido e il suo tRNA
+B) Sono in numero pari ai diversi tRNA sintetizzati nella cellula
+C) Sono enzimi processivi
+D) Catalizzano il legame del gruppo NH2 di uno specifico amminoacido con l’estremità 3’-
+OH della sequenza CCA terminale del tRNA
+E) Catalizzano il legame del gruppo COOH di uno specifico amminoacido con l’estremità 3’-
+OH della sequenza CCA terminale del tRNA
+8. La struttura “a collana di perle” vede
+A) Il DNA nudo (spessore 20 nm)
+B) Il DNA avvolto intorno ai nucleosomi (spessore 30 nm)
+C) Il DNA avvolto intorno ai nucleosomi (spessore 11 nm)
+D) Il DNA avvolto intorno all’istone H1 (spessore 5 nm)
+E) Il DNA nudo (spessore 30 nm)
+9. Si definisce paracrina:
+A) Lo scambio di segnali elettrici tra neuroni tramite sinapsi
+B) La comunicazione intercellulare basata su molecole segnale che agiscono su cellule
+vicine alla cellula che le rilascia
+C) La comunicazione tra virus e batteri
+D) La comunicazione intercellulare basata su molecole segnale che agiscono su cellule
+molto lontane rispetto alla cellula che le rilascia
+E) La comunicazione basata su molecole segnale che agiscono sulla stessa cellula che le
+rilascia
+10. Una mutazione che modifica il codone UCA in UGA è denominata:
+A) Tansizione
+B) Traslocazione
+C) Mutazione missenso
+D) Mutazione silente
+E) Transversione
+11. La matrice extracellulare è composta da:
+A) Proteine istoniche
+B) Proteoglicani, glicosamminoglicani, proteine strutturali e proteine di adesione
+C) Fosfolipidi e colesterolo
+D) Molecole di tubulina
+E) Filamenti di actina
+12. Considerando le principali differenze strutturali tra le pareti cellulari dei batteri Gram-
+positivi e Gram-negativi, quale delle seguenti affermazioni è corretta?
+A) La disposizione di flagelli e pili
+B) La presenza di lipopolisaccaridi nei Gram positivi e di acido teicoico nei Gram negativi
+C) Nessuna delle affermazioni enunciate è corretta
+D) Il diverso spessore dello strato di peptidoglicano e l’assenza della membrana esterna nei
+Gram-positivi e la sua presenza nei Gram-negativi
+E) L’assenza di pili e flagelli nei Gram-negativi e la presenza nei Gram positivi
+
+----- pagina 2 -----
+Semestre Aperto - Esami
+3
+13. Tutti i virus....
+A) Hanno come acido nucleico il DNA
+B) Infettano cellule
+C) Infettano solo cellule eucariotiche
+D) Hanno come acido nucleico l’RNA
+E) Infettano solo cellule animali
+14. I segnali che determinano l’import e l’export delle proteine nel e dal nucleo
+A) Formano alfa-eliche amfipatiche con cariche negative
+B) Non vengono rimossi al termine del processo
+C) Legano sequenze GF delle proteine del poro nucleare
+D) Coinvolgono, rispettivamente, RAN-GAP e RAN-GEF
+E) Sono riconosciuti dalle proteine della lamina nucleare
+15. I cromosomi sono costituiti da
+A) Solo DNA
+B) Solo RNA
+C) DNA e lipidi
+D) RNA e proteine
+E) DNA e proteine
+DOMANDE A RISPOSTA CON MODALITA' A COMPLETAMENTO
+16. Nella specie Homo sapiens la disomia del cromosoma Y (47,XYY) è generalmente
+associata a un fenotipo maschile ……
+17. Il nucleotide denominato dAMP è composto da una molecola di 2’-deossi-D-ribosio, una
+molecola di …… ed un gruppo fosfato.
+18. La traslocazione da parte del complesso TIM23 di proteine attraverso la membrana
+interna mitocondriale è favorita dal potenziale di membrana della membrana interna
+perché amminoacidi carichi …… sono presenti nella sequenza segnale delle proteine da
+traslocare.
+19. Nelle cellule eucariotiche, la duplicazione del DNA si verifica durante la fase …… del ciclo
+cellulare.
+20. Le proteine neosintetizzate destinate ai …… sono traslocate una volta ultimata la loro
+sintesi ma prima di avere acquisito la corretta struttura tridimensionale.
+21. Nella replicazione del DNA l’enzima che sintetizza brevi frammenti di RNA, detti primer,
+che servono come innesco per l'azione della DNA polimerasi, è la ……
+22. Le poche proteine di membrana codificate dal DNA mitocondriale e tradotte nella matrice
+mitocondriale sono inserite nella membrana interna del mitocondrio grazie al complesso
+di traslocazione …… (usare l’acronimo).
+23. Nelle cellule germinali umane mature sono presenti …… cromosomi monocromatidici.
+24. L’acido …… è una macromolecola della matrice extracellulare che appartiene alla famiglia
+dei glicosamminoglicani.
+
+----- pagina 3 -----
+4
+25. La sequenza segnale, tipicamente presente a monte di un gene, che consente l’inizio
+della trascrizione è il ……
+26. Negli eucarioti, la regione del promotore di un gene che fornisce un sito di legame per i
+fattori generali di trascrizione facilitando il reclutamento della RNA polimerasi II viene
+definita …… box.
+27. Nel processo di trasduzione del segnale, un ligando extracellulare si lega a un recettore
+specifico, innescando una …… di eventi intracellulari che convertono il segnale esterno
+in una risposta biologica specifica.
+28. Si dice che una cellula è in …… quando i cromosomi sono allineati in piastra equatoriale.
+29. Durante l’apoptosi, la cellula destinata a morire viene riconosciuta e rimossa dai
+macrofagi grazie all’esposizione, sulla superficie esterna della membrana plasmatica,
+della …… , un segnale “eat me”.
+30. Fosfatidilcolina e Sfingomielina sono lipidi fortemente arricchiti nel foglietto …… della
+membrana dei globuli rossi.
+31. La frequenza con cui un genotipo determina l’espressione del corrispondente fenotipo è
+definita …….
+********** FINE DELLE DOMANDE **********
+
+----- pagina 4 -----
+Semestre Aperto - Esami
+1
+CHIMICA E PROPEDEUTICA BIOCHIMICA (1° APPELLO)
+Anno Accademico 2025/2026
+DOMANDE A RISPOSTA MULTIPLA
+1. Quale tra le seguenti è la formula chimica del solfato di bario?
+A) BaS
+B) BaSO4
+C) BaHSO4
+D) BaSO3
+E) Ba2SO4
+2. Il numero atomico di un elemento è:
+A) la somma del numero di protoni ed elettroni
+B) la somma del numero di protoni e neutroni
+C) il numero totale di elettroni
+D) il numero di protoni contenuti nel nucleo
+E) il numero di neutroni contenuti nel nucleo
+3. Gli alcani aciclici sono molecole
+A) ramificate
+B) caratterizzate da isomeria geometrica
+C) aromatiche
+D) lineari
+E) in cui tutti gli atomi di carbonio sono ibridati sp3
+4. Il 2-propanolo, in ambiente acido, può essere ossidato dal dicromato di potassio
+formando
+A) acetone
+B) ossido di propilene
+C) acetaldeide
+D) 1-propanolo
+E) etanolo
+5. Quale dei seguenti aminoacidi è il più abbondante nel collagene?
+A) Glicina
+B) Alanina
+C) Serina
+D) Triptofano
+E) Istidina
+6. Dopo aver bilanciato la seguente reazione aCl2 + bNaOH → cNaCl + dNaClO3 + eH2O si
+può affermare che:
+A) b = 6
+B) e = 4
+C) c = 6
+D) a = 2
+E) d = 2
+
+----- pagina 5 -----
+2
+7. Nel 2,3-dimetil-1-butene ci sono
+A) quattro gruppi metile
+B) due doppi legami
+C) cinque atomi di carbonio
+D) dodici atomi di idrogeno
+E) quattro atomi di carbonio
+8. La relazione tra la variazione dell’energia libera di Gibbs (∆G) e potenziale di una cella
+elettrochimica (E) è
+A) ∆G = E/nF
+B) ∆G = −nFE
+C) ∆G = nFE
+D) ∆G = −nFE°
+E) ∆G = RtlnE
+9. Il numero massimo di elettroni presenti in un orbitale con (elle) l=1 è:
+A) 6
+B) 1
+C) 2
+D) 4
+E) 3
+10. Quale delle seguenti soluzioni saline avrà un pH superiore a 7 ?
+A) KClO4
+B) NaHCO3
+C) NaCl
+D) KHSO4
+E) NH4NO3
+11. Gli acidi grassi omega-3 e omega-6:
+A) Sono tutti saturi
+B) Sono sintetizzati dal fegato
+C) Sono tutti polinsaturi
+D) Sono componenti essenziali dei glicerofosfolipidi
+E) Comprendono acido oleico, acido linoleico e acido arachidonico
+12. Quale delle seguenti soluzioni saline avrà un pH inferiore a 7 ?
+A) NaCl
+B) KNO3
+C) KClO4
+D) NaHCO3
+E) NH4Cl
+13. Un nucleoside è costituito da:
+A) una base azotata legata covalentemente ad un pentoso e a tre gruppi fosfato
+B) un pentoso legato a tre gruppi fosfato
+C) una base azotata legata a un pentoso tramite legame a idrogeno
+D) una base azotata legata a tre gruppi fosfato
+E) una base azotata legata covalentemente ad un pentoso
+
+----- pagina 6 -----
+Semestre Aperto - Esami
+3
+14. L’acido arachidonico:
+A) E’ un acido grasso insaturo omega-6
+B) possiede 24 atomi di carbonio
+C) Deriva dal colesterolo
+D) Viene sintetizzato nel fegato
+E) E’ un acido grasso insaturo omega-3
+15. Quale effetto ha un AUMENTO di temperatura sulla solubilità dell’ossigeno in acqua ?
+A) La solubilità diminuisce
+B) La solubilità aumenta
+C) L’effetto dipende dalla temperatura iniziale
+D) Nessun effetto sulla solubilità
+E) In presenza di altri gas aumenta
+DOMANDE A RISPOSTA CON MODALITA' A COMPLETAMENTO
+16. Avendo sostituenti identici su un atomo di carbonio insaturo, 1-butene non presenta ……
+configurazionale.
+17. Con l'aumentare della …… aumenta la tensione di vapore di un liquido.
+18. La tirosina può essere sintetizzata dalla fenilalanina tramite una reazione enzimatica.
+Quindi, tra questi due aminoacidi, la …… non è un aminoacido essenziale
+19. Il numero di gruppi amminici liberi presenti nel dipeptide Acido Aspartico - Glicina è ……
+20. Le proteine naturali sono polimeri di …… uniti da legami peptidici.
+21. Nel 4-etil-2,2-dimetileptano vi sono …… atomi di carbonio.
+22. Per la legge di Boyle–Mariotte per un gas ideale P1·V1 = P2·V2 per cui il prodotto P·V è
+sempre ……
+23. In un composto neutro la somma algebrica dei numeri di ossidazione dei diversi elementi
+è ……
+24. L’ …… (utilizzare l'acronimo) è un nucleotide composto da adenina, ribosio e tre gruppi
+fosfato
+25. Secondo la legge dell’azione di massa, la costante di equilibrio Kc per la reazione
+aA + bB ↔ cC + dD è definita come il rapporto tra il …… delle concentrazioni molari dei
+prodotti e quello delle concentrazioni molari dei reagenti, ciascuna elevata al proprio
+coefficiente stechiometrico.
+26. Nelle proteine la formazione di ponti disolfuro può avvenire grazie alla presenza di più
+residui dell’aminoacido ……
+27. L'ammoniaca forma lo ione ammonio mediante un legame covalente …… con un protone
+28. Per molecola si intende un insieme permanente di atomi uguali o diversi connessi con
+legami ……
+
+----- pagina 7 -----
+4
+29. Il potere tampone è massimo quando il pH della soluzione è …… al pK dell’acido debole
+30. Il pH è il logaritmo del …… della concentrazione molare di idrogenioni (ioni idrossonio,
+H3O
++
+)
+31. La misura di concentrazione che indica le moli di soluto presenti in un litro di soluzione si
+chiama ……
+********** FINE DELLE DOMANDE **********
+
+----- pagina 8 -----
+Semestre Aperto - Esami
+1
+FISICA (1° APPELLO)
+Anno Accademico 2025/2026
+DOMANDE A RISPOSTA MULTIPLA
+1. A una molla orizzontale (di massa trascurabile) è attaccato un cubetto di legno di massa
+m = 7 Kg che oscilla con un periodo di π/3 secondi. Quanto vale il coefficiente k della
+molla in unità SI?
+A) 252π
+B) 126
+C) 28
+D) 252
+E) 4
+2. L’indice di rifrazione di un mezzo dipende dalla sua costante dielettrica ε e dalla sua
+permeabilità magnetica μ, secondo la legge:
+A) n= 1/(εμ)
+B) n= ε/μ
+C) n = √(εμ)
+D) n= εμ
+E) n= 1/√(εμ)
+3. Un condotto cilindrico orizzontale di raggio R e lunghezza L è percorso da un fluido
+viscoso, con portata Q, in regime di moto laminare. In queste condizioni viene misurata
+tra i capi del condotto una caduta di pressione ΔP. Se, a parità delle altre condizioni,
+vengono raddoppiati sia il raggio che la lunghezza del condotto, la quantità ΔP:
+A) Diventa il doppio
+B) Diventa un ottavo
+C) Resta invariata
+D) Diventa un quarto
+E) Diventa il quadruplo
+4. Facendo uso dei multipli e dei sottomultipli, si può affermare che:
+A) 10
+−9 
+Km = 1 dm
+B) 10
+−9 
+Km = 1 nm
+C) 10
+−9 
+Km = 1 μm
+D) 10
+−9 
+Km = 1 mm
+E) 10
+−9 
+Km = 1 cm
+5. Applicando una forza uguale a due corpi diversi, i due corpi acquistano:
+A) la stessa accelerazione
+B) quesito senza soluzione univoca o corretta
+C) accelerazioni direttamente proporzionali alle masse
+D) la stessa velocità
+E) accelerazioni inversamente proporzionali alle masse
+
+----- pagina 9 -----
+2
+6. Un fluido si definisce incompressibile:
+A) Quando al suo interno, a parità di altezza, la pressione non dipende dalla posizione
+B) Quando la sua densità non dipende dalla temperatura
+C) Quando la sua densità rimane costante anche se sottoposto a variazioni di pressione
+D) Quando per esso vale il principio di conservazione dell’energia cinetica
+E) Quando il suo coefficiente di viscosità è trascurabile.
+7. Una zattera di legno (densità del legno: 0,8 g/cm
+3
+) che ha una base quadrata di lato 4 m e
+altezza 50 cm, galleggia sull’acqua. Quale percentuale dell’altezza totale della zattera è
+immersa in acqua?
+A) 10%
+B) 80%
+C) 50%
+D) Nessuna delle risposte proposte è corretta.
+E) 20%
+8. Indicando con [M] una quantità che ha le dimensioni di una massa, con [L] una quantità
+che ha le dimensioni di una lunghezza e con [T] una quantità che ha le dimensioni di un
+tempo, che dimensioni ha una forza?
+A) [M][L][T]
+−1
+B) [M][L] 
+2
+[T]
+−2
+C) [L][T]
+−2
+D) [M][L][T]
+E) [M][L][T]
+−2
+9. Le potenze utilizzate dai seguenti elettrodomestici sono:
+● P (ferro da stiro) = 1 KW
+● P (televisore) = 150 W
+● P (lavatrice) = 2,5 KW
+● P (forno elettrico) = 1500 W
+Se vengono collegati alla rete domestica (220V), quale degli elettrodomestici è
+attraversato da una corrente di intensità maggiore?
+A) Il ferro da stiro
+B) Il forno elettrico
+C) La lavatrice
+D) Il televisore
+E) Sono attraversati tutti dalla stessa corrente
+10. Secondo la teoria cinetica dei gas, se la temperatura delle molecole di un gas triplica
+allora
+A) Non è possibile rispondere se non si conoscono le pressioni iniziale e finale del gas
+B) Non è possibile rispondere se non si conosce la temperatura iniziale del gas
+C) L’energia cinetica media delle molecole raddoppia
+D) L’energia cinetica media delle molecole triplica
+E) L’energia cinetica media delle molecole diventa 9 volte maggiore di quella iniziale
+11. Il moto di un punto materiale in cui sono costanti la curvatura della traiettoria e la velocità
+scalare è un moto:
+A) uniformemente accelerato
+B) elicoidale
+C) armonico
+D) quesito senza soluzione univoca o corretta.
+E) circolare uniforme
+
+----- pagina 10 -----
+Semestre Aperto - Esami
+3
+12. Quale di queste quantità fisiche NON viene trasportata da un’onda acustica che si
+propaga in un mezzo materiale:
+A) Informazione
+B) Potenza
+C) Quantità di moto
+D) Massa
+E) Energia
+13. Dette rispettivamente T1 e T2 la temperatura della sorgente fredda e della sorgente calda,
+in un ciclo di Carnot il rendimento:
+A) vale 1 − T1/T2, con T1 e T2 espresse in gradi centigradi.
+B) vale 1 − T2/T1, con le temperature espresse in K.
+C) è maggiore di 1.
+D) è un numero negativo.
+E) vale 1 − T1/T2, con le temperature espresse in K.
+14. La velocità di propagazione delle onde e. m.:
+A) 350.209 km/s
+B) è costante
+C) dipende dall’indice di rifrazione del mezzo in cui viaggiano
+D) nessuna delle risposte precedenti è corretta
+E) dipende dalla frequenza dell’onda
+15. Qual è la differenza di potenziale tra due punti all’interno di un conduttore isolato caricato
+con carica di 10 nC e di capacità 5 nF?
+A) 0 V
+B) 2 mV
+C) 50 mV
+D) 10 mV
+E) 2 V
+DOMANDE A RISPOSTA CON MODALITA' A COMPLETAMENTO
+16. Il lavoro meccanico di una forza è definito come il prodotto …… tra il vettore forza e il
+vettore spostamento.
+17. Una carica elettrica in movimento genera un campo elettromagnetico in cui i vettori
+campo elettrico e campo magnetico sono sempre …… l’uno rispetto all’altro
+18. L’energia di un fotone è direttamente proporzionale alla sua ……
+19. Una carica elettrica entra in una regione di spazio, dove è presente un campo magnetico
+uniforme, con velocità ortogonale alla direzione del campo. La carica descriverà un’orbita
+……
+20. Quando un pendolo viene sollecitato da una forza esterna comincia ad oscillare. Le sue
+oscillazioni però si smorzano rapidamente al cessare della forza esterna. Ciò avviene
+perché sul pendolo agiscono forze di tipo ……
+21. Se un oggetto è posto tra il centro e il fuoco di una lente convergente, si otterrà
+un’immagine …… e ingrandita.
+
+----- pagina 11 -----
+4
+22. In una trasformazione isocora la variazione di energia interna ∆U coincide con il ……
+scambiato dal sistema.
+23. Un’onda sonora di frequenza f si propaga in un mezzo con velocità v. la sua lunghezza
+d’onda λ vale ……
+24. In fisica ondulatoria, la frequenza f è calcolata come l’inverso del …… di un’onda.
+25. Una sferetta di cera di massa 20g correndo su un piano privo d’attrito con velocità
+costante di 2 m/sec urta, rimanendo attaccata, una sfera di acciaio di massa 40g. Dopo
+l’urto le due sfere procedono insieme alla velocità di …… m/sec
+26. Per convertire una pressione da Pascal (Pa) a nanoPascal (nPa), si moltiplica il valore in
+Pascal per 10 elevato alla potenza di ……
+27. Per un fluido con densità ρ = 1000 kg/m³ e g = 9,81 m/s² su un’altezza di 5 m, la pressione
+manometrica sul fondo vale …… Pa
+28. In un condotto orizzontale scorre un fluido di densità ρ = 10
+3 
+Kg/m
+3 
+che, ai fini della
+domanda, può essere considerato ideale; la portata è Q = 100 cm
+3
+/s. Nel punto 1 la
+sezione del condotto è S1 = 1cm
+2
+, mentre nel punto 2 la sezione è S2 = 2cm
+2
+. Quanto è la
+differenza di pressione P2 – P1 , espressa in N/m
+2
+? ……
+29. In un mm
+3 
+di sangue sono disciolti 4 μg di una certa proteina. In un litro di sangue
+saranno disciolti …… g di quella proteina
+30. La legge che stabilisce che la tensione è proporzionale alla corrente attraverso un
+conduttore, con una costante di proporzionalità chiamata …… , è conosciuta come legge
+di Ohm.
+31. Due conduttori uguali di resistenza 1000 Ohm sono posti in parallelo e il loro complesso è
+posto in serie con un conduttore di resistenza 500 Ohm. La resistenza totale del
+collegamento è …… Ohm.
+********** FINE DELLE DOMANDE **********
+
+----- pagina 12 -----
+

@@ -1,0 +1,283 @@
+[
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05",
+    "text": "Dove vengono specificamente riconosciute e modificate le idrolasi destinate al compartimento lisosomiale?",
+    "options": [
+      { "text": "corpi multivescicolari", "isCorrect": false },
+      { "text": "compartimento intermedio", "isCorrect": false },
+      { "text": "granuli di secrezione", "isCorrect": false },
+      { "text": "reticolo endoplasmico rugoso", "isCorrect": false },
+      { "text": "cis-Golgi", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "Il sistema dei gruppi sanguigni AB0 è un classico esempio di:",
+    "options": [
+      { "text": "Dominanza incompleta", "isCorrect": false },
+      { "text": "Eredità legata all'X", "isCorrect": false },
+      { "text": "Codominanza", "isCorrect": true },
+      { "text": "Eredità poligenica", "isCorrect": false },
+      { "text": "Penetranza incompleta", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05",
+    "text": "Tre classi di proteine E (E1, E2, E3), nella via dell'ubiquitinazione, giocano un ruolo fondamentale nel processo di degradazione proteica. In particolare, le proteine E3:",
+    "options": [
+      { "text": "Riconoscono le proteine da degradare e le legano all'ubiquitina, marcandole così per la degradazione nel proteasoma", "isCorrect": true },
+      { "text": "Agiscono da enzimi attivatori dell'ubiquitina", "isCorrect": false },
+      { "text": "Trasportano le proteine ubiquitinate a livello dei lisosomi per la degradazione", "isCorrect": false },
+      { "text": "Trasportano l'ubiquitina al proteasoma", "isCorrect": false },
+      { "text": "Degradano direttamente le proteine marcate con ubiquitina", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07",
+    "text": "Lo stadio della mitosi in cui i cromosomi si allineano sulla piastra equatoriale tra i due poli del fuso è chiamato……, mentre quello in cui i cromosomi iniziano a separarsi è chiamato…",
+    "options": [
+      { "text": "profase, telofase", "isCorrect": false },
+      { "text": "metafase, profase", "isCorrect": false },
+      { "text": "profase, anafase", "isCorrect": false },
+      { "text": "metafase, telofase", "isCorrect": false },
+      { "text": "metafase, anafase", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05",
+    "text": "Nella grande maggioranza delle cellule somatiche di un organismo:\n1) la membrana plasmatica è meno estesa della membrana del reticolo endoplasmico,\n2) la membrana nucleare esterna è parte del reticolo endoplasmico,\n3) la membrana mitocondriale interna è quantitativamente più estesa della membrana mitocondriale esterna.",
+    "options": [
+      { "text": "Tutte le affermazioni sono esatte", "isCorrect": true },
+      { "text": "Solo la 1 e la 2 sono esatte", "isCorrect": false },
+      { "text": "Solo la 1 e la 3 sono esatte", "isCorrect": false },
+      { "text": "Solo la 2 è esatta", "isCorrect": false },
+      { "text": "Solo la 1 è esatta", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-03",
+    "text": "I meccanismi di maturazione del pre-mRNA negli eucarioti comprendono:",
+    "options": [
+      { "text": "Splicing", "isCorrect": false },
+      { "text": "Aggiunta di una coda di poli(A) all'estremità 3' dell'mRNA", "isCorrect": false },
+      { "text": "Aggiunta di un cappuccio di 7-metilguanosina all'estremità 5' dell'mRNA", "isCorrect": false },
+      { "text": "Tutte le risposte sono corrette", "isCorrect": true },
+      { "text": "Splicing alternativo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-03",
+    "text": "Le amminoacil-tRNA sintetasi:",
+    "options": [
+      { "text": "Idrolizzano GTP per catalizzare il legame tra l'amminoacido e il suo tRNA", "isCorrect": false },
+      { "text": "Sono in numero pari ai diversi tRNA sintetizzati nella cellula", "isCorrect": false },
+      { "text": "Sono enzimi processivi", "isCorrect": false },
+      { "text": "Catalizzano il legame del gruppo NH2 di uno specifico amminoacido con l'estremità 3'-OH della sequenza CCA terminale del tRNA", "isCorrect": false },
+      { "text": "Catalizzano il legame del gruppo COOH di uno specifico amminoacido con l'estremità 3'-OH della sequenza CCA terminale del tRNA", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "La struttura \"a collana di perle\" vede",
+    "options": [
+      { "text": "Il DNA nudo (spessore 20 nm)", "isCorrect": false },
+      { "text": "Il DNA avvolto intorno ai nucleosomi (spessore 30 nm)", "isCorrect": false },
+      { "text": "Il DNA avvolto intorno ai nucleosomi (spessore 11 nm)", "isCorrect": true },
+      { "text": "Il DNA avvolto intorno all'istone H1 (spessore 5 nm)", "isCorrect": false },
+      { "text": "Il DNA nudo (spessore 30 nm)", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06",
+    "text": "Si definisce paracrina:",
+    "options": [
+      { "text": "Lo scambio di segnali elettrici tra neuroni tramite sinapsi", "isCorrect": false },
+      { "text": "La comunicazione intercellulare basata su molecole segnale che agiscono su cellule vicine alla cellula che le rilascia", "isCorrect": true },
+      { "text": "La comunicazione tra virus e batteri", "isCorrect": false },
+      { "text": "La comunicazione intercellulare basata su molecole segnale che agiscono su cellule molto lontane rispetto alla cellula che le rilascia", "isCorrect": false },
+      { "text": "La comunicazione basata su molecole segnale che agiscono sulla stessa cellula che le rilascia", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04",
+    "text": "Una mutazione che modifica il codone UCA in UGA è denominata:",
+    "options": [
+      { "text": "Tansizione", "isCorrect": false },
+      { "text": "Traslocazione", "isCorrect": false },
+      { "text": "Mutazione missenso", "isCorrect": false },
+      { "text": "Mutazione silente", "isCorrect": false },
+      { "text": "Transversione", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05",
+    "text": "La matrice extracellulare è composta da:",
+    "options": [
+      { "text": "Proteine istoniche", "isCorrect": false },
+      { "text": "Proteoglicani, glicosamminoglicani, proteine strutturali e proteine di adesione", "isCorrect": true },
+      { "text": "Fosfolipidi e colesterolo", "isCorrect": false },
+      { "text": "Molecole di tubulina", "isCorrect": false },
+      { "text": "Filamenti di actina", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "Considerando le principali differenze strutturali tra le pareti cellulari dei batteri Gram-positivi e Gram-negativi, quale delle seguenti affermazioni è corretta?",
+    "options": [
+      { "text": "La disposizione di flagelli e pili", "isCorrect": false },
+      { "text": "La presenza di lipopolisaccaridi nei Gram positivi e di acido teicoico nei Gram negativi", "isCorrect": false },
+      { "text": "Nessuna delle affermazioni enunciate è corretta", "isCorrect": false },
+      { "text": "Il diverso spessore dello strato di peptidoglicano e l'assenza della membrana esterna nei Gram-positivi e la sua presenza nei Gram-negativi", "isCorrect": true },
+      { "text": "L'assenza di pili e flagelli nei Gram-negativi e la presenza nei Gram positivi", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01",
+    "text": "Tutti i virus....",
+    "options": [
+      { "text": "Hanno come acido nucleico il DNA", "isCorrect": false },
+      { "text": "Infettano cellule", "isCorrect": true },
+      { "text": "Infettano solo cellule eucariotiche", "isCorrect": false },
+      { "text": "Hanno come acido nucleico l'RNA", "isCorrect": false },
+      { "text": "Infettano solo cellule animali", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05",
+    "text": "I segnali che determinano l'import e l'export delle proteine nel e dal nucleo",
+    "options": [
+      { "text": "Formano alfa-eliche amfipatiche con cariche negative", "isCorrect": false },
+      { "text": "Non vengono rimossi al termine del processo", "isCorrect": true },
+      { "text": "Legano sequenze GF delle proteine del poro nucleare", "isCorrect": false },
+      { "text": "Coinvolgono, rispettivamente, RAN-GAP e RAN-GEF", "isCorrect": false },
+      { "text": "Sono riconosciuti dalle proteine della lamina nucleare", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-02",
+    "text": "I cromosomi sono costituiti da",
+    "options": [
+      { "text": "Solo DNA", "isCorrect": false },
+      { "text": "Solo RNA", "isCorrect": false },
+      { "text": "DNA e lipidi", "isCorrect": false },
+      { "text": "RNA e proteine", "isCorrect": false },
+      { "text": "DNA e proteine", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "Nella specie Homo sapiens la disomia del cromosoma Y (47,XYY) è generalmente associata a un fenotipo maschile ……",
+    "options": [
+      { "text": "normale", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-01", "type": "COMPLETAMENTO",
+    "text": "Il nucleotide denominato dAMP è composto da una molecola di 2'-deossi-D-ribosio, una molecola di …… ed un gruppo fosfato.",
+    "options": [
+      { "text": "adenina", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05", "type": "COMPLETAMENTO",
+    "text": "La traslocazione da parte del complesso TIM23 di proteine attraverso la membrana interna mitocondriale è favorita dal potenziale di membrana della membrana interna perché amminoacidi carichi …… sono presenti nella sequenza segnale delle proteine da traslocare.",
+    "options": [
+      { "text": "positivamente", "isCorrect": true },
+      { "text": "positivi", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "Nelle cellule eucariotiche, la duplicazione del DNA si verifica durante la fase …… del ciclo cellulare.",
+    "options": [
+      { "text": "S", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05", "type": "COMPLETAMENTO",
+    "text": "Le proteine neosintetizzate destinate ai …… sono traslocate una volta ultimata la loro sintesi ma prima di avere acquisito la corretta struttura tridimensionale.",
+    "options": [
+      { "text": "mitocondri", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "text": "Nella replicazione del DNA l'enzima che sintetizza brevi frammenti di RNA, detti primer, che servono come innesco per l'azione della DNA polimerasi, è la ……",
+    "options": [
+      { "text": "primasi", "isCorrect": true },
+      { "text": "RNA primasi", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05", "type": "COMPLETAMENTO",
+    "text": "Le poche proteine di membrana codificate dal DNA mitocondriale e tradotte nella matrice mitocondriale sono inserite nella membrana interna del mitocondrio grazie al complesso di traslocazione …… (usare l'acronimo).",
+    "options": [
+      { "text": "OXA", "isCorrect": true },
+      { "text": "OXA1", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "Nelle cellule germinali umane mature sono presenti …… cromosomi monocromatidici.",
+    "options": [
+      { "text": "23", "isCorrect": true },
+      { "text": "ventitré", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05", "type": "COMPLETAMENTO",
+    "text": "L'acido …… è una macromolecola della matrice extracellulare che appartiene alla famiglia dei glicosamminoglicani.",
+    "options": [
+      { "text": "ialuronico", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "text": "La sequenza segnale, tipicamente presente a monte di un gene, che consente l'inizio della trascrizione è il ……",
+    "options": [
+      { "text": "promotore", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "text": "Negli eucarioti, la regione del promotore di un gene che fornisce un sito di legame per i fattori generali di trascrizione facilitando il reclutamento della RNA polimerasi II viene definita …… box.",
+    "options": [
+      { "text": "TATA", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-06", "type": "COMPLETAMENTO",
+    "text": "Nel processo di trasduzione del segnale, un ligando extracellulare si lega a un recettore specifico, innescando una …… di eventi intracellulari che convertono il segnale esterno in una risposta biologica specifica.",
+    "options": [
+      { "text": "cascata", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "Si dice che una cellula è in …… quando i cromosomi sono allineati in piastra equatoriale.",
+    "options": [
+      { "text": "metafase", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-07", "type": "COMPLETAMENTO",
+    "text": "Durante l'apoptosi, la cellula destinata a morire viene riconosciuta e rimossa dai macrofagi grazie all'esposizione, sulla superficie esterna della membrana plasmatica, della …… , un segnale \"eat me\".",
+    "options": [
+      { "text": "fosfatidilserina", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-05", "type": "COMPLETAMENTO",
+    "text": "Fosfatidilcolina e Sfingomielina sono lipidi fortemente arricchiti nel foglietto …… della membrana dei globuli rossi.",
+    "options": [
+      { "text": "esterno", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Biologia", "topic": "SF-BIO-04", "type": "COMPLETAMENTO",
+    "text": "La frequenza con cui un genotipo determina l'espressione del corrispondente fenotipo è definita …….",
+    "options": [
+      { "text": "penetranza", "isCorrect": true }
+    ]
+  }
+]

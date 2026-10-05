@@ -1,0 +1,289 @@
+[
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-01",
+    "text": "Quale tra le seguenti è la formula chimica del solfato di bario?",
+    "options": [
+      { "text": "BaS", "isCorrect": false },
+      { "text": "BaSO4", "isCorrect": true },
+      { "text": "BaHSO4", "isCorrect": false },
+      { "text": "BaSO3", "isCorrect": false },
+      { "text": "Ba2SO4", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-01",
+    "text": "Il numero atomico di un elemento è:",
+    "options": [
+      { "text": "la somma del numero di protoni ed elettroni", "isCorrect": false },
+      { "text": "la somma del numero di protoni e neutroni", "isCorrect": false },
+      { "text": "il numero totale di elettroni", "isCorrect": false },
+      { "text": "il numero di protoni contenuti nel nucleo", "isCorrect": true },
+      { "text": "il numero di neutroni contenuti nel nucleo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-05",
+    "text": "Gli alcani aciclici sono molecole",
+    "options": [
+      { "text": "ramificate", "isCorrect": false },
+      { "text": "caratterizzate da isomeria geometrica", "isCorrect": false },
+      { "text": "aromatiche", "isCorrect": false },
+      { "text": "lineari", "isCorrect": false },
+      { "text": "in cui tutti gli atomi di carbonio sono ibridati sp3", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-06",
+    "text": "Il 2-propanolo, in ambiente acido, può essere ossidato dal dicromato di potassio formando",
+    "options": [
+      { "text": "acetone", "isCorrect": true },
+      { "text": "ossido di propilene", "isCorrect": false },
+      { "text": "acetaldeide", "isCorrect": false },
+      { "text": "1-propanolo", "isCorrect": false },
+      { "text": "etanolo", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07",
+    "text": "Quale dei seguenti aminoacidi è il più abbondante nel collagene?",
+    "options": [
+      { "text": "Glicina", "isCorrect": true },
+      { "text": "Alanina", "isCorrect": false },
+      { "text": "Serina", "isCorrect": false },
+      { "text": "Triptofano", "isCorrect": false },
+      { "text": "Istidina", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04",
+    "text": "Dopo aver bilanciato la seguente reazione aCl2 + bNaOH → cNaCl + dNaClO3 + eH2O si può affermare che:",
+    "options": [
+      { "text": "b = 6", "isCorrect": true },
+      { "text": "e = 4", "isCorrect": false },
+      { "text": "c = 6", "isCorrect": false },
+      { "text": "a = 2", "isCorrect": false },
+      { "text": "d = 2", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-05",
+    "text": "Nel 2,3-dimetil-1-butene ci sono",
+    "options": [
+      { "text": "quattro gruppi metile", "isCorrect": false },
+      { "text": "due doppi legami", "isCorrect": false },
+      { "text": "cinque atomi di carbonio", "isCorrect": false },
+      { "text": "dodici atomi di idrogeno", "isCorrect": true },
+      { "text": "quattro atomi di carbonio", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04",
+    "text": "La relazione tra la variazione dell'energia libera di Gibbs (∆G) e potenziale di una cella elettrochimica (E) è",
+    "options": [
+      { "text": "∆G = E/nF", "isCorrect": false },
+      { "text": "∆G = −nFE", "isCorrect": true },
+      { "text": "∆G = nFE", "isCorrect": false },
+      { "text": "∆G = −nFE°", "isCorrect": false },
+      { "text": "∆G = RtlnE", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-01",
+    "text": "Il numero massimo di elettroni presenti in un orbitale con (elle) l=1 è:",
+    "options": [
+      { "text": "6", "isCorrect": false },
+      { "text": "1", "isCorrect": false },
+      { "text": "2", "isCorrect": true },
+      { "text": "4", "isCorrect": false },
+      { "text": "3", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04",
+    "text": "Quale delle seguenti soluzioni saline avrà un pH superiore a 7 ?",
+    "options": [
+      { "text": "KClO4", "isCorrect": false },
+      { "text": "NaHCO3", "isCorrect": true },
+      { "text": "NaCl", "isCorrect": false },
+      { "text": "KHSO4", "isCorrect": false },
+      { "text": "NH4NO3", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07",
+    "text": "Gli acidi grassi omega-3 e omega-6:",
+    "options": [
+      { "text": "Sono tutti saturi", "isCorrect": false },
+      { "text": "Sono sintetizzati dal fegato", "isCorrect": false },
+      { "text": "Sono tutti polinsaturi", "isCorrect": true },
+      { "text": "Sono componenti essenziali dei glicerofosfolipidi", "isCorrect": false },
+      { "text": "Comprendono acido oleico, acido linoleico e acido arachidonico", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04",
+    "text": "Quale delle seguenti soluzioni saline avrà un pH inferiore a 7 ?",
+    "options": [
+      { "text": "NaCl", "isCorrect": false },
+      { "text": "KNO3", "isCorrect": false },
+      { "text": "KClO4", "isCorrect": false },
+      { "text": "NaHCO3", "isCorrect": false },
+      { "text": "NH4Cl", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07",
+    "text": "Un nucleoside è costituito da:",
+    "options": [
+      { "text": "una base azotata legata covalentemente ad un pentoso e a tre gruppi fosfato", "isCorrect": false },
+      { "text": "un pentoso legato a tre gruppi fosfato", "isCorrect": false },
+      { "text": "una base azotata legata a un pentoso tramite legame a idrogeno", "isCorrect": false },
+      { "text": "una base azotata legata a tre gruppi fosfato", "isCorrect": false },
+      { "text": "una base azotata legata covalentemente ad un pentoso", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07",
+    "text": "L'acido arachidonico:",
+    "options": [
+      { "text": "E' un acido grasso insaturo omega-6", "isCorrect": true },
+      { "text": "possiede 24 atomi di carbonio", "isCorrect": false },
+      { "text": "Deriva dal colesterolo", "isCorrect": false },
+      { "text": "Viene sintetizzato nel fegato", "isCorrect": false },
+      { "text": "E' un acido grasso insaturo omega-3", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-02",
+    "text": "Quale effetto ha un AUMENTO di temperatura sulla solubilità dell'ossigeno in acqua ?",
+    "options": [
+      { "text": "La solubilità diminuisce", "isCorrect": true },
+      { "text": "La solubilità aumenta", "isCorrect": false },
+      { "text": "L'effetto dipende dalla temperatura iniziale", "isCorrect": false },
+      { "text": "Nessun effetto sulla solubilità", "isCorrect": false },
+      { "text": "In presenza di altri gas aumenta", "isCorrect": false }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-06", "type": "COMPLETAMENTO",
+    "text": "Avendo sostituenti identici su un atomo di carbonio insaturo, 1-butene non presenta …… configurazionale.",
+    "options": [
+      { "text": "isomeria", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-02", "type": "COMPLETAMENTO",
+    "text": "Con l'aumentare della …… aumenta la tensione di vapore di un liquido.",
+    "options": [
+      { "text": "temperatura", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07", "type": "COMPLETAMENTO",
+    "text": "La tirosina può essere sintetizzata dalla fenilalanina tramite una reazione enzimatica. Quindi, tra questi due aminoacidi, la …… non è un aminoacido essenziale",
+    "options": [
+      { "text": "tirosina", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07", "type": "COMPLETAMENTO",
+    "text": "Il numero di gruppi amminici liberi presenti nel dipeptide Acido Aspartico - Glicina è ……",
+    "options": [
+      { "text": "1", "isCorrect": true },
+      { "text": "uno", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07", "type": "COMPLETAMENTO",
+    "text": "Le proteine naturali sono polimeri di …… uniti da legami peptidici.",
+    "options": [
+      { "text": "amminoacidi", "isCorrect": true },
+      { "text": "aminoacidi", "isCorrect": true },
+      { "text": "alfa-amminoacidi", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-05", "type": "COMPLETAMENTO",
+    "text": "Nel 4-etil-2,2-dimetileptano vi sono …… atomi di carbonio.",
+    "options": [
+      { "text": "11", "isCorrect": true },
+      { "text": "undici", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-01", "type": "COMPLETAMENTO",
+    "text": "Per la legge di Boyle–Mariotte per un gas ideale P1·V1 = P2·V2 per cui il prodotto P·V è sempre ……",
+    "options": [
+      { "text": "costante", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04", "type": "COMPLETAMENTO",
+    "text": "In un composto neutro la somma algebrica dei numeri di ossidazione dei diversi elementi è ……",
+    "options": [
+      { "text": "zero", "isCorrect": true },
+      { "text": "0", "isCorrect": true },
+      { "text": "nulla", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07", "type": "COMPLETAMENTO",
+    "text": "L' …… (utilizzare l'acronimo) è un nucleotide composto da adenina, ribosio e tre gruppi fosfato",
+    "options": [
+      { "text": "ATP", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-03", "type": "COMPLETAMENTO",
+    "text": "Secondo la legge dell'azione di massa, la costante di equilibrio Kc per la reazione aA + bB ↔ cC + dD è definita come il rapporto tra il …… delle concentrazioni molari dei prodotti e quello delle concentrazioni molari dei reagenti, ciascuna elevata al proprio coefficiente stechiometrico.",
+    "options": [
+      { "text": "prodotto", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-07", "type": "COMPLETAMENTO",
+    "text": "Nelle proteine la formazione di ponti disolfuro può avvenire grazie alla presenza di più residui dell'aminoacido ……",
+    "options": [
+      { "text": "cisteina", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-01", "type": "COMPLETAMENTO",
+    "text": "L'ammoniaca forma lo ione ammonio mediante un legame covalente …… con un protone",
+    "options": [
+      { "text": "dativo", "isCorrect": true },
+      { "text": "coordinato", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-01", "type": "COMPLETAMENTO",
+    "text": "Per molecola si intende un insieme permanente di atomi uguali o diversi connessi con legami ……",
+    "options": [
+      { "text": "covalenti", "isCorrect": true },
+      { "text": "chimici", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04", "type": "COMPLETAMENTO",
+    "text": "Il potere tampone è massimo quando il pH della soluzione è …… al pK dell'acido debole",
+    "options": [
+      { "text": "uguale", "isCorrect": true },
+      { "text": "pari", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-04", "type": "COMPLETAMENTO",
+    "text": "Il pH è il logaritmo del …… della concentrazione molare di idrogenioni (ioni idrossonio, H3O+)",
+    "options": [
+      { "text": "reciproco", "isCorrect": true },
+      { "text": "inverso", "isCorrect": true }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica", "topic": "SF-CHI-02", "type": "COMPLETAMENTO",
+    "text": "La misura di concentrazione che indica le moli di soluto presenti in un litro di soluzione si chiama ……",
+    "options": [
+      { "text": "molarità", "isCorrect": true }
+    ]
+  }
+]
