@@ -35,6 +35,10 @@ type ImportedQuestion = {
   options: ImportedOption[];
 };
 
+// Sostituire una banca su cui qualcuno ha già risposto cancella le sue risposte:
+// si fa solo dicendolo esplicitamente.
+const FORZA = process.argv.includes("--forza");
+
 function ordinaOpzioni(q: ImportedQuestion): ImportedOption[] {
   return q.type === "COMPLETAMENTO" ? q.options : randomShuffle(q.options);
 }
@@ -96,6 +100,25 @@ async function main() {
   // (cascade elimina domande e opzioni collegate).
   const existing = await prisma.test.findFirst({ where: { title, kind: "POOL", track } });
   if (existing) {
+    // Le domande della banca sono le stesse che i test generati richiamano: se le
+    // si cancella, spariscono anche le risposte già date dagli studenti, e di un
+    // tentativo consegnato resta il punteggio ma non la correzione. È successo il
+    // 2026-10-07 a tre simulazioni del semestre filtro. Perciò qui si conta prima.
+    const risposte = await prisma.answerRecord.count({
+      where: { question: { testId: existing.id } },
+    });
+    if (risposte > 0 && !FORZA) {
+      console.error(
+        `La banca "${title}" ha ${risposte} risposte già date dagli studenti: sostituirla le cancella,\n` +
+          "e i tentativi consegnati perderebbero la correzione domanda per domanda.\n" +
+          "Per cambiare i testi senza perdere niente usa scripts/aggiorna-banca.ts, che riscrive le domande\n" +
+          "esistenti al loro posto. Se vuoi davvero sostituire la banca, rilancia con --forza."
+      );
+      process.exit(1);
+    }
+    if (risposte > 0) {
+      console.log(`Attenzione: sto cancellando anche ${risposte} risposte già date dagli studenti.`);
+    }
     await prisma.test.delete({ where: { id: existing.id } });
     console.log(`Banca precedente "${title}" rimossa, la ricreo con i nuovi contenuti.`);
   }
