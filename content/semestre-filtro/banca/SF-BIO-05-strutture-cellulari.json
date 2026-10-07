@@ -2,145 +2,325 @@
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Durante la sintesi di una proteina destinata alla via secretoria, la particella di riconoscimento del segnale (SRP):",
+    "text": "La particella di riconoscimento del segnale (SRP):",
     "options": [
-      { "text": "Lega la sequenza segnale appena emersa dal ribosoma, rallenta la traduzione e porta il complesso al proprio recettore sulla membrana del reticolo endoplasmatico", "isCorrect": true },
-      { "text": "Taglia la sequenza segnale non appena questa emerge dal ribosoma", "isCorrect": false },
-      { "text": "Trasporta attraverso il traslocone la proteina già completa e ripiegata", "isCorrect": false },
-      { "text": "Aggiunge le catene oligosaccaridiche alla proteina nascente", "isCorrect": false },
-      { "text": "Riconosce il mannosio-6-fosfato delle idrolasi destinate ai lisosomi", "isCorrect": false }
+      {
+        "text": "porta il ribosoma al reticolo",
+        "isCorrect": true
+      },
+      {
+        "text": "taglia la sequenza segnale",
+        "isCorrect": false
+      },
+      {
+        "text": "trasporta la proteina ripiegata",
+        "isCorrect": false
+      },
+      {
+        "text": "aggiunge le catene oligosaccaridiche",
+        "isCorrect": false
+      },
+      {
+        "text": "riconosce il mannosio-6-fosfato",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "La sequenza segnale di una proteina solubile destinata al lume del reticolo endoplasmatico viene rimossa:",
+    "text": "La sequenza segnale di una proteina del lume del reticolo viene rimossa:",
     "options": [
-      { "text": "Da una peptidasi del segnale sul versante luminale, mentre la catena sta ancora attraversando il traslocone", "isCorrect": true },
-      { "text": "Nel cis-Golgi, dopo il trasporto vescicolare", "isCorrect": false },
-      { "text": "Nel citosol, prima che la catena entri nel traslocone", "isCorrect": false },
-      { "text": "Dal proteasoma, subito dopo il ripiegamento della proteina", "isCorrect": false },
-      { "text": "Non viene rimossa: resta nella proteina matura come àncora di membrana", "isCorrect": false }
+      {
+        "text": "nel lume, durante la traslocazione",
+        "isCorrect": true
+      },
+      {
+        "text": "nel cis-Golgi, dopo il trasporto",
+        "isCorrect": false
+      },
+      {
+        "text": "nel citosol, prima del traslocone",
+        "isCorrect": false
+      },
+      {
+        "text": "dal proteasoma, dopo il ripiegamento",
+        "isCorrect": false
+      },
+      {
+        "text": "mai: resta nella proteina matura",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Calnexina e calreticulina partecipano al controllo di qualità del reticolo endoplasmatico perché:",
+    "text": "Calnexina e calreticulina trattengono nel reticolo le glicoproteine perché:",
     "options": [
-      { "text": "Legano le catene oligosaccaridiche monoglucosilate delle glicoproteine e le trattengono finché non hanno raggiunto il ripiegamento corretto", "isCorrect": true },
-      { "text": "Degradano direttamente nel lume le proteine mal ripiegate", "isCorrect": false },
-      { "text": "Aggiungono il mannosio-6-fosfato alle idrolasi lisosomiali", "isCorrect": false },
-      { "text": "Formano il rivestimento delle vescicole COPII in uscita dal reticolo", "isCorrect": false },
-      { "text": "Trasportano nel nucleo i fattori di trascrizione attivati dallo stress", "isCorrect": false }
+      {
+        "text": "legano l'oligosaccaride monoglucosilato",
+        "isCorrect": true
+      },
+      {
+        "text": "degradano le proteine mal ripiegate",
+        "isCorrect": false
+      },
+      {
+        "text": "aggiungono il mannosio-6-fosfato",
+        "isCorrect": false
+      },
+      {
+        "text": "formano il rivestimento COPII",
+        "isCorrect": false
+      },
+      {
+        "text": "portano nel nucleo i fattori di stress",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "La risposta UPR (unfolded protein response) viene innescata quando:",
+    "text": "La risposta UPR viene innescata quando:",
     "options": [
-      { "text": "Nel lume del reticolo endoplasmatico si accumulano proteine non ripiegate o mal ripiegate oltre la capacità degli chaperoni", "isCorrect": true },
-      { "text": "Il DNA mitocondriale accumula mutazioni nella catena respiratoria", "isCorrect": false },
-      { "text": "I lisosomi perdono l'acidità del loro lume", "isCorrect": false },
-      { "text": "La concentrazione citosolica di glucosio scende sotto la soglia glicolitica", "isCorrect": false },
-      { "text": "I microtubuli del fuso non si legano correttamente ai cinetocori", "isCorrect": false }
+      {
+        "text": "si accumulano proteine mal ripiegate",
+        "isCorrect": true
+      },
+      {
+        "text": "il DNA mitocondriale accumula mutazioni",
+        "isCorrect": false
+      },
+      {
+        "text": "i lisosomi perdono l'acidità",
+        "isCorrect": false
+      },
+      {
+        "text": "il glucosio citosolico si abbassa",
+        "isCorrect": false
+      },
+      {
+        "text": "il fuso non lega i cinetocori",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Nel sistema ERAD, una glicoproteina riconosciuta come irrimediabilmente mal ripiegata:",
+    "text": "Nel sistema ERAD una glicoproteina irrimediabilmente mal ripiegata viene:",
     "options": [
-      { "text": "Viene retrotraslocata nel citosol, poliubiquitinata e degradata dal proteasoma", "isCorrect": true },
-      { "text": "Viene inviata al lisosoma dentro una vescicola rivestita di clatrina", "isCorrect": false },
-      { "text": "Viene secreta all'esterno della cellula per esocitosi costitutiva", "isCorrect": false },
-      { "text": "Viene accumulata permanentemente nel lume del reticolo senza ulteriori destini", "isCorrect": false },
-      { "text": "Viene importata nei mitocondri e degradata nella matrice", "isCorrect": false }
+      {
+        "text": "degradata dal proteasoma citosolico",
+        "isCorrect": true
+      },
+      {
+        "text": "inviata al lisosoma in vescicole",
+        "isCorrect": false
+      },
+      {
+        "text": "secreta all'esterno per esocitosi",
+        "isCorrect": false
+      },
+      {
+        "text": "accumulata per sempre nel lume",
+        "isCorrect": false
+      },
+      {
+        "text": "importata e degradata nei mitocondri",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Nel trans-Golgi network le idrolasi acide destinate ai lisosomi vengono riconosciute e smistate grazie a:",
+    "text": "Nel trans-Golgi le idrolasi dirette ai lisosomi sono riconosciute grazie a:",
     "options": [
-      { "text": "Un residuo di mannosio-6-fosfato aggiunto alle loro catene oligosaccaridiche", "isCorrect": true },
-      { "text": "Una sequenza KDEL all'estremità carbossi-terminale", "isCorrect": false },
-      { "text": "Un'àncora glicosilfosfatidilinositolo (GPI)", "isCorrect": false },
-      { "text": "La sequenza segnale amino-terminale, non rimossa dalla peptidasi", "isCorrect": false },
-      { "text": "La fosforilazione di una tirosina del dominio citosolico", "isCorrect": false }
+      {
+        "text": "un mannosio-6-fosfato",
+        "isCorrect": true
+      },
+      {
+        "text": "una sequenza KDEL",
+        "isCorrect": false
+      },
+      {
+        "text": "un'àncora GPI",
+        "isCorrect": false
+      },
+      {
+        "text": "la sequenza segnale non rimossa",
+        "isCorrect": false
+      },
+      {
+        "text": "una tirosina fosforilata",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "La sequenza KDEL presente in alcune proteine solubili residenti del reticolo endoplasmatico serve a:",
+    "text": "La sequenza KDEL delle proteine residenti del reticolo serve a:",
     "options": [
-      { "text": "Farle recuperare dal Golgi e riportarle al reticolo tramite vescicole rivestite di COPI", "isCorrect": true },
-      { "text": "Indirizzarle ai lisosomi attraverso il trans-Golgi network", "isCorrect": false },
-      { "text": "Farle secernere all'esterno per via costitutiva", "isCorrect": false },
-      { "text": "Ancorarle alla membrana mitocondriale interna", "isCorrect": false },
-      { "text": "Farle importare nel nucleo attraverso i pori nucleari", "isCorrect": false }
+      {
+        "text": "riportare la proteina al reticolo",
+        "isCorrect": true
+      },
+      {
+        "text": "indirizzarla ai lisosomi",
+        "isCorrect": false
+      },
+      {
+        "text": "farla secernere all'esterno",
+        "isCorrect": false
+      },
+      {
+        "text": "ancorarla alla membrana interna",
+        "isCorrect": false
+      },
+      {
+        "text": "farla importare nel nucleo",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Il trasporto anterogrado dal reticolo endoplasmatico al Golgi e quello retrogrado in senso opposto sono mediati, rispettivamente, da vescicole rivestite di:",
+    "text": "Il trasporto dal reticolo al Golgi e quello retrogrado sono mediati da vescicole rivestite di:",
     "options": [
-      { "text": "COPII e COPI", "isCorrect": true },
-      { "text": "COPI e COPII", "isCorrect": false },
-      { "text": "Clatrina e COPII", "isCorrect": false },
-      { "text": "Caveolina e clatrina", "isCorrect": false },
-      { "text": "Dinamina e COPI", "isCorrect": false }
+      {
+        "text": "COPII e COPI",
+        "isCorrect": true
+      },
+      {
+        "text": "COPI e COPII",
+        "isCorrect": false
+      },
+      {
+        "text": "clatrina e COPII",
+        "isCorrect": false
+      },
+      {
+        "text": "caveolina e clatrina",
+        "isCorrect": false
+      },
+      {
+        "text": "dinamina e COPI",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Nella fusione di una vescicola con il compartimento bersaglio, il ruolo delle proteine SNARE è di:",
+    "text": "Nella fusione di una vescicola con il bersaglio, le proteine SNARE:",
     "options": [
-      { "text": "Appaiarsi fra v-SNARE della vescicola e t-SNARE del bersaglio, avvicinando le due membrane fino alla fusione", "isCorrect": true },
-      { "text": "Selezionare il carico da includere nella vescicola in formazione", "isCorrect": false },
-      { "text": "Fornire l'energia della fusione idrolizzando GTP", "isCorrect": false },
-      { "text": "Tagliare i fosfoinositidi della membrana bersaglio per destabilizzarla", "isCorrect": false },
-      { "text": "Trainare la vescicola lungo i microtubuli fino al compartimento giusto", "isCorrect": false }
+      {
+        "text": "appaiano v-SNARE e t-SNARE",
+        "isCorrect": true
+      },
+      {
+        "text": "selezionano il carico da includere",
+        "isCorrect": false
+      },
+      {
+        "text": "idrolizzano GTP per la fusione",
+        "isCorrect": false
+      },
+      {
+        "text": "tagliano i fosfoinositidi",
+        "isCorrect": false
+      },
+      {
+        "text": "trainano la vescicola sui microtubuli",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Le proteine Rab contribuiscono alla specificità del traffico vescicolare perché:",
+    "text": "Le proteine Rab danno specificità al traffico vescicolare perché:",
     "options": [
-      { "text": "Sono GTPasi che, nella forma legata a GTP, reclutano sulla membrana gli effettori che ormeggiano la vescicola al compartimento corretto", "isCorrect": true },
-      { "text": "Costituiscono il rivestimento proteico che deforma la membrana donatrice", "isCorrect": false },
-      { "text": "Idrolizzano i fosfolipidi della membrana bersaglio rendendola fusogena", "isCorrect": false },
-      { "text": "Formano il poro di fusione attraverso cui passa il carico solubile", "isCorrect": false },
-      { "text": "Riconoscono il mannosio-6-fosfato delle idrolasi lisosomiali", "isCorrect": false }
+      {
+        "text": "legate a GTP reclutano gli effettori",
+        "isCorrect": true
+      },
+      {
+        "text": "formano il rivestimento della vescicola",
+        "isCorrect": false
+      },
+      {
+        "text": "idrolizzano i fosfolipidi del bersaglio",
+        "isCorrect": false
+      },
+      {
+        "text": "formano il poro di fusione",
+        "isCorrect": false
+      },
+      {
+        "text": "riconoscono il mannosio-6-fosfato",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Una proteina sintetizzata nel citosol e destinata alla matrice mitocondriale raggiunge la sua destinazione:",
+    "text": "Una proteina citosolica diretta alla matrice mitocondriale la raggiunge:",
     "options": [
-      { "text": "In forma distesa, attraversando in successione il complesso TOM della membrana esterna e un complesso TIM della membrana interna", "isCorrect": true },
-      { "text": "Già ripiegata, attraverso i canali VDAC della membrana esterna", "isCorrect": false },
-      { "text": "Dentro vescicole che gemmano dal reticolo endoplasmatico e fondono col mitocondrio", "isCorrect": false },
-      { "text": "Attraverso il traslocone del reticolo endoplasmatico e il successivo traffico vescicolare", "isCorrect": false },
-      { "text": "Grazie a recettori citosolici della famiglia delle perossine", "isCorrect": false }
+      {
+        "text": "distesa, attraverso TOM e TIM23",
+        "isCorrect": true
+      },
+      {
+        "text": "ripiegata, attraverso i canali VDAC",
+        "isCorrect": false
+      },
+      {
+        "text": "in vescicole gemmate dal reticolo",
+        "isCorrect": false
+      },
+      {
+        "text": "attraverso il traslocone del reticolo",
+        "isCorrect": false
+      },
+      {
+        "text": "grazie a recettori perossisomiali",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "L'importazione delle proteine nei perossisomi si distingue da quella mitocondriale soprattutto perché:",
+    "text": "L'importazione nei perossisomi si distingue da quella mitocondriale perché:",
     "options": [
-      { "text": "Le proteine vengono importate già ripiegate, anche come oligomeri assemblati", "isCorrect": true },
-      { "text": "Non richiede alcuna sequenza di indirizzamento", "isCorrect": false },
-      { "text": "Avviene esclusivamente durante la divisione cellulare", "isCorrect": false },
-      { "text": "Richiede sempre il taglio di una sequenza segnale amino-terminale", "isCorrect": false },
-      { "text": "Utilizza gli stessi complessi TOM e TIM dei mitocondri", "isCorrect": false }
+      {
+        "text": "avviene a proteina già ripiegata",
+        "isCorrect": true
+      },
+      {
+        "text": "non richiede alcun segnale",
+        "isCorrect": false
+      },
+      {
+        "text": "avviene solo durante la divisione",
+        "isCorrect": false
+      },
+      {
+        "text": "richiede il taglio del segnale",
+        "isCorrect": false
+      },
+      {
+        "text": "usa gli stessi complessi TOM e TIM",
+        "isCorrect": false
+      }
     ]
   },
   {
@@ -148,167 +328,377 @@
     "topic": "SF-BIO-05",
     "text": "La sindrome di Zellweger è dovuta a difetti:",
     "options": [
-      { "text": "Delle perossine, con conseguente mancata biogenesi di perossisomi funzionanti", "isCorrect": true },
-      { "text": "Degli enzimi idrolitici lisosomiali, con accumulo di substrati non degradati", "isCorrect": false },
-      { "text": "Del DNA mitocondriale, con deficit della catena respiratoria", "isCorrect": false },
-      { "text": "Del canale del cloro CFTR, con alterazione delle secrezioni", "isCorrect": false },
-      { "text": "Della distrofina, con degenerazione del tessuto muscolare", "isCorrect": false }
+      {
+        "text": "delle perossine",
+        "isCorrect": true
+      },
+      {
+        "text": "degli enzimi lisosomiali",
+        "isCorrect": false
+      },
+      {
+        "text": "del DNA mitocondriale",
+        "isCorrect": false
+      },
+      {
+        "text": "del canale CFTR",
+        "isCorrect": false
+      },
+      {
+        "text": "della distrofina",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Il gradiente di RanGTP che dà direzione al trasporto nucleo-citoplasma è mantenuto perché:",
+    "text": "Il gradiente di RanGTP fra nucleo e citoplasma è mantenuto perché:",
     "options": [
-      { "text": "Il fattore di scambio RanGEF è nucleare, mentre la proteina attivatrice RanGAP è citosolica", "isCorrect": true },
-      { "text": "RanGEF è citosolica e RanGAP è nucleare", "isCorrect": false },
-      { "text": "I pori nucleari sono impermeabili al Ran in entrambe le direzioni", "isCorrect": false },
-      { "text": "Il Ran viene sintetizzato esclusivamente all'interno del nucleo", "isCorrect": false },
-      { "text": "Una pompa ATPasi dell'involucro nucleare accumula Ran nel nucleo", "isCorrect": false }
+      {
+        "text": "RanGEF è nucleare e RanGAP citosolica",
+        "isCorrect": true
+      },
+      {
+        "text": "RanGEF è citosolica e RanGAP nucleare",
+        "isCorrect": false
+      },
+      {
+        "text": "i pori sono impermeabili al Ran",
+        "isCorrect": false
+      },
+      {
+        "text": "il Ran è sintetizzato nel nucleo",
+        "isCorrect": false
+      },
+      {
+        "text": "una pompa ATPasi accumula Ran",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Una proteina citosolica dotata di segnale di localizzazione nucleare (NLS) entra nel nucleo:",
+    "text": "Una proteina con segnale di localizzazione nucleare entra nel nucleo:",
     "options": [
-      { "text": "Legata a un'importina e in forma ripiegata, attraverso il complesso del poro nucleare", "isCorrect": true },
-      { "text": "In forma distesa, attraverso un traslocone dell'involucro nucleare", "isCorrect": false },
-      { "text": "Per diffusione semplice attraverso le due membrane dell'involucro", "isCorrect": false },
-      { "text": "Dentro vescicole rivestite di clatrina che fondono con l'involucro", "isCorrect": false },
-      { "text": "Soltanto durante la mitosi, quando l'involucro nucleare è disassemblato", "isCorrect": false }
+      {
+        "text": "ripiegata, legata a un'importina",
+        "isCorrect": true
+      },
+      {
+        "text": "distesa, attraverso un traslocone",
+        "isCorrect": false
+      },
+      {
+        "text": "per diffusione fra le due membrane",
+        "isCorrect": false
+      },
+      {
+        "text": "in vescicole rivestite di clatrina",
+        "isCorrect": false
+      },
+      {
+        "text": "soltanto durante la mitosi",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Il recettore degli ormoni steroidei è un classico esempio di importazione nucleare regolata perché:",
+    "text": "Il recettore degli ormoni steroidei entra nel nucleo solo col ligando perché:",
     "options": [
-      { "text": "In assenza del ligando è trattenuto nel citosol da chaperoni che ne mascherano il segnale di localizzazione nucleare", "isCorrect": true },
-      { "text": "Viene sintetizzato sui ribosomi del reticolo endoplasmatico rugoso e secreto", "isCorrect": false },
-      { "text": "Entra nel nucleo solo dopo essere stato tagliato proteoliticamente nel Golgi", "isCorrect": false },
-      { "text": "Attraversa l'involucro nucleare per diffusione quando la cellula è in interfase", "isCorrect": false },
-      { "text": "È una proteina transmembrana che raggiunge il nucleo per traffico vescicolare", "isCorrect": false }
+      {
+        "text": "senza ligando è mascherato nel citosol",
+        "isCorrect": true
+      },
+      {
+        "text": "senza ligando viene secreto all'esterno",
+        "isCorrect": false
+      },
+      {
+        "text": "deve essere tagliato nel Golgi",
+        "isCorrect": false
+      },
+      {
+        "text": "entra per diffusione in interfase",
+        "isCorrect": false
+      },
+      {
+        "text": "raggiunge il nucleo in vescicole",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "L'asimmetria dei due foglietti del doppio strato lipidico della membrana plasmatica:",
+    "text": "L'asimmetria dei due foglietti della membrana plasmatica:",
     "options": [
-      { "text": "È mantenuta attivamente da flippasi e floppasi, e la comparsa di fosfatidilserina sul versante esterno segnala che la cellula è in apoptosi", "isCorrect": true },
-      { "text": "Si annulla rapidamente perché i fosfolipidi passano liberamente da un foglietto all'altro", "isCorrect": false },
-      { "text": "Riguarda soltanto il colesterolo, mentre i fosfolipidi sono distribuiti in modo uguale", "isCorrect": false },
-      { "text": "È dovuta unicamente alla diversa temperatura dei due versanti della membrana", "isCorrect": false },
-      { "text": "Esiste solo nelle cellule procariotiche, prive di sistema di endomembrane", "isCorrect": false }
+      {
+        "text": "è mantenuta da flippasi e floppasi",
+        "isCorrect": true
+      },
+      {
+        "text": "si annulla per libero scambio dei lipidi",
+        "isCorrect": false
+      },
+      {
+        "text": "riguarda soltanto il colesterolo",
+        "isCorrect": false
+      },
+      {
+        "text": "dipende dalla temperatura dei versanti",
+        "isCorrect": false
+      },
+      {
+        "text": "esiste solo nei procarioti",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Riguardo al glicocalice della membrana plasmatica, quale affermazione NON è corretta?",
+    "text": "Riguardo al glicocalice, quale affermazione NON è corretta?",
     "options": [
-      { "text": "È rivolto indifferentemente verso il citosol e verso l'ambiente extracellulare", "isCorrect": true },
-      { "text": "È formato dalle catene oligosaccaridiche di glicoproteine e glicolipidi", "isCorrect": false },
-      { "text": "Partecipa al riconoscimento cellulare e all'adesione", "isCorrect": false },
-      { "text": "Contribuisce a proteggere la superficie cellulare da agenti meccanici e chimici", "isCorrect": false },
-      { "text": "La sua composizione riflette le modificazioni avvenute nel reticolo e nel Golgi", "isCorrect": false }
+      {
+        "text": "È rivolto anche verso il citosol",
+        "isCorrect": true
+      },
+      {
+        "text": "È fatto di glicoproteine e glicolipidi",
+        "isCorrect": false
+      },
+      {
+        "text": "Partecipa al riconoscimento cellulare",
+        "isCorrect": false
+      },
+      {
+        "text": "Protegge la superficie della cellula",
+        "isCorrect": false
+      },
+      {
+        "text": "Riflette il transito per reticolo e Golgi",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Il potenziale di membrana a riposo di una cellula animale dipende principalmente:",
+    "text": "Il potenziale di membrana a riposo dipende soprattutto:",
     "options": [
-      { "text": "Dalla permeabilità della membrana al K+, molto maggiore di quella al Na+, sul gradiente ionico mantenuto dalla pompa Na+/K+", "isCorrect": true },
-      { "text": "Dalla sola idrolisi di ATP da parte della pompa Na+/K+, indipendentemente dalle permeabilità", "isCorrect": false },
-      { "text": "Dalla diffusione libera degli ioni attraverso il doppio strato lipidico", "isCorrect": false },
-      { "text": "Dalla differenza di pressione osmotica fra citosol e liquido extracellulare", "isCorrect": false },
-      { "text": "Dalla carica netta delle proteine del glicocalice", "isCorrect": false }
+      {
+        "text": "dalla permeabilità al potassio",
+        "isCorrect": true
+      },
+      {
+        "text": "dalla sola pompa sodio-potassio",
+        "isCorrect": false
+      },
+      {
+        "text": "dalla diffusione libera degli ioni",
+        "isCorrect": false
+      },
+      {
+        "text": "dalla pressione osmotica del citosol",
+        "isCorrect": false
+      },
+      {
+        "text": "dalla carica del glicocalice",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "I trasportatori ABC si distinguono per il fatto che:",
+    "text": "I trasportatori ABC si distinguono perché:",
     "options": [
-      { "text": "Possiedono due domini di legame ai nucleotidi, idrolizzano ATP e traslocano substrati molto diversi fra loro, compresi numerosi farmaci", "isCorrect": true },
-      { "text": "Trasportano soluti sfruttando esclusivamente il gradiente di un altro ione", "isCorrect": false },
-      { "text": "Sono canali che si limitano a lasciar passare il soluto secondo gradiente", "isCorrect": false },
-      { "text": "Funzionano solo nelle membrane degli organuli e mai in quella plasmatica", "isCorrect": false },
-      { "text": "Non richiedono energia perché sfruttano il potenziale di membrana", "isCorrect": false }
+      {
+        "text": "idrolizzano ATP per traslocare",
+        "isCorrect": true
+      },
+      {
+        "text": "sfruttano il gradiente di un ione",
+        "isCorrect": false
+      },
+      {
+        "text": "lasciano passare secondo gradiente",
+        "isCorrect": false
+      },
+      {
+        "text": "stanno solo nelle membrane interne",
+        "isCorrect": false
+      },
+      {
+        "text": "non richiedono alcuna energia",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Dopo l'endocitosi mediata da recettore, il destino della transferrina si distingue da quello delle LDL perché:",
+    "text": "Dopo l'endocitosi mediata da recettore, a differenza delle LDL la transferrina:",
     "options": [
-      { "text": "L'apotransferrina resta legata al recettore e torna con esso in membrana, mentre le LDL si staccano nell'endosoma e finiscono nel lisosoma", "isCorrect": true },
-      { "text": "La transferrina viene degradata nel lisosoma mentre il suo recettore no", "isCorrect": false },
-      { "text": "La transferrina entra per fagocitosi e le LDL per pinocitosi", "isCorrect": false },
-      { "text": "Il recettore della transferrina viene degradato a ogni ciclo di endocitosi", "isCorrect": false },
-      { "text": "La transferrina non richiede il pH acido dell'endosoma, le LDL sì", "isCorrect": false }
+      {
+        "text": "torna in membrana col recettore",
+        "isCorrect": true
+      },
+      {
+        "text": "viene degradata nel lisosoma",
+        "isCorrect": false
+      },
+      {
+        "text": "entra per fagocitosi e non pinocitosi",
+        "isCorrect": false
+      },
+      {
+        "text": "fa degradare il proprio recettore",
+        "isCorrect": false
+      },
+      {
+        "text": "non richiede il pH acido",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "L'instabilità dinamica dei microtubuli dipende dal fatto che:",
+    "text": "L'instabilità dinamica dei microtubuli dipende:",
     "options": [
-      { "text": "Il GTP legato alla tubulina β viene idrolizzato dopo l'incorporazione: finché resta un cappuccio di GTP all'estremità il microtubulo cresce, quando lo perde va incontro a rapida depolimerizzazione", "isCorrect": true },
-      { "text": "L'ATP legato alla tubulina α viene idrolizzato prima dell'incorporazione", "isCorrect": false },
-      { "text": "I dimeri di tubulina si aggiungono indifferentemente alle due estremità", "isCorrect": false },
-      { "text": "Le proteine motrici tagliano periodicamente il microtubulo a metà", "isCorrect": false },
-      { "text": "Il microtubulo si allunga solo in presenza del complesso Arp2/3", "isCorrect": false }
+      {
+        "text": "dall'idrolisi del GTP sulla tubulina",
+        "isCorrect": true
+      },
+      {
+        "text": "dall'idrolisi di ATP sulla tubulina α",
+        "isCorrect": false
+      },
+      {
+        "text": "dalla crescita alle due estremità",
+        "isCorrect": false
+      },
+      {
+        "text": "dal taglio operato dalle motrici",
+        "isCorrect": false
+      },
+      {
+        "text": "dall'intervento del complesso Arp2/3",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Lungo i microtubuli, chinesine e dineine citoplasmatiche trasportano il carico:",
+    "text": "Lungo i microtubuli le chinesine trasportano il carico:",
     "options": [
-      { "text": "Le chinesine prevalentemente verso l'estremità più, le dineine verso l'estremità meno", "isCorrect": true },
-      { "text": "Le chinesine verso l'estremità meno, le dineine verso l'estremità più", "isCorrect": false },
-      { "text": "Entrambe verso l'estremità più, ma a velocità diverse", "isCorrect": false },
-      { "text": "Entrambe in modo bidirezionale e casuale", "isCorrect": false },
-      { "text": "Nessuna delle due si muove sui microtubuli: entrambe scorrono sui filamenti di actina", "isCorrect": false }
+      {
+        "text": "verso l'estremità più",
+        "isCorrect": true
+      },
+      {
+        "text": "verso l'estremità meno",
+        "isCorrect": false
+      },
+      {
+        "text": "verso il centrosoma",
+        "isCorrect": false
+      },
+      {
+        "text": "in modo bidirezionale e casuale",
+        "isCorrect": false
+      },
+      {
+        "text": "soltanto sui filamenti di actina",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Il complesso Arp2/3 interviene nella dinamica dell'actina perché:",
+    "text": "Il complesso Arp2/3 interviene sulla dinamica dell'actina perché:",
     "options": [
-      { "text": "Nuclea un nuovo filamento su un filamento preesistente, con un angolo caratteristico, generando una rete ramificata", "isCorrect": true },
-      { "text": "Taglia i filamenti di actina in frammenti più corti", "isCorrect": false },
-      { "text": "Blocca l'estremità più impedendo ogni ulteriore polimerizzazione", "isCorrect": false },
-      { "text": "Trasporta vescicole lungo i filamenti già formati", "isCorrect": false },
-      { "text": "Converte i microfilamenti in filamenti intermedi", "isCorrect": false }
+      {
+        "text": "nuclea un filamento ramificato",
+        "isCorrect": true
+      },
+      {
+        "text": "taglia i filamenti in frammenti",
+        "isCorrect": false
+      },
+      {
+        "text": "blocca l'estremità più",
+        "isCorrect": false
+      },
+      {
+        "text": "trasporta vescicole sui filamenti",
+        "isCorrect": false
+      },
+      {
+        "text": "converte i microfilamenti in intermedi",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Nella migrazione cellulare, l'attivazione di Rac e quella di CDC42 promuovono rispettivamente la formazione di:",
+    "text": "L'attivazione di Rac e quella di CDC42 promuovono rispettivamente:",
     "options": [
-      { "text": "Lamellipodi e filopodi", "isCorrect": true },
-      { "text": "Filopodi e lamellipodi", "isCorrect": false },
-      { "text": "Fibre da stress e desmosomi", "isCorrect": false },
-      { "text": "Ciglia e flagelli", "isCorrect": false },
-      { "text": "Giunzioni strette e giunzioni comunicanti", "isCorrect": false }
+      {
+        "text": "lamellipodi e filopodi",
+        "isCorrect": true
+      },
+      {
+        "text": "filopodi e lamellipodi",
+        "isCorrect": false
+      },
+      {
+        "text": "fibre da stress e desmosomi",
+        "isCorrect": false
+      },
+      {
+        "text": "ciglia e flagelli",
+        "isCorrect": false
+      },
+      {
+        "text": "giunzioni strette e comunicanti",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "La lamina nucleare:",
+    "text": "La lamina nucleare è:",
     "options": [
-      { "text": "È una rete di filamenti intermedi di lamine che riveste la faccia interna dell'involucro nucleare e si disassembla per fosforilazione all'inizio della mitosi", "isCorrect": true },
-      { "text": "È formata da microtubuli che irradiano dal centrosoma verso il nucleo", "isCorrect": false },
-      { "text": "Coincide con la membrana nucleare esterna, in continuità col reticolo", "isCorrect": false },
-      { "text": "È costituita da filamenti di actina ancorati ai pori nucleari", "isCorrect": false },
-      { "text": "È una struttura esclusiva delle cellule procariotiche", "isCorrect": false }
+      {
+        "text": "una rete di filamenti intermedi",
+        "isCorrect": true
+      },
+      {
+        "text": "un fascio di microtubuli del centrosoma",
+        "isCorrect": false
+      },
+      {
+        "text": "la membrana nucleare esterna",
+        "isCorrect": false
+      },
+      {
+        "text": "una rete di filamenti di actina",
+        "isCorrect": false
+      },
+      {
+        "text": "una struttura solo dei procarioti",
+        "isCorrect": false
+      }
     ]
   },
   {
@@ -316,23 +706,53 @@
     "topic": "SF-BIO-05",
     "text": "La mitofagia è:",
     "options": [
-      { "text": "La rimozione selettiva per via autofagica dei mitocondri danneggiati o in eccesso", "isCorrect": true },
-      { "text": "La fusione di due mitocondri adiacenti in un unico organulo", "isCorrect": false },
-      { "text": "La divisione di un mitocondrio in due organuli figli", "isCorrect": false },
-      { "text": "La degradazione delle proteine mitocondriali mal ripiegate da parte del proteasoma citosolico", "isCorrect": false },
-      { "text": "L'ingresso di un batterio endosimbionte in una cellula eucariotica", "isCorrect": false }
+      {
+        "text": "la rimozione autofagica dei mitocondri",
+        "isCorrect": true
+      },
+      {
+        "text": "la fusione di due mitocondri vicini",
+        "isCorrect": false
+      },
+      {
+        "text": "la divisione di un mitocondrio",
+        "isCorrect": false
+      },
+      {
+        "text": "la degradazione proteasomica di proteine",
+        "isCorrect": false
+      },
+      {
+        "text": "l'ingresso di un endosimbionte",
+        "isCorrect": false
+      }
     ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
-    "text": "Il network mitocondriale è continuamente rimodellato da eventi di fusione e fissione. Quale affermazione NON è corretta?",
+    "text": "Riguardo a fusione e fissione mitocondriale, quale affermazione NON è corretta?",
     "options": [
-      { "text": "La fissione è la condizione che precede sempre il recupero funzionale di un mitocondrio danneggiato", "isCorrect": true },
-      { "text": "La fusione permette di mescolare contenuto e genomi di mitocondri diversi, compensando danni locali", "isCorrect": false },
-      { "text": "La fissione è necessaria per segregare le porzioni danneggiate e avviarle alla mitofagia", "isCorrect": false },
-      { "text": "Fusione e fissione sono governate da GTPasi dedicate", "isCorrect": false },
-      { "text": "L'equilibrio fra i due processi determina la morfologia della rete mitocondriale", "isCorrect": false }
+      {
+        "text": "La fissione precede sempre il recupero",
+        "isCorrect": true
+      },
+      {
+        "text": "La fusione mescola contenuto e genomi",
+        "isCorrect": false
+      },
+      {
+        "text": "La fissione segrega le parti danneggiate",
+        "isCorrect": false
+      },
+      {
+        "text": "Entrambe sono governate da GTPasi",
+        "isCorrect": false
+      },
+      {
+        "text": "Il loro equilibrio dà la morfologia",
+        "isCorrect": false
+      }
     ]
   },
   {
@@ -340,118 +760,203 @@
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "Le idrolasi acide destinate ai lisosomi vengono marcate, nel cis-Golgi, con un residuo di mannosio-6-……",
-    "options": [{ "text": "fosfato", "isCorrect": true }]
+    "options": [
+      {
+        "text": "fosfato",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "Le vescicole che trasportano il carico dal reticolo endoplasmatico al Golgi sono rivestite dal complesso ……",
-    "options": [{ "text": "COPII", "isCorrect": true }]
+    "options": [
+      {
+        "text": "COPII",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "La sequenza di quattro amminoacidi che fa recuperare dal Golgi le proteine solubili residenti del reticolo endoplasmatico è ……",
-    "options": [{ "text": "KDEL", "isCorrect": true }]
+    "options": [
+      {
+        "text": "KDEL",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "La particella che riconosce la sequenza segnale della catena nascente e la indirizza al reticolo endoplasmatico si indica con la sigla ……",
-    "options": [{ "text": "SRP", "isCorrect": true }]
+    "options": [
+      {
+        "text": "SRP",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "Il complesso della membrana mitocondriale esterna attraverso cui entrano le proteine importate dal citosol si indica con la sigla ……",
-    "options": [{ "text": "TOM", "isCorrect": true }]
+    "options": [
+      {
+        "text": "TOM",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "Le proteine necessarie alla biogenesi dei perossisomi, difettose nella sindrome di Zellweger, si chiamano ……",
-    "options": [{ "text": "perossine", "isCorrect": true }]
+    "options": [
+      {
+        "text": "perossine",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "La piccola GTPasi il cui gradiente fra nucleo e citosol dà direzione al trasporto nucleare è ……",
-    "options": [{ "text": "Ran", "isCorrect": true }]
+    "options": [
+      {
+        "text": "Ran",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "I recettori che riconoscono il segnale di localizzazione nucleare e accompagnano il carico attraverso il poro sono le ……",
-    "options": [{ "text": "importine", "isCorrect": true }]
+    "options": [
+      {
+        "text": "importine",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "Le proteine che, appaiandosi fra vescicola e membrana bersaglio, ne catalizzano la fusione sono le ……",
-    "options": [{ "text": "SNARE", "isCorrect": true }]
+    "options": [
+      {
+        "text": "SNARE",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "La rimozione selettiva dei mitocondri danneggiati per via autofagica si chiama ……",
-    "options": [{ "text": "mitofagia", "isCorrect": true }]
+    "options": [
+      {
+        "text": "mitofagia",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "Il complesso che nuclea filamenti di actina ramificati a partire da un filamento preesistente è ……",
-    "options": [{ "text": "Arp2/3", "isCorrect": true }]
+    "options": [
+      {
+        "text": "Arp2/3",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "Il principale centro di organizzazione dei microtubuli della cellula animale è il ……",
-    "options": [{ "text": "centrosoma", "isCorrect": true }]
+    "options": [
+      {
+        "text": "centrosoma",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "I filamenti intermedi che rivestono la faccia interna dell'involucro nucleare sono le ……",
-    "options": [{ "text": "lamine", "isCorrect": true }]
+    "options": [
+      {
+        "text": "lamine",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "La risposta cellulare all'accumulo di proteine mal ripiegate nel reticolo endoplasmatico si indica con la sigla ……",
-    "options": [{ "text": "UPR", "isCorrect": true }]
+    "options": [
+      {
+        "text": "UPR",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "Il sistema che retrotrasloca nel citosol le proteine mal ripiegate del reticolo per avviarle al proteasoma si indica con la sigla ……",
-    "options": [{ "text": "ERAD", "isCorrect": true }]
+    "options": [
+      {
+        "text": "ERAD",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "Gli enzimi che spostano attivamente i fosfolipidi dal foglietto esterno a quello citosolico della membrana, mantenendone l'asimmetria, sono le ……",
-    "options": [{ "text": "flippasi", "isCorrect": true }]
+    "options": [
+      {
+        "text": "flippasi",
+        "isCorrect": true
+      }
+    ]
   },
   {
     "subject": "Biologia",
     "topic": "SF-BIO-05",
     "type": "COMPLETAMENTO",
     "text": "Il fosfolipide che, comparendo sul versante esterno della membrana plasmatica, segnala ai fagociti che la cellula è in apoptosi è la ……",
-    "options": [{ "text": "fosfatidilserina", "isCorrect": true }]
+    "options": [
+      {
+        "text": "fosfatidilserina",
+        "isCorrect": true
+      }
+    ]
   }
 ]

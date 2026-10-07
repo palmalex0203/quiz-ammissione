@@ -5,23 +5,23 @@
     "text": "Ossidando un alcol secondario si ottiene:",
     "options": [
       {
-        "text": "Un chetone, perché il carbonio carbinolico porta un solo idrogeno e dopo la sua rimozione non può ossidarsi ulteriormente",
+        "text": "un chetone",
         "isCorrect": true
       },
       {
-        "text": "Un'aldeide, che per ulteriore ossidazione dà un acido carbossilico",
+        "text": "un'aldeide",
         "isCorrect": false
       },
       {
-        "text": "Un acido carbossilico, come avviene per gli alcoli primari",
+        "text": "un acido carbossilico",
         "isCorrect": false
       },
       {
-        "text": "Un alchene, per perdita di una molecola d'acqua",
+        "text": "un alchene",
         "isCorrect": false
       },
       {
-        "text": "Nulla: gli alcoli secondari non sono ossidabili",
+        "text": "nulla: non si ossida",
         "isCorrect": false
       }
     ]
@@ -29,26 +29,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "Perché un alcol terziario non può essere ossidato?",
+    "text": "Un alcol terziario non può essere ossidato perché il suo carbinolo:",
     "options": [
       {
-        "text": "Perché il carbonio che porta l'ossidrile non ha atomi di idrogeno: l'ossidazione richiede la rimozione di un idrogeno da quel carbonio insieme a quello dell'ossidrile",
+        "text": "non porta atomi di idrogeno",
         "isCorrect": true
       },
       {
-        "text": "Perché l'ingombro sterico dei tre gruppi alchilici impedisce l'avvicinamento dell'ossidante",
+        "text": "è troppo ingombrato stericamente",
         "isCorrect": false
       },
       {
-        "text": "Perché gli alcoli terziari sono già nello stato di ossidazione massimo del carbonio",
+        "text": "è già al massimo di ossidazione",
         "isCorrect": false
       },
       {
-        "text": "Perché in realtà si ossidano, dando direttamente un acido carbossilico",
+        "text": "in realtà si ossida ad acido",
         "isCorrect": false
       },
       {
-        "text": "Perché il gruppo ossidrile terziario è legato con un legame ionico",
+        "text": "ha un legame ionico con l'OH",
         "isCorrect": false
       }
     ]
@@ -56,26 +56,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "Nel fegato l'etanolo viene metabolizzato in due tappe ossidative successive. Quali sono i prodotti nell'ordine corretto?",
+    "text": "Nel fegato l'etanolo viene ossidato in successione a:",
     "options": [
       {
-        "text": "Acetaldeide e poi acetato, con riduzione di NAD+ a NADH in entrambi i passaggi",
+        "text": "acetaldeide e poi acetato",
         "isCorrect": true
       },
       {
-        "text": "Acido acetico e poi acetaldeide",
+        "text": "acido acetico e poi acetaldeide",
         "isCorrect": false
       },
       {
-        "text": "Acetone e poi anidride carbonica",
+        "text": "acetone e poi anidride carbonica",
         "isCorrect": false
       },
       {
-        "text": "Etilene e poi etanale, per disidratazione e successiva ossidazione",
+        "text": "etilene e poi etanale",
         "isCorrect": false
       },
       {
-        "text": "Metanolo e poi formaldeide",
+        "text": "metanolo e poi formaldeide",
         "isCorrect": false
       }
     ]
@@ -83,26 +83,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "Il fenolo ha pKa di circa 10, l'etanolo di circa 16. Perché il fenolo è così più acido?",
+    "text": "Il fenolo (pKa 10) è molto più acido dell'etanolo (pKa 16) perché:",
     "options": [
       {
-        "text": "Perché la carica negativa dello ione fenossido si delocalizza per risonanza sull'anello aromatico, stabilizzando la base coniugata",
+        "text": "il fenossido risuona sull'anello",
         "isCorrect": true
       },
       {
-        "text": "Perché l'ossigeno del fenolo è più elettronegativo di quello dell'etanolo",
+        "text": "il suo ossigeno è più elettronegativo",
         "isCorrect": false
       },
       {
-        "text": "Perché il fenolo contiene più atomi di idrogeno acidi",
+        "text": "contiene più idrogeni acidi",
         "isCorrect": false
       },
       {
-        "text": "Perché il fenolo è un acido carbossilico mascherato",
+        "text": "è un acido carbossilico mascherato",
         "isCorrect": false
       },
       {
-        "text": "Perché l'anello aromatico attira elettroni per effetto induttivo, e l'effetto induttivo è l'unico in gioco",
+        "text": "l'anello attira per effetto induttivo",
         "isCorrect": false
       }
     ]
@@ -113,23 +113,23 @@
     "text": "La disidratazione di un alcol in ambiente acido porta a:",
     "options": [
       {
-        "text": "Un alchene, per eliminazione di acqua dopo protonazione dell'ossidrile e formazione del carbocatione",
+        "text": "un alchene",
         "isCorrect": true
       },
       {
-        "text": "Un'aldeide, per perdita di due atomi di idrogeno",
+        "text": "un'aldeide",
         "isCorrect": false
       },
       {
-        "text": "Un etere, per condensazione con un'altra molecola di acqua",
+        "text": "un etere",
         "isCorrect": false
       },
       {
-        "text": "Un acido carbossilico, per addizione di ossigeno",
+        "text": "un acido carbossilico",
         "isCorrect": false
       },
       {
-        "text": "Un alcano, per sostituzione dell'ossidrile con un idrogeno",
+        "text": "un alcano",
         "isCorrect": false
       }
     ]
@@ -137,26 +137,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "I gruppi tiolici delle cisteine, ossidandosi, danno origine a:",
+    "text": "I gruppi tiolici di due cisteine, ossidandosi, danno origine a:",
     "options": [
       {
-        "text": "Un ponte disolfuro, legame covalente che stabilizza la struttura terziaria delle proteine ed è reversibile per riduzione",
+        "text": "un ponte disolfuro",
         "isCorrect": true
       },
       {
-        "text": "Un legame peptidico fra le due catene laterali",
+        "text": "un legame peptidico",
         "isCorrect": false
       },
       {
-        "text": "Un legame a idrogeno particolarmente forte fra i due atomi di zolfo",
+        "text": "un legame a idrogeno",
         "isCorrect": false
       },
       {
-        "text": "Un tioestere, che lega le due cisteine tramite un carbonile",
+        "text": "un tioestere",
         "isCorrect": false
       },
       {
-        "text": "Un epossido ciclico fra i due residui",
+        "text": "un epossido ciclico",
         "isCorrect": false
       }
     ]
@@ -164,26 +164,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "Il glutatione protegge la cellula dai radicali grazie a:",
+    "text": "Il glutatione protegge la cellula dai radicali grazie:",
     "options": [
       {
-        "text": "Il gruppo tiolico della cisteina, che cede un atomo di idrogeno al radicale e si ossida a glutatione disolfuro, poi rigenerato a spese di NADPH",
+        "text": "al tiolo della cisteina",
         "isCorrect": true
       },
       {
-        "text": "Il gruppo amminico della glicina, che neutralizza il radicale per protonazione",
+        "text": "all'ammina della glicina",
         "isCorrect": false
       },
       {
-        "text": "Il suo anello aromatico, che assorbe l'energia del radicale",
+        "text": "al suo anello aromatico",
         "isCorrect": false
       },
       {
-        "text": "La sua carica negativa, che respinge elettrostaticamente i radicali",
+        "text": "alla sua carica negativa",
         "isCorrect": false
       },
       {
-        "text": "Il legame peptidico fra glutammato e cisteina, che si idrolizza liberando energia",
+        "text": "al legame peptidico interno",
         "isCorrect": false
       }
     ]
@@ -191,26 +191,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "Un epossido è particolarmente reattivo rispetto a un etere comune perché:",
+    "text": "Un epossido è più reattivo di un etere comune perché:",
     "options": [
       {
-        "text": "L'anello a tre termini è fortemente teso: l'apertura da parte di un nucleofilo libera quella tensione, e questo rende gli epossidi elettrofili capaci di alchilare il DNA",
+        "text": "il suo anello è molto teso",
         "isCorrect": true
       },
       {
-        "text": "Contiene un doppio legame carbonio-ossigeno molto polarizzato",
+        "text": "contiene un doppio legame C=O",
         "isCorrect": false
       },
       {
-        "text": "L'ossigeno dell'epossido è più basico di quello degli altri eteri",
+        "text": "il suo ossigeno è più basico",
         "isCorrect": false
       },
       {
-        "text": "È un composto ionico, mentre gli eteri sono molecolari",
+        "text": "è un composto ionico",
         "isCorrect": false
       },
       {
-        "text": "Contiene un gruppo ossidrilico libero capace di formare legami a idrogeno",
+        "text": "porta un ossidrile libero",
         "isCorrect": false
       }
     ]
@@ -218,26 +218,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "Perché un'ammina alifatica come la metilammina è più basica dell'anilina?",
+    "text": "La metilammina è più basica dell'anilina perché nell'anilina il doppietto:",
     "options": [
       {
-        "text": "Nell'anilina il doppietto dell'azoto è delocalizzato sull'anello aromatico e risulta meno disponibile per il protone, mentre nell'ammina alifatica è libero e anzi arricchito dall'effetto induttivo del metile",
+        "text": "è delocalizzato sull'anello",
         "isCorrect": true
       },
       {
-        "text": "Perché l'anilina non possiede alcun doppietto sull'azoto",
+        "text": "non esiste affatto sull'azoto",
         "isCorrect": false
       },
       {
-        "text": "Perché l'anello aromatico dona densità elettronica all'azoto, rendendolo troppo ingombrato",
+        "text": "è arricchito dall'anello",
         "isCorrect": false
       },
       {
-        "text": "Perché la metilammina è un'ammina quaternaria e le ammine quaternarie sono le più basiche",
+        "text": "appartiene a un'ammina quaternaria",
         "isCorrect": false
       },
       {
-        "text": "Perché l'anilina è un'ammide e le ammidi non sono basiche",
+        "text": "fa parte di un'ammide",
         "isCorrect": false
       }
     ]
@@ -245,26 +245,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "A pH fisiologico la catena laterale della lisina, la cui pKa è circa 10,5, si trova prevalentemente:",
+    "text": "A pH fisiologico la catena laterale della lisina (pKa 10,5) è:",
     "options": [
       {
-        "text": "Nella forma protonata, cioè come ione ammonio con carica positiva",
+        "text": "protonata, con carica positiva",
         "isCorrect": true
       },
       {
-        "text": "Nella forma neutra non protonata, perché il pH è inferiore alla pKa",
+        "text": "neutra, non protonata",
         "isCorrect": false
       },
       {
-        "text": "Come ammide, per reazione con i gruppi carbossilici vicini",
+        "text": "trasformata in ammide",
         "isCorrect": false
       },
       {
-        "text": "In forma equiripartita fra le due specie",
+        "text": "equiripartita fra le due forme",
         "isCorrect": false
       },
       {
-        "text": "Con carica negativa, per perdita di un protone",
+        "text": "deprotonata, con carica negativa",
         "isCorrect": false
       }
     ]
@@ -272,26 +272,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "Le nitrosammine, cancerogene, si formano nello stomaco:",
+    "text": "Le nitrosammine si formano nello stomaco dalla reazione fra:",
     "options": [
       {
-        "text": "Dalla reazione fra ammine secondarie degli alimenti e nitriti in ambiente acido",
+        "text": "ammine secondarie e nitriti",
         "isCorrect": true
       },
       {
-        "text": "Dall'ossidazione delle ammine terziarie da parte dell'ossigeno molecolare",
+        "text": "ammine terziarie e ossigeno",
         "isCorrect": false
       },
       {
-        "text": "Dalla riduzione delle ammidi proteiche a opera della pepsina",
+        "text": "ammidi proteiche e pepsina",
         "isCorrect": false
       },
       {
-        "text": "Dalla reazione fra ammoniaca e anidride carbonica a pH basico",
+        "text": "ammoniaca e anidride carbonica",
         "isCorrect": false
       },
       {
-        "text": "Dall'idrolisi dei legami peptidici in presenza di cloruro di sodio",
+        "text": "peptidi e cloruro di sodio",
         "isCorrect": false
       }
     ]
@@ -299,26 +299,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "La colina è un'ammina di grande rilevanza biologica. Che tipo di azoto porta e in quali molecole la si ritrova?",
+    "text": "La colina porta un azoto:",
     "options": [
       {
-        "text": "Un azoto quaternario, con carica positiva permanente a qualunque pH; è la testa polare della fosfatidilcolina e il precursore dell'acetilcolina",
+        "text": "quaternario, sempre carico",
         "isCorrect": true
       },
       {
-        "text": "Un azoto primario, neutro a pH fisiologico; entra nella sintesi delle basi puriniche",
+        "text": "primario, neutro a pH 7,4",
         "isCorrect": false
       },
       {
-        "text": "Un azoto amidico, non basico; costituisce il legame peptidico",
+        "text": "amidico, non basico",
         "isCorrect": false
       },
       {
-        "text": "Un azoto aromatico eterociclico; è il precursore dell'istamina",
+        "text": "aromatico eterociclico",
         "isCorrect": false
       },
       {
-        "text": "Un azoto secondario, che reagisce con i nitriti per dare nitrosammine nei neuroni",
+        "text": "secondario, nitrosabile",
         "isCorrect": false
       }
     ]
@@ -326,26 +326,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "La reazione caratteristica del gruppo carbonilico di aldeidi e chetoni è:",
+    "text": "La reazione caratteristica del carbonile di aldeidi e chetoni è:",
     "options": [
       {
-        "text": "L'addizione nucleofila, perché il carbonio carbonilico è reso elettrofilo dalla polarizzazione del doppio legame verso l'ossigeno",
+        "text": "l'addizione nucleofila",
         "isCorrect": true
       },
       {
-        "text": "La sostituzione nucleofila, con allontanamento dell'ossigeno come gruppo uscente",
+        "text": "la sostituzione nucleofila",
         "isCorrect": false
       },
       {
-        "text": "L'addizione elettrofila, come negli alcheni",
+        "text": "l'addizione elettrofila",
         "isCorrect": false
       },
       {
-        "text": "La sostituzione elettrofila, come nei composti aromatici",
+        "text": "la sostituzione elettrofila",
         "isCorrect": false
       },
       {
-        "text": "L'eliminazione, con formazione di un doppio legame carbonio-carbonio",
+        "text": "l'eliminazione",
         "isCorrect": false
       }
     ]
@@ -353,26 +353,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "Perché un'aldeide è più reattiva all'addizione nucleofila di un chetone?",
+    "text": "Un'aldeide è più reattiva di un chetone all'addizione nucleofila perché il chetone:",
     "options": [
       {
-        "text": "Perché il chetone porta due gruppi alchilici che donano densità elettronica al carbonio carbonilico e lo ingombrano, mentre l'aldeide ne porta uno solo",
+        "text": "ha due gruppi alchilici donatori",
         "isCorrect": true
       },
       {
-        "text": "Perché l'aldeide contiene un ossigeno in più del chetone",
+        "text": "contiene un ossigeno in meno",
         "isCorrect": false
       },
       {
-        "text": "Perché nell'aldeide il carbonile è ibridato sp3 e nel chetone sp2",
+        "text": "ha il carbonile ibridato sp3",
         "isCorrect": false
       },
       {
-        "text": "Perché il chetone non possiede un carbonio elettrofilo",
+        "text": "non ha un carbonio elettrofilo",
         "isCorrect": false
       },
       {
-        "text": "Perché l'aldeide è un acido più forte del chetone",
+        "text": "è un acido molto più forte",
         "isCorrect": false
       }
     ]
@@ -380,26 +380,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "La reazione di un'aldeide con un alcol dà un emiacetale. Che cosa accade con una seconda molecola di alcol?",
+    "text": "Un emiacetale che reagisce con una seconda molecola di alcol dà:",
     "options": [
       {
-        "text": "Si forma un acetale, con eliminazione di acqua e catalisi acida: a differenza dell'emiacetale è stabile in ambiente basico, e il legame glicosidico dei disaccaridi è un acetale",
+        "text": "un acetale",
         "isCorrect": true
       },
       {
-        "text": "Si forma un chetale, perché la seconda addizione trasforma l'aldeide in chetone",
+        "text": "un chetale",
         "isCorrect": false
       },
       {
-        "text": "Non accade nulla: l'emiacetale è il prodotto finale della reazione",
+        "text": "un estere",
         "isCorrect": false
       },
       {
-        "text": "Si forma un estere, con eliminazione di idrogeno molecolare",
+        "text": "un'immina",
         "isCorrect": false
       },
       {
-        "text": "Si forma un'immina, perché l'ossigeno viene sostituito dall'azoto dell'alcol",
+        "text": "nulla di nuovo",
         "isCorrect": false
       }
     ]
@@ -407,26 +407,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "La ciclizzazione spontanea del glucosio in soluzione è un esempio di:",
+    "text": "La ciclizzazione spontanea del glucosio in soluzione forma:",
     "options": [
       {
-        "text": "Formazione di un emiacetale intramolecolare, fra l'ossidrile del C5 e il carbonile del C1",
+        "text": "un emiacetale intramolecolare",
         "isCorrect": true
       },
       {
-        "text": "Formazione di un acetale intramolecolare, con perdita di acqua",
+        "text": "un acetale intramolecolare",
         "isCorrect": false
       },
       {
-        "text": "Condensazione aldolica fra due molecole di glucosio",
+        "text": "un prodotto di condensazione aldolica",
         "isCorrect": false
       },
       {
-        "text": "Formazione di un lattone, fra un ossidrile e un gruppo carbossilico",
+        "text": "un lattone intramolecolare",
         "isCorrect": false
       },
       {
-        "text": "Tautomeria cheto-enolica fra la forma aperta e quella ciclica",
+        "text": "un tautomero cheto-enolico",
         "isCorrect": false
       }
     ]
@@ -434,26 +434,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "La reazione fra un'aldeide e un'ammina primaria porta a una base di Schiff. Dove la si incontra in biochimica?",
+    "text": "Una base di Schiff si incontra, in biochimica, nel legame fra:",
     "options": [
       {
-        "text": "Nel legame fra retinale e opsina nella rodopsina, nell'intermedio delle transaminasi con il piridossal fosfato e nei primi passaggi della reazione di Maillard",
+        "text": "retinale e opsina",
         "isCorrect": true
       },
       {
-        "text": "Nella formazione del legame peptidico fra due amminoacidi",
+        "text": "due amminoacidi",
         "isCorrect": false
       },
       {
-        "text": "Nella formazione del legame fosfodiesterico degli acidi nucleici",
+        "text": "due nucleotidi",
         "isCorrect": false
       },
       {
-        "text": "Nel legame disolfuro fra due residui di cisteina",
+        "text": "due cisteine",
         "isCorrect": false
       },
       {
-        "text": "Nella formazione del legame glicosidico dei polisaccaridi di riserva",
+        "text": "due monosaccaridi",
         "isCorrect": false
       }
     ]
@@ -461,26 +461,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "L'idrogeno legato al carbonio in alfa a un carbonile è anomalmente acido. Perché?",
+    "text": "L'idrogeno in alfa a un carbonile è anomalmente acido perché:",
     "options": [
       {
-        "text": "Perché la carica negativa del carbanione che si forma è delocalizzata sull'ossigeno del carbonile: l'anione enolato è stabilizzato per risonanza",
+        "text": "il carbanione risuona sul carbonile",
         "isCorrect": true
       },
       {
-        "text": "Perché il carbonio in alfa è legato direttamente all'ossigeno elettronegativo",
+        "text": "è legato direttamente all'ossigeno",
         "isCorrect": false
       },
       {
-        "text": "Perché l'idrogeno in alfa porta una carica positiva parziale maggiore di quella degli altri idrogeni",
+        "text": "porta una forte carica positiva",
         "isCorrect": false
       },
       {
-        "text": "Perché il carbonio in alfa è ibridato sp e quindi molto elettronegativo",
+        "text": "il carbonio in alfa è ibridato sp",
         "isCorrect": false
       },
       {
-        "text": "In realtà non è acido: l'acidità riguarda solo l'idrogeno dell'ossidrile",
+        "text": "in realtà non è affatto acido",
         "isCorrect": false
       }
     ]
@@ -491,23 +491,23 @@
     "text": "La condensazione aldolica consiste nell'attacco:",
     "options": [
       {
-        "text": "Dell'enolato di un composto carbonilico sul carbonio carbonilico di un altro, con formazione di un nuovo legame carbonio-carbonio: è la reazione che l'aldolasi catalizza in senso inverso nella glicolisi",
+        "text": "di un enolato su un carbonile",
         "isCorrect": true
       },
       {
-        "text": "Di un alcol sul carbonile, con formazione di un acetale",
+        "text": "di un alcol su un carbonile",
         "isCorrect": false
       },
       {
-        "text": "Di un'ammina sul carbonile, con formazione di un'immina",
+        "text": "di un'ammina su un carbonile",
         "isCorrect": false
       },
       {
-        "text": "Di un alogeno sul carbonio in alfa, con sostituzione dell'idrogeno acido",
+        "text": "di un alogeno sul carbonio alfa",
         "isCorrect": false
       },
       {
-        "text": "Dell'acqua sul doppio legame carbonio-ossigeno, con rottura della molecola in due frammenti",
+        "text": "dell'acqua sul doppio legame",
         "isCorrect": false
       }
     ]
@@ -515,26 +515,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "La tautomeria cheto-enolica spiega l'elevato potenziale di trasferimento del fosfato del fosfoenolpiruvato perché:",
+    "text": "L'alto potenziale di trasferimento del fosfoenolpiruvato dipende dal fatto che:",
     "options": [
       {
-        "text": "Il fosfato blocca la molecola nella forma enolica, instabile: la sua rimozione libera l'enolo che tautomerizza irreversibilmente a piruvato, e questa tautomerizzazione aggiunge energia al processo",
+        "text": "il fosfato blocca la forma enolica",
         "isCorrect": true
       },
       {
-        "text": "Il legame fosforico del fosfoenolpiruvato è un legame covalente doppio, più ricco di energia",
+        "text": "il suo legame fosforico è doppio",
         "isCorrect": false
       },
       {
-        "text": "Il fosfoenolpiruvato contiene due gruppi fosfato in anidride fra loro",
+        "text": "contiene due fosfati in anidride",
         "isCorrect": false
       },
       {
-        "text": "La forma chetonica è meno stabile di quella enolica, e il fosfato la stabilizza",
+        "text": "la forma chetonica è meno stabile",
         "isCorrect": false
       },
       {
-        "text": "Il fosfato viene trasferito insieme a una molecola d'acqua, che fornisce l'energia necessaria",
+        "text": "il fosfato parte con dell'acqua",
         "isCorrect": false
       }
     ]
@@ -542,26 +542,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "La tautomeria delle basi azotate ha una conseguenza genetica importante perché:",
+    "text": "La tautomeria delle basi azotate ha conseguenze genetiche perché:",
     "options": [
       {
-        "text": "La forma tautomerica rara di una base, per esempio la forma imminica della citosina, espone un diverso schema di donatori e accettori di legami a idrogeno e può appaiarsi con la base sbagliata, generando una mutazione puntiforme",
+        "text": "una forma rara appaia male",
         "isCorrect": true
       },
       {
-        "text": "La tautomeria rompe il legame fosfodiesterico dello scheletro del DNA",
+        "text": "rompe il legame fosfodiesterico",
         "isCorrect": false
       },
       {
-        "text": "La tautomeria converte le purine in pirimidine e viceversa",
+        "text": "converte purine in pirimidine",
         "isCorrect": false
       },
       {
-        "text": "La tautomeria impedisce del tutto la formazione dei legami a idrogeno fra le basi",
+        "text": "impedisce i legami a idrogeno",
         "isCorrect": false
       },
       {
-        "text": "La tautomeria avviene solo nell'RNA e non nel DNA, e spiega l'instabilità dell'RNA",
+        "text": "avviene soltanto nell'RNA",
         "isCorrect": false
       }
     ]
@@ -569,26 +569,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "L'ubichinone funziona nella catena respiratoria come trasportatore perché:",
+    "text": "L'ubichinone funziona da trasportatore nella catena respiratoria perché:",
     "options": [
       {
-        "text": "La coppia chinone/idrochinone accetta e cede due elettroni e due protoni, passando per il radicale semichinonico, e la lunga catena isoprenica lo rende mobile nel doppio strato lipidico",
+        "text": "accetta due elettroni e due protoni",
         "isCorrect": true
       },
       {
-        "text": "Contiene un atomo di ferro che si ossida e si riduce alternativamente",
+        "text": "contiene un atomo di ferro",
         "isCorrect": false
       },
       {
-        "text": "È una proteina integrale di membrana con un gruppo eme",
+        "text": "è una proteina con gruppo eme",
         "isCorrect": false
       },
       {
-        "text": "Trasferisce gruppi fosfato da un complesso all'altro della catena",
+        "text": "trasferisce gruppi fosfato",
         "isCorrect": false
       },
       {
-        "text": "Accetta un solo elettrone per volta e non può trasportare protoni",
+        "text": "accetta un solo elettrone",
         "isCorrect": false
       }
     ]
@@ -596,26 +596,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "Un acido carbossilico ha pKa intorno a 4,8, mentre un alcol ha pKa intorno a 16. La differenza si spiega perché:",
+    "text": "Un acido carbossilico (pKa 4,8) è molto più acido di un alcol (pKa 16) perché:",
     "options": [
       {
-        "text": "Nello ione carbossilato la carica negativa è delocalizzata per risonanza su due ossigeni equivalenti, mentre nell'alcossido resta localizzata su un solo ossigeno",
+        "text": "il carbossilato risuona",
         "isCorrect": true
       },
       {
-        "text": "Nell'acido carbossilico l'idrogeno acido è legato al carbonio e non all'ossigeno",
+        "text": "il suo idrogeno sta su un carbonio",
         "isCorrect": false
       },
       {
-        "text": "L'acido carbossilico contiene due idrogeni acidi, l'alcol uno solo",
+        "text": "possiede due idrogeni acidi",
         "isCorrect": false
       },
       {
-        "text": "L'acido carbossilico è un acido forte e si dissocia completamente",
+        "text": "è senz'altro un acido forte",
         "isCorrect": false
       },
       {
-        "text": "L'alcol non è affatto acido, perché il gruppo ossidrile è basico",
+        "text": "l'alcol non è affatto acido",
         "isCorrect": false
       }
     ]
@@ -626,23 +626,23 @@
     "text": "A pH fisiologico gli acidi carbossilici del metabolismo si trovano:",
     "options": [
       {
-        "text": "In forma dissociata, come anioni carbossilato: per questo si parla di lattato, piruvato e citrato e non di acido lattico, piruvico e citrico",
+        "text": "dissociati, come carbossilati",
         "isCorrect": true
       },
       {
-        "text": "In forma indissociata, perché il pH 7,4 è inferiore alla loro pKa",
+        "text": "indissociati, in forma acida",
         "isCorrect": false
       },
       {
-        "text": "In forma esterificata con il coenzima A",
+        "text": "esterificati con il coenzima A",
         "isCorrect": false
       },
       {
-        "text": "Equiripartiti fra la forma dissociata e quella indissociata",
+        "text": "equiripartiti fra le due forme",
         "isCorrect": false
       },
       {
-        "text": "In forma protonata due volte, con carica positiva",
+        "text": "protonati due volte",
         "isCorrect": false
       }
     ]
@@ -653,23 +653,23 @@
     "text": "L'esterificazione di Fischer fra un acido carbossilico e un alcol:",
     "options": [
       {
-        "text": "È catalizzata da acidi, è reversibile e per spostarla verso l'estere si allontana l'acqua che si forma",
+        "text": "è reversibile e catalizzata da acidi",
         "isCorrect": true
       },
       {
-        "text": "È irreversibile e procede sempre a completezza",
+        "text": "è irreversibile e va a completezza",
         "isCorrect": false
       },
       {
-        "text": "Richiede catalisi basica e produce un sale dell'acido",
+        "text": "richiede catalisi basica",
         "isCorrect": false
       },
       {
-        "text": "Avviene con eliminazione di anidride carbonica",
+        "text": "libera anidride carbonica",
         "isCorrect": false
       },
       {
-        "text": "Produce un'ammide, perché l'alcol si comporta da nucleofilo azotato",
+        "text": "produce in realtà un'ammide",
         "isCorrect": false
       }
     ]
@@ -677,26 +677,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "Perché l'idrolisi alcalina di un estere, cioè la saponificazione, è irreversibile?",
+    "text": "La saponificazione, idrolisi alcalina di un estere, è irreversibile perché:",
     "options": [
       {
-        "text": "Perché l'acido che si libera viene immediatamente deprotonato a carbossilato, specie non più attaccabile dall'alcol: il prodotto viene sottratto all'equilibrio",
+        "text": "l'acido formato viene deprotonato",
         "isCorrect": true
       },
       {
-        "text": "Perché la base distrugge chimicamente l'alcol che si forma",
+        "text": "la base distrugge l'alcol",
         "isCorrect": false
       },
       {
-        "text": "Perché la reazione libera anidride carbonica, che abbandona il sistema",
+        "text": "libera anidride carbonica",
         "isCorrect": false
       },
       {
-        "text": "Perché in ambiente basico l'estere si decompone in modo radicalico",
+        "text": "l'estere si rompe per via radicalica",
         "isCorrect": false
       },
       {
-        "text": "Perché la saponificazione è catalizzata da un enzima irreversibile",
+        "text": "è catalizzata da un enzima",
         "isCorrect": false
       }
     ]
@@ -704,26 +704,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "Perché l'idrolisi di un tioestere come l'acetil-CoA libera più energia di quella di un estere ordinario?",
+    "text": "L'idrolisi di un tioestere come l'acetil-CoA libera più energia perché:",
     "options": [
       {
-        "text": "Perché lo zolfo, avendo orbitali più diffusi, si sovrappone male al carbonio carbonilico: la stabilizzazione per risonanza del tioestere è scarsa, e il reagente è quindi a energia più alta",
+        "text": "lo zolfo risuona male col carbonile",
         "isCorrect": true
       },
       {
-        "text": "Perché il legame carbonio-zolfo è un doppio legame e la sua rottura libera più energia",
+        "text": "il legame C-S è un doppio legame",
         "isCorrect": false
       },
       {
-        "text": "Perché il tioestere contiene un gruppo fosfato aggiuntivo",
+        "text": "contiene un fosfato aggiuntivo",
         "isCorrect": false
       },
       {
-        "text": "Perché lo zolfo è più elettronegativo dell'ossigeno e polarizza più intensamente il carbonile",
+        "text": "lo zolfo è più elettronegativo",
         "isCorrect": false
       },
       {
-        "text": "Perché l'idrolisi del tioestere libera anidride carbonica insieme all'acido",
+        "text": "libera anche anidride carbonica",
         "isCorrect": false
       }
     ]
@@ -731,26 +731,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "La condensazione di Claisen fra due tioesteri:",
+    "text": "La condensazione di Claisen fra due tioesteri forma:",
     "options": [
       {
-        "text": "Forma un beta-chetotioestere per attacco dell'enolato di uno sul carbonile dell'altro: è il passaggio che allunga la catena nella sintesi degli acidi grassi e che la tiolasi inverte nella beta-ossidazione",
+        "text": "un beta-chetotioestere",
         "isCorrect": true
       },
       {
-        "text": "Forma un estere e una molecola d'acqua, come l'esterificazione di Fischer",
+        "text": "un estere e una molecola d'acqua",
         "isCorrect": false
       },
       {
-        "text": "Rompe entrambi i tioesteri liberando due molecole di coenzima A e due alcoli",
+        "text": "due molecole di coenzima A libero",
         "isCorrect": false
       },
       {
-        "text": "Forma un legame carbonio-zolfo fra i due substrati",
+        "text": "un nuovo legame carbonio-zolfo",
         "isCorrect": false
       },
       {
-        "text": "Produce un'anidride mista fra i due acidi carbossilici",
+        "text": "un'anidride mista",
         "isCorrect": false
       }
     ]
@@ -758,26 +758,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "La decarbossilazione di un beta-chetoacido come l'acetoacetato avviene con facilità perché:",
+    "text": "Un beta-chetoacido come l'acetoacetato decarbossila con facilità perché:",
     "options": [
       {
-        "text": "Il carbonile in posizione beta accoglie la coppia elettronica che resta dopo l'uscita della CO2, stabilizzando l'intermedio enolico",
+        "text": "il carbonile beta accoglie gli elettroni",
         "isCorrect": true
       },
       {
-        "text": "Il gruppo carbossilico dei beta-chetoacidi è legato con un legame ionico",
+        "text": "il suo carbossile è legato ionicamente",
         "isCorrect": false
       },
       {
-        "text": "La reazione richiede l'intervento obbligato della tiamina pirofosfato, che la rende spontanea",
+        "text": "serve sempre la tiamina pirofosfato",
         "isCorrect": false
       },
       {
-        "text": "L'anidride carbonica è un gas, e la sua uscita è l'unico fattore in gioco anche per gli acidi non chetonici",
+        "text": "l'anidride carbonica è un gas",
         "isCorrect": false
       },
       {
-        "text": "Il carbonio in alfa porta un idrogeno acido, che viene eliminato insieme alla CO2",
+        "text": "il carbonio alfa perde un idrogeno",
         "isCorrect": false
       }
     ]
@@ -788,23 +788,23 @@
     "text": "Un lattone è:",
     "options": [
       {
-        "text": "Un estere ciclico, formato per condensazione intramolecolare fra il gruppo carbossilico e un ossidrile della stessa molecola",
+        "text": "un estere ciclico",
         "isCorrect": true
       },
       {
-        "text": "Un'ammide ciclica, formata fra un carbossile e un gruppo amminico",
+        "text": "un'ammide ciclica",
         "isCorrect": false
       },
       {
-        "text": "Un etere ciclico a tre termini, molto teso e reattivo",
+        "text": "un etere a tre termini",
         "isCorrect": false
       },
       {
-        "text": "Un chetone ciclico contenente un atomo di azoto",
+        "text": "un chetone azotato",
         "isCorrect": false
       },
       {
-        "text": "Un emiacetale ciclico, come quello del glucosio in soluzione",
+        "text": "un emiacetale ciclico",
         "isCorrect": false
       }
     ]
@@ -812,26 +812,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "Perché il legame peptidico, che è un legame amidico, è molto più resistente all'idrolisi di un estere?",
+    "text": "Il legame peptidico resiste all'idrolisi molto più di un estere perché:",
     "options": [
       {
-        "text": "Perché il doppietto dell'azoto si delocalizza sul carbonile: il carbonio diventa meno elettrofilo e l'azoto è un gruppo uscente peggiore dell'ossigeno di un alcol",
+        "text": "il doppietto dell'azoto risuona",
         "isCorrect": true
       },
       {
-        "text": "Perché l'azoto dell'ammide è ibridato sp3 e protegge stericamente il carbonile",
+        "text": "l'azoto amidico è ibridato sp3",
         "isCorrect": false
       },
       {
-        "text": "Perché il legame peptidico è un legame covalente doppio fra carbonio e azoto",
+        "text": "è un doppio legame carbonio-azoto",
         "isCorrect": false
       },
       {
-        "text": "Perché l'ammide è una base forte e non viene attaccata dai nucleofili",
+        "text": "l'ammide è una base forte",
         "isCorrect": false
       },
       {
-        "text": "Perché l'idrolisi delle ammidi è termodinamicamente sfavorita, mentre quella degli esteri è spontanea",
+        "text": "l'idrolisi è termodinamicamente vietata",
         "isCorrect": false
       }
     ]
@@ -839,26 +839,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-06",
-    "text": "Gli acilfosfati come l'1,3-bisfosfoglicerato hanno elevato potenziale di trasferimento del fosfato perché:",
+    "text": "Gli acilfosfati come l'1,3-bisfosfoglicerato hanno alto potenziale perché sono:",
     "options": [
       {
-        "text": "Sono anidridi miste fra un acido carbossilico e l'acido fosforico: i due gruppi si contendono gli stessi elettroni e la loro separazione, oltre alla repulsione fra le cariche, rende l'idrolisi fortemente esoergonica",
+        "text": "anidridi miste fosfo-carbossiliche",
         "isCorrect": true
       },
       {
-        "text": "Contengono un legame carbonio-fosforo diretto, molto instabile",
+        "text": "composti con legame carbonio-fosforo",
         "isCorrect": false
       },
       {
-        "text": "Sono esteri fosforici semplici, come il glucosio 6-fosfato",
+        "text": "semplici esteri fosforici",
         "isCorrect": false
       },
       {
-        "text": "Hanno un atomo di zolfo che destabilizza il legame fosforico",
+        "text": "fosfati legati a uno zolfo",
         "isCorrect": false
       },
       {
-        "text": "Il loro fosfato è legato all'azoto di un'ammide",
+        "text": "fosfoammidi dell'azoto",
         "isCorrect": false
       }
     ]

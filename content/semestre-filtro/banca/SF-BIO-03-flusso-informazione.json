@@ -1,283 +1,806 @@
 [
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "L'esperimento di Meselson e Stahl dimostrò che la replicazione del DNA è semiconservativa perché:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "Nell'esperimento di Meselson e Stahl, dopo una generazione in azoto leggero il DNA risultava:",
     "options": [
-      { "text": "Dopo una generazione in azoto leggero tutto il DNA aveva densità intermedia, e dopo due generazioni comparivano in parti uguali DNA intermedio e DNA leggero", "isCorrect": true },
-      { "text": "Dopo una generazione metà del DNA era pesante e metà leggero", "isCorrect": false },
-      { "text": "Il DNA manteneva la stessa densità in tutte le generazioni", "isCorrect": false },
-      { "text": "Dopo due generazioni tutto il DNA aveva densità intermedia", "isCorrect": false },
-      { "text": "Il DNA appena sintetizzato risultava formato da tratti pesanti e leggeri alternati sullo stesso filamento", "isCorrect": false }
+      {
+        "text": "tutto a densità intermedia",
+        "isCorrect": true
+      },
+      {
+        "text": "metà pesante e metà leggero",
+        "isCorrect": false
+      },
+      {
+        "text": "tutto alla densità iniziale",
+        "isCorrect": false
+      },
+      {
+        "text": "tutto a densità leggera",
+        "isCorrect": false
+      },
+      {
+        "text": "a tratti pesanti e leggeri",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "Alla forcella replicativa, elicasi e topoisomerasi svolgono rispettivamente il compito di:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "Alla forcella replicativa l'elicasi:",
     "options": [
-      { "text": "Separare i due filamenti rompendo i legami a idrogeno, e allentare il superavvolgimento che si accumula davanti alla forcella tagliando e risaldando il DNA", "isCorrect": true },
-      { "text": "Allentare il superavvolgimento, e separare i due filamenti", "isCorrect": false },
-      { "text": "Sintetizzare l'innesco di RNA, e rimuoverlo al termine", "isCorrect": false },
-      { "text": "Correggere gli errori di appaiamento, e saldare i frammenti di Okazaki", "isCorrect": false },
-      { "text": "Impedire la riassociazione dei filamenti separati, e aggiungere nucleotidi al filamento guida", "isCorrect": false }
+      {
+        "text": "separa i due filamenti",
+        "isCorrect": true
+      },
+      {
+        "text": "allenta il superavvolgimento",
+        "isCorrect": false
+      },
+      {
+        "text": "sintetizza l'innesco a RNA",
+        "isCorrect": false
+      },
+      {
+        "text": "salda i frammenti di Okazaki",
+        "isCorrect": false
+      },
+      {
+        "text": "corregge gli errori di appaiamento",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "La primasi è indispensabile alla replicazione perché le DNA polimerasi:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "La primasi è indispensabile perché le DNA polimerasi:",
     "options": [
-      { "text": "Sanno soltanto allungare una catena preesistente e richiedono un'estremità 3'-OH libera da cui partire", "isCorrect": true },
-      { "text": "Non riconoscono il DNA a singolo filamento come stampo", "isCorrect": false },
-      { "text": "Lavorano esclusivamente in direzione 3'-5'", "isCorrect": false },
-      { "text": "Sono inattive finché non si lega l'elicasi", "isCorrect": false },
-      { "text": "Non sono in grado di incorporare desossiribonucleotidi senza un cofattore a RNA", "isCorrect": false }
+      {
+        "text": "allungano solo una catena esistente",
+        "isCorrect": true
+      },
+      {
+        "text": "non riconoscono il filamento singolo",
+        "isCorrect": false
+      },
+      {
+        "text": "lavorano in direzione 3'-5'",
+        "isCorrect": false
+      },
+      {
+        "text": "restano inattive senza l'elicasi",
+        "isCorrect": false
+      },
+      {
+        "text": "non incorporano desossiribonucleotidi",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "Il filamento ritardato viene sintetizzato in modo discontinuo perché:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "Il filamento ritardato è discontinuo perché le DNA polimerasi:",
     "options": [
-      { "text": "Le DNA polimerasi allungano solo in direzione 5'-3' e sul filamento stampo orientato in modo opposto la sintesi deve ripartire via via che la forcella avanza", "isCorrect": true },
-      { "text": "Le DNA polimerasi che lo copiano sono meno processive e si staccano a intervalli regolari", "isCorrect": false },
-      { "text": "Su quel filamento mancano le sequenze di origine della replicazione", "isCorrect": false },
-      { "text": "L'elicasi lo separa a tratti e non in modo continuo", "isCorrect": false },
-      { "text": "La ligasi lo taglia periodicamente per permettere la correzione degli errori", "isCorrect": false }
+      {
+        "text": "allungano solo in direzione 5'-3'",
+        "isCorrect": true
+      },
+      {
+        "text": "si staccano a intervalli regolari",
+        "isCorrect": false
+      },
+      {
+        "text": "non trovano origini di replicazione",
+        "isCorrect": false
+      },
+      {
+        "text": "seguono l'elicasi che apre a tratti",
+        "isCorrect": false
+      },
+      {
+        "text": "vengono tagliate via dalla ligasi",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "L'attività esonucleasica 3'-5' delle DNA polimerasi replicative serve a:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "L'attività esonucleasica 3'-5' delle DNA polimerasi serve a:",
     "options": [
-      { "text": "Rimuovere il nucleotide appena incorporato quando è mal appaiato, abbassando di ordini di grandezza la frequenza di errore", "isCorrect": true },
-      { "text": "Eliminare l'innesco di RNA al termine di ogni frammento di Okazaki", "isCorrect": false },
-      { "text": "Degradare il filamento stampo una volta copiato", "isCorrect": false },
-      { "text": "Tagliare il DNA per permettere l'inserzione delle topoisomerasi", "isCorrect": false },
-      { "text": "Accorciare i telomeri a ogni ciclo replicativo", "isCorrect": false }
+      {
+        "text": "togliere il nucleotide mal appaiato",
+        "isCorrect": true
+      },
+      {
+        "text": "eliminare l'innesco a RNA",
+        "isCorrect": false
+      },
+      {
+        "text": "degradare il filamento stampo",
+        "isCorrect": false
+      },
+      {
+        "text": "tagliare il DNA per la topoisomerasi",
+        "isCorrect": false
+      },
+      {
+        "text": "accorciare i telomeri a ogni ciclo",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "La telomerasi riesce ad allungare le estremità dei cromosomi perché:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "La telomerasi riesce ad allungare i telomeri perché:",
     "options": [
-      { "text": "È una trascrittasi inversa che porta con sé uno stampo a RNA complementare alla sequenza telomerica", "isCorrect": true },
-      { "text": "Copia il filamento ritardato usando come stampo il filamento guida già completato", "isCorrect": false },
-      { "text": "Salda fra loro le estremità di due cromosomi diversi", "isCorrect": false },
-      { "text": "Rimuove l'ultimo innesco di RNA e lo sostituisce con DNA", "isCorrect": false },
-      { "text": "Aggiunge nucleotidi in direzione 3'-5', al contrario delle altre polimerasi", "isCorrect": false }
+      {
+        "text": "porta con sé uno stampo a RNA",
+        "isCorrect": true
+      },
+      {
+        "text": "usa il filamento guida come stampo",
+        "isCorrect": false
+      },
+      {
+        "text": "salda fra loro due cromosomi",
+        "isCorrect": false
+      },
+      {
+        "text": "sostituisce l'innesco con DNA",
+        "isCorrect": false
+      },
+      {
+        "text": "allunga in direzione 3'-5'",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "Nelle cellule somatiche umane prive di telomerasi, l'accorciamento progressivo dei telomeri porta a:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "Nelle cellule somatiche l'accorciamento dei telomeri porta a:",
     "options": [
-      { "text": "Senescenza replicativa, cioè un arresto permanente del ciclo cellulare dopo un numero limitato di divisioni", "isCorrect": true },
-      { "text": "Un aumento della velocità di replicazione per compensare la perdita", "isCorrect": false },
-      { "text": "La perdita immediata dei geni essenziali situati al centro dei cromosomi", "isCorrect": false },
-      { "text": "La trasformazione tumorale della cellula entro poche divisioni", "isCorrect": false },
-      { "text": "L'attivazione automatica della meiosi al posto della mitosi", "isCorrect": false }
+      {
+        "text": "senescenza replicativa",
+        "isCorrect": true
+      },
+      {
+        "text": "trasformazione tumorale",
+        "isCorrect": false
+      },
+      {
+        "text": "replicazione più veloce",
+        "isCorrect": false
+      },
+      {
+        "text": "perdita dei geni centrali",
+        "isCorrect": false
+      },
+      {
+        "text": "ingresso in meiosi",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "In Escherichia coli, l'operone lac viene trascritto ad alto livello quando:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "In Escherichia coli l'operone lac è trascritto al massimo quando:",
     "options": [
-      { "text": "C'è lattosio, che inattiva il repressore, e manca glucosio, così il cAMP è alto e il complesso CAP-cAMP attiva il promotore", "isCorrect": true },
-      { "text": "Ci sono sia lattosio sia glucosio in abbondanza", "isCorrect": false },
-      { "text": "Mancano sia lattosio sia glucosio", "isCorrect": false },
-      { "text": "C'è glucosio e manca lattosio", "isCorrect": false },
-      { "text": "Il repressore è legato all'operatore e il cAMP è basso", "isCorrect": false }
+      {
+        "text": "c'è lattosio e manca glucosio",
+        "isCorrect": true
+      },
+      {
+        "text": "ci sono lattosio e glucosio",
+        "isCorrect": false
+      },
+      {
+        "text": "mancano lattosio e glucosio",
+        "isCorrect": false
+      },
+      {
+        "text": "c'è glucosio e manca lattosio",
+        "isCorrect": false
+      },
+      {
+        "text": "il repressore è sull'operatore",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "La repressione da catabolita nei batteri si basa sul fatto che:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "Nella repressione da catabolita il glucosio agisce:",
     "options": [
-      { "text": "La presenza di glucosio abbassa il cAMP intracellulare, e senza il complesso CAP-cAMP i promotori degli operoni catabolici restano poco efficienti", "isCorrect": true },
-      { "text": "Il glucosio si lega direttamente al repressore e lo attiva", "isCorrect": false },
-      { "text": "Il glucosio degrada il messaggero dell'operone appena trascritto", "isCorrect": false },
-      { "text": "Il glucosio impedisce alla RNA polimerasi di sintetizzare qualsiasi messaggero", "isCorrect": false },
-      { "text": "Il glucosio blocca la traduzione delle proteine codificate dall'operone", "isCorrect": false }
+      {
+        "text": "abbassando il cAMP intracellulare",
+        "isCorrect": true
+      },
+      {
+        "text": "legandosi e attivando il repressore",
+        "isCorrect": false
+      },
+      {
+        "text": "degradando il messaggero trascritto",
+        "isCorrect": false
+      },
+      {
+        "text": "bloccando del tutto la RNA polimerasi",
+        "isCorrect": false
+      },
+      {
+        "text": "impedendo la traduzione dell'operone",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "Una differenza sostanziale fra i geni procariotici e quelli eucariotici è che:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "Nei procarioti, a differenza degli eucarioti, il messaggero è:",
     "options": [
-      { "text": "Nei procarioti più geni di una stessa via sono trascritti insieme in un messaggero policistronico, mentre negli eucarioti ogni messaggero è di norma monocistronico", "isCorrect": true },
-      { "text": "Nei procarioti i geni hanno introni e negli eucarioti no", "isCorrect": false },
-      { "text": "Nei procarioti la trascrizione avviene nel nucleo e negli eucarioti nel citoplasma", "isCorrect": false },
-      { "text": "Nei procarioti manca il promotore", "isCorrect": false },
-      { "text": "Nei procarioti il codice genetico è diverso da quello eucariotico", "isCorrect": false }
+      {
+        "text": "spesso policistronico",
+        "isCorrect": true
+      },
+      {
+        "text": "sempre monocistronico",
+        "isCorrect": false
+      },
+      {
+        "text": "interrotto da introni",
+        "isCorrect": false
+      },
+      {
+        "text": "trascritto dentro il nucleo",
+        "isCorrect": false
+      },
+      {
+        "text": "letto con un codice diverso",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "Le tre RNA polimerasi eucariotiche trascrivono rispettivamente:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "Negli eucarioti i messaggeri sono trascritti dalla RNA polimerasi:",
     "options": [
-      { "text": "La I i precursori degli rRNA maggiori, la II i messaggeri e molti RNA non codificanti, la III i tRNA, l'rRNA 5S e altri piccoli RNA", "isCorrect": true },
-      { "text": "La I i messaggeri, la II i tRNA, la III gli rRNA", "isCorrect": false },
-      { "text": "La I i tRNA, la II gli rRNA, la III i messaggeri", "isCorrect": false },
-      { "text": "Tutte e tre indifferentemente qualsiasi gene, secondo la disponibilità", "isCorrect": false },
-      { "text": "La I e la II i soli geni nucleari, la III i soli geni mitocondriali", "isCorrect": false }
+      {
+        "text": "II",
+        "isCorrect": true
+      },
+      {
+        "text": "I",
+        "isCorrect": false
+      },
+      {
+        "text": "III",
+        "isCorrect": false
+      },
+      {
+        "text": "IV",
+        "isCorrect": false
+      },
+      {
+        "text": "V",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
     "text": "Riguardo agli enhancer negli eucarioti, quale affermazione NON è corretta?",
     "options": [
-      { "text": "Devono trovarsi immediatamente a monte della TATA box per esercitare il loro effetto", "isCorrect": true },
-      { "text": "Possono agire a grande distanza dal promotore che regolano", "isCorrect": false },
-      { "text": "Funzionano in entrambi gli orientamenti", "isCorrect": false },
-      { "text": "Legano fattori di trascrizione specifici che vengono avvicinati al promotore dal ripiegamento del DNA", "isCorrect": false },
-      { "text": "Possono trovarsi a valle del gene o dentro un introne", "isCorrect": false }
+      {
+        "text": "Devono stare subito a monte della TATA box",
+        "isCorrect": true
+      },
+      {
+        "text": "Possono agire a grande distanza dal promotore",
+        "isCorrect": false
+      },
+      {
+        "text": "Funzionano in entrambi gli orientamenti",
+        "isCorrect": false
+      },
+      {
+        "text": "Legano fattori di trascrizione specifici",
+        "isCorrect": false
+      },
+      {
+        "text": "Possono trovarsi dentro un introne",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "Il cappuccio al 5' del messaggero eucariotico:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "Il cappuccio al 5' del messaggero eucariotico è:",
     "options": [
-      { "text": "È una 7-metilguanosina legata con un insolito legame 5'-5' trifosfato, che protegge dalle esonucleasi e serve all'inizio della traduzione e all'esportazione nucleare", "isCorrect": true },
-      { "text": "È una sequenza di adenine aggiunta dopo la trascrizione", "isCorrect": false },
-      { "text": "È il codone di inizio AUG riconosciuto dal ribosoma", "isCorrect": false },
-      { "text": "È un breve innesco di RNA lasciato dalla primasi", "isCorrect": false },
-      { "text": "È la sequenza che viene riconosciuta dallo spliceosoma per rimuovere il primo introne", "isCorrect": false }
+      {
+        "text": "una 7-metilguanosina",
+        "isCorrect": true
+      },
+      {
+        "text": "una coda di adenine",
+        "isCorrect": false
+      },
+      {
+        "text": "il codone di inizio AUG",
+        "isCorrect": false
+      },
+      {
+        "text": "un innesco a RNA",
+        "isCorrect": false
+      },
+      {
+        "text": "un sito di splicing",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "Lo splicing alternativo ha come conseguenza principale che:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "Lo splicing alternativo fa sì che:",
     "options": [
-      { "text": "Da un singolo gene possono derivare più proteine diverse, combinando in modi differenti gli esoni dello stesso trascritto primario", "isCorrect": true },
-      { "text": "Lo stesso messaggero viene tradotto più volte dallo stesso ribosoma", "isCorrect": false },
-      { "text": "Gli introni vengono tradotti insieme agli esoni", "isCorrect": false },
-      { "text": "Il gene viene duplicato nel genoma a ogni ciclo cellulare", "isCorrect": false },
-      { "text": "Il codice genetico cambia significato in tessuti diversi", "isCorrect": false }
+      {
+        "text": "un gene dia più proteine diverse",
+        "isCorrect": true
+      },
+      {
+        "text": "un messaggero sia tradotto più volte",
+        "isCorrect": false
+      },
+      {
+        "text": "gli introni vengano tradotti",
+        "isCorrect": false
+      },
+      {
+        "text": "il gene venga duplicato",
+        "isCorrect": false
+      },
+      {
+        "text": "il codice cambi fra i tessuti",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
     "text": "I microRNA regolano l'espressione genica perché:",
     "options": [
-      { "text": "Appaiandosi per complementarietà parziale alla regione 3' non tradotta dei messaggeri bersaglio, dentro un complesso ribonucleoproteico, ne reprimono la traduzione o ne accelerano la degradazione", "isCorrect": true },
-      { "text": "Si legano al promotore del gene impedendo l'attacco della RNA polimerasi", "isCorrect": false },
-      { "text": "Vengono tradotti in piccoli peptidi inibitori", "isCorrect": false },
-      { "text": "Rimuovono gli introni dal trascritto primario al posto dello spliceosoma", "isCorrect": false },
-      { "text": "Metilano direttamente il DNA nella regione codificante", "isCorrect": false }
+      {
+        "text": "si appaiano al 3' non tradotto",
+        "isCorrect": true
+      },
+      {
+        "text": "si legano al promotore del gene",
+        "isCorrect": false
+      },
+      {
+        "text": "sono tradotti in peptidi inibitori",
+        "isCorrect": false
+      },
+      {
+        "text": "rimuovono gli introni dal trascritto",
+        "isCorrect": false
+      },
+      {
+        "text": "metilano la regione codificante",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "Dire che il codice genetico è degenerato ma non ambiguo significa che:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "Dire che il codice genetico è degenerato significa che:",
     "options": [
-      { "text": "Un amminoacido può essere specificato da più codoni, ma ogni codone specifica un solo amminoacido", "isCorrect": true },
-      { "text": "Un codone può specificare più amminoacidi diversi a seconda del contesto", "isCorrect": false },
-      { "text": "Alcuni codoni non specificano alcun amminoacido e vengono saltati", "isCorrect": false },
-      { "text": "Il codice è uguale in tutti gli organismi senza eccezioni", "isCorrect": false },
-      { "text": "Ogni amminoacido è specificato da un solo codone in ciascun organismo", "isCorrect": false }
+      {
+        "text": "più codoni danno lo stesso amminoacido",
+        "isCorrect": true
+      },
+      {
+        "text": "un codone dà più amminoacidi diversi",
+        "isCorrect": false
+      },
+      {
+        "text": "alcuni codoni non sono mai letti",
+        "isCorrect": false
+      },
+      {
+        "text": "il codice è identico in tutte le specie",
+        "isCorrect": false
+      },
+      {
+        "text": "ogni amminoacido ha un solo codone",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "La fedeltà della traduzione dipende in misura decisiva dalle aminoacil-tRNA sintetasi perché:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "La fedeltà della traduzione dipende dalle aminoacil-tRNA sintetasi perché:",
     "options": [
-      { "text": "Sono loro a legare ciascun amminoacido al tRNA corretto: il ribosoma controlla poi solo l'appaiamento codone-anticodone, non l'identità dell'amminoacido trasportato", "isCorrect": true },
-      { "text": "Leggono il codone sul messaggero prima che arrivi il tRNA", "isCorrect": false },
-      { "text": "Correggono gli errori di appaiamento fra codone e anticodone nel sito A", "isCorrect": false },
-      { "text": "Sintetizzano il legame peptidico fra amminoacidi successivi", "isCorrect": false },
-      { "text": "Rimuovono dal ribosoma i tRNA scarichi al termine di ogni ciclo", "isCorrect": false }
+      {
+        "text": "legano ogni amminoacido al tRNA giusto",
+        "isCorrect": true
+      },
+      {
+        "text": "leggono il codone prima del tRNA",
+        "isCorrect": false
+      },
+      {
+        "text": "correggono l'appaiamento nel sito A",
+        "isCorrect": false
+      },
+      {
+        "text": "formano il legame peptidico",
+        "isCorrect": false
+      },
+      {
+        "text": "espellono i tRNA scarichi",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "Nella degradazione proteasomica ubiquitina-dipendente:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "Nella degradazione proteasomica la proteina bersaglio viene marcata da:",
     "options": [
-      { "text": "Una catena di poliubiquitina viene legata alla proteina da una cascata di enzimi E1, E2 ed E3, e il proteasoma 26S la riconosce, la srotola e la degrada consumando ATP", "isCorrect": true },
-      { "text": "L'ubiquitina taglia direttamente i legami peptidici della proteina bersaglio", "isCorrect": false },
-      { "text": "La proteina viene inglobata in un lisosoma insieme all'ubiquitina", "isCorrect": false },
-      { "text": "Il proteasoma riconosce le proteine dalla loro sequenza segnale amino-terminale", "isCorrect": false },
-      { "text": "L'ubiquitinazione stabilizza la proteina proteggendola dalla degradazione", "isCorrect": false }
+      {
+        "text": "una catena di poliubiquitina",
+        "isCorrect": true
+      },
+      {
+        "text": "una sequenza segnale amino-terminale",
+        "isCorrect": false
+      },
+      {
+        "text": "un gruppo fosfato sulla lisina",
+        "isCorrect": false
+      },
+      {
+        "text": "una catena oligosaccaridica",
+        "isCorrect": false
+      },
+      {
+        "text": "un ponte disolfuro interno",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "Le proteine chaperon intervengono nel ripiegamento perché:",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "Le proteine chaperon favoriscono il ripiegamento perché:",
     "options": [
-      { "text": "Legano le superfici idrofobiche esposte dalle catene non ancora ripiegate, impedendo aggregazioni scorrette e dando alla proteina altre occasioni di raggiungere la forma giusta", "isCorrect": true },
-      { "text": "Dettano alla catena la conformazione finale, che altrimenti non sarebbe contenuta nella sequenza", "isCorrect": false },
-      { "text": "Tagliano la proteina nei punti in cui il ripiegamento è errato", "isCorrect": false },
-      { "text": "Aggiungono gruppi fosfato che stabilizzano la struttura terziaria", "isCorrect": false },
-      { "text": "Trasportano la proteina ripiegata fino al suo compartimento di destinazione", "isCorrect": false }
+      {
+        "text": "legano le superfici idrofobiche esposte",
+        "isCorrect": true
+      },
+      {
+        "text": "dettano la conformazione finale",
+        "isCorrect": false
+      },
+      {
+        "text": "tagliano i tratti ripiegati male",
+        "isCorrect": false
+      },
+      {
+        "text": "fosforilano la struttura terziaria",
+        "isCorrect": false
+      },
+      {
+        "text": "trasportano la proteina a destinazione",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Biologia", "topic": "SF-BIO-03",
-    "text": "Negli eucarioti il controllo dell'espressione genica si esercita a più livelli. Quale fra questi NON è un controllo post-trascrizionale?",
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "text": "Negli eucarioti, quale di questi NON è un controllo post-trascrizionale?",
     "options": [
-      { "text": "Il legame di un fattore di trascrizione specifico a un enhancer", "isCorrect": true },
-      { "text": "Lo splicing alternativo del trascritto primario", "isCorrect": false },
-      { "text": "La regolazione della stabilità del messaggero per deadenilazione", "isCorrect": false },
-      { "text": "L'editing dell'RNA", "isCorrect": false },
-      { "text": "L'esportazione selettiva del messaggero maturo dal nucleo", "isCorrect": false }
+      {
+        "text": "Il legame di un fattore a un enhancer",
+        "isCorrect": true
+      },
+      {
+        "text": "Lo splicing alternativo del trascritto",
+        "isCorrect": false
+      },
+      {
+        "text": "La deadenilazione del messaggero",
+        "isCorrect": false
+      },
+      {
+        "text": "L'editing dell'RNA messaggero",
+        "isCorrect": false
+      },
+      {
+        "text": "L'esportazione selettiva dal nucleo",
+        "isCorrect": false
+      }
     ]
   },
-
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "L'enzima che separa i due filamenti del DNA alla forcella replicativa rompendo i legami a idrogeno è l'……",
-    "options": [{ "text": "elicasi", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "elicasi",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "L'enzima che sintetizza il breve innesco di RNA da cui parte la DNA polimerasi è la ……",
-    "options": [{ "text": "primasi", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "primasi",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "I brevi segmenti di DNA che compongono il filamento ritardato sono detti frammenti di ……",
-    "options": [{ "text": "Okazaki", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "Okazaki",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "L'enzima che salda fra loro i frammenti del filamento discontinuo formando il legame fosfodiesterico mancante è la DNA ……",
-    "options": [{ "text": "ligasi", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "ligasi",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "L'enzima a RNA che allunga le estremità dei cromosomi contrastandone l'accorciamento è la ……",
-    "options": [{ "text": "telomerasi", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "telomerasi",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "Le sequenze non codificanti che vengono rimosse dal trascritto primario durante la maturazione si chiamano ……",
-    "options": [{ "text": "introni", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "introni",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "Il complesso ribonucleoproteico che rimuove gli introni e salda gli esoni è lo ……",
-    "options": [{ "text": "spliceosoma", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "spliceosoma",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "Negli eucarioti i geni che codificano proteine sono trascritti dalla RNA polimerasi numero ……",
-    "options": [{ "text": "II", "isCorrect": true }, { "text": "2", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "II",
+        "isCorrect": true
+      },
+      {
+        "text": "2",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "La sequenza consenso ricca di adenine e timine situata una trentina di nucleotidi a monte del sito di inizio della trascrizione è la …… box",
-    "options": [{ "text": "TATA", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "TATA",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "La coda di nucleotidi aggiunta all'estremità 3' del messaggero eucariotico è detta coda di ……",
-    "options": [{ "text": "poli-A", "isCorrect": true }, { "text": "poliA", "isCorrect": true }, { "text": "poliadenina", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "poli-A",
+        "isCorrect": true
+      },
+      {
+        "text": "poliA",
+        "isCorrect": true
+      },
+      {
+        "text": "poliadenina",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "I piccoli RNA non codificanti che reprimono la traduzione dei messaggeri bersaglio si indicano con la sigla ……",
-    "options": [{ "text": "miRNA", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "miRNA",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "La piccola proteina che, legata in catena a un substrato, lo marca per la degradazione proteasomica è l'……",
-    "options": [{ "text": "ubiquitina", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "ubiquitina",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "Il complesso proteolitico che degrada le proteine poliubiquitinate consumando ATP è il ……",
-    "options": [{ "text": "proteasoma", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "proteasoma",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "Il codone che dà inizio alla traduzione e codifica la metionina è ……",
-    "options": [{ "text": "AUG", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "AUG",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "Quanti sono i codoni di stop del codice genetico? ……",
-    "options": [{ "text": "3", "isCorrect": true }, { "text": "tre", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "3",
+        "isCorrect": true
+      },
+      {
+        "text": "tre",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "La tripletta del tRNA che si appaia per complementarietà al codone del messaggero è l'……",
-    "options": [{ "text": "anticodone", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "anticodone",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "Le proteine che assistono il ripiegamento delle catene neosintetizzate impedendone l'aggregazione sono gli ……",
-    "options": [{ "text": "chaperoni", "isCorrect": true }, { "text": "chaperon", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "chaperoni",
+        "isCorrect": true
+      },
+      {
+        "text": "chaperon",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "La proteina che, legata al cAMP, attiva la trascrizione degli operoni catabolici in assenza di glucosio si indica con la sigla ……",
-    "options": [{ "text": "CAP", "isCorrect": true }, { "text": "CRP", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "CAP",
+        "isCorrect": true
+      },
+      {
+        "text": "CRP",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "Un messaggero batterico che porta le informazioni per più proteine diverse si dice ……",
-    "options": [{ "text": "policistronico", "isCorrect": true }] },
-  { "subject": "Biologia", "topic": "SF-BIO-03", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "policistronico",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "type": "COMPLETAMENTO",
     "text": "Il nucleotide modificato aggiunto all'estremità 5' del messaggero eucariotico è una 7-metil……",
-    "options": [{ "text": "guanosina", "isCorrect": true }] }
+    "options": [
+      {
+        "text": "guanosina",
+        "isCorrect": true
+      }
+    ]
+  }
 ]

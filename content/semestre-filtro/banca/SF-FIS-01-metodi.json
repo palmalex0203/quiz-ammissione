@@ -59,23 +59,23 @@
     "text": "Una massa di 2,5 g espressa in chilogrammi vale:",
     "options": [
       {
-        "text": "2,5 x 10 alla meno 3 kg",
+        "text": "2,5 x 10^-3 kg",
         "isCorrect": true
       },
       {
-        "text": "2,5 x 10 alla 3 kg",
+        "text": "2,5 x 10^-2 kg",
         "isCorrect": false
       },
       {
-        "text": "0,25 kg",
+        "text": "2,5 x 10^-6 kg",
         "isCorrect": false
       },
       {
-        "text": "2,5 x 10 alla meno 6 kg",
+        "text": "2,5 x 10^3 kg",
         "isCorrect": false
       },
       {
-        "text": "25 kg",
+        "text": "0,25 x 10^-1 kg",
         "isCorrect": false
       }
     ]
@@ -137,26 +137,26 @@
   {
     "subject": "Fisica",
     "topic": "SF-FIS-01",
-    "text": "Che cosa distingue una grandezza intensiva da una estensiva?",
+    "text": "Una grandezza intensiva, a differenza di una estensiva:",
     "options": [
       {
-        "text": "L'intensiva non dipende dalla quantità di materia considerata, come la temperatura o la densità; l'estensiva è additiva e cresce con il sistema, come massa, volume ed energia",
+        "text": "non dipende dalla quantità di materia",
         "isCorrect": true
       },
       {
-        "text": "L'intensiva è sempre vettoriale, l'estensiva sempre scalare",
+        "text": "dipende dalla quantità di materia",
         "isCorrect": false
       },
       {
-        "text": "L'intensiva si misura con strumenti diretti, l'estensiva solo per via indiretta",
+        "text": "è sempre una grandezza vettoriale",
         "isCorrect": false
       },
       {
-        "text": "L'estensiva non dipende dalla quantità di materia, l'intensiva sì",
+        "text": "si misura solo per via indiretta",
         "isCorrect": false
       },
       {
-        "text": "L'intensiva ha dimensioni fisiche, l'estensiva è sempre adimensionale",
+        "text": "è sempre adimensionale",
         "isCorrect": false
       }
     ]
@@ -164,26 +164,26 @@
   {
     "subject": "Fisica",
     "topic": "SF-FIS-01",
-    "text": "Quale di queste grandezze è una grandezza vettoriale?",
+    "text": "Quale di queste grandezze è vettoriale?",
     "options": [
       {
-        "text": "L'accelerazione",
+        "text": "l'accelerazione",
         "isCorrect": true
       },
       {
-        "text": "La temperatura",
+        "text": "la temperatura",
         "isCorrect": false
       },
       {
-        "text": "L'energia cinetica",
+        "text": "l'energia cinetica",
         "isCorrect": false
       },
       {
-        "text": "La massa",
+        "text": "la massa inerziale",
         "isCorrect": false
       },
       {
-        "text": "Il tempo",
+        "text": "l'intervallo di tempo",
         "isCorrect": false
       }
     ]
@@ -218,26 +218,26 @@
   {
     "subject": "Fisica",
     "topic": "SF-FIS-01",
-    "text": "Sommando due vettori si ottiene un vettore il cui modulo è la differenza dei loro moduli. I due vettori:",
+    "text": "Sommando due vettori si ottiene un modulo pari alla differenza dei moduli: i due vettori:",
     "options": [
       {
-        "text": "Hanno la stessa direzione e versi opposti",
+        "text": "hanno versi opposti",
         "isCorrect": true
       },
       {
-        "text": "Hanno la stessa direzione e lo stesso verso",
+        "text": "hanno lo stesso verso",
         "isCorrect": false
       },
       {
-        "text": "Sono perpendicolari fra loro",
+        "text": "sono perpendicolari",
         "isCorrect": false
       },
       {
-        "text": "Formano un angolo acuto",
+        "text": "formano un angolo acuto",
         "isCorrect": false
       },
       {
-        "text": "Formano un angolo ottuso qualsiasi",
+        "text": "formano un angolo ottuso",
         "isCorrect": false
       }
     ]
@@ -272,26 +272,26 @@
   {
     "subject": "Fisica",
     "topic": "SF-FIS-01",
-    "text": "Il prodotto scalare di due vettori:",
+    "text": "Il prodotto scalare di due vettori è:",
     "options": [
       {
-        "text": "È un numero, pari al prodotto dei moduli per il coseno dell'angolo compreso, e si annulla quando i vettori sono perpendicolari",
+        "text": "un numero, con il coseno dell'angolo",
         "isCorrect": true
       },
       {
-        "text": "È un vettore perpendicolare al piano dei due, di modulo pari al prodotto dei moduli per il seno dell'angolo",
+        "text": "un vettore perpendicolare ai due",
         "isCorrect": false
       },
       {
-        "text": "È un numero pari al prodotto dei moduli per il seno dell'angolo compreso",
+        "text": "un numero, con il seno dell'angolo",
         "isCorrect": false
       },
       {
-        "text": "È sempre uguale al prodotto dei moduli, qualunque sia l'angolo",
+        "text": "sempre il prodotto dei moduli",
         "isCorrect": false
       },
       {
-        "text": "È massimo quando i due vettori sono perpendicolari",
+        "text": "massimo per vettori perpendicolari",
         "isCorrect": false
       }
     ]
@@ -299,26 +299,26 @@
   {
     "subject": "Fisica",
     "topic": "SF-FIS-01",
-    "text": "Il prodotto vettoriale di due vettori paralleli:",
+    "text": "Il prodotto vettoriale di due vettori paralleli è:",
     "options": [
       {
-        "text": "È il vettore nullo, perché il seno dell'angolo compreso vale zero",
+        "text": "il vettore nullo",
         "isCorrect": true
       },
       {
-        "text": "Ha modulo massimo, pari al prodotto dei moduli",
+        "text": "un vettore di modulo massimo",
         "isCorrect": false
       },
       {
-        "text": "È un numero pari al prodotto dei moduli",
+        "text": "un numero pari ai moduli",
         "isCorrect": false
       },
       {
-        "text": "È un vettore giacente sulla stessa retta dei due",
+        "text": "un vettore sulla stessa retta",
         "isCorrect": false
       },
       {
-        "text": "Non è definito",
+        "text": "una quantità non definita",
         "isCorrect": false
       }
     ]
@@ -380,26 +380,26 @@
   {
     "subject": "Fisica",
     "topic": "SF-FIS-01",
-    "text": "Il numero di Reynolds, che distingue il moto laminare da quello turbolento, nel Sistema Internazionale si misura:",
+    "text": "Nel Sistema Internazionale il numero di Reynolds si misura:",
     "options": [
       {
-        "text": "Non si misura in alcuna unità: è una grandezza adimensionale",
+        "text": "in nessuna unità: è adimensionale",
         "isCorrect": true
       },
       {
-        "text": "In pascal per secondo diviso metro",
+        "text": "in pascal per secondo su metro",
         "isCorrect": false
       },
       {
-        "text": "In chilogrammi per metro al secondo quadrato",
+        "text": "in chilogrammi per metro quadrato",
         "isCorrect": false
       },
       {
-        "text": "In ohm",
+        "text": "in ohm per metro",
         "isCorrect": false
       },
       {
-        "text": "In metri cubi al secondo",
+        "text": "in metri cubi al secondo",
         "isCorrect": false
       }
     ]

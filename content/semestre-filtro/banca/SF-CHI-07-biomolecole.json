@@ -2,26 +2,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Tutti gli amminoacidi proteici hanno un carbonio alfa chirale tranne uno. Quale, e perché?",
+    "text": "Fra gli amminoacidi proteici l'unico non chirale al carbonio alfa è:",
     "options": [
       {
-        "text": "La glicina: la sua catena laterale è un atomo di idrogeno, dunque il carbonio alfa porta due sostituenti identici e non è un centro chirale",
+        "text": "la glicina",
         "isCorrect": true
       },
       {
-        "text": "La prolina, perché il suo azoto è impegnato in un anello",
+        "text": "la prolina",
         "isCorrect": false
       },
       {
-        "text": "L'alanina, perché la sua catena laterale è un semplice metile",
+        "text": "l'alanina",
         "isCorrect": false
       },
       {
-        "text": "La cisteina, perché il suo zolfo sostituisce l'ossigeno",
+        "text": "la cisteina",
         "isCorrect": false
       },
       {
-        "text": "La serina, perché il gruppo ossidrilico neutralizza la chiralità",
+        "text": "la serina",
         "isCorrect": false
       }
     ]
@@ -32,23 +32,23 @@
     "text": "Gli amminoacidi che costituiscono le proteine appartengono:",
     "options": [
       {
-        "text": "Alla serie L secondo la convenzione di Fischer, mentre gli zuccheri naturali appartengono prevalentemente alla serie D",
+        "text": "alla serie L",
         "isCorrect": true
       },
       {
-        "text": "Alla serie D, come gli zuccheri naturali",
+        "text": "alla serie D",
         "isCorrect": false
       },
       {
-        "text": "Indifferentemente alle due serie, perché il ribosoma non distingue fra loro",
+        "text": "a entrambe le serie",
         "isCorrect": false
       },
       {
-        "text": "Alla serie L se polari e alla serie D se apolari",
+        "text": "a L se polari, a D se apolari",
         "isCorrect": false
       },
       {
-        "text": "A nessuna delle due serie, perché non sono molecole chirali",
+        "text": "a nessuna: non sono chirali",
         "isCorrect": false
       }
     ]
@@ -56,26 +56,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Quali fra questi amminoacidi hanno catena laterale carica negativamente a pH fisiologico?",
+    "text": "Quali fra questi amminoacidi hanno catena laterale negativa a pH fisiologico?",
     "options": [
       {
-        "text": "Aspartato e glutammato",
+        "text": "aspartato e glutammato",
         "isCorrect": true
       },
       {
-        "text": "Lisina e arginina",
+        "text": "lisina e arginina",
         "isCorrect": false
       },
       {
-        "text": "Serina e treonina",
+        "text": "serina e treonina",
         "isCorrect": false
       },
       {
-        "text": "Leucina e valina",
+        "text": "leucina e valina",
         "isCorrect": false
       },
       {
-        "text": "Asparagina e glutammina",
+        "text": "asparagina e glutammina",
         "isCorrect": false
       }
     ]
@@ -83,26 +83,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Che cosa definisce il punto isoelettrico di un amminoacido o di una proteina?",
+    "text": "Il punto isoelettrico è il pH al quale la molecola:",
     "options": [
       {
-        "text": "Il pH al quale la carica netta della molecola è nulla: in quel punto la solubilità è minima e in un campo elettrico la molecola non migra",
+        "text": "ha carica netta nulla",
         "isCorrect": true
       },
       {
-        "text": "Il pH al quale la molecola è completamente protonata e porta la massima carica positiva",
+        "text": "è del tutto protonata",
         "isCorrect": false
       },
       {
-        "text": "Il pH al quale la molecola raggiunge la massima solubilità in acqua",
+        "text": "è massimamente solubile",
         "isCorrect": false
       },
       {
-        "text": "Il valore di pH che corrisponde alla pKa del gruppo carbossilico",
+        "text": "eguaglia la pKa del carbossile",
         "isCorrect": false
       },
       {
-        "text": "Il pH al quale la proteina si denatura irreversibilmente",
+        "text": "si denatura in modo irreversibile",
         "isCorrect": false
       }
     ]
@@ -110,26 +110,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Un amminoacido neutro ha pKa 2,3 per il carbossile e 9,7 per il gruppo amminico. A pH 7 si trova prevalentemente:",
+    "text": "Un amminoacido neutro con pKa 2,3 e 9,7, a pH 7, si trova:",
     "options": [
       {
-        "text": "Come ione dipolare, con carbossile dissociato e gruppo amminico protonato: la carica netta è nulla",
+        "text": "come ione dipolare neutro",
         "isCorrect": true
       },
       {
-        "text": "Con entrambi i gruppi protonati e carica netta positiva",
+        "text": "protonato, con carica positiva",
         "isCorrect": false
       },
       {
-        "text": "Con entrambi i gruppi dissociati e carica netta negativa",
+        "text": "dissociato, con carica negativa",
         "isCorrect": false
       },
       {
-        "text": "In forma completamente neutra, con carbossile indissociato e ammina non protonata",
+        "text": "del tutto neutro e indissociato",
         "isCorrect": false
       },
       {
-        "text": "Come ione dipolare con carica netta positiva, perché a pH 7 prevale la protonazione",
+        "text": "come dipolo a carica positiva",
         "isCorrect": false
       }
     ]
@@ -137,26 +137,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Che cosa si intende per amminoacido essenziale?",
+    "text": "Un amminoacido essenziale è quello che l'organismo umano:",
     "options": [
       {
-        "text": "Un amminoacido che l'organismo umano non è in grado di sintetizzare e che deve essere assunto con la dieta: negli adulti sono nove",
+        "text": "non sa sintetizzare",
         "isCorrect": true
       },
       {
-        "text": "Un amminoacido indispensabile alla struttura di ogni proteina, e perciò presente in tutte",
+        "text": "usa in ogni proteina",
         "isCorrect": false
       },
       {
-        "text": "Un amminoacido che l'organismo sintetizza in quantità maggiore degli altri",
+        "text": "sintetizza in eccesso",
         "isCorrect": false
       },
       {
-        "text": "Un amminoacido che non può essere degradato ma solo riutilizzato",
+        "text": "non riesce a degradare",
         "isCorrect": false
       },
       {
-        "text": "Un amminoacido la cui catena laterale è sempre apolare",
+        "text": "ha sempre apolare",
         "isCorrect": false
       }
     ]
@@ -164,26 +164,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Il legame peptidico presenta un notevole carattere di doppio legame fra carbonio e azoto. Quali conseguenze strutturali ne derivano?",
+    "text": "Il carattere di doppio legame del legame peptidico fa sì che l'unità peptidica:",
     "options": [
       {
-        "text": "L'unità peptidica è planare e non ruota attorno al legame C-N, prevalentemente in configurazione trans: la libertà conformazionale resta solo attorno ai legami con il carbonio alfa",
+        "text": "sia planare e rigida",
         "isCorrect": true
       },
       {
-        "text": "Il legame peptidico ruota liberamente, e questo consente alla catena di assumere qualunque conformazione",
+        "text": "ruoti del tutto liberamente",
         "isCorrect": false
       },
       {
-        "text": "Il legame peptidico è più facilmente idrolizzabile di un estere",
+        "text": "sia facile da idrolizzare",
         "isCorrect": false
       },
       {
-        "text": "L'azoto porta una carica positiva permanente e il legame si comporta da base forte",
+        "text": "porti una carica positiva",
         "isCorrect": false
       },
       {
-        "text": "Il legame assume configurazione cis in tutte le proteine, tranne che nella prolina",
+        "text": "sia sempre in configurazione cis",
         "isCorrect": false
       }
     ]
@@ -191,26 +191,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Quali interazioni stabilizzano l'alfa elica di una proteina?",
+    "text": "L'alfa elica di una proteina è stabilizzata da:",
     "options": [
       {
-        "text": "Legami a idrogeno fra il carbonile di un residuo e l'ammide del quarto residuo successivo, lungo lo scheletro della catena",
+        "text": "legami a idrogeno dello scheletro",
         "isCorrect": true
       },
       {
-        "text": "Ponti disolfuro fra le catene laterali di cisteine adiacenti",
+        "text": "ponti disolfuro fra cisteine",
         "isCorrect": false
       },
       {
-        "text": "Legami ionici fra catene laterali acide e basiche contigue",
+        "text": "legami ionici fra catene laterali",
         "isCorrect": false
       },
       {
-        "text": "Legami covalenti fra i carboni alfa dei residui sovrapposti",
+        "text": "legami covalenti fra carboni alfa",
         "isCorrect": false
       },
       {
-        "text": "Interazioni idrofobiche fra le catene laterali apolari, che sono l'unico fattore in gioco",
+        "text": "interazioni idrofobiche laterali",
         "isCorrect": false
       }
     ]
@@ -218,26 +218,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "La struttura terziaria di una proteina globulare è mantenuta principalmente:",
+    "text": "La struttura terziaria di una proteina globulare è mantenuta soprattutto:",
     "options": [
       {
-        "text": "Dalle interazioni idrofobiche che raccolgono le catene laterali apolari all'interno, insieme a legami a idrogeno, interazioni ioniche e, dove presenti, ponti disolfuro",
+        "text": "dalle interazioni idrofobiche",
         "isCorrect": true
       },
       {
-        "text": "Esclusivamente dai ponti disolfuro, che sono i soli legami covalenti coinvolti",
+        "text": "dai soli ponti disolfuro",
         "isCorrect": false
       },
       {
-        "text": "Dai legami peptidici fra residui non consecutivi della catena",
+        "text": "dai legami peptidici interni",
         "isCorrect": false
       },
       {
-        "text": "Dalla ripetizione regolare dei legami a idrogeno dello scheletro, come nell'alfa elica",
+        "text": "dai legami a idrogeno ripetuti",
         "isCorrect": false
       },
       {
-        "text": "Dall'associazione di più catene polipeptidiche distinte",
+        "text": "dall'unione di più catene",
         "isCorrect": false
       }
     ]
@@ -245,26 +245,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "L'emoglobina, formata da quattro catene, è un esempio di:",
+    "text": "L'emoglobina, formata da quattro catene, è un esempio di struttura:",
     "options": [
       {
-        "text": "Struttura quaternaria, cioè di associazione di subunità distinte tenute insieme da interazioni non covalenti",
+        "text": "quaternaria",
         "isCorrect": true
       },
       {
-        "text": "Struttura terziaria particolarmente estesa",
+        "text": "terziaria",
         "isCorrect": false
       },
       {
-        "text": "Struttura secondaria a foglietto beta",
+        "text": "secondaria",
         "isCorrect": false
       },
       {
-        "text": "Struttura primaria ramificata",
+        "text": "primaria",
         "isCorrect": false
       },
       {
-        "text": "Proteina fibrosa, come il collagene",
+        "text": "fibrosa",
         "isCorrect": false
       }
     ]
@@ -272,26 +272,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Nel collagene circa un terzo dei residui è costituito da un solo amminoacido. Quale, e perché proprio quello?",
+    "text": "Nel collagene circa un residuo su tre è costituito da:",
     "options": [
       {
-        "text": "La glicina: la sua catena laterale minima consente alle tre eliche di avvolgersi strettamente l'una sull'altra senza impedimenti sterici",
+        "text": "glicina",
         "isCorrect": true
       },
       {
-        "text": "La prolina, perché il suo anello rigido forma da sola l'intera tripla elica",
+        "text": "prolina",
         "isCorrect": false
       },
       {
-        "text": "La cisteina, perché i ponti disolfuro tengono unite le tre catene",
+        "text": "cisteina",
         "isCorrect": false
       },
       {
-        "text": "La lisina, perché le sue cariche positive si attraggono fra le catene",
+        "text": "lisina",
         "isCorrect": false
       },
       {
-        "text": "L'alanina, perché è l'amminoacido più abbondante in tutte le proteine",
+        "text": "alanina",
         "isCorrect": false
       }
     ]
@@ -299,26 +299,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Glucosio e fruttosio hanno la stessa formula bruta. In che rapporto stanno?",
+    "text": "Glucosio e fruttosio, a parità di formula bruta, sono:",
     "options": [
       {
-        "text": "Sono isomeri di funzione: il glucosio è un aldoesoso, il fruttosio un chetoesoso, e si interconvertono per isomerizzazione attraverso un intermedio enolico",
+        "text": "isomeri di funzione",
         "isCorrect": true
       },
       {
-        "text": "Sono enantiomeri, immagini speculari non sovrapponibili",
+        "text": "isomeri speculari",
         "isCorrect": false
       },
       {
-        "text": "Sono epimeri, perché differiscono per la configurazione di un solo centro chirale",
+        "text": "isomeri al carbonio 4",
         "isCorrect": false
       },
       {
-        "text": "Sono anomeri, perché differiscono al carbonio anomerico",
+        "text": "isomeri anomerici",
         "isCorrect": false
       },
       {
-        "text": "Non sono isomeri: hanno formule brute diverse",
+        "text": "non isomeri fra loro",
         "isCorrect": false
       }
     ]
@@ -326,26 +326,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Nell'organismo il galattosio può essere convertito in glucosio. Quale relazione c'è fra i due saccaridi?",
+    "text": "Galattosio e glucosio differiscono per un solo carbonio: sono dunque:",
     "options": [
       {
-        "text": "Sono epimeri, perché differiscono solo per la configurazione del C4",
+        "text": "epimeri",
         "isCorrect": true
       },
       {
-        "text": "Sono enantiomeri",
+        "text": "enantiomeri",
         "isCorrect": false
       },
       {
-        "text": "Sono tautomeri",
+        "text": "tautomeri",
         "isCorrect": false
       },
       {
-        "text": "Sono anomeri",
+        "text": "anomeri",
         "isCorrect": false
       },
       {
-        "text": "Non sono isomeri",
+        "text": "non isomeri",
         "isCorrect": false
       }
     ]
@@ -353,26 +353,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Che cosa distingue l'alfa-D-glucosio dal beta-D-glucosio?",
+    "text": "Alfa-D-glucosio e beta-D-glucosio differiscono per:",
     "options": [
       {
-        "text": "La configurazione dell'ossidrile sul carbonio anomerico, il C1, nato dalla ciclizzazione: sono anomeri e in soluzione si interconvertono dando la mutarotazione",
+        "text": "l'ossidrile sul carbonio anomerico",
         "isCorrect": true
       },
       {
-        "text": "La configurazione del C4, come negli epimeri",
+        "text": "la configurazione del carbonio 4",
         "isCorrect": false
       },
       {
-        "text": "L'appartenenza alla serie D o L secondo la convenzione di Fischer",
+        "text": "l'appartenenza alla serie D o L",
         "isCorrect": false
       },
       {
-        "text": "Il numero di atomi di carbonio dell'anello",
+        "text": "il numero di carboni dell'anello",
         "isCorrect": false
       },
       {
-        "text": "La natura del gruppo funzionale, aldeidico in uno e chetonico nell'altro",
+        "text": "il gruppo funzionale presente",
         "isCorrect": false
       }
     ]
@@ -380,26 +380,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Perché il saccarosio, a differenza del lattosio e del maltosio, non è uno zucchero riducente?",
+    "text": "Il saccarosio, a differenza del maltosio, non è uno zucchero riducente perché:",
     "options": [
       {
-        "text": "Perché il legame glicosidico impegna i carboni anomerici di entrambi i monosaccaridi: non resta alcun gruppo carbonilico libero, nemmeno in forma di emiacetale apribile",
+        "text": "impegna entrambi i carboni anomerici",
         "isCorrect": true
       },
       {
-        "text": "Perché è formato da due unità di glucosio invece che da monosaccaridi diversi",
+        "text": "è formato da due unità di glucosio",
         "isCorrect": false
       },
       {
-        "text": "Perché il suo legame glicosidico è di tipo beta e non alfa",
+        "text": "il suo legame glicosidico è beta",
         "isCorrect": false
       },
       {
-        "text": "Perché contiene fruttosio, e i chetosi non possono mai essere riducenti",
+        "text": "contiene fruttosio, un chetoso",
         "isCorrect": false
       },
       {
-        "text": "Perché la sua massa molecolare è troppo elevata per la reazione di Fehling",
+        "text": "ha massa molecolare troppo alta",
         "isCorrect": false
       }
     ]
@@ -407,26 +407,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "La reazione di Maillard, responsabile della glicazione dell'emoglobina misurata come HbA1c, comincia con:",
+    "text": "La reazione di Maillard, che glica l'emoglobina, consiste nell':",
     "options": [
       {
-        "text": "L'attacco di un gruppo amminico della proteina sul carbonile dello zucchero riducente, con formazione di una base di Schiff che poi si riarrangia nel più stabile prodotto di Amadori",
+        "text": "attacco di un'ammina sul carbonile",
         "isCorrect": true
       },
       {
-        "text": "L'ossidazione enzimatica del glucosio ad acido gluconico, che esterifica la proteina",
+        "text": "ossidazione enzimatica del glucosio",
         "isCorrect": false
       },
       {
-        "text": "La formazione di un legame glicosidico catalizzato da una glicosiltransferasi",
+        "text": "formazione di un legame glicosidico",
         "isCorrect": false
       },
       {
-        "text": "La riduzione del carbonile dello zucchero a opera di un gruppo tiolico della proteina",
+        "text": "riduzione del carbonile da un tiolo",
         "isCorrect": false
       },
       {
-        "text": "La decarbossilazione dello zucchero, che si lega poi covalentemente alla lisina",
+        "text": "decarbossilazione dello zucchero",
         "isCorrect": false
       }
     ]
@@ -434,26 +434,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Perché l'uomo digerisce l'amido ma non la cellulosa, pur essendo entrambi polimeri del glucosio?",
+    "text": "L'uomo digerisce l'amido ma non la cellulosa perché le amilasi riconoscono:",
     "options": [
       {
-        "text": "Perché le amilasi riconoscono solo il legame alfa-1,4 dell'amido, mentre la cellulosa è tenuta da legami beta-1,4 per i quali non possediamo enzimi",
+        "text": "solo il legame alfa-1,4",
         "isCorrect": true
       },
       {
-        "text": "Perché la cellulosa è un eteropolisaccaride e contiene zuccheri diversi dal glucosio",
+        "text": "solo il legame beta-1,4",
         "isCorrect": false
       },
       {
-        "text": "Perché la cellulosa è ramificata e le ramificazioni bloccano gli enzimi",
+        "text": "solo zuccheri diversi dal glucosio",
         "isCorrect": false
       },
       {
-        "text": "Perché la cellulosa è formata da fruttosio e non da glucosio",
+        "text": "solo i polimeri ramificati",
         "isCorrect": false
       },
       {
-        "text": "Perché la cellulosa non contiene legami glicosidici ma legami peptidici",
+        "text": "solo i legami peptidici",
         "isCorrect": false
       }
     ]
@@ -464,23 +464,23 @@
     "text": "Quale affermazione sul glicogeno è corretta?",
     "options": [
       {
-        "text": "È un omopolisaccaride di glucosio con legami alfa-1,4 e ramificazioni alfa-1,6, immagazzinato soprattutto nel fegato e nel muscolo",
+        "text": "È ramificato con legami alfa-1,6",
         "isCorrect": true
       },
       {
-        "text": "È un polisaccaride lineare, privo di ramificazioni",
+        "text": "È un polimero del tutto lineare",
         "isCorrect": false
       },
       {
-        "text": "È un eteropolisaccaride formato da glucosio e galattosio",
+        "text": "Contiene glucosio e galattosio",
         "isCorrect": false
       },
       {
-        "text": "È immagazzinato principalmente nel cervello",
+        "text": "Si accumula soprattutto nel cervello",
         "isCorrect": false
       },
       {
-        "text": "Presenta un solo tipo di legame glicosidico",
+        "text": "Ha un solo tipo di legame",
         "isCorrect": false
       }
     ]
@@ -488,26 +488,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Le ramificazioni alfa-1,6 del glicogeno hanno un vantaggio funzionale preciso:",
+    "text": "Le ramificazioni alfa-1,6 del glicogeno servono a:",
     "options": [
       {
-        "text": "Moltiplicano le estremità non riducenti su cui la glicogeno fosforilasi può agire contemporaneamente, così che il glucosio sia mobilizzabile molto rapidamente",
+        "text": "moltiplicare le estremità libere",
         "isCorrect": true
       },
       {
-        "text": "Rendono la molecola insolubile, in modo che non eserciti pressione osmotica",
+        "text": "rendere la molecola insolubile",
         "isCorrect": false
       },
       {
-        "text": "Permettono il legame covalente con le proteine di membrana",
+        "text": "legare le proteine di membrana",
         "isCorrect": false
       },
       {
-        "text": "Impediscono l'attacco delle amilasi, proteggendo la riserva",
+        "text": "impedire l'attacco delle amilasi",
         "isCorrect": false
       },
       {
-        "text": "Consentono al polimero di assumere una struttura fibrosa resistente alla trazione",
+        "text": "dare una struttura fibrosa",
         "isCorrect": false
       }
     ]
@@ -515,26 +515,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "I glicosamminoglicani della matrice extracellulare sono eteropolisaccaridi fortemente anionici. Da che cosa dipende questa carica e a che serve?",
+    "text": "La forte carica negativa dei glicosamminoglicani deriva:",
     "options": [
       {
-        "text": "Dai gruppi solfato e carbossilato delle unità ripetute: la densità di carica negativa richiama cationi e con essi acqua, dando alla matrice la capacità di resistere alla compressione",
+        "text": "dai gruppi solfato e carbossilato",
         "isCorrect": true
       },
       {
-        "text": "Dai gruppi amminici protonati degli amminozuccheri, che portano carica positiva",
+        "text": "dai gruppi amminici protonati",
         "isCorrect": false
       },
       {
-        "text": "Dai legami glicosidici beta, che liberano protoni in soluzione",
+        "text": "dai legami glicosidici beta",
         "isCorrect": false
       },
       {
-        "text": "Dalla presenza di fosfolipidi legati covalentemente alla catena",
+        "text": "dai fosfolipidi legati alla catena",
         "isCorrect": false
       },
       {
-        "text": "Dalla loro struttura ramificata, che espone estremità riducenti cariche",
+        "text": "dalle estremità riducenti esposte",
         "isCorrect": false
       }
     ]
@@ -542,26 +542,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Perché gli acidi grassi insaturi sono liquidi a temperatura ambiente, mentre quelli saturi sono solidi?",
+    "text": "Gli acidi grassi insaturi sono liquidi a temperatura ambiente perché:",
     "options": [
       {
-        "text": "Perché il doppio legame cis introduce un gomito nella catena che impedisce l'impaccamento regolare: le forze di van der Waals fra catene sono più deboli e il punto di fusione si abbassa",
+        "text": "il doppio legame cis piega la catena",
         "isCorrect": true
       },
       {
-        "text": "Perché gli acidi grassi insaturi hanno massa molecolare molto inferiore",
+        "text": "hanno massa molecolare molto minore",
         "isCorrect": false
       },
       {
-        "text": "Perché i doppi legami rendono la molecola polare e dunque solubile in acqua",
+        "text": "i doppi legami li rendono polari",
         "isCorrect": false
       },
       {
-        "text": "Perché gli acidi grassi insaturi formano legami a idrogeno fra loro, che li mantengono fluidi",
+        "text": "formano legami a idrogeno fra catene",
         "isCorrect": false
       },
       {
-        "text": "Perché gli acidi grassi saturi sono più corti e si impaccano con difficoltà",
+        "text": "sono più corti di quelli saturi",
         "isCorrect": false
       }
     ]
@@ -572,23 +572,23 @@
     "text": "Quale affermazione sui lipidi è corretta?",
     "options": [
       {
-        "text": "Sono generalmente idrofobi e lipofili, cioè insolubili in acqua e solubili nei solventi organici",
+        "text": "Sono idrofobi e lipofili",
         "isCorrect": true
       },
       {
-        "text": "Gli acidi grassi insaturi sono generalmente solidi a temperatura ambiente",
+        "text": "Gli insaturi sono solidi a 20 gradi",
         "isCorrect": false
       },
       {
-        "text": "Sono generalmente insolubili nei solventi organici",
+        "text": "Sono insolubili nei solventi organici",
         "isCorrect": false
       },
       {
-        "text": "Nessuno steroide appartiene alla classe dei lipidi",
+        "text": "Nessuno steroide è un lipide",
         "isCorrect": false
       },
       {
-        "text": "Gli unici acidi grassi saturi presenti nell'organismo sono l'acido stearico e l'acido palmitico",
+        "text": "Esiste un solo acido grasso saturo",
         "isCorrect": false
       }
     ]
@@ -596,26 +596,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Che cosa rende un glicerofosfolipide adatto a formare un doppio strato, cosa che un trigliceride non può fare?",
+    "text": "Un glicerofosfolipide forma un doppio strato e un trigliceride no perché è:",
     "options": [
       {
-        "text": "L'anfipaticità: nel fosfolipide il terzo ossidrile del glicerolo porta una testa fosforica polare invece di un terzo acido grasso, e la molecola ha quindi un'estremità idrofila e due code idrofobiche",
+        "text": "una molecola anfipatica",
         "isCorrect": true
       },
       {
-        "text": "La maggiore lunghezza delle catene degli acidi grassi del fosfolipide",
+        "text": "una molecola più lunga",
         "isCorrect": false
       },
       {
-        "text": "La presenza di un doppio legame in più in ciascuna catena",
+        "text": "una molecola più insatura",
         "isCorrect": false
       },
       {
-        "text": "Il fatto che il fosfolipide sia completamente idrofilo e il trigliceride completamente idrofobo",
+        "text": "del tutto idrofilo",
         "isCorrect": false
       },
       {
-        "text": "La presenza del colesterolo legato covalentemente alla testa polare",
+        "text": "legato al colesterolo",
         "isCorrect": false
       }
     ]
@@ -623,26 +623,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Gli sfingolipidi si distinguono dai glicerofosfolipidi perché:",
+    "text": "Gli sfingolipidi si distinguono dai glicerofosfolipidi perché hanno:",
     "options": [
       {
-        "text": "Lo scheletro non è il glicerolo ma la sfingosina, un amminoalcol a lunga catena che fornisce essa stessa una delle due code idrofobiche",
+        "text": "la sfingosina al posto del glicerolo",
         "isCorrect": true
       },
       {
-        "text": "Non contengono alcun gruppo polare e sono quindi del tutto idrofobici",
+        "text": "nessun gruppo polare",
         "isCorrect": false
       },
       {
-        "text": "Contengono tre acidi grassi invece di due",
+        "text": "tre acidi grassi invece di due",
         "isCorrect": false
       },
       {
-        "text": "Hanno il glicerolo esterificato con tre gruppi fosfato",
+        "text": "il glicerolo con tre fosfati",
         "isCorrect": false
       },
       {
-        "text": "Sono privi di azoto, a differenza dei glicerofosfolipidi",
+        "text": "nessun atomo di azoto",
         "isCorrect": false
       }
     ]
@@ -677,26 +677,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Gli acidi biliari derivano dal colesterolo e svolgono la loro funzione perché:",
+    "text": "Gli acidi biliari emulsionano i grassi perché il colesterolo vi è reso:",
     "options": [
       {
-        "text": "L'introduzione di gruppi ossidrilici e di una catena laterale carica li rende anfipatici: emulsionano i grassi alimentari aumentando la superficie accessibile alle lipasi",
+        "text": "anfipatico da ossidrili e carbossile",
         "isCorrect": true
       },
       {
-        "text": "Idrolizzano direttamente i trigliceridi, sostituendosi alle lipasi pancreatiche",
+        "text": "capace di idrolizzare i trigliceridi",
         "isCorrect": false
       },
       {
-        "text": "Sono completamente idrofobici e si dissolvono nei grassi, frammentandoli",
+        "text": "completamente idrofobico",
         "isCorrect": false
       },
       {
-        "text": "Trasportano il colesterolo nel sangue legandosi alle lipoproteine",
+        "text": "legabile alle lipoproteine",
         "isCorrect": false
       },
       {
-        "text": "Agiscono da ormoni steroidei legandosi a recettori nucleari dell'intestino",
+        "text": "attivo sui recettori nucleari",
         "isCorrect": false
       }
     ]
@@ -704,26 +704,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Che cosa distingue un nucleoside da un nucleotide?",
+    "text": "Il nucleotide si distingue dal nucleoside perché contiene in più:",
     "options": [
       {
-        "text": "Il nucleoside è formato dalla base azotata legata allo zucchero; il nucleotide ha in più uno o più gruppi fosfato esterificati all'ossidrile dello zucchero",
+        "text": "il gruppo fosfato",
         "isCorrect": true
       },
       {
-        "text": "Il nucleoside contiene il fosfato, il nucleotide no",
+        "text": "la base azotata",
         "isCorrect": false
       },
       {
-        "text": "Il nucleoside contiene ribosio, il nucleotide desossiribosio",
+        "text": "lo zucchero pentoso",
         "isCorrect": false
       },
       {
-        "text": "Il nucleoside è formato da due basi azotate unite fra loro",
+        "text": "una seconda base",
         "isCorrect": false
       },
       {
-        "text": "Il nucleotide contiene due zuccheri, il nucleoside uno solo",
+        "text": "un secondo zucchero",
         "isCorrect": false
       }
     ]
@@ -731,26 +731,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "L'idrolisi dell'ATP ad ADP e fosfato libera molta energia libera perché:",
+    "text": "L'idrolisi dell'ATP libera molta energia libera perché i fosfati:",
     "options": [
       {
-        "text": "I legami anidridici fra i fosfati sono destabilizzati dalla repulsione fra le cariche negative, e i prodotti sono stabilizzati per risonanza e per solvatazione più di quanto lo sia il reagente",
+        "text": "si respingono fra loro",
         "isCorrect": true
       },
       {
-        "text": "Il legame fra i fosfati è un legame covalente doppio, particolarmente ricco di energia",
+        "text": "sono uniti da un doppio legame",
         "isCorrect": false
       },
       {
-        "text": "L'energia è contenuta nel legame glicosidico fra adenina e ribosio, che si rompe insieme al fosfato",
+        "text": "sono legati all'adenina",
         "isCorrect": false
       },
       {
-        "text": "L'ATP è una molecola instabile che si decompone spontaneamente anche in assenza di acqua",
+        "text": "si decompongono da soli",
         "isCorrect": false
       },
       {
-        "text": "L'idrolisi libera anidride carbonica, che abbandonando il sistema rende il processo irreversibile",
+        "text": "liberano anidride carbonica",
         "isCorrect": false
       }
     ]
@@ -758,26 +758,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Quale differenza c'è fra il modo in cui NAD+ e FAD accettano gli equivalenti riducenti?",
+    "text": "NAD+ e FAD differiscono perché il NAD+ accetta:",
     "options": [
       {
-        "text": "Il NAD+ accetta due elettroni e un protone, cioè uno ione idruro, e lavora in soluzione; il FAD accetta due elettroni e due protoni e resta saldamente legato all'enzima come gruppo prostetico",
+        "text": "due elettroni e un protone",
         "isCorrect": true
       },
       {
-        "text": "Il NAD+ accetta un solo elettrone, il FAD quattro",
+        "text": "due elettroni e due protoni",
         "isCorrect": false
       },
       {
-        "text": "Entrambi accettano due elettroni e due protoni, e la distinzione è solo nella vitamina da cui derivano",
+        "text": "un solo elettrone",
         "isCorrect": false
       },
       {
-        "text": "Il NAD+ accetta protoni senza elettroni, il FAD elettroni senza protoni",
+        "text": "protoni senza elettroni",
         "isCorrect": false
       },
       {
-        "text": "Il FAD accetta gruppi fosfato, il NAD+ atomi di idrogeno",
+        "text": "soltanto gruppi fosfato",
         "isCorrect": false
       }
     ]
@@ -788,23 +788,23 @@
     "text": "Il legame fosfodiesterico degli acidi nucleici unisce:",
     "options": [
       {
-        "text": "L'ossidrile in 3' dello zucchero di un nucleotide con il fosfato in 5' del successivo, dando alla catena una direzionalità",
+        "text": "l'ossidrile 3' col fosfato 5'",
         "isCorrect": true
       },
       {
-        "text": "Due basi azotate complementari attraverso un gruppo fosfato",
+        "text": "due basi azotate complementari",
         "isCorrect": false
       },
       {
-        "text": "L'ossidrile in 2' del ribosio con l'azoto della base successiva",
+        "text": "l'ossidrile 2' con una base",
         "isCorrect": false
       },
       {
-        "text": "Due gruppi fosfato fra loro, con legame anidridico",
+        "text": "due gruppi fosfato fra loro",
         "isCorrect": false
       },
       {
-        "text": "Lo zucchero di un nucleotide con la base del nucleotide successivo",
+        "text": "lo zucchero con la base seguente",
         "isCorrect": false
       }
     ]
@@ -812,26 +812,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "La deaminazione spontanea della citosina nel DNA produce uracile. Perché questa lesione è riparabile, mentre quella della 5-metilcitosina è più insidiosa?",
+    "text": "La deaminazione della citosina dà uracile: la lesione è riparabile perché l'uracile:",
     "options": [
       {
-        "text": "Perché l'uracile è estraneo al DNA e viene riconosciuto e rimosso da una glicosilasi; la 5-metilcitosina deaminata dà invece timina, base legittima, e l'errore può sfuggire alla riparazione",
+        "text": "è estraneo al DNA",
         "isCorrect": true
       },
       {
-        "text": "Perché l'uracile non si appaia con alcuna base e blocca la replicazione, che si arresta senza danni",
+        "text": "non si appaia con nulla",
         "isCorrect": false
       },
       {
-        "text": "Perché la deaminazione della 5-metilcitosina produce adenina, base complementare corretta",
+        "text": "deriva dalla 5-metilcitosina",
         "isCorrect": false
       },
       {
-        "text": "Perché la 5-metilcitosina non è presente nel DNA umano",
+        "text": "non esiste nel DNA umano",
         "isCorrect": false
       },
       {
-        "text": "Perché l'uracile viene convertito spontaneamente in citosina dall'acqua",
+        "text": "torna citosina da solo",
         "isCorrect": false
       }
     ]
@@ -839,26 +839,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "La perossidazione lipidica innescata dal radicale ossidrile è particolarmente dannosa per le membrane perché:",
+    "text": "La perossidazione lipidica è particolarmente dannosa per le membrane perché:",
     "options": [
       {
-        "text": "Sottraendo un idrogeno allilico a un acido grasso polinsaturo genera un radicale che reagisce con l'ossigeno e propaga la reazione a catena ai lipidi vicini, con un solo radicale iniziale",
+        "text": "innesca una reazione a catena",
         "isCorrect": true
       },
       {
-        "text": "Ossida un singolo acido grasso e si esaurisce, ma quell'acido grasso è insostituibile",
+        "text": "ossida un solo acido grasso",
         "isCorrect": false
       },
       {
-        "text": "Idrolizza i legami esterei dei fosfolipidi liberando glicerolo",
+        "text": "idrolizza i legami esterei",
         "isCorrect": false
       },
       {
-        "text": "Trasforma i fosfolipidi in trigliceridi, che non formano doppi strati",
+        "text": "converte i fosfolipidi in trigliceridi",
         "isCorrect": false
       },
       {
-        "text": "Attacca selettivamente gli acidi grassi saturi, i più abbondanti nelle membrane",
+        "text": "attacca solo gli acidi grassi saturi",
         "isCorrect": false
       }
     ]
@@ -866,26 +866,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-07",
-    "text": "Il tocoferolo e i carotenoidi devono la loro attività antiossidante non enzimatica:",
+    "text": "L'attività antiossidante di tocoferolo e carotenoidi dipende:",
     "options": [
       {
-        "text": "Al sistema di doppi legami coniugati, che delocalizza l'elettrone spaiato del radicale generando una specie stabile e interrompendo così la catena di propagazione",
+        "text": "dai doppi legami coniugati",
         "isCorrect": true
       },
       {
-        "text": "Al loro gruppo tiolico, come nel glutatione",
+        "text": "dal loro gruppo tiolico",
         "isCorrect": false
       },
       {
-        "text": "Alla loro attività enzimatica di tipo superossido dismutasico",
+        "text": "da un'attività dismutasica",
         "isCorrect": false
       },
       {
-        "text": "Alla loro capacità di legare il ferro impedendo la reazione di Fenton, che è il loro unico meccanismo",
+        "text": "dalla capacità di legare il ferro",
         "isCorrect": false
       },
       {
-        "text": "Alla loro solubilità in acqua, che li porta nei compartimenti dove nascono i radicali",
+        "text": "dalla loro solubilità in acqua",
         "isCorrect": false
       }
     ]

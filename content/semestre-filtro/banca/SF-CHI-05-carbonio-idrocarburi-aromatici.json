@@ -29,26 +29,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "Perché il carbonio, pur non essendo fra gli elementi più abbondanti sulla Terra, è l'elemento su cui si costruisce la chimica della vita?",
+    "text": "Il carbonio è l'elemento su cui si fonda la chimica della vita perché:",
     "options": [
       {
-        "text": "Ha quattro elettroni di valenza e raggio piccolo: forma quattro legami covalenti stabili, anche con se stesso, in catene, anelli e geometrie diverse secondo l'ibridazione sp, sp2 o sp3",
+        "text": "forma quattro legami covalenti stabili",
         "isCorrect": true
       },
       {
-        "text": "Perché è l'unico elemento capace di formare legami covalenti con l'idrogeno",
+        "text": "è l'unico a legarsi all'idrogeno",
         "isCorrect": false
       },
       {
-        "text": "Perché la sua elevata elettronegatività gli consente di attrarre elettroni da qualunque altro elemento",
+        "text": "ha elettronegatività elevatissima",
         "isCorrect": false
       },
       {
-        "text": "Perché può assumere numeri di ossidazione solo positivi, e questo lo rende un buon riducente",
+        "text": "ha solo numeri di ossidazione positivi",
         "isCorrect": false
       },
       {
-        "text": "Perché forma esclusivamente legami ionici, molto più stabili di quelli covalenti",
+        "text": "forma esclusivamente legami ionici",
         "isCorrect": false
       }
     ]
@@ -83,26 +83,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "Che cosa distingue due enantiomeri da due diastereoisomeri?",
+    "text": "Gli enantiomeri, a differenza dei diastereoisomeri, sono:",
     "options": [
       {
-        "text": "Gli enantiomeri sono immagini speculari non sovrapponibili e hanno identiche proprietà fisiche tranne il segno del potere ottico rotatorio; i diastereoisomeri non sono immagini speculari e differiscono in punto di fusione, solubilità e reattività",
+        "text": "immagini speculari non sovrapponibili",
         "isCorrect": true
       },
       {
-        "text": "Gli enantiomeri differiscono per la formula bruta, i diastereoisomeri no",
+        "text": "isomeri con formula bruta diversa",
         "isCorrect": false
       },
       {
-        "text": "Gli enantiomeri hanno un solo centro chirale, i diastereoisomeri sempre più di cinque",
+        "text": "isomeri con un solo centro chirale",
         "isCorrect": false
       },
       {
-        "text": "Gli enantiomeri sono separabili per distillazione frazionata, i diastereoisomeri no",
+        "text": "separabili per distillazione",
         "isCorrect": false
       },
       {
-        "text": "I diastereoisomeri sono immagini speculari, gli enantiomeri sono isomeri di posizione",
+        "text": "isomeri di posizione",
         "isCorrect": false
       }
     ]
@@ -137,26 +137,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "Una miscela racemica è ottenuta mescolando quantità uguali dei due enantiomeri di un composto chirale. Che cosa si osserva al polarimetro?",
+    "text": "Una miscela racemica, sulla luce polarizzata, produce:",
     "options": [
       {
-        "text": "Nessuna rotazione del piano della luce polarizzata, perché i contributi opposti dei due enantiomeri si annullano",
+        "text": "nessuna rotazione",
         "isCorrect": true
       },
       {
-        "text": "Una rotazione doppia rispetto a quella del singolo enantiomero",
+        "text": "una rotazione doppia",
         "isCorrect": false
       },
       {
-        "text": "Una rotazione destrogira, perché la forma destrogira è sempre prevalente",
+        "text": "una rotazione destrogira",
         "isCorrect": false
       },
       {
-        "text": "Una rotazione che varia nel tempo mentre i due enantiomeri si interconvertono",
+        "text": "una rotazione variabile",
         "isCorrect": false
       },
       {
-        "text": "Nessuna rotazione, perché la miscela non contiene centri chirali",
+        "text": "una rotazione levogira",
         "isCorrect": false
       }
     ]
@@ -167,23 +167,23 @@
     "text": "Le convenzioni D/L di Fischer e R/S di Cahn, Ingold e Prelog:",
     "options": [
       {
-        "text": "Sono sistemi indipendenti: la prima confronta la configurazione con quella della gliceraldeide di riferimento, la seconda la assegna in assoluto con le regole di priorità, e una stessa molecola può essere D e S",
+        "text": "sono sistemi indipendenti",
         "isCorrect": true
       },
       {
-        "text": "Sono equivalenti: ogni composto D è anche R e ogni L è anche S",
+        "text": "sono del tutto equivalenti",
         "isCorrect": false
       },
       {
-        "text": "La prima si applica agli zuccheri, la seconda ai soli amminoacidi",
+        "text": "valgono per zuccheri e amminoacidi",
         "isCorrect": false
       },
       {
-        "text": "Indicano entrambe il senso in cui il composto ruota il piano della luce polarizzata",
+        "text": "indicano il senso di rotazione",
         "isCorrect": false
       },
       {
-        "text": "Si applicano solo a molecole con un unico centro chirale",
+        "text": "valgono con un solo centro chirale",
         "isCorrect": false
       }
     ]
@@ -191,26 +191,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "Un composto è destrogiro. Che informazione dà questo dato sulla sua configurazione assoluta?",
+    "text": "Sapere che un composto è destrogiro dice, sulla sua configurazione assoluta:",
     "options": [
       {
-        "text": "Nessuna in via diretta: il segno della rotazione ottica è una proprietà sperimentale che non si deduce dalla configurazione R o S, ma va misurata",
+        "text": "nulla di diretto",
         "isCorrect": true
       },
       {
-        "text": "Che la configurazione è necessariamente R",
+        "text": "che è certamente R",
         "isCorrect": false
       },
       {
-        "text": "Che la configurazione è necessariamente S",
+        "text": "che è certamente S",
         "isCorrect": false
       },
       {
-        "text": "Che appartiene alla serie D secondo la convenzione di Fischer",
+        "text": "che appartiene alla serie D",
         "isCorrect": false
       },
       {
-        "text": "Che la molecola possiede un numero pari di centri chirali",
+        "text": "che ha centri chirali in numero pari",
         "isCorrect": false
       }
     ]
@@ -218,26 +218,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "La rottura omolitica di un legame covalente:",
+    "text": "La rottura omolitica di un legame covalente produce:",
     "options": [
       {
-        "text": "Ripartisce il doppietto fra i due frammenti, che restano con un elettrone spaiato ciascuno: si formano radicali, come nella perossidazione lipidica",
+        "text": "due radicali",
         "isCorrect": true
       },
       {
-        "text": "Assegna entrambi gli elettroni a uno dei due frammenti, generando uno ione positivo e uno negativo",
+        "text": "due ioni di carica opposta",
         "isCorrect": false
       },
       {
-        "text": "Produce sempre un carbocatione e un nucleofilo",
+        "text": "un carbocatione e un nucleofilo",
         "isCorrect": false
       },
       {
-        "text": "Avviene solo in presenza di un acido forte",
+        "text": "un acido e una base",
         "isCorrect": false
       },
       {
-        "text": "Non richiede energia, perché i radicali sono più stabili delle molecole da cui derivano",
+        "text": "una sola specie neutra",
         "isCorrect": false
       }
     ]
@@ -245,26 +245,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "Fra i carbocationi seguenti, quale è il più stabile?",
+    "text": "Fra i carbocationi seguenti, il più stabile è:",
     "options": [
       {
-        "text": "Il carbocatione terziario, perché i tre gruppi alchilici donano densità elettronica per effetto induttivo e iperconiugazione",
+        "text": "il terziario",
         "isCorrect": true
       },
       {
-        "text": "Il carbocatione metilico, perché è il più piccolo",
+        "text": "il metilico",
         "isCorrect": false
       },
       {
-        "text": "Il carbocatione primario, perché ha meno ingombro sterico",
+        "text": "il primario",
         "isCorrect": false
       },
       {
-        "text": "Il carbocatione secondario, perché è intermedio e quindi il più favorito",
+        "text": "il secondario",
         "isCorrect": false
       },
       {
-        "text": "Sono tutti equivalenti: la stabilità dipende solo dal solvente",
+        "text": "sono tutti equivalenti",
         "isCorrect": false
       }
     ]
@@ -272,26 +272,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "Che cosa differenzia il meccanismo SN2 da quello SN1?",
+    "text": "Il meccanismo SN2, a differenza dell'SN1:",
     "options": [
       {
-        "text": "L'SN2 è bimolecolare, il nucleofilo attacca dal lato opposto al gruppo uscente in un solo stadio e la configurazione si inverte; l'SN1 passa per un carbocatione intermedio, ha velocità indipendente dal nucleofilo e porta a racemizzazione",
+        "text": "è bimolecolare, con inversione",
         "isCorrect": true
       },
       {
-        "text": "L'SN1 è bimolecolare e procede con inversione di configurazione, l'SN2 passa per un carbocatione",
+        "text": "è monomolecolare, con racemizzazione",
         "isCorrect": false
       },
       {
-        "text": "Entrambi passano per un carbocatione, ma l'SN2 lo forma più lentamente",
+        "text": "passa per un carbocatione",
         "isCorrect": false
       },
       {
-        "text": "L'SN2 è favorito dai substrati terziari, l'SN1 da quelli primari",
+        "text": "è favorito dai substrati terziari",
         "isCorrect": false
       },
       {
-        "text": "Differiscono solo per il solvente usato, non per il meccanismo",
+        "text": "differisce solo per il solvente",
         "isCorrect": false
       }
     ]
@@ -299,26 +299,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "Un alogenuro alchilico terziario reagisce con un nucleofilo debole in solvente protico polare. Quale meccanismo prevale, e perché?",
+    "text": "Un alogenuro terziario con nucleofilo debole in solvente protico reagisce per:",
     "options": [
       {
-        "text": "SN1: il substrato terziario forma un carbocatione relativamente stabile, che il solvente polare solvata, e l'ingombro sterico impedisce l'attacco dorsale richiesto dall'SN2",
+        "text": "SN1",
         "isCorrect": true
       },
       {
-        "text": "SN2, perché i substrati terziari sono i più accessibili all'attacco nucleofilo",
+        "text": "SN2",
         "isCorrect": false
       },
       {
-        "text": "SN2, perché il solvente protico aumenta sempre la nucleofilicità del reagente",
+        "text": "E2",
         "isCorrect": false
       },
       {
-        "text": "Nessuno dei due: gli alogenuri terziari sono inerti alla sostituzione",
+        "text": "addizione elettrofila",
         "isCorrect": false
       },
       {
-        "text": "SN1, ma con inversione completa della configurazione al carbonio",
+        "text": "nessuna reazione",
         "isCorrect": false
       }
     ]
@@ -326,26 +326,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "L'effetto induttivo di un sostituente elettron-attrattore su un acido carbossilico:",
+    "text": "Un sostituente elettron-attrattore su un acido carbossilico:",
     "options": [
       {
-        "text": "Stabilizza per dispersione di carica la base coniugata, rendendo l'acido più forte: l'acido cloroacetico è infatti più acido dell'acido acetico",
+        "text": "lo rende più forte",
         "isCorrect": true
       },
       {
-        "text": "Destabilizza la base coniugata e rende l'acido più debole",
+        "text": "lo rende più debole",
         "isCorrect": false
       },
       {
-        "text": "Non ha effetto sull'acidità, che dipende solo dal gruppo funzionale",
+        "text": "non ne cambia l'acidità",
         "isCorrect": false
       },
       {
-        "text": "Trasforma l'acido in una base secondo Brønsted",
+        "text": "lo trasforma in una base",
         "isCorrect": false
       },
       {
-        "text": "Aumenta l'acidità solo se il sostituente si trova a più di cinque atomi di distanza",
+        "text": "agisce solo da lontano",
         "isCorrect": false
       }
     ]
@@ -353,26 +353,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "Perché il ciclopropano è molto più reattivo del cicloesano?",
+    "text": "Il ciclopropano è molto più reattivo del cicloesano perché:",
     "options": [
       {
-        "text": "L'anello a tre termini impone angoli di legame di 60 gradi, lontanissimi dai 109,5 dell'ibridazione sp3: la tensione angolare accumulata viene liberata nell'apertura dell'anello",
+        "text": "i suoi angoli sono molto tesi",
         "isCorrect": true
       },
       {
-        "text": "Perché il ciclopropano contiene un doppio legame e il cicloesano no",
+        "text": "contiene un doppio legame",
         "isCorrect": false
       },
       {
-        "text": "Perché il cicloesano è aromatico e perciò particolarmente stabile",
+        "text": "il cicloesano è aromatico",
         "isCorrect": false
       },
       {
-        "text": "Perché il ciclopropano è un composto ionico e il cicloesano covalente",
+        "text": "è un composto ionico",
         "isCorrect": false
       },
       {
-        "text": "Perché nel ciclopropano i carboni sono ibridati sp e la geometria è lineare",
+        "text": "ha i carboni ibridati sp",
         "isCorrect": false
       }
     ]
@@ -380,26 +380,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "L'addizione di HBr al 2-metilpropene porta prevalentemente al 2-bromo-2-metilpropano. Perché?",
+    "text": "L'addizione di HBr al 2-metilpropene dà il 2-bromo-2-metilpropano perché:",
     "options": [
       {
-        "text": "Perché il protone si addiziona al carbonio meno sostituito, generando il carbocatione terziario, più stabile: è la regola di Markovnikov, che riflette il controllo del carbocatione intermedio",
+        "text": "si forma il carbocatione più stabile",
         "isCorrect": true
       },
       {
-        "text": "Perché il bromo, essendo voluminoso, si lega sempre al carbonio meno sostituito",
+        "text": "il bromo va sul carbonio meno sostituito",
         "isCorrect": false
       },
       {
-        "text": "Perché la reazione procede con meccanismo radicalico, che non distingue i due carboni",
+        "text": "il meccanismo è radicalico",
         "isCorrect": false
       },
       {
-        "text": "Perché l'addizione agli alcheni avviene sempre in modo anti-Markovnikov",
+        "text": "l'addizione è anti-Markovnikov",
         "isCorrect": false
       },
       {
-        "text": "Perché il doppio legame si rompe omoliticamente dando due radicali equivalenti",
+        "text": "il legame si rompe omoliticamente",
         "isCorrect": false
       }
     ]
@@ -407,26 +407,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "Perché il benzene, pur avendo tre doppi legami formali, non dà le reazioni di addizione tipiche degli alcheni?",
+    "text": "Il benzene non dà le addizioni tipiche degli alcheni perché:",
     "options": [
       {
-        "text": "Perché i sei elettroni pi-greco sono delocalizzati su tutto l'anello planare: l'addizione distruggerebbe l'aromaticità, e il benzene reagisce invece per sostituzione elettrofila, che la conserva",
+        "text": "i suoi elettroni pi sono delocalizzati",
         "isCorrect": true
       },
       {
-        "text": "Perché i doppi legami del benzene sono in realtà legami sigma",
+        "text": "i suoi doppi legami sono sigma",
         "isCorrect": false
       },
       {
-        "text": "Perché il benzene è una molecola ionica e non reagisce con gli elettrofili",
+        "text": "è una molecola ionica",
         "isCorrect": false
       },
       {
-        "text": "Perché i carboni del benzene sono ibridati sp3 e non hanno orbitali p disponibili",
+        "text": "i suoi carboni sono ibridati sp3",
         "isCorrect": false
       },
       {
-        "text": "Perché l'anello è troppo teso per accogliere nuovi sostituenti",
+        "text": "l'anello è troppo teso",
         "isCorrect": false
       }
     ]
@@ -434,26 +434,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "La regola di Hückel stabilisce che un sistema è aromatico quando:",
+    "text": "Secondo la regola di Hückel un sistema è aromatico quando contiene:",
     "options": [
       {
-        "text": "È ciclico, planare, con delocalizzazione completa e contiene 4n+2 elettroni pi-greco",
+        "text": "4n+2 elettroni pi-greco",
         "isCorrect": true
       },
       {
-        "text": "È ciclico e contiene 4n elettroni pi-greco",
+        "text": "4n elettroni pi-greco",
         "isCorrect": false
       },
       {
-        "text": "Contiene almeno sei atomi di carbonio, qualunque sia la loro ibridazione",
+        "text": "almeno sei atomi di carbonio",
         "isCorrect": false
       },
       {
-        "text": "È ciclico e contiene almeno un eteroatomo",
+        "text": "almeno un eteroatomo",
         "isCorrect": false
       },
       {
-        "text": "È planare e contiene un numero pari di doppi legami coniugati",
+        "text": "doppi legami in numero pari",
         "isCorrect": false
       }
     ]
@@ -461,26 +461,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "Fra le basi azotate, pirimidine e purine si distinguono strutturalmente perché:",
+    "text": "Le pirimidine, a differenza delle purine, hanno:",
     "options": [
       {
-        "text": "Le pirimidine sono eterocicli aromatici a un solo anello esatomico con due azoti; le purine sono biciclici, con un anello pirimidinico fuso a un anello imidazolico",
+        "text": "un solo anello esatomico",
         "isCorrect": true
       },
       {
-        "text": "Le purine hanno un solo anello, le pirimidine due anelli condensati",
+        "text": "due anelli condensati",
         "isCorrect": false
       },
       {
-        "text": "Le pirimidine non sono aromatiche, le purine sì",
+        "text": "nessun carattere aromatico",
         "isCorrect": false
       },
       {
-        "text": "Le purine contengono ossigeno nell'anello, le pirimidine solo azoto",
+        "text": "ossigeno dentro l'anello",
         "isCorrect": false
       },
       {
-        "text": "Le pirimidine sono cicloalcani, le purine idrocarburi aromatici policiclici",
+        "text": "struttura di cicloalcano",
         "isCorrect": false
       }
     ]
@@ -488,26 +488,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "In una sostituzione elettrofila aromatica, un gruppo ossidrilico legato all'anello si comporta da:",
+    "text": "In una sostituzione elettrofila aromatica il gruppo ossidrilico è:",
     "options": [
       {
-        "text": "Sostituente attivante e orientante in posizione orto e para, perché dona per risonanza densità elettronica all'anello",
+        "text": "attivante, orto e para",
         "isCorrect": true
       },
       {
-        "text": "Sostituente disattivante e orientante in meta, perché l'ossigeno è elettronegativo",
+        "text": "disattivante, in meta",
         "isCorrect": false
       },
       {
-        "text": "Sostituente attivante ma orientante in meta",
+        "text": "attivante, in meta",
         "isCorrect": false
       },
       {
-        "text": "Sostituente che impedisce del tutto la sostituzione elettrofila",
+        "text": "disattivante, orto e para",
         "isCorrect": false
       },
       {
-        "text": "Sostituente disattivante e orientante in orto e para",
+        "text": "del tutto inerte",
         "isCorrect": false
       }
     ]
@@ -515,26 +515,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "La tossicità di molti idrocarburi aromatici policiclici, come il benzo[a]pirene del fumo di sigaretta, si spiega perché:",
+    "text": "La tossicità degli idrocarburi aromatici policiclici dipende dal fatto che:",
     "options": [
       {
-        "text": "Il metabolismo li trasforma in epossidi, elettrofili reattivi che si legano in modo covalente alle basi del DNA formando addotti mutageni",
+        "text": "il metabolismo li rende epossidi",
         "isCorrect": true
       },
       {
-        "text": "Sono molecole così stabili che si accumulano nei tessuti senza reagire mai",
+        "text": "si accumulano senza reagire mai",
         "isCorrect": false
       },
       {
-        "text": "Liberano radicali liberi direttamente, senza bisogno di alcuna trasformazione metabolica",
+        "text": "liberano subito radicali liberi",
         "isCorrect": false
       },
       {
-        "text": "Si comportano da acidi forti e abbassano il pH intracellulare",
+        "text": "si comportano da acidi forti",
         "isCorrect": false
       },
       {
-        "text": "Idrolizzano i legami fosfodiesterici del DNA grazie alla loro basicità",
+        "text": "idrolizzano i legami del DNA",
         "isCorrect": false
       }
     ]
@@ -542,26 +542,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "Che cosa accomuna una reazione di eliminazione E1 e una sostituzione SN1?",
+    "text": "Eliminazione E1 e sostituzione SN1 hanno in comune:",
     "options": [
       {
-        "text": "Entrambe passano per lo stesso carbocatione intermedio, e competono: il nucleofilo può attaccare il carbonio positivo o strappare un protone al carbonio adiacente formando un alchene",
+        "text": "lo stesso carbocatione intermedio",
         "isCorrect": true
       },
       {
-        "text": "Entrambe richiedono l'attacco dorsale simultaneo del nucleofilo",
+        "text": "l'attacco dorsale del nucleofilo",
         "isCorrect": false
       },
       {
-        "text": "Entrambe procedono senza intermedi, in un solo stadio concertato",
+        "text": "l'assenza di ogni intermedio",
         "isCorrect": false
       },
       {
-        "text": "Entrambe hanno velocità proporzionale alla concentrazione del nucleofilo",
+        "text": "la dipendenza dal nucleofilo",
         "isCorrect": false
       },
       {
-        "text": "Entrambe producono esclusivamente un alchene come prodotto finale",
+        "text": "l'alchene come unico prodotto",
         "isCorrect": false
       }
     ]
@@ -569,26 +569,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "Nei dieni coniugati, come nella catena del retinale, la delocalizzazione elettronica ha come conseguenza che:",
+    "text": "Nei dieni coniugati la delocalizzazione fa sì che il sistema:",
     "options": [
       {
-        "text": "Il sistema è più stabile della somma dei doppi legami isolati e assorbe la luce a lunghezze d'onda maggiori, tanto più quanto più lungo è il sistema coniugato",
+        "text": "sia più stabile e assorba a onde lunghe",
         "isCorrect": true
       },
       {
-        "text": "Il sistema è meno stabile dei doppi legami isolati e assorbe solo nell'ultravioletto lontano",
+        "text": "sia meno stabile e assorba nell'ultravioletto",
         "isCorrect": false
       },
       {
-        "text": "I doppi legami diventano liberi di ruotare come legami semplici",
+        "text": "abbia doppi legami liberi di ruotare",
         "isCorrect": false
       },
       {
-        "text": "La molecola perde la capacità di assorbire radiazione elettromagnetica",
+        "text": "non assorba più alcuna radiazione",
         "isCorrect": false
       },
       {
-        "text": "Gli elettroni pi-greco si localizzano fra due soli atomi, rendendo la molecola più reattiva",
+        "text": "abbia gli elettroni localizzati",
         "isCorrect": false
       }
     ]
@@ -596,26 +596,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-05",
-    "text": "Gli alcani sono poco reattivi e per questo costituiscono le code idrofobiche dei lipidi. La reazione a cui vanno comunque incontro nell'organismo e nella combustione è:",
+    "text": "Gli alcani sono poco reattivi: la reazione a cui si prestano è:",
     "options": [
       {
-        "text": "L'ossidazione, che nelle forme estreme porta a CO2 e acqua liberando grandi quantità di energia",
+        "text": "l'ossidazione",
         "isCorrect": true
       },
       {
-        "text": "L'addizione elettrofila, come negli alcheni",
+        "text": "l'addizione elettrofila",
         "isCorrect": false
       },
       {
-        "text": "La sostituzione nucleofila al carbonio, molto rapida in acqua",
+        "text": "la sostituzione nucleofila",
         "isCorrect": false
       },
       {
-        "text": "La sostituzione elettrofila aromatica",
+        "text": "la sostituzione aromatica",
         "isCorrect": false
       },
       {
-        "text": "L'idrolisi acida, che li scinde in alcoli e acidi carbossilici",
+        "text": "l'idrolisi acida",
         "isCorrect": false
       }
     ]

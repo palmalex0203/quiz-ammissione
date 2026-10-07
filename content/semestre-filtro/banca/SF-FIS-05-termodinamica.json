@@ -1,389 +1,1143 @@
 [
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
     "text": "In un gas reale, a differenza di un gas ideale:",
     "options": [
-      { "text": "Il covolume non è trascurabile, perché le molecole hanno un volume proprio, ed esistono interazioni attrattive a distanza", "isCorrect": true },
-      { "text": "Le particelle sono puntiformi e prive di volume", "isCorrect": false },
-      { "text": "Fra le particelle non esistono interazioni a distanza", "isCorrect": false },
-      { "text": "Gli urti fra le particelle sono perfettamente elastici", "isCorrect": false },
-      { "text": "Vale esattamente la relazione PV = nRT a qualunque pressione", "isCorrect": false }
+      {
+        "text": "il covolume non è trascurabile",
+        "isCorrect": true
+      },
+      {
+        "text": "le particelle sono puntiformi",
+        "isCorrect": false
+      },
+      {
+        "text": "non esistono interazioni a distanza",
+        "isCorrect": false
+      },
+      {
+        "text": "gli urti sono perfettamente elastici",
+        "isCorrect": false
+      },
+      {
+        "text": "vale sempre la relazione PV = nRT",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "L'equazione di stato dei gas perfetti lega pressione, volume e temperatura nella forma:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "L'equazione di stato dei gas perfetti si scrive:",
     "options": [
-      { "text": "PV = nRT, dove T è la temperatura assoluta espressa in kelvin", "isCorrect": true },
-      { "text": "PV = nRT, dove T è la temperatura in gradi Celsius", "isCorrect": false },
-      { "text": "P/V = nRT", "isCorrect": false },
-      { "text": "PV = nR/T", "isCorrect": false },
-      { "text": "PVT = nR", "isCorrect": false }
+      {
+        "text": "PV = nRT, con T in kelvin",
+        "isCorrect": true
+      },
+      {
+        "text": "PV = nRT, con T in Celsius",
+        "isCorrect": false
+      },
+      {
+        "text": "P/V = nRT, con T in kelvin",
+        "isCorrect": false
+      },
+      {
+        "text": "PV = nR/T, con T in kelvin",
+        "isCorrect": false
+      },
+      {
+        "text": "PVT = nR, con T in kelvin",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
     "text": "Lo zero assoluto corrisponde a:",
     "options": [
-      { "text": "-273,15 gradi Celsius", "isCorrect": true },
-      { "text": "0 gradi Celsius", "isCorrect": false },
-      { "text": "-100 gradi Celsius", "isCorrect": false },
-      { "text": "273,15 gradi Celsius", "isCorrect": false },
-      { "text": "-459 gradi Celsius", "isCorrect": false }
+      {
+        "text": "-273,15 gradi Celsius",
+        "isCorrect": true
+      },
+      {
+        "text": "0 gradi Celsius",
+        "isCorrect": false
+      },
+      {
+        "text": "-100 gradi Celsius",
+        "isCorrect": false
+      },
+      {
+        "text": "273,15 gradi Celsius",
+        "isCorrect": false
+      },
+      {
+        "text": "-459 gradi Celsius",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
     "text": "Quale di queste NON è una funzione di stato?",
     "options": [
-      { "text": "Il lavoro", "isCorrect": true },
-      { "text": "L'energia interna", "isCorrect": false },
-      { "text": "L'entropia", "isCorrect": false },
-      { "text": "La temperatura", "isCorrect": false },
-      { "text": "La pressione", "isCorrect": false }
+      {
+        "text": "Il lavoro",
+        "isCorrect": true
+      },
+      {
+        "text": "L'energia interna",
+        "isCorrect": false
+      },
+      {
+        "text": "L'entropia",
+        "isCorrect": false
+      },
+      {
+        "text": "La temperatura",
+        "isCorrect": false
+      },
+      {
+        "text": "La pressione",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "Due corpi di massa diversa hanno la stessa capacità termica. Assorbendo dall'ambiente la stessa quantità di calore Q:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "Due corpi di massa diversa con uguale capacità termica, assorbendo lo stesso calore:",
     "options": [
-      { "text": "Subiscono la stessa variazione di temperatura, perché la capacità termica è per definizione il rapporto fra calore assorbito e variazione di temperatura", "isCorrect": true },
-      { "text": "Il corpo di massa maggiore subisce una variazione di temperatura minore", "isCorrect": false },
-      { "text": "Il corpo di massa minore subisce una variazione di temperatura minore", "isCorrect": false },
-      { "text": "Occorre conoscere le masse dei due corpi per rispondere", "isCorrect": false },
-      { "text": "Occorre sapere se la trasformazione avviene a pressione o a volume costante", "isCorrect": false }
+      {
+        "text": "variano ugualmente di temperatura",
+        "isCorrect": true
+      },
+      {
+        "text": "il più pesante varia di meno",
+        "isCorrect": false
+      },
+      {
+        "text": "il più leggero varia di meno",
+        "isCorrect": false
+      },
+      {
+        "text": "servono le masse per rispondere",
+        "isCorrect": false
+      },
+      {
+        "text": "dipende da pressione o volume",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "Che cosa distingue la capacità termica dal calore specifico?",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "La capacità termica, a differenza del calore specifico, si riferisce:",
     "options": [
-      { "text": "La capacità termica si riferisce all'intero corpo, il calore specifico all'unità di massa: il primo è una proprietà estensiva, il secondo intensiva e caratteristica della sostanza", "isCorrect": true },
-      { "text": "La capacità termica si riferisce all'unità di massa, il calore specifico all'intero corpo", "isCorrect": false },
-      { "text": "La capacità termica riguarda i solidi, il calore specifico i liquidi", "isCorrect": false },
-      { "text": "Sono sinonimi e si misurano nella stessa unità", "isCorrect": false },
-      { "text": "La capacità termica dipende dalla sostanza, il calore specifico dalla massa", "isCorrect": false }
+      {
+        "text": "all'intero corpo",
+        "isCorrect": true
+      },
+      {
+        "text": "all'unità di massa",
+        "isCorrect": false
+      },
+      {
+        "text": "ai soli corpi solidi",
+        "isCorrect": false
+      },
+      {
+        "text": "alla sola sostanza pura",
+        "isCorrect": false
+      },
+      {
+        "text": "all'unità di volume",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "Perché nei gas ideali il calore specifico a pressione costante è maggiore di quello a volume costante?",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "Nei gas ideali il calore specifico a pressione costante è maggiore perché:",
     "options": [
-      { "text": "Perché a pressione costante una parte del calore fornito viene spesa dal gas per compiere lavoro di espansione, e solo il resto innalza la temperatura", "isCorrect": true },
-      { "text": "Perché a pressione costante la massa del gas aumenta", "isCorrect": false },
-      { "text": "Perché a volume costante il gas cede calore all'ambiente", "isCorrect": false },
-      { "text": "Perché l'energia interna di un gas ideale dipende dalla pressione", "isCorrect": false },
-      { "text": "In realtà è il calore specifico a volume costante a essere maggiore", "isCorrect": false }
+      {
+        "text": "parte del calore diventa lavoro",
+        "isCorrect": true
+      },
+      {
+        "text": "la massa del gas aumenta",
+        "isCorrect": false
+      },
+      {
+        "text": "a volume costante il gas cede calore",
+        "isCorrect": false
+      },
+      {
+        "text": "l'energia interna dipende da P",
+        "isCorrect": false
+      },
+      {
+        "text": "in realtà è il minore dei due",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "Durante la fusione di un blocco di ghiaccio a pressione atmosferica, mentre si fornisce calore:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "Durante la fusione del ghiaccio a pressione atmosferica la temperatura:",
     "options": [
-      { "text": "La temperatura resta costante a 0 gradi Celsius, perché il calore fornito serve a rompere i legami fra le molecole e non ad aumentare l'energia cinetica media", "isCorrect": true },
-      { "text": "La temperatura sale uniformemente durante tutto il processo", "isCorrect": false },
-      { "text": "La temperatura scende, perché la fusione è un processo esotermico", "isCorrect": false },
-      { "text": "La temperatura resta costante perché il ghiaccio non assorbe calore", "isCorrect": false },
-      { "text": "La temperatura sale fino a 100 gradi e poi si stabilizza", "isCorrect": false }
+      {
+        "text": "resta costante a 0 gradi",
+        "isCorrect": true
+      },
+      {
+        "text": "sale uniformemente",
+        "isCorrect": false
+      },
+      {
+        "text": "scende, perché è esotermica",
+        "isCorrect": false
+      },
+      {
+        "text": "resta costante senza assorbire",
+        "isCorrect": false
+      },
+      {
+        "text": "sale fino a 100 gradi",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "Il calore latente di un passaggio di stato è:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "Il calore latente di un passaggio di stato è il calore:",
     "options": [
-      { "text": "La quantità di calore per unità di massa che occorre scambiare per compiere il passaggio di stato a temperatura costante", "isCorrect": true },
-      { "text": "Il calore necessario a innalzare di un grado la temperatura dell'unità di massa", "isCorrect": false },
-      { "text": "Il calore totale contenuto in un corpo a una data temperatura", "isCorrect": false },
-      { "text": "La differenza fra il calore assorbito e quello ceduto in un ciclo", "isCorrect": false },
-      { "text": "La capacità termica misurata durante il cambiamento di fase", "isCorrect": false }
+      {
+        "text": "per unità di massa del passaggio",
+        "isCorrect": true
+      },
+      {
+        "text": "per innalzare di un grado",
+        "isCorrect": false
+      },
+      {
+        "text": "contenuto in un corpo",
+        "isCorrect": false
+      },
+      {
+        "text": "fra assorbito e ceduto",
+        "isCorrect": false
+      },
+      {
+        "text": "misurato a fase costante",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
     "text": "Quanto calore occorre per innalzare di 10 gradi la temperatura di 1 kg d'acqua (calore specifico 4186 J/(kg·K))?",
     "options": [
-      { "text": "Circa 42 kJ", "isCorrect": true },
-      { "text": "Circa 4,2 kJ", "isCorrect": false },
-      { "text": "Circa 420 kJ", "isCorrect": false },
-      { "text": "Circa 419 J", "isCorrect": false },
-      { "text": "Circa 10 kJ", "isCorrect": false }
+      {
+        "text": "Circa 42 kJ",
+        "isCorrect": true
+      },
+      {
+        "text": "Circa 4,2 kJ",
+        "isCorrect": false
+      },
+      {
+        "text": "Circa 420 kJ",
+        "isCorrect": false
+      },
+      {
+        "text": "Circa 419 J",
+        "isCorrect": false
+      },
+      {
+        "text": "Circa 10 kJ",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "Fra i tre meccanismi di trasmissione del calore, l'unico che non richiede un mezzo materiale è:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "Fra i meccanismi di trasmissione del calore non richiede un mezzo materiale:",
     "options": [
-      { "text": "L'irraggiamento, che avviene per onde elettromagnetiche e quindi anche nel vuoto", "isCorrect": true },
-      { "text": "La conduzione, perché avviene a livello atomico", "isCorrect": false },
-      { "text": "La convezione, perché il fluido si muove liberamente", "isCorrect": false },
-      { "text": "Nessuno: tutti e tre richiedono un mezzo", "isCorrect": false },
-      { "text": "Tutti e tre possono avvenire nel vuoto", "isCorrect": false }
+      {
+        "text": "l'irraggiamento",
+        "isCorrect": true
+      },
+      {
+        "text": "la conduzione",
+        "isCorrect": false
+      },
+      {
+        "text": "la convezione",
+        "isCorrect": false
+      },
+      {
+        "text": "nessuno dei tre",
+        "isCorrect": false
+      },
+      {
+        "text": "tutti e tre",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
     "text": "La convezione si distingue dalla conduzione perché:",
     "options": [
-      { "text": "Comporta uno spostamento macroscopico di materia: le porzioni di fluido più calde, meno dense, salgono e cedono calore altrove", "isCorrect": true },
-      { "text": "Avviene solo nei solidi, mentre la conduzione avviene solo nei fluidi", "isCorrect": false },
-      { "text": "Non comporta trasferimento di energia ma solo di temperatura", "isCorrect": false },
-      { "text": "Avviene per emissione di onde elettromagnetiche", "isCorrect": false },
-      { "text": "È l'unico meccanismo che funziona anche nel vuoto", "isCorrect": false }
+      {
+        "text": "sposta materia in modo macroscopico",
+        "isCorrect": true
+      },
+      {
+        "text": "avviene soltanto nei solidi",
+        "isCorrect": false
+      },
+      {
+        "text": "non trasferisce energia",
+        "isCorrect": false
+      },
+      {
+        "text": "avviene per onde elettromagnetiche",
+        "isCorrect": false
+      },
+      {
+        "text": "funziona anche nel vuoto",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "Il primo principio della termodinamica, nella forma delta U = Q - L, afferma che:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "Il primo principio, delta U = Q - L, afferma che l'energia interna varia:",
     "options": [
-      { "text": "La variazione di energia interna di un sistema è pari al calore assorbito meno il lavoro compiuto dal sistema sull'ambiente: è il principio di conservazione dell'energia esteso agli scambi termici", "isCorrect": true },
-      { "text": "L'energia interna di un sistema resta sempre costante", "isCorrect": false },
-      { "text": "Il calore assorbito è sempre uguale al lavoro compiuto", "isCorrect": false },
-      { "text": "Il calore fluisce spontaneamente solo dal corpo più caldo a quello più freddo", "isCorrect": false },
-      { "text": "L'entropia dell'universo non può diminuire", "isCorrect": false }
+      {
+        "text": "per calore e lavoro scambiati",
+        "isCorrect": true
+      },
+      {
+        "text": "senza mai cambiare valore",
+        "isCorrect": false
+      },
+      {
+        "text": "solo quando Q è uguale a L",
+        "isCorrect": false
+      },
+      {
+        "text": "solo dal caldo verso il freddo",
+        "isCorrect": false
+      },
+      {
+        "text": "quanto l'entropia dell'universo",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "La variazione di energia interna di un gas perfetto che passa dallo stato A allo stato B vale:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "La variazione di energia interna di un gas perfetto fra due stati vale:",
     "options": [
-      { "text": "n c(V) delta T, qualunque sia la trasformazione seguita", "isCorrect": true },
-      { "text": "n c(P) delta T, qualunque sia la trasformazione seguita", "isCorrect": false },
-      { "text": "n c(V) delta P", "isCorrect": false },
-      { "text": "n c(P) delta P", "isCorrect": false },
-      { "text": "Dipende dal cammino percorso fra A e B", "isCorrect": false }
+      {
+        "text": "n cV delta T, sempre",
+        "isCorrect": true
+      },
+      {
+        "text": "n cP delta T, sempre",
+        "isCorrect": false
+      },
+      {
+        "text": "n cV delta P, sempre",
+        "isCorrect": false
+      },
+      {
+        "text": "n cP delta P, sempre",
+        "isCorrect": false
+      },
+      {
+        "text": "un valore che dipende dal cammino",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
     "text": "In una trasformazione isoterma di un gas perfetto:",
     "options": [
-      { "text": "L'energia interna non varia, quindi tutto il calore assorbito viene convertito in lavoro compiuto dal gas", "isCorrect": true },
-      { "text": "Il gas non scambia calore con l'ambiente", "isCorrect": false },
-      { "text": "Il gas non compie lavoro, perché la temperatura è costante", "isCorrect": false },
-      { "text": "L'energia interna aumenta proporzionalmente al volume", "isCorrect": false },
-      { "text": "La pressione resta costante", "isCorrect": false }
+      {
+        "text": "l'energia interna non varia",
+        "isCorrect": true
+      },
+      {
+        "text": "non c'è scambio di calore",
+        "isCorrect": false
+      },
+      {
+        "text": "il gas non compie lavoro",
+        "isCorrect": false
+      },
+      {
+        "text": "l'energia interna aumenta",
+        "isCorrect": false
+      },
+      {
+        "text": "la pressione resta costante",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
     "text": "In una trasformazione isocora, cioè a volume costante:",
     "options": [
-      { "text": "Il lavoro compiuto dal gas è nullo e tutto il calore scambiato va a variare l'energia interna", "isCorrect": true },
-      { "text": "Il calore scambiato è nullo", "isCorrect": false },
-      { "text": "L'energia interna resta costante", "isCorrect": false },
-      { "text": "Il lavoro è pari alla pressione per la variazione di volume", "isCorrect": false },
-      { "text": "La temperatura resta costante", "isCorrect": false }
+      {
+        "text": "il lavoro compiuto è nullo",
+        "isCorrect": true
+      },
+      {
+        "text": "il calore scambiato è nullo",
+        "isCorrect": false
+      },
+      {
+        "text": "l'energia interna è costante",
+        "isCorrect": false
+      },
+      {
+        "text": "il lavoro vale P per delta V",
+        "isCorrect": false
+      },
+      {
+        "text": "la temperatura resta costante",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
     "text": "In una trasformazione adiabatica:",
     "options": [
-      { "text": "Non c'è scambio di calore con l'ambiente, quindi la variazione di energia interna è pari all'opposto del lavoro compiuto dal gas", "isCorrect": true },
-      { "text": "La temperatura del gas resta costante", "isCorrect": false },
-      { "text": "Il lavoro compiuto dal gas è nullo", "isCorrect": false },
-      { "text": "Il gas assorbe calore senza variare la propria energia interna", "isCorrect": false },
-      { "text": "La pressione resta costante durante tutta la trasformazione", "isCorrect": false }
+      {
+        "text": "non c'è scambio di calore",
+        "isCorrect": true
+      },
+      {
+        "text": "la temperatura resta costante",
+        "isCorrect": false
+      },
+      {
+        "text": "il lavoro compiuto è nullo",
+        "isCorrect": false
+      },
+      {
+        "text": "l'energia interna non varia",
+        "isCorrect": false
+      },
+      {
+        "text": "la pressione resta costante",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
     "text": "Un gas compie 100 J di lavoro espandendosi lungo una trasformazione isobara reversibile. Nella trasformazione inversa il lavoro compiuto dal gas sarà:",
     "options": [
-      { "text": "-100 J", "isCorrect": true },
-      { "text": "100 J", "isCorrect": false },
-      { "text": "0 J", "isCorrect": false },
-      { "text": "-200 J", "isCorrect": false },
-      { "text": "Dipende dalla temperatura iniziale", "isCorrect": false }
+      {
+        "text": "-100 J",
+        "isCorrect": true
+      },
+      {
+        "text": "100 J",
+        "isCorrect": false
+      },
+      {
+        "text": "0 J",
+        "isCorrect": false
+      },
+      {
+        "text": "-200 J",
+        "isCorrect": false
+      },
+      {
+        "text": "Dipende dalla temperatura iniziale",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
     "text": "In un diagramma pressione-volume, il lavoro compiuto da un gas lungo una trasformazione è rappresentato:",
     "options": [
-      { "text": "Dall'area sottesa dalla curva nel piano PV", "isCorrect": true },
-      { "text": "Dalla pendenza della curva in ogni punto", "isCorrect": false },
-      { "text": "Dalla lunghezza del tratto di curva percorso", "isCorrect": false },
-      { "text": "Dalla distanza fra lo stato iniziale e quello finale", "isCorrect": false },
-      { "text": "Dall'area compresa fra la curva e l'asse delle pressioni", "isCorrect": false }
+      {
+        "text": "Dall'area sottesa dalla curva nel piano PV",
+        "isCorrect": true
+      },
+      {
+        "text": "Dalla pendenza della curva in ogni punto",
+        "isCorrect": false
+      },
+      {
+        "text": "Dalla lunghezza del tratto di curva percorso",
+        "isCorrect": false
+      },
+      {
+        "text": "Dalla distanza fra lo stato iniziale e quello finale",
+        "isCorrect": false
+      },
+      {
+        "text": "Dall'area compresa fra la curva e l'asse delle pressioni",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "Che cosa caratterizza una trasformazione reversibile?",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "Una trasformazione è reversibile quando:",
     "options": [
-      { "text": "Procede per stati di equilibrio successivi, infinitamente lenta e senza attriti, così che sistema e ambiente possano essere riportati esattamente nelle condizioni iniziali: è un'idealizzazione", "isCorrect": true },
-      { "text": "Procede rapidamente e può essere ripetuta più volte", "isCorrect": false },
-      { "text": "Non comporta scambi di calore con l'ambiente", "isCorrect": false },
-      { "text": "Avviene senza variazione di energia interna del sistema", "isCorrect": false },
-      { "text": "È una qualunque trasformazione che può procedere nei due versi", "isCorrect": false }
+      {
+        "text": "procede per stati di equilibrio",
+        "isCorrect": true
+      },
+      {
+        "text": "procede molto rapidamente",
+        "isCorrect": false
+      },
+      {
+        "text": "non scambia calore con l'esterno",
+        "isCorrect": false
+      },
+      {
+        "text": "non varia l'energia interna",
+        "isCorrect": false
+      },
+      {
+        "text": "può procedere nei due versi",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "Il secondo principio della termodinamica, nell'enunciato di Clausius, afferma che:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "Il secondo principio, nell'enunciato di Clausius, vieta:",
     "options": [
-      { "text": "È impossibile realizzare una trasformazione il cui unico risultato sia il passaggio di calore da un corpo più freddo a uno più caldo", "isCorrect": true },
-      { "text": "L'energia non si crea né si distrugge", "isCorrect": false },
-      { "text": "Il calore si trasforma integralmente in lavoro in una macchina ideale", "isCorrect": false },
-      { "text": "L'entropia di un sistema non può mai diminuire, neppure localmente", "isCorrect": false },
-      { "text": "La temperatura di un sistema isolato tende ad aumentare nel tempo", "isCorrect": false }
+      {
+        "text": "il calore dal freddo al caldo",
+        "isCorrect": true
+      },
+      {
+        "text": "la creazione di energia dal nulla",
+        "isCorrect": false
+      },
+      {
+        "text": "di convertire calore in lavoro",
+        "isCorrect": false
+      },
+      {
+        "text": "ogni calo locale di entropia",
+        "isCorrect": false
+      },
+      {
+        "text": "l'aumento di temperatura isolato",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "Perché nessuna macchina termica può avere rendimento pari a 1?",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "Nessuna macchina termica può avere rendimento pari a 1 perché:",
     "options": [
-      { "text": "Perché il secondo principio, nell'enunciato di Kelvin, vieta di convertire integralmente in lavoro il calore prelevato da un'unica sorgente: una parte va sempre ceduta a una sorgente più fredda", "isCorrect": true },
-      { "text": "Perché il primo principio vieta di convertire il calore in lavoro", "isCorrect": false },
-      { "text": "Perché l'attrito meccanico è inevitabile, ed è l'unico motivo", "isCorrect": false },
-      { "text": "Perché l'energia interna del gas non può mai variare", "isCorrect": false },
-      { "text": "In realtà è possibile, purché il ciclo sia reversibile", "isCorrect": false }
+      {
+        "text": "lo vieta il secondo principio",
+        "isCorrect": true
+      },
+      {
+        "text": "lo vieta il primo principio",
+        "isCorrect": false
+      },
+      {
+        "text": "l'attrito è sempre inevitabile",
+        "isCorrect": false
+      },
+      {
+        "text": "l'energia interna non può variare",
+        "isCorrect": false
+      },
+      {
+        "text": "in realtà sarebbe possibile",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "Una macchina di Carnot lavora fra 600 K e 300 K. Il suo rendimento vale:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "Una macchina di Carnot lavora fra 600 K e 300 K: il suo rendimento vale:",
     "options": [
-      { "text": "0,5", "isCorrect": true },
-      { "text": "0,3", "isCorrect": false },
-      { "text": "2", "isCorrect": false },
-      { "text": "1", "isCorrect": false },
-      { "text": "0,25", "isCorrect": false }
+      {
+        "text": "0,50",
+        "isCorrect": true
+      },
+      {
+        "text": "0,30",
+        "isCorrect": false
+      },
+      {
+        "text": "2,00",
+        "isCorrect": false
+      },
+      {
+        "text": "1,00",
+        "isCorrect": false
+      },
+      {
+        "text": "0,25",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "Il ciclo di Carnot è composto, nell'ordine, da:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "Il ciclo di Carnot è composto da:",
     "options": [
-      { "text": "Due trasformazioni isoterme e due adiabatiche, tutte reversibili", "isCorrect": true },
-      { "text": "Due isobare e due isocore", "isCorrect": false },
-      { "text": "Due isoterme e due isocore", "isCorrect": false },
-      { "text": "Quattro adiabatiche reversibili", "isCorrect": false },
-      { "text": "Due adiabatiche e due isobare", "isCorrect": false }
+      {
+        "text": "due isoterme e due adiabatiche",
+        "isCorrect": true
+      },
+      {
+        "text": "due isobare e due isocore",
+        "isCorrect": false
+      },
+      {
+        "text": "due isoterme e due isocore",
+        "isCorrect": false
+      },
+      {
+        "text": "quattro adiabatiche",
+        "isCorrect": false
+      },
+      {
+        "text": "due adiabatiche e due isobare",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "Un sistema passa dallo stato A allo stato B lungo una trasformazione irreversibile. La sua variazione di entropia, rispetto a quella calcolata lungo una trasformazione reversibile fra gli stessi stati, è:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "Un sistema va da A a B per via irreversibile: la variazione di entropia è:",
     "options": [
-      { "text": "Uguale, perché l'entropia è una funzione di stato e dipende solo dagli estremi", "isCorrect": true },
-      { "text": "Maggiore, perché l'irreversibilità produce entropia", "isCorrect": false },
-      { "text": "Minore", "isCorrect": false },
-      { "text": "Nulla, perché le trasformazioni irreversibili non comportano variazioni di entropia", "isCorrect": false },
-      { "text": "Non calcolabile, perché l'entropia è definita solo per trasformazioni reversibili", "isCorrect": false }
+      {
+        "text": "uguale a quella reversibile",
+        "isCorrect": true
+      },
+      {
+        "text": "maggiore, per l'irreversibilità",
+        "isCorrect": false
+      },
+      {
+        "text": "minore di quella reversibile",
+        "isCorrect": false
+      },
+      {
+        "text": "nulla in ogni caso",
+        "isCorrect": false
+      },
+      {
+        "text": "del tutto non calcolabile",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "L'interpretazione statistica dell'entropia, dovuta a Boltzmann, la lega:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "L'interpretazione statistica di Boltzmann lega l'entropia:",
     "options": [
-      { "text": "Al numero di microstati compatibili con un dato stato macroscopico: più sono, maggiore è l'entropia", "isCorrect": true },
-      { "text": "Alla temperatura assoluta del sistema", "isCorrect": false },
-      { "text": "Al numero di molecole contenute nel sistema", "isCorrect": false },
-      { "text": "Alla quantità totale di calore contenuta nel sistema", "isCorrect": false },
-      { "text": "Al lavoro massimo estraibile dal sistema", "isCorrect": false }
+      {
+        "text": "al numero di microstati",
+        "isCorrect": true
+      },
+      {
+        "text": "alla temperatura assoluta",
+        "isCorrect": false
+      },
+      {
+        "text": "al numero di molecole",
+        "isCorrect": false
+      },
+      {
+        "text": "al calore contenuto",
+        "isCorrect": false
+      },
+      {
+        "text": "al lavoro estraibile",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-05",
-    "text": "In un sistema isolato che evolve spontaneamente verso l'equilibrio, l'entropia:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "text": "In un sistema isolato che evolve spontaneamente l'entropia:",
     "options": [
-      { "text": "Aumenta, e raggiunge il massimo all'equilibrio: il suo aumento indica il verso naturale dei processi", "isCorrect": true },
-      { "text": "Diminuisce, perché il sistema si ordina", "isCorrect": false },
-      { "text": "Resta rigorosamente costante", "isCorrect": false },
-      { "text": "Oscilla senza una tendenza definita", "isCorrect": false },
-      { "text": "Si annulla quando il sistema raggiunge l'equilibrio", "isCorrect": false }
+      {
+        "text": "aumenta fino al massimo",
+        "isCorrect": true
+      },
+      {
+        "text": "diminuisce con l'ordine",
+        "isCorrect": false
+      },
+      {
+        "text": "resta rigorosamente costante",
+        "isCorrect": false
+      },
+      {
+        "text": "oscilla senza tendenza",
+        "isCorrect": false
+      },
+      {
+        "text": "si annulla all'equilibrio",
+        "isCorrect": false
+      }
     ]
   },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Se un sistema termodinamico passa dallo stato A allo stato B lungo una trasformazione irreversibile, la sua variazione di entropia è …… a quella calcolata lungo una trasformazione reversibile che congiunga gli stessi stati.",
-    "options": [ { "text": "uguale", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "uguale",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Un gas va dallo stato A allo stato B lungo una trasformazione isobara reversibile compiendo un lavoro di 100 J. Il lavoro compiuto nella trasformazione inversa sarà …… J",
-    "options": [ { "text": "-100", "isCorrect": true }, { "text": "meno 100", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "-100",
+        "isCorrect": true
+      },
+      {
+        "text": "meno 100",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Lo scambio di calore può avvenire tramite conduzione, convezione e ……",
-    "options": [ { "text": "irraggiamento", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "irraggiamento",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "L'unico meccanismo di trasmissione del calore che avviene anche nel vuoto è l'……",
-    "options": [ { "text": "irraggiamento", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "irraggiamento",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Il meccanismo di trasmissione del calore che comporta movimento macroscopico di fluido si chiama ……",
-    "options": [ { "text": "convezione", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "convezione",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Lo zero assoluto corrisponde a …… gradi Celsius.",
-    "options": [ { "text": "-273,15", "isCorrect": true }, { "text": "-273", "isCorrect": true }, { "text": "-273.15", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "-273,15",
+        "isCorrect": true
+      },
+      {
+        "text": "-273",
+        "isCorrect": true
+      },
+      {
+        "text": "-273.15",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Nell'equazione di stato dei gas perfetti PV = nRT, la temperatura va espressa in ……",
-    "options": [ { "text": "kelvin", "isCorrect": true }, { "text": "K", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "kelvin",
+        "isCorrect": true
+      },
+      {
+        "text": "K",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Nell'equazione di stato dei gas perfetti la lettera R indica la …… universale dei gas.",
-    "options": [ { "text": "costante", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "costante",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Una grandezza il cui valore dipende solo dallo stato del sistema e non dal cammino seguito si chiama funzione di ……",
-    "options": [ { "text": "stato", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "stato",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Il rapporto fra il calore assorbito da un corpo e la corrispondente variazione di temperatura si chiama …… termica.",
-    "options": [ { "text": "capacita", "isCorrect": true }, { "text": "capacità", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "capacita",
+        "isCorrect": true
+      },
+      {
+        "text": "capacità",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Il calore necessario a innalzare di un grado la temperatura di un chilogrammo di sostanza si chiama calore ……",
-    "options": [ { "text": "specifico", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "specifico",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Durante un passaggio di stato a pressione costante la temperatura della sostanza resta ……",
-    "options": [ { "text": "costante", "isCorrect": true }, { "text": "invariata", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "costante",
+        "isCorrect": true
+      },
+      {
+        "text": "invariata",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Il calore per unità di massa necessario a compiere un passaggio di stato si chiama calore ……",
-    "options": [ { "text": "latente", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "latente",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Il calore specifico dell'acqua, in J/(kg·K), vale circa ……",
-    "options": [ { "text": "4186", "isCorrect": true }, { "text": "4200", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "4186",
+        "isCorrect": true
+      },
+      {
+        "text": "4200",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Nel primo principio della termodinamica, la variazione di energia interna è pari al calore assorbito meno il …… compiuto dal sistema.",
-    "options": [ { "text": "lavoro", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "lavoro",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "La variazione di energia interna di un gas perfetto si calcola come n per c(V) per la variazione di ……",
-    "options": [ { "text": "temperatura", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "temperatura",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Una trasformazione che avviene a temperatura costante si dice ……",
-    "options": [ { "text": "isoterma", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "isoterma",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Una trasformazione che avviene a volume costante si dice ……",
-    "options": [ { "text": "isocora", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "isocora",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Una trasformazione che avviene a pressione costante si dice ……",
-    "options": [ { "text": "isobara", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "isobara",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Una trasformazione in cui non si scambia calore con l'ambiente si dice ……",
-    "options": [ { "text": "adiabatica", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "adiabatica",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "In una trasformazione isoterma di un gas perfetto la variazione di energia interna vale ……",
-    "options": [ { "text": "zero", "isCorrect": true }, { "text": "0", "isCorrect": true }, { "text": "nulla", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "zero",
+        "isCorrect": true
+      },
+      {
+        "text": "0",
+        "isCorrect": true
+      },
+      {
+        "text": "nulla",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "In una trasformazione isocora il lavoro compiuto dal gas vale ……",
-    "options": [ { "text": "zero", "isCorrect": true }, { "text": "0", "isCorrect": true }, { "text": "nullo", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "zero",
+        "isCorrect": true
+      },
+      {
+        "text": "0",
+        "isCorrect": true
+      },
+      {
+        "text": "nullo",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "In un diagramma pressione-volume il lavoro compiuto dal gas è rappresentato dall'…… sottesa dalla curva.",
-    "options": [ { "text": "area", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "area",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Il rapporto fra il lavoro prodotto e il calore assorbito dalla sorgente calda si chiama ……",
-    "options": [ { "text": "rendimento", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "rendimento",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Il ciclo reversibile di massimo rendimento fra due sorgenti si chiama ciclo di ……",
-    "options": [ { "text": "Carnot", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "Carnot",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Il rendimento di una macchina di Carnot che lavora fra 600 K e 300 K vale ……",
-    "options": [ { "text": "0,5", "isCorrect": true }, { "text": "0.5", "isCorrect": true }, { "text": "50%", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "0,5",
+        "isCorrect": true
+      },
+      {
+        "text": "0.5",
+        "isCorrect": true
+      },
+      {
+        "text": "50%",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Il ciclo di Carnot è composto da due trasformazioni isoterme e due ……",
-    "options": [ { "text": "adiabatiche", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "adiabatiche",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "La funzione di stato il cui aumento indica il verso naturale dei processi in un sistema isolato è l'……",
-    "options": [ { "text": "entropia", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "entropia",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "Nell'interpretazione statistica, l'entropia è legata al numero di …… compatibili con un dato stato macroscopico.",
-    "options": [ { "text": "microstati", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-05", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "microstati",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "type": "COMPLETAMENTO",
     "text": "L'enunciato secondo cui il calore non può passare spontaneamente da un corpo freddo a uno caldo è dovuto a ……",
-    "options": [ { "text": "Clausius", "isCorrect": true } ] }
+    "options": [
+      {
+        "text": "Clausius",
+        "isCorrect": true
+      }
+    ]
+  }
 ]

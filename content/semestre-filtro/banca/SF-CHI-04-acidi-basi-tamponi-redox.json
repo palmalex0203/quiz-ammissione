@@ -2,26 +2,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Che cosa aggiunge la teoria di Brønsted e Lowry a quella di Arrhenius?",
+    "text": "Rispetto ad Arrhenius, la teoria di Brønsted e Lowry definisce l'acido come:",
     "options": [
       {
-        "text": "Definisce l'acido come donatore di protoni e la base come accettore, liberando le due definizioni dal solvente acqua e introducendo le coppie coniugate",
+        "text": "donatore di protoni",
         "isCorrect": true
       },
       {
-        "text": "Definisce l'acido come accettore di doppietti elettronici, estendendo il concetto anche agli ioni metallici",
+        "text": "accettore di doppietti",
         "isCorrect": false
       },
       {
-        "text": "Stabilisce che un acido è una sostanza che in acqua libera ioni OH-",
+        "text": "sostanza che libera OH-",
         "isCorrect": false
       },
       {
-        "text": "Restringe la definizione alle sole soluzioni acquose, escludendo i solventi organici",
+        "text": "specie attiva solo in acqua",
         "isCorrect": false
       },
       {
-        "text": "Afferma che acidi e basi reagiscono soltanto con trasferimento di elettroni",
+        "text": "donatore di elettroni",
         "isCorrect": false
       }
     ]
@@ -29,26 +29,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Secondo la teoria di Lewis, lo ione Zn2+ nel sito attivo di un enzima si comporta da acido perché:",
+    "text": "Secondo la teoria di Lewis lo ione Zn2+ si comporta da acido perché:",
     "options": [
       {
-        "text": "Accetta un doppietto elettronico dal substrato o da una molecola d'acqua, polarizzandola e rendendola più reattiva, senza cedere alcun protone",
+        "text": "accetta un doppietto elettronico",
         "isCorrect": true
       },
       {
-        "text": "Cede protoni al substrato secondo la definizione di Brønsted",
+        "text": "cede protoni al substrato",
         "isCorrect": false
       },
       {
-        "text": "Libera ioni OH- nell'ambiente di reazione",
+        "text": "libera ioni OH- nell'ambiente",
         "isCorrect": false
       },
       {
-        "text": "Dona un doppietto elettronico al substrato, comportandosi da elettrofilo",
+        "text": "dona un doppietto elettronico",
         "isCorrect": false
       },
       {
-        "text": "Riduce il substrato cedendogli due elettroni",
+        "text": "riduce il substrato di due elettroni",
         "isCorrect": false
       }
     ]
@@ -56,26 +56,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Nella reazione di autoprotolisi dell'acqua, il prodotto ionico Kw a 25 gradi vale 10 alla meno 14. Ne segue che:",
+    "text": "Il prodotto ionico dell'acqua a 25 gradi vale 10^-14: ne segue che in acqua pura:",
     "options": [
       {
-        "text": "In acqua pura le concentrazioni di H3O+ e OH- sono entrambe 10 alla meno 7 molari, e in qualunque soluzione acquosa la somma di pH e pOH vale 14",
+        "text": "H3O+ e OH- valgono 10^-7 M",
         "isCorrect": true
       },
       {
-        "text": "In acqua pura la concentrazione di H3O+ è 10 alla meno 14 molare",
+        "text": "H3O+ vale 10^-14 M",
         "isCorrect": false
       },
       {
-        "text": "Il valore di Kw dipende dalla concentrazione dell'acido aggiunto",
+        "text": "Kw dipende dall'acido aggiunto",
         "isCorrect": false
       },
       {
-        "text": "Il pH dell'acqua pura è 14 a qualunque temperatura",
+        "text": "il pH vale 14 a ogni temperatura",
         "isCorrect": false
       },
       {
-        "text": "L'acqua non può comportarsi né da acido né da base",
+        "text": "l'acqua non è né acido né base",
         "isCorrect": false
       }
     ]
@@ -137,26 +137,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Si diluisce dieci volte una soluzione di HCl a pH 3. Il nuovo pH è:",
+    "text": "Si diluisce dieci volte una soluzione di HCl a pH 3: il nuovo pH è:",
     "options": [
       {
-        "text": "4, perché la concentrazione di H3O+ si riduce di un fattore dieci e il pH è il suo logaritmo negativo",
+        "text": "4",
         "isCorrect": true
       },
       {
-        "text": "2, perché la diluizione concentra gli ioni idrogeno residui",
+        "text": "2",
         "isCorrect": false
       },
       {
-        "text": "0,3, perché il pH va diviso per dieci",
+        "text": "0,3",
         "isCorrect": false
       },
       {
-        "text": "30, perché il pH va moltiplicato per dieci",
+        "text": "30",
         "isCorrect": false
       },
       {
-        "text": "7, perché la diluizione porta sempre alla neutralità",
+        "text": "7",
         "isCorrect": false
       }
     ]
@@ -164,26 +164,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Due soluzioni, una di HCl e una di acido acetico, hanno la stessa concentrazione molare. Quale ha pH più basso, e perché?",
+    "text": "Fra una soluzione di HCl e una di acido acetico di pari molarità ha pH minore:",
     "options": [
       {
-        "text": "Quella di HCl: è un acido forte e si dissocia completamente, mentre l'acido acetico è debole e solo una frazione delle sue molecole cede il protone",
+        "text": "l'HCl, acido forte",
         "isCorrect": true
       },
       {
-        "text": "Quella di acido acetico, perché la molecola contiene più atomi di idrogeno",
+        "text": "l'acido acetico, più ricco di idrogeni",
         "isCorrect": false
       },
       {
-        "text": "Hanno lo stesso pH, perché il pH dipende solo dalla concentrazione molare",
+        "text": "nessuna: hanno lo stesso pH",
         "isCorrect": false
       },
       {
-        "text": "Quella di acido acetico, perché il suo Ka è maggiore",
+        "text": "l'acido acetico, con Ka maggiore",
         "isCorrect": false
       },
       {
-        "text": "Dipende dal volume delle due soluzioni",
+        "text": "dipende dal volume delle soluzioni",
         "isCorrect": false
       }
     ]
@@ -191,26 +191,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Un acido debole ha pKa 4,8. Che cosa significa?",
+    "text": "Un acido debole ha pKa 4,8. Significa che:",
     "options": [
       {
-        "text": "Che a pH 4,8 metà delle molecole è dissociata e metà indissociata, e che per valori di pH superiori prevale la forma dissociata",
+        "text": "a pH 4,8 è dissociato a metà",
         "isCorrect": true
       },
       {
-        "text": "Che il pH delle sue soluzioni è sempre 4,8, qualunque sia la concentrazione",
+        "text": "il pH delle sue soluzioni è 4,8",
         "isCorrect": false
       },
       {
-        "text": "Che l'acido si dissocia completamente a pH inferiore a 4,8",
+        "text": "sotto pH 4,8 si dissocia del tutto",
         "isCorrect": false
       },
       {
-        "text": "Che la sua costante di dissociazione vale 4,8",
+        "text": "la sua costante Ka vale 4,8",
         "isCorrect": false
       },
       {
-        "text": "Che a pH 7 l'acido è interamente nella forma indissociata",
+        "text": "a pH 7 è tutto indissociato",
         "isCorrect": false
       }
     ]
@@ -221,23 +221,23 @@
     "text": "Fra due acidi, quello con Ka maggiore:",
     "options": [
       {
-        "text": "È il più forte e ha il pKa minore, perché pKa è il logaritmo negativo di Ka",
+        "text": "è il più forte e ha pKa minore",
         "isCorrect": true
       },
       {
-        "text": "È il più debole, perché un Ka grande indica scarsa dissociazione",
+        "text": "è il più debole, poco dissociato",
         "isCorrect": false
       },
       {
-        "text": "Ha anche il pKa maggiore, perché le due grandezze crescono insieme",
+        "text": "ha anche il pKa maggiore",
         "isCorrect": false
       },
       {
-        "text": "Ha la base coniugata più forte",
+        "text": "ha la base coniugata più forte",
         "isCorrect": false
       },
       {
-        "text": "Ha pH più alto a parità di concentrazione",
+        "text": "ha pH più alto a pari concentrazione",
         "isCorrect": false
       }
     ]
@@ -245,26 +245,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "A 0,5 litri di soluzione 0,2 M di acido acetico si aggiungono 0,1 moli di NaOH. La soluzione risultante sarà:",
+    "text": "A 0,5 L di acido acetico 0,2 M si aggiungono 0,1 mol di NaOH: la soluzione è:",
     "options": [
       {
-        "text": "Basica per il fenomeno dell'idrolisi salina: l'acido è neutralizzato esattamente e resta acetato di sodio, la cui base coniugata sottrae protoni all'acqua",
+        "text": "basica, per idrolisi dell'acetato",
         "isCorrect": true
       },
       {
-        "text": "Neutra, perché la neutralizzazione è perfetta e il sale non altera il pH",
+        "text": "neutra, la reazione è completa",
         "isCorrect": false
       },
       {
-        "text": "Acida per l'eccesso di acido acetico non neutralizzato",
+        "text": "acida, per l'acido non neutralizzato",
         "isCorrect": false
       },
       {
-        "text": "Basica per l'eccesso di NaOH residuo",
+        "text": "basica, per NaOH in eccesso",
         "isCorrect": false
       },
       {
-        "text": "Acida, perché l'acetato di sodio è il sale di un acido debole e si comporta da acido",
+        "text": "acida, perché l'acetato è un acido",
         "isCorrect": false
       }
     ]
@@ -272,26 +272,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Perché una soluzione acquosa di cloruro di ammonio ha pH acido?",
+    "text": "Una soluzione di cloruro di ammonio ha pH acido perché lo ione ammonio:",
     "options": [
       {
-        "text": "Lo ione ammonio è l'acido coniugato di una base debole e cede un protone all'acqua, mentre il cloruro, base coniugata di un acido forte, non ha alcun effetto",
+        "text": "cede un protone all'acqua",
         "isCorrect": true
       },
       {
-        "text": "Perché lo ione cloruro sottrae protoni all'acqua liberando ioni OH-",
+        "text": "accetta un protone dall'acqua",
         "isCorrect": false
       },
       {
-        "text": "Perché il sale si decompone liberando acido cloridrico gassoso",
+        "text": "sottrae protoni liberando OH-",
         "isCorrect": false
       },
       {
-        "text": "Perché tutti i sali danno soluzioni acide",
+        "text": "libera acido cloridrico gassoso",
         "isCorrect": false
       },
       {
-        "text": "Perché lo ione ammonio accetta un protone dall'acqua liberando ioni OH-",
+        "text": "è un sale, e i sali sono acidi",
         "isCorrect": false
       }
     ]
@@ -326,26 +326,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "L'acido fosforico è un acido triprotico con pKa successivi di circa 2,1, 7,2 e 12,3. A pH fisiologico la specie prevalente è:",
+    "text": "A pH fisiologico l'acido fosforico (pKa 2,1; 7,2; 12,3) è presente soprattutto come:",
     "options": [
       {
-        "text": "L'acido indissociato H3PO4, perché a pH 7,4 la prima dissociazione è ancora largamente incompleta",
-        "isCorrect": false
-      },
-      {
-        "text": "Lo ione diidrogeno fosfato H2PO4-, in netta prevalenza, perché il pH del sangue è inferiore al secondo pKa",
-        "isCorrect": false
-      },
-      {
-        "text": "Lo ione fosfato PO4(3-), perché il pH fisiologico è superiore a tutti i pKa",
-        "isCorrect": false
-      },
-      {
-        "text": "Una miscela di H2PO4- e HPO4(2-), con il secondo in leggero eccesso, perché il pH del sangue è superiore al secondo pKa",
+        "text": "miscela di H2PO4- e HPO4 2-",
         "isCorrect": true
       },
       {
-        "text": "Non esiste una specie prevalente: le quattro forme sono sempre equiripartite",
+        "text": "H3PO4 indissociato",
+        "isCorrect": false
+      },
+      {
+        "text": "soltanto H2PO4-",
+        "isCorrect": false
+      },
+      {
+        "text": "soltanto PO4 3-",
+        "isCorrect": false
+      },
+      {
+        "text": "quattro forme equiripartite",
         "isCorrect": false
       }
     ]
@@ -356,23 +356,23 @@
     "text": "Un indicatore di pH cambia colore:",
     "options": [
       {
-        "text": "In un intervallo di circa due unità intorno al proprio pKa, perché è esso stesso un acido debole le cui forme dissociata e indissociata hanno colori diversi",
+        "text": "intorno al proprio pKa",
         "isCorrect": true
       },
       {
-        "text": "Esattamente a pH 7, quando la soluzione passa da acida a basica",
+        "text": "esattamente a pH 7",
         "isCorrect": false
       },
       {
-        "text": "Quando viene consumato dalla reazione di neutralizzazione",
+        "text": "quando viene consumato",
         "isCorrect": false
       },
       {
-        "text": "Solo in presenza di un acido forte, perché gli acidi deboli non lo attivano",
+        "text": "soltanto con acidi forti",
         "isCorrect": false
       },
       {
-        "text": "In un intervallo che dipende dalla concentrazione dell'indicatore e non dal suo pKa",
+        "text": "secondo la sua concentrazione",
         "isCorrect": false
       }
     ]
@@ -380,26 +380,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Da che cosa è costituita una soluzione tampone?",
+    "text": "Una soluzione tampone è costituita da:",
     "options": [
       {
-        "text": "Da un acido debole e dalla sua base coniugata (o da una base debole e dal suo acido coniugato) in concentrazioni confrontabili",
+        "text": "un acido debole e la sua base coniugata",
         "isCorrect": true
       },
       {
-        "text": "Da un acido forte e dalla sua base coniugata in concentrazioni uguali",
+        "text": "un acido forte e la sua base coniugata",
         "isCorrect": false
       },
       {
-        "text": "Da una miscela di un acido forte e di una base forte perfettamente neutralizzati",
+        "text": "un acido forte e una base forte",
         "isCorrect": false
       },
       {
-        "text": "Da un sale neutro ad alta concentrazione, che impedisce le variazioni di pH",
+        "text": "un sale neutro molto concentrato",
         "isCorrect": false
       },
       {
-        "text": "Da un acido debole molto diluito, che reagisce lentamente con gli ioni aggiunti",
+        "text": "un acido debole molto diluito",
         "isCorrect": false
       }
     ]
@@ -407,26 +407,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Quando un sistema tampone raggiunge la massima efficienza?",
+    "text": "Un sistema tampone raggiunge la massima efficienza quando:",
     "options": [
       {
-        "text": "Quando il pH coincide con il pKa dell'acido debole, cioè quando le concentrazioni delle due forme sono uguali: in quel punto la stessa quantità di acido o di base aggiunta produce la minima variazione di pH",
+        "text": "il pH coincide con il pKa",
         "isCorrect": true
       },
       {
-        "text": "Quando il pH è il più lontano possibile dal pKa, così che resti molta capacità residua",
+        "text": "il pH è lontanissimo dal pKa",
         "isCorrect": false
       },
       {
-        "text": "Quando la concentrazione dell'acido è dieci volte quella della base coniugata",
+        "text": "l'acido è dieci volte la base",
         "isCorrect": false
       },
       {
-        "text": "Quando il pH è esattamente 7, condizione di neutralità",
+        "text": "il pH vale esattamente 7",
         "isCorrect": false
       },
       {
-        "text": "Quando le concentrazioni assolute delle due forme sono il più basse possibile",
+        "text": "le concentrazioni sono minime",
         "isCorrect": false
       }
     ]
@@ -461,26 +461,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Nel sangue il tampone bicarbonato ha un pKa apparente di circa 6,1, cioè più di un'unità sotto il pH fisiologico. Come può essere, nonostante questo, il tampone più importante?",
+    "text": "Il tampone bicarbonato è efficace a pH 7,4 benché il suo pKa sia 6,1 perché:",
     "options": [
       {
-        "text": "Perché è un sistema aperto: la CO2 viene eliminata dai polmoni e il bicarbonato regolato dal rene, quindi le due concentrazioni sono controllate indipendentemente e il tampone non si esaurisce",
+        "text": "è un sistema aperto e regolato",
         "isCorrect": true
       },
       {
-        "text": "Perché la sua concentrazione plasmatica è così bassa che il pKa non conta",
+        "text": "la sua concentrazione è bassa",
         "isCorrect": false
       },
       {
-        "text": "Perché nel sangue il pKa del sistema si sposta a 7,4 per effetto delle proteine",
+        "text": "nel sangue il pKa diventa 7,4",
         "isCorrect": false
       },
       {
-        "text": "Perché un tampone è tanto più efficiente quanto più il pH è distante dal suo pKa",
+        "text": "un tampone è migliore lontano dal pKa",
         "isCorrect": false
       },
       {
-        "text": "Perché il bicarbonato è una base forte e neutralizza completamente ogni acido prodotto",
+        "text": "il bicarbonato è una base forte",
         "isCorrect": false
       }
     ]
@@ -515,26 +515,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Le proteine plasmatiche e l'emoglobina tamponano il pH soprattutto grazie a:",
+    "text": "Le proteine plasmatiche e l'emoglobina tamponano il pH grazie soprattutto:",
     "options": [
       {
-        "text": "Le catene laterali ionizzabili, in particolare l'imidazolo dell'istidina, che ha pKa vicino al pH fisiologico e può accettare o cedere protoni",
+        "text": "all'imidazolo dell'istidina",
         "isCorrect": true
       },
       {
-        "text": "I legami peptidici, che si idrolizzano liberando protoni quando il pH sale",
+        "text": "ai legami peptidici",
         "isCorrect": false
       },
       {
-        "text": "I ponti disolfuro fra residui di cisteina, che fissano gli ioni H+",
+        "text": "ai ponti disolfuro",
         "isCorrect": false
       },
       {
-        "text": "La catena laterale della leucina, che è la più abbondante nelle proteine",
+        "text": "alla catena laterale della leucina",
         "isCorrect": false
       },
       {
-        "text": "Il gruppo eme, che lega gli ioni idrogeno al posto dell'ossigeno",
+        "text": "al solo gruppo eme",
         "isCorrect": false
       }
     ]
@@ -542,26 +542,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "In un paziente con grave ipoventilazione la CO2 si accumula nel sangue. Che cosa accade al pH e come si chiama il quadro?",
+    "text": "In un paziente che ipoventila la CO2 si accumula nel sangue: si instaura:",
     "options": [
       {
-        "text": "La CO2 in eccesso si idrata ad acido carbonico, che libera protoni: il pH scende e si parla di acidosi respiratoria",
+        "text": "acidosi respiratoria",
         "isCorrect": true
       },
       {
-        "text": "Il pH sale e si parla di alcalosi respiratoria",
+        "text": "alcalosi respiratoria",
         "isCorrect": false
       },
       {
-        "text": "Il pH scende e si parla di acidosi metabolica",
+        "text": "acidosi metabolica",
         "isCorrect": false
       },
       {
-        "text": "Il pH non cambia, perché il tampone bicarbonato neutralizza completamente la CO2",
+        "text": "alcalosi metabolica",
         "isCorrect": false
       },
       {
-        "text": "Il pH sale, perché la CO2 si comporta da base secondo Brønsted",
+        "text": "nessuna variazione di pH",
         "isCorrect": false
       }
     ]
@@ -569,26 +569,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "In un soggetto che iperventila per ansia:",
+    "text": "In un soggetto che iperventila per ansia si instaura:",
     "options": [
       {
-        "text": "L'eliminazione eccessiva di CO2 sposta l'equilibrio del tampone consumando protoni: il pH sale e si instaura un'alcalosi respiratoria",
+        "text": "alcalosi respiratoria",
         "isCorrect": true
       },
       {
-        "text": "Il pH scende, perché l'iperventilazione accumula acido lattico",
+        "text": "acidosi respiratoria",
         "isCorrect": false
       },
       {
-        "text": "Il pH non varia, perché i polmoni non partecipano all'equilibrio acido-base",
+        "text": "acidosi metabolica",
         "isCorrect": false
       },
       {
-        "text": "Si instaura un'acidosi metabolica da perdita di bicarbonato",
+        "text": "alcalosi metabolica",
         "isCorrect": false
       },
       {
-        "text": "Il bicarbonato plasmatico aumenta immediatamente e il pH scende",
+        "text": "nessuna variazione di pH",
         "isCorrect": false
       }
     ]
@@ -596,26 +596,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Perché il fosfato di calcio dell'osso si mobilizza più facilmente in condizioni di acidosi?",
+    "text": "Il fosfato di calcio dell'osso si mobilizza in acidosi perché i protoni:",
     "options": [
       {
-        "text": "Perché i protoni in eccesso protonano lo ione fosfato: la concentrazione di PO4(3-) libero scende, il prodotto di solubilità non è più superato e il sale si dissolve",
+        "text": "protonano lo ione fosfato",
         "isCorrect": true
       },
       {
-        "text": "Perché l'acidità aumenta la concentrazione di ioni calcio e con essa il prodotto di solubilità",
+        "text": "aumentano gli ioni calcio",
         "isCorrect": false
       },
       {
-        "text": "Perché in ambiente acido il fosfato di calcio si trasforma in carbonato di calcio, più insolubile",
+        "text": "lo trasformano in carbonato",
         "isCorrect": false
       },
       {
-        "text": "Perché il pH non influenza la solubilità dei sali di acidi deboli",
+        "text": "non influenzano la solubilità",
         "isCorrect": false
       },
       {
-        "text": "Perché i protoni riducono il calcio a calcio metallico, che è solubile",
+        "text": "riducono il calcio a metallo",
         "isCorrect": false
       }
     ]
@@ -626,23 +626,23 @@
     "text": "In una reazione di ossidoriduzione la specie che si ossida:",
     "options": [
       {
-        "text": "Cede elettroni, aumenta il proprio numero di ossidazione e si comporta da riducente nei confronti dell'altra specie",
+        "text": "cede elettroni ed è il riducente",
         "isCorrect": true
       },
       {
-        "text": "Acquista elettroni, diminuisce il proprio numero di ossidazione e si comporta da ossidante",
+        "text": "acquista elettroni ed è l'ossidante",
         "isCorrect": false
       },
       {
-        "text": "Cede elettroni e si comporta da ossidante",
+        "text": "cede elettroni ed è l'ossidante",
         "isCorrect": false
       },
       {
-        "text": "Acquista protoni e cede ioni OH-",
+        "text": "acquista protoni e cede OH-",
         "isCorrect": false
       },
       {
-        "text": "Non modifica il proprio numero di ossidazione, che cambia solo nella specie ridotta",
+        "text": "non cambia numero di ossidazione",
         "isCorrect": false
       }
     ]
@@ -650,26 +650,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "In una pila, anodo e catodo sono rispettivamente la sede di:",
+    "text": "In una pila, anodo e catodo sono sede rispettivamente di:",
     "options": [
       {
-        "text": "Ossidazione e riduzione: all'anodo la specie cede elettroni, che attraversano il circuito esterno e raggiungono il catodo, dove avviene la riduzione",
+        "text": "ossidazione e riduzione",
         "isCorrect": true
       },
       {
-        "text": "Riduzione e ossidazione: gli elettroni partono dal catodo",
+        "text": "riduzione e ossidazione",
         "isCorrect": false
       },
       {
-        "text": "Due semireazioni di ossidazione, che si sommano fornendo la corrente",
+        "text": "due ossidazioni",
         "isCorrect": false
       },
       {
-        "text": "Ossidazione e riduzione, ma gli elettroni passano attraverso il ponte salino",
+        "text": "due riduzioni",
         "isCorrect": false
       },
       {
-        "text": "Riduzione e ossidazione, perché nella pila il verso è opposto a quello dell'elettrolisi",
+        "text": "nessuna semireazione",
         "isCorrect": false
       }
     ]
@@ -680,23 +680,23 @@
     "text": "Una coppia redox con potenziale standard più positivo:",
     "options": [
       {
-        "text": "Ha maggiore tendenza ad acquistare elettroni, cioè la sua forma ossidata è un ossidante più forte",
+        "text": "tende ad acquistare elettroni",
         "isCorrect": true
       },
       {
-        "text": "Ha maggiore tendenza a cedere elettroni, cioè è un riducente più forte",
+        "text": "tende a cedere elettroni",
         "isCorrect": false
       },
       {
-        "text": "Reagisce più rapidamente, perché il potenziale misura la velocità della semireazione",
+        "text": "reagisce più rapidamente",
         "isCorrect": false
       },
       {
-        "text": "Ha una variazione di energia libera positiva quando si riduce",
+        "text": "ha delta G positivo se si riduce",
         "isCorrect": false
       },
       {
-        "text": "Non può funzionare da catodo in una pila",
+        "text": "non può fare da catodo",
         "isCorrect": false
       }
     ]
@@ -704,26 +704,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "A che serve l'equazione di Nernst?",
+    "text": "L'equazione di Nernst serve a calcolare:",
     "options": [
       {
-        "text": "A calcolare il potenziale effettivo di una coppia redox in condizioni diverse da quelle standard, tenendo conto del rapporto fra le concentrazioni di forma ossidata e ridotta",
+        "text": "il potenziale fuori dallo standard",
         "isCorrect": true
       },
       {
-        "text": "A calcolare la costante di equilibrio di una reazione acido-base",
+        "text": "la costante di un equilibrio acido-base",
         "isCorrect": false
       },
       {
-        "text": "A determinare l'energia di attivazione di una reazione redox",
+        "text": "l'energia di attivazione redox",
         "isCorrect": false
       },
       {
-        "text": "A calcolare il pH di una soluzione tampone",
+        "text": "il pH di una soluzione tampone",
         "isCorrect": false
       },
       {
-        "text": "A stabilire la velocità con cui gli elettroni attraversano il circuito esterno",
+        "text": "la velocità degli elettroni",
         "isCorrect": false
       }
     ]
@@ -731,26 +731,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Nella relazione delta G = -nF delta E, che cosa si deduce da una differenza di potenziale positiva?",
+    "text": "Nella relazione delta G = -nF delta E, una differenza di potenziale positiva indica:",
     "options": [
       {
-        "text": "Che la variazione di energia libera è negativa e la reazione redox procede spontaneamente, potendo compiere lavoro",
+        "text": "delta G negativo, reazione spontanea",
         "isCorrect": true
       },
       {
-        "text": "Che la variazione di energia libera è positiva e la reazione richiede energia",
+        "text": "delta G positivo, reazione forzata",
         "isCorrect": false
       },
       {
-        "text": "Che la reazione è all'equilibrio, perché il potenziale non è nullo",
+        "text": "una reazione già all'equilibrio",
         "isCorrect": false
       },
       {
-        "text": "Che la reazione procede spontaneamente solo se n è maggiore di due",
+        "text": "spontaneità solo se n supera due",
         "isCorrect": false
       },
       {
-        "text": "Che la reazione è spontanea ma non può compiere lavoro utile",
+        "text": "spontaneità senza lavoro utile",
         "isCorrect": false
       }
     ]
@@ -758,26 +758,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Nella catena respiratoria gli elettroni passano dal NADH (potenziale standard circa -0,32 V) all'ossigeno (circa +0,82 V). Che cosa rende questo trasferimento il motore della sintesi di ATP?",
+    "text": "Nella catena respiratoria il passaggio di elettroni dal NADH all'ossigeno libera energia perché:",
     "options": [
       {
-        "text": "La differenza di potenziale di circa 1,14 V corrisponde a una variazione di energia libera fortemente negativa, che viene conservata come gradiente protonico invece di dissiparsi in calore",
+        "text": "la differenza di potenziale è positiva",
         "isCorrect": true
       },
       {
-        "text": "Il fatto che l'ossigeno ceda elettroni al NADH, liberando energia",
+        "text": "è l'ossigeno a cedere gli elettroni",
         "isCorrect": false
       },
       {
-        "text": "Il fatto che la differenza di potenziale sia negativa, condizione necessaria per la spontaneità",
+        "text": "la differenza di potenziale è negativa",
         "isCorrect": false
       },
       {
-        "text": "L'idrolisi diretta del NADH, che libera un gruppo fosfato",
+        "text": "il NADH si idrolizza liberando fosfato",
         "isCorrect": false
       },
       {
-        "text": "Il trasferimento di protoni dall'ossigeno al NADH attraverso la membrana",
+        "text": "i protoni passano dall'ossigeno al NADH",
         "isCorrect": false
       }
     ]
@@ -785,26 +785,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Perché l'ossigeno è l'accettore finale di elettroni della respirazione cellulare?",
+    "text": "L'ossigeno è l'accettore finale di elettroni della respirazione perché:",
     "options": [
       {
-        "text": "Perché la coppia O2/H2O ha il potenziale di riduzione più positivo fra quelli disponibili nella cellula, e la riduzione a quattro elettroni dell'ossigeno massimizza l'energia estraibile dai nutrienti",
+        "text": "ha il potenziale più positivo",
         "isCorrect": true
       },
       {
-        "text": "Perché è l'unica molecola capace di cedere elettroni al citocromo c",
+        "text": "è l'unico a cedere al citocromo c",
         "isCorrect": false
       },
       {
-        "text": "Perché è il gas più abbondante nell'atmosfera",
+        "text": "è il gas più abbondante nell'aria",
         "isCorrect": false
       },
       {
-        "text": "Perché ha il potenziale di riduzione più negativo e quindi è il miglior riducente",
+        "text": "ha il potenziale più negativo",
         "isCorrect": false
       },
       {
-        "text": "Perché si lega all'emoglobina, e solo le molecole legate all'emoglobina possono accettare elettroni",
+        "text": "si lega all'emoglobina",
         "isCorrect": false
       }
     ]
@@ -812,26 +812,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "La reazione di Fenton, Fe2+ più H2O2 che dà Fe3+, OH- e radicale ossidrile, è biologicamente pericolosa perché:",
+    "text": "La reazione di Fenton è biologicamente pericolosa perché:",
     "options": [
       {
-        "text": "Trasforma per via non enzimatica il perossido di idrogeno nel radicale ossidrile, la specie più reattiva fra quelle dell'ossigeno, capace di attaccare lipidi, proteine e DNA senza alcuna selettività",
+        "text": "genera il radicale ossidrile",
         "isCorrect": true
       },
       {
-        "text": "Consuma tutto il ferro disponibile per l'emoglobina, provocando anemia",
+        "text": "consuma il ferro dell'emoglobina",
         "isCorrect": false
       },
       {
-        "text": "Produce ossigeno molecolare in eccesso all'interno della cellula",
+        "text": "produce ossigeno in eccesso",
         "isCorrect": false
       },
       {
-        "text": "È catalizzata dalla catalasi e per questo avviene a velocità altissima",
+        "text": "è catalizzata dalla catalasi",
         "isCorrect": false
       },
       {
-        "text": "Riduce il ferro trivalente a ferro bivalente, forma in cui il metallo non può essere trasportato",
+        "text": "riduce il ferro a forma inerte",
         "isCorrect": false
       }
     ]
@@ -842,23 +842,23 @@
     "text": "La reazione di Haber-Weiss si distingue da quella di Fenton perché:",
     "options": [
       {
-        "text": "Parte dall'anione superossido, che riducendo il ferro trivalente rigenera il ferro bivalente necessario alla reazione di Fenton: le due insieme costituiscono un ciclo catalitico che produce radicale ossidrile",
+        "text": "parte dall'anione superossido",
         "isCorrect": true
       },
       {
-        "text": "Non coinvolge affatto il ferro e avviene spontaneamente in acqua pura",
+        "text": "non coinvolge affatto il ferro",
         "isCorrect": false
       },
       {
-        "text": "Produce perossido di idrogeno invece di consumarlo, senza formare radicali",
+        "text": "produce perossido invece di usarlo",
         "isCorrect": false
       },
       {
-        "text": "È una reazione enzimatica catalizzata dalla superossido dismutasi",
+        "text": "è catalizzata dalla dismutasi",
         "isCorrect": false
       },
       {
-        "text": "Avviene solo in presenza di rame e mai in presenza di ferro",
+        "text": "richiede rame e non ferro",
         "isCorrect": false
       }
     ]
@@ -866,26 +866,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Nella molecola di glucosio il carbonio ha numero di ossidazione medio zero; nella CO2 vale +4. Che cosa ne segue per la respirazione cellulare?",
+    "text": "Nella respirazione il carbonio passa da numero di ossidazione 0 a +4: dunque:",
     "options": [
       {
-        "text": "Che il carbonio del glucosio viene progressivamente ossidato e gli elettroni rimossi vengono raccolti dai coenzimi NAD+ e FAD, che li consegnano alla catena respiratoria",
+        "text": "il glucosio viene ossidato",
         "isCorrect": true
       },
       {
-        "text": "Che il carbonio del glucosio viene ridotto, cedendo ossigeno all'ambiente",
+        "text": "il glucosio viene ridotto",
         "isCorrect": false
       },
       {
-        "text": "Che il numero di ossidazione del carbonio non cambia, perché la reazione non è una redox",
+        "text": "il numero non cambia davvero",
         "isCorrect": false
       },
       {
-        "text": "Che l'ossidazione riguarda l'ossigeno, mentre il carbonio funge da accettore di elettroni",
+        "text": "a ossidarsi è l'ossigeno",
         "isCorrect": false
       },
       {
-        "text": "Che gli elettroni passano direttamente dal glucosio all'ossigeno senza intermedi",
+        "text": "gli elettroni non passano da intermedi",
         "isCorrect": false
       }
     ]
@@ -893,26 +893,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Per bilanciare una reazione redox in soluzione acida si applica il metodo delle semireazioni. Il passaggio caratteristico consiste:",
+    "text": "Nel bilanciare una redox in ambiente acido con le semireazioni si aggiungono:",
     "options": [
       {
-        "text": "Nel bilanciare separatamente ossidazione e riduzione aggiungendo H2O e H+ per gli atomi di ossigeno e idrogeno, e poi moltiplicarle in modo che gli elettroni ceduti uguaglino quelli acquistati",
+        "text": "H2O e H+ alle semireazioni",
         "isCorrect": true
       },
       {
-        "text": "Nell'aggiungere ioni OH- a entrambe le semireazioni, come in ambiente basico",
+        "text": "OH- a entrambe le semireazioni",
         "isCorrect": false
       },
       {
-        "text": "Nel bilanciare prima le masse e lasciare che le cariche si bilancino da sé",
+        "text": "soltanto le masse, non le cariche",
         "isCorrect": false
       },
       {
-        "text": "Nell'eliminare gli elettroni dalle semireazioni prima di sommarle",
+        "text": "gli elettroni dopo la somma",
         "isCorrect": false
       },
       {
-        "text": "Nel moltiplicare le due semireazioni per i rispettivi potenziali standard",
+        "text": "i potenziali standard come fattori",
         "isCorrect": false
       }
     ]
@@ -920,26 +920,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-04",
-    "text": "Nella reazione fra zinco metallico e ioni rame(II), che si traduce in deposito di rame sulla lamina di zinco:",
+    "text": "Nella reazione fra zinco metallico e ioni rame(II):",
     "options": [
       {
-        "text": "Lo zinco è il riducente e si ossida a Zn2+, lo ione rame è l'ossidante e si riduce a rame metallico, perché la coppia Cu2+/Cu ha potenziale più positivo",
+        "text": "lo zinco si ossida, il rame si riduce",
         "isCorrect": true
       },
       {
-        "text": "Lo zinco è l'ossidante e lo ione rame il riducente",
+        "text": "lo zinco si riduce, il rame si ossida",
         "isCorrect": false
       },
       {
-        "text": "Entrambi i metalli si ossidano, cedendo elettroni alla soluzione",
+        "text": "entrambi i metalli si ossidano",
         "isCorrect": false
       },
       {
-        "text": "La reazione non è una redox ma uno scambio di ioni fra due sali",
+        "text": "non si tratta di una redox",
         "isCorrect": false
       },
       {
-        "text": "Lo zinco si riduce perché ha potenziale standard più positivo del rame",
+        "text": "lo zinco ha potenziale più positivo",
         "isCorrect": false
       }
     ]

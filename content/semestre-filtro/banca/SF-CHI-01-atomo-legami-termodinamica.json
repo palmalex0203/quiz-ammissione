@@ -2,26 +2,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "La Risonanza Magnetica Nucleare sfrutta una proprietà del nucleo atomico. Quale, e perché il nucleo di idrogeno è quello più usato in diagnostica?",
+    "text": "La risonanza magnetica nucleare sfrutta, del nucleo di idrogeno:",
     "options": [
       {
-        "text": "Lo spin nucleare non nullo, che in un campo magnetico esterno separa livelli energetici distinti: il protone ha spin 1/2, è abbondantissimo nei tessuti grazie all'acqua e ha un elevato rapporto giromagnetico",
+        "text": "lo spin nucleare non nullo",
         "isCorrect": true
       },
       {
-        "text": "La carica positiva del nucleo, che viene deviata dal campo magnetico in modo proporzionale al numero atomico",
+        "text": "la carica positiva del protone",
         "isCorrect": false
       },
       {
-        "text": "La radioattività naturale dell'idrogeno, che emette fotoni rilevabili dall'apparecchio",
+        "text": "la sua radioattività naturale",
         "isCorrect": false
       },
       {
-        "text": "Il numero di massa dispari, che rende il nucleo instabile e quindi capace di assorbire microonde",
+        "text": "il numero di massa dispari",
         "isCorrect": false
       },
       {
-        "text": "La capacità del nucleo di catturare gli elettroni degli atomi vicini quando è immerso in un campo magnetico",
+        "text": "la cattura di elettroni vicini",
         "isCorrect": false
       }
     ]
@@ -29,26 +29,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Due atomi hanno lo stesso numero atomico ma numero di massa diverso. Quale affermazione è corretta?",
+    "text": "Due atomi con uguale numero atomico e diverso numero di massa sono:",
     "options": [
       {
-        "text": "Sono isotopi: hanno identico comportamento chimico perché identica è la configurazione elettronica, ma massa e proprietà nucleari diverse",
+        "text": "isotopi, chimicamente identici",
         "isCorrect": true
       },
       {
-        "text": "Sono isotopi e hanno comportamento chimico diverso, perché il numero di massa determina la valenza",
+        "text": "isotopi, chimicamente diversi",
         "isCorrect": false
       },
       {
-        "text": "Sono ioni dello stesso elemento, perché cambia il numero di elettroni",
+        "text": "ioni dello stesso elemento",
         "isCorrect": false
       },
       {
-        "text": "Sono due elementi diversi collocati nello stesso gruppo della tavola periodica",
+        "text": "elementi diversi dello stesso gruppo",
         "isCorrect": false
       },
       {
-        "text": "Sono atomi dello stesso elemento con un diverso numero di protoni nel nucleo",
+        "text": "atomi con diverso numero di protoni",
         "isCorrect": false
       }
     ]
@@ -56,26 +56,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Quanti elettroni può ospitare al massimo il sottolivello 3d, e per quale motivo?",
+    "text": "Quanti elettroni può ospitare al massimo il sottolivello 3d?",
     "options": [
       {
-        "text": "Dieci: il numero quantico secondario l = 2 ammette cinque valori di m(l), quindi cinque orbitali, e in ciascuno stanno due elettroni con spin opposto per il principio di Pauli",
+        "text": "dieci",
         "isCorrect": true
       },
       {
-        "text": "Sei: come in ogni sottolivello p o d, perché gli orbitali disponibili sono tre",
+        "text": "sei",
         "isCorrect": false
       },
       {
-        "text": "Due: perché il principio di Pauli ammette due soli elettroni per sottolivello",
+        "text": "due",
         "isCorrect": false
       },
       {
-        "text": "Diciotto: perché il terzo livello principale ospita in tutto diciotto elettroni",
+        "text": "diciotto",
         "isCorrect": false
       },
       {
-        "text": "Cinque: uno per orbitale, perché la regola di Hund vieta l'appaiamento negli orbitali d",
+        "text": "cinque",
         "isCorrect": false
       }
     ]
@@ -86,23 +86,23 @@
     "text": "Nell'azoto (1s2 2s2 2p3) i tre elettroni 2p si dispongono:",
     "options": [
       {
-        "text": "Uno per ciascuno dei tre orbitali p, con spin paralleli, perché la regola di Hund privilegia la massima molteplicità di spin riducendo la repulsione fra elettroni nello stesso orbitale",
+        "text": "uno per orbitale, a spin paralleli",
         "isCorrect": true
       },
       {
-        "text": "A coppie in due orbitali, lasciando il terzo vuoto, perché l'appaiamento abbassa sempre l'energia",
+        "text": "uno per orbitale, a spin opposti",
         "isCorrect": false
       },
       {
-        "text": "Tutti e tre nello stesso orbitale, dato che hanno la stessa energia",
+        "text": "a coppie in due orbitali",
         "isCorrect": false
       },
       {
-        "text": "Uno per ciascuno dei tre orbitali p ma con spin antiparalleli a due a due",
+        "text": "tutti e tre nello stesso orbitale",
         "isCorrect": false
       },
       {
-        "text": "Due in un orbitale p e uno promosso al sottolivello 3s",
+        "text": "due in un orbitale p e uno in 3s",
         "isCorrect": false
       }
     ]
@@ -110,26 +110,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "La seconda energia di ionizzazione del sodio è circa dieci volte la prima. Perché?",
+    "text": "La seconda energia di ionizzazione del sodio è molto maggiore della prima perché:",
     "options": [
       {
-        "text": "Il primo elettrone viene strappato dal 3s, poco schermato e lontano; il secondo deve essere estratto dalla configurazione completa del neon, stabilissima e molto più vicina al nucleo",
+        "text": "il secondo elettrone sta in un ottetto",
         "isCorrect": true
       },
       {
-        "text": "Perché dopo la prima ionizzazione lo ione è carico positivamente e la carica rende impossibile un'ulteriore ossidazione",
+        "text": "lo ione positivo è già molto stabile",
         "isCorrect": false
       },
       {
-        "text": "Perché il secondo elettrone va strappato a un orbitale d, che ha energia molto maggiore",
+        "text": "il secondo elettrone sta in un orbitale d",
         "isCorrect": false
       },
       {
-        "text": "Perché la seconda ionizzazione avviene in fase liquida e richiede anche l'energia di solvatazione",
+        "text": "la seconda ionizzazione avviene in liquido",
         "isCorrect": false
       },
       {
-        "text": "Perché nel sodio il secondo elettrone è legato al nucleo da un legame covalente e non da attrazione elettrostatica",
+        "text": "il secondo elettrone è legato in covalenza",
         "isCorrect": false
       }
     ]
@@ -137,26 +137,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Lungo un periodo della tavola periodica, da sinistra a destra, il raggio atomico diminuisce. La ragione è che:",
+    "text": "Lungo un periodo, da sinistra a destra, il raggio atomico diminuisce perché:",
     "options": [
       {
-        "text": "La carica nucleare efficace cresce mentre gli elettroni si aggiungono allo stesso livello, schermandosi poco a vicenda, e vengono quindi attratti più vicino al nucleo",
+        "text": "cresce la carica nucleare efficace",
         "isCorrect": true
       },
       {
-        "text": "Il numero di livelli elettronici occupati diminuisce progressivamente",
+        "text": "diminuiscono i livelli occupati",
         "isCorrect": false
       },
       {
-        "text": "La massa atomica aumenta e il nucleo più pesante comprime gli orbitali",
+        "text": "la massa maggiore comprime gli orbitali",
         "isCorrect": false
       },
       {
-        "text": "Gli elettroni aggiunti occupano orbitali d, che sono più compatti degli s",
+        "text": "si riempiono orbitali d più compatti",
         "isCorrect": false
       },
       {
-        "text": "L'affinità elettronica diminuisce e con essa la distanza nucleo-elettrone",
+        "text": "cala l'affinità elettronica",
         "isCorrect": false
       }
     ]
@@ -164,26 +164,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Nello ione ammonio NH4+ il quarto legame N-H è un legame:",
+    "text": "Nello ione ammonio NH4+ il quarto legame N-H è:",
     "options": [
       {
-        "text": "Dativo o di coordinazione: il doppietto è fornito interamente dall'azoto, ma una volta formato è del tutto equivalente agli altri tre",
+        "text": "un legame dativo",
         "isCorrect": true
       },
       {
-        "text": "Ionico, perché la carica positiva è localizzata sull'idrogeno aggiunto",
+        "text": "un legame ionico",
         "isCorrect": false
       },
       {
-        "text": "A idrogeno, come quelli che l'ammoniaca forma con l'acqua",
+        "text": "un legame a idrogeno",
         "isCorrect": false
       },
       {
-        "text": "Covalente omopolare, perché azoto e idrogeno hanno la stessa elettronegatività",
+        "text": "un legame covalente apolare",
         "isCorrect": false
       },
       {
-        "text": "Più debole degli altri tre, e per questo lo ione ammonio cede facilmente un protone",
+        "text": "un legame più debole degli altri",
         "isCorrect": false
       }
     ]
@@ -191,26 +191,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Nella molecola d'acqua l'angolo di legame vale circa 104,5 gradi invece dei 109,5 attesi per un'ibridazione sp3. Il motivo è:",
+    "text": "Nell'acqua l'angolo di legame è 104,5 gradi invece di 109,5 perché:",
     "options": [
       {
-        "text": "I due doppietti non condivisi dell'ossigeno occupano più spazio dei doppietti di legame e comprimono l'angolo H-O-H",
+        "text": "i doppietti liberi occupano più spazio",
         "isCorrect": true
       },
       {
-        "text": "L'ossigeno è in realtà ibridato sp2, e l'angolo tende a 120 gradi",
+        "text": "l'ossigeno è in realtà ibridato sp2",
         "isCorrect": false
       },
       {
-        "text": "I legami a idrogeno con le molecole vicine stirano la molecola",
+        "text": "i legami a idrogeno stirano la molecola",
         "isCorrect": false
       },
       {
-        "text": "L'elevata elettronegatività dell'ossigeno accorcia i legami e quindi riduce l'angolo",
+        "text": "l'elettronegatività accorcia i legami",
         "isCorrect": false
       },
       {
-        "text": "La molecola è lineare in fase gassosa e piegata solo in fase liquida",
+        "text": "la molecola è lineare in fase gassosa",
         "isCorrect": false
       }
     ]
@@ -221,23 +221,23 @@
     "text": "Il carbonio del gruppo carbonilico di un'aldeide è ibridato:",
     "options": [
       {
-        "text": "sp2, con i tre legami sigma complanari ad angoli di circa 120 gradi e un legame pi-greco perpendicolare al piano, formato dagli orbitali p non ibridati di carbonio e ossigeno",
+        "text": "sp2",
         "isCorrect": true
       },
       {
-        "text": "sp3, con geometria tetraedrica e angoli di 109,5 gradi",
+        "text": "sp3",
         "isCorrect": false
       },
       {
-        "text": "sp, con geometria lineare, perché il doppio legame impone 180 gradi",
+        "text": "sp",
         "isCorrect": false
       },
       {
-        "text": "sp2, ma con il legame pi-greco che giace nello stesso piano dei tre legami sigma",
+        "text": "sp3d",
         "isCorrect": false
       },
       {
-        "text": "Non ibridato: usa i tre orbitali 2p puri e l'orbitale 2s per il legame con l'ossigeno",
+        "text": "non ibridato",
         "isCorrect": false
       }
     ]
@@ -245,26 +245,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Perché la rotazione intorno a un doppio legame C=C è impedita, mentre intorno a un legame semplice C-C è libera?",
+    "text": "La rotazione attorno a un doppio legame C=C è impedita perché:",
     "options": [
       {
-        "text": "Il legame pi-greco nasce dalla sovrapposizione laterale di due orbitali p paralleli: ruotare significa annullare quella sovrapposizione, cioè rompere il legame, mentre il legame sigma ha simmetria cilindrica attorno all'asse",
+        "text": "romperebbe la sovrapposizione pi-greco",
         "isCorrect": true
       },
       {
-        "text": "Perché il doppio legame è più corto, e la minore distanza impedisce meccanicamente il movimento",
+        "text": "il legame è troppo corto per ruotare",
         "isCorrect": false
       },
       {
-        "text": "Perché nel doppio legame i due carboni sono ibridati sp3 e gli idrogeni si urtano",
+        "text": "i due carboni sono ibridati sp3",
         "isCorrect": false
       },
       {
-        "text": "Perché il doppio legame è polarizzato e l'attrazione elettrostatica blocca i due atomi",
+        "text": "il legame polarizzato blocca gli atomi",
         "isCorrect": false
       },
       {
-        "text": "In realtà la rotazione è libera in entrambi i casi: la rigidità degli alcheni dipende dai sostituenti",
+        "text": "in realtà la rotazione è libera",
         "isCorrect": false
       }
     ]
@@ -272,26 +272,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Il legame a idrogeno si forma quando:",
+    "text": "Il legame a idrogeno si forma quando un idrogeno:",
     "options": [
       {
-        "text": "Un idrogeno legato covalentemente a un atomo molto elettronegativo e piccolo (F, O, N) interagisce con un doppietto non condiviso di un altro atomo elettronegativo",
+        "text": "legato a F, O o N attrae un doppietto",
         "isCorrect": true
       },
       {
-        "text": "Due atomi di idrogeno condividono una coppia di elettroni formando la molecola H2",
+        "text": "condivide elettroni con un altro idrogeno",
         "isCorrect": false
       },
       {
-        "text": "Un idrogeno legato al carbonio si avvicina a un altro atomo di carbonio",
+        "text": "legato al carbonio sfiora un carbonio",
         "isCorrect": false
       },
       {
-        "text": "Uno ione idrogeno viene ceduto da un acido a una base",
+        "text": "viene ceduto da un acido a una base",
         "isCorrect": false
       },
       {
-        "text": "Due molecole apolari si avvicinano e i loro dipoli istantanei si sincronizzano",
+        "text": "sincronizza due dipoli istantanei",
         "isCorrect": false
       }
     ]
@@ -299,26 +299,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Le interazioni idrofobiche che tengono raccolte le catene apolari all'interno di una proteina o di una membrana sono favorite perché:",
+    "text": "Le interazioni idrofobiche sono favorite soprattutto:",
     "options": [
       {
-        "text": "Allontanando il soluto apolare dall'acqua si liberano le molecole d'acqua costrette a ordinarsi intorno ad esso: il guadagno è soprattutto entropico, non un'attrazione fra le catene",
+        "text": "dall'aumento di entropia dell'acqua",
         "isCorrect": true
       },
       {
-        "text": "Le catene apolari si attraggono con legami a idrogeno molto forti fra i gruppi CH2",
+        "text": "da legami a idrogeno fra i gruppi CH2",
         "isCorrect": false
       },
       {
-        "text": "L'acqua forma legami covalenti con le catene apolari e le costringe ad avvicinarsi",
+        "text": "da legami covalenti con l'acqua",
         "isCorrect": false
       },
       {
-        "text": "Le catene apolari portano cariche opposte che si attraggono elettrostaticamente",
+        "text": "dall'attrazione fra cariche opposte",
         "isCorrect": false
       },
       {
-        "text": "Il processo è favorito dalla variazione di entalpia, fortemente negativa, mentre l'entropia del sistema diminuisce",
+        "text": "da una forte diminuzione di entalpia",
         "isCorrect": false
       }
     ]
@@ -326,26 +326,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Fra le forze di van der Waals, le forze di London (dispersione) aumentano:",
+    "text": "Fra le forze di van der Waals, quelle di London aumentano al crescere:",
     "options": [
       {
-        "text": "Al crescere della polarizzabilità, cioè con la dimensione della nuvola elettronica e la superficie di contatto fra le molecole",
+        "text": "della polarizzabilità",
         "isCorrect": true
       },
       {
-        "text": "Al crescere del momento di dipolo permanente, da cui dipendono esclusivamente",
+        "text": "del momento di dipolo permanente",
         "isCorrect": false
       },
       {
-        "text": "Al crescere della carica netta delle due specie coinvolte",
+        "text": "della carica netta delle specie",
         "isCorrect": false
       },
       {
-        "text": "Al diminuire della massa molecolare, perché le molecole leggere si muovono più rapidamente",
+        "text": "della velocità molecolare",
         "isCorrect": false
       },
       {
-        "text": "Solo in presenza di atomi di ossigeno o azoto nella molecola",
+        "text": "del numero di atomi di ossigeno",
         "isCorrect": false
       }
     ]
@@ -380,26 +380,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Nel perossido di idrogeno H2O2 il numero di ossidazione dell'ossigeno è -1 e non -2. La ragione è che:",
+    "text": "Nel perossido di idrogeno l'ossigeno ha numero di ossidazione -1 perché:",
     "options": [
       {
-        "text": "I due ossigeni sono legati fra loro: nel legame O-O gli elettroni si ripartiscono equamente fra atomi uguali, e ciascun ossigeno attrae solo il doppietto condiviso con l'idrogeno",
+        "text": "i due ossigeni sono legati fra loro",
         "isCorrect": true
       },
       {
-        "text": "L'idrogeno nei perossidi ha numero di ossidazione -1",
+        "text": "l'idrogeno nei perossidi vale -1",
         "isCorrect": false
       },
       {
-        "text": "La molecola è un radicale e porta un elettrone spaiato su ciascun ossigeno",
+        "text": "la molecola è un radicale libero",
         "isCorrect": false
       },
       {
-        "text": "L'ossigeno nei perossidi è meno elettronegativo dell'idrogeno",
+        "text": "l'ossigeno è meno elettronegativo",
         "isCorrect": false
       },
       {
-        "text": "La molecola è ciclica e il legame O-O è un doppio legame",
+        "text": "il legame O-O è un doppio legame",
         "isCorrect": false
       }
     ]
@@ -410,23 +410,23 @@
     "text": "Quante molecole sono contenute in 36 g di acqua (massa molecolare 18 u)?",
     "options": [
       {
-        "text": "Circa 1,2 x 10(24), cioè due moli per il numero di Avogadro",
+        "text": "1,2 x 10^24",
         "isCorrect": true
       },
       {
-        "text": "Circa 6,022 x 10(23), cioè una mole",
+        "text": "6,022 x 10^23",
         "isCorrect": false
       },
       {
-        "text": "Circa 3,0 x 10(23), cioè mezza mole",
+        "text": "3,0 x 10^23",
         "isCorrect": false
       },
       {
-        "text": "Esattamente 36 x 6,022 x 10(23)",
+        "text": "1,8 x 10^25",
         "isCorrect": false
       },
       {
-        "text": "Circa 1,8 x 10(25), perché bisogna moltiplicare anche per i tre atomi della molecola",
+        "text": "36 x 6,022 x 10^23",
         "isCorrect": false
       }
     ]
@@ -434,26 +434,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Durante l'inspirazione il diaframma si abbassa. In termini di leggi dei gas:",
+    "text": "Durante l'inspirazione il diaframma si abbassa, quindi negli alveoli:",
     "options": [
       {
-        "text": "Il volume della cavità toracica aumenta e, a temperatura costante, la pressione alveolare scende sotto quella atmosferica secondo la legge di Boyle: l'aria entra per il gradiente così creato",
+        "text": "il volume sale e la pressione scende",
         "isCorrect": true
       },
       {
-        "text": "La temperatura dell'aria alveolare aumenta e il gas si espande secondo la legge di Charles, richiamando aria dall'esterno",
+        "text": "il volume sale e la pressione sale",
         "isCorrect": false
       },
       {
-        "text": "La pressione alveolare aumenta e spinge l'aria verso l'interno",
+        "text": "la temperatura sale e il gas si espande",
         "isCorrect": false
       },
       {
-        "text": "Il numero di moli di gas negli alveoli diminuisce a volume costante, come prevede la legge di Gay-Lussac",
+        "text": "le moli diminuiscono a volume costante",
         "isCorrect": false
       },
       {
-        "text": "La legge di Dalton impone che la somma delle pressioni parziali diminuisca, e il vuoto creato richiama l'aria",
+        "text": "la somma delle pressioni parziali cala",
         "isCorrect": false
       }
     ]
@@ -488,26 +488,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Secondo la distribuzione di Maxwell-Boltzmann, aumentando la temperatura di un gas:",
+    "text": "Aumentando la temperatura, la distribuzione di Maxwell-Boltzmann:",
     "options": [
       {
-        "text": "La curva si abbassa e si allarga verso velocità maggiori, e cresce in modo molto marcato la frazione di molecole con energia superiore a un dato valore soglia",
+        "text": "si abbassa e si allarga a destra",
         "isCorrect": true
       },
       {
-        "text": "Tutte le molecole acquistano la stessa velocità, pari alla velocità quadratica media",
+        "text": "si restringe attorno a un valore alto",
         "isCorrect": false
       },
       {
-        "text": "La curva si restringe intorno a un valore più alto, perché le molecole si uniformano",
+        "text": "trasla rigidamente senza cambiare forma",
         "isCorrect": false
       },
       {
-        "text": "La distribuzione non cambia forma: si limita a traslare rigidamente verso destra",
+        "text": "assegna a tutte la stessa velocità",
         "isCorrect": false
       },
       {
-        "text": "La frazione di molecole veloci diminuisce, perché aumentano gli urti fra di esse",
+        "text": "riduce la frazione di molecole veloci",
         "isCorrect": false
       }
     ]
@@ -515,26 +515,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Confrontando il diagramma di fase dell'acqua con quello dell'anidride carbonica:",
+    "text": "Nel diagramma di fase dell'acqua la curva di fusione:",
     "options": [
       {
-        "text": "La curva di fusione dell'acqua ha pendenza negativa, perché il ghiaccio è meno denso del liquido; la CO2 ha il punto triplo sopra 1 atm e a pressione atmosferica sublima senza fondere",
+        "text": "ha pendenza negativa",
         "isCorrect": true
       },
       {
-        "text": "Entrambe hanno la curva di fusione a pendenza negativa, perché il solido è sempre meno denso del liquido",
+        "text": "ha pendenza positiva",
         "isCorrect": false
       },
       {
-        "text": "L'acqua a pressione atmosferica sublima, mentre la CO2 fonde regolarmente",
+        "text": "è verticale, come per la CO2",
         "isCorrect": false
       },
       {
-        "text": "La CO2 ha il punto triplo a pressione inferiore a quella atmosferica, e per questo il ghiaccio secco sublima",
+        "text": "coincide con la sublimazione",
         "isCorrect": false
       },
       {
-        "text": "I due diagrammi sono sovrapponibili: cambiano solo i valori numerici delle temperature",
+        "text": "parte dal punto critico",
         "isCorrect": false
       }
     ]
@@ -545,23 +545,23 @@
     "text": "L'evaporazione del sudore raffredda la superficie corporea perché:",
     "options": [
       {
-        "text": "Il passaggio di stato è endotermico e l'acqua, che ha un calore di evaporazione molto elevato per i suoi legami a idrogeno, assorbe quel calore dalla pelle",
+        "text": "è un passaggio di stato endotermico",
         "isCorrect": true
       },
       {
-        "text": "L'acqua che evapora porta via con sé i sali, e la pelle disidratata conduce meno calore",
+        "text": "è un passaggio di stato esotermico",
         "isCorrect": false
       },
       {
-        "text": "L'evaporazione è un processo esotermico che libera calore verso l'ambiente esterno",
+        "text": "porta via i sali insieme all'acqua",
         "isCorrect": false
       },
       {
-        "text": "Il vapore d'acqua ha capacità termica maggiore dell'acqua liquida e trattiene il calore",
+        "text": "il vapore trattiene più calore",
         "isCorrect": false
       },
       {
-        "text": "Il sudore abbassa la temperatura di ebollizione dell'acqua corporea per effetto colligativo",
+        "text": "abbassa la temperatura di ebollizione",
         "isCorrect": false
       }
     ]
@@ -569,26 +569,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "La tensione superficiale negli alveoli polmonari tenderebbe a farli collassare. Il surfattante polmonare agisce:",
+    "text": "Il surfattante polmonare impedisce il collasso degli alveoli:",
     "options": [
       {
-        "text": "Inserendosi all'interfaccia aria-liquido e interrompendo i legami a idrogeno fra le molecole d'acqua, abbassando così la tensione superficiale",
+        "text": "abbassando la tensione superficiale",
         "isCorrect": true
       },
       {
-        "text": "Aumentando la tensione superficiale, così che la parete alveolare risulti più rigida",
+        "text": "aumentando la tensione superficiale",
         "isCorrect": false
       },
       {
-        "text": "Assorbendo l'acqua alveolare e asciugando completamente la superficie di scambio",
+        "text": "asciugando la superficie alveolare",
         "isCorrect": false
       },
       {
-        "text": "Formando legami covalenti con l'ossigeno per facilitarne la diffusione",
+        "text": "legando covalentemente l'ossigeno",
         "isCorrect": false
       },
       {
-        "text": "Aumentando la pressione parziale di ossigeno all'interno dell'alveolo",
+        "text": "aumentando la pressione di ossigeno",
         "isCorrect": false
       }
     ]
@@ -623,26 +623,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Lo scioglimento del nitrato di ammonio in acqua assorbe calore, eppure avviene spontaneamente. Come si spiega?",
+    "text": "Lo scioglimento del nitrato di ammonio assorbe calore ma è spontaneo perché:",
     "options": [
       {
-        "text": "La variazione di entropia è abbastanza positiva perché il termine -T(delta)S superi il delta H positivo, rendendo negativo il delta G",
+        "text": "l'aumento di entropia prevale",
         "isCorrect": true
       },
       {
-        "text": "Il processo è spontaneo perché il delta H, pur positivo, è piccolo: il segno del delta H è il solo criterio di spontaneità",
+        "text": "il delta H positivo è trascurabile",
         "isCorrect": false
       },
       {
-        "text": "L'energia necessaria viene fornita dalla rottura dei legami covalenti dell'acqua",
+        "text": "l'energia viene dai legami dell'acqua",
         "isCorrect": false
       },
       {
-        "text": "La spontaneità dipende dalla velocità del processo, che in questo caso è elevata",
+        "text": "il processo è molto veloce",
         "isCorrect": false
       },
       {
-        "text": "Il processo in realtà non è spontaneo: richiede riscaldamento esterno per avvenire",
+        "text": "in realtà non è spontaneo",
         "isCorrect": false
       }
     ]
@@ -650,26 +650,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Una reazione ha delta H negativo e delta S negativo. Quando è spontanea?",
+    "text": "Una reazione con delta H negativo e delta S negativo è spontanea:",
     "options": [
       {
-        "text": "Alle temperature basse, dove il termine entalpico prevale sul termine -T(delta)S",
+        "text": "alle basse temperature",
         "isCorrect": true
       },
       {
-        "text": "Alle temperature alte, dove il termine entropico prevale",
+        "text": "alle alte temperature",
         "isCorrect": false
       },
       {
-        "text": "A qualunque temperatura, perché il delta H negativo basta a renderla spontanea",
+        "text": "a qualunque temperatura",
         "isCorrect": false
       },
       {
-        "text": "A nessuna temperatura: con delta S negativo la reazione non può mai avvenire",
+        "text": "a nessuna temperatura",
         "isCorrect": false
       },
       {
-        "text": "Solo a temperatura e pressione standard",
+        "text": "solo in condizioni standard",
         "isCorrect": false
       }
     ]
@@ -677,26 +677,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Nei sistemi biologici, che sono sistemi aperti, la diminuzione locale di entropia (una proteina che si ripiega, un gradiente che si costruisce) è compatibile con il secondo principio perché:",
+    "text": "Negli organismi la diminuzione locale di entropia è possibile perché:",
     "options": [
       {
-        "text": "Il sistema scambia materia ed energia con l'ambiente, e l'aumento di entropia dell'ambiente è maggiore della diminuzione locale: è l'entropia totale che non può diminuire",
+        "text": "l'entropia dell'ambiente aumenta",
         "isCorrect": true
       },
       {
-        "text": "Il secondo principio non si applica alla materia vivente",
+        "text": "il secondo principio non vale",
         "isCorrect": false
       },
       {
-        "text": "Negli organismi viventi l'entropia si conserva, come l'energia",
+        "text": "negli esseri viventi si conserva",
         "isCorrect": false
       },
       {
-        "text": "Le reazioni biologiche sono catalizzate dagli enzimi, e la catalisi annulla il costo entropico",
+        "text": "gli enzimi annullano il costo",
         "isCorrect": false
       },
       {
-        "text": "Le reazioni biologiche avvengono a temperatura costante, condizione in cui il delta S è sempre nullo",
+        "text": "la temperatura resta costante",
         "isCorrect": false
       }
     ]
@@ -731,26 +731,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "L'anidride carbonica contiene due legami C=O fortemente polarizzati, eppure la molecola ha momento di dipolo nullo. Perché?",
+    "text": "L'anidride carbonica ha momento di dipolo nullo perché:",
     "options": [
       {
-        "text": "La geometria è lineare e i due vettori dipolo, uguali e opposti, si annullano",
+        "text": "è lineare e i dipoli si annullano",
         "isCorrect": true
       },
       {
-        "text": "Perché carbonio e ossigeno hanno la stessa elettronegatività",
+        "text": "C e O hanno uguale elettronegatività",
         "isCorrect": false
       },
       {
-        "text": "Perché la molecola è piegata e i dipoli si dispongono a 104,5 gradi",
+        "text": "è piegata a 104,5 gradi",
         "isCorrect": false
       },
       {
-        "text": "Perché i legami pi-greco annullano la polarità dei legami sigma",
+        "text": "i legami pi-greco annullano la polarità",
         "isCorrect": false
       },
       {
-        "text": "Perché la molecola ruota rapidamente e il dipolo si media a zero",
+        "text": "ruota rapidamente nello spazio",
         "isCorrect": false
       }
     ]
@@ -758,26 +758,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-01",
-    "text": "Perché il solfato di calcio è un solido con temperatura di fusione altissima, mentre il glucosio fonde sotto i 200 gradi?",
+    "text": "Il solfato di calcio fonde molto più in alto del glucosio perché:",
     "options": [
       {
-        "text": "Il primo è un solido ionico, tenuto insieme in tutte le direzioni da forti attrazioni elettrostatiche fra ioni; il secondo è un solido molecolare, in cui fra molecole intere agiscono solo legami a idrogeno e forze di van der Waals",
+        "text": "è un solido ionico",
         "isCorrect": true
       },
       {
-        "text": "Il solfato di calcio è un solido covalente reticolare, come il diamante",
+        "text": "è un solido covalente reticolare",
         "isCorrect": false
       },
       {
-        "text": "Il glucosio è un solido metallico e gli elettroni delocalizzati abbassano il punto di fusione",
+        "text": "è un solido metallico",
         "isCorrect": false
       },
       {
-        "text": "La differenza dipende solo dalla massa molecolare, maggiore nel solfato di calcio",
+        "text": "ha massa molecolare maggiore",
         "isCorrect": false
       },
       {
-        "text": "Nel glucosio non esistono legami a idrogeno, e la mancanza di interazioni ne abbassa il punto di fusione",
+        "text": "il glucosio non ha legami a idrogeno",
         "isCorrect": false
       }
     ]

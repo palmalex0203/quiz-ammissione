@@ -2,26 +2,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Che cosa distingue una soluzione vera da un colloide come il plasma deproteinizzato o il latte?",
+    "text": "Che cosa distingue una soluzione vera da un colloide come il latte?",
     "options": [
       {
-        "text": "Nella soluzione il soluto è disperso a livello molecolare o ionico e non è separabile per filtrazione né visibile all'effetto Tyndall; nel colloide le particelle disperse hanno dimensioni fra 1 e 1000 nm e diffondono la luce",
+        "text": "il soluto è disperso a livello molecolare",
         "isCorrect": true
       },
       {
-        "text": "La soluzione è sempre liquida, il colloide sempre solido",
+        "text": "il soluto sedimenta in pochi minuti",
         "isCorrect": false
       },
       {
-        "text": "La soluzione è una miscela eterogenea, il colloide una miscela omogenea",
+        "text": "la soluzione è sempre liquida",
         "isCorrect": false
       },
       {
-        "text": "Nel colloide il soluto sedimenta spontaneamente in pochi minuti, nella soluzione no",
+        "text": "la soluzione è una miscela eterogenea",
         "isCorrect": false
       },
       {
-        "text": "La soluzione contiene un solo soluto, il colloide sempre più di uno",
+        "text": "la soluzione contiene un solo soluto",
         "isCorrect": false
       }
     ]
@@ -29,26 +29,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Perché l'acqua è un buon solvente per il cloruro di sodio?",
+    "text": "L'acqua scioglie bene il cloruro di sodio perché:",
     "options": [
       {
-        "text": "È una molecola polare: le sue estremità parziali negativa e positiva circondano rispettivamente i cationi e gli anioni, e l'energia di idratazione compensa l'energia reticolare del cristallo",
+        "text": "è polare e solvata i due ioni",
         "isCorrect": true
       },
       {
-        "text": "Forma legami covalenti con gli ioni sodio e cloruro, stabilizzandoli in soluzione",
+        "text": "forma legami covalenti con gli ioni",
         "isCorrect": false
       },
       {
-        "text": "Ha una costante dielettrica bassa, che favorisce l'attrazione fra gli ioni di carica opposta",
+        "text": "ha una costante dielettrica bassa",
         "isCorrect": false
       },
       {
-        "text": "Reagisce con il sale producendo acido cloridrico e idrossido di sodio",
+        "text": "reagisce dando HCl e NaOH",
         "isCorrect": false
       },
       {
-        "text": "È apolare, e gli ioni si disperdono nelle regioni idrofobiche del solvente",
+        "text": "è apolare e disperde gli ioni",
         "isCorrect": false
       }
     ]
@@ -56,26 +56,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Una soluzione di glucosio e una di cloruro di sodio hanno la stessa molarità. Quale conduce la corrente elettrica, e perché?",
+    "text": "Fra una soluzione di glucosio e una di NaCl di pari molarità conduce:",
     "options": [
       {
-        "text": "Quella di cloruro di sodio: è un elettrolita e in acqua si dissocia in ioni liberi di migrare, mentre il glucosio resta in soluzione come molecola neutra",
+        "text": "quella di NaCl, che si dissocia",
         "isCorrect": true
       },
       {
-        "text": "Quella di glucosio, perché i suoi numerosi gruppi ossidrilici liberano ioni H+",
+        "text": "quella di glucosio, ricca di ossidrili",
         "isCorrect": false
       },
       {
-        "text": "Entrambe allo stesso modo, perché la conducibilità dipende solo dalla molarità",
+        "text": "entrambe allo stesso modo",
         "isCorrect": false
       },
       {
-        "text": "Nessuna delle due: solo gli acidi conducono la corrente",
+        "text": "nessuna delle due soluzioni",
         "isCorrect": false
       },
       {
-        "text": "Quella di cloruro di sodio, perché il sodio è un metallo e i metalli conducono la corrente",
+        "text": "quella di NaCl, perché il sodio è metallo",
         "isCorrect": false
       }
     ]
@@ -83,26 +83,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "La legge di Henry stabilisce che la solubilità di un gas in un liquido è proporzionale alla sua pressione parziale. Quale conseguenza fisiologica ne deriva?",
+    "text": "Per la legge di Henry, negli alveoli l'ossigeno disciolto nel plasma:",
     "options": [
       {
-        "text": "Negli alveoli l'ossigeno si scioglie nel plasma in quantità proporzionale alla propria pressione parziale, e il subacqueo che risale troppo rapidamente libera in bolle l'azoto che a pressione elevata si era dissolto nei tessuti",
+        "text": "è proporzionale alla sua pressione",
         "isCorrect": true
       },
       {
-        "text": "L'ossigeno si scioglie nel plasma in quantità proporzionale alla temperatura corporea, che ne aumenta la solubilità",
+        "text": "è proporzionale alla temperatura",
         "isCorrect": false
       },
       {
-        "text": "La quantità di gas sciolto dipende solo dal volume del liquido e non dalla pressione",
+        "text": "dipende solo dal volume del liquido",
         "isCorrect": false
       },
       {
-        "text": "Il trasporto dell'ossigeno nel sangue avviene interamente in forma dissolta, senza bisogno dell'emoglobina",
+        "text": "basta da solo al trasporto nel sangue",
         "isCorrect": false
       },
       {
-        "text": "L'anidride carbonica, essendo più solubile dell'ossigeno, non segue la legge di Henry",
+        "text": "non segue la legge, come la CO2",
         "isCorrect": false
       }
     ]
@@ -110,26 +110,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Scaldando dell'acqua, prima che bolla si formano piccole bollicine sulle pareti del recipiente. La ragione è che:",
+    "text": "Scaldando l'acqua si formano bollicine prima dell'ebollizione perché:",
     "options": [
       {
-        "text": "La solubilità dei gas nei liquidi diminuisce al crescere della temperatura, perciò l'aria dissolta si libera",
+        "text": "i gas disciolti diventano meno solubili",
         "isCorrect": true
       },
       {
-        "text": "La solubilità dei gas aumenta con la temperatura e l'acqua ne assorbe altro dall'ambiente",
+        "text": "i gas disciolti diventano più solubili",
         "isCorrect": false
       },
       {
-        "text": "L'acqua si decompone in idrogeno e ossigeno gassosi",
+        "text": "l'acqua si decompone in idrogeno",
         "isCorrect": false
       },
       {
-        "text": "La pressione di vapore dell'acqua diminuisce e il vapore condensa in bolle",
+        "text": "la pressione di vapore diminuisce",
         "isCorrect": false
       },
       {
-        "text": "Gli ioni H+ e OH- dell'autoprotolisi si ricombinano liberando gas",
+        "text": "gli ioni dell'autoprotolisi si uniscono",
         "isCorrect": false
       }
     ]
@@ -164,26 +164,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Quale differenza c'è fra molarità e molalità, e perché nei calcoli di proprietà colligative si preferisce la seconda?",
+    "text": "La molalità, a differenza della molarità, è riferita:",
     "options": [
       {
-        "text": "La molarità è riferita al volume di soluzione, la molalità alla massa di solvente: la massa non dipende dalla temperatura, mentre il volume sì, quindi la molalità non cambia scaldando la soluzione",
+        "text": "alla massa di solvente",
         "isCorrect": true
       },
       {
-        "text": "La molarità è riferita alla massa di soluzione, la molalità al volume di solvente",
+        "text": "al volume di soluzione",
         "isCorrect": false
       },
       {
-        "text": "Sono la stessa cosa espressa in unità diverse, e il passaggio fra le due richiede solo un fattore 1000",
+        "text": "alla massa di soluzione",
         "isCorrect": false
       },
       {
-        "text": "La molalità si usa solo per i gas e la molarità solo per i liquidi",
+        "text": "al volume di solvente",
         "isCorrect": false
       },
       {
-        "text": "La molarità tiene conto del numero di particelle in cui il soluto si dissocia, la molalità no",
+        "text": "al numero di ioni liberati",
         "isCorrect": false
       }
     ]
@@ -191,26 +191,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "La soluzione fisiologica è NaCl allo 0,9% peso/volume. Quale concentrazione molare corrisponde (massa molare 58,5 g/mol)?",
+    "text": "La soluzione fisiologica è NaCl allo 0,9% p/v: la sua molarità (M = 58,5) è circa:",
     "options": [
       {
-        "text": "Circa 0,154 M, cioè 9 g in un litro divisi per la massa molare",
+        "text": "0,154 M",
         "isCorrect": true
       },
       {
-        "text": "Circa 0,9 M, perché la percentuale indica direttamente le moli per litro",
+        "text": "0,9 M",
         "isCorrect": false
       },
       {
-        "text": "Circa 0,009 M, cioè la percentuale divisa per cento",
+        "text": "0,009 M",
         "isCorrect": false
       },
       {
-        "text": "Circa 1,54 M, perché vanno considerati entrambi gli ioni",
+        "text": "1,54 M",
         "isCorrect": false
       },
       {
-        "text": "Circa 0,058 M, cioè la massa molare divisa per mille",
+        "text": "0,058 M",
         "isCorrect": false
       }
     ]
@@ -218,26 +218,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "In ambito biomedico le concentrazioni ioniche si esprimono spesso in milliequivalenti per litro. Quanti milliequivalenti per litro corrispondono a una soluzione 2 mM di CaCl2 per quanto riguarda il calcio?",
+    "text": "Una concentrazione di ioni calcio di 2 mmol/L corrisponde a:",
     "options": [
       {
-        "text": "4 mEq/L, perché lo ione calcio è bivalente e ogni mole fornisce due equivalenti",
+        "text": "4 mEq/L",
         "isCorrect": true
       },
       {
-        "text": "2 mEq/L, perché equivalenti e moli coincidono sempre",
+        "text": "2 mEq/L",
         "isCorrect": false
       },
       {
-        "text": "1 mEq/L, perché bisogna dividere per la valenza",
+        "text": "1 mEq/L",
         "isCorrect": false
       },
       {
-        "text": "6 mEq/L, considerando anche i due ioni cloruro",
+        "text": "6 mEq/L",
         "isCorrect": false
       },
       {
-        "text": "40 mEq/L, moltiplicando per la massa atomica del calcio",
+        "text": "40 mEq/L",
         "isCorrect": false
       }
     ]
@@ -299,26 +299,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Confrontando aria inspirata ed espirata:",
+    "text": "Nell'aria espirata, rispetto a quella inspirata:",
     "options": [
       {
-        "text": "Nell'aria espirata l'ossigeno scende da circa il 21% al 16% e l'anidride carbonica sale dallo 0,04% a circa il 4%, mentre la percentuale di azoto resta praticamente invariata",
+        "text": "l'ossigeno scende e la CO2 sale",
         "isCorrect": true
       },
       {
-        "text": "Nell'aria espirata l'ossigeno è completamente assente, perché viene tutto consumato",
+        "text": "l'ossigeno è del tutto assente",
         "isCorrect": false
       },
       {
-        "text": "Nell'aria espirata diminuisce soprattutto l'azoto, che partecipa agli scambi respiratori",
+        "text": "diminuisce soprattutto l'azoto",
         "isCorrect": false
       },
       {
-        "text": "L'aria espirata contiene più ossigeno di quella inspirata, per effetto dell'umidificazione",
+        "text": "l'ossigeno è più abbondante",
         "isCorrect": false
       },
       {
-        "text": "Le due composizioni sono identiche: cambia solo la temperatura del gas",
+        "text": "la composizione resta identica",
         "isCorrect": false
       }
     ]
@@ -326,26 +326,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Che cosa hanno in comune innalzamento ebullioscopico, abbassamento crioscopico e pressione osmotica?",
+    "text": "Innalzamento ebullioscopico, abbassamento crioscopico e pressione osmotica dipendono:",
     "options": [
       {
-        "text": "Sono proprietà colligative: dipendono dal numero di particelle di soluto disciolte e non dalla loro natura chimica",
+        "text": "dal numero di particelle di soluto",
         "isCorrect": true
       },
       {
-        "text": "Dipendono tutte dalla massa molecolare del soluto, che va quindi sempre conosciuta",
+        "text": "dalla massa molecolare del soluto",
         "isCorrect": false
       },
       {
-        "text": "Si manifestano solo con soluti elettrolitici",
+        "text": "dalla sola presenza di elettroliti",
         "isCorrect": false
       },
       {
-        "text": "Dipendono dalla carica del soluto e non dal numero di particelle",
+        "text": "dalla carica elettrica del soluto",
         "isCorrect": false
       },
       {
-        "text": "Sono proprietà che riguardano il soluto e non il solvente",
+        "text": "dalla natura chimica del soluto",
         "isCorrect": false
       }
     ]
@@ -353,26 +353,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Secondo la legge di Raoult, aggiungendo un soluto non volatile a un solvente:",
+    "text": "Secondo la legge di Raoult un soluto non volatile:",
     "options": [
       {
-        "text": "La pressione di vapore del solvente si abbassa in proporzione alla sua frazione molare, e di conseguenza la temperatura di ebollizione si innalza",
+        "text": "abbassa la pressione di vapore",
         "isCorrect": true
       },
       {
-        "text": "La pressione di vapore del solvente aumenta, e con essa la tendenza a evaporare",
+        "text": "alza la pressione di vapore",
         "isCorrect": false
       },
       {
-        "text": "La pressione di vapore non cambia, perché il soluto non è volatile",
+        "text": "non cambia la pressione di vapore",
         "isCorrect": false
       },
       {
-        "text": "La temperatura di ebollizione si abbassa e quella di congelamento si innalza",
+        "text": "abbassa il punto di ebollizione",
         "isCorrect": false
       },
       {
-        "text": "La pressione di vapore dipende dalla molarità del soluto, non dalla frazione molare",
+        "text": "alza il punto di congelamento",
         "isCorrect": false
       }
     ]
@@ -380,26 +380,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Si confrontano tre soluzioni acquose 0,1 molali: glucosio, NaCl e CaCl2. Quale congela alla temperatura più bassa?",
+    "text": "Fra tre soluzioni 0,1 molali, congela alla temperatura più bassa:",
     "options": [
       {
-        "text": "CaCl2, perché si dissocia in tre ioni e il fattore di van't Hoff vale circa 3: l'abbassamento crioscopico è il maggiore",
+        "text": "CaCl2, che dà tre ioni",
         "isCorrect": true
       },
       {
-        "text": "Il glucosio, perché la sua massa molecolare è la più grande",
+        "text": "NaCl, che è il più solubile",
         "isCorrect": false
       },
       {
-        "text": "NaCl, perché il cloruro di sodio è il sale più solubile dei tre",
+        "text": "il glucosio, di massa maggiore",
         "isCorrect": false
       },
       {
-        "text": "Tutte e tre alla stessa temperatura, essendo equimolali",
+        "text": "il glucosio, non elettrolita",
         "isCorrect": false
       },
       {
-        "text": "Il glucosio, perché i soluti non elettrolitici hanno effetto colligativo maggiore",
+        "text": "nessuna: congelano insieme",
         "isCorrect": false
       }
     ]
@@ -407,26 +407,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Perché la temperatura di ebollizione della soluzione fisiologica è superiore a quella dell'acqua distillata?",
+    "text": "La soluzione fisiologica bolle sopra i 100 gradi perché il soluto:",
     "options": [
       {
-        "text": "Il soluto abbassa la pressione di vapore della soluzione, che deve dunque essere portata a temperatura più alta perché la pressione di vapore raggiunga quella atmosferica",
+        "text": "ne abbassa la pressione di vapore",
         "isCorrect": true
       },
       {
-        "text": "Gli ioni sodio e cloruro cedono calore alla soluzione mentre si idratano",
+        "text": "ne alza la pressione di vapore",
         "isCorrect": false
       },
       {
-        "text": "Il sale aumenta la pressione di vapore della soluzione e quindi la temperatura di ebollizione",
+        "text": "cede calore mentre si idrata",
         "isCorrect": false
       },
       {
-        "text": "Il sale aumenta la densità della soluzione, e un liquido più denso bolle a temperatura maggiore",
+        "text": "ne aumenta molto la densità",
         "isCorrect": false
       },
       {
-        "text": "In realtà bolle a temperatura inferiore, per effetto dell'abbassamento crioscopico",
+        "text": "ne abbassa il punto di ebollizione",
         "isCorrect": false
       }
     ]
@@ -434,26 +434,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Che cosa descrive esattamente la pressione osmotica di una soluzione?",
+    "text": "La pressione osmotica di una soluzione è la pressione che:",
     "options": [
       {
-        "text": "La pressione che bisogna applicare alla soluzione per impedire il passaggio di solvente attraverso una membrana semipermeabile che la separa dal solvente puro",
+        "text": "impedisce l'ingresso di solvente",
         "isCorrect": true
       },
       {
-        "text": "La pressione che il soluto esercita sul fondo del recipiente che contiene la soluzione",
+        "text": "il soluto esercita sul fondo",
         "isCorrect": false
       },
       {
-        "text": "La pressione del vapore in equilibrio con la soluzione a una data temperatura",
+        "text": "il vapore esercita all'equilibrio",
         "isCorrect": false
       },
       {
-        "text": "La pressione necessaria per far passare il soluto attraverso la membrana",
+        "text": "fa passare il soluto nella membrana",
         "isCorrect": false
       },
       {
-        "text": "La differenza di pressione idrostatica fra due soluzioni alla stessa concentrazione",
+        "text": "separa due soluzioni uguali",
         "isCorrect": false
       }
     ]
@@ -461,26 +461,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Quale differenza c'è fra diffusione e osmosi?",
+    "text": "Nella diffusione, a differenza dell'osmosi, si sposta:",
     "options": [
       {
-        "text": "Nella diffusione è il soluto a spostarsi secondo il proprio gradiente di concentrazione; nell'osmosi la membrana è permeabile al solo solvente, che si sposta verso la soluzione più concentrata",
+        "text": "il soluto secondo il suo gradiente",
         "isCorrect": true
       },
       {
-        "text": "Nella diffusione si muove il solvente, nell'osmosi il soluto",
+        "text": "il solvente secondo il suo gradiente",
         "isCorrect": false
       },
       {
-        "text": "La diffusione richiede energia metabolica, l'osmosi no",
+        "text": "nulla, senza energia metabolica",
         "isCorrect": false
       },
       {
-        "text": "La diffusione avviene solo nei gas, l'osmosi solo nei liquidi",
+        "text": "soltanto il gas e mai il liquido",
         "isCorrect": false
       },
       {
-        "text": "Nell'osmosi entrambe le specie attraversano la membrana, nella diffusione nessuna",
+        "text": "sia il soluto sia il solvente",
         "isCorrect": false
       }
     ]
@@ -488,26 +488,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Un globulo rosso viene posto in acqua distillata. Che cosa succede?",
+    "text": "Un globulo rosso posto in acqua distillata:",
     "options": [
       {
-        "text": "L'ambiente è ipotonico rispetto al citoplasma: l'acqua entra per osmosi, la cellula si gonfia e va incontro a emolisi",
+        "text": "si gonfia e può lisarsi",
         "isCorrect": true
       },
       {
-        "text": "L'ambiente è ipertonico: la cellula perde acqua e si raggrinzisce",
+        "text": "perde acqua e si raggrinzisce",
         "isCorrect": false
       },
       {
-        "text": "Non succede nulla, perché la membrana è impermeabile all'acqua",
+        "text": "resta invariato, membrana impermeabile",
         "isCorrect": false
       },
       {
-        "text": "Gli ioni intracellulari escono rapidamente e la cellula resta integra ma svuotata",
+        "text": "si svuota di ioni restando integro",
         "isCorrect": false
       },
       {
-        "text": "L'acqua distillata è isotonica rispetto al citoplasma e il volume cellulare resta costante",
+        "text": "resta invariato, ambiente isotonico",
         "isCorrect": false
       }
     ]
@@ -515,26 +515,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Perché la soluzione glucosata al 5% è isotonica rispetto al plasma, pur non contenendo elettroliti?",
+    "text": "La soluzione glucosata al 5% è isotonica rispetto al plasma perché:",
     "options": [
       {
-        "text": "50 g/L divisi per 180 g/mol danno circa 0,28 M, e il glucosio non si dissocia: l'osmolarità è dunque di circa 280 mOsm/L, prossima a quella plasmatica",
+        "text": "50 g/L su 180 g/mol danno 0,28 M",
         "isCorrect": true
       },
       {
-        "text": "Perché il glucosio viene immediatamente metabolizzato e non contribuisce all'osmolarità",
+        "text": "il glucosio viene subito metabolizzato",
         "isCorrect": false
       },
       {
-        "text": "Perché il glucosio si dissocia in due particelle come il cloruro di sodio",
+        "text": "il glucosio si dissocia in due parti",
         "isCorrect": false
       },
       {
-        "text": "Perché l'isotonicità dipende dalla massa del soluto e 50 g/L è il valore del plasma",
+        "text": "50 g/L è il valore del plasma",
         "isCorrect": false
       },
       {
-        "text": "In realtà non è isotonica ma fortemente ipertonica, e per questo va infusa lentamente",
+        "text": "in realtà è fortemente ipertonica",
         "isCorrect": false
       }
     ]
@@ -542,26 +542,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Quale è l'osmolarità approssimativa di una soluzione 0,154 M di NaCl, e come la si calcola?",
+    "text": "L'osmolarità di una soluzione 0,154 M di NaCl è circa:",
     "options": [
       {
-        "text": "Circa 308 mOsm/L: la molarità va moltiplicata per il fattore di van't Hoff, che per NaCl vale 2 perché il sale si dissocia in due ioni",
+        "text": "308 mOsm/L",
         "isCorrect": true
       },
       {
-        "text": "Circa 154 mOsm/L: osmolarità e molarità coincidono sempre",
+        "text": "154 mOsm/L",
         "isCorrect": false
       },
       {
-        "text": "Circa 77 mOsm/L: la molarità va divisa per il numero di ioni",
+        "text": "77 mOsm/L",
         "isCorrect": false
       },
       {
-        "text": "Circa 900 mOsm/L, come indica la percentuale dello 0,9%",
+        "text": "900 mOsm/L",
         "isCorrect": false
       },
       {
-        "text": "Circa 58,5 mOsm/L, pari alla massa molare del soluto",
+        "text": "58,5 mOsm/L",
         "isCorrect": false
       }
     ]
@@ -569,26 +569,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Il fattore correttivo di van't Hoff misurato per una soluzione di NaCl risulta 1,8 invece di 2. Come si interpreta?",
+    "text": "Per NaCl il fattore di van't Hoff misurato è 1,8 invece di 2 perché:",
     "options": [
       {
-        "text": "La soluzione non è ideale: a quella concentrazione una parte degli ioni resta associata in coppie e il numero di particelle osmoticamente attive è inferiore a quello teorico",
+        "text": "parte degli ioni resta associata",
         "isCorrect": true
       },
       {
-        "text": "Il sale è impuro e contiene il 10% di glucosio",
+        "text": "il sale contiene il 10% di glucosio",
         "isCorrect": false
       },
       {
-        "text": "Il valore misurato è sempre maggiore del teorico, quindi la misura è sbagliata",
+        "text": "la misura è certamente sbagliata",
         "isCorrect": false
       },
       {
-        "text": "Significa che il sale si è dissociato in più di due ioni",
+        "text": "il sale dà più di due ioni",
         "isCorrect": false
       },
       {
-        "text": "Il fattore di van't Hoff dipende dalla massa molare, e per NaCl vale sempre 1,8",
+        "text": "per NaCl vale sempre 1,8",
         "isCorrect": false
       }
     ]
@@ -596,26 +596,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Nello spazio intracellulare le concentrazioni effettive dei soluti si discostano dai valori nominali. Il coefficiente di attività serve a:",
+    "text": "Il coefficiente osmotico serve a:",
     "options": [
       {
-        "text": "Correggere la concentrazione per tenere conto delle interazioni fra le particelle, restituendo la concentrazione attiva, cioè quella che determina realmente il comportamento del soluto",
+        "text": "correggere le interazioni fra particelle",
         "isCorrect": true
       },
       {
-        "text": "Convertire la molarità in molalità in ambiente cellulare",
+        "text": "convertire la molarità in molalità",
         "isCorrect": false
       },
       {
-        "text": "Misurare la velocità con cui un soluto attraversa la membrana",
+        "text": "misurare la velocità di passaggio",
         "isCorrect": false
       },
       {
-        "text": "Esprimere la concentrazione in equivalenti anziché in moli",
+        "text": "esprimere la concentrazione in equivalenti",
         "isCorrect": false
       },
       {
-        "text": "Correggere la concentrazione per la temperatura corporea",
+        "text": "correggere per la temperatura corporea",
         "isCorrect": false
       }
     ]
@@ -623,26 +623,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Nella formazione dell'edema, una riduzione delle proteine plasmatiche porta ad accumulo di liquido nell'interstizio perché:",
+    "text": "Nell'edema da carenza di proteine plasmatiche il liquido si accumula perché:",
     "options": [
       {
-        "text": "Le proteine generano la pressione colloido-osmotica che richiama acqua nel capillare: se calano, la pressione che trattiene il liquido nel vaso diminuisce e il filtrato resta nei tessuti",
+        "text": "cala la pressione colloido-osmotica",
         "isCorrect": true
       },
       {
-        "text": "Le proteine plasmatiche sono impermeabili all'acqua e la loro assenza rende la parete del capillare permeabile",
+        "text": "sale la pressione colloido-osmotica",
         "isCorrect": false
       },
       {
-        "text": "Le proteine abbassano la pressione osmotica del plasma, e la loro carenza la fa salire",
+        "text": "la parete capillare diventa rigida",
         "isCorrect": false
       },
       {
-        "text": "Le proteine trasportano attivamente sodio fuori dall'interstizio",
+        "text": "il sodio non viene più trasportato",
         "isCorrect": false
       },
       {
-        "text": "La carenza proteica aumenta la concentrazione di elettroliti nel plasma, che richiamano acqua nei tessuti",
+        "text": "gli elettroliti plasmatici aumentano",
         "isCorrect": false
       }
     ]
@@ -650,26 +650,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Quale differenza c'è fra osmolarità e osmolalità?",
+    "text": "L'osmolalità, a differenza dell'osmolarità, è riferita:",
     "options": [
       {
-        "text": "L'osmolarità esprime le osmoli per litro di soluzione, l'osmolalità le osmoli per chilogrammo di solvente: in laboratorio si misura la seconda, che non dipende dalla temperatura",
+        "text": "a un chilogrammo di solvente",
         "isCorrect": true
       },
       {
-        "text": "L'osmolarità riguarda i soluti elettrolitici, l'osmolalità quelli non elettrolitici",
+        "text": "a un litro di soluzione",
         "isCorrect": false
       },
       {
-        "text": "L'osmolarità si riferisce al plasma, l'osmolalità all'urina",
+        "text": "ai soli soluti elettrolitici",
         "isCorrect": false
       },
       {
-        "text": "L'osmolalità è l'osmolarità moltiplicata per il fattore di van't Hoff",
+        "text": "al plasma e non all'urina",
         "isCorrect": false
       },
       {
-        "text": "Sono sinonimi, e la distinzione è solo storica",
+        "text": "al fattore di van't Hoff",
         "isCorrect": false
       }
     ]
@@ -677,26 +677,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "La pressione osmotica del plasma, la cui osmolarità è circa 0,30 osmol/L, alla temperatura corporea vale approssimativamente:",
+    "text": "Il plasma ha osmolarità 0,30 osmol/L: a 37 gradi la sua pressione osmotica vale circa:",
     "options": [
       {
-        "text": "Circa 7,6 atm, calcolate come prodotto di osmolarità, costante dei gas e temperatura assoluta",
+        "text": "7,6 atm",
         "isCorrect": true
       },
       {
-        "text": "Circa 0,3 atm, pari al valore numerico dell'osmolarità",
+        "text": "0,3 atm",
         "isCorrect": false
       },
       {
-        "text": "Circa 1 atm, come la pressione atmosferica",
+        "text": "1 atm",
         "isCorrect": false
       },
       {
-        "text": "Circa 120 atm, pari alla pressione arteriosa in mmHg",
+        "text": "120 atm",
         "isCorrect": false
       },
       {
-        "text": "Non si può calcolare, perché la legge di van't Hoff non vale per i liquidi biologici",
+        "text": "non è calcolabile",
         "isCorrect": false
       }
     ]
@@ -704,26 +704,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Una soluzione viene definita ipertonica rispetto a una cellula quando:",
+    "text": "Una soluzione è ipertonica rispetto a una cellula quando:",
     "options": [
       {
-        "text": "La sua osmolarità efficace è superiore a quella del citoplasma, e la cellula perde acqua per osmosi",
+        "text": "la cellula vi perde acqua",
         "isCorrect": true
       },
       {
-        "text": "La sua osmolarità è inferiore a quella del citoplasma, e la cellula si gonfia",
+        "text": "la cellula vi assorbe acqua",
         "isCorrect": false
       },
       {
-        "text": "Contiene un numero di soluti chimicamente diversi superiore a quello del citoplasma",
+        "text": "contiene più soluti diversi",
         "isCorrect": false
       },
       {
-        "text": "La sua temperatura è superiore a quella del citoplasma",
+        "text": "ha temperatura più alta",
         "isCorrect": false
       },
       {
-        "text": "Contiene elettroliti, mentre il citoplasma contiene soltanto molecole neutre",
+        "text": "contiene degli elettroliti",
         "isCorrect": false
       }
     ]
@@ -731,26 +731,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "L'urea attraversa liberamente la membrana del globulo rosso. Una soluzione di urea 300 mOsm/L è dunque:",
+    "text": "L'urea attraversa la membrana: una soluzione di urea 300 mOsm/L è dunque:",
     "options": [
       {
-        "text": "Isosmotica ma non isotonica: avendo lo stesso numero di particelle del citoplasma non è ipertonica di per sé, ma poiché l'urea entra nella cellula, l'acqua la segue e il globulo si lisa",
+        "text": "isosmotica ma non isotonica",
         "isCorrect": true
       },
       {
-        "text": "Isosmotica e isotonica, perché le due definizioni coincidono sempre",
+        "text": "isosmotica e isotonica",
         "isCorrect": false
       },
       {
-        "text": "Ipertonica, perché l'urea richiama acqua fuori dalla cellula in modo permanente",
+        "text": "ipertonica in modo stabile",
         "isCorrect": false
       },
       {
-        "text": "Ipotonica, perché l'urea ha massa molecolare inferiore a quella del cloruro di sodio",
+        "text": "ipotonica per la massa minore",
         "isCorrect": false
       },
       {
-        "text": "Priva di qualunque effetto osmotico, perché l'urea non è un elettrolita",
+        "text": "priva di effetto osmotico",
         "isCorrect": false
       }
     ]
@@ -758,26 +758,26 @@
   {
     "subject": "Chimica e propedeutica biochimica",
     "topic": "SF-CHI-02",
-    "text": "Perché un soluto come il glucosio è molto solubile in acqua pur non essendo un elettrolita?",
+    "text": "Il glucosio è molto solubile in acqua pur non essendo un elettrolita perché:",
     "options": [
       {
-        "text": "I suoi numerosi gruppi ossidrilici formano legami a idrogeno con le molecole d'acqua, che ne compensano le interazioni nel cristallo",
+        "text": "forma legami a idrogeno con l'acqua",
         "isCorrect": true
       },
       {
-        "text": "Perché in acqua si dissocia in ioni glucosato e idrogeno",
+        "text": "si dissocia in glucosato e H+",
         "isCorrect": false
       },
       {
-        "text": "Perché è una molecola apolare, e le molecole apolari sono le più solubili in acqua",
+        "text": "è una molecola del tutto apolare",
         "isCorrect": false
       },
       {
-        "text": "Perché reagisce con l'acqua formando acido gluconico",
+        "text": "reagisce formando acido gluconico",
         "isCorrect": false
       },
       {
-        "text": "Perché la sua massa molecolare è bassa, e la solubilità dipende solo da quella",
+        "text": "ha massa molecolare bassa",
         "isCorrect": false
       }
     ]
@@ -788,23 +788,23 @@
     "text": "Quale di queste miscele è eterogenea?",
     "options": [
       {
-        "text": "Una sospensione di carbonato di calcio in acqua",
+        "text": "il gesso disperso in acqua",
         "isCorrect": true
       },
       {
-        "text": "L'aria atmosferica",
+        "text": "l'aria atmosferica secca",
         "isCorrect": false
       },
       {
-        "text": "Una soluzione di saccarosio in acqua",
+        "text": "il saccarosio sciolto in acqua",
         "isCorrect": false
       },
       {
-        "text": "L'acciaio",
+        "text": "l'acciaio al carbonio",
         "isCorrect": false
       },
       {
-        "text": "Una soluzione fisiologica",
+        "text": "la soluzione fisiologica",
         "isCorrect": false
       }
     ]

@@ -23,6 +23,7 @@ import { prisma } from "../src/lib/prisma";
 import { isKnownTopic } from "../src/lib/topics";
 import { COMPLETION_MAX_LENGTH } from "../src/lib/completion";
 import { DEFAULT_TRACK, isTrackId, TRACKS, TRACK_IDS } from "../src/lib/tracks";
+import { randomShuffle } from "../src/lib/shuffle";
 
 type ImportedOption = { text: string; isCorrect: boolean };
 type ImportedQuestion = {
@@ -33,6 +34,10 @@ type ImportedQuestion = {
   text: string;
   options: ImportedOption[];
 };
+
+function ordinaOpzioni(q: ImportedQuestion): ImportedOption[] {
+  return q.type === "COMPLETAMENTO" ? q.options : randomShuffle(q.options);
+}
 
 async function main() {
   const [jsonPath, title, trackArg] = process.argv.slice(2);
@@ -111,7 +116,17 @@ async function main() {
           text: q.text,
           order: i + 1,
           options: {
-            create: q.options.map((o, j) => ({ text: o.text, isCorrect: o.isCorrect, order: j + 1 })),
+            // Le alternative si mescolano qui, una volta per sempre. Nei file la
+            // risposta giusta è scritta per prima, perché così si rilegge: se
+            // finisse nel database in quell'ordine sarebbe sempre la A, e la
+            // prova si potrebbe superare senza leggere le domande. Le risposte
+            // accettate di una domanda a completamento non si toccano: la prima
+            // è quella che compare nella correzione.
+            create: ordinaOpzioni(q).map((o, j) => ({
+              text: o.text,
+              isCorrect: o.isCorrect,
+              order: j + 1,
+            })),
           },
         })),
       },

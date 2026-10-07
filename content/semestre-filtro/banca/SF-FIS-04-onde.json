@@ -1,227 +1,683 @@
 [
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
-    "text": "Che cosa trasporta un'onda meccanica che si propaga in un mezzo materiale?",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "text": "Un'onda meccanica che si propaga in un mezzo materiale trasporta:",
     "options": [
-      { "text": "Energia e quantità di moto, non materia: le particelle del mezzo oscillano attorno alla propria posizione di equilibrio senza spostarsi con l'onda", "isCorrect": true },
-      { "text": "Materia, che viene trascinata dall'onda lungo la direzione di propagazione", "isCorrect": false },
-      { "text": "Solo quantità di moto, mentre l'energia resta nella sorgente", "isCorrect": false },
-      { "text": "Carica elettrica lungo il mezzo", "isCorrect": false },
-      { "text": "Nulla: l'onda è una pura descrizione matematica senza contenuto fisico", "isCorrect": false }
+      {
+        "text": "energia e quantità di moto",
+        "isCorrect": true
+      },
+      {
+        "text": "materia lungo la propagazione",
+        "isCorrect": false
+      },
+      {
+        "text": "solo quantità di moto",
+        "isCorrect": false
+      },
+      {
+        "text": "carica elettrica",
+        "isCorrect": false
+      },
+      {
+        "text": "nulla di fisicamente reale",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
-    "text": "Che cosa distingue un'onda trasversale da una longitudinale?",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "text": "In un'onda trasversale, a differenza di una longitudinale, le particelle:",
     "options": [
-      { "text": "Nella trasversale le particelle oscillano perpendicolarmente alla direzione di propagazione, come su una corda; nella longitudinale oscillano lungo quella stessa direzione, come il suono nei fluidi", "isCorrect": true },
-      { "text": "La trasversale si propaga nel vuoto, la longitudinale no", "isCorrect": false },
-      { "text": "Nella longitudinale le particelle oscillano perpendicolarmente alla propagazione", "isCorrect": false },
-      { "text": "La trasversale ha frequenza maggiore della longitudinale", "isCorrect": false },
-      { "text": "La trasversale non trasporta energia", "isCorrect": false }
+      {
+        "text": "oscillano perpendicolarmente",
+        "isCorrect": true
+      },
+      {
+        "text": "oscillano lungo la propagazione",
+        "isCorrect": false
+      },
+      {
+        "text": "non oscillano affatto",
+        "isCorrect": false
+      },
+      {
+        "text": "si spostano col fronte d'onda",
+        "isCorrect": false
+      },
+      {
+        "text": "oscillano più rapidamente",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
     "text": "Un'onda ha frequenza 500 Hz e si propaga a 340 m/s. La sua lunghezza d'onda è:",
     "options": [
-      { "text": "0,68 m", "isCorrect": true },
-      { "text": "1,47 m", "isCorrect": false },
-      { "text": "170000 m", "isCorrect": false },
-      { "text": "6,8 m", "isCorrect": false },
-      { "text": "0,34 m", "isCorrect": false }
+      {
+        "text": "0,68 m",
+        "isCorrect": true
+      },
+      {
+        "text": "1,47 m",
+        "isCorrect": false
+      },
+      {
+        "text": "170000 m",
+        "isCorrect": false
+      },
+      {
+        "text": "6,8 m",
+        "isCorrect": false
+      },
+      {
+        "text": "0,34 m",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
-    "text": "Un'onda passa dall'aria all'acqua, dove la velocità di propagazione è maggiore. Che cosa cambia?",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "text": "Un'onda passa dall'aria all'acqua, dove la velocità è maggiore:",
     "options": [
-      { "text": "La frequenza resta quella imposta dalla sorgente, mentre la lunghezza d'onda aumenta in proporzione alla velocità", "isCorrect": true },
-      { "text": "La frequenza aumenta e la lunghezza d'onda resta la stessa", "isCorrect": false },
-      { "text": "Diminuiscono sia la frequenza sia la lunghezza d'onda", "isCorrect": false },
-      { "text": "La lunghezza d'onda diminuisce e la frequenza aumenta", "isCorrect": false },
-      { "text": "Non cambia nulla: velocità, frequenza e lunghezza d'onda sono proprietà dell'onda e non del mezzo", "isCorrect": false }
+      {
+        "text": "cresce la lunghezza d'onda",
+        "isCorrect": true
+      },
+      {
+        "text": "cresce la frequenza",
+        "isCorrect": false
+      },
+      {
+        "text": "calano frequenza e lunghezza",
+        "isCorrect": false
+      },
+      {
+        "text": "cala la lunghezza d'onda",
+        "isCorrect": false
+      },
+      {
+        "text": "non cambia proprio nulla",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
     "text": "Il suono si propaga più velocemente:",
     "options": [
-      { "text": "Nei solidi, perché il legame fra le particelle è più rigido e la perturbazione si trasmette più in fretta", "isCorrect": true },
-      { "text": "Nei gas, perché le molecole sono più libere di muoversi", "isCorrect": false },
-      { "text": "Nel vuoto, dove non incontra ostacoli", "isCorrect": false },
-      { "text": "Nei liquidi più che nei solidi", "isCorrect": false },
-      { "text": "Alla stessa velocità in tutti i mezzi", "isCorrect": false }
+      {
+        "text": "nei solidi",
+        "isCorrect": true
+      },
+      {
+        "text": "nei liquidi",
+        "isCorrect": false
+      },
+      {
+        "text": "nei gas rarefatti",
+        "isCorrect": false
+      },
+      {
+        "text": "nel vuoto",
+        "isCorrect": false
+      },
+      {
+        "text": "ovunque allo stesso modo",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
-    "text": "Sulla superficie della Luna due astronauti non possono parlarsi direttamente. Perché?",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "text": "Sulla Luna due astronauti non possono parlarsi direttamente perché il suono:",
     "options": [
-      { "text": "Perché il suono è un'onda meccanica e richiede un mezzo materiale per propagarsi: nel vuoto non esiste nulla che possa oscillare", "isCorrect": true },
-      { "text": "Perché la bassa gravità rallenta le onde sonore fino a fermarle", "isCorrect": false },
-      { "text": "Perché la temperatura troppo bassa impedisce la propagazione del suono", "isCorrect": false },
-      { "text": "Perché le onde sonore sulla Luna hanno frequenza al di fuori del campo udibile", "isCorrect": false },
-      { "text": "Perché il suono si propaga ma a velocità talmente alta da non essere percepito", "isCorrect": false }
+      {
+        "text": "richiede un mezzo materiale",
+        "isCorrect": true
+      },
+      {
+        "text": "è rallentato dalla bassa gravità",
+        "isCorrect": false
+      },
+      {
+        "text": "è fermato dalla temperatura bassa",
+        "isCorrect": false
+      },
+      {
+        "text": "ha frequenza fuori dall'udibile",
+        "isCorrect": false
+      },
+      {
+        "text": "viaggia troppo velocemente",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
-    "text": "Due onde coerenti arrivano in un punto con una differenza di cammino pari a mezza lunghezza d'onda. Che cosa si osserva?",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "text": "Due onde coerenti con differenza di cammino di mezza lunghezza d'onda danno:",
     "options": [
-      { "text": "Interferenza distruttiva: le due perturbazioni arrivano in opposizione di fase e l'ampiezza risultante è minima", "isCorrect": true },
-      { "text": "Interferenza costruttiva, con ampiezza doppia", "isCorrect": false },
-      { "text": "Nessun fenomeno di interferenza, perché le onde si attraversano senza interagire", "isCorrect": false },
-      { "text": "Un raddoppio della frequenza risultante", "isCorrect": false },
-      { "text": "La formazione di un'onda stazionaria con ampiezza costante ovunque", "isCorrect": false }
+      {
+        "text": "interferenza distruttiva",
+        "isCorrect": true
+      },
+      {
+        "text": "interferenza costruttiva",
+        "isCorrect": false
+      },
+      {
+        "text": "nessuna interferenza",
+        "isCorrect": false
+      },
+      {
+        "text": "un raddoppio di frequenza",
+        "isCorrect": false
+      },
+      {
+        "text": "un'onda stazionaria uniforme",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
-    "text": "Il principio di sovrapposizione afferma che:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "text": "Il principio di sovrapposizione afferma che due onde che si incontrano:",
     "options": [
-      { "text": "Quando due onde si incontrano, lo spostamento risultante in ogni punto è la somma degli spostamenti che ciascuna produrrebbe da sola, e dopo l'incontro ciascuna prosegue inalterata", "isCorrect": true },
-      { "text": "Due onde che si incontrano si annullano sempre a vicenda", "isCorrect": false },
-      { "text": "Due onde che si incontrano si fondono in un'unica onda di frequenza doppia", "isCorrect": false },
-      { "text": "L'ampiezza risultante è sempre la media delle due ampiezze", "isCorrect": false },
-      { "text": "Due onde non possono occupare contemporaneamente lo stesso punto dello spazio", "isCorrect": false }
+      {
+        "text": "sommano i loro spostamenti",
+        "isCorrect": true
+      },
+      {
+        "text": "si annullano sempre fra loro",
+        "isCorrect": false
+      },
+      {
+        "text": "si fondono in un'unica onda",
+        "isCorrect": false
+      },
+      {
+        "text": "danno l'ampiezza media",
+        "isCorrect": false
+      },
+      {
+        "text": "non possono coesistere",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
-    "text": "L'intensità di un'onda emessa da una sorgente puntiforme in un mezzo omogeneo:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "text": "L'intensità di un'onda emessa da una sorgente puntiforme:",
     "options": [
-      { "text": "Diminuisce con il quadrato della distanza, perché la stessa potenza si distribuisce su superfici sferiche di area crescente", "isCorrect": true },
-      { "text": "Diminuisce linearmente con la distanza", "isCorrect": false },
-      { "text": "Resta costante, perché l'energia si conserva", "isCorrect": false },
-      { "text": "Diminuisce con il cubo della distanza", "isCorrect": false },
-      { "text": "Aumenta con la distanza dalla sorgente", "isCorrect": false }
+      {
+        "text": "cala col quadrato della distanza",
+        "isCorrect": true
+      },
+      {
+        "text": "cala linearmente con la distanza",
+        "isCorrect": false
+      },
+      {
+        "text": "resta costante con la distanza",
+        "isCorrect": false
+      },
+      {
+        "text": "cala col cubo della distanza",
+        "isCorrect": false
+      },
+      {
+        "text": "cresce con la distanza",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
-    "text": "Raddoppiando la frequenza di un'onda sonora, a parità di ampiezza e di mezzo, la potenza trasportata:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "text": "Raddoppiando la frequenza di un'onda sonora, a parità di ampiezza, la potenza:",
     "options": [
-      { "text": "Aumenta di un fattore 4, perché è proporzionale al quadrato della frequenza", "isCorrect": true },
-      { "text": "Raddoppia", "isCorrect": false },
-      { "text": "Resta inalterata", "isCorrect": false },
-      { "text": "Si dimezza", "isCorrect": false },
-      { "text": "Diventa un quarto", "isCorrect": false }
+      {
+        "text": "quadruplica",
+        "isCorrect": true
+      },
+      {
+        "text": "raddoppia",
+        "isCorrect": false
+      },
+      {
+        "text": "resta uguale",
+        "isCorrect": false
+      },
+      {
+        "text": "si dimezza",
+        "isCorrect": false
+      },
+      {
+        "text": "diventa un quarto",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
-    "text": "Che cosa significa che un suono ha un livello sonoro di 0 decibel?",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "text": "Un suono con livello sonoro di 0 decibel ha intensità:",
     "options": [
-      { "text": "Che la sua intensità è pari a 10 alla meno 12 W/m2, cioè esattamente la soglia di udibilità assunta come riferimento", "isCorrect": true },
-      { "text": "Che la sua intensità è nulla", "isCorrect": false },
-      { "text": "Che la sua intensità è molto al di sotto della soglia di udibilità", "isCorrect": false },
-      { "text": "Che ha una frequenza di 1 kHz", "isCorrect": false },
-      { "text": "Niente: un suono di 0 decibel non può esistere", "isCorrect": false }
+      {
+        "text": "pari alla soglia di udibilità",
+        "isCorrect": true
+      },
+      {
+        "text": "nulla, cioè assenza di suono",
+        "isCorrect": false
+      },
+      {
+        "text": "sotto la soglia di udibilità",
+        "isCorrect": false
+      },
+      {
+        "text": "pari a 1 kHz di frequenza",
+        "isCorrect": false
+      },
+      {
+        "text": "impossibile da realizzare",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
     "text": "Un suono di 60 dB ha intensità superiore alla soglia di udibilità di un fattore:",
     "options": [
-      { "text": "Un milione", "isCorrect": true },
-      { "text": "Sessanta", "isCorrect": false },
-      { "text": "Seicento", "isCorrect": false },
-      { "text": "Mille", "isCorrect": false },
-      { "text": "Sei", "isCorrect": false }
+      {
+        "text": "Un milione",
+        "isCorrect": true
+      },
+      {
+        "text": "Sessanta",
+        "isCorrect": false
+      },
+      {
+        "text": "Seicento",
+        "isCorrect": false
+      },
+      {
+        "text": "Mille",
+        "isCorrect": false
+      },
+      {
+        "text": "Sei",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
-    "text": "La scala dei decibel è logaritmica. Che cosa comporta un aumento di 10 dB?",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "text": "Nella scala dei decibel un aumento di 10 dB significa che l'intensità:",
     "options": [
-      { "text": "Che l'intensità dell'onda è dieci volte maggiore", "isCorrect": true },
-      { "text": "Che l'intensità è dieci unità maggiore", "isCorrect": false },
-      { "text": "Che l'intensità raddoppia", "isCorrect": false },
-      { "text": "Che l'ampiezza dell'onda aumenta di dieci volte", "isCorrect": false },
-      { "text": "Che la frequenza percepita decuplica", "isCorrect": false }
+      {
+        "text": "è dieci volte maggiore",
+        "isCorrect": true
+      },
+      {
+        "text": "è dieci unità maggiore",
+        "isCorrect": false
+      },
+      {
+        "text": "è esattamente raddoppiata",
+        "isCorrect": false
+      },
+      {
+        "text": "ha ampiezza decuplicata",
+        "isCorrect": false
+      },
+      {
+        "text": "ha frequenza decuplicata",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
-    "text": "Un'ambulanza a sirena spiegata si avvicina a un pedone fermo. Il suono percepito:",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "text": "Un'ambulanza a sirena spiegata si avvicina a un pedone fermo: il suono ha:",
     "options": [
-      { "text": "Ha frequenza maggiore di quella emessa, perché i fronti d'onda giungono all'osservatore più ravvicinati nel tempo: è l'effetto Doppler", "isCorrect": true },
-      { "text": "Ha frequenza minore di quella emessa", "isCorrect": false },
-      { "text": "Ha la stessa frequenza emessa, ma intensità maggiore", "isCorrect": false },
-      { "text": "Ha velocità di propagazione maggiore, perché si somma a quella dell'ambulanza", "isCorrect": false },
-      { "text": "Ha lunghezza d'onda maggiore di quella emessa", "isCorrect": false }
+      {
+        "text": "frequenza maggiore",
+        "isCorrect": true
+      },
+      {
+        "text": "frequenza minore",
+        "isCorrect": false
+      },
+      {
+        "text": "la stessa frequenza",
+        "isCorrect": false
+      },
+      {
+        "text": "velocità maggiore",
+        "isCorrect": false
+      },
+      {
+        "text": "lunghezza d'onda maggiore",
+        "isCorrect": false
+      }
     ]
   },
   {
-    "subject": "Fisica", "topic": "SF-FIS-04",
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
     "text": "Un'ambulanza in avvicinamento a velocità costante fa percepire a un pedone fermo una frequenza maggiore del 5% rispetto a quella emessa. Sapendo che la velocità del suono in aria vale circa 1200 km/h, e considerando solo i termini al primo ordine, la velocità dell'ambulanza è:",
     "options": [
-      { "text": "60 km/h", "isCorrect": true },
-      { "text": "6 km/h", "isCorrect": false },
-      { "text": "120 km/h", "isCorrect": false },
-      { "text": "24 km/h", "isCorrect": false },
-      { "text": "600 km/h", "isCorrect": false }
+      {
+        "text": "60 km/h",
+        "isCorrect": true
+      },
+      {
+        "text": "6 km/h",
+        "isCorrect": false
+      },
+      {
+        "text": "120 km/h",
+        "isCorrect": false
+      },
+      {
+        "text": "24 km/h",
+        "isCorrect": false
+      },
+      {
+        "text": "600 km/h",
+        "isCorrect": false
+      }
     ]
   },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "Sulla superficie della Luna le onde sonore …… si propagano.",
-    "options": [ { "text": "non", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "non",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "Un'onda in cui le particelle del mezzo oscillano lungo la stessa direzione di propagazione si dice ……",
-    "options": [ { "text": "longitudinale", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "longitudinale",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "Un'onda in cui le particelle oscillano perpendicolarmente alla direzione di propagazione si dice ……",
-    "options": [ { "text": "trasversale", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "trasversale",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "La distanza fra due creste successive di un'onda si chiama lunghezza d'……",
-    "options": [ { "text": "onda", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "onda",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "Il numero di oscillazioni compiute in un secondo si chiama ……",
-    "options": [ { "text": "frequenza", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "frequenza",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "L'unità di misura della frequenza nel Sistema Internazionale è l'……",
-    "options": [ { "text": "hertz", "isCorrect": true }, { "text": "Hz", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "hertz",
+        "isCorrect": true
+      },
+      {
+        "text": "Hz",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "Il periodo di un'onda è il reciproco della sua ……",
-    "options": [ { "text": "frequenza", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "frequenza",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "La velocità di propagazione di un'onda è uguale al prodotto della frequenza per la lunghezza d'……",
-    "options": [ { "text": "onda", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "onda",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "Un'onda di frequenza 500 Hz che viaggia a 340 m/s ha lunghezza d'onda pari a …… metri.",
-    "options": [ { "text": "0,68", "isCorrect": true }, { "text": "0.68", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "0,68",
+        "isCorrect": true
+      },
+      {
+        "text": "0.68",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "La velocità approssimata del suono nell'aria a temperatura ambiente, in m/s, è ……",
-    "options": [ { "text": "340", "isCorrect": true }, { "text": "343", "isCorrect": true }, { "text": "330", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "340",
+        "isCorrect": true
+      },
+      {
+        "text": "343",
+        "isCorrect": true
+      },
+      {
+        "text": "330",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "Fra i tre stati di aggregazione, il suono si propaga più velocemente nei ……",
-    "options": [ { "text": "solidi", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "solidi",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "Quando due onde si incontrano in opposizione di fase, l'interferenza che ne risulta si dice ……",
-    "options": [ { "text": "distruttiva", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "distruttiva",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "L'energia che un'onda trasporta nell'unità di tempo attraverso l'unità di superficie si chiama ……",
-    "options": [ { "text": "intensita", "isCorrect": true }, { "text": "intensità", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "intensita",
+        "isCorrect": true
+      },
+      {
+        "text": "intensità",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "L'intensità di un'onda emessa da una sorgente puntiforme diminuisce con il …… della distanza.",
-    "options": [ { "text": "quadrato", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "quadrato",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "Un suono di intensità acustica pari a 60 dB è superiore alla soglia di udibilità di un fattore ……",
-    "options": [ { "text": "10^6", "isCorrect": true }, { "text": "1000000", "isCorrect": true }, { "text": "un milione", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "10^6",
+        "isCorrect": true
+      },
+      {
+        "text": "1000000",
+        "isCorrect": true
+      },
+      {
+        "text": "un milione",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "L'intensità di riferimento della scala dei decibel, corrispondente a 0 dB, vale 10 elevato a …… W/m2",
-    "options": [ { "text": "-12", "isCorrect": true }, { "text": "meno 12", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "-12",
+        "isCorrect": true
+      },
+      {
+        "text": "meno 12",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "La variazione di frequenza percepita quando sorgente e osservatore sono in moto relativo si chiama effetto ……",
-    "options": [ { "text": "Doppler", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "Doppler",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "Quando una sorgente sonora si allontana dall'osservatore, la frequenza percepita è …… di quella emessa.",
-    "options": [ { "text": "minore", "isCorrect": true }, { "text": "inferiore", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "minore",
+        "isCorrect": true
+      },
+      {
+        "text": "inferiore",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "Le onde sonore di frequenza superiore a 20 000 Hz, usate in ecografia, si chiamano ……",
-    "options": [ { "text": "ultrasuoni", "isCorrect": true } ] },
-  { "subject": "Fisica", "topic": "SF-FIS-04", "type": "COMPLETAMENTO",
+    "options": [
+      {
+        "text": "ultrasuoni",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "type": "COMPLETAMENTO",
     "text": "Il modello fisico elementare che genera un'onda armonica è l'oscillatore ……",
-    "options": [ { "text": "armonico", "isCorrect": true } ] }
+    "options": [
+      {
+        "text": "armonico",
+        "isCorrect": true
+      }
+    ]
+  }
 ]
