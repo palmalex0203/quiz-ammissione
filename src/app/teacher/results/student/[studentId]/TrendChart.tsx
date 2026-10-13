@@ -76,14 +76,14 @@ export function TrendChart({ points }: { points: Point[] }) {
               y2={yFor(step)}
               stroke="currentColor"
               strokeWidth={1}
-              className="text-zinc-200 dark:text-zinc-800"
+              className="text-line"
             />
             <text
               x={PAD_LEFT - 6}
               y={yFor(step)}
               textAnchor="end"
               dominantBaseline="middle"
-              className="fill-zinc-400 text-[9px] dark:fill-zinc-600"
+              className="fill-muted text-[9px]"
             >
               {step}
             </text>
@@ -100,7 +100,7 @@ export function TrendChart({ points }: { points: Point[] }) {
             y2={HEIGHT - PAD_BOTTOM}
             stroke="currentColor"
             strokeWidth={1}
-            className="text-zinc-300 dark:text-zinc-700"
+            className="text-line"
           />
         )}
 
@@ -120,7 +120,7 @@ export function TrendChart({ points }: { points: Point[] }) {
           x={xFor(points.length - 1)}
           y={yFor(points[points.length - 1].percentage) - 10}
           textAnchor="end"
-          className="fill-zinc-700 text-[10px] font-medium dark:fill-zinc-300"
+          className="fill-foreground text-[10px] font-medium"
         >
           {points[points.length - 1].percentage}%
         </text>
@@ -128,14 +128,14 @@ export function TrendChart({ points }: { points: Point[] }) {
 
       {hovered && hoverIndex != null && (
         <div
-          className="pointer-events-none absolute -translate-x-1/2 -translate-y-full rounded-lg border border-zinc-200 bg-white px-2.5 py-1.5 text-xs shadow-md dark:border-zinc-700 dark:bg-zinc-900"
+          className="pointer-events-none absolute -translate-x-1/2 -translate-y-full card rounded-lg px-2.5 py-1.5 text-xs shadow-md"
           style={{
             left: `${(xFor(hoverIndex) / WIDTH) * 100}%`,
             top: `${(yFor(hovered.percentage) / HEIGHT) * 100}%`,
           }}
         >
-          <p className="font-semibold text-zinc-900 dark:text-zinc-100">{hovered.percentage}%</p>
-          <p className="text-zinc-500 dark:text-zinc-400">{hovered.date}</p>
+          <p className="font-semibold text-foreground">{hovered.percentage}%</p>
+          <p className="text-muted">{hovered.date}</p>
         </div>
       )}
     </div>

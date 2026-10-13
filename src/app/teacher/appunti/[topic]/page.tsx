@@ -29,7 +29,7 @@ export default async function TeacherNotePage({ params }: { params: Promise<{ to
             className={`pill ${
               nota.isPublished
                 ? "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400"
-                : "bg-zinc-100 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400"
+                : "bg-line text-foreground"
             }`}
           >
             {nota.isPublished ? "Pubblicato" : "Bozza"}

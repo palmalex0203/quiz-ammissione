@@ -1,4 +1,4 @@
-import { paperOf, type Track } from "@/lib/tracks";
+import { formatScore, paperOf, type Track } from "@/lib/tracks";
 
 /*
  * Dal punteggio grezzo al voto d'esame.
@@ -50,7 +50,7 @@ export function votoProva(punti: number, track: Track): VotoProva | null {
 
 /** "17,8", "22", "−3,1": i punti come si scrivono in italiano. */
 export function formatPunti(punti: number): string {
-  return punti.toLocaleString("it-IT", { maximumFractionDigits: 2 }).replace("-", "−");
+  return formatScore(punti);
 }
 
 /**
@@ -108,6 +108,34 @@ export type RisultatoProva = {
  * in cui sono state svolte. `data` distingue una risposta sbagliata (−0,1) da una
  * lasciata in bianco (0), che è la differenza su cui si gioca la tattica d'esame.
  */
+/**
+ * Gli stessi risultati, ma a partire dal riepilogo per materia invece che dalle
+ * risposte.
+ *
+ * Serve quando le risposte non ci sono più: ricaricare la banca dati cancellava
+ * le domande e, a cascata, le righe di risposta dei tentativi già consegnati
+ * (è successo il 2026-10-07; scripts/import-pool.ts ora lo impedisce). Di quei
+ * tentativi restano il punteggio e queste poche righe, che bastano a ricostruire
+ * corrette, errate, omesse e voto — tutto tranne la correzione domanda per domanda.
+ */
+export function risultatiDaRiepilogo(
+  stats: { subject: string; correct: number; answered: number; total: number }[],
+  track: Track
+): RisultatoProva[] {
+  return stats.map((s) => {
+    const errate = Math.max(0, s.answered - s.correct);
+    const p = punti(s.correct, errate, track);
+    return {
+      subject: s.subject,
+      corrette: s.correct,
+      errate,
+      omesse: Math.max(0, s.total - s.answered),
+      punti: p,
+      voto: provaIntera(track, s.subject, s.total) ? votoProva(p, track) : null,
+    };
+  });
+}
+
 export function risultatiPerProva(
   risposte: { subject: string; corretta: boolean; data: boolean }[],
   track: Track

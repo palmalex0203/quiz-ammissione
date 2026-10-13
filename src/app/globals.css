@@ -8,13 +8,27 @@
 :root {
   --background: #fffaf6;
   --foreground: #2a1d14;
-  --muted: #8a7465;
+  --muted: #826d5f;
   --card: #ffffff;
   --line: #f3e4d8;
   --brand: #ea5b17;
-  --brand-strong: #c2440c;
+  --brand-strong: #bd420c;
   --brand-soft: #fde9dc;
   --brand-tint: #fff4ec;
+  /*
+   * L'arancione pieno #ea5b17 regge sulle superfici grandi, dove il testo è
+   * grosso e grassetto, ma col testo di un pulsante (14px) il bianco sopra si
+   * ferma a 3,5:1. I pulsanti usano quindi la versione scura: stesso colore,
+   * stessa famiglia, contrasto 5,3:1.
+   */
+  --brand-action: #bd420c;
+  --brand-action-hover: #a3380a;
+  --on-brand-action: #ffffff;
+  /*
+   * Il bordo dei campi e degli altri comandi non è decorativo come quello delle
+   * schede: deve stare a 3:1 perché si veda dov'è il campo (WCAG 1.4.11).
+   */
+  --control-line: #9a9089;
   --ink: #2a1d14;
   --on-ink: #fffaf6;
   /* Barra laterale: scura in entrambi i temi, con il suo testo chiaro. */
@@ -29,12 +43,19 @@
     --background: #15100c;
     --foreground: #f3e9e1;
     --muted: #b09a8a;
-    --card: #1f1813;
-    --line: #3a2c22;
+    /* Scheda e bordo più chiari del tema precedente: così il riquadro si stacca
+     * dalla pagina invece di restare un contorno quasi invisibile. */
+    --card: #241c16;
+    --line: #523f32;
     --brand: #f06a28;
     --brand-strong: #ff9a62;
     --brand-soft: rgba(240, 106, 40, 0.2);
     --brand-tint: rgba(240, 106, 40, 0.1);
+    /* Qui l'arancione è chiaro: il testo del pulsante va scuro, non bianco. */
+    --brand-action: #f06a28;
+    --brand-action-hover: #ff8244;
+    --on-brand-action: #15100c;
+    --control-line: #806857;
     --ink: #f3e9e1;
     --on-ink: #15100c;
     --sidebar: #1b1410;
@@ -54,6 +75,9 @@
   --color-brand-strong: var(--brand-strong);
   --color-brand-soft: var(--brand-soft);
   --color-brand-tint: var(--brand-tint);
+  --color-brand-action: var(--brand-action);
+  --color-on-brand-action: var(--on-brand-action);
+  --color-control-line: var(--control-line);
   --color-ink: var(--ink);
   --color-on-ink: var(--on-ink);
   --color-sidebar: var(--sidebar);
@@ -144,11 +168,11 @@ body {
     font-size: 0.8125rem;
   }
   .btn-brand {
-    background: var(--brand);
-    color: #fff;
+    background: var(--brand-action);
+    color: var(--on-brand-action);
   }
   .btn-brand:hover {
-    background: #d24e10;
+    background: var(--brand-action-hover);
   }
   .btn-ink {
     background: var(--ink);
@@ -166,7 +190,7 @@ body {
   }
   .btn-on-brand {
     background: #fff;
-    color: #c2440c;
+    color: #bd420c;
   }
   .btn-on-brand:hover {
     background: #fff4ec;
@@ -174,7 +198,7 @@ body {
 
   .field {
     border-radius: 0.75rem;
-    border: 1px solid var(--line);
+    border: 1px solid var(--control-line);
     background: var(--background);
     color: var(--foreground);
     padding: 0.55rem 0.8rem;
@@ -321,6 +345,18 @@ body {
    */
   .bottom-nav {
     padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 1rem);
+  }
+
+  /* Durante una prova la barra delle sezioni non c'è: lo spazio che le era
+   * riservato in fondo alla pagina non serve più. */
+  main:has([data-esame]) {
+    padding-bottom: 2.5rem;
+  }
+
+  /* Nella correzione, "solo quello che hai sbagliato" toglie di mezzo le
+   * risposte giuste. Sta qui e non in JavaScript perché è tutto ciò che serve. */
+  main:has(.solo-errori:checked) .correzione [data-esito="correct"] {
+    display: none;
   }
 
   /* L'invito a installare l'app non serve a chi l'ha già installata né su desktop. */

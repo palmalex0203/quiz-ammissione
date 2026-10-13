@@ -121,7 +121,7 @@ function ProvaCard({ prova, test }: { prova: ProvaUfficiale; test?: TestDiProva 
             <p className="text-sm font-semibold">{prova.subject}</p>
             {inCorso && <span className="pill pill-brand">In corso</span>}
             {!inCorso && ultimaSvolta && (
-              <span className="pill bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300">Svolta</span>
+              <span className="pill bg-line text-foreground">Svolta</span>
             )}
           </div>
           <p className="mt-1 text-xs text-muted">

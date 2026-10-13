@@ -29,7 +29,7 @@ export function TestSettingsForm({
       <input type="hidden" name="testId" value={test.id} />
 
       <div className="flex flex-col gap-1">
-        <label htmlFor="title" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+        <label htmlFor="title" className="text-sm font-medium text-foreground">
           Titolo
         </label>
         <input
@@ -42,7 +42,7 @@ export function TestSettingsForm({
       </div>
 
       <div className="flex flex-col gap-1">
-        <label htmlFor="description" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+        <label htmlFor="description" className="text-sm font-medium text-foreground">
           Descrizione
         </label>
         <textarea
@@ -58,7 +58,7 @@ export function TestSettingsForm({
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-1">
-          <label htmlFor="timeLimitMinutes" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+          <label htmlFor="timeLimitMinutes" className="text-sm font-medium text-foreground">
             Limite di tempo (minuti, opzionale)
           </label>
           <input
@@ -71,7 +71,7 @@ export function TestSettingsForm({
           />
         </div>
         <div className="flex flex-col gap-1">
-          <label htmlFor="maxAttempts" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+          <label htmlFor="maxAttempts" className="text-sm font-medium text-foreground">
             Numero massimo di tentativi (opzionale)
           </label>
           <input
@@ -85,7 +85,7 @@ export function TestSettingsForm({
         </div>
       </div>
 
-      <label className="flex items-center gap-2 text-sm text-zinc-700 dark:text-zinc-300">
+      <label className="flex items-center gap-2 text-sm text-foreground">
         <input
           type="checkbox"
           name="shuffleQuestions"

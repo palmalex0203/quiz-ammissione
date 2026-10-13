@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useTransition } from "react";
 import { consegnaSezione, submitAttempt } from "./actions";
 import { useAnswerQueue, type SaveState } from "./useAnswerQueue";
 import { COMPLETION_MAX_LENGTH } from "@/lib/completion";
+import { titoloTest } from "@/lib/titoli";
 
 type Question = {
   id: string;
@@ -133,12 +134,14 @@ export function TakeTestForm({
       : `Consegna ${materiaOra}`;
 
   return (
-    <div className="flex flex-col gap-6">
+    // data-esame: il foglio di stile toglie lo spazio lasciato in fondo alla
+    // pagina per la barra delle sezioni, che qui non c'è.
+    <div data-esame className="flex flex-col gap-6">
       <div className="sticky top-0 z-30 -mx-4 flex flex-col gap-3 border-b border-line bg-background/90 px-4 py-3 backdrop-blur sm:-mx-6 sm:px-6">
         <div className="flex items-center justify-between gap-3">
           <div className="min-w-0">
             <h1 className="truncate font-display text-lg font-bold tracking-tight sm:text-2xl">
-              {aSezioni ? materiaOra : testTitle}
+              {aSezioni ? materiaOra : titoloTest(testTitle).nome}
             </h1>
             <p className="text-sm text-muted">
               {aSezioni && (
@@ -157,7 +160,7 @@ export function TakeTestForm({
               className={`shrink-0 rounded-full px-3.5 py-1.5 font-display text-sm font-bold tabular-nums ${
                 remainingMs < 5 * 60_000
                   ? "bg-red-100 text-red-700 dark:bg-red-500/20 dark:text-red-300"
-                  : "bg-card text-foreground ring-1 ring-line"
+                  : "bg-card text-foreground ring-1 ring-control-line"
               }`}
             >
               {formatTime(remainingMs)}
@@ -170,7 +173,12 @@ export function TakeTestForm({
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[1fr_13.5rem] lg:items-start">
-        <aside className="lg:sticky lg:top-32 lg:order-2">
+        {/*
+          * L'elenco resta a portata di mano mentre si scorre: in una prova da 31 o
+          * 60 domande era l'unico modo per saltare a una domanda, e spariva in cima
+          * alla pagina. top-[5.5rem]: appena sotto l'intestazione fissa della prova.
+          */}
+        <aside className="sticky top-[5.5rem] z-20 lg:top-32 lg:order-2">
           <button
             type="button"
             onClick={() => setElencoAperto((v) => !v)}
@@ -309,11 +317,15 @@ export function TakeTestForm({
           })}
 
           <div className="card flex flex-col items-start gap-3 p-5 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-sm text-muted">
-              {answeredCount < questions.length
-                ? `${questions.length - answeredCount} domande senza risposta: valgono 0 punti.`
-                : "Hai risposto a tutte le domande."}
-            </p>
+            {/* Mentre si conferma il conto lo dice già il messaggio di conferma:
+              * ripeterlo qui accanto faceva dire due volte la stessa cosa. */}
+            {!chiedoConferma && (
+              <p className="text-sm text-muted">
+                {answeredCount < questions.length
+                  ? `${questions.length - answeredCount} domande senza risposta: valgono 0 punti.`
+                  : "Hai risposto a tutte le domande."}
+              </p>
+            )}
             <div className="flex flex-col items-start gap-2 sm:items-end">
               {saveError && (
                 <p role="alert" className="text-sm font-semibold text-red-700 dark:text-red-300">
@@ -323,9 +335,11 @@ export function TakeTestForm({
               {chiedoConferma ? (
                 <div className="flex flex-col items-start gap-2 sm:items-end">
                   <p className="text-sm font-semibold">
-                    {ultima
-                      ? "Consegni la prova e vedi subito il risultato."
-                      : `Dopo non potrai più tornare su ${materiaOra}, e parte il tempo di ${materiaDopo}.`}
+                    {!ultima
+                      ? `Dopo non potrai più tornare su ${materiaOra}, e parte il tempo di ${materiaDopo}.`
+                      : answeredCount < questions.length
+                        ? `Restano ${questions.length - answeredCount} domande senza risposta: valgono 0 punti e non potrai più tornarci.`
+                        : "Consegni la prova e vedi subito il risultato."}
                   </p>
                   <div className="flex gap-2">
                     <button
@@ -348,7 +362,10 @@ export function TakeTestForm({
               ) : (
                 <button
                   type="button"
-                  onClick={() => (aSezioni ? setChiedoConferma(true) : doSubmit())}
+                  // La conferma serve sempre, non solo nelle prove a sezioni: la
+                  // consegna non si annulla, e il caso più facile da sbagliare è
+                  // proprio quello con molte domande ancora in bianco.
+                  onClick={() => setChiedoConferma(true)}
                   disabled={isSubmitting}
                   className="btn btn-brand disabled:opacity-60"
                 >
@@ -425,8 +442,10 @@ function CompletionInput({
           spellCheck={false}
           className="field w-full max-w-xs font-mono text-base uppercase tracking-wider"
         />
+        {/* Da solo, il numero accanto al campo sembrava un codice: dice quanto
+          * spazio resta, e conviene che lo dica. */}
         <span aria-hidden="true" className="shrink-0 text-xs tabular-nums text-muted">
-          {rimasti}
+          {rimasti} caratteri
         </span>
       </div>
       <p className="text-xs text-muted">

@@ -3,9 +3,10 @@ import { prisma } from "@/lib/prisma";
 import { EmptyState } from "@/components/EmptyState";
 import { SubmitButton } from "@/components/SubmitButton";
 import { requireStudentTrack } from "@/lib/track-session";
-import { isPracticeable, subjectShort } from "@/lib/tracks";
+import { alPercento, formatScore, isPracticeable, subjectShort } from "@/lib/tracks";
 import { generateSubjectPractice } from "@/app/student/dashboard/actions";
 import { votoDaRiepilogo, type VotoProva } from "@/lib/esame";
+import { titoloTest } from "@/lib/titoli";
 
 export default async function StudentHistoryPage() {
   const { session, track } = await requireStudentTrack();
@@ -108,8 +109,8 @@ export default async function StudentHistoryPage() {
                   <p className="text-sm font-semibold">
                     Materia da rafforzare: {weakest.subject}
                   </p>
-                  <p className="mt-0.5 max-w-md text-xs text-zinc-600 dark:text-zinc-400">
-                    Qui sei al {weakest.pct}% di risposte corrette, il tuo risultato più basso.
+                  <p className="mt-0.5 max-w-md text-xs text-muted">
+                    Qui sei {alPercento(weakest.pct)} di risposte corrette, il tuo risultato più basso.
                     Allenati con {track.practiceSizes[weakest.subject]} domande solo su questa materia.
                   </p>
                 </div>
@@ -135,12 +136,12 @@ export default async function StudentHistoryPage() {
                 {subjectRows.map((row) => (
                   <div key={row.subject} className="flex flex-col gap-1.5">
                     <div className="flex items-baseline justify-between gap-3 text-sm">
-                      <span className="font-medium text-zinc-800 dark:text-zinc-200">{row.subject}</span>
+                      <span className="font-medium text-foreground">{row.subject}</span>
                       <span className="shrink-0 text-xs text-muted">
                         {row.correct}/{row.total} corrette &middot; {row.pct}%
                       </span>
                     </div>
-                    <div className="h-2 overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-800">
+                    <div className="h-2 overflow-hidden rounded-full bg-line">
                       <div
                         className={`h-full rounded-full ${
                           row.pct >= 70
@@ -173,7 +174,7 @@ export default async function StudentHistoryPage() {
                   >
                     <div className="min-w-0">
                       <p className="truncate text-sm font-semibold">
-                        {attempt.test.title}
+                        {titoloTest(attempt.test.title).nome}
                       </p>
                       <p className="mt-0.5 text-xs text-muted">
                         {attempt.submittedAt?.toLocaleString("it-IT")}
@@ -196,8 +197,8 @@ export default async function StudentHistoryPage() {
                         ))}
                       </div>
                     ) : (
-                      <p className="shrink-0 text-sm font-medium text-zinc-700 dark:text-zinc-300">
-                        {attempt.score} / {attempt.maxScore} &middot; {Math.round(percentageOf(attempt))}%
+                      <p className="shrink-0 text-sm font-medium text-foreground">
+                        {formatScore(attempt.score)} / {formatScore(attempt.maxScore)} &middot; {Math.round(percentageOf(attempt))}%
                       </p>
                     )}
                   </Link>

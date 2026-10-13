@@ -13,14 +13,14 @@ export function NoteEditor({ topic, title, body }: { topic: string; title: strin
       <input type="hidden" name="topic" value={topic} />
 
       <div className="flex flex-col gap-1">
-        <label htmlFor="title" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+        <label htmlFor="title" className="text-sm font-medium text-foreground">
           Titolo
         </label>
         <input id="title" name="title" defaultValue={title} required className="field" />
       </div>
 
       <div className="flex flex-col gap-1">
-        <label htmlFor="body" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+        <label htmlFor="body" className="text-sm font-medium text-foreground">
           Testo dell&apos;appunto
         </label>
         <textarea

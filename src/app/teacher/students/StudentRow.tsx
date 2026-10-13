@@ -15,7 +15,7 @@ export function StudentRow({
   const [state, formAction, isPending] = useActionState(resetStudentPassword, initialState);
 
   return (
-    <div className="border-b border-zinc-100 py-3 last:border-b-0 dark:border-zinc-900">
+    <div className="border-b border-line py-3 last:border-b-0">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div>
           <Link

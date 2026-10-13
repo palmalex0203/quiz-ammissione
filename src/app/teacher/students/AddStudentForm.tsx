@@ -22,7 +22,7 @@ export function AddStudentForm() {
       className="flex flex-col gap-3 card p-5 sm:flex-row sm:items-end sm:flex-wrap"
     >
       <div className="flex flex-col gap-1">
-        <label htmlFor="name" className="text-xs font-medium text-zinc-600 dark:text-zinc-400">
+        <label htmlFor="name" className="text-xs font-medium text-muted">
           Nome
         </label>
         <input
@@ -33,7 +33,7 @@ export function AddStudentForm() {
         />
       </div>
       <div className="flex flex-col gap-1">
-        <label htmlFor="email" className="text-xs font-medium text-zinc-600 dark:text-zinc-400">
+        <label htmlFor="email" className="text-xs font-medium text-muted">
           Email
         </label>
         <input
@@ -45,7 +45,7 @@ export function AddStudentForm() {
         />
       </div>
       <div className="flex flex-col gap-1">
-        <label htmlFor="password" className="text-xs font-medium text-zinc-600 dark:text-zinc-400">
+        <label htmlFor="password" className="text-xs font-medium text-muted">
           Password iniziale
         </label>
         <input

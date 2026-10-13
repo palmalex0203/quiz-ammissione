@@ -8,7 +8,7 @@ import { ExamFormat } from "@/components/ExamFormat";
 import { InstallHint } from "@/components/InstallHint";
 import { poolCounts } from "@/lib/question-pool";
 import { wrongAnswerCount, REVIEW_SIZE } from "@/lib/review";
-import { isPracticeable, simulationSize } from "@/lib/tracks";
+import { alPercento, formatScore, isPracticeable, simulationSize } from "@/lib/tracks";
 import {
   startAttempt,
   generateRandomSimulation,
@@ -207,8 +207,8 @@ export default async function StudentDashboardPage() {
               <div className="min-w-0">
                 <p className="text-sm font-semibold">Ultimo risultato</p>
                 <p className="font-display text-lg font-bold tabular-nums">
-                  {lastAttempt.score}
-                  <span className="text-sm text-muted"> / {lastAttempt.maxScore}</span>
+                  {formatScore(lastAttempt.score)}
+                  <span className="text-sm text-muted"> / {formatScore(lastAttempt.maxScore)}</span>
                 </p>
                 <p className="truncate text-xs text-muted">vedi la correzione</p>
               </div>
@@ -262,7 +262,7 @@ export default async function StudentDashboardPage() {
             <p className="text-xs font-semibold uppercase tracking-wider text-brand-strong">Da rafforzare</p>
             <p className="mt-0.5 font-display text-xl font-bold">{weakest.subject}</p>
             <p className="text-xs text-muted">
-              Sei al {weakest.pct}% di risposte corrette: allenati solo su questa materia.
+              Sei {alPercento(weakest.pct)} di risposte corrette: allenati solo su questa materia.
             </p>
           </div>
           <form action={generateSubjectPractice}>

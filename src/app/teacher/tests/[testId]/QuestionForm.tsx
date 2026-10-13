@@ -103,7 +103,7 @@ export function QuestionForm({
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         <div className="flex flex-col gap-1">
-          <label className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Materia</label>
+          <label className="text-xs font-medium text-muted">Materia</label>
           <input
             name="subject"
             list="materie-percorso"
@@ -120,7 +120,7 @@ export function QuestionForm({
           </datalist>
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Tipo</label>
+          <label className="text-xs font-medium text-muted">Tipo</label>
           <select
             name="type"
             value={type}
@@ -135,7 +135,7 @@ export function QuestionForm({
       </div>
 
       <div className="flex flex-col gap-1">
-        <label className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Testo della domanda</label>
+        <label className="text-xs font-medium text-muted">Testo della domanda</label>
         <textarea
           name="text"
           value={text}
@@ -147,7 +147,7 @@ export function QuestionForm({
       </div>
 
       <div className="flex flex-col gap-2">
-        <label className="text-xs font-medium text-zinc-600 dark:text-zinc-400">
+        <label className="text-xs font-medium text-muted">
           {type === "COMPLETAMENTO" ? "Risposte accettate" : "Opzioni (seleziona quella corretta)"}
         </label>
         {type === "COMPLETAMENTO" && (

@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
 import { TrendChart } from "./TrendChart";
 import { EmptyState } from "@/components/EmptyState";
+import { formatScore } from "@/lib/tracks";
 
 export default async function StudentResultsPage({
   params,
@@ -109,7 +110,7 @@ export default async function StudentResultsPage({
 
       {attempts.length >= 2 && (
         <div className="card p-5">
-          <h2 className="mb-3 text-sm font-medium text-zinc-900 dark:text-zinc-50">Andamento nel tempo</h2>
+          <h2 className="mb-3 text-sm font-medium text-foreground">Andamento nel tempo</h2>
           <TrendChart
             points={[...attempts]
               .filter((a) => a.submittedAt)
@@ -129,7 +130,7 @@ export default async function StudentResultsPage({
               <p className="text-xs font-medium uppercase tracking-wide text-green-700 dark:text-green-400">
                 Punto di forza
               </p>
-              <p className="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">{strongestSubject[0]}</p>
+              <p className="mt-1 text-sm font-medium text-foreground">{strongestSubject[0]}</p>
               <p className="text-xs text-muted">
                 {Math.round((strongestSubject[1].correct / strongestSubject[1].total) * 100)}% di risposte
                 corrette
@@ -141,7 +142,7 @@ export default async function StudentResultsPage({
               <p className="text-xs font-medium uppercase tracking-wide text-amber-700 dark:text-amber-400">
                 Da rafforzare
               </p>
-              <p className="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">{weakestSubject[0]}</p>
+              <p className="mt-1 text-sm font-medium text-foreground">{weakestSubject[0]}</p>
               <p className="text-xs text-muted">
                 {Math.round((weakestSubject[1].correct / weakestSubject[1].total) * 100)}% di risposte corrette
               </p>
@@ -159,8 +160,8 @@ export default async function StudentResultsPage({
                 const pct = Math.round((stat.correct / stat.total) * 100);
                 return (
                   <li key={subject} className="flex items-center justify-between text-sm">
-                    <span className="text-zinc-700 dark:text-zinc-300">{subject}</span>
-                    <span className="text-zinc-500 dark:text-zinc-400">
+                    <span className="text-foreground">{subject}</span>
+                    <span className="text-muted">
                       {stat.correct}/{stat.total} corrette ({pct}%)
                     </span>
                   </li>
@@ -187,9 +188,9 @@ export default async function StudentResultsPage({
                 key={folder.testId}
                 className="card"
               >
-                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 px-5 py-3 dark:border-zinc-900">
+                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-line px-5 py-3">
                   {folder.testId === GENERATED_FOLDER_KEY ? (
-                    <span className="flex items-center gap-1.5 text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                    <span className="flex items-center gap-1.5 text-sm font-medium text-foreground">
                       🎲 {folder.testTitle}
                     </span>
                   ) : (
@@ -211,13 +212,13 @@ export default async function StudentResultsPage({
                       <Link
                         key={attempt.id}
                         href={`/teacher/results/attempt/${attempt.id}`}
-                        className="flex items-center justify-between px-5 py-2.5 text-sm hover:bg-zinc-50 dark:hover:bg-zinc-900"
+                        className="flex items-center justify-between px-5 py-2.5 text-sm hover:bg-brand-tint"
                       >
-                        <span className="text-zinc-500 dark:text-zinc-400">
+                        <span className="text-muted">
                           {attempt.submittedAt?.toLocaleString("it-IT")}
                         </span>
-                        <span className="font-medium text-zinc-700 dark:text-zinc-300">
-                          {attempt.score} / {attempt.maxScore} &middot; {percentage}%
+                        <span className="font-medium text-foreground">
+                          {formatScore(attempt.score)} / {formatScore(attempt.maxScore)} &middot; {percentage}%
                         </span>
                       </Link>
                     );

@@ -218,3 +218,27 @@ export function formatPoints(points: number): string {
   const text = points.toLocaleString("it-IT", { maximumFractionDigits: 2 });
   return points > 0 ? `+${text}` : text.replace("-", "−");
 }
+
+/*
+ * "17,8", "22", "−3,1": un punteggio come si scrive in italiano.
+ *
+ * I punteggi non sono interi (+1,5 a risposta, −0,4 a errore), e scritti così
+ * come escono da JavaScript diventano "0.7 / 22.5": col punto, come in inglese,
+ * accanto a "+1,5" e "−0,4" che invece sono già scritti bene. Tutto quello che
+ * mostra un punteggio passa di qui.
+ */
+export function formatScore(value: number | null | undefined): string {
+  if (value == null) return "—";
+  return value.toLocaleString("it-IT", { maximumFractionDigits: 2 }).replace("-", "−");
+}
+
+/*
+ * "allo 0%", "all'8%", "all'11%", "al 20%": la preposizione giusta davanti a una
+ * percentuale. Dipende da come il numero si legge, non da come si scrive: davanti
+ * a zero vuole "allo", davanti a uno, otto, undici e agli ottanta vuole "all'".
+ */
+export function alPercento(pct: number): string {
+  if (pct === 0) return "allo 0%";
+  const conVocale = pct === 1 || pct === 8 || pct === 11 || (pct >= 80 && pct <= 89);
+  return conVocale ? `all'${pct}%` : `al ${pct}%`;
+}

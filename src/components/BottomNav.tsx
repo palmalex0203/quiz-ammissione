@@ -17,6 +17,13 @@ import type { NavLink } from "@/components/AppSidebar";
 export function BottomNav({ links }: { links: NavLink[] }) {
   const pathname = usePathname();
 
+  /*
+   * Durante una prova la barra sparisce. È fissa in basso, dove sul telefono
+   * appoggia il pollice, e un tocco porta fuori da un test a tempo in corso:
+   * è l'unico punto dell'applicazione dove uscire per sbaglio costa davvero.
+   */
+  if (pathname.endsWith("/take")) return null;
+
   return (
     <nav
       aria-label="Sezioni"

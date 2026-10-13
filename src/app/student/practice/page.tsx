@@ -164,7 +164,9 @@ export default async function StudentPracticePage({
         <BackLink />
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">
-            <ProgressRing value={subjectPct.get(materia) ?? null} size={60} />
+            {/* L'anello compare solo quando ha un dato da mostrare: vuoto era
+              * l'elemento più vistoso della pagina e non diceva niente. */}
+            {subjectPct.has(materia) && <ProgressRing value={subjectPct.get(materia)!} size={60} />}
             <div>
               <h1 className="page-title">{materia}</h1>
               <p className="mt-1 text-sm text-muted">
@@ -330,7 +332,7 @@ export default async function StudentPracticePage({
               href={`/student/practice?materia=${encodeURIComponent(subject)}`}
               className="card card-link flex flex-col justify-between gap-6 p-5 transition-transform hover:-translate-y-0.5"
             >
-              <ProgressRing value={subjectPct.get(subject) ?? null} size={48} />
+              {subjectPct.has(subject) && <ProgressRing value={subjectPct.get(subject)!} size={48} />}
               <div>
                 <p className="font-display text-lg font-bold leading-tight">{subject}</p>
                 <p className="mt-1 text-xs text-muted">

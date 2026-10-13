@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
 import { EmptyState } from "@/components/EmptyState";
 import { testQuestions } from "@/lib/test-questions";
+import { formatScore } from "@/lib/tracks";
 
 export default async function TestResultsPage({ params }: { params: Promise<{ testId: string }> }) {
   const { testId } = await params;
@@ -93,8 +94,8 @@ export default async function TestResultsPage({ params }: { params: Promise<{ te
                 const pct = Math.round((stat.correct / stat.total) * 100);
                 return (
                   <li key={subject} className="flex items-center justify-between text-sm">
-                    <span className="text-zinc-700 dark:text-zinc-300">{subject}</span>
-                    <span className="text-zinc-500 dark:text-zinc-400">
+                    <span className="text-foreground">{subject}</span>
+                    <span className="text-muted">
                       {stat.correct}/{stat.total} corrette ({pct}%)
                     </span>
                   </li>
@@ -118,8 +119,8 @@ export default async function TestResultsPage({ params }: { params: Promise<{ te
                   key={question.id}
                   className="card p-4"
                 >
-                  <p className="text-xs font-medium text-zinc-500 dark:text-zinc-400">{question.subject}</p>
-                  <p className="mt-0.5 text-sm text-zinc-900 dark:text-zinc-100">{question.text}</p>
+                  <p className="text-xs font-medium text-muted">{question.subject}</p>
+                  <p className="mt-0.5 text-sm text-foreground">{question.text}</p>
                   <p className="mt-1 text-xs text-muted">
                     {stat.correct}/{stat.total} risposte corrette ({pct}%)
                   </p>
@@ -148,13 +149,13 @@ export default async function TestResultsPage({ params }: { params: Promise<{ te
                 className="card card-link flex items-center justify-between p-4"
               >
                 <div>
-                  <p className="text-sm font-medium text-zinc-900 dark:text-zinc-100">{attempt.student.name}</p>
+                  <p className="text-sm font-medium text-foreground">{attempt.student.name}</p>
                   <p className="text-xs text-muted">
                     {attempt.submittedAt?.toLocaleString("it-IT")}
                   </p>
                 </div>
-                <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
-                  {attempt.score} / {attempt.maxScore} &middot; {percentage}%
+                <p className="text-sm font-medium text-foreground">
+                  {formatScore(attempt.score)} / {formatScore(attempt.maxScore)} &middot; {percentage}%
                 </p>
               </Link>
             );

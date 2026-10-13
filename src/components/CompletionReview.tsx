@@ -10,9 +10,13 @@
 export function CompletionReview({
   typed,
   accepted,
+  lettore = "studente",
 }: {
   typed: string | null;
   accepted: string[];
+  // La stessa correzione la legge lo studente e la legge il docente: dare del tu
+  // a chi sta guardando il compito di qualcun altro non ha senso.
+  lettore?: "studente" | "docente";
 }) {
   const scritta = typed?.trim() ?? "";
   const attesa = accepted[0] ?? "";
@@ -21,7 +25,9 @@ export function CompletionReview({
   return (
     <div className="mt-3 flex flex-col gap-2 text-sm">
       <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-        <span className="text-muted">La tua risposta:</span>
+        <span className="text-muted">
+          {lettore === "docente" ? "Risposta dello studente:" : "La tua risposta:"}
+        </span>
         {scritta === "" ? (
           <span className="italic text-muted">non data</span>
         ) : (

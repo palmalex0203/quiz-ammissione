@@ -3,6 +3,8 @@ import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
 import type { Prisma } from "@/generated/prisma/client";
 import { EmptyState } from "@/components/EmptyState";
+import { formatScore } from "@/lib/tracks";
+import { titoloTest } from "@/lib/titoli";
 
 export default async function ResultsPage({
   searchParams,
@@ -124,8 +126,9 @@ export default async function ResultsPage({
         className="flex flex-wrap items-end gap-3 card p-4"
       >
         <div className="flex flex-col gap-1">
-          <label className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Studente</label>
+          <label htmlFor="f-studente" className="text-xs font-medium text-muted">Studente</label>
           <select
+            id="f-studente"
             name="studentId"
             defaultValue={params.studentId ?? ""}
             className="field"
@@ -139,8 +142,9 @@ export default async function ResultsPage({
           </select>
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Test</label>
+          <label htmlFor="f-test" className="text-xs font-medium text-muted">Test</label>
           <select
+            id="f-test"
             name="testId"
             defaultValue={params.testId ?? ""}
             className="field"
@@ -154,18 +158,20 @@ export default async function ResultsPage({
           </select>
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-xs font-medium text-zinc-600 dark:text-zinc-400">Da</label>
+          <label htmlFor="f-da" className="text-xs font-medium text-muted">Da</label>
           <input
             type="date"
+            id="f-da"
             name="from"
             defaultValue={params.from ?? ""}
             className="field"
           />
         </div>
         <div className="flex flex-col gap-1">
-          <label className="text-xs font-medium text-zinc-600 dark:text-zinc-400">A</label>
+          <label htmlFor="f-a" className="text-xs font-medium text-muted">A</label>
           <input
             type="date"
+            id="f-a"
             name="to"
             defaultValue={params.to ?? ""}
             className="field"
@@ -180,7 +186,7 @@ export default async function ResultsPage({
         {(params.studentId || params.testId || params.from || params.to) && (
           <Link
             href="/teacher/results"
-            className="text-xs text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100"
+            className="text-xs text-muted hover:text-foreground"
           >
             Azzera filtri
           </Link>
@@ -208,12 +214,12 @@ export default async function ResultsPage({
                     <td className="px-4 py-3">
                       <Link
                         href={`/teacher/results/student/${s.studentId}`}
-                        className="font-medium text-zinc-900 hover:underline dark:text-zinc-100"
+                        className="font-medium text-foreground hover:underline"
                       >
                         {s.studentName}
                       </Link>
                     </td>
-                    <td className="px-4 py-3 text-zinc-600 dark:text-zinc-400">{s.attemptCount}</td>
+                    <td className="px-4 py-3 text-muted">{s.attemptCount}</td>
                     <td className="px-4 py-3">
                       <span
                         className={`rounded-full px-2 py-0.5 text-xs font-medium ${
@@ -227,7 +233,7 @@ export default async function ResultsPage({
                         {s.avgPercentage}%
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-zinc-600 dark:text-zinc-400">{s.weakestSubject ?? "—"}</td>
+                    <td className="px-4 py-3 text-muted">{s.weakestSubject ?? "—"}</td>
                   </tr>
                 ))}
               </tbody>
@@ -245,16 +251,23 @@ export default async function ResultsPage({
             <ul className="flex flex-col gap-2.5">
               {classSubjectRows.map(([subject, stat]) => {
                 const pct = Math.round((stat.correct / stat.total) * 100);
+                // Il nome della materia sopra la barra, non in una colonna fissa da
+                // 12rem: "Chimica e propedeutica biochimica" veniva tagliato mentre
+                // a destra restava mezza riga di barra vuota.
                 return (
-                  <li key={subject} className="flex items-center gap-3 text-sm">
-                    <span className="w-48 shrink-0 truncate text-zinc-700 dark:text-zinc-300">{subject}</span>
-                    <span className="h-2 flex-1 overflow-hidden rounded-full bg-zinc-100 dark:bg-zinc-800">
+                  <li key={subject} className="flex flex-col gap-1 text-sm">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="text-foreground">{subject}</span>
+                      <span className="shrink-0 text-xs text-muted">
+                        {stat.correct}/{stat.total} corrette &middot; {pct}%
+                      </span>
+                    </div>
+                    <span className="h-2 overflow-hidden rounded-full bg-line">
                       <span
-                        className="block h-full rounded-full bg-orange-500 dark:bg-orange-400"
-                        style={{ width: `${pct}%` }}
+                        className="block h-full rounded-full bg-brand"
+                        style={{ width: `${Math.max(pct, 1)}%` }}
                       />
                     </span>
-                    <span className="w-12 shrink-0 text-right text-zinc-500 dark:text-zinc-400">{pct}%</span>
                   </li>
                 );
               })}
@@ -295,7 +308,7 @@ export default async function ResultsPage({
                   <td className="px-4 py-3">
                     <Link
                       href={`/teacher/results/student/${attempt.studentId}`}
-                      className="text-zinc-900 hover:underline dark:text-zinc-100"
+                      className="text-foreground hover:underline"
                     >
                       {attempt.student.name}
                     </Link>
@@ -303,17 +316,17 @@ export default async function ResultsPage({
                   <td className="px-4 py-3">
                     <Link
                       href={`/teacher/results/test/${attempt.testId}`}
-                      className="text-zinc-900 hover:underline dark:text-zinc-100"
+                      className="text-foreground hover:underline"
                     >
-                      {attempt.test.title}
+                      {titoloTest(attempt.test.title).nome}
                     </Link>
                   </td>
                   <td className="px-4 py-3">
                     <Link href={`/teacher/results/attempt/${attempt.id}`} className="hover:underline">
-                      {attempt.score} / {attempt.maxScore} ({percentage}%)
+                      {formatScore(attempt.score)} / {formatScore(attempt.maxScore)} ({percentage}%)
                     </Link>
                   </td>
-                  <td className="px-4 py-3 text-zinc-500 dark:text-zinc-400">
+                  <td className="px-4 py-3 text-muted">
                     {attempt.submittedAt?.toLocaleString("it-IT")}
                   </td>
                 </tr>

@@ -18,7 +18,7 @@ export default function NewTestPage() {
         className="flex max-w-lg flex-col gap-4 card p-6"
       >
         <div className="flex flex-col gap-1">
-          <label htmlFor="title" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+          <label htmlFor="title" className="text-sm font-medium text-foreground">
             Titolo
           </label>
           <input
@@ -29,7 +29,7 @@ export default function NewTestPage() {
           />
         </div>
         <div className="flex flex-col gap-1">
-          <label htmlFor="description" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+          <label htmlFor="description" className="text-sm font-medium text-foreground">
             Descrizione (opzionale)
           </label>
           <textarea

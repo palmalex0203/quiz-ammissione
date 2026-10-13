@@ -7,7 +7,7 @@ import { ALL_TRACKS, DEFAULT_TRACK } from "@/lib/tracks";
 export function TrackField({ value }: { value?: string }) {
   return (
     <div className="flex flex-col gap-1">
-      <label htmlFor="track" className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+      <label htmlFor="track" className="text-sm font-medium text-foreground">
         Percorso
       </label>
       <select id="track" name="track" defaultValue={value ?? DEFAULT_TRACK} className="field">

@@ -35,7 +35,7 @@ export function StudentTestCard({ test, compact }: { test: StudentTest; compact?
           <p className="text-sm font-semibold">{test.title}</p>
           {inProgress && <span className="pill pill-brand">In corso</span>}
           {!inProgress && lastSubmitted && (
-            <span className="pill bg-zinc-100 text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300">Svolto</span>
+            <span className="pill bg-line text-foreground">Svolto</span>
           )}
         </div>
         {test.description && <p className="mt-0.5 text-xs text-muted">{test.description}</p>}
