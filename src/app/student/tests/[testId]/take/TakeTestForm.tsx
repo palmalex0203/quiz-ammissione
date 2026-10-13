@@ -120,6 +120,20 @@ export function TakeTestForm({
     q.type === "COMPLETAMENTO" ? (typed[q.id] ?? "").trim() !== "" : answers[q.id] != null;
 
   const answeredCount = questions.filter(risposta).length;
+
+  /*
+   * All'inizio di una materia si riparte dalla prima domanda.
+   *
+   * Consegnata una materia, il server rimanda allo stesso indirizzo: per il
+   * browser non è un cambio di pagina, quindi non risale, e la materia nuova si
+   * apriva in fondo, sull'ultima domanda. Si risale solo quando non c'è ancora
+   * nessuna risposta, cioè quando la materia è appena cominciata: così chi
+   * ricarica la pagina a metà prova resta dov'era.
+   */
+  useEffect(() => {
+    if (answeredCount === 0) window.scrollTo({ top: 0 });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const progressPct = questions.length > 0 ? Math.round((answeredCount / questions.length) * 100) : 0;
 
   function vaiA(numero: number) {
