@@ -28,6 +28,23 @@ type Evento = {
 
 type Fase = "apertura" | "prova" | "risultato";
 
+const GUASTO = "Non siamo riusciti a parlare col server. Controlla la rete e riprova.";
+
+/**
+ * Chiama un'azione sul server senza lasciare che un'eccezione sfugga: se la
+ * chiamata non arriva — rete caduta, server che non risponde — il componente
+ * resterebbe in attesa per sempre col bottone bloccato. Su una pagina pubblica
+ * con traffico a pagamento è il guasto che costa di più, perché non si vede nei
+ * log e il visitatore se ne va senza dire niente.
+ */
+async function chiama<T>(azione: () => Promise<T>): Promise<T | { ok: false; errore: string }> {
+  try {
+    return await azione();
+  } catch {
+    return { ok: false, errore: GUASTO };
+  }
+}
+
 export default function Simulazione({
   domande,
   minuti,
@@ -45,15 +62,19 @@ export default function Simulazione({
   const [esito, setEsito] = useState<Esito | null>(null);
 
   const consegnaProva = useCallback(
-    async (id: string, risposte: Record<string, string>) => {
-      const r = await consegna(
-        id,
-        domande.map((d) => ({ questionId: d.id, optionId: risposte[d.id] ?? null }))
+    async (id: string, risposte: Record<string, string>): Promise<string | null> => {
+      const r = await chiama(() =>
+        consegna(
+          id,
+          domande.map((d) => ({ questionId: d.id, optionId: risposte[d.id] ?? null }))
+        )
       );
       if (r.ok) {
         setEsito(r.esito);
         setFase("risultato");
+        return null;
       }
+      return r.errore;
     },
     [domande]
   );
@@ -79,7 +100,7 @@ export default function Simulazione({
         minuti={minuti}
         scelte={scelte}
         onScegli={(q, o) => setScelte((s) => ({ ...s, [q]: o }))}
-        onConsegna={() => leadId && consegnaProva(leadId, scelte)}
+        onConsegna={() => (leadId ? consegnaProva(leadId, scelte) : Promise.resolve(GUASTO))}
       />
     );
   }
@@ -112,12 +133,14 @@ function Apertura({
 
     // Da quale inserzione è arrivato: si legge dall'indirizzo, non si chiede.
     const p = new URLSearchParams(window.location.search);
-    const r = await registra({
-      nome,
-      email,
-      percorso: "SEMESTRE_FILTRO",
-      utm: { source: p.get("utm_source"), medium: p.get("utm_medium"), campaign: p.get("utm_campaign") },
-    });
+    const r = await chiama(() =>
+      registra({
+        nome,
+        email,
+        percorso: "SEMESTRE_FILTRO",
+        utm: { source: p.get("utm_source"), medium: p.get("utm_medium"), campaign: p.get("utm_campaign") },
+      })
+    );
 
     setInCorso(false);
     if (r.ok) onPronto(r.leadId);
@@ -202,15 +225,28 @@ function Prova({
   minuti: number;
   scelte: Record<string, string>;
   onScegli: (questionId: string, optionId: string) => void;
-  onConsegna: () => void;
+  onConsegna: () => Promise<string | null>;
 }) {
   const [secondi, setSecondi] = useState(minuti * 60);
+  const [errore, setErrore] = useState<string | null>(null);
+  const [inCorso, setInCorso] = useState(false);
   const consegnato = useRef(false);
 
-  const consegnaOra = useCallback(() => {
+  const consegnaOra = useCallback(async () => {
     if (consegnato.current) return;
     consegnato.current = true;
-    onConsegna();
+    setInCorso(true);
+    setErrore(null);
+
+    const e = await onConsegna();
+
+    setInCorso(false);
+    if (e) {
+      // Riaprire la consegna è l'unica cosa che conta: le risposte sono ancora
+      // tutte in memoria, e una prova svolta e persa non si recupera più.
+      consegnato.current = false;
+      setErrore(e);
+    }
   }, [onConsegna]);
 
   useEffect(() => {
@@ -300,10 +336,15 @@ function Prova({
         ))}
       </ol>
 
-      <button onClick={consegnaOra} className="btn btn-brand mt-8 w-full py-3 text-base">
-        Consegna e vedi il risultato
+      <button onClick={consegnaOra} className="btn btn-brand mt-8 w-full py-3 text-base" disabled={inCorso}>
+        {inCorso ? "Sto correggendo…" : errore ? "Riprova a consegnare" : "Consegna e vedi il risultato"}
       </button>
-      {date < domande.length && (
+      {errore && (
+        <p className="mt-2 text-center text-sm text-red-700 dark:text-red-400">
+          {errore} Le tue risposte sono ancora qui: non chiudere la pagina.
+        </p>
+      )}
+      {!errore && date < domande.length && (
         <p className="mt-2 text-center text-xs text-muted">
           Puoi consegnare anche così: le domande lasciate in bianco valgono zero, non tolgono punti.
         </p>
@@ -411,19 +452,26 @@ function InvitoDiretta({ evento, leadId }: { evento: Evento; leadId: string | nu
   const [anno, setAnno] = useState("");
   const [consenso, setConsenso] = useState(false);
   const [inCorso, setInCorso] = useState(false);
+  const [errore, setErrore] = useState<string | null>(null);
   const [fatto, setFatto] = useState<{ postiRimasti: number } | null>(null);
 
   async function invia(e: React.FormEvent) {
     e.preventDefault();
     if (!leadId) return;
     setInCorso(true);
-    const r = await completaProfilo(
-      leadId,
-      { telefono, scuola, anno, consensoMarketing: consenso, postoDiretta: true },
-      evento.postiTotali
+    setErrore(null);
+
+    const r = await chiama(() =>
+      completaProfilo(
+        leadId,
+        { telefono, scuola, anno, consensoMarketing: consenso, postoDiretta: true },
+        evento.postiTotali
+      )
     );
+
     setInCorso(false);
     if (r.ok) setFatto({ postiRimasti: r.postiRimasti });
+    else setErrore(r.errore);
   }
 
   if (fatto) {
@@ -486,8 +534,10 @@ function InvitoDiretta({ evento, leadId }: { evento: Evento; leadId: string | nu
         </span>
       </label>
 
+      {errore && <p className="mt-3 text-sm text-red-700 dark:text-red-400">{errore}</p>}
+
       <button type="submit" className="btn btn-brand mt-4 w-full py-3 text-base" disabled={inCorso}>
-        {inCorso ? "Un attimo…" : "Prenota il posto"}
+        {inCorso ? "Un attimo…" : errore ? "Riprova" : "Prenota il posto"}
       </button>
     </form>
   );
