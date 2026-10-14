@@ -30,7 +30,14 @@ export const EVENTO = {
    * per nome l'informativa non è valida, e qui si raccolgono dati di minorenni.
    */
   privacy: {
-    titolare: "DA DEFINIRE",
+    /**
+     * Qui va il nome con cui l'ente si presenta. Per l'informativa vera serve
+     * però l'identificazione completa del titolare — ragione sociale, sede,
+     * partita IVA o codice fiscale — che non è ancora stata fornita: finché
+     * manca, l'informativa non è completa.
+     */
+    titolare: "Profor — ente di formazione",
+    /** Indirizzo a cui si esercitano i diritti sui dati (accesso, cancellazione). */
     email: "DA DEFINIRE",
     urlInformativa: "",
   },
