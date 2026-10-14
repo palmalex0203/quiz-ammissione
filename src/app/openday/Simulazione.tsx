@@ -392,7 +392,9 @@ function Risultato({
           <span className="text-xl text-muted">/ {esito.massimo}</span>
         </div>
         <p className="mt-1 text-sm text-muted">
-          {esito.giuste} giuste · {esito.sbagliate} sbagliate · {esito.bianche} in bianco — {percentuale}% di risposte esatte
+          {esito.giuste} {esito.giuste === 1 ? "giusta" : "giuste"} · {esito.sbagliate}{" "}
+          {esito.sbagliate === 1 ? "sbagliata" : "sbagliate"} · {esito.bianche} in bianco — {percentuale}% di
+          risposte esatte
         </p>
 
         <div className="mt-5 flex flex-col gap-3">
