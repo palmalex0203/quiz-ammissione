@@ -157,7 +157,7 @@ model Attempt {
   sezione           Int       @default(0)
   sezioneIniziataIl DateTime?
 
-  answers AnswerRecord[]
+  answers      AnswerRecord[]
   subjectStats AttemptSubjectStat[]
 
   @@index([studentId])
@@ -222,4 +222,55 @@ model AnswerRecord {
   isCorrect        Boolean?
 
   @@unique([attemptId, questionId])
+}
+
+// Chi arriva dalla pagina pubblica dell'open day e svolge la simulazione gratuita.
+// Non è un User e non lo diventa: creare un account per ogni visitatore
+// riempirebbe per sempre le statistiche dell'insegnante, lo storico e i conteggi
+// di finti studenti, e non si tornerebbe più indietro. Qui invece sta tutto in una
+// riga sola, che si esporta e si cancella senza toccare il resto.
+model Lead {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  // Chiesti prima della simulazione: due campi, non di più. Ogni campo in più
+  // prima del test è gente che non lo inizia.
+  nome  String
+  email String @unique
+
+  // Chiesti dopo, in cambio della correzione commentata. Chi non li lascia resta
+  // comunque un contatto valido: il motivo per cui si chiede l'email all'inizio.
+  telefono String?
+  scuola   String?
+  anno     String?
+
+  // Il percorso scelto col primo clic (vedi src/lib/tracks.ts). È la segmentazione
+  // migliore che abbiamo e non costa niente a chi la dà.
+  percorso String
+
+  // Da quale inserzione è arrivato. Senza questi tre campi, a campagna finita non
+  // si sa quale annuncio ha portato i contatti e quale ha solo speso.
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
+
+  // Consenso a essere ricontattato a scopo commerciale. È separato dall'uso dei
+  // dati per erogare la simulazione, e deve restare separato: sono due cose
+  // diverse e il secondo non si può dare per scontato col primo.
+  consensoMarketing Boolean   @default(false)
+  consensoIl        DateTime?
+
+  // Esito della simulazione. Le risposte stanno in un campo solo perché non si
+  // interrogano mai per singola domanda: servono per rimostrare la correzione.
+  completataIl DateTime?
+  punteggio    Float?
+  risposte     Json?
+
+  // Ha chiesto il posto per la diretta. I posti sono limitati davvero, quindi
+  // questo numero è quello che si conta per chiudere le iscrizioni.
+  postoDiretta   Boolean   @default(false)
+  postoDirettaIl DateTime?
+
+  @@index([createdAt])
+  @@index([percorso])
 }
