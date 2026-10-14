@@ -27,11 +27,18 @@ export default function OpenDayPage() {
       )}
 
       {/* Chi arriva da un annuncio non ci conosce: senza il marchio non sa di chi
-          è la pagina a cui sta per lasciare nome, email e telefono. Resta in alto
-          per tutto il percorso, discreto, perché il protagonista è la prova. */}
-      <header className="mx-auto flex max-w-2xl items-center px-4 pt-6">
+          è la pagina a cui sta per lasciare nome, email e telefono, e qui il
+          riconoscimento vale quanto la prova. Il file è 422x141, quindi anche a
+          288 px di larghezza resta nitido sugli schermi a densità doppia. */}
+      <header className="mx-auto flex max-w-2xl items-center px-4 pb-2 pt-8 sm:pt-10">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/profor-logo.png" alt="Profor — Ente di Formazione" className="h-8 w-auto" />
+        <img
+          src="/profor-logo.png"
+          alt="Profor — Ente di Formazione"
+          width={422}
+          height={141}
+          className="h-16 w-auto sm:h-24"
+        />
       </header>
 
       <Simulazione
