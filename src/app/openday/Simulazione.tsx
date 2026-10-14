@@ -49,7 +49,7 @@ async function chiama<T>(azione: () => Promise<T>): Promise<T | { ok: false; err
  * Registra il contatto, portandosi dietro i parametri dell'inserzione da cui è
  * arrivato: quelli si leggono dall'indirizzo, non si chiedono.
  */
-async function iscrivi(dati: { nome: string; email: string }) {
+async function iscrivi(dati: { nome: string; email: string; telefono?: string }) {
   const p = new URLSearchParams(window.location.search);
   return chiama(() =>
     registra({
@@ -139,13 +139,15 @@ function Apertura({
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [errore, setErrore] = useState<string | null>(null);
+  const [telefono, setTelefono] = useState("");
   const [inCorso, setInCorso] = useState(false);
+
   async function invia(e: React.FormEvent) {
     e.preventDefault();
     setErrore(null);
     setInCorso(true);
 
-    const id = await iscrivi({ nome, email });
+    const id = await iscrivi({ nome, email, telefono });
 
     setInCorso(false);
     if (id.ok) onPronto(id.leadId);
@@ -167,18 +169,39 @@ function Apertura({
       </p>
 
       <form onSubmit={invia} className="card mt-8 p-5 sm:p-6 flex flex-col gap-4">
-        <div className="flex flex-col gap-1.5">
-          <label htmlFor="openday-nome" className="text-sm font-semibold">
-            Come ti chiami
-          </label>
-          <input
-            id="openday-nome"
-            className="field"
-            value={nome}
-            onChange={(e) => setNome(e.target.value)}
-            autoComplete="given-name"
-            required
-          />
+        {/* Nome e telefono affiancati anche sul telefono: incolonnati,
+            spingerebbero "Inizia la simulazione" sotto il bordo dello schermo, e
+            quello che non si vede non si tocca. A 375 px restano 155 px per
+            campo, che bastano per un nome e per un numero. */}
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+          <div className="flex flex-col gap-1.5">
+            <label htmlFor="openday-nome" className="text-sm font-semibold">
+              Come ti chiami
+            </label>
+            <input
+              id="openday-nome"
+              className="field"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+              autoComplete="name"
+              required
+            />
+          </div>
+
+          <div className="flex flex-col gap-1.5">
+            <label htmlFor="openday-tel" className="text-sm font-semibold">
+              Telefono
+            </label>
+            <input
+              id="openday-tel"
+              className="field"
+              value={telefono}
+              onChange={(e) => setTelefono(e.target.value)}
+              autoComplete="tel"
+              inputMode="tel"
+              required
+            />
+          </div>
         </div>
 
         <div className="flex flex-col gap-1.5">
@@ -204,8 +227,8 @@ function Apertura({
         </button>
 
         <p className="text-xs text-muted leading-relaxed">
-          Usiamo nome ed email solo per farti svolgere la simulazione e mandarti il risultato.
-          Titolare del trattamento: {evento.titolare}.{" "}
+          Usiamo questi dati per farti svolgere la simulazione, mandarti il risultato e ricontattarti
+          sui corsi. Titolare del trattamento: {evento.titolare}.{" "}
           {evento.urlInformativa && (
             <a className="underline" href={evento.urlInformativa} target="_blank" rel="noreferrer">
               Informativa privacy

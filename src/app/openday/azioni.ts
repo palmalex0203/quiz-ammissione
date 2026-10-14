@@ -43,11 +43,13 @@ export type RisultatoRegistrazione = { ok: true; leadId: string } | { ok: false;
 export async function registra(dati: {
   nome: unknown;
   email: unknown;
+  telefono?: unknown;
   percorso: unknown;
   utm?: { source?: unknown; medium?: unknown; campaign?: unknown };
 }): Promise<RisultatoRegistrazione> {
   const nome = pulisci(dati.nome, MAX.nome);
   const email = pulisci(dati.email, MAX.email)?.toLowerCase() ?? null;
+  const telefono = pulisci(dati.telefono, MAX.telefono);
   const percorso = dati.percorso === "SEMESTRE_FILTRO" ? "SEMESTRE_FILTRO" : "PROFESSIONI_SANITARIE";
 
   if (!nome) return { ok: false, errore: "Manca il nome." };
@@ -65,8 +67,9 @@ export async function registra(dati: {
     // visita cancellerebbe l'inserzione che l'aveva portato qui davvero.
     const lead = await prisma.lead.upsert({
       where: { email },
-      create: { nome, email, percorso, ...utm },
-      update: { nome, percorso },
+      create: { nome, email, telefono, percorso, ...utm },
+      // Un telefono vuoto non cancella quello che la persona aveva già lasciato.
+      update: { nome, percorso, ...(telefono ? { telefono } : {}) },
       select: { id: true },
     });
     return { ok: true, leadId: lead.id };
