@@ -2,6 +2,23 @@
  * I dati dell'open day, tutti in un posto solo perché cambiano all'ultimo momento
  * e devono poterli cambiare anche senza leggere il resto del codice.
  */
+/** Segnaposto dei dati che mancano ancora. Chi compila li sostituisce. */
+const DA_DEFINIRE = "DA DEFINIRE";
+
+type Privacy = { titolare: string; email: string; urlInformativa: string };
+
+const PRIVACY: Privacy = {
+  /**
+   * Il nome con cui l'ente si presenta. Per l'informativa vera serve però
+   * l'identificazione completa del titolare — ragione sociale, sede, partita
+   * IVA o codice fiscale — che non è ancora stata fornita.
+   */
+  titolare: "Profor — ente di formazione",
+  /** Indirizzo a cui si esercitano i diritti sui dati (accesso, cancellazione). */
+  email: DA_DEFINIRE,
+  urlInformativa: "",
+};
+
 export const EVENTO = {
   data: "martedì 27 ottobre 2026",
   dataBreve: "27 ottobre",
@@ -29,18 +46,7 @@ export const EVENTO = {
    * Da compilare prima di pubblicare: senza il titolare del trattamento indicato
    * per nome l'informativa non è valida, e qui si raccolgono dati di minorenni.
    */
-  privacy: {
-    /**
-     * Qui va il nome con cui l'ente si presenta. Per l'informativa vera serve
-     * però l'identificazione completa del titolare — ragione sociale, sede,
-     * partita IVA o codice fiscale — che non è ancora stata fornita: finché
-     * manca, l'informativa non è completa.
-     */
-    titolare: "Profor — ente di formazione",
-    /** Indirizzo a cui si esercitano i diritti sui dati (accesso, cancellazione). */
-    email: "DA DEFINIRE",
-    urlInformativa: "",
-  },
+  privacy: PRIVACY,
 } as const;
 
 /** Vero quando mancano ancora dati obbligatori: la pagina lo dice invece di
@@ -48,7 +54,7 @@ export const EVENTO = {
 export function datiMancanti(): string[] {
   const mancano: string[] = [];
   if (!EVENTO.diretta.url) mancano.push("l'indirizzo della diretta");
-  if (EVENTO.privacy.titolare === "DA DEFINIRE") mancano.push("il titolare del trattamento");
-  if (EVENTO.privacy.email === "DA DEFINIRE") mancano.push("l'email per i diritti privacy");
+  if (EVENTO.privacy.titolare === DA_DEFINIRE) mancano.push("il titolare del trattamento");
+  if (EVENTO.privacy.email === DA_DEFINIRE) mancano.push("l'email per i diritti privacy");
   return mancano;
 }
