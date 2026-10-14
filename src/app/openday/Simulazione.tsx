@@ -45,6 +45,21 @@ async function chiama<T>(azione: () => Promise<T>): Promise<T | { ok: false; err
   }
 }
 
+/**
+ * Registra il contatto, portandosi dietro i parametri dell'inserzione da cui è
+ * arrivato: quelli si leggono dall'indirizzo, non si chiedono.
+ */
+async function iscrivi(dati: { nome: string; email: string }) {
+  const p = new URLSearchParams(window.location.search);
+  return chiama(() =>
+    registra({
+      ...dati,
+      percorso: "SEMESTRE_FILTRO",
+      utm: { source: p.get("utm_source"), medium: p.get("utm_medium"), campaign: p.get("utm_campaign") },
+    })
+  );
+}
+
 export default function Simulazione({
   domande,
   minuti,
@@ -125,55 +140,16 @@ function Apertura({
   const [email, setEmail] = useState("");
   const [errore, setErrore] = useState<string | null>(null);
   const [inCorso, setInCorso] = useState(false);
-  const [prenotato, setPrenotato] = useState(false);
-  const modulo = useRef<HTMLFormElement>(null);
-
-  /** Registra il contatto e restituisce il suo id, o null se è andata male. */
-  async function iscrivi(): Promise<string | null> {
-    // Da quale inserzione è arrivato: si legge dall'indirizzo, non si chiede.
-    const p = new URLSearchParams(window.location.search);
-    const r = await chiama(() =>
-      registra({
-        nome,
-        email,
-        percorso: "SEMESTRE_FILTRO",
-        utm: { source: p.get("utm_source"), medium: p.get("utm_medium"), campaign: p.get("utm_campaign") },
-      })
-    );
-    if (r.ok) return r.leadId;
-    setErrore(r.errore);
-    return null;
-  }
-
   async function invia(e: React.FormEvent) {
     e.preventDefault();
     setErrore(null);
     setInCorso(true);
-    const id = await iscrivi();
-    setInCorso(false);
-    if (id) onPronto(id);
-  }
 
-  /**
-   * Chi non ha voglia di fare il test adesso. Senza questa via d'uscita lo
-   * perdiamo del tutto, e un posto in diretta vale comunque più di niente —
-   * ma sta sotto e in secondo piano, perché la prova è quella che ci dà il
-   * profilo dello studente e il motivo per cui ci richiama.
-   */
-  async function soloPosto() {
-    setErrore(null);
-    // Gli stessi due campi del modulo sopra: li convalida il browser, coi suoi
-    // messaggi, invece di scriverne di nuovi.
-    if (!modulo.current?.reportValidity()) return;
+    const id = await iscrivi({ nome, email });
 
-    setInCorso(true);
-    const id = await iscrivi();
-    if (id) {
-      const r = await chiama(() => completaProfilo(id, { postoDiretta: true }, evento.postiTotali));
-      if (r.ok) setPrenotato(true);
-      else setErrore(r.errore);
-    }
     setInCorso(false);
+    if (id.ok) onPronto(id.leadId);
+    else setErrore(id.errore);
   }
 
   return (
@@ -190,7 +166,7 @@ function Apertura({
         La correzione è subito, gratis.
       </p>
 
-      <form ref={modulo} onSubmit={invia} className="card mt-8 p-5 sm:p-6 flex flex-col gap-4">
+      <form onSubmit={invia} className="card mt-8 p-5 sm:p-6 flex flex-col gap-4">
         <div className="flex flex-col gap-1.5">
           <label htmlFor="openday-nome" className="text-sm font-semibold">
             Come ti chiami
@@ -238,32 +214,145 @@ function Apertura({
         </p>
       </form>
 
-      {prenotato ? (
-        <div className="card mt-5 border-brand/40 bg-brand-tint p-5">
-          <p className="section-title">Il posto è tuo</p>
-          <p className="mt-1.5 text-sm">
-            Ci vediamo {evento.data} alle {evento.ora} su {evento.piattaforma}. Il collegamento ti arriva
-            per email, e te lo ricordiamo il giorno prima.
-          </p>
-          <p className="mt-3 text-sm text-muted">
-            Se nel frattempo ti viene voglia di provarti, la simulazione è lì sopra: ci vogliono{" "}
-            {minuti} minuti.
-          </p>
-        </div>
+      <InvitoApertura evento={evento} minuti={minuti} />
+    </div>
+  );
+}
+
+/* ----------------------------------------------------- invito in apertura */
+
+/**
+ * Chi il test adesso non lo farebbe. Senza questa via d'uscita lo perdiamo del
+ * tutto, e un posto in diretta vale comunque più di niente — ma il riquadro sta
+ * sotto il bottone della simulazione e in tinta tenue: affiancarlo lo
+ * renderebbe la scorciatoia, e la prova è il pezzo che ci dà il profilo dello
+ * studente e il motivo per cui ci richiama.
+ *
+ * Il modulo è suo e compare solo a chi lo chiede, così chi punta alla
+ * simulazione non si trova davanti due moduli da leggere.
+ */
+function InvitoApertura({ evento, minuti }: { evento: Evento; minuti: number }) {
+  const [aperto, setAperto] = useState(false);
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [telefono, setTelefono] = useState("");
+  const [inCorso, setInCorso] = useState(false);
+  const [errore, setErrore] = useState<string | null>(null);
+  const [prenotato, setPrenotato] = useState(false);
+
+  async function invia(e: React.FormEvent) {
+    e.preventDefault();
+    setErrore(null);
+    setInCorso(true);
+
+    const r = await iscrivi({ nome, email });
+    if (r.ok) {
+      const p = await chiama(() =>
+        completaProfilo(r.leadId, { telefono, postoDiretta: true }, evento.postiTotali)
+      );
+      if (p.ok) setPrenotato(true);
+      else setErrore(p.errore);
+    } else {
+      setErrore(r.errore);
+    }
+    setInCorso(false);
+  }
+
+  if (prenotato) {
+    return (
+      <div className="card mt-5 border-brand/40 bg-brand-tint p-5 sm:p-6">
+        <p className="section-title">Il posto è tuo</p>
+        <p className="mt-1.5 text-sm">
+          Ci vediamo {evento.data} alle {evento.ora} su {evento.piattaforma}. Il collegamento ti arriva
+          per email, e te lo ricordiamo il giorno prima.
+        </p>
+        <p className="mt-3 text-sm text-muted">
+          Se nel frattempo ti viene voglia di provarti, la simulazione è lì sopra: sono {minuti}{" "}
+          minuti.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="card mt-5 border-brand/40 p-5 sm:p-6">
+      <p className="font-display text-xl font-bold leading-snug tracking-tight text-balance sm:text-2xl">
+        Il {evento.dataBreve} smontiamo la prova vera, domanda per domanda.
+      </p>
+      <p className="mt-2 text-sm text-muted">
+        Un&apos;ora in diretta su {evento.piattaforma}, alle {evento.ora}: le domande del primo e del
+        secondo appello risolte a voce, e come si studia per arrivarci preparati. I posti sono
+        limitati.
+      </p>
+
+      {!aperto ? (
+        <button type="button" onClick={() => setAperto(true)} className="btn btn-soft mt-4">
+          Voglio esserci
+        </button>
       ) : (
-        <div className="card mt-5 border-brand/40 p-5">
-          <p className="section-title">Oppure vieni e basta all&apos;open day</p>
-          <p className="mt-1.5 text-sm text-muted">
-            {evento.data}, alle {evento.ora}, in diretta su {evento.piattaforma}: correggiamo queste
-            domande una per una e vediamo come si studia per arrivarci. I posti sono limitati.
-          </p>
-          <button type="button" onClick={soloPosto} className="btn btn-soft mt-4" disabled={inCorso}>
-            {inCorso ? "Un attimo…" : "Prenota solo il posto"}
+        <form onSubmit={invia} className="mt-5 flex flex-col gap-3 border-t border-line pt-5">
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="inv-nome" className="text-sm font-semibold">
+                Nome e cognome
+              </label>
+              <input
+                id="inv-nome"
+                className="field"
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                autoComplete="name"
+                required
+              />
+            </div>
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="inv-tel" className="text-sm font-semibold">
+                Telefono
+              </label>
+              <input
+                id="inv-tel"
+                className="field"
+                value={telefono}
+                onChange={(e) => setTelefono(e.target.value)}
+                autoComplete="tel"
+                inputMode="tel"
+                required
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-1.5">
+            <label htmlFor="inv-email" className="text-sm font-semibold">
+              Email
+            </label>
+            <input
+              id="inv-email"
+              className="field"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              autoComplete="email"
+              required
+            />
+            <p className="text-xs text-muted">Ti mandiamo lì il collegamento alla diretta.</p>
+          </div>
+
+          {errore && <p className="text-sm text-red-700 dark:text-red-400">{errore}</p>}
+
+          <button type="submit" className="btn btn-brand w-full py-3 text-base" disabled={inCorso}>
+            {inCorso ? "Un attimo…" : errore ? "Riprova" : "Prenota il posto"}
           </button>
-          <p className="mt-2 text-xs text-muted">
-            Bastano il nome e l&apos;email qui sopra. Il test puoi farlo dopo.
+
+          <p className="text-xs leading-relaxed text-muted">
+            Usiamo questi dati per tenerti il posto e mandarti il collegamento. Titolare del
+            trattamento: {evento.titolare}.{" "}
+            {evento.urlInformativa && (
+              <a className="underline" href={evento.urlInformativa} target="_blank" rel="noreferrer">
+                Informativa privacy
+              </a>
+            )}
           </p>
-        </div>
+        </form>
       )}
     </div>
   );
