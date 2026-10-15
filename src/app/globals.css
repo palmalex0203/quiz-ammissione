@@ -255,6 +255,9 @@ body {
     padding-top: 1.25rem;
     border-top: 1px solid var(--line);
     text-wrap: balance;
+    /* Saltando qui dall'indice, il titolo non deve finire sotto la barra in
+       alto, che su telefono resta fissa. */
+    scroll-margin-top: 5rem;
   }
   .prose h3 {
     font-family: var(--font-display);

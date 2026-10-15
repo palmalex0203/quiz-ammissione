@@ -17,23 +17,6 @@ L'appunto parte da zero e non dà per scontato niente: ogni parola nuova viene s
 
 Una cosa sul formato dell'esame, perché cambia il modo di studiare: delle 31 domande della prova, **15 sono a scelta multipla** e **16 a completamento** — in queste ultime la risposta la **scrivi tu** in una griglia di caselle, e **un errore di ortografia la rende sbagliata**. Non basta riconoscere la parola giusta fra cinque: devi saperla scrivere. Alla fine dell'appunto c'è l'elenco di quelle di questa unità.
 
-**Indice**
-1. Di cosa parla la biologia cellulare
-2. Teoria cellulare e proprietà del vivente
-3. I virus
-4. La cellula procariotica
-5. Il trasferimento genico orizzontale
-6. La cellula eucariotica: endomembrane ed endosimbiosi
-7. Le macromolecole: il principio generale
-8. Zuccheri
-9. Lipidi
-10. Proteine
-11. Enzimi e modificazioni post-traduzionali
-12. Nucleotidi e acidi nucleici
-13. Anabolismo, catabolismo, condensazione, idrolisi
-14. Parole da saper scrivere
-15. Errori tipici
-
 ---
 
 ## 1. Di cosa parla la biologia cellulare

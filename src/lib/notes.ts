@@ -1,6 +1,6 @@
 import { unstable_cache } from "next/cache";
 import { prisma } from "@/lib/prisma";
-import { renderMarkdown } from "@/lib/markdown";
+import { indiceDi, renderMarkdown, type VoceIndice } from "@/lib/markdown";
 import type { TrackId } from "@/lib/tracks";
 
 /*
@@ -32,6 +32,8 @@ export type PublishedNote = {
   title: string;
   /** Corpo già convertito in HTML: la conversione è la parte costosa. */
   html: string;
+  /** I capitoli, per l'indice laterale. Ricavati dall'HTML già convertito. */
+  indice: VoceIndice[];
   /** ISO: la cache non conserva gli oggetti Date. */
   updatedAt: string;
 };
@@ -58,12 +60,15 @@ export const publishedNote = unstable_cache(
 
     if (!nota || !nota.isPublished) return null;
 
+    const html = renderMarkdown(nota.body);
+
     return {
       topic: nota.topic,
       track: nota.track,
       subject: nota.subject,
       title: nota.title,
-      html: renderMarkdown(nota.body),
+      html,
+      indice: indiceDi(html),
       updatedAt: nota.updatedAt.toISOString(),
     };
   },

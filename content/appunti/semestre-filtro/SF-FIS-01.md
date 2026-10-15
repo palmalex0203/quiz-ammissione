@@ -17,22 +17,6 @@ L'appunto parte da zero: ogni concetto viene spiegato prima di essere usato, e n
 
 Una cosa sul taglio. In Fisica il syllabus chiede esplicitamente **esercitazioni** — almeno il 20% per questa unità — e le prove ufficiali sono fatte in buona parte di **esercizi numerici**, non di definizioni. Quindi qui si impara facendo: ogni concetto finisce in un conto.
 
-**Indice**
-1. Che cos'è la fisica, e perché si misura
-2. Grandezza, dimensione, unità: tre cose diverse
-3. Il Sistema Internazionale
-4. La notazione scientifica
-5. Multipli, sottomultipli e conversioni
-6. Gli ordini di grandezza
-7. L'analisi dimensionale
-8. Grandezze estensive e intensive
-9. Trigonometria essenziale
-10. Scalari e vettori
-11. Le operazioni fra vettori
-12. Esercizi svolti
-13. Parole da saper scrivere
-14. Errori tipici
-
 ---
 
 ## 1. Che cos'è la fisica, e perché si misura
