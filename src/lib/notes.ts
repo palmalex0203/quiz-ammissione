@@ -71,6 +71,42 @@ export const publishedNote = unstable_cache(
   { tags: [NOTES_TAG], revalidate: UN_ORA }
 );
 
+/** Una voce dell'elenco degli appunti: quanto basta per la sezione, senza il corpo. */
+export type NoteListItem = {
+  topic: string;
+  subject: string;
+  title: string;
+  /** ISO: la cache non conserva gli oggetti Date. */
+  updatedAt: string;
+  /** Parole del corpo, per dire allo studente quanto è lungo prima che lo apra. */
+  parole: number;
+};
+
+/**
+ * Gli appunti pubblicati di un percorso, per la sezione "Appunti". Niente corpo:
+ * serve solo l'intestazione, e tenere fuori il testo evita di trascinare in cache
+ * decine di migliaia di caratteri che su quella pagina non si leggono.
+ */
+export const publishedNotes = unstable_cache(
+  async (trackId: TrackId): Promise<NoteListItem[]> => {
+    const righe = await prisma.topicNote.findMany({
+      where: { track: trackId, isPublished: true },
+      orderBy: [{ subject: "asc" }, { topic: "asc" }],
+      select: { topic: true, subject: true, title: true, updatedAt: true, body: true },
+    });
+
+    return righe.map((r) => ({
+      topic: r.topic,
+      subject: r.subject,
+      title: r.title,
+      updatedAt: r.updatedAt.toISOString(),
+      parole: r.body.trim().split(/\s+/).filter(Boolean).length,
+    }));
+  },
+  ["appunti-pubblicati"],
+  { tags: [NOTES_TAG], revalidate: UN_ORA }
+);
+
 /**
  * I codici degli argomenti che hanno un appunto pubblicato in questo percorso:
  * servono a "Esercitati" per mostrare il collegamento "Ripassa".
