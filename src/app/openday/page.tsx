@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { MINUTI, pescaProva, TOTALE } from "@/lib/openday";
 import { datiMancanti, EVENTO } from "@/lib/open-day-evento";
 import Simulazione from "./Simulazione";
@@ -15,14 +16,28 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default function OpenDayPage() {
-  const domande = pescaProva();
   const mancano = datiMancanti();
+
+  /*
+   * Finché mancano i dati obbligatori la pagina non esiste: in locale si apre
+   * con APRI_OPEN_DAY=1, ovunque altro risponde 404.
+   *
+   * Questa pagina è pubblica e raccoglie nome, telefono ed email di studenti,
+   * in buona parte minorenni. Mandarla online con l'informativa incompleta —
+   * senza un indirizzo a cui esercitare i diritti sui dati — non è una svista
+   * da poco, ed è esattamente il genere di cosa che scappa quando si spinge su
+   * main per tutt'altro motivo, visto che da lì il deploy parte da solo. Un
+   * avviso giallo non ferma niente: un 404 sì.
+   */
+  if (mancano.length > 0 && process.env.APRI_OPEN_DAY !== "1") notFound();
+
+  const domande = pescaProva();
 
   return (
     <main className="app-shell flex-1">
       {mancano.length > 0 && (
         <div className="bg-amber-100 text-amber-950 text-sm px-4 py-2 text-center dark:bg-amber-950 dark:text-amber-100">
-          Pagina non ancora pubblicabile: manca {mancano.join(", manca ")}.
+          Anteprima locale: manca {mancano.join(", manca ")}. Online questa pagina risponde 404.
         </div>
       )}
 
