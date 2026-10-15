@@ -134,6 +134,40 @@ async function main() {
     prisma.topicNote.count({ where: { isPublished: true } }),
   ]);
   console.log(`\nAppunti nel database: ${totali}, di cui pubblicati ${pubblicati}.`);
+
+  await svuotaCache();
+}
+
+/**
+ * Avvisa il sito che gli appunti sono cambiati.
+ *
+ * Gli studenti leggono gli appunti dalla cache, che si svuota da sola solo
+ * quando l'insegnante salva dalla sua area. Caricando da qui la modifica
+ * resterebbe invisibile fino alla scadenza dell'ora: un appunto pubblicato e
+ * non visibile sembra un guasto. Serve SITO_URL e APPUNTI_REVALIDA_TOKEN; se
+ * mancano lo script lo dice e non fallisce, perché il caricamento è comunque
+ * andato a buon fine.
+ */
+async function svuotaCache() {
+  const sito = process.env.SITO_URL;
+  const token = process.env.APPUNTI_REVALIDA_TOKEN;
+  if (!sito || !token) {
+    console.log(
+      "\nCache non svuotata: mancano SITO_URL o APPUNTI_REVALIDA_TOKEN.\n" +
+        "Gli appunti nuovi possono metterci fino a un'ora a comparire agli studenti."
+    );
+    return;
+  }
+
+  try {
+    const r = await fetch(`${sito.replace(/\/$/, "")}/api/appunti/revalida`, {
+      method: "POST",
+      headers: { authorization: `Bearer ${token}` },
+    });
+    console.log(r.ok ? "Cache degli appunti svuotata: le modifiche sono già visibili." : `Cache non svuotata: il sito ha risposto ${r.status}.`);
+  } catch {
+    console.log("Cache non svuotata: il sito non ha risposto. Le modifiche compariranno entro un'ora.");
+  }
 }
 
 main()
