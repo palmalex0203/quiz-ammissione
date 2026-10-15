@@ -20,9 +20,13 @@ const PRIVACY: Privacy = {
 };
 
 export const EVENTO = {
+  titolo: "Open day — Preparazione al semestre filtro",
+  /** La frase che apre la pagina. Deve dire una cosa vera, non incoraggiare. */
+  slogan: "Nessuno lo supera per caso.",
   data: "martedì 27 ottobre 2026",
   dataBreve: "27 ottobre",
   ora: "16:30",
+  durata: "due ore",
   /** Quando inizia davvero, per il conto alla rovescia e per il promemoria. */
   inizio: new Date("2026-10-27T16:30:00+01:00"),
 

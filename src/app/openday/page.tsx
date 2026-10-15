@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { MINUTI, pescaProva, TOTALE } from "@/lib/openday";
+import { DOMANDE_PER_PROVA, MINUTI_PER_PROVA, pescaProva, TOTALE } from "@/lib/openday";
 import { datiMancanti, EVENTO } from "@/lib/open-day-evento";
-import Simulazione from "./Simulazione";
+import OpenDay from "./OpenDay";
 
 // Pagina pubblica: non chiama auth() e non deve chiamarlo. È l'unica zona del
 // sito raggiungibile senza account, ed è il motivo per cui le sue scritture
 // finiscono su Lead e non su User.
 export const metadata: Metadata = {
-  title: "Simulazione gratuita — Semestre filtro",
-  description: `Dodici domande vere dei due appelli 2025/2026, corrette subito. Poi la diretta del ${EVENTO.dataBreve} alle ${EVENTO.ora}.`,
+  title: EVENTO.titolo,
+  description: `${EVENTO.data}, ore ${EVENTO.ora}: ${EVENTO.durata} in diretta sul semestre filtro. E la simulazione gratuita di una prova ufficiale dell'anno scorso.`,
 };
 
-// Le domande si sorteggiano a ogni visita, quindi niente cache statica.
+// L'appello si sorteggia a ogni visita, quindi niente cache statica.
 export const dynamic = "force-dynamic";
 
 export default function OpenDayPage() {
@@ -31,12 +31,12 @@ export default function OpenDayPage() {
    */
   if (mancano.length > 0 && process.env.APRI_OPEN_DAY !== "1") notFound();
 
-  const domande = pescaProva();
+  const prova = pescaProva();
 
   return (
     <main className="app-shell flex-1">
       {mancano.length > 0 && (
-        <div className="bg-amber-100 text-amber-950 text-sm px-4 py-2 text-center dark:bg-amber-950 dark:text-amber-100">
+        <div className="bg-amber-100 px-4 py-2 text-center text-sm text-amber-950 dark:bg-amber-950 dark:text-amber-100">
           Anteprima locale: manca {mancano.join(", manca ")}. Online questa pagina risponde 404.
         </div>
       )}
@@ -56,14 +56,20 @@ export default function OpenDayPage() {
         />
       </header>
 
-      <Simulazione
-        domande={domande}
-        minuti={MINUTI}
-        totale={TOTALE}
+      <OpenDay
+        prova={prova}
+        esame={{
+          domandePerProva: DOMANDE_PER_PROVA,
+          minutiPerProva: MINUTI_PER_PROVA,
+          totale: TOTALE,
+        }}
         evento={{
+          titolo: EVENTO.titolo,
+          slogan: EVENTO.slogan,
           data: EVENTO.data,
           dataBreve: EVENTO.dataBreve,
           ora: EVENTO.ora,
+          durata: EVENTO.durata,
           piattaforma: EVENTO.diretta.piattaforma,
           url: EVENTO.diretta.url,
           postiTotali: EVENTO.postiTotali,

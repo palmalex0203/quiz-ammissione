@@ -262,9 +262,14 @@ model Lead {
 
   // Esito della simulazione. Le risposte stanno in un campo solo perché non si
   // interrogano mai per singola domanda: servono per rimostrare la correzione.
-  completataIl DateTime?
-  punteggio    Float?
-  risposte     Json?
+  //
+  // iniziataIl si scrive quando la prova parte, completataIl solo alla consegna:
+  // chi ha le due date diverse ha abbandonato a metà, ed è un contatto che
+  // interessa quanto gli altri — anzi, è quello da richiamare per primo.
+  simulazioneIniziataIl DateTime?
+  completataIl          DateTime?
+  punteggio             Float?
+  risposte              Json?
 
   // Ha chiesto il posto per la diretta. I posti sono limitati davvero, quindi
   // questo numero è quello che si conta per chiudere le iscrizioni.
