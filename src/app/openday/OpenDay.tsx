@@ -190,10 +190,10 @@ function Informazioni({ evento }: { evento: Evento }) {
   return (
     <section className="card flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-7">
       <div className="min-w-0">
-        <h2 className="section-title">Hai una domanda sul corso?</h2>
+        <h2 className="section-title">Per maggiori informazioni</h2>
         <p className="mt-1 text-sm leading-relaxed text-muted">
-          Quanto dura, quanto costa, se fa al caso tuo: scrivici su WhatsApp e ti risponde una
-          persona. Oppure chiama lo{" "}
+          Scrivici al numero WhatsApp e verrai ricontattato il prima possibile. Oppure chiama lo
+          {" "}
           <a className="underline" href={"tel:+" + evento.whatsapp.cifre}>
             {evento.whatsapp.numero}
           </a>
@@ -313,7 +313,7 @@ function Partecipa({ evento, aperto, apri }: { evento: Evento; aperto: boolean; 
                 Entra nella diretta
               </a>
             )}
-            <p className="mt-3 text-sm">Intanto, se hai domande sul corso:</p>
+            <p className="mt-3 text-sm">Per maggiori informazioni sul corso:</p>
             <BottoneWhatsApp whatsapp={evento.whatsapp} className="mt-2">
               Scrivici su WhatsApp
             </BottoneWhatsApp>
