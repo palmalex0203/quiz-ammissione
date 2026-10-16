@@ -11,6 +11,7 @@ const LINKS: NavLink[] = [
   { href: "/teacher/tests", label: "Test", icon: "docs" },
   { href: "/teacher/appunti", label: "Appunti", icon: "book" },
   { href: "/teacher/results", label: "Risultati", icon: "chart" },
+  { href: "/teacher/openday", label: "Open day", icon: "target", short: "Open day" },
 ];
 
 export default async function TeacherLayout({ children }: { children: ReactNode }) {
