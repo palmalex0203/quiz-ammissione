@@ -302,11 +302,20 @@ model Lezione {
   data         DateTime
   durataMinuti Int?
 
-  // Dove sta il filmato. Si tiene il fornitore e l'identificativo invece
-  // dell'indirizzo intero: l'indirizzo del lettore lo costruiamo noi, così non
-  // può finire in pagina niente che non sia uno dei due fornitori previsti.
-  fornitore String
-  videoId   String
+  // Una lezione è registrata **oppure** in diretta.
+  //
+  // Registrata: si tiene il fornitore e l'identificativo invece dell'indirizzo
+  // intero, così la pagina costruisce il lettore da sé e non può finirci dentro
+  // niente che non sia uno dei due fornitori previsti.
+  fornitore String?
+  videoId   String?
+
+  // In diretta: l'indirizzo della riunione. Qui l'indirizzo intero serve per
+  // forza — non è un filmato con un identificativo, è un invito — e infatti
+  // questa non si incorpora: Teams rifiuta di farsi mettere dentro un iframe,
+  // quindi in pagina diventa un pulsante che porta fuori. Chi legge deve essere
+  // un fornitore riconosciuto: vedi `urlDirettaValido` in src/lib/lezioni.ts.
+  urlDiretta String?
 
   // Come per gli appunti: una lezione la vedono gli studenti solo quando
   // l'insegnante l'ha riguardata e pubblicata.

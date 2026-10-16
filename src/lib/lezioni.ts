@@ -64,6 +64,40 @@ export function leggiVideo(url: string): { fornitore: Fornitore; videoId: string
   return null;
 }
 
+/**
+ * I luoghi da cui accettiamo l'indirizzo di una diretta.
+ *
+ * Un elenco chiuso e non un controllo generico su "è un https": qui dentro
+ * finisce un indirizzo scritto a mano, e la pagina lo trasforma in un pulsante
+ * che gli studenti premono fidandosi di noi. Un refuso, o un copia e incolla
+ * dal posto sbagliato, non deve poter mandare una classe su un sito qualunque.
+ */
+const SEDI_DIRETTA = [
+  "teams.microsoft.com",
+  "teams.live.com",
+  "teams.microsoft.us",
+  "meet.google.com",
+  "zoom.us",
+];
+
+/** L'indirizzo della diretta, se è uno di quelli che accettiamo. Altrimenti null. */
+export function urlDirettaValido(url: string | null | undefined): string | null {
+  if (!url) return null;
+  let indirizzo: URL;
+  try {
+    indirizzo = new URL(url.trim());
+  } catch {
+    return null;
+  }
+  if (indirizzo.protocol !== "https:") return null;
+
+  const host = indirizzo.hostname.toLowerCase();
+  // Il sottodominio va bene (eu01.zoom.us), il suffisso appiccicato no
+  // (teams.microsoft.com.truffa.example): da qui il punto davanti.
+  const ammesso = SEDI_DIRETTA.some((sede) => host === sede || host.endsWith(`.${sede}`));
+  return ammesso ? indirizzo.toString() : null;
+}
+
 export type LezionePubblicata = {
   id: string;
   titolo: string;
@@ -73,8 +107,11 @@ export type LezionePubblicata = {
   /** ISO: la cache non conserva gli oggetti Date. */
   data: string;
   durataMinuti: number | null;
-  fornitore: string;
-  videoId: string;
+  /** Registrata: il filmato. Nulli se la lezione è in diretta. */
+  fornitore: string | null;
+  videoId: string | null;
+  /** In diretta: l'indirizzo della riunione. Nullo se la lezione è registrata. */
+  urlDiretta: string | null;
 };
 
 /** Le lezioni pubblicate di un percorso, dalla più recente. */
@@ -93,6 +130,7 @@ export const lezioniPubblicate = unstable_cache(
         durataMinuti: true,
         fornitore: true,
         videoId: true,
+        urlDiretta: true,
       },
     });
 
@@ -121,6 +159,7 @@ export const lezioniDiArgomento = unstable_cache(
         durataMinuti: true,
         fornitore: true,
         videoId: true,
+        urlDiretta: true,
       },
     });
 

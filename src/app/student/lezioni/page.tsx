@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { requireStudentTrack } from "@/lib/track-session";
 import { EmptyState } from "@/components/EmptyState";
-import { durata, lezioniPubblicate } from "@/lib/lezioni";
+import { durata, lezioniPubblicate, urlDirettaValido } from "@/lib/lezioni";
 import { topicLabel } from "@/lib/topics";
 import { iconaMateria } from "@/lib/appunti-materie";
 
@@ -17,15 +17,22 @@ export default async function StudentLezioniPage() {
   const { track } = await requireStudentTrack();
   const lezioni = await lezioniPubblicate(track.id);
 
+  // Con una diretta in elenco la frase non può promettere solo registrazioni:
+  // a quella si partecipa a un'ora precisa, non la si riguarda quando si vuole.
+  const conDirette = lezioni.some((l) => urlDirettaValido(l.urlDiretta) !== null);
+
+  const sottotitolo =
+    lezioni.length === 0
+      ? `Le lezioni di ${track.label}: ancora nessuna pubblicata.`
+      : conDirette
+        ? `Le lezioni di ${track.label}, in diretta e registrate. Le registrazioni puoi riguardarle quante volte vuoi.`
+        : `Le lezioni registrate di ${track.label}. Puoi riguardarle quante volte vuoi.`;
+
   return (
     <div className="flex flex-col gap-6">
       <div>
         <h1 className="page-title">Lezioni</h1>
-        <p className="mt-1 text-sm text-muted">
-          {lezioni.length === 0
-            ? `Le lezioni registrate di ${track.label}: ancora nessuna pubblicata.`
-            : `Le lezioni registrate di ${track.label}. Puoi riguardarle quante volte vuoi.`}
-        </p>
+        <p className="mt-1 text-sm text-muted">{sottotitolo}</p>
       </div>
 
       {lezioni.length === 0 ? (
@@ -38,6 +45,7 @@ export default async function StudentLezioniPage() {
         <ul className="flex flex-col gap-3">
           {lezioni.map((l) => {
             const quanto = durata(l.durataMinuti);
+            const inDiretta = urlDirettaValido(l.urlDiretta) !== null;
             return (
               <li key={l.id}>
                 <Link href={`/student/lezioni/${l.id}`} className="card card-link flex items-start gap-4 p-5">
@@ -45,13 +53,16 @@ export default async function StudentLezioniPage() {
                     aria-hidden
                     className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-brand-soft text-xl"
                   >
-                    {l.subject ? iconaMateria(l.subject) : "🎥"}
+                    {inDiretta ? "🔴" : l.subject ? iconaMateria(l.subject) : "🎥"}
                   </span>
 
                   <span className="min-w-0 flex-1">
                     <span className="block font-display text-base font-bold leading-snug tracking-tight text-balance sm:text-lg">
                       {l.titolo}
                     </span>
+                    {inDiretta && (
+                      <span className="pill pill-brand mt-1.5">In diretta</span>
+                    )}
                     <span className="mt-1 block text-xs text-muted">
                       {new Date(l.data).toLocaleDateString("it-IT", {
                         day: "numeric",
