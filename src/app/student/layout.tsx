@@ -11,6 +11,7 @@ const LINKS: NavLink[] = [
   { href: "/student/dashboard", label: "Pratica", icon: "target" },
   { href: "/student/practice", label: "Esercitati", icon: "grid" },
   { href: "/student/appunti", label: "Appunti", icon: "book" },
+  { href: "/student/lezioni", label: "Lezioni", icon: "docs" },
   { href: "/student/history", label: "I miei progressi", icon: "chart", short: "Progressi" },
 ];
 

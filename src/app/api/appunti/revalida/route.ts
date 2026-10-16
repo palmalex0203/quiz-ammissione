@@ -1,19 +1,25 @@
 import { revalidateTag } from "next/cache";
 import { NOTES_TAG } from "@/lib/notes";
+import { LEZIONI_TAG } from "@/lib/lezioni";
 
 /**
- * Svuota la cache degli appunti.
+ * Svuota la cache dei contenuti didattici: appunti e lezioni.
  *
- * Gli appunti vengono letti dalla cache (vedi src/lib/notes.ts) e la cache si
- * svuota da sola solo quando l'insegnante salva o pubblica dalla sua area. Chi
- * invece carica gli appunti con `scripts/import-appunti.ts` scrive direttamente
- * nel database, e la modifica resta invisibile agli studenti fino alla scadenza
- * dell'ora. È già successo: un appunto pubblicato e non visibile sembra un
- * guasto, mentre è solo la cache che non è stata avvisata.
+ * Gli uni e le altre vengono letti dalla cache (vedi src/lib/notes.ts e
+ * src/lib/lezioni.ts), che si svuota da sola solo quando l'insegnante salva o
+ * pubblica dalla sua area. Chi invece li carica con gli script
+ * `import-appunti.ts` e `import-lezioni.ts` scrive direttamente nel database, e
+ * la modifica resta invisibile agli studenti fino alla scadenza dell'ora. È già
+ * successo: un appunto pubblicato e non visibile sembra un guasto, mentre è
+ * solo la cache che non è stata avvisata.
  *
- * Questa rotta esiste perché lo script possa avvisarla. Richiede
- * APPUNTI_REVALIDA_TOKEN, altrimenti chiunque potrebbe far ricaricare gli
- * appunti a ripetizione e tenere acceso il database per niente.
+ * Questa rotta esiste perché gli script possano avvisarla. Richiede
+ * APPUNTI_REVALIDA_TOKEN, altrimenti chiunque potrebbe far ricaricare i
+ * contenuti a ripetizione e tenere acceso il database per niente.
+ *
+ * L'indirizzo resta /api/appunti/revalida anche ora che svuota pure le lezioni:
+ * cambiarlo romperebbe gli script già in uso, e il guadagno sarebbe solo
+ * estetico.
  */
 export async function POST(request: Request) {
   const atteso = process.env.APPUNTI_REVALIDA_TOKEN;
@@ -30,5 +36,7 @@ export async function POST(request: Request) {
   // nuova viene ricostruita, invece di restare ad aspettare. La forma a un solo
   // argomento è deprecata in questa versione di Next.
   revalidateTag(NOTES_TAG, "max");
-  return Response.json({ ok: true, svuotata: NOTES_TAG });
+  revalidateTag(LEZIONI_TAG, "max");
+
+  return Response.json({ ok: true, svuotate: [NOTES_TAG, LEZIONI_TAG] });
 }

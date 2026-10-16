@@ -6,6 +6,7 @@ import { publishedNote } from "@/lib/notes";
 import { topicLabel, MIN_TOPIC_QUESTIONS } from "@/lib/topics";
 import { poolCounts } from "@/lib/question-pool";
 import { percorsoMateria } from "@/lib/appunti-materie";
+import { durata, lezioniDiArgomento } from "@/lib/lezioni";
 import { generateTopicPractice } from "@/app/student/dashboard/actions";
 
 /*
@@ -20,7 +21,11 @@ export default async function StudentNotePage({ params }: { params: Promise<{ to
   const { topic } = await params;
   const { track } = await requireStudentTrack();
 
-  const [nota, pool] = await Promise.all([publishedNote(topic), poolCounts(track.id)]);
+  const [nota, pool, lezioni] = await Promise.all([
+    publishedNote(topic),
+    poolCounts(track.id),
+    lezioniDiArgomento(track.id, topic),
+  ]);
 
   // Una bozza, o un appunto di un altro percorso, per lo studente non esiste.
   if (!nota || nota.track !== track.id) notFound();
@@ -60,6 +65,41 @@ export default async function StudentNotePage({ params }: { params: Promise<{ to
                 ))}
               </ol>
             </details>
+          )}
+
+          {/* Sopra l'appunto e non in fondo: chi ha seguito la lezione e torna
+              per ripassare la cerca subito, e chi non l'ha vista scopre che
+              c'è prima di mettersi a leggere novemila parole. */}
+          {lezioni.length > 0 && (
+            <div className="card border-brand/40 p-5">
+              <p className="section-title">
+                {lezioni.length === 1 ? "C'è la lezione su questo argomento" : "Le lezioni su questo argomento"}
+              </p>
+              <ul className="mt-3 flex flex-col gap-2">
+                {lezioni.map((l) => {
+                  const quanto = durata(l.durataMinuti);
+                  return (
+                    <li key={l.id}>
+                      <Link
+                        href={`/student/lezioni/${l.id}`}
+                        className="flex items-center justify-between gap-3 rounded-xl border border-control-line px-3 py-2.5 text-sm font-medium transition-colors hover:border-brand/40 hover:text-brand-strong"
+                      >
+                        <span className="min-w-0">
+                          {l.titolo}
+                          <span className="block text-xs font-normal text-muted">
+                            {new Date(l.data).toLocaleDateString("it-IT")}
+                            {quanto && <> · {quanto}</>}
+                          </span>
+                        </span>
+                        <span aria-hidden className="shrink-0 text-lg">
+                          🎥
+                        </span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           )}
 
           <article className="card prose p-6 sm:p-8" dangerouslySetInnerHTML={{ __html: nota.html }} />

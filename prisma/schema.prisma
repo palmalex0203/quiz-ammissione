@@ -279,3 +279,41 @@ model Lead {
   @@index([createdAt])
   @@index([percorso])
 }
+
+// Una lezione registrata. Il video **non** sta qui: un'ora di lezione sono
+// centinaia di megabyte, e servirla a cento studenti si paga a peso. Il filmato
+// resta su YouTube o Vimeo, che hanno banda e lettore; da noi sta la scheda, e
+// soprattutto il legame con l'argomento del programma — che è la cosa che una
+// playlist non sa fare: dall'appunto sulla cellula si arriva alla lezione sulla
+// cellula, e da un'esercitazione andata male alla lezione che la spiega.
+model Lezione {
+  id          String  @id @default(cuid())
+  titolo      String
+  descrizione String?
+
+  // Percorso, materia e argomento: gli stessi valori usati da domande e appunti
+  // (vedi src/lib/tracks.ts e src/lib/topics.ts). La materia e l'argomento sono
+  // facoltativi, perché una lezione introduttiva non parla di un argomento solo.
+  track   String
+  subject String?
+  topic   String?
+
+  /// Quando si è tenuta, non quando è stata caricata.
+  data         DateTime
+  durataMinuti Int?
+
+  // Dove sta il filmato. Si tiene il fornitore e l'identificativo invece
+  // dell'indirizzo intero: l'indirizzo del lettore lo costruiamo noi, così non
+  // può finire in pagina niente che non sia uno dei due fornitori previsti.
+  fornitore String
+  videoId   String
+
+  // Come per gli appunti: una lezione la vedono gli studenti solo quando
+  // l'insegnante l'ha riguardata e pubblicata.
+  isPublished Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([track, isPublished])
+  @@index([topic])
+}
