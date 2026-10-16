@@ -1,18 +1,18 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { questionCountOf, questionCountSelect } from "@/lib/test-questions";
-import { requireTeacher } from "@/lib/permissions";
+import { requireTeacherTrack } from "@/lib/track-docente";
 import { EmptyState } from "@/components/EmptyState";
-import { ALL_TRACKS, trackOf, type Track } from "@/lib/tracks";
 import { togglePublish } from "./actions";
 import { DeleteTestButton } from "./DeleteTestButton";
 
 type TestRow = Awaited<ReturnType<typeof loadTests>>[number];
 
-async function loadTests(teacherId: string, cerca?: string) {
+async function loadTests(teacherId: string, trackId: string, cerca?: string) {
   return prisma.test.findMany({
     where: {
       createdById: teacherId,
+      track: trackId,
       kind: { in: ["SIMULAZIONE", "ESERCITAZIONE"] },
       ...(cerca ? { title: { contains: cerca, mode: "insensitive" as const } } : {}),
     },
@@ -26,31 +26,24 @@ export default async function TestsPage({
 }: {
   searchParams: Promise<{ q?: string }>;
 }) {
-  const session = await requireTeacher();
+  const { session, trackId, track } = await requireTeacherTrack();
   const { q } = await searchParams;
   const cerca = q?.trim() || undefined;
-  const tests = await loadTests(session.user.id, cerca);
 
-  // I test sono divisi per percorso: sono due programmi diversi, con banche dati e
-  // punteggi diversi, e vanno letti separatamente.
-  const byTrack = ALL_TRACKS.map((track) => ({
-    track,
-    tests: tests.filter((t) => trackOf(t.track).id === track.id),
-  })).filter((group) => group.tests.length > 0);
+  // Solo i test del corso aperto: sono due programmi diversi, con banche
+  // dati e punteggi diversi, e si leggono separatamente. Il filtro è nella
+  // query e non qui, così la ricerca cerca dentro il corso giusto.
+  const tests = await loadTests(session.user.id, trackId, cerca);
 
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h1 className="page-title">Test</h1>
-          <p className="text-sm text-muted">
-            {/* Col dettaglio di un percorso solo si ripeteva due volte lo stesso
-              * numero: si mostra soltanto quando i percorsi sono davvero due. */}
+          <p className="mt-1 text-sm text-muted">
             {cerca
-              ? `${tests.length} ${tests.length === 1 ? "test trovato" : "test trovati"} per «${cerca}»`
-              : byTrack.length > 1
-                ? `${tests.length} test · ${byTrack.map((g) => `${g.tests.length} ${g.track.label}`).join(" · ")}`
-                : `${tests.length} test`}
+              ? `${tests.length} ${tests.length === 1 ? "test trovato" : "test trovati"} per «${cerca}» in ${track.label}`
+              : `${track.label} · ${tests.length} ${tests.length === 1 ? "test" : "test"}`}
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-2">
@@ -90,22 +83,12 @@ export default async function TestsPage({
         />
       )}
 
-      {byTrack.map(({ track, tests: trackTests }) => (
-        <TrackSection key={track.id} track={track} tests={trackTests} showTrackName={byTrack.length > 1} />
-      ))}
+      {tests.length > 0 && <TrackSection tests={tests} />}
     </div>
   );
 }
 
-function TrackSection({
-  track,
-  tests,
-  showTrackName,
-}: {
-  track: Track;
-  tests: TestRow[];
-  showTrackName: boolean;
-}) {
+function TrackSection({ tests }: { tests: TestRow[] }) {
   const simulazioni = tests.filter((t) => t.kind !== "ESERCITAZIONE");
   const esercitazioni = tests.filter((t) => t.kind === "ESERCITAZIONE");
 
@@ -117,12 +100,6 @@ function TrackSection({
 
   return (
     <section className="flex flex-col gap-4">
-      {showTrackName && (
-        <div className="flex items-baseline gap-2 border-b border-line pb-2">
-          <h2 className="font-display text-xl font-bold tracking-tight">{track.label}</h2>
-          <span className="text-xs text-muted">{track.tagline}</span>
-        </div>
-      )}
 
       {simulazioni.length > 0 && (
         <div className="flex flex-col gap-3">

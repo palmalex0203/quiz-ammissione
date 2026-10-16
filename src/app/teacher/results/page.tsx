@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
-import { requireTeacher } from "@/lib/permissions";
+import { requireTeacherTrack } from "@/lib/track-docente";
 import type { Prisma } from "@/generated/prisma/client";
 import { EmptyState } from "@/components/EmptyState";
 import { formatScore } from "@/lib/tracks";
@@ -11,22 +11,30 @@ export default async function ResultsPage({
 }: {
   searchParams: Promise<{ studentId?: string; testId?: string; from?: string; to?: string }>;
 }) {
-  const session = await requireTeacher();
+  const { session, trackId, track } = await requireTeacherTrack();
   const params = await searchParams;
 
+  // Tutto filtrato sul corso aperto: gli studenti da scegliere, i test da
+  // scegliere e le consegne. Le medie per materia che questa pagina calcola
+  // non reggerebbero una mescolanza — le materie dei due corsi sono diverse,
+  // e lo sono anche i punteggi con cui si misurano.
   const [students, tests] = await Promise.all([
-    prisma.user.findMany({ where: { role: "STUDENT" }, orderBy: { name: "asc" } }),
+    prisma.user.findMany({ where: { role: "STUDENT", track: trackId }, orderBy: { name: "asc" } }),
     prisma.test.findMany({
       // Anche le prove ufficiali: i tentativi comparivano già nell'elenco, ma senza
       // di loro il filtro per test non permetteva di isolarli.
-      where: { createdById: session.user.id, kind: { in: ["SIMULAZIONE", "ESERCITAZIONE", "UFFICIALE"] } },
+      where: {
+        createdById: session.user.id,
+        track: trackId,
+        kind: { in: ["SIMULAZIONE", "ESERCITAZIONE", "UFFICIALE"] },
+      },
       orderBy: { title: "asc" },
     }),
   ]);
 
   const where: Prisma.AttemptWhereInput = {
     status: "SUBMITTED",
-    test: { createdById: session.user.id },
+    test: { createdById: session.user.id, track: trackId },
   };
   if (params.studentId) where.studentId = params.studentId;
   if (params.testId) where.testId = params.testId;
@@ -119,7 +127,10 @@ export default async function ResultsPage({
 
   return (
     <div className="flex flex-col gap-6">
-      <h1 className="page-title">Risultati</h1>
+      <div>
+        <h1 className="page-title">Risultati</h1>
+        <p className="mt-1 text-sm text-muted">{track.label}</p>
+      </div>
 
       <form
         method="GET"

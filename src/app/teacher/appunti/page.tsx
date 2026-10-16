@@ -1,20 +1,21 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
-import { requireTeacher } from "@/lib/permissions";
+import { requireTeacherTrack } from "@/lib/track-docente";
 import { EmptyState } from "@/components/EmptyState";
-import { ALL_TRACKS, trackOf } from "@/lib/tracks";
+
 import { topicLabel } from "@/lib/topics";
 import { togglePublishNote } from "./actions";
 
 /*
- * Elenco degli appunti di ripasso, divisi per percorso e materia. Ogni appunto
+ * Gli appunti di ripasso del corso aperto, divisi per materia. Ogni appunto
  * nasce come bozza: gli studenti lo vedono solo quando viene pubblicato qui.
  */
 export default async function TeacherAppuntiPage() {
-  await requireTeacher();
+  const { trackId, track } = await requireTeacherTrack();
 
   const note = await prisma.topicNote.findMany({
-    orderBy: [{ track: "asc" }, { subject: "asc" }, { topic: "asc" }],
+    where: { track: trackId },
+    orderBy: [{ subject: "asc" }, { topic: "asc" }],
     select: { topic: true, track: true, subject: true, title: true, isPublished: true, updatedAt: true, body: true },
   });
 
@@ -24,35 +25,28 @@ export default async function TeacherAppuntiPage() {
     <div className="flex flex-col gap-8">
       <div>
         <h1 className="page-title">Appunti</h1>
-        <p className="text-sm text-muted">
+        <p className="mt-1 text-sm text-muted">
+          {track.label} ·{" "}
           {note.length === 0
-            ? "Nessun appunto ancora caricato."
-            : `${note.length} argomenti · ${pubblicati} pubblicati, ${note.length - pubblicati} in bozza.`}{" "}
-          Gli studenti vedono solo quelli pubblicati, dalla scheda della materia in Esercitati.
+            ? "nessun appunto ancora caricato."
+            : `${note.length} argomenti, ${pubblicati} pubblicati e ${note.length - pubblicati} in bozza.`}{" "}
+          Gli studenti vedono solo quelli pubblicati.
         </p>
       </div>
 
       {note.length === 0 ? (
         <EmptyState
           icon="📚"
-          title="Nessun appunto"
+          title={`Nessun appunto su ${track.label}`}
           description="Gli appunti si scrivono come file in content/appunti e si caricano con lo script import-appunti."
         />
       ) : (
-        ALL_TRACKS.map((track) => {
-          const delPercorso = note.filter((n) => trackOf(n.track).id === track.id);
-          if (delPercorso.length === 0) return null;
-
-          const materie = new Map<string, typeof delPercorso>();
-          for (const n of delPercorso) materie.set(n.subject, [...(materie.get(n.subject) ?? []), n]);
+        (() => {
+          const materie = new Map<string, typeof note>();
+          for (const n of note) materie.set(n.subject, [...(materie.get(n.subject) ?? []), n]);
 
           return (
-            <section key={track.id} className="flex flex-col gap-4">
-              <div className="flex items-baseline gap-2 border-b border-line pb-2">
-                <h2 className="font-display text-xl font-bold tracking-tight">{track.label}</h2>
-                <span className="text-xs text-muted">{delPercorso.length} argomenti</span>
-              </div>
-
+            <section className="flex flex-col gap-4">
               {[...materie.entries()].map(([materia, elenco]) => (
                 <div key={materia} className="flex flex-col gap-2">
                   <h3 className="section-title">{materia}</h3>
@@ -101,7 +95,7 @@ export default async function TeacherAppuntiPage() {
               ))}
             </section>
           );
-        })
+        })()
       )}
     </div>
   );

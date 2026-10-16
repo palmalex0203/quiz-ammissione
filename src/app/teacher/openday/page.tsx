@@ -1,7 +1,8 @@
 import { prisma } from "@/lib/prisma";
-import { requireTeacher } from "@/lib/permissions";
 import { EmptyState } from "@/components/EmptyState";
 import { EVENTO } from "@/lib/open-day-evento";
+import { requireTeacherTrack } from "@/lib/track-docente";
+import { TRACKS } from "@/lib/tracks";
 
 /*
  * I contatti raccolti dalla pagina pubblica dell'open day.
@@ -42,9 +43,14 @@ function statoDi(l: { postoDiretta: boolean; simulazioneIniziataIl: Date | null;
 }
 
 export default async function TeacherOpenDayPage() {
-  await requireTeacher();
+  const { trackId, track } = await requireTeacherTrack();
 
+  // I contatti portano il percorso con cui sono entrati. Oggi l'open day è
+  // un evento del semestre filtro soltanto, quindi sull'altro corso questa
+  // pagina è vuota — e lo dice, invece di far sospettare che i dati siano
+  // andati persi.
   const contatti = await prisma.lead.findMany({
+    where: { percorso: trackId },
     orderBy: { createdAt: "desc" },
     select: {
       id: true,
@@ -78,8 +84,8 @@ export default async function TeacherOpenDayPage() {
         <div>
           <h1 className="page-title">Open day</h1>
           <p className="mt-1 text-sm text-muted">
-            I contatti lasciati sulla pagina pubblica. {EVENTO.postiTotali} posti in tutto, ne restano{" "}
-            {Math.max(0, EVENTO.postiTotali - iscritti)}.
+            {track.label} — i contatti lasciati sulla pagina pubblica. {EVENTO.postiTotali} posti in
+            tutto, ne restano {Math.max(0, EVENTO.postiTotali - iscritti)}.
           </p>
         </div>
         {contatti.length > 0 && (
@@ -92,8 +98,12 @@ export default async function TeacherOpenDayPage() {
       {contatti.length === 0 ? (
         <EmptyState
           icon="📋"
-          title="Ancora nessun contatto"
-          description="Qui compaiono le persone che lasciano i dati sulla pagina dell'open day, comprese quelle che iniziano la simulazione e non la finiscono."
+          title={`Nessun contatto su ${track.label}`}
+          description={
+            trackId === "SEMESTRE_FILTRO"
+              ? "Qui compaiono le persone che lasciano i dati sulla pagina dell'open day, comprese quelle che iniziano la simulazione e non la finiscono."
+              : `L'open day è un evento di ${TRACKS.SEMESTRE_FILTRO.label}: i contatti si vedono cambiando percorso qui sopra.`
+          }
         />
       ) : (
         <>

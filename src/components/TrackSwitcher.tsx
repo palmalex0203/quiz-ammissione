@@ -2,15 +2,28 @@
 
 import { useState } from "react";
 import { ALL_TRACKS, TRACKS, type TrackId } from "@/lib/tracks";
-import { switchTrack } from "@/app/student/track-actions";
 
 /**
  * Selettore del percorso: mostra quello aperto e permette di passare all'altro.
  * Sta nella barra laterale ("dark") e, su schermo piccolo, nella barra in alto
  * ("light"). Il menu si chiude da solo quando il fuoco esce dal gruppo, così
  * funziona anche da tastiera.
+ *
+ * L'azione arriva da fuori perché lo stesso selettore serve a due aree con due
+ * permessi diversi: quella dello studente scrive la sua scelta e ricarica le
+ * sue pagine, quella dell'insegnante le sue. Importarne una qui dentro
+ * vorrebbe dire far chiamare a un insegnante un'azione che pretende di essere
+ * uno studente.
  */
-export function TrackSwitcher({ current, tone = "light" }: { current: TrackId; tone?: "light" | "dark" }) {
+export function TrackSwitcher({
+  current,
+  action,
+  tone = "light",
+}: {
+  current: TrackId;
+  action: (formData: FormData) => void | Promise<void>;
+  tone?: "light" | "dark";
+}) {
   const [open, setOpen] = useState(false);
   const track = TRACKS[current];
   const dark = tone === "dark";
@@ -73,7 +86,7 @@ export function TrackSwitcher({ current, tone = "light" }: { current: TrackId; t
         {ALL_TRACKS.map((t) => {
           const active = t.id === current;
           return (
-            <form key={t.id} action={switchTrack}>
+            <form key={t.id} action={action}>
               <input type="hidden" name="track" value={t.id} />
               <button
                 type="submit"

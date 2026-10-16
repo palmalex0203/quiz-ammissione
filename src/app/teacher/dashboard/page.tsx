@@ -1,25 +1,30 @@
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
-import { auth } from "@/lib/auth";
+import { requireTeacherTrack } from "@/lib/track-docente";
 import { EmptyState } from "@/components/EmptyState";
 import { formatScore } from "@/lib/tracks";
 import { titoloTest } from "@/lib/titoli";
 
 export default async function TeacherDashboardPage() {
-  const session = await auth();
-  const teacherId = session!.user.id;
+  const { session, trackId, track } = await requireTeacherTrack();
+  const teacherId = session.user.id;
 
+  // Tutti i numeri di questa pagina sono del corso aperto. Sommare i due
+  // darebbe un totale vero e inutile: le prove non si confrontano fra loro,
+  // e una media che le mescola non dice niente su nessuna delle due.
   const [studentCount, testCount, attemptCount, ultime] = await Promise.all([
-    prisma.user.count({ where: { role: "STUDENT" } }),
-    prisma.test.count({ where: { createdById: teacherId } }),
-    prisma.attempt.count({ where: { status: "SUBMITTED", test: { createdById: teacherId } } }),
+    prisma.user.count({ where: { role: "STUDENT", track: trackId } }),
+    prisma.test.count({ where: { createdById: teacherId, track: trackId } }),
+    prisma.attempt.count({
+      where: { status: "SUBMITTED", test: { createdById: teacherId, track: trackId } },
+    }),
     /*
      * Le ultime consegne: aprendo la dashboard la prima domanda è "chi ha fatto
      * cosa", e la pagina rispondeva con tre totali e mezzo schermo vuoto.
      * Otto righe con una sola query ordinata, non un ricalcolo.
      */
     prisma.attempt.findMany({
-      where: { status: "SUBMITTED", test: { createdById: teacherId } },
+      where: { status: "SUBMITTED", test: { createdById: teacherId, track: trackId } },
       orderBy: { submittedAt: "desc" },
       take: 8,
       select: {
@@ -37,7 +42,9 @@ export default async function TeacherDashboardPage() {
     <div className="flex flex-col gap-6">
       <div>
         <h1 className="page-title">Dashboard</h1>
-        <p className="text-sm text-muted">Panoramica della tua scuola.</p>
+        <p className="mt-1 text-sm text-muted">
+          {track.label} — {track.tagline}
+        </p>
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <StatCard label="Studenti" value={studentCount} icon="👥" />
@@ -56,7 +63,7 @@ export default async function TeacherDashboardPage() {
           <EmptyState
             icon="📊"
             title="Nessuna prova consegnata"
-            description="Qui vedrai le ultime prove che gli studenti consegnano, dalla più recente."
+            description={`Qui vedrai le ultime prove consegnate dagli studenti di ${track.label}, dalla più recente.`}
           />
         ) : (
           <div className="card divide-y divide-line">

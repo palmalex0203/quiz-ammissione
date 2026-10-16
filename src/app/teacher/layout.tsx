@@ -4,6 +4,9 @@ import { auth, signOut } from "@/lib/auth";
 import { AppHeader } from "@/components/AppHeader";
 import { AppSidebar, type NavLink } from "@/components/AppSidebar";
 import { BottomNav } from "@/components/BottomNav";
+import { TrackSwitcher } from "@/components/TrackSwitcher";
+import { trackDocenteId } from "@/lib/track-docente";
+import { cambiaPercorsoDocente } from "./track-actions";
 
 const LINKS: NavLink[] = [
   { href: "/teacher/dashboard", label: "Dashboard", icon: "home" },
@@ -22,6 +25,11 @@ export default async function TeacherLayout({ children }: { children: ReactNode 
 
   const userName = session.user.name ?? "Docente";
 
+  // Su quale dei due corsi si sta lavorando. Tutte le pagine qui sotto
+  // mostrano solo quello: i due hanno materie, prove e punteggi diversi, e
+  // mescolarli in un elenco solo è il modo più rapido per leggere male un dato.
+  const trackId = await trackDocenteId(session.user.id);
+
   async function signOutAction() {
     "use server";
     await signOut({ redirectTo: "/login" });
@@ -35,6 +43,7 @@ export default async function TeacherLayout({ children }: { children: ReactNode 
         userName={userName}
         userRole="Insegnante"
         signOutAction={signOutAction}
+        aside={<TrackSwitcher current={trackId} action={cambiaPercorsoDocente} tone="dark" />}
       />
       <div className="app-shell flex min-w-0 flex-1 flex-col">
         <AppHeader
@@ -43,6 +52,7 @@ export default async function TeacherLayout({ children }: { children: ReactNode 
           maxWidth="max-w-5xl"
           userName={userName}
           signOutAction={signOutAction}
+          aside={<TrackSwitcher current={trackId} action={cambiaPercorsoDocente} />}
         />
         {/* pb-24: spazio per la barra delle sezioni, che su telefono è fissa in basso */}
         <main className="mx-auto w-full max-w-5xl px-4 py-8 pb-32 sm:px-6 lg:py-10 lg:pb-10">{children}</main>
