@@ -77,6 +77,7 @@ export default function OpenDayPage() {
           titolare: EVENTO.privacy.titolare,
           emailPrivacy: EVENTO.privacy.email,
           urlInformativa: EVENTO.privacy.urlInformativa,
+          whatsapp: EVENTO.whatsapp,
         }}
       />
     </main>

@@ -44,8 +44,28 @@ export const EVENTO = {
   diretta: {
     modo: "collegamento" as "collegamento" | "incorporato",
     piattaforma: "Microsoft Teams",
-    /** Indirizzo della diretta. Vuoto = il bottone resta spento. */
+    /**
+     * Vuoto **per scelta**: il collegamento non va in pagina. Lo mandiamo noi
+     * a chi si è prenotato, per email e su WhatsApp. Un indirizzo di riunione
+     * scritto su una pagina pubblica se lo prende chiunque passi di lì, e chi
+     * entra senza essersi registrato occupa un posto senza lasciare un nome.
+     * Se un giorno la diretta diventa aperta a tutti, basta metterlo qui e il
+     * bottone "Entra nella diretta" si riaccende da solo.
+     */
     url: "",
+  },
+
+  /**
+   * Il recapito per chi non vuole né prenotarsi né fare la prova adesso: ha una
+   * domanda sul corso e vuole che gli risponda una persona.
+   */
+  whatsapp: {
+    /** Come si scrive per chi lo legge. */
+    numero: "+39 081 18549192",
+    /** Solo cifre col prefisso internazionale: è il formato che vuole wa.me. */
+    cifre: "3908118549192",
+    /** Il messaggio già pronto nella chat, così sappiamo da dove arriva. */
+    messaggio: "Ciao! Vorrei informazioni sul corso di preparazione al semestre filtro.",
   },
 
   /** I posti sono limitati davvero: la diretta si apre solo a chi si è registrato. */
@@ -62,7 +82,8 @@ export const EVENTO = {
  *  fingere che sia tutto pronto. */
 export function datiMancanti(): string[] {
   const mancano: string[] = [];
-  if (!EVENTO.diretta.url) mancano.push("l'indirizzo della diretta");
+  // L'indirizzo della diretta non è fra questi: non va in pagina per scelta,
+  // vedi il commento su `diretta.url`.
   if (EVENTO.privacy.titolare === DA_DEFINIRE) mancano.push("il titolare del trattamento");
   if (EVENTO.privacy.email === DA_DEFINIRE) mancano.push("l'email per i diritti privacy");
   return mancano;
