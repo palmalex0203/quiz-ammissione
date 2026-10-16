@@ -269,7 +269,7 @@ function Partecipa({ evento, aperto, apri }: { evento: Evento; aperto: boolean; 
   const [telefono, setTelefono] = useState("");
   const [inCorso, setInCorso] = useState(false);
   const [errore, setErrore] = useState<string | null>(null);
-  const [fatto, setFatto] = useState<{ postiRimasti: number } | null>(null);
+  const [fatto, setFatto] = useState(false);
 
   async function invia(e: React.FormEvent) {
     e.preventDefault();
@@ -281,7 +281,7 @@ function Partecipa({ evento, aperto, apri }: { evento: Evento; aperto: boolean; 
     );
 
     setInCorso(false);
-    if (r.ok) setFatto({ postiRimasti: r.postiRimasti });
+    if (r.ok) setFatto(true);
     else setErrore(r.errore);
   }
 
@@ -321,7 +321,6 @@ function Partecipa({ evento, aperto, apri }: { evento: Evento; aperto: boolean; 
             <BottoneWhatsApp whatsapp={evento.whatsapp} className="mt-2">
               Scrivici su WhatsApp
             </BottoneWhatsApp>
-            <p className="mt-3 text-xs text-muted">Restano {fatto.postiRimasti} posti.</p>
           </div>
         ) : (
           <>
@@ -349,8 +348,8 @@ function Partecipa({ evento, aperto, apri }: { evento: Evento; aperto: boolean; 
                 <button type="submit" className="btn btn-brand w-full py-3.5 text-base" disabled={inCorso}>
                   {inCorso ? "Un attimo…" : errore ? "Riprova" : "Prenota il posto"}
                 </button>
-                <p className="text-center text-xs text-muted">
-                  I posti sono limitati: la diretta si apre a chi si è registrato.
+                <p className="text-center text-sm font-semibold text-brand-strong">
+                  I posti sono limitati: conviene prenotare adesso.
                 </p>
                 <Privacy evento={evento} uso="per tenerti il posto e mandarti il collegamento per email e su WhatsApp" />
               </form>
@@ -957,14 +956,14 @@ function Risultato({
 function Prenotazione({ leadId, evento }: { leadId: string; evento: Evento }) {
   const [inCorso, setInCorso] = useState(false);
   const [errore, setErrore] = useState<string | null>(null);
-  const [fatto, setFatto] = useState<{ giaPrenotato: boolean; postiRimasti: number } | null>(null);
+  const [fatto, setFatto] = useState<{ giaPrenotato: boolean } | null>(null);
 
   async function prenota() {
     setErrore(null);
     setInCorso(true);
     const r = await chiama(() => prenotaDopoLaProva(leadId, evento.postiTotali));
     setInCorso(false);
-    if (r.ok) setFatto({ giaPrenotato: r.giaPrenotato, postiRimasti: r.postiRimasti });
+    if (r.ok) setFatto({ giaPrenotato: r.giaPrenotato });
     else setErrore(r.errore);
   }
 
@@ -976,7 +975,6 @@ function Prenotazione({ leadId, evento }: { leadId: string; evento: Evento }) {
           Il posto è tuo. Il collegamento ti arriva per email e su WhatsApp, e te lo ricordiamo il
           giorno prima.
         </p>
-        <p className="mt-2 text-xs text-muted">Restano {fatto.postiRimasti} posti.</p>
       </div>
     );
   }
@@ -995,7 +993,10 @@ function Prenotazione({ leadId, evento }: { leadId: string; evento: Evento }) {
       >
         {inCorso ? "Un attimo…" : errore ? "Riprova" : "Prenota il mio posto"}
       </button>
-      <p className="mt-2 text-xs text-muted">I tuoi dati li abbiamo già: non devi riscrivere niente.</p>
+      <p className="mt-2 text-sm font-semibold text-brand-strong">
+        I posti sono limitati: conviene farlo adesso.
+      </p>
+      <p className="mt-1 text-xs text-muted">I tuoi dati li abbiamo già: non devi riscrivere niente.</p>
     </div>
   );
 }
