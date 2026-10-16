@@ -146,6 +146,54 @@ export async function iniziaSimulazione(dati: Anagrafica, appello: unknown): Pro
   }
 }
 
+export type RisultatoPrenotazione =
+  | { ok: true; giaPrenotato: boolean; postiRimasti: number }
+  | { ok: false; errore: string };
+
+/**
+ * Il posto all'open day preso con un clic da chi ha appena finito la prova.
+ *
+ * I dati li ha già lasciati prima di cominciare, quindi non c'è niente da
+ * chiedere di nuovo: rimettere davanti un modulo con gli stessi tre campi, a
+ * una persona che ha appena fatto due ore di esame, è il modo migliore per
+ * perderla. Qui si aggiorna la riga che esiste già.
+ *
+ * È idempotente: chi era già iscritto non perde il posto né lo prende due
+ * volte, e la risposta dice quale dei due casi era.
+ */
+export async function prenotaDopoLaProva(
+  leadId: unknown,
+  postiTotali: unknown
+): Promise<RisultatoPrenotazione> {
+  const id = pulisci(leadId, 40);
+  if (!id) return { ok: false, errore: "Registrazione non trovata." };
+
+  // Arriva dal browser, quindi non ci si fida: serve solo a scrivere quanti
+  // posti restano, non a decidere se darne uno.
+  const totali = typeof postiTotali === "number" && Number.isFinite(postiTotali) ? postiTotali : 0;
+
+  try {
+    const prima = await prisma.lead.findUnique({ where: { id }, select: { postoDiretta: true } });
+    if (!prima) return { ok: false, errore: "Registrazione non trovata." };
+
+    if (!prima.postoDiretta) {
+      await prisma.lead.update({
+        where: { id },
+        data: { postoDiretta: true, postoDirettaIl: new Date() },
+      });
+    }
+
+    const presi = await prisma.lead.count({ where: { postoDiretta: true } });
+    return {
+      ok: true,
+      giaPrenotato: prima.postoDiretta,
+      postiRimasti: Math.max(0, totali - presi),
+    };
+  } catch (e) {
+    return { ok: false, errore: guasto("prenotazione dopo la prova", e) };
+  }
+}
+
 export type RisultatoConsegna = { ok: true; esito: Esito } | { ok: false; errore: string };
 
 export async function consegna(

@@ -20,7 +20,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { OpenDayQuestion, Esito, Prova } from "@/lib/openday";
 import { TRACKS } from "@/lib/tracks";
 import { votoProva } from "@/lib/esame";
-import { consegna, iniziaSimulazione, iscrivitiAllOpenDay } from "./azioni";
+import { consegna, iniziaSimulazione, iscrivitiAllOpenDay, prenotaDopoLaProva } from "./azioni";
 
 type Evento = {
   titolo: string;
@@ -74,13 +74,17 @@ export default function OpenDay({ prova, esame, evento }: { prova: Prova; esame:
         onFinita={(e) => {
           setEsito(e);
           setFase("risultato");
+          // La consegna si preme in fondo a una pagina lunghissima: senza
+          // questo il risultato si apre a metà, e la prima cosa che si vede
+          // non è il voto ma il bottone che si è appena premuto.
+          window.scrollTo({ top: 0 });
         }}
       />
     );
   }
 
   if (fase === "risultato" && esito) {
-    return <Risultato esito={esito} esame={esame} evento={evento} />;
+    return <Risultato esito={esito} esame={esame} evento={evento} leadId={leadId} />;
   }
 
   return (
@@ -849,7 +853,17 @@ function Domanda({
 
 /* ---------------------------------------------------------------- risultato */
 
-function Risultato({ esito, esame, evento }: { esito: Esito; esame: Esame; evento: Evento }) {
+function Risultato({
+  esito,
+  esame,
+  evento,
+  leadId,
+}: {
+  esito: Esito;
+  esame: Esame;
+  evento: Evento;
+  leadId: string | null;
+}) {
   const track = TRACKS.SEMESTRE_FILTRO;
 
   return (
@@ -910,15 +924,78 @@ function Risultato({ esito, esame, evento }: { esito: Esito; esame: Esame; event
             Entra nella diretta
           </a>
         )}
-        <p className="mt-3 text-sm">
-          Il collegamento ti arriva per email e su WhatsApp: i tuoi dati li abbiamo già. Se nel
-          frattempo vuoi maggiori informazioni sul corso, scrivici e verrai ricontattato il prima
-          possibile.
-        </p>
-        <BottoneWhatsApp whatsapp={evento.whatsapp} className="mt-3">
+        {leadId && <Prenotazione leadId={leadId} evento={evento} />}
+      </div>
+
+      <div className="card flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+        <div className="min-w-0">
+          <h2 className="section-title">Per maggiori informazioni</h2>
+          <p className="mt-1 text-sm leading-relaxed text-muted">
+            Scrivici al numero WhatsApp e verrai ricontattato il prima possibile. Oppure chiama lo
+            {" "}
+            <a className="underline" href={"tel:+" + evento.whatsapp.cifre}>
+              {evento.whatsapp.numero}
+            </a>
+            .
+          </p>
+        </div>
+        <BottoneWhatsApp whatsapp={evento.whatsapp} className="w-full py-3 text-base sm:w-auto">
           Scrivici su WhatsApp
         </BottoneWhatsApp>
       </div>
+    </div>
+  );
+}
+
+/**
+ * Il posto all'open day preso dalla schermata del risultato.
+ *
+ * Chi è arrivato fin qui ha appena svolto 93 domande e ha visto quanto gli
+ * manca: è il momento in cui l'open day serve davvero. I suoi dati ce li ha
+ * dati prima di cominciare, quindi non gli si chiede niente — un clic.
+ */
+function Prenotazione({ leadId, evento }: { leadId: string; evento: Evento }) {
+  const [inCorso, setInCorso] = useState(false);
+  const [errore, setErrore] = useState<string | null>(null);
+  const [fatto, setFatto] = useState<{ giaPrenotato: boolean; postiRimasti: number } | null>(null);
+
+  async function prenota() {
+    setErrore(null);
+    setInCorso(true);
+    const r = await chiama(() => prenotaDopoLaProva(leadId, evento.postiTotali));
+    setInCorso(false);
+    if (r.ok) setFatto({ giaPrenotato: r.giaPrenotato, postiRimasti: r.postiRimasti });
+    else setErrore(r.errore);
+  }
+
+  if (fatto) {
+    return (
+      <div className="mt-4 rounded-2xl bg-card p-4 sm:p-5">
+        <p className="section-title">{fatto.giaPrenotato ? "Eri già prenotato" : "Ci sei"}</p>
+        <p className="mt-1 text-sm leading-relaxed">
+          Il posto è tuo. Il collegamento ti arriva per email e su WhatsApp, e te lo ricordiamo il
+          giorno prima.
+        </p>
+        <p className="mt-2 text-xs text-muted">Restano {fatto.postiRimasti} posti.</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="mt-4 border-t border-brand/30 pt-4">
+      <p className="text-sm font-semibold">
+        Se non ti sei già prenotato per l&apos;open day, puoi farlo con un semplice clic.
+      </p>
+      {errore && <p className="mt-2 text-sm text-red-700 dark:text-red-400">{errore}</p>}
+      <button
+        type="button"
+        onClick={prenota}
+        disabled={inCorso}
+        className="btn btn-brand mt-3 w-full py-3.5 text-base sm:w-auto"
+      >
+        {inCorso ? "Un attimo…" : errore ? "Riprova" : "Prenota il mio posto"}
+      </button>
+      <p className="mt-2 text-xs text-muted">I tuoi dati li abbiamo già: non devi riscrivere niente.</p>
     </div>
   );
 }
