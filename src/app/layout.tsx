@@ -13,7 +13,22 @@ const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
 });
 
+/**
+ * L'indirizzo con cui il sito si presenta fuori di sé.
+ *
+ * Serve a una cosa sola ma importante: quando un link viene incollato in una
+ * chat, chi genera l'anteprima deve poter scaricare l'immagine, e per farlo
+ * gli serve un indirizzo intero — `/openday/opengraph-image` da solo non vuol
+ * dire niente per WhatsApp.
+ *
+ * È `simulatore.` e non `openday.` perché questo nome risponde da sempre e
+ * risponderà anche dopo il 27: l'immagine la si scarica da qui qualunque sia
+ * il nome con cui il link è stato condiviso, e nessuno lo vede.
+ */
+export const SITO = new URL("https://simulatore.proforcorsi.it");
+
 export const metadata: Metadata = {
+  metadataBase: SITO,
   title: "Profor - Simulatore Ufficiale",
   description:
     "Simulazioni ed esercitazioni per i test di ammissione: Professioni Sanitarie e Semestre filtro",

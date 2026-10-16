@@ -7,9 +7,29 @@ import OpenDay from "./OpenDay";
 // Pagina pubblica: non chiama auth() e non deve chiamarlo. È l'unica zona del
 // sito raggiungibile senza account, ed è il motivo per cui le sue scritture
 // finiscono su Lead e non su User.
+const DESCRIZIONE = `${EVENTO.data}, ore ${EVENTO.ora}: ${EVENTO.durata} in diretta sul semestre filtro — com'è fatto il test, come funziona il punteggio, quali materie si affrontano. E la simulazione gratuita della prova ufficiale dell'anno scorso.`;
+
+/*
+ * L'anteprima del link, quella che si vede quando l'indirizzo viene incollato
+ * in una chat. L'immagine non è elencata qui: la mette Next da sola, perché
+ * accanto a questo file c'è `opengraph-image.tsx`.
+ */
 export const metadata: Metadata = {
   title: EVENTO.titolo,
-  description: `${EVENTO.data}, ore ${EVENTO.ora}: ${EVENTO.durata} in diretta sul semestre filtro. E la simulazione gratuita di una prova ufficiale dell'anno scorso.`,
+  description: DESCRIZIONE,
+  openGraph: {
+    type: "website",
+    locale: "it_IT",
+    siteName: EVENTO.privacy.titolare,
+    title: `${EVENTO.titoloGrande.riga1} — ${EVENTO.titoloGrande.riga2}`,
+    description: DESCRIZIONE,
+    url: "/openday",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${EVENTO.titoloGrande.riga1} — ${EVENTO.titoloGrande.riga2}`,
+    description: DESCRIZIONE,
+  },
 };
 
 // L'appello si sorteggia a ogni visita, quindi niente cache statica.
