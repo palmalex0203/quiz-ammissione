@@ -9,12 +9,13 @@ import { trackDocenteId } from "@/lib/track-docente";
 import { cambiaPercorsoDocente } from "./track-actions";
 
 const LINKS: NavLink[] = [
-  { href: "/teacher/dashboard", label: "Dashboard", icon: "home" },
+  { href: "/teacher/dashboard", label: "Dashboard", icon: "home", short: "Home" },
   { href: "/teacher/students", label: "Studenti", icon: "users" },
   { href: "/teacher/tests", label: "Test", icon: "docs" },
   { href: "/teacher/appunti", label: "Appunti", icon: "book" },
-  { href: "/teacher/results", label: "Risultati", icon: "chart" },
-  { href: "/teacher/openday", label: "Open day", icon: "target", short: "Open day" },
+  { href: "/teacher/lezioni", label: "Lezioni", icon: "grid" },
+  { href: "/teacher/results", label: "Risultati", icon: "chart", short: "Esiti" },
+  { href: "/teacher/openday", label: "Open day", icon: "target", short: "Open" },
 ];
 
 export default async function TeacherLayout({ children }: { children: ReactNode }) {
