@@ -24,6 +24,7 @@ import { consegna, iniziaSimulazione, iscrivitiAllOpenDay } from "./azioni";
 
 type Evento = {
   titolo: string;
+  titoloGrande: { riga1: string; riga2: string };
   slogan: string;
   data: string;
   dataBreve: string;
@@ -95,6 +96,16 @@ export default function OpenDay({ prova, esame, evento }: { prova: Prova; esame:
 
 /* ---------------------------------------------------------------- apertura */
 
+/**
+ * Quale dei due moduli è aperto.
+ *
+ * Mai tutti e due insieme: due moduli identici — nome, telefono, email — uno
+ * sotto l'altro erano la cosa più confusa della pagina, perché chi arriva non
+ * capisce quale dei due lo riguarda. Qui si vede un modulo solo, quello della
+ * strada che si è scelta, e l'altra resta un riquadro da aprire.
+ */
+type Modulo = "partecipa" | "simula";
+
 function Apertura({
   evento,
   esame,
@@ -106,28 +117,78 @@ function Apertura({
   prova: Prova;
   onParte: (leadId: string) => void;
 }) {
-  return (
-    <div className="mx-auto flex max-w-2xl flex-col gap-10 px-4 pb-16 pt-4">
-      <div>
-        <p className="pill pill-brand mb-4">
-          {evento.dataBreve}, ore {evento.ora} · in diretta
-        </p>
-        <h1 className="page-title text-4xl sm:text-5xl">{evento.slogan}</h1>
-        <p className="mt-4 text-lg text-muted">
-          Il semestre filtro si prepara sapendo com&apos;è fatto: quante domande, con che punteggio,
-          su quale programma. Il {evento.dataBreve} te lo raccontiamo per intero.
-        </p>
-      </div>
+  // A pagina ferma è aperto l'open day: è il motivo per cui la pagina esiste.
+  const [aperto, setAperto] = useState<Modulo>("partecipa");
 
-      <Partecipa evento={evento} />
-      <Simulazione evento={evento} esame={esame} prova={prova} onParte={onParte} />
+  return (
+    <div className="mx-auto flex max-w-2xl flex-col gap-5 px-4 pb-20">
+      <Testata evento={evento} />
+      <Partecipa evento={evento} aperto={aperto === "partecipa"} apri={() => setAperto("partecipa")} />
+      <Simulazione
+        evento={evento}
+        esame={esame}
+        prova={prova}
+        onParte={onParte}
+        aperto={aperto === "simula"}
+        apri={() => setAperto("simula")}
+      />
     </div>
+  );
+}
+
+/* ----------------------------------------------------------------- testata */
+
+/**
+ * Il titolo grande e i quattro dati dell'evento.
+ *
+ * Il nome dell'evento sta in cima e grosso: chi arriva da un annuncio deve
+ * capire in un'occhiata di cosa si tratta, prima ancora di leggere la frase.
+ * Quando, quanto dura, dove e quanto costa sono le quattro cose che si cercano
+ * subito: messe in riga si leggono senza attraversare un paragrafo.
+ */
+function Testata({ evento }: { evento: Evento }) {
+  const fatti = [
+    { voce: "Quando", valore: `${evento.dataBreve}, ${evento.ora}` },
+    { voce: "Quanto dura", valore: evento.durata },
+    { voce: "Dove", valore: `In diretta su ${evento.piattaforma}` },
+    { voce: "Quanto costa", valore: "Gratuito" },
+  ];
+
+  return (
+    <header className="pb-3 pt-2">
+      <p className="pill pill-brand">In diretta {evento.dataBreve}</p>
+
+      <h1 className="mt-4 font-display font-bold leading-[0.92] tracking-tight text-balance">
+        <span className="block text-[2.6rem] text-brand-strong sm:text-6xl">{evento.titoloGrande.riga1}</span>
+        <span className="block text-[2.6rem] sm:text-6xl">{evento.titoloGrande.riga2}</span>
+      </h1>
+
+      <p className="mt-5 font-display text-xl font-bold tracking-tight text-balance sm:text-2xl">
+        {evento.slogan}
+      </p>
+      <p className="mt-2 leading-relaxed text-muted">
+        Due ore per capire com&apos;è fatto il test che decide chi resta a medicina: le prove, il
+        punteggio, il programma. E per provarlo davvero, con la prova ufficiale dell&apos;anno
+        scorso.
+      </p>
+
+      {/* gap-px su fondo colorato: i divisori sono i buchi fra le celle, così
+          restano sottili come una riga a qualunque densità di schermo. */}
+      <dl className="mt-7 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-4">
+        {fatti.map((f) => (
+          <div key={f.voce} className="bg-card px-4 py-3">
+            <dt className="text-xs font-semibold uppercase tracking-wide text-muted">{f.voce}</dt>
+            <dd className="mt-1 text-sm font-semibold leading-snug">{f.valore}</dd>
+          </div>
+        ))}
+      </dl>
+    </header>
   );
 }
 
 /* --------------------------------------------------------------- partecipa */
 
-function Partecipa({ evento }: { evento: Evento }) {
+function Partecipa({ evento, aperto, apri }: { evento: Evento; aperto: boolean; apri: () => void }) {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [telefono, setTelefono] = useState("");
@@ -149,52 +210,79 @@ function Partecipa({ evento }: { evento: Evento }) {
     else setErrore(r.errore);
   }
 
-  return (
-    <section className="card border-brand/40 p-5 sm:p-7">
-      <h2 className="font-display text-2xl font-bold tracking-tight text-balance">
-        L&apos;open day del corso di preparazione
-      </h2>
-      <p className="mt-2 text-sm leading-relaxed text-muted">
-        {evento.data}, dalle {evento.ora}: {evento.durata} in diretta su {evento.piattaforma}.
-        Parliamo del semestre filtro per quello che è — com&apos;è fatto il test, quante prove sono,
-        come funziona il punteggio, quali materie si affrontano e come ci si organizza per arrivarci.
-        Rispondiamo alle domande, e commentiamo in diretta alcune delle domande della simulazione.
-      </p>
-      <p className="mt-2 text-sm text-muted">I posti sono limitati.</p>
+  const punti = [
+    "Com'è fatto il test: tre prove, 31 domande ciascuna, 45 minuti l'una.",
+    "Come funziona il punteggio, e quanto serve davvero per passare.",
+    "Quali materie si affrontano e come organizzare lo studio da qui all'esame.",
+    "Le vostre domande, e la correzione in diretta di alcune domande della simulazione.",
+  ];
 
-      {fatto ? (
-        <div className="mt-5 rounded-2xl bg-brand-tint p-5">
-          <p className="section-title">Ci sei</p>
-          <p className="mt-1.5 text-sm">
-            Ci vediamo {evento.data} alle {evento.ora} su {evento.piattaforma}. Il collegamento ti
-            arriva per email, e te lo ricordiamo il giorno prima.
-          </p>
-          {evento.url && (
-            <a href={evento.url} target="_blank" rel="noreferrer" className="btn btn-brand mt-4">
-              Entra nella diretta
-            </a>
-          )}
-          <p className="mt-3 text-xs text-muted">Restano {fatto.postiRimasti} posti.</p>
-        </div>
-      ) : (
-        <form onSubmit={invia} className="mt-5 flex flex-col gap-3">
-          <p className="text-sm font-semibold">Se vuoi partecipare, lascia i tuoi dati</p>
-          <Campi
-            prefisso="part"
-            nome={nome}
-            setNome={setNome}
-            telefono={telefono}
-            setTelefono={setTelefono}
-            email={email}
-            setEmail={setEmail}
-          />
-          {errore && <p className="text-sm text-red-700 dark:text-red-400">{errore}</p>}
-          <button type="submit" className="btn btn-brand w-full py-3 text-base" disabled={inCorso}>
-            {inCorso ? "Un attimo…" : errore ? "Riprova" : "Prenota il posto"}
-          </button>
-          <Privacy evento={evento} uso="per tenerti il posto e mandarti il collegamento" />
-        </form>
-      )}
+  return (
+    <section className={`card overflow-hidden ${aperto ? "border-brand/50" : ""}`}>
+      <div className="border-b border-line bg-brand-tint px-5 py-5 sm:px-7">
+        <p className="text-xs font-bold uppercase tracking-widest text-brand-strong">L&apos;evento</p>
+        <h2 className="mt-1.5 font-display text-2xl font-bold tracking-tight text-balance">
+          Vieni all&apos;open day
+        </h2>
+        <p className="mt-1 text-sm text-muted">
+          {evento.data}, dalle {evento.ora}. Primo giorno del corso di preparazione.
+        </p>
+      </div>
+
+      <div className="p-5 sm:p-7">
+        {fatto ? (
+          <div className="rounded-2xl bg-brand-tint p-5">
+            <p className="section-title">Ci sei</p>
+            <p className="mt-1.5 text-sm leading-relaxed">
+              Ci vediamo {evento.data} alle {evento.ora} su {evento.piattaforma}. Il collegamento ti
+              arriva per email, e te lo ricordiamo il giorno prima.
+            </p>
+            {evento.url && (
+              <a href={evento.url} target="_blank" rel="noreferrer" className="btn btn-brand mt-4">
+                Entra nella diretta
+              </a>
+            )}
+            <p className="mt-3 text-xs text-muted">Restano {fatto.postiRimasti} posti.</p>
+          </div>
+        ) : (
+          <>
+            <ul className="flex flex-col gap-2.5">
+              {punti.map((p) => (
+                <li key={p} className="flex gap-2.5 text-sm leading-relaxed">
+                  <span aria-hidden className="mt-2 size-1.5 shrink-0 rounded-full bg-brand" />
+                  <span>{p}</span>
+                </li>
+              ))}
+            </ul>
+
+            {aperto ? (
+              <form onSubmit={invia} className="mt-6 flex flex-col gap-3 border-t border-line pt-6">
+                <Campi
+                  prefisso="part"
+                  nome={nome}
+                  setNome={setNome}
+                  telefono={telefono}
+                  setTelefono={setTelefono}
+                  email={email}
+                  setEmail={setEmail}
+                />
+                {errore && <p className="text-sm text-red-700 dark:text-red-400">{errore}</p>}
+                <button type="submit" className="btn btn-brand w-full py-3.5 text-base" disabled={inCorso}>
+                  {inCorso ? "Un attimo…" : errore ? "Riprova" : "Prenota il posto"}
+                </button>
+                <p className="text-center text-xs text-muted">
+                  I posti sono limitati: la diretta si apre a chi si è registrato.
+                </p>
+                <Privacy evento={evento} uso="per tenerti il posto e mandarti il collegamento" />
+              </form>
+            ) : (
+              <button type="button" onClick={apri} className="btn btn-brand mt-6 w-full py-3.5 text-base">
+                Prenota il posto
+              </button>
+            )}
+          </>
+        )}
+      </div>
     </section>
   );
 }
@@ -206,11 +294,15 @@ function Simulazione({
   esame,
   prova,
   onParte,
+  aperto,
+  apri,
 }: {
   evento: Evento;
   esame: Esame;
   prova: Prova;
   onParte: (leadId: string) => void;
+  aperto: boolean;
+  apri: () => void;
 }) {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -235,42 +327,85 @@ function Simulazione({
   const ore = Math.floor((esame.minutiPerProva * 3) / 60);
   const minuti = (esame.minutiPerProva * 3) % 60;
 
-  return (
-    <section className="card p-5 sm:p-7">
-      <h2 className="font-display text-2xl font-bold tracking-tight text-balance">
-        Vuoi provare il test vero dell&apos;anno scorso?
-      </h2>
-      <p className="mt-2 text-sm leading-relaxed text-muted">
-        La prova ufficiale del semestre filtro 2025/2026, intera e gratuita: {esame.totale}{" "}
-        domande, le tre materie una dopo l&apos;altra come all&apos;esame — {esame.domandePerProva} domande e{" "}
-        {esame.minutiPerProva} minuti ciascuna, {ore} ore e {minuti}{" "}
-        minuti in tutto. Quindici domande a scelta multipla e sedici a completamento per prova, con il punteggio vero: +1 se
-        azzecchi, −0,1 se sbagli, 0 se lasci in bianco.
-      </p>
-      <p className="mt-2 text-sm text-muted">
-        Alla fine vedi il punteggio e il voto di ogni prova. Alcune delle domande le correggiamo
-        insieme, in diretta, il {evento.dataBreve}.
-      </p>
+  const numeri = [
+    { n: String(esame.totale), che: "domande" },
+    { n: "3", che: `prove da ${esame.minutiPerProva} min` },
+    { n: `${ore}h ${minuti}`, che: "in tutto" },
+  ];
 
-      <form onSubmit={invia} className="mt-5 flex flex-col gap-3">
-        <Campi
-          prefisso="sim"
-          nome={nome}
-          setNome={setNome}
-          telefono={telefono}
-          setTelefono={setTelefono}
-          email={email}
-          setEmail={setEmail}
-        />
-        {errore && <p className="text-sm text-red-700 dark:text-red-400">{errore}</p>}
-        <button type="submit" className="btn btn-ink w-full py-3 text-base" disabled={inCorso}>
-          {inCorso ? "Preparo la prova…" : errore ? "Riprova" : "Inizia la simulazione"}
-        </button>
-        <p className="text-xs text-muted">
-          Una volta iniziata parte il cronometro, come all&apos;esame. Puoi fermarti quando vuoi.
+  const punteggio = [
+    { segno: "+1", quando: "giusta" },
+    { segno: "−0,1", quando: "sbagliata" },
+    { segno: "0", quando: "in bianco" },
+  ];
+
+  return (
+    <section className={`card overflow-hidden ${aperto ? "border-brand/50" : ""}`}>
+      {/* Fascia scura: è l'altra metà della pagina, e si deve vedere a colpo
+          d'occhio che è un'altra cosa dall'invito qui sopra. */}
+      <div className="bg-ink px-5 py-5 text-on-ink sm:px-7">
+        <p className="text-xs font-bold uppercase tracking-widest opacity-60">La prova</p>
+        <h2 className="mt-1.5 font-display text-2xl font-bold tracking-tight text-balance">
+          Prova il test vero, adesso
+        </h2>
+        <p className="mt-1 text-sm opacity-75">
+          La prova ufficiale del semestre filtro 2025/2026, intera e gratuita.
         </p>
-        <Privacy evento={evento} uso="per farti svolgere la simulazione e ricontattarti sui corsi" />
-      </form>
+      </div>
+
+      <div className="p-5 sm:p-7">
+        <div className="grid grid-cols-3 gap-px overflow-hidden rounded-2xl border border-line bg-line text-center">
+          {numeri.map((v) => (
+            <div key={v.che} className="bg-card px-2 py-3">
+              <p className="font-display text-2xl font-bold tabular-nums sm:text-3xl">{v.n}</p>
+              <p className="mt-0.5 text-xs leading-snug text-muted">{v.che}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-5 text-sm leading-relaxed text-muted">
+          Le tre materie una dopo l&apos;altra come all&apos;esame, con il cronometro. Quindici
+          domande a scelta multipla e sedici a completamento per prova, e il punteggio vero:
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {punteggio.map((p) => (
+            <span key={p.quando} className="pill bg-brand-soft text-brand-strong">
+              <span className="tabular-nums">{p.segno}</span> {p.quando}
+            </span>
+          ))}
+        </div>
+
+        <p className="mt-4 text-sm leading-relaxed text-muted">
+          Alla fine vedi il punteggio e il voto di ogni prova. Alcune delle domande le correggiamo
+          insieme, in diretta, il {evento.dataBreve}.
+        </p>
+
+        {aperto ? (
+          <form onSubmit={invia} className="mt-6 flex flex-col gap-3 border-t border-line pt-6">
+            <Campi
+              prefisso="sim"
+              nome={nome}
+              setNome={setNome}
+              telefono={telefono}
+              setTelefono={setTelefono}
+              email={email}
+              setEmail={setEmail}
+            />
+            {errore && <p className="text-sm text-red-700 dark:text-red-400">{errore}</p>}
+            <button type="submit" className="btn btn-ink w-full py-3.5 text-base" disabled={inCorso}>
+              {inCorso ? "Preparo la prova…" : errore ? "Riprova" : "Inizia la simulazione"}
+            </button>
+            <p className="text-center text-xs text-muted">
+              Parte il cronometro, come all&apos;esame. Puoi fermarti quando vuoi.
+            </p>
+            <Privacy evento={evento} uso="per farti svolgere la simulazione e ricontattarti sui corsi" />
+          </form>
+        ) : (
+          <button type="button" onClick={apri} className="btn btn-ink mt-6 w-full py-3.5 text-base">
+            Inizia la simulazione
+          </button>
+        )}
+      </div>
     </section>
   );
 }

@@ -65,6 +65,7 @@ export default function OpenDayPage() {
         }}
         evento={{
           titolo: EVENTO.titolo,
+          titoloGrande: EVENTO.titoloGrande,
           slogan: EVENTO.slogan,
           data: EVENTO.data,
           dataBreve: EVENTO.dataBreve,

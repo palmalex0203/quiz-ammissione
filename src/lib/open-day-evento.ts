@@ -21,6 +21,11 @@ const PRIVACY: Privacy = {
 
 export const EVENTO = {
   titolo: "Open day — Preparazione al semestre filtro",
+  /**
+   * Il titolo grande della pagina, spezzato in due righe perché è così che va
+   * composto: il tipo di evento sopra, di cosa parla sotto, tutti e due grossi.
+   */
+  titoloGrande: { riga1: "Open day", riga2: "Semestre filtro" },
   /** La frase che apre la pagina. Deve dire una cosa vera, non incoraggiare. */
   slogan: "Nessuno lo supera per caso.",
   data: "martedì 27 ottobre 2026",
