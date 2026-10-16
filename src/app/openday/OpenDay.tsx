@@ -910,9 +910,14 @@ function Risultato({ esito, esame, evento }: { esito: Esito; esame: Esame; event
             Entra nella diretta
           </a>
         )}
-        <p className="mt-3 text-xs text-muted">
-          Il collegamento ti arriva per email: i tuoi dati li abbiamo già.
+        <p className="mt-3 text-sm">
+          Il collegamento ti arriva per email e su WhatsApp: i tuoi dati li abbiamo già. Se nel
+          frattempo vuoi maggiori informazioni sul corso, scrivici e verrai ricontattato il prima
+          possibile.
         </p>
+        <BottoneWhatsApp whatsapp={evento.whatsapp} className="mt-3">
+          Scrivici su WhatsApp
+        </BottoneWhatsApp>
       </div>
     </div>
   );
