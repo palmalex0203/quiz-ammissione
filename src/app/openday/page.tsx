@@ -75,6 +75,7 @@ export default function OpenDayPage() {
           url: EVENTO.diretta.url,
           postiTotali: EVENTO.postiTotali,
           titolare: EVENTO.privacy.titolare,
+          emailPrivacy: EVENTO.privacy.email,
           urlInformativa: EVENTO.privacy.urlInformativa,
         }}
       />

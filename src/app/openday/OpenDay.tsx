@@ -34,6 +34,7 @@ type Evento = {
   url: string;
   postiTotali: number;
   titolare: string;
+  emailPrivacy: string;
   urlInformativa: string;
 };
 
@@ -235,7 +236,7 @@ function Partecipa({ evento, aperto, apri }: { evento: Evento; aperto: boolean; 
             <p className="section-title">Ci sei</p>
             <p className="mt-1.5 text-sm leading-relaxed">
               Ci vediamo {evento.data} alle {evento.ora} su {evento.piattaforma}. Il collegamento ti
-              arriva per email, e te lo ricordiamo il giorno prima.
+              arriva per email e su WhatsApp, e te lo ricordiamo il giorno prima.
             </p>
             {evento.url && (
               <a href={evento.url} target="_blank" rel="noreferrer" className="btn btn-brand mt-4">
@@ -273,7 +274,7 @@ function Partecipa({ evento, aperto, apri }: { evento: Evento; aperto: boolean; 
                 <p className="text-center text-xs text-muted">
                   I posti sono limitati: la diretta si apre a chi si è registrato.
                 </p>
-                <Privacy evento={evento} uso="per tenerti il posto e mandarti il collegamento" />
+                <Privacy evento={evento} uso="per tenerti il posto e mandarti il collegamento per email e su WhatsApp" />
               </form>
             ) : (
               <button type="button" onClick={apri} className="btn btn-brand mt-6 w-full py-3.5 text-base">
@@ -482,10 +483,22 @@ function Campi({
   );
 }
 
+/**
+ * La riga sotto ogni modulo.
+ *
+ * L'indirizzo a cui si esercitano i diritti sui dati sta scritto qui, in chiaro
+ * e cliccabile: un titolare senza un recapito a cui chiedere la cancellazione è
+ * un'informativa a metà, e qui si raccolgono dati di minorenni.
+ */
 function Privacy({ evento, uso }: { evento: Evento; uso: string }) {
   return (
     <p className="text-xs leading-relaxed text-muted">
-      Usiamo questi dati {uso}. Titolare del trattamento: {evento.titolare}.{" "}
+      Usiamo questi dati {uso}. Titolare del trattamento: {evento.titolare}. Per vedere o far
+      cancellare i tuoi dati scrivi a{" "}
+      <a className="underline" href={"mailto:" + evento.emailPrivacy}>
+        {evento.emailPrivacy}
+      </a>
+      .{" "}
       {evento.urlInformativa && (
         <a className="underline" href={evento.urlInformativa} target="_blank" rel="noreferrer">
           Informativa privacy

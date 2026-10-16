@@ -15,7 +15,7 @@ const PRIVACY: Privacy = {
    */
   titolare: "Profor — ente di formazione",
   /** Indirizzo a cui si esercitano i diritti sui dati (accesso, cancellazione). */
-  email: DA_DEFINIRE,
+  email: "proforentediformazione@gmail.com",
   urlInformativa: "",
 };
 
