@@ -6,8 +6,7 @@ import { formatScore } from "@/lib/tracks";
 import { titoloTest } from "@/lib/titoli";
 
 export default async function TeacherDashboardPage() {
-  const { session, trackId, track } = await requireTeacherTrack();
-  const teacherId = session.user.id;
+  const { trackId, track } = await requireTeacherTrack();
 
   // Tutti i numeri di questa pagina sono del corso aperto. Sommare i due
   // darebbe un totale vero e inutile: le prove non si confrontano fra loro,

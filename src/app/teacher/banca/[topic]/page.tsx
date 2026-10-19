@@ -5,6 +5,7 @@ import { EmptyState } from "@/components/EmptyState";
 import { requireTeacherTrack } from "@/lib/track-docente";
 import { etichettaTipo } from "@/lib/completion";
 import { isKnownTopic, topicLabel, topicSubject, topicTrack } from "@/lib/topics";
+import { NuovaDomanda } from "./NuovaDomanda";
 
 /*
  * Le domande di un argomento, così come sono scritte nella banca.
@@ -93,6 +94,8 @@ export default async function BancaArgomentoPage({
           </Link>
         )}
       </form>
+
+      <NuovaDomanda topic={topic} argomento={topicLabel(topic) ?? topic} />
 
       {domande.length === 0 ? (
         <EmptyState

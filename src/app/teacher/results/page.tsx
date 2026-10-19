@@ -11,7 +11,7 @@ export default async function ResultsPage({
 }: {
   searchParams: Promise<{ studentId?: string; testId?: string; from?: string; to?: string }>;
 }) {
-  const { session, trackId, track } = await requireTeacherTrack();
+  const { trackId, track } = await requireTeacherTrack();
   const params = await searchParams;
 
   // Tutto filtrato sul corso aperto: gli studenti da scegliere, i test da

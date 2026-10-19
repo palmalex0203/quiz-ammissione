@@ -2,14 +2,12 @@
 
 import { revalidatePath } from "next/cache";
 import { prisma } from "@/lib/prisma";
-import type { QuestionType } from "@/generated/prisma/client";
 import { requireTeacher } from "@/lib/permissions";
-import { COMPLETION_MAX_LENGTH } from "@/lib/completion";
 import { isTrackId } from "@/lib/tracks";
+import { leggiRisposte, validaRisposte } from "@/lib/domande";
 
 export type ActionState = { error?: string };
 
-type OptionInput = { text: string; isCorrect: boolean };
 
 async function assertOwnsTest(testId: string, teacherId: string) {
   const test = await prisma.test.findUnique({ where: { id: testId } });
@@ -19,18 +17,6 @@ async function assertOwnsTest(testId: string, teacherId: string) {
   return test;
 }
 
-function parseOptions(raw: string): OptionInput[] | null {
-  try {
-    const parsed = JSON.parse(raw);
-    if (!Array.isArray(parsed)) return null;
-    const options = parsed
-      .map((o) => ({ text: String(o.text ?? "").trim(), isCorrect: Boolean(o.isCorrect) }))
-      .filter((o) => o.text.length > 0);
-    return options;
-  } catch {
-    return null;
-  }
-}
 
 export async function updateTestSettings(_prevState: ActionState, formData: FormData): Promise<ActionState> {
   const session = await requireTeacher();
@@ -72,7 +58,7 @@ export async function addQuestion(_prevState: ActionState, formData: FormData): 
   const subject = String(formData.get("subject") ?? "").trim();
   const type = String(formData.get("type") ?? "");
   const text = String(formData.get("text") ?? "").trim();
-  const options = parseOptions(String(formData.get("optionsJson") ?? "[]"));
+  const options = leggiRisposte(String(formData.get("optionsJson") ?? "[]"));
 
   if (!subject || !text) {
     return { error: "Materia e testo della domanda sono obbligatori." };
@@ -113,7 +99,7 @@ export async function updateQuestion(_prevState: ActionState, formData: FormData
   const subject = String(formData.get("subject") ?? "").trim();
   const type = String(formData.get("type") ?? "");
   const text = String(formData.get("text") ?? "").trim();
-  const options = parseOptions(String(formData.get("optionsJson") ?? "[]"));
+  const options = leggiRisposte(String(formData.get("optionsJson") ?? "[]"));
 
   if (!subject || !text) {
     return { error: "Materia e testo della domanda sono obbligatori." };
@@ -174,42 +160,4 @@ export async function moveQuestion(formData: FormData): Promise<void> {
   ]);
 
   revalidatePath(`/teacher/tests/${testId}/edit`);
-}
-
-/*
- * Le regole cambiano col tipo di domanda. A scelta multipla (e vero/falso) le
- * opzioni sono alternative e una sola è giusta. A completamento non ci sono
- * alternative: ogni riga è una risposta che si accetta, e valgono tutte.
- *
- * Torna o l'errore da mostrare, o i valori già controllati e col tipo giusto.
- */
-type Risposta = { text: string; isCorrect: boolean };
-type Validazione =
-  | { ok: false; errore: string }
-  | { ok: true; tipo: QuestionType; risposte: Risposta[] };
-
-function validaRisposte(type: string, options: Risposta[] | null): Validazione {
-  if (type !== "MULTIPLE_CHOICE" && type !== "TRUE_FALSE" && type !== "COMPLETAMENTO") {
-    return { ok: false, errore: "Tipo di domanda non valido." };
-  }
-
-  if (type === "COMPLETAMENTO") {
-    const ammesse = (options ?? [])
-      .filter((o) => o.text.trim() !== "")
-      .map((o) => ({ text: o.text.trim(), isCorrect: true }));
-    if (ammesse.length === 0) return { ok: false, errore: "Serve almeno una risposta accettata." };
-    if (ammesse.some((o) => o.text.length > COMPLETION_MAX_LENGTH)) {
-      return {
-        ok: false,
-        errore: `All'esame si scrive in ${COMPLETION_MAX_LENGTH} caselle: nessuna risposta accettata può essere più lunga.`,
-      };
-    }
-    return { ok: true, tipo: type, risposte: ammesse };
-  }
-
-  if (!options || options.length < 2) return { ok: false, errore: "Servono almeno due opzioni di risposta." };
-  if (options.filter((o) => o.isCorrect).length !== 1) {
-    return { ok: false, errore: "Seleziona esattamente una risposta corretta." };
-  }
-  return { ok: true, tipo: type, risposte: options };
 }
