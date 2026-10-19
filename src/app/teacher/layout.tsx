@@ -12,8 +12,9 @@ const LINKS: NavLink[] = [
   { href: "/teacher/dashboard", label: "Dashboard", icon: "home", short: "Home" },
   { href: "/teacher/students", label: "Studenti", icon: "users" },
   { href: "/teacher/tests", label: "Test", icon: "docs" },
+  { href: "/teacher/banca", label: "Banca domande", icon: "grid", short: "Banca" },
   { href: "/teacher/appunti", label: "Appunti", icon: "book" },
-  { href: "/teacher/lezioni", label: "Lezioni", icon: "grid" },
+  { href: "/teacher/lezioni", label: "Lezioni", icon: "video" },
   { href: "/teacher/results", label: "Risultati", icon: "chart", short: "Esiti" },
   { href: "/teacher/openday", label: "Open day", icon: "target", short: "Open" },
 ];

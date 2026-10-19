@@ -8,16 +8,34 @@ import { DeleteTestButton } from "./DeleteTestButton";
 
 type TestRow = Awaited<ReturnType<typeof loadTests>>[number];
 
-async function loadTests(teacherId: string, trackId: string, cerca?: string) {
+/*
+ * I test del percorso, di chiunque li abbia fatti.
+ *
+ * Prima si vedevano solo i propri. Con un insegnante solo la differenza non
+ * si notava; con tre, ognuno apriva la pagina e la trovava vuota — mentre gli
+ * studenti svolgevano test che esistevano da mesi. Questi test sono della
+ * scuola, non di chi ha premuto «nuovo»: l'autore si scrive accanto, e basta.
+ *
+ * Le prove ufficiali ci sono: gli studenti le hanno sempre viste, da qui
+ * erano invisibili. Restano fuori invece POOL — che non è un test ma il
+ * contenitore della banca domande — e GENERATA, le esercitazioni che il
+ * sistema crea su richiesta di un singolo studente: sono migliaia in
+ * potenza, durano una sessione e si leggono dai Risultati.
+ */
+const TIPI_IN_ELENCO = ["UFFICIALE", "SIMULAZIONE", "ESERCITAZIONE"];
+
+async function loadTests(trackId: string, cerca?: string) {
   return prisma.test.findMany({
     where: {
-      createdById: teacherId,
       track: trackId,
-      kind: { in: ["SIMULAZIONE", "ESERCITAZIONE"] },
+      kind: { in: TIPI_IN_ELENCO },
       ...(cerca ? { title: { contains: cerca, mode: "insensitive" as const } } : {}),
     },
     orderBy: { createdAt: "desc" },
-    include: { _count: { select: { ...questionCountSelect, attempts: true } } },
+    include: {
+      createdBy: { select: { id: true, name: true } },
+      _count: { select: { ...questionCountSelect, attempts: true } },
+    },
   });
 }
 
@@ -33,7 +51,7 @@ export default async function TestsPage({
   // Solo i test del corso aperto: sono due programmi diversi, con banche
   // dati e punteggi diversi, e si leggono separatamente. Il filtro è nella
   // query e non qui, così la ricerca cerca dentro il corso giusto.
-  const tests = await loadTests(session.user.id, trackId, cerca);
+  const tests = await loadTests(trackId, cerca);
 
   return (
     <div className="flex flex-col gap-8">
@@ -83,14 +101,15 @@ export default async function TestsPage({
         />
       )}
 
-      {tests.length > 0 && <TrackSection tests={tests} />}
+      {tests.length > 0 && <TrackSection tests={tests} ioSono={session.user.id} />}
     </div>
   );
 }
 
-function TrackSection({ tests }: { tests: TestRow[] }) {
-  const simulazioni = tests.filter((t) => t.kind !== "ESERCITAZIONE");
+function TrackSection({ tests, ioSono }: { tests: TestRow[]; ioSono: string }) {
+  const ufficiali = tests.filter((t) => t.kind === "UFFICIALE");
   const esercitazioni = tests.filter((t) => t.kind === "ESERCITAZIONE");
+  const simulazioni = tests.filter((t) => t.kind !== "ESERCITAZIONE" && t.kind !== "UFFICIALE");
 
   const folders = new Map<string, TestRow[]>();
   for (const t of esercitazioni) {
@@ -99,14 +118,28 @@ function TrackSection({ tests }: { tests: TestRow[] }) {
   }
 
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col gap-6">
+      {ufficiali.length > 0 && (
+        <div className="flex flex-col gap-3">
+          <h3 className="section-title">Prove ufficiali</h3>
+          <p className="-mt-2 text-sm text-muted">
+            Gli appelli veri degli anni scorsi. Gli studenti li hanno sempre visti; da qui erano
+            invisibili.
+          </p>
+          <div className="flex flex-col gap-3">
+            {ufficiali.map((test) => (
+              <TestCard key={test.id} test={test} ioSono={ioSono} />
+            ))}
+          </div>
+        </div>
+      )}
 
       {simulazioni.length > 0 && (
         <div className="flex flex-col gap-3">
           <h3 className="section-title">Simulazioni</h3>
           <div className="flex flex-col gap-3">
             {simulazioni.map((test) => (
-              <TestCard key={test.id} test={test} />
+              <TestCard key={test.id} test={test} ioSono={ioSono} />
             ))}
           </div>
         </div>
@@ -137,7 +170,7 @@ function TrackSection({ tests }: { tests: TestRow[] }) {
                 </summary>
                 <div className="flex flex-col gap-2 px-3 pb-1">
                   {folderTests.map((test) => (
-                    <TestCard key={test.id} test={test} compact />
+                    <TestCard key={test.id} test={test} ioSono={ioSono} compact />
                   ))}
                 </div>
               </details>
@@ -149,7 +182,19 @@ function TrackSection({ tests }: { tests: TestRow[] }) {
   );
 }
 
-function TestCard({ test, compact }: { test: TestRow; compact?: boolean }) {
+function TestCard({
+  test,
+  ioSono,
+  compact,
+}: {
+  test: TestRow;
+  ioSono: string;
+  compact?: boolean;
+}) {
+  // L'autore si scrive solo quando non sei tu: su una pagina dove quasi tutto
+  // è tuo, «creato da me» ripetuto trenta volte è rumore.
+  const altrui = test.createdBy.id !== ioSono ? test.createdBy.name : null;
+
   return (
     <div
       className={`flex flex-wrap items-center justify-between gap-3 card card-link p-5 ${
@@ -176,6 +221,7 @@ function TestCard({ test, compact }: { test: TestRow; compact?: boolean }) {
         </div>
         <p className="mt-1 text-xs text-muted">
           {questionCountOf(test._count)} domande &middot; {test._count.attempts} tentativi
+          {altrui && <> &middot; di {altrui}</>}
         </p>
       </div>
       {/* px/py anche sui comandi di solo testo: senza, sul telefono restavano
@@ -196,7 +242,12 @@ function TestCard({ test, compact }: { test: TestRow; compact?: boolean }) {
         >
           Modifica
         </Link>
-        <DeleteTestButton testId={test.id} title={test.title} attempts={test._count.attempts} />
+        <DeleteTestButton
+          testId={test.id}
+          title={test.title}
+          attempts={test._count.attempts}
+          autore={altrui}
+        />
       </div>
     </div>
   );

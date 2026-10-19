@@ -1,4 +1,4 @@
-export type IconName = "target" | "grid" | "chart" | "home" | "users" | "docs" | "book";
+export type IconName = "target" | "grid" | "chart" | "home" | "users" | "docs" | "book" | "video";
 
 /**
  * Icone della navigazione: tratto semplice, stessa griglia da 24, così le voci
@@ -55,6 +55,15 @@ export function NavIcon({ name, className = "h-[1.15rem] w-[1.15rem]" }: { name:
         <>
           <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H10a2.5 2.5 0 0 1 2 1 2.5 2.5 0 0 1 2-1h4.5A1.5 1.5 0 0 1 20 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2.5 2.5 0 0 0-2 1 2.5 2.5 0 0 0-2-1H5.5A1.5 1.5 0 0 1 4 17.5z" />
           <path d="M12 5v14" />
+        </>
+      )}
+      {/* Lezioni: uno schermo con il triangolo del riproduttore. Serve perche
+          con otto voci nel menu i simboli finivano doppi, e due voci diverse
+          con la stessa icona si confondono proprio quando si va di fretta. */}
+      {name === "video" && (
+        <>
+          <rect x="3" y="5" width="18" height="14" rx="2.5" />
+          <path d="M10.5 9.5 14.5 12l-4 2.5z" />
         </>
       )}
       {name === "docs" && (

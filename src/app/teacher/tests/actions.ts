@@ -33,25 +33,36 @@ export async function createTest(_prevState: ActionState, formData: FormData): P
   redirect(`/teacher/tests/${test.id}/edit`);
 }
 
+/*
+ * Eliminare e pubblicare non chiedono più di essere l'autore.
+ *
+ * I test sono della scuola: se chi li ha creati è in ferie, o ha smesso di
+ * insegnare, un test sbagliato deve poterlo togliere chi c'è. Il controllo
+ * che resta è quello che conta davvero — bisogna essere insegnanti — e la
+ * conferma prima di eliminare è in pagina.
+ */
 export async function deleteTest(formData: FormData): Promise<void> {
-  const session = await requireTeacher();
+  await requireTeacher();
   const testId = String(formData.get("testId") ?? "");
   if (!testId) return;
 
-  const test = await prisma.test.findUnique({ where: { id: testId } });
-  if (!test || test.createdById !== session.user.id) return;
+  const test = await prisma.test.findUnique({ where: { id: testId }, select: { id: true } });
+  if (!test) return;
 
   await prisma.test.delete({ where: { id: testId } });
   revalidatePath("/teacher/tests");
 }
 
 export async function togglePublish(formData: FormData): Promise<void> {
-  const session = await requireTeacher();
+  await requireTeacher();
   const testId = String(formData.get("testId") ?? "");
   if (!testId) return;
 
-  const test = await prisma.test.findUnique({ where: { id: testId } });
-  if (!test || test.createdById !== session.user.id) return;
+  const test = await prisma.test.findUnique({
+    where: { id: testId },
+    select: { id: true, isPublished: true },
+  });
+  if (!test) return;
 
   await prisma.test.update({ where: { id: testId }, data: { isPublished: !test.isPublished } });
   revalidatePath("/teacher/tests");

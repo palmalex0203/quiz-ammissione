@@ -10,7 +10,18 @@ import { deleteTest } from "./actions";
  * "Modifica": si chiede conferma, con lo stesso andamento della consegna a
  * sezioni (annulla a sinistra, conferma a destra).
  */
-export function DeleteTestButton({ testId, title, attempts }: { testId: string; title: string; attempts: number }) {
+export function DeleteTestButton({
+  testId,
+  title,
+  attempts,
+  autore,
+}: {
+  testId: string;
+  title: string;
+  attempts: number;
+  /** Chi l'ha creato, se non sei tu. */
+  autore?: string | null;
+}) {
   const [chiedoConferma, setChiedoConferma] = useState(false);
 
   if (!chiedoConferma) {
@@ -29,6 +40,7 @@ export function DeleteTestButton({ testId, title, attempts }: { testId: string; 
     <div className="flex flex-wrap items-center justify-end gap-2">
       <p className="text-xs font-semibold">
         Elimino «{title}»
+        {autore && ` di ${autore}`}
         {attempts > 0
           ? ` e i ${attempts} tentativi già svolti? Non si torna indietro.`
           : "? Non si torna indietro."}

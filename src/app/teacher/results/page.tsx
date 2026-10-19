@@ -23,8 +23,9 @@ export default async function ResultsPage({
     prisma.test.findMany({
       // Anche le prove ufficiali: i tentativi comparivano già nell'elenco, ma senza
       // di loro il filtro per test non permetteva di isolarli.
+      // Di chiunque li abbia creati: un risultato è dello studente, non
+      // dell'insegnante che ha preparato la prova.
       where: {
-        createdById: session.user.id,
         track: trackId,
         kind: { in: ["SIMULAZIONE", "ESERCITAZIONE", "UFFICIALE"] },
       },
@@ -34,7 +35,7 @@ export default async function ResultsPage({
 
   const where: Prisma.AttemptWhereInput = {
     status: "SUBMITTED",
-    test: { createdById: session.user.id, track: trackId },
+    test: { track: trackId },
   };
   if (params.studentId) where.studentId = params.studentId;
   if (params.testId) where.testId = params.testId;

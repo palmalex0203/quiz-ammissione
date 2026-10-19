@@ -14,9 +14,11 @@ export default async function TeacherDashboardPage() {
   // e una media che le mescola non dice niente su nessuna delle due.
   const [studentCount, testCount, attemptCount, ultime] = await Promise.all([
     prisma.user.count({ where: { role: "STUDENT", track: trackId } }),
-    prisma.test.count({ where: { createdById: teacherId, track: trackId } }),
+    // Di chiunque li abbia creati: la scuola è una, e un insegnante che apre
+    // il cruscotto vuole sapere com'è messo il corso, non quanto ha prodotto lui.
+    prisma.test.count({ where: { track: trackId, kind: { in: ["SIMULAZIONE", "ESERCITAZIONE", "UFFICIALE"] } } }),
     prisma.attempt.count({
-      where: { status: "SUBMITTED", test: { createdById: teacherId, track: trackId } },
+      where: { status: "SUBMITTED", test: { track: trackId } },
     }),
     /*
      * Le ultime consegne: aprendo la dashboard la prima domanda è "chi ha fatto
@@ -24,7 +26,7 @@ export default async function TeacherDashboardPage() {
      * Otto righe con una sola query ordinata, non un ricalcolo.
      */
     prisma.attempt.findMany({
-      where: { status: "SUBMITTED", test: { createdById: teacherId, track: trackId } },
+      where: { status: "SUBMITTED", test: { track: trackId } },
       orderBy: { submittedAt: "desc" },
       take: 8,
       select: {
