@@ -148,43 +148,46 @@ function Argomenti({
           const esercitabile = domande >= MIN_TOPIC_QUESTIONS;
 
           return (
-            <li
-              key={a.code}
-              className={`card flex flex-wrap items-center justify-between gap-3 p-4 ${
-                esercitabile ? "" : "border-amber-300 dark:border-amber-700/60"
-              }`}
-            >
-              <div className="min-w-0">
-                <p className="text-sm font-semibold">{a.label}</p>
-                <p className="mt-0.5 text-xs text-muted">{a.code}</p>
-              </div>
+            <li key={a.code}>
+              <Link
+                href={`/teacher/banca/${a.code}`}
+                className={`card card-link flex flex-wrap items-center justify-between gap-3 p-4 ${
+                  esercitabile ? "" : "border-amber-300 dark:border-amber-700/60"
+                }`}
+              >
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold">{a.label}</p>
+                  <p className="mt-0.5 text-xs text-muted">{a.code} · leggi le domande</p>
+                </div>
 
-              <div className="flex shrink-0 flex-wrap items-center gap-1.5">
-                <span
-                  className={`pill ${
-                    esercitabile
-                      ? "bg-brand-soft text-brand-strong"
-                      : "bg-amber-100 text-amber-900 dark:bg-amber-900/40 dark:text-amber-200"
-                  }`}
-                >
-                  <span className="tabular-nums">{domande}</span>{" "}
-                  {domande === 1 ? "domanda" : "domande"}
-                </span>
-
-                {appunti.has(a.code) ? (
-                  <Link href={`/teacher/appunti/${a.code}`} className="pill bg-line hover:text-brand-strong">
-                    📖 appunto
-                  </Link>
-                ) : (
-                  <span className="pill text-muted">senza appunto</span>
-                )}
-
-                {quanteLezioni > 0 && (
-                  <span className="pill bg-line">
-                    🎥 {quanteLezioni} {quanteLezioni === 1 ? "lezione" : "lezioni"}
+                {/* Niente collegamenti annidati: dentro una riga che è già un
+                    collegamento, l appunto è una targhetta e basta. Si apre
+                    dalla sezione Appunti. */}
+                <div className="flex shrink-0 flex-wrap items-center gap-1.5">
+                  <span
+                    className={`pill ${
+                      esercitabile
+                        ? "bg-brand-soft text-brand-strong"
+                        : "bg-amber-100 text-amber-900 dark:bg-amber-900/40 dark:text-amber-200"
+                    }`}
+                  >
+                    <span className="tabular-nums">{domande}</span>{" "}
+                    {domande === 1 ? "domanda" : "domande"}
                   </span>
-                )}
-              </div>
+
+                  {appunti.has(a.code) ? (
+                    <span className="pill bg-line">📖 appunto</span>
+                  ) : (
+                    <span className="pill text-muted">senza appunto</span>
+                  )}
+
+                  {quanteLezioni > 0 && (
+                    <span className="pill bg-line">
+                      🎥 {quanteLezioni} {quanteLezioni === 1 ? "lezione" : "lezioni"}
+                    </span>
+                  )}
+                </div>
+              </Link>
             </li>
           );
         })}
