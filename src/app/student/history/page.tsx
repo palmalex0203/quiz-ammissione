@@ -166,11 +166,15 @@ export default async function StudentHistoryPage() {
             <div className="flex flex-col gap-3">
               {attempts.map((attempt) => {
                 const voti = votiDi.get(attempt.id) ?? [];
+                // Su telefono il voto va sotto il titolo, non accanto: una prova del
+                // semestre filtro porta tre voti — uno per materia — e messi di fianco
+                // non ci stavano. Uscivano dalla scheda e schiacciavano il nome del
+                // test fino a farlo sparire.
                 return (
                   <Link
                     key={attempt.id}
                     href={`/student/tests/${attempt.testId}/result/${attempt.id}`}
-                    className="flex items-center justify-between gap-3 card card-link p-5"
+                    className="card card-link flex flex-col gap-2 p-5 sm:flex-row sm:items-center sm:justify-between sm:gap-3"
                   >
                     <div className="min-w-0">
                       <p className="truncate text-sm font-semibold">
@@ -181,7 +185,7 @@ export default async function StudentHistoryPage() {
                       </p>
                     </div>
                     {voti.length > 0 ? (
-                      <div className="flex shrink-0 flex-wrap justify-end gap-1.5">
+                      <div className="flex flex-wrap gap-1.5 sm:shrink-0 sm:justify-end">
                         {voti.map((v) => (
                           <span
                             key={v.subject}
@@ -197,7 +201,7 @@ export default async function StudentHistoryPage() {
                         ))}
                       </div>
                     ) : (
-                      <p className="shrink-0 text-sm font-medium text-foreground">
+                      <p className="text-sm font-medium text-foreground sm:shrink-0">
                         {formatScore(attempt.score)} / {formatScore(attempt.maxScore)} &middot; {Math.round(percentageOf(attempt))}%
                       </p>
                     )}

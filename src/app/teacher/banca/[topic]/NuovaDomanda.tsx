@@ -170,8 +170,8 @@ export function NuovaDomanda({ topic, argomento }: { topic: string; argomento: s
             <p className="text-xs leading-relaxed text-muted">
               Lo studente la scrive. Vale giusta se corrisponde a una di queste righe: maiuscole,
               accenti e spazi non contano, l&apos;ortografia sì. Una riga per ogni variante che
-              accetti. Massimo {COMPLETION_MAX_LENGTH} caratteri l&apos;una, come le caselle
-              dell&apos;esame.
+              accetti. Massimo {COMPLETION_MAX_LENGTH}{" "}
+              caratteri l&apos;una, come le caselle dell&apos;esame.
             </p>
           )}
 

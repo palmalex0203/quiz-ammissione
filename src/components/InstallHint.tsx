@@ -59,11 +59,11 @@ export function InstallHint() {
           Puoi mettere il simulatore tra le app del telefono e aprirlo a tutto schermo, senza passare dal browser.
         </p>
         <p className="mt-2 text-xs text-muted">
-          <span className="font-semibold text-foreground">iPhone:</span> tocca Condividi in basso, poi &ldquo;Aggiungi
-          a Home&rdquo;.
+          <span className="font-semibold text-foreground">iPhone:</span>{" "}
+          tocca Condividi in basso, poi &ldquo;Aggiungi a Home&rdquo;.
           <br />
-          <span className="font-semibold text-foreground">Android:</span> menu del browser, poi &ldquo;Installa
-          app&rdquo;.
+          <span className="font-semibold text-foreground">Android:</span>{" "}
+          menu del browser, poi &ldquo;Installa app&rdquo;.
         </p>
       </div>
       <button

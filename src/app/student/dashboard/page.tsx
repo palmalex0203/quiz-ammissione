@@ -21,6 +21,13 @@ import {
  * completa e l'allenamento per argomento), poi le altre modalità, il formato della
  * prova e l'andamento per materia. Lo storico completo sta in "I miei progressi".
  */
+
+/** Riquadro fisso per l'icona: le emoji sono larghe ognuna a modo suo, e senza
+ *  una larghezza uguale per tutte i titoli delle righe partono sfalsati. */
+const ICONA = "inline-flex w-7 shrink-0 justify-center text-xl";
+/** Il segnale che la riga si tocca. Da sm in su la scheda è già un bersaglio
+ *  evidente e la freccia diventa rumore. */
+const FRECCIA = "shrink-0 text-muted sm:hidden";
 export default async function StudentDashboardPage() {
   const { session, track } = await requireStudentTrack();
   const studentId = session.user.id;
@@ -139,72 +146,90 @@ export default async function StudentDashboardPage() {
 
       <section className="flex flex-col gap-3">
         <h2 className="section-title">Altre modalità</h2>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {/*
+         * Su telefono queste quattro voci sono righe, non schede impilate: quattro
+         * schede alte una sull'altra erano più lunghe dello schermo, e per arrivare
+         * al formato della prova bisognava scorrerle tutte. Da sm in su tornano
+         * schede in griglia, dove lo spazio c'è.
+         *
+         * grid-cols-1 e non "grid" e basta: una colonna implicita non scende sotto
+         * la larghezza minima del suo contenuto, e la riga con il pulsante sbordava
+         * dallo schermo a 375px. minmax(0,1fr) toglie quel pavimento.
+         */}
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3 lg:grid-cols-4">
           <Link
             href="/student/practice?materia=simulazioni"
-            className="card card-link flex flex-col gap-1 p-5"
+            className="card card-link flex items-center gap-3 p-4 sm:flex-col sm:items-start sm:gap-1 sm:p-5"
           >
-            <span aria-hidden="true" className="text-xl">
+            <span aria-hidden="true" className={ICONA}>
               📋
             </span>
-            <p className="mt-1 text-sm font-semibold">Simulazioni in classe</p>
-            <p className="text-xs text-muted">
-              {simulazioniCount === 0
-                ? "Nessuna per ora"
-                : `${simulazioniCount} ${simulazioniCount === 1 ? "prova" : "prove"} del docente`}
-            </p>
+            <div className="min-w-0 flex-1 sm:mt-1 sm:flex-none">
+              <p className="text-sm font-semibold">Simulazioni in classe</p>
+              <p className="text-xs text-muted">
+                {simulazioniCount === 0
+                  ? "Nessuna per ora"
+                  : `${simulazioniCount} ${simulazioniCount === 1 ? "prova" : "prove"} del docente`}
+              </p>
+            </div>
+            <span aria-hidden="true" className={FRECCIA}>
+              ›
+            </span>
           </Link>
 
-          <div className="card flex flex-col gap-1 p-5">
-            <span aria-hidden="true" className="text-xl">
+          <div className="card flex items-center gap-3 p-4 sm:flex-col sm:items-start sm:gap-1 sm:p-5">
+            <span aria-hidden="true" className={ICONA}>
               ↺
             </span>
-            <p className="mt-1 text-sm font-semibold">Ripasso errori</p>
-            {erroriCount > 0 ? (
-              <>
-                <p className="text-xs text-muted">
-                  {erroriCount} {erroriCount === 1 ? "domanda sbagliata" : "domande sbagliate"} da recuperare
-                </p>
-                <form action={generateErrorReview} className="mt-2">
-                  <SubmitButton pendingText="Preparo il ripasso…" className="btn btn-sm btn-soft">
-                    Riprova{erroriCount > REVIEW_SIZE ? ` le ultime ${REVIEW_SIZE}` : ""}
-                  </SubmitButton>
-                </form>
-              </>
-            ) : (
-              <p className="text-xs text-muted">Nessun errore da recuperare</p>
+            <div className="min-w-0 flex-1 sm:mt-1 sm:flex-none">
+              <p className="text-sm font-semibold">Ripasso errori</p>
+              <p className="text-xs text-muted">
+                {erroriCount > 0
+                  ? `${erroriCount} ${erroriCount === 1 ? "domanda sbagliata" : "domande sbagliate"} da recuperare`
+                  : "Nessun errore da recuperare"}
+              </p>
+            </div>
+            {erroriCount > 0 && (
+              <form action={generateErrorReview} className="shrink-0 sm:mt-2">
+                <SubmitButton pendingText="Preparo il ripasso…" className="btn btn-sm btn-soft">
+                  Riprova
+                  {erroriCount > REVIEW_SIZE && (
+                    <span className="hidden sm:inline">&nbsp;le ultime {REVIEW_SIZE}</span>
+                  )}
+                </SubmitButton>
+              </form>
             )}
           </div>
 
-          <div className="card flex flex-col gap-1 p-5">
-            <span aria-hidden="true" className="text-xl">
+          <div className="card flex items-center gap-3 p-4 sm:flex-col sm:items-start sm:gap-1 sm:p-5">
+            <span aria-hidden="true" className={ICONA}>
               ⏳
             </span>
-            <p className="mt-1 text-sm font-semibold">Da riprendere</p>
-            {resume ? (
-              <>
-                <p className="truncate text-xs text-muted">
-                  {resume.test.title} · {resume._count.answers} di {questionCountOf(resume.test._count)} risposte
-                </p>
-                <form action={startAttempt} className="mt-2">
-                  <input type="hidden" name="testId" value={resume.test.id} />
-                  <SubmitButton pendingText="Apro il test…" className="btn btn-sm btn-soft">
-                    Continua
-                  </SubmitButton>
-                </form>
-              </>
-            ) : (
-              <p className="text-xs text-muted">Nessun test lasciato a metà</p>
+            <div className="min-w-0 flex-1 sm:mt-1 sm:flex-none">
+              <p className="text-sm font-semibold">Da riprendere</p>
+              <p className="truncate text-xs text-muted">
+                {resume
+                  ? `${resume.test.title} · ${resume._count.answers} di ${questionCountOf(resume.test._count)} risposte`
+                  : "Nessun test lasciato a metà"}
+              </p>
+            </div>
+            {resume && (
+              <form action={startAttempt} className="shrink-0 sm:mt-2">
+                <input type="hidden" name="testId" value={resume.test.id} />
+                <SubmitButton pendingText="Apro il test…" className="btn btn-sm btn-soft">
+                  Continua
+                </SubmitButton>
+              </form>
             )}
           </div>
 
           {lastAttempt ? (
             <Link
               href={`/student/tests/${lastAttempt.test.id}/result/${lastAttempt.id}`}
-              className="card card-link flex items-center gap-4 p-5"
+              className="card card-link flex items-center gap-3 p-4 sm:gap-4 sm:p-5"
             >
-              <ProgressRing value={lastPct} size={52} />
-              <div className="min-w-0">
+              <ProgressRing value={lastPct} size={44} />
+              <div className="min-w-0 flex-1">
                 <p className="text-sm font-semibold">Ultimo risultato</p>
                 <p className="font-display text-lg font-bold tabular-nums">
                   {formatScore(lastAttempt.score)}
@@ -212,16 +237,21 @@ export default async function StudentDashboardPage() {
                 </p>
                 <p className="truncate text-xs text-muted">vedi la correzione</p>
               </div>
+              <span aria-hidden="true" className={FRECCIA}>
+                ›
+              </span>
             </Link>
           ) : (
-            <div className="card flex flex-col gap-1 p-5">
-              <span aria-hidden="true" className="text-xl">
+            <div className="card flex items-center gap-3 p-4 sm:flex-col sm:items-start sm:gap-1 sm:p-5">
+              <span aria-hidden="true" className={ICONA}>
                 🎯
               </span>
-              <p className="mt-1 text-sm font-semibold">Ultimo risultato</p>
-              <p className="text-xs text-muted">
-                {hasTopics ? "Completa il primo test" : "Appena la banca dati sarà pronta"}
-              </p>
+              <div className="min-w-0 flex-1 sm:mt-1 sm:flex-none">
+                <p className="text-sm font-semibold">Ultimo risultato</p>
+                <p className="text-xs text-muted">
+                  {hasTopics ? "Completa il primo test" : "Appena la banca dati sarà pronta"}
+                </p>
+              </div>
             </div>
           )}
         </div>
