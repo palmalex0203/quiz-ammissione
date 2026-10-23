@@ -1,0 +1,1262 @@
+[
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-01",
+    "nota": "Facile. Numero atomico e numero di massa: se qui si sbaglia, manca la base di tutto il resto.",
+    "text": "Un atomo neutro di azoto ¹⁴₇N contiene:",
+    "options": [
+      {
+        "text": "14 protoni, 7 neutroni e 14 elettroni",
+        "isCorrect": false
+      },
+      {
+        "text": "7 protoni, 14 neutroni e 7 elettroni",
+        "isCorrect": false
+      },
+      {
+        "text": "7 protoni, 7 neutroni e 7 elettroni",
+        "isCorrect": true
+      },
+      {
+        "text": "7 protoni, 7 neutroni e 14 elettroni",
+        "isCorrect": false
+      },
+      {
+        "text": "14 protoni, 14 neutroni e 7 elettroni",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-02",
+    "nota": "Facile. La mole: massa molare dell'acqua 18 g/mol, quindi 36 g sono 2 mol.",
+    "text": "A quante moli corrispondono 36 g di acqua? (masse atomiche: H = 1 u; O = 16 u)",
+    "options": [
+      {
+        "text": "0,5 mol",
+        "isCorrect": false
+      },
+      {
+        "text": "1 mol",
+        "isCorrect": false
+      },
+      {
+        "text": "2 mol",
+        "isCorrect": true
+      },
+      {
+        "text": "18 mol",
+        "isCorrect": false
+      },
+      {
+        "text": "36 mol",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-04",
+    "nota": "Facile. Definizione di pH e scala di acidità.",
+    "text": "Una soluzione acquosa a 25 °C ha [H⁺] = 10⁻³ mol/L. Il suo pH e il suo carattere sono:",
+    "options": [
+      {
+        "text": "pH = 11, soluzione acida",
+        "isCorrect": false
+      },
+      {
+        "text": "pH = 3, soluzione basica",
+        "isCorrect": false
+      },
+      {
+        "text": "pH = 3, soluzione acida",
+        "isCorrect": true
+      },
+      {
+        "text": "pH = −3, soluzione neutra",
+        "isCorrect": false
+      },
+      {
+        "text": "pH = 7, soluzione neutra",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-01",
+    "nota": "Media. Distingue chi ragiona sulla geometria da chi guarda solo i legami: in CO₂ i due dipoli sono uguali e opposti e si annullano.",
+    "text": "Quale tra le seguenti molecole è complessivamente apolare, pur contenendo legami covalenti polari?",
+    "options": [
+      {
+        "text": "CO₂",
+        "isCorrect": true
+      },
+      {
+        "text": "NH₃",
+        "isCorrect": false
+      },
+      {
+        "text": "H₂O",
+        "isCorrect": false
+      },
+      {
+        "text": "HCl",
+        "isCorrect": false
+      },
+      {
+        "text": "H₂S",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-01",
+    "nota": "Media. Il legame a idrogeno: prerequisito indispensabile per capire acqua, proteine e DNA.",
+    "text": "L'acqua bolle a 100 °C mentre H₂S, di massa molecolare maggiore, bolle a −60 °C. La ragione principale è che tra le molecole d'acqua si formano:",
+    "options": [
+      {
+        "text": "legami ionici",
+        "isCorrect": false
+      },
+      {
+        "text": "legami a idrogeno",
+        "isCorrect": true
+      },
+      {
+        "text": "legami metallici",
+        "isCorrect": false
+      },
+      {
+        "text": "legami covalenti",
+        "isCorrect": false
+      },
+      {
+        "text": "legami peptidici",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-02",
+    "nota": "Media. Molarità: 0,5 mol in 0,250 L fanno 2 mol/L. L'errore tipico è dividere per 250 invece che per 0,250.",
+    "text": "Si sciolgono 0,5 mol di NaCl in acqua, portando il volume finale della soluzione a 250 mL. La concentrazione molare è:",
+    "options": [
+      {
+        "text": "0,125 mol/L",
+        "isCorrect": false
+      },
+      {
+        "text": "0,5 mol/L",
+        "isCorrect": false
+      },
+      {
+        "text": "1,25 mol/L",
+        "isCorrect": false
+      },
+      {
+        "text": "2 mol/L",
+        "isCorrect": true
+      },
+      {
+        "text": "5 mol/L",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-02",
+    "nota": "Media. Proprietà colligative, che tornano subito con osmosi e liquidi biologici.",
+    "text": "Aggiungendo un soluto non volatile a dell'acqua pura, rispetto all'acqua pura la soluzione ottenuta:",
+    "options": [
+      {
+        "text": "bolle a temperatura più alta e congela a temperatura più bassa",
+        "isCorrect": true
+      },
+      {
+        "text": "bolle a temperatura più bassa e congela a temperatura più alta",
+        "isCorrect": false
+      },
+      {
+        "text": "bolle e congela alle stesse temperature dell'acqua pura",
+        "isCorrect": false
+      },
+      {
+        "text": "bolle e congela entrambe a temperatura più alta",
+        "isCorrect": false
+      },
+      {
+        "text": "bolle e congela entrambe a temperatura più bassa",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-03",
+    "nota": "Media. Il catalizzatore accelera, non sposta: è l'equivoco più diffuso, e serve per gli enzimi.",
+    "text": "Un catalizzatore aggiunto a una reazione chimica:",
+    "options": [
+      {
+        "text": "aumenta l'energia di attivazione della reazione diretta",
+        "isCorrect": false
+      },
+      {
+        "text": "aumenta la velocità di reazione abbassando l'energia di attivazione, senza spostare l'equilibrio",
+        "isCorrect": true
+      },
+      {
+        "text": "aumenta la resa all'equilibrio spostandolo verso i prodotti",
+        "isCorrect": false
+      },
+      {
+        "text": "rende spontanea una reazione che non lo è",
+        "isCorrect": false
+      },
+      {
+        "text": "viene consumato in quantità stechiometrica durante la reazione",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-04",
+    "nota": "Media. Riconoscere un tampone: acido debole con la sua base coniugata. Prerequisito del tampone bicarbonato.",
+    "text": "Quale delle seguenti coppie, in soluzione acquosa, costituisce un sistema tampone?",
+    "options": [
+      {
+        "text": "HCl / NaCl",
+        "isCorrect": false
+      },
+      {
+        "text": "HCl / NaOH",
+        "isCorrect": false
+      },
+      {
+        "text": "NaCl / KCl",
+        "isCorrect": false
+      },
+      {
+        "text": "NaOH / NaCl",
+        "isCorrect": false
+      },
+      {
+        "text": "CH₃COOH / CH₃COONa",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-04",
+    "nota": "Media. Ossidoriduzioni: chi si ossida cede elettroni ed è il riducente. Lo zinco passa da 0 a +2.",
+    "text": "Nella reazione Zn + Cu²⁺ → Zn²⁺ + Cu, lo zinco metallico:",
+    "options": [
+      {
+        "text": "non varia il proprio numero di ossidazione",
+        "isCorrect": false
+      },
+      {
+        "text": "si riduce e agisce da agente ossidante",
+        "isCorrect": false
+      },
+      {
+        "text": "si riduce e agisce da agente riducente",
+        "isCorrect": false
+      },
+      {
+        "text": "si ossida e agisce da agente riducente",
+        "isCorrect": true
+      },
+      {
+        "text": "si ossida e agisce da agente ossidante",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-05",
+    "nota": "Media. Aromaticità del benzene: struttura di partenza per tanti farmaci e per gli amminoacidi aromatici.",
+    "text": "Il benzene (C₆H₆) è un composto aromatico perché:",
+    "options": [
+      {
+        "text": "ha gli elettroni π delocalizzati sull'intero anello, che lo rende particolarmente stabile",
+        "isCorrect": true
+      },
+      {
+        "text": "contiene tre doppi legami isolati che reagiscono per addizione come gli alcheni",
+        "isCorrect": false
+      },
+      {
+        "text": "ha tutti gli atomi di carbonio ibridati sp³",
+        "isCorrect": false
+      },
+      {
+        "text": "è l'unico idrocarburo ciclico esistente",
+        "isCorrect": false
+      },
+      {
+        "text": "contiene un gruppo funzionale ossidrilico legato all'anello",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-06",
+    "nota": "Media. Riconoscere i gruppi funzionali dalla formula: il chetone ha il carbonile fra due carboni.",
+    "text": "Quale delle seguenti formule rappresenta un chetone?",
+    "options": [
+      {
+        "text": "CH₃-CH₂-OH",
+        "isCorrect": false
+      },
+      {
+        "text": "CH₃-CHO",
+        "isCorrect": false
+      },
+      {
+        "text": "CH₃-COOH",
+        "isCorrect": false
+      },
+      {
+        "text": "CH₃-CO-CH₃",
+        "isCorrect": true
+      },
+      {
+        "text": "CH₃-O-CH₃",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-07",
+    "nota": "Media. Il legame peptidico: reazione di condensazione tra il carbossile di un amminoacido e l'amminico del successivo.",
+    "text": "Il legame peptidico che unisce due amminoacidi si forma tra:",
+    "options": [
+      {
+        "text": "il gruppo carbossilico di un amminoacido e il gruppo amminico dell'altro, con eliminazione di una molecola d'acqua",
+        "isCorrect": true
+      },
+      {
+        "text": "i gruppi amminici dei due amminoacidi, con eliminazione di ammoniaca",
+        "isCorrect": false
+      },
+      {
+        "text": "un gruppo ossidrilico e un gruppo fosfato",
+        "isCorrect": false
+      },
+      {
+        "text": "le catene laterali (gruppi R) dei due amminoacidi",
+        "isCorrect": false
+      },
+      {
+        "text": "i gruppi carbossilici dei due amminoacidi, con eliminazione di CO₂",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-06",
+    "nota": "Difficile. Isomeria di struttura: stessa formula molecolare C₂H₆O, atomi collegati in modo diverso. Separa chi ha davvero capito l'isomeria.",
+    "text": "L'etanolo (CH₃-CH₂-OH) e il dimetiletere (CH₃-O-CH₃) sono:",
+    "options": [
+      {
+        "text": "isotopi",
+        "isCorrect": false
+      },
+      {
+        "text": "composti con formula molecolare diversa",
+        "isCorrect": false
+      },
+      {
+        "text": "lo stesso composto scritto in due modi",
+        "isCorrect": false
+      },
+      {
+        "text": "enantiomeri",
+        "isCorrect": false
+      },
+      {
+        "text": "isomeri di struttura",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Chimica e propedeutica biochimica",
+    "topic": "SF-CHI-07",
+    "nota": "Difficile. Lipidi: i doppi legami cis impediscono l'impacchettamento delle catene e abbassano il punto di fusione. Spiega perché gli oli vegetali sono liquidi.",
+    "text": "Rispetto a un acido grasso saturo con lo stesso numero di atomi di carbonio, un acido grasso insaturo:",
+    "options": [
+      {
+        "text": "contiene uno o più doppi legami C=C e fonde a temperatura più alta",
+        "isCorrect": false
+      },
+      {
+        "text": "non è un estere del glicerolo e perciò non è un lipide",
+        "isCorrect": false
+      },
+      {
+        "text": "contiene uno o più doppi legami C=C e fonde a temperatura più bassa",
+        "isCorrect": true
+      },
+      {
+        "text": "contiene solo legami semplici e fonde a temperatura più bassa",
+        "isCorrect": false
+      },
+      {
+        "text": "contiene più atomi di idrogeno e fonde a temperatura più alta",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-01",
+    "nota": "Facile. Prefissi e notazione scientifica: in medicina si lavora continuamente fra micrometri e nanometri.",
+    "text": "Un globulo rosso ha un diametro di circa 7 μm. Espresso in metri, equivale a:",
+    "options": [
+      {
+        "text": "7 × 10⁻³ m",
+        "isCorrect": false
+      },
+      {
+        "text": "7 × 10⁻⁶ m",
+        "isCorrect": true
+      },
+      {
+        "text": "7 × 10⁻⁹ m",
+        "isCorrect": false
+      },
+      {
+        "text": "7 × 10⁶ m",
+        "isCorrect": false
+      },
+      {
+        "text": "7 × 10⁻¹² m",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-02",
+    "nota": "Facile. Moto uniformemente accelerato da fermo: v = a·t.",
+    "text": "Un corpo parte da fermo e si muove con accelerazione costante di 2 m/s². Dopo 5 s la sua velocità è:",
+    "options": [
+      {
+        "text": "2 m/s",
+        "isCorrect": false
+      },
+      {
+        "text": "5 m/s",
+        "isCorrect": false
+      },
+      {
+        "text": "10 m/s",
+        "isCorrect": true
+      },
+      {
+        "text": "25 m/s",
+        "isCorrect": false
+      },
+      {
+        "text": "50 m/s",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-02",
+    "nota": "Facile. Secondo principio della dinamica: a = F/m.",
+    "text": "Su un corpo di massa 4 kg agisce una forza risultante di 12 N. L'accelerazione del corpo è:",
+    "options": [
+      {
+        "text": "0,33 m/s²",
+        "isCorrect": false
+      },
+      {
+        "text": "3 m/s²",
+        "isCorrect": true
+      },
+      {
+        "text": "8 m/s²",
+        "isCorrect": false
+      },
+      {
+        "text": "16 m/s²",
+        "isCorrect": false
+      },
+      {
+        "text": "48 m/s²",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-06",
+    "nota": "Facile. Prima legge di Ohm: V = R·I.",
+    "text": "Una resistenza di 10 Ω è percorsa da una corrente di 0,5 A. La differenza di potenziale ai suoi capi è:",
+    "options": [
+      {
+        "text": "0,05 V",
+        "isCorrect": false
+      },
+      {
+        "text": "2 V",
+        "isCorrect": false
+      },
+      {
+        "text": "5 V",
+        "isCorrect": true
+      },
+      {
+        "text": "10,5 V",
+        "isCorrect": false
+      },
+      {
+        "text": "20 V",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-02",
+    "nota": "Media. Primo principio della dinamica. L'errore classico è credere che se un corpo si muove ci debba essere una forza che lo spinge.",
+    "text": "Un corpo si muove di moto rettilineo uniforme. Si può affermare con certezza che:",
+    "options": [
+      {
+        "text": "la risultante delle forze che agiscono su di esso è nulla",
+        "isCorrect": true
+      },
+      {
+        "text": "su di esso non agisce alcuna forza",
+        "isCorrect": false
+      },
+      {
+        "text": "la sua energia cinetica sta aumentando",
+        "isCorrect": false
+      },
+      {
+        "text": "su di esso agisce una forza costante nella direzione del moto",
+        "isCorrect": false
+      },
+      {
+        "text": "la sua accelerazione è costante e diversa da zero",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-02",
+    "nota": "Media. Conservazione dell'energia: v = √(2gh) = √100 = 10 m/s. La massa non serve, ed è proprio questo il punto.",
+    "text": "Un corpo di massa 2 kg cade da fermo da un'altezza di 5 m. Trascurando l'attrito con l'aria e assumendo g = 10 m/s², la velocità con cui arriva al suolo è:",
+    "options": [
+      {
+        "text": "5 m/s",
+        "isCorrect": false
+      },
+      {
+        "text": "10 m/s",
+        "isCorrect": true
+      },
+      {
+        "text": "20 m/s",
+        "isCorrect": false
+      },
+      {
+        "text": "50 m/s",
+        "isCorrect": false
+      },
+      {
+        "text": "100 m/s",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-03",
+    "nota": "Media. Legge di Stevino: p = ρ·g·h. Né la forma del recipiente né l'area del fondo contano.",
+    "text": "La pressione esercitata da un liquido in quiete sul fondo del recipiente che lo contiene dipende:",
+    "options": [
+      {
+        "text": "dalla forma del recipiente",
+        "isCorrect": false
+      },
+      {
+        "text": "solo dal peso totale del liquido",
+        "isCorrect": false
+      },
+      {
+        "text": "solo dal volume complessivo del liquido",
+        "isCorrect": false
+      },
+      {
+        "text": "dall'area del fondo del recipiente",
+        "isCorrect": false
+      },
+      {
+        "text": "dalla densità del liquido e dall'altezza della colonna di liquido",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-03",
+    "nota": "Media. Principio di Archimede nella sua formulazione esatta.",
+    "text": "Un corpo immerso in un fluido riceve una spinta verso l'alto di intensità pari:",
+    "options": [
+      {
+        "text": "al peso del corpo immerso",
+        "isCorrect": false
+      },
+      {
+        "text": "alla differenza tra il peso del corpo e il suo volume",
+        "isCorrect": false
+      },
+      {
+        "text": "al peso del fluido spostato dal corpo",
+        "isCorrect": true
+      },
+      {
+        "text": "alla densità del fluido moltiplicata per la massa del corpo",
+        "isCorrect": false
+      },
+      {
+        "text": "alla pressione atmosferica agente sulla superficie libera",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "nota": "Media. Calore latente: durante un passaggio di stato la temperatura resta costante. Confusione frequente fra calore e temperatura.",
+    "text": "Si fornisce calore a un blocco di ghiaccio che si trova a 0 °C e sta fondendo. Finché è presente del ghiaccio, la temperatura del sistema:",
+    "options": [
+      {
+        "text": "diminuisce, perché la fusione sottrae calore",
+        "isCorrect": false
+      },
+      {
+        "text": "aumenta con continuità fino a 100 °C",
+        "isCorrect": false
+      },
+      {
+        "text": "aumenta di 1 °C per ogni caloria fornita",
+        "isCorrect": false
+      },
+      {
+        "text": "aumenta solo se il calore è fornito rapidamente",
+        "isCorrect": false
+      },
+      {
+        "text": "rimane costante a 0 °C",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-05",
+    "nota": "Media. Modalità di trasmissione del calore: conduzione e convezione hanno bisogno di materia, l'irraggiamento no.",
+    "text": "Nel vuoto il calore può essere trasmesso:",
+    "options": [
+      {
+        "text": "solo per conduzione",
+        "isCorrect": false
+      },
+      {
+        "text": "per conduzione e convezione, ma non per irraggiamento",
+        "isCorrect": false
+      },
+      {
+        "text": "solo per irraggiamento",
+        "isCorrect": true
+      },
+      {
+        "text": "solo per convezione",
+        "isCorrect": false
+      },
+      {
+        "text": "in nessun modo",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-06",
+    "nota": "Media. Legge di Coulomb: dipendenza dall'inverso del quadrato della distanza.",
+    "text": "Due cariche elettriche puntiformi si attraggono con una forza F. Se si raddoppia la distanza tra di esse, mantenendo invariate le cariche, la forza diventa:",
+    "options": [
+      {
+        "text": "F/2",
+        "isCorrect": false
+      },
+      {
+        "text": "F/4",
+        "isCorrect": true
+      },
+      {
+        "text": "2F",
+        "isCorrect": false
+      },
+      {
+        "text": "4F",
+        "isCorrect": false
+      },
+      {
+        "text": "F, non cambia",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-07",
+    "nota": "Media. Radiazioni ionizzanti: discrimina chi conosce lo spettro elettromagnetico. Rilevante per radiologia e radioprotezione.",
+    "text": "Tra le seguenti radiazioni elettromagnetiche, l'unica ionizzante è:",
+    "options": [
+      {
+        "text": "la luce visibile",
+        "isCorrect": false
+      },
+      {
+        "text": "la radiazione infrarossa",
+        "isCorrect": false
+      },
+      {
+        "text": "le onde radio",
+        "isCorrect": false
+      },
+      {
+        "text": "le microonde",
+        "isCorrect": false
+      },
+      {
+        "text": "i raggi X",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-04",
+    "nota": "Media. Relazione v = λ·f, da invertire: λ = 340/500 = 0,68 m.",
+    "text": "Un'onda sonora di frequenza 500 Hz si propaga nell'aria a 340 m/s. La sua lunghezza d'onda è:",
+    "options": [
+      {
+        "text": "0,68 m",
+        "isCorrect": true
+      },
+      {
+        "text": "1,47 m",
+        "isCorrect": false
+      },
+      {
+        "text": "170 m",
+        "isCorrect": false
+      },
+      {
+        "text": "840 m",
+        "isCorrect": false
+      },
+      {
+        "text": "170 000 m",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-06",
+    "nota": "Difficile. Resistenze in parallelo: due resistenze uguali danno la metà. Molti applicano la formula della serie.",
+    "text": "Due resistenze da 10 Ω ciascuna sono collegate in parallelo. La resistenza equivalente è:",
+    "options": [
+      {
+        "text": "0,2 Ω",
+        "isCorrect": false
+      },
+      {
+        "text": "5 Ω",
+        "isCorrect": true
+      },
+      {
+        "text": "10 Ω",
+        "isCorrect": false
+      },
+      {
+        "text": "20 Ω",
+        "isCorrect": false
+      },
+      {
+        "text": "100 Ω",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "topic": "SF-FIS-03",
+    "nota": "Difficile. Equazione di continuità: A·v costante. È la base per capire la circolazione del sangue nei vasi.",
+    "text": "Un liquido incomprimibile scorre in un condotto rigido. Nel tratto in cui la sezione del condotto si dimezza, la velocità del liquido:",
+    "options": [
+      {
+        "text": "si dimezza",
+        "isCorrect": false
+      },
+      {
+        "text": "si riduce a un quarto",
+        "isCorrect": false
+      },
+      {
+        "text": "rimane invariata",
+        "isCorrect": false
+      },
+      {
+        "text": "raddoppia",
+        "isCorrect": true
+      },
+      {
+        "text": "quadruplica",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-05",
+    "nota": "Facile. Procarioti ed eucarioti: la distinzione di base.",
+    "text": "Le cellule procariotiche si distinguono da quelle eucariotiche perché:",
+    "options": [
+      {
+        "text": "non sono in grado di riprodursi",
+        "isCorrect": false
+      },
+      {
+        "text": "sono prive di materiale genetico",
+        "isCorrect": false
+      },
+      {
+        "text": "sono prive di un nucleo delimitato da membrana",
+        "isCorrect": true
+      },
+      {
+        "text": "sono prive di ribosomi",
+        "isCorrect": false
+      },
+      {
+        "text": "sono prive di membrana plasmatica",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01",
+    "nota": "Facile. Teoria cellulare, terzo postulato.",
+    "text": "Secondo la teoria cellulare:",
+    "options": [
+      {
+        "text": "le cellule si formano spontaneamente da materia non vivente",
+        "isCorrect": false
+      },
+      {
+        "text": "tutte le cellule di un organismo hanno la stessa forma",
+        "isCorrect": false
+      },
+      {
+        "text": "la cellula è l'unità più piccola della materia",
+        "isCorrect": false
+      },
+      {
+        "text": "ogni cellula deriva da una cellula preesistente",
+        "isCorrect": true
+      },
+      {
+        "text": "solo gli organismi pluricellulari sono costituiti da cellule",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "nota": "Facile. Differenza di composizione fra DNA e RNA.",
+    "text": "Quale base azotata è presente nell'RNA ma non nel DNA?",
+    "options": [
+      {
+        "text": "Adenina",
+        "isCorrect": false
+      },
+      {
+        "text": "Citosina",
+        "isCorrect": false
+      },
+      {
+        "text": "Guanina",
+        "isCorrect": false
+      },
+      {
+        "text": "Timina",
+        "isCorrect": false
+      },
+      {
+        "text": "Uracile",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-05",
+    "nota": "Media. Mitocondri: sede della respirazione cellulare, con DNA proprio. Prerequisito del metabolismo energetico.",
+    "text": "Quale affermazione sui mitocondri è corretta?",
+    "options": [
+      {
+        "text": "Producono la maggior parte dell'ATP cellulare e contengono DNA proprio",
+        "isCorrect": true
+      },
+      {
+        "text": "Sono delimitati da una sola membrana",
+        "isCorrect": false
+      },
+      {
+        "text": "Demoliscono le sostanze di rifiuto grazie agli enzimi idrolitici",
+        "isCorrect": false
+      },
+      {
+        "text": "Sono presenti solo nelle cellule vegetali",
+        "isCorrect": false
+      },
+      {
+        "text": "Sono il sito della sintesi proteica",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-05",
+    "nota": "Media. Apparato di Golgi: smistamento, non sintesi. Si confonde spesso con il reticolo endoplasmatico.",
+    "text": "L'apparato di Golgi ha la funzione principale di:",
+    "options": [
+      {
+        "text": "sintetizzare i ribosomi",
+        "isCorrect": false
+      },
+      {
+        "text": "sintetizzare le proteine a partire dall'mRNA",
+        "isCorrect": false
+      },
+      {
+        "text": "modificare, smistare e indirizzare le proteine provenienti dal reticolo endoplasmatico",
+        "isCorrect": true
+      },
+      {
+        "text": "contenere il materiale genetico della cellula",
+        "isCorrect": false
+      },
+      {
+        "text": "produrre ATP mediante la fosforilazione ossidativa",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "nota": "Media. Trascrizione: il primo passaggio del flusso dell'informazione.",
+    "text": "Il processo di trascrizione consiste nella sintesi di:",
+    "options": [
+      {
+        "text": "una molecola di DNA a partire da uno stampo di RNA",
+        "isCorrect": false
+      },
+      {
+        "text": "una molecola di RNA a partire da uno stampo di DNA",
+        "isCorrect": true
+      },
+      {
+        "text": "una molecola di DNA a partire da uno stampo di DNA",
+        "isCorrect": false
+      },
+      {
+        "text": "un polisaccaride a partire da monosaccaridi",
+        "isCorrect": false
+      },
+      {
+        "text": "una proteina a partire da uno stampo di mRNA",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-03",
+    "nota": "Media. Definizione di codone.",
+    "text": "Nel codice genetico un codone è:",
+    "options": [
+      {
+        "text": "l'enzima che catalizza la sintesi proteica",
+        "isCorrect": false
+      },
+      {
+        "text": "la sequenza di amminoacidi che costituisce una proteina",
+        "isCorrect": false
+      },
+      {
+        "text": "un gene completo, comprensivo delle sue sequenze regolatrici",
+        "isCorrect": false
+      },
+      {
+        "text": "una coppia di basi azotate complementari del DNA",
+        "isCorrect": false
+      },
+      {
+        "text": "una tripletta di nucleotidi dell'mRNA che specifica un amminoacido o un segnale di stop",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-06",
+    "nota": "Media. Trasporto attivo contro gradiente, con consumo di ATP: prerequisito della pompa sodio-potassio.",
+    "text": "Il trasporto attivo di una sostanza attraverso la membrana plasmatica:",
+    "options": [
+      {
+        "text": "avviene secondo il gradiente di concentrazione e non richiede energia",
+        "isCorrect": false
+      },
+      {
+        "text": "avviene contro il gradiente di concentrazione e richiede energia",
+        "isCorrect": true
+      },
+      {
+        "text": "riguarda esclusivamente le molecole liposolubili",
+        "isCorrect": false
+      },
+      {
+        "text": "si arresta quando le concentrazioni ai due lati si eguagliano",
+        "isCorrect": false
+      },
+      {
+        "text": "non richiede la presenza di proteine di membrana",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-06",
+    "nota": "Media. Osmosi: l'acqua si sposta verso la soluzione più concentrata. Prerequisito clinico (soluzioni fisiologiche).",
+    "text": "Una cellula animale viene immersa in una soluzione ipotonica rispetto al suo citoplasma. La cellula:",
+    "options": [
+      {
+        "text": "non subisce alcuna variazione di volume",
+        "isCorrect": false
+      },
+      {
+        "text": "perde sali minerali senza variare di volume",
+        "isCorrect": false
+      },
+      {
+        "text": "assorbe acqua ma è protetta dalla parete cellulare",
+        "isCorrect": false
+      },
+      {
+        "text": "assorbe acqua, si rigonfia e può andare incontro a lisi",
+        "isCorrect": true
+      },
+      {
+        "text": "perde acqua e si raggrinzisce",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-02",
+    "nota": "Media. Replicazione semiconservativa: l'esperimento di Meselson e Stahl.",
+    "text": "Al termine della replicazione del DNA, ciascuna delle due molecole figlie è costituita da:",
+    "options": [
+      {
+        "text": "frammenti alternati di filamento parentale e di nuova sintesi su entrambi i filamenti",
+        "isCorrect": false
+      },
+      {
+        "text": "un filamento di DNA e uno di RNA",
+        "isCorrect": false
+      },
+      {
+        "text": "due filamenti di nuova sintesi",
+        "isCorrect": false
+      },
+      {
+        "text": "un filamento parentale e un filamento di nuova sintesi",
+        "isCorrect": true
+      },
+      {
+        "text": "due filamenti parentali",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-05",
+    "nota": "Media. Esito della meiosi, da contrapporre a quello della mitosi.",
+    "text": "A partire da una cellula diploide, la meiosi produce:",
+    "options": [
+      {
+        "text": "due cellule diploidi geneticamente identiche alla cellula madre",
+        "isCorrect": false
+      },
+      {
+        "text": "una cellula aploide e una diploide",
+        "isCorrect": false
+      },
+      {
+        "text": "due cellule aploidi geneticamente identiche",
+        "isCorrect": false
+      },
+      {
+        "text": "quattro cellule diploidi geneticamente identiche",
+        "isCorrect": false
+      },
+      {
+        "text": "quattro cellule aploidi geneticamente diverse tra loro",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-04",
+    "nota": "Media. Primo incrocio mendeliano: Aa × Aa dà 1 aa su 4.",
+    "text": "Dall'incrocio di due individui eterozigoti Aa, in cui l'allele A è completamente dominante su a, la probabilità attesa di ottenere un figlio con fenotipo recessivo è:",
+    "options": [
+      {
+        "text": "0%",
+        "isCorrect": false
+      },
+      {
+        "text": "25%",
+        "isCorrect": true
+      },
+      {
+        "text": "50%",
+        "isCorrect": false
+      },
+      {
+        "text": "75%",
+        "isCorrect": false
+      },
+      {
+        "text": "100%",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-07",
+    "nota": "Media. Apoptosi come processo fisiologico e regolato, non come danno.",
+    "text": "L'apoptosi è:",
+    "options": [
+      {
+        "text": "un processo esclusivo delle cellule tumorali",
+        "isCorrect": false
+      },
+      {
+        "text": "la divisione di una cellula in due cellule figlie identiche",
+        "isCorrect": false
+      },
+      {
+        "text": "una morte cellulare programmata e regolata, fisiologica nello sviluppo e nel rinnovamento dei tessuti",
+        "isCorrect": true
+      },
+      {
+        "text": "la fase di riposo del ciclo cellulare",
+        "isCorrect": false
+      },
+      {
+        "text": "la morte accidentale della cellula in seguito a un danno, con rilascio del contenuto cellulare e infiammazione",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-05",
+    "nota": "Difficile. Respirazione cellulare: l'ossigeno è l'accettore finale degli elettroni nella catena respiratoria, non il reagente da cui si ricava direttamente energia.",
+    "text": "Nella respirazione cellulare aerobica, l'accettore finale degli elettroni della catena di trasporto è:",
+    "options": [
+      {
+        "text": "l'ossigeno molecolare",
+        "isCorrect": true
+      },
+      {
+        "text": "l'anidride carbonica",
+        "isCorrect": false
+      },
+      {
+        "text": "il glucosio",
+        "isCorrect": false
+      },
+      {
+        "text": "l'ATP",
+        "isCorrect": false
+      },
+      {
+        "text": "il NAD⁺",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-04",
+    "nota": "Difficile. Eredità recessiva legata all'X: la madre XᴬXᵃ trasmette l'allele malato a metà dei figli, e i maschi che lo ricevono sono affetti perché hanno un solo X. Richiede di ragionare, non di ricordare.",
+    "text": "Una donna portatrice sana di una malattia recessiva legata al cromosoma X ha figli con un uomo sano. Considerando i soli figli maschi, la probabilità che uno di essi sia affetto dalla malattia è:",
+    "options": [
+      {
+        "text": "0",
+        "isCorrect": false
+      },
+      {
+        "text": "1/4",
+        "isCorrect": false
+      },
+      {
+        "text": "1/2",
+        "isCorrect": true
+      },
+      {
+        "text": "3/4",
+        "isCorrect": false
+      },
+      {
+        "text": "1",
+        "isCorrect": false
+      }
+    ]
+  }
+]
