@@ -128,9 +128,19 @@ export default async function ResultsPage({
 
   return (
     <div className="flex flex-col gap-6">
-      <div>
-        <h1 className="page-title">Risultati</h1>
-        <p className="mt-1 text-sm text-muted">{track.label}</p>
+      <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+        <div>
+          <h1 className="page-title">Risultati</h1>
+          <p className="mt-1 text-sm text-muted">{track.label}</p>
+        </div>
+        {/* Il test d'ingresso non è fra questi: lo fa chi un account non ce l'ha
+            ancora, quindi non produce tentativi. Ma è qui che lo si viene a cercare. */}
+        <Link
+          href="/teacher/prova-ingresso"
+          className="text-sm font-medium text-brand-strong hover:underline"
+        >
+          Test di valutazione iniziale →
+        </Link>
       </div>
 
       <form

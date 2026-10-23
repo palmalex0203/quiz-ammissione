@@ -326,3 +326,39 @@ model Lezione {
   @@index([track, isPublished])
   @@index([topic])
 }
+
+// Il test di valutazione iniziale, fatto il primo giorno di corso senza account.
+//
+// Non è un Attempt: un Attempt appartiene a uno User, e questi ragazzi un account
+// non ce l'hanno ancora. Non è nemmeno un Lead: un Lead è un contatto arrivato da
+// un annuncio, da richiamare; questo è uno studente già iscritto, di cui si
+// misurano i prerequisiti. Due cose con due cicli di vita diversi, e tenerle
+// nella stessa tabella vorrebbe dire sporcare le statistiche di entrambe.
+//
+// Nome e cognome e basta: all'inizio del corso l'elenco degli iscritti ce
+// l'abbiamo già, e ogni campo in più prima di una prova è gente che non la
+// comincia.
+model ProvaIngresso {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  nome    String
+  cognome String
+
+  // completataIl resta vuoto per chi ha cominciato e non ha consegnato: è un
+  // dato, non un difetto, e dice che la prova era troppo lunga o che se n'è
+  // andato.
+  completataIl DateTime?
+  punti        Float?
+
+  // Il riepilogo per materia e per unità del syllabus, calcolato alla consegna.
+  // Ricalcolarlo a ogni visita vorrebbe dire rileggere tutte le risposte di
+  // tutti per disegnare una tabella.
+  esito Json?
+
+  // Quello che ha risposto, per poter rivedere la prova con lui. Non si
+  // interroga mai per singola domanda, quindi sta in un campo solo.
+  risposte Json?
+
+  @@index([createdAt])
+}
