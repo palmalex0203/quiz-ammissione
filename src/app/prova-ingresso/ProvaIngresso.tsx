@@ -436,8 +436,7 @@ function Risultato({ esito, totale }: { esito: Esito; totale: number }) {
 
           <p className="text-sm leading-relaxed text-muted">
             Il risultato è già arrivato ai docenti. Non è un voto: serve a loro per sapere su che
-            cosa insistere, e a te per sapere dove sei messo adesso — fra tre mesi questo foglio
-            dovrà fare ridere.
+            cosa insistere, e a te per sapere dove sei messo adesso.
           </p>
           <p className="text-sm leading-relaxed text-muted">
             Le soluzioni si vedono in aula, insieme: rivederle da soli serve molto meno che sentirsi
