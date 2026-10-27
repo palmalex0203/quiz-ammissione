@@ -15,7 +15,7 @@ Questa unità vale **0,5 CFU su 6**: in una prova da 31 domande sono circa **due
 
 L'appunto parte da zero e non dà per scontato niente: ogni parola nuova viene spiegata la prima volta che compare.
 
-Una cosa sul formato dell'esame, perché cambia il modo di studiare: delle 31 domande della prova, **15 sono a scelta multipla** e **16 a completamento** — in queste ultime la risposta la **scrivi tu** in una griglia di caselle, e **un errore di ortografia la rende sbagliata**. Non basta riconoscere la parola giusta fra cinque: devi saperla scrivere. Alla fine dell'appunto c'è l'elenco di quelle di questa unità.
+Una cosa sul formato dell'esame, perché cambia il modo di studiare: delle 31 domande della prova, **21 sono a scelta multipla** e **10 a completamento** — in queste ultime la risposta la **scrivi tu** in una griglia di caselle, e **un errore di ortografia la rende sbagliata**. Non basta riconoscere la parola giusta fra cinque: devi saperla scrivere. Alla fine dell'appunto c'è l'elenco di quelle di questa unità.
 
 ---
 

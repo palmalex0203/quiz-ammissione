@@ -10,8 +10,8 @@ import { typeQuotas, type TrackId } from "@/lib/tracks";
  * vero, non quante ne escono a caso. Dove i pesi non ci sono (Professioni Sanitarie)
  * si pesca uniformemente dalla materia, come prima.
  *
- * Lo stesso vale per il tipo di domanda: se il percorso dice che una prova ha 15
- * domande a scelta multipla e 16 a completamento, il sorteggio rispetta anche quel
+ * Lo stesso vale per il tipo di domanda: se il percorso dice che una prova ha 21
+ * domande a scelta multipla e 10 a completamento, il sorteggio rispetta anche quel
  * conto, non solo il totale. Le due quote vengono soddisfatte insieme, argomento per
  * argomento, scegliendo ogni volta il tipo che ha ancora più posti liberi.
  *

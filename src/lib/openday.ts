@@ -2,10 +2,15 @@
  * La simulazione gratuita dell'open day: una prova ufficiale intera.
  *
  * Non è un assaggio: sono le 93 domande di un appello vero del 2025/2026, le
- * tre materie in fila come all'esame, 45 minuti ciascuna. Comprese le 16
- * domande a completamento per prova, dove la risposta si scrive invece di
- * sceglierla — che sono metà dell'esame e la metà che sorprende chi non si è
- * preparato.
+ * tre materie in fila, 50 minuti ciascuna. Comprese le domande a completamento,
+ * dove la risposta si scrive invece di sceglierla, che sono la parte che
+ * sorprende chi non si è preparato.
+ *
+ * Questi fascicoli sono dell'anno scorso e ne portano il formato: 15 a risposta
+ * multipla e 16 a completamento. Dal D.M. 941 del 10 luglio 2026 la prova è 21 e
+ * 10 in 50 minuti, e il cronometro qui segue il tempo nuovo — è quello che gli
+ * studenti avranno davvero. Il resto del fascicolo non si tocca: è una prova
+ * ministeriale e si mostra com'è.
  *
  * Le domande si leggono dai file in content/ e non dal database. Due motivi:
  *
@@ -49,7 +54,7 @@ const MATERIE = [
 ] as const;
 
 /** Minuti per ciascuna prova, come all'esame vero. */
-export const MINUTI_PER_PROVA = 45;
+export const MINUTI_PER_PROVA = 50;
 export const DOMANDE_PER_PROVA = 31;
 export const TOTALE = DOMANDE_PER_PROVA * MATERIE.length;
 

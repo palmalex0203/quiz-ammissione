@@ -126,7 +126,8 @@ function ProvaCard({ prova, test }: { prova: ProvaUfficiale; test?: TestDiProva 
           </div>
           <p className="mt-1 text-xs text-muted">
             {test ? `${test._count.questions} domande` : `${prova.questions} domande`} ·{" "}
-            {test?.timeLimitMinutes ?? prova.minutes} min · 15 a scelta multipla e 16 a completamento
+            {test?.timeLimitMinutes ?? prova.minutes} min · {prova.mix.multipla} a scelta multipla e{" "}
+            {prova.mix.completamento} a completamento
           </p>
         </div>
 

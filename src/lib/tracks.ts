@@ -92,17 +92,26 @@ const PROFESSIONI_SANITARIE: Track = {
 };
 
 // Semestre filtro: tre prove in sequenza (Chimica, Fisica, Biologia), 31 domande
-// ciascuna in 45 minuti, con 15 minuti di intervallo fra una prova e l'altra.
-// Punteggio: +1 corretta, −0,1 errata, 0 non data.
+// ciascuna in 50 minuti, con 30 minuti di intervallo fra una prova e l'altra.
+// Punteggio: +1 corretta, −0,1 errata, 0 non data; 93 punti in tutto sui tre esami.
 //
-// Fonte: "Linee guida per gli esami del semestre aperto" del MUR (ottobre 2025) e i
-// fascicoli ufficiali degli esami, che stanno in content/semestre-filtro/.
+// Fonte: D.M. n. 941 del 10 luglio 2026, Allegato 2, punti 4 e 6 — «Ciascuna prova
+// di esame si compone di trentuno (31) domande, articolate come segue: ventuno (21)
+// domande a risposta multipla; dieci (10) domande a risposta con modalità a
+// completamento», e «per lo svolgimento di ciascuna materia oggetto di prova di
+// esame è assegnato un tempo pari a 50 minuti». Il punteggio è all'articolo 9 del
+// decreto. Copia in content/semestre-filtro/.
 //
-// Da sapere: nelle prove vere 15 domande su 31 sono a risposta multipla con cinque
-// opzioni e le altre 16 sono a completamento, cioè lo studente scrive la risposta
-// (una parola, un numero o un'espressione, al massimo 16 caratteri) e un errore di
-// ortografia la rende sbagliata. È il `typeMix` qui sotto, e il generatore lo
-// rispetta: una prova esce con quel conto esatto, non con quello che capita.
+// CAMBIATO il 2026-10-27, e non di poco: fino all'anno scorso erano 15 a risposta
+// multipla e 16 a completamento in 45 minuti, come si vede nei sei fascicoli 2025
+// in content/semestre-filtro/prove-ufficiali/. Ora il peso è rovesciato — si
+// scrivono dieci risposte invece di sedici — quindi i fascicoli vecchi restano
+// buoni come esercizio ma non sono più il formato della prova.
+//
+// Nelle domande a completamento lo studente scrive la risposta (una parola, un
+// numero o un'espressione, al massimo 16 caratteri) e un errore di ortografia la
+// rende sbagliata. È il `typeMix` qui sotto, e il generatore lo rispetta: una prova
+// esce con quel conto esatto, non con quello che capita.
 const SEMESTRE_FILTRO: Track = {
   id: "SEMESTRE_FILTRO",
   label: "Semestre filtro",
@@ -119,21 +128,21 @@ const SEMESTRE_FILTRO: Track = {
       { subject: "Fisica", count: 31 },
       { subject: "Biologia", count: 31 },
     ],
-    minutes: 135,
+    minutes: 150,
     description:
-      "Le tre prove in fila come all'esame: 93 domande in tutto, 45 minuti a materia.",
+      "Le tre prove in fila come all'esame: 93 domande in tutto, 50 minuti a materia.",
   },
   papers: [
-    { subject: "Chimica e propedeutica biochimica", questions: 31, minutes: 45 },
-    { subject: "Fisica", questions: 31, minutes: 45 },
-    { subject: "Biologia", questions: 31, minutes: 45 },
+    { subject: "Chimica e propedeutica biochimica", questions: 31, minutes: 50 },
+    { subject: "Fisica", questions: 31, minutes: 50 },
+    { subject: "Biologia", questions: 31, minutes: 50 },
   ],
   practiceSizes: {
     "Chimica e propedeutica biochimica": 31,
     Fisica: 31,
     Biologia: 31,
   },
-  typeMix: { MULTIPLE_CHOICE: 15, COMPLETAMENTO: 16 },
+  typeMix: { MULTIPLE_CHOICE: 21, COMPLETAMENTO: 10 },
   // 31 domande, 31 punti al massimo: trenta più il punto della lode.
   esame: { scala: 30, sufficienza: 18, lode: true },
   scoring: { correct: 1, incorrect: -0.1, omitted: 0 },

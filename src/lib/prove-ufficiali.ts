@@ -31,6 +31,11 @@ export type ProvaUfficiale = {
   data: string;
   questions: number;
   minutes: number;
+  // Com'era ripartito QUESTO fascicolo. Non si ricava dal percorso: il formato
+  // della prova è cambiato nel 2026 (21 a risposta multipla e 10 a completamento,
+  // 50 minuti) e questi fascicoli sono del 2025, quando erano 15 e 16 in 45
+  // minuti. Un fascicolo va descritto per com'è, non per com'è l'esame adesso.
+  mix: { multipla: number; completamento: number };
   // Avvertenze sulla trascrizione, mostrate insieme alla prova.
   nota?: string;
 };
@@ -42,6 +47,7 @@ const APPELLO_2 = {
   data: "10 dicembre 2025",
   questions: 31,
   minutes: 45,
+  mix: { multipla: 15, completamento: 16 },
 };
 
 // Del primo appello circola un fascicolo unico con le tre prove di seguito, non
@@ -53,6 +59,7 @@ const APPELLO_1 = {
   data: "20 novembre 2025",
   questions: 31,
   minutes: 45,
+  mix: { multipla: 15, completamento: 16 },
   fascicolo: "2025-appello1",
 };
 

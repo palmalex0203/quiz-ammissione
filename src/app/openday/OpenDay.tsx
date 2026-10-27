@@ -286,7 +286,7 @@ function Partecipa({ evento, aperto, apri }: { evento: Evento; aperto: boolean; 
   }
 
   const punti = [
-    "Com'è fatto il test: tre prove, 31 domande ciascuna, 45 minuti l'una.",
+    "Com'è fatto il test: tre prove, 31 domande ciascuna, 50 minuti l'una.",
     "Come funziona il punteggio, e quanto serve davvero per passare.",
     "Quali materie si affrontano e come organizzare lo studio da qui all'esame.",
     "Le vostre domande, e la correzione in diretta di alcune domande della simulazione.",
@@ -442,8 +442,10 @@ function Simulazione({
         </div>
 
         <p className="mt-5 text-sm leading-relaxed text-muted">
-          Le tre materie una dopo l&apos;altra come all&apos;esame, con il cronometro. Quindici
-          domande a scelta multipla e sedici a completamento per prova, e il punteggio vero:
+          Le tre materie una dopo l&apos;altra, con il cronometro e il punteggio vero. Sono i
+          fascicoli dello scorso anno, quando le domande a completamento erano sedici su
+          trentuno invece di dieci: il formato è cambiato a luglio, questi restano
+          l&apos;allenamento più vicino alla prova vera che esista.
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           {punteggio.map((p) => (

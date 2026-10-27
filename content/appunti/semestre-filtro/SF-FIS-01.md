@@ -179,7 +179,7 @@ L'**ordine di grandezza** di un numero è la potenza di dieci che gli sta più v
 
 La convenzione pratica: scritto il numero come a × 10ⁿ, se **a < 5** l'ordine di grandezza è 10ⁿ, se **a > 5** si sale a 10ⁿ⁺¹. Così 3 × 10⁴ ha ordine di grandezza 10⁴, mentre 7 × 10⁴ ha ordine di grandezza 10⁵.
 
-**Perché è una tecnica da test e non solo una curiosità.** In una domanda a risposta multipla le cinque alternative spesso differiscono di ordini di grandezza. Se riesci a stimare la scala del risultato in dieci secondi, ne elimini tre o quattro senza fare il conto esatto — e nel semestre filtro hai 45 minuti per 31 domande, cioè meno di un minuto e mezzo ciascuna.
+**Perché è una tecnica da test e non solo una curiosità.** In una domanda a risposta multipla le cinque alternative spesso differiscono di ordini di grandezza. Se riesci a stimare la scala del risultato in dieci secondi, ne elimini tre o quattro senza fare il conto esatto — e nel semestre filtro hai 50 minuti per 31 domande, poco più di un minuto e mezzo ciascuna.
 
 Una stima si fa arrotondando tutto brutalmente: π diventa 3, 9,8 diventa 10, 365 diventa 400. L'errore che accumuli è piccolo rispetto a un fattore dieci.
 

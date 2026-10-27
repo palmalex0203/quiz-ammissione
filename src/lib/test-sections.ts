@@ -4,7 +4,7 @@ import { paperOf, type Track } from "@/lib/tracks";
  * Le sezioni di una prova.
  *
  * All'esame del semestre filtro non si svolgono 93 domande in un colpo solo: sono
- * tre prove separate, una per materia, 31 domande in 45 minuti ciascuna, e quando
+ * tre prove separate, una per materia, 31 domande in 50 minuti ciascuna, e quando
  * una è consegnata non si torna indietro. La simulazione completa qui dentro è un
  * test unico, e senza queste sezioni lo studente si troverebbe davanti tutte e tre
  * le materie insieme con un cronometro solo: un esercizio diverso da quello vero.
