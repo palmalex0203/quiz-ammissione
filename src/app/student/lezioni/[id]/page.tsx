@@ -83,8 +83,7 @@ export default async function StudentLezionePage({ params }: { params: Promise<{
             La lezione si tiene su {PIATTAFORMA_DIRETTA}
           </p>
           <p className="mt-1 text-sm leading-relaxed text-muted">
-            Il pulsante apre la riunione in una finestra nuova, nell&apos;app o nel browser. Non
-            serve installare niente e non serve un account.
+            Il pulsante apre la riunione in una finestra nuova, nell&apos;app o nel browser.
           </p>
           <a
             href={diretta}
