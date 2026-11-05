@@ -37,6 +37,9 @@ model User {
   role         Role
   // Percorso scelto dallo studente (vedi src/lib/tracks.ts).
   track        String   @default("PROFESSIONI_SANITARIE")
+  // Bloccato sul suo percorso: il selettore sparisce e lo studente vede solo
+  // `track`. Serve agli iscritti a un solo corso (es. solo Semestre filtro).
+  trackLocked  Boolean  @default(false)
   createdAt    DateTime @default(now())
 
   testsCreated Test[]           @relation("TestCreator")

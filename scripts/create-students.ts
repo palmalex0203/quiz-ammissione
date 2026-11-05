@@ -12,11 +12,15 @@
  * Uso:
  *   npx tsx scripts/create-students.ts --in studenti.txt
  *   ... --dominio profor.it     dominio per le email generate
+ *   ... --percorso SEMESTRE_FILTRO   percorso assegnato (default Professioni Sanitarie)
+ *   ... --blocca                 lo studente vede solo quel percorso, senza selettore
+ *   ... --password-nome          password = NOME e COGNOME maiuscoli, senza spazi
  */
 import "dotenv/config";
 import { readFileSync } from "node:fs";
 import bcrypt from "bcryptjs";
 import { prisma } from "../src/lib/prisma";
+import { DEFAULT_TRACK, isTrackId } from "../src/lib/tracks";
 
 const arg = (name: string, fallback: string | null = null) => {
   const i = process.argv.indexOf(name);
@@ -24,6 +28,15 @@ const arg = (name: string, fallback: string | null = null) => {
 };
 const IN = arg("--in");
 const DOMINIO = arg("--dominio", "profor.it")!;
+const PERCORSO = arg("--percorso", DEFAULT_TRACK)!;
+const BLOCCA = process.argv.includes("--blocca");
+const PASSWORD_NOME = process.argv.includes("--password-nome");
+if (!isTrackId(PERCORSO)) throw new Error(`Percorso sconosciuto: ${PERCORSO}`);
+
+// "Matteo Arciello" -> "MATTEOARCIELLO": lettere soltanto, senza accenti né apostrofi.
+function passwordDaNome(nome: string): string {
+  return nome.normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^A-Za-z]/g, "").toUpperCase();
+}
 
 // Niente caratteri ambigui (0/O, 1/l/I): le password vengono lette e digitate a mano.
 const ALFABETO = "abcdefghijkmnpqrstuvwxyz23456789";
@@ -67,9 +80,16 @@ async function main() {
       continue;
     }
 
-    const password = passwordCasuale();
+    const password = PASSWORD_NOME ? passwordDaNome(nome) : passwordCasuale();
     await prisma.user.create({
-      data: { name: nome, email, passwordHash: await bcrypt.hash(password, 10), role: "STUDENT" },
+      data: {
+        name: nome,
+        email,
+        passwordHash: await bcrypt.hash(password, 10),
+        role: "STUDENT",
+        track: PERCORSO,
+        trackLocked: BLOCCA,
+      },
     });
     creati.push({ nome, email, password });
   }

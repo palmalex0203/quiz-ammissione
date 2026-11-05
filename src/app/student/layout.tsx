@@ -5,7 +5,7 @@ import { AppHeader } from "@/components/AppHeader";
 import { AppSidebar, type NavLink } from "@/components/AppSidebar";
 import { BottomNav } from "@/components/BottomNav";
 import { TrackSwitcher } from "@/components/TrackSwitcher";
-import { currentTrackId } from "@/lib/track-session";
+import { currentTrackId, lockedTrackId } from "@/lib/track-session";
 import { switchTrack } from "@/app/student/track-actions";
 
 const LINKS: NavLink[] = [
@@ -23,6 +23,7 @@ export default async function StudentLayout({ children }: { children: ReactNode 
   }
 
   const trackId = await currentTrackId(session.user.id);
+  const locked = (await lockedTrackId()) !== null;
   const userName = session.user.name ?? "Studente";
 
   async function signOutAction() {
@@ -38,7 +39,7 @@ export default async function StudentLayout({ children }: { children: ReactNode 
         userName={userName}
         userRole="Studente"
         signOutAction={signOutAction}
-        aside={<TrackSwitcher current={trackId} action={switchTrack} tone="dark" />}
+        aside={<TrackSwitcher current={trackId} action={switchTrack} locked={locked} tone="dark" />}
       />
       <div className="app-shell flex min-w-0 flex-1 flex-col">
         <AppHeader
@@ -47,7 +48,7 @@ export default async function StudentLayout({ children }: { children: ReactNode 
           maxWidth="max-w-4xl"
           userName={userName}
           signOutAction={signOutAction}
-          aside={<TrackSwitcher current={trackId} action={switchTrack} />}
+          aside={<TrackSwitcher current={trackId} action={switchTrack} locked={locked} />}
         />
         {/* pb-24: spazio per la barra delle sezioni, che su telefono è fissa in basso */}
         <main className="mx-auto w-full max-w-4xl px-4 py-8 pb-32 sm:px-6 lg:py-10 lg:pb-10">{children}</main>

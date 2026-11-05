@@ -18,10 +18,13 @@ import { ALL_TRACKS, TRACKS, type TrackId } from "@/lib/tracks";
 export function TrackSwitcher({
   current,
   action,
+  locked = false,
   tone = "light",
 }: {
   current: TrackId;
   action: (formData: FormData) => void | Promise<void>;
+  // Studente iscritto a un solo percorso: si mostra quale, senza menu.
+  locked?: boolean;
   tone?: "light" | "dark";
 }) {
   const [open, setOpen] = useState(false);
@@ -34,6 +37,30 @@ export function TrackSwitcher({
   if (shown !== current) {
     setShown(current);
     setOpen(false);
+  }
+
+  if (locked) {
+    return (
+      <div
+        className={`flex flex-col leading-tight ${
+          dark
+            ? "w-full rounded-2xl border border-sidebar-line bg-white/5 px-3 py-2"
+            : "shrink-0 rounded-full border border-line bg-brand-tint px-3 py-1.5"
+        }`}
+      >
+        <span
+          className={`text-[0.625rem] font-semibold uppercase tracking-wider ${
+            dark ? "text-sidebar-muted" : "text-muted"
+          }`}
+        >
+          Percorso
+        </span>
+        <span className="truncate text-sm font-semibold">
+          <span className={dark ? "" : "hidden sm:inline"}>{track.label}</span>
+          {!dark && <span className="sm:hidden">{track.short}</span>}
+        </span>
+      </div>
+    );
   }
 
   return (

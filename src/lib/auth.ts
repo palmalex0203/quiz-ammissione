@@ -28,6 +28,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
           name: user.name,
           email: user.email,
           role: user.role,
+          lockedTrack: user.trackLocked ? user.track : null,
         };
       },
     }),
@@ -37,6 +38,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       if (user) {
         token.id = user.id as string;
         token.role = user.role;
+        token.lockedTrack = user.lockedTrack ?? null;
       }
       return token;
     },
@@ -44,6 +46,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       if (session.user) {
         session.user.id = token.id as string;
         session.user.role = token.role as "TEACHER" | "STUDENT";
+        session.user.lockedTrack = (token.lockedTrack as string | null | undefined) ?? null;
       }
       return session;
     },

@@ -17,6 +17,8 @@ export async function switchTrack(formData: FormData): Promise<void> {
 
   const track = String(formData.get("track") ?? "");
   if (!isTrackId(track)) throw new Error("Percorso non valido.");
+  // Bloccato su un percorso: la scelta non si cambia.
+  if (session.user.lockedTrack) redirect("/student/dashboard");
 
   (await cookies()).set(TRACK_COOKIE, track, {
     maxAge: COOKIE_MAX_AGE,
