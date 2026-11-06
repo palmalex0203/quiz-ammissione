@@ -1,7 +1,9 @@
 import { prisma } from "@/lib/prisma";
 import { EmptyState } from "@/components/EmptyState";
 import { requireTeacherTrack } from "@/lib/track-docente";
-import { durata, urlDirettaValido } from "@/lib/lezioni";
+import { FUSO, durata, lezioneFinita, urlDirettaValido } from "@/lib/lezioni";
+import { aspettaRegistrazione, registrazioniAttive } from "@/lib/registrazioni";
+import { AttendiRegistrazione } from "@/components/AttendiRegistrazione";
 import { TOPICS_BY_TRACK, topicLabel } from "@/lib/topics";
 import { cambiaPubblicazioneLezione } from "./actions";
 import { NuovaLezione } from "./NuovaLezione";
@@ -34,6 +36,7 @@ export default async function TeacherLezioniPage() {
       durataMinuti: true,
       fornitore: true,
       urlDiretta: true,
+      urlRegistrazione: true,
       isPublished: true,
     },
   });
@@ -47,6 +50,8 @@ export default async function TeacherLezioniPage() {
   }));
 
   const pubblicate = lezioni.filter((l) => l.isPublished).length;
+  const inAttesa = lezioni.filter((l) => l.isPublished && aspettaRegistrazione(l)).map((l) => l.id);
+  const automatico = registrazioniAttive();
 
   return (
     <div className="flex flex-col gap-6">
@@ -62,6 +67,7 @@ export default async function TeacherLezioniPage() {
       </div>
 
       <NuovaLezione gruppi={gruppi} />
+      {inAttesa.length > 0 && <AttendiRegistrazione lezioni={inAttesa} />}
 
       {lezioni.length === 0 ? (
         <EmptyState
@@ -96,6 +102,7 @@ export default async function TeacherLezioniPage() {
                     {inDiretta ? "In diretta" : `Registrata su ${l.fornitore ?? "—"}`}
                     {" · "}
                     {l.data.toLocaleString("it-IT", {
+                      timeZone: FUSO,
                       day: "numeric",
                       month: "long",
                       year: "numeric",
@@ -104,6 +111,20 @@ export default async function TeacherLezioniPage() {
                     })}
                     {quanto && ` · ${quanto}`}
                   </p>
+
+                  {inDiretta && lezioneFinita(l) && (
+                    <p className="mt-0.5 text-xs text-muted">
+                      {l.urlRegistrazione ? (
+                        <a href={l.urlRegistrazione} target="_blank" rel="noreferrer" className="font-medium text-brand-strong hover:underline">
+                          🎥 Registrazione pronta
+                        </a>
+                      ) : automatico ? (
+                        "⏳ Registrazione in arrivo: il sito la aggancia da solo appena Teams l'ha pronta."
+                      ) : (
+                        "Registrazione automatica non ancora collegata a Microsoft."
+                      )}
+                    </p>
+                  )}
 
                   {l.topic && (
                     <p className="mt-0.5 text-xs text-muted">

@@ -112,6 +112,8 @@ export type LezionePubblicata = {
   videoId: string | null;
   /** In diretta: l'indirizzo della riunione. Nullo se la lezione è registrata. */
   urlDiretta: string | null;
+  /** In diretta e finita: il link alla registrazione, quando è pronta. */
+  urlRegistrazione: string | null;
 };
 
 /** Le lezioni pubblicate di un percorso, dalla più recente. */
@@ -131,6 +133,7 @@ export const lezioniPubblicate = unstable_cache(
         fornitore: true,
         videoId: true,
         urlDiretta: true,
+        urlRegistrazione: true,
       },
     });
 
@@ -160,6 +163,7 @@ export const lezioniDiArgomento = unstable_cache(
         fornitore: true,
         videoId: true,
         urlDiretta: true,
+        urlRegistrazione: true,
       },
     });
 
@@ -177,4 +181,68 @@ export function durata(minuti: number | null): string | null {
   if (h === 0) return `${m} min`;
   if (m === 0) return `${h} h`;
   return `${h} h ${m} min`;
+}
+
+/** Senza durata indicata, una lezione si considera di due ore. */
+const DURATA_PREDEFINITA = 120;
+
+/** Quando finisce una lezione: inizio più durata. */
+export function fineLezione(l: { data: string | Date; durataMinuti: number | null }): Date {
+  const inizio = new Date(l.data).getTime();
+  const minuti = l.durataMinuti && l.durataMinuti > 0 ? l.durataMinuti : DURATA_PREDEFINITA;
+  return new Date(inizio + minuti * 60_000);
+}
+
+/** Il fuso delle lezioni: le date si leggono e si scrivono all'ora italiana. */
+export const FUSO = "Europe/Rome";
+
+/** Di quanti minuti Roma è avanti rispetto a UTC in quell'istante (60 o 120). */
+function scartoRoma(istante: Date): number {
+  const parti = Object.fromEntries(
+    new Intl.DateTimeFormat("en-US", {
+      timeZone: FUSO,
+      hourCycle: "h23",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+    })
+      .formatToParts(istante)
+      .map((p) => [p.type, p.value])
+  );
+  const comeUtc = Date.UTC(+parti.year, +parti.month - 1, +parti.day, +parti.hour, +parti.minute);
+  return Math.round((comeUtc - istante.getTime()) / 60_000);
+}
+
+/**
+ * Data e ora scritte nel modulo ("2026-11-05T16:00") lette come ora italiana.
+ *
+ * `new Date("2026-11-05T16:00")` usa il fuso del server, che su Vercel è UTC:
+ * la lezione delle 16 finiva salvata alle 17 italiane. Qui il fuso è esplicito.
+ */
+export function oraItaliana(campo: string): Date | null {
+  const m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/.exec(campo);
+  if (!m) return null;
+  const comeUtc = Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5]);
+  const prima = new Date(comeUtc - scartoRoma(new Date(comeUtc)) * 60_000);
+  // Vicino al cambio dell'ora lo scarto giusto è quello dell'istante trovato.
+  return new Date(comeUtc - scartoRoma(prima) * 60_000);
+}
+
+/** Se la lezione è già finita adesso. */
+export function lezioneFinita(l: { data: string | Date; durataMinuti: number | null }): boolean {
+  return fineLezione(l).getTime() <= Date.now();
+}
+
+/**
+ * La data di una lezione come la legge uno studente, all'ora italiana. Per una
+ * diretta anche l'orario: a quella si partecipa a un'ora precisa.
+ */
+export function quandoLezione(data: string | Date, conOra: boolean): string {
+  const d = new Date(data);
+  const giorno = d.toLocaleDateString("it-IT", { timeZone: FUSO, day: "numeric", month: "long", year: "numeric" });
+  if (!conOra) return giorno;
+  const ora = d.toLocaleTimeString("it-IT", { timeZone: FUSO, hour: "2-digit", minute: "2-digit" });
+  return `${giorno}, ore ${ora}`;
 }

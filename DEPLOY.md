@@ -36,3 +36,32 @@ Se lo schema del database cambia, prima di fare il push serve applicare la nuova
 ## Account insegnante e studenti in produzione
 
 L'account insegnante viene creato una sola volta dal seed (passo 3). Gli account studente si creano poi direttamente dall'app, dalla pagina "Studenti" dell'insegnante — non serve più toccare il seed.
+
+## Registrazioni automatiche delle lezioni (Teams → simulatore)
+
+Finita una lezione in diretta, il sito chiede a Microsoft la registrazione e,
+quando è pronta, mette nella scheda il pulsante «Guarda la registrazione»
+(link OneDrive "chiunque abbia il link"). Il codice è in `src/lib/registrazioni.ts`.
+
+Serve, una volta sola, nel Microsoft 365 della scuola (da amministratore):
+
+1. **Entra → Registrazioni app → Nuova registrazione**, nome «Simulatore Profor».
+   Annotare *ID applicazione (client)* e *ID directory (tenant)*.
+2. **Autorizzazioni API → Microsoft Graph → Autorizzazioni applicazione**:
+   `OnlineMeetings.Read.All`, `OnlineMeetingRecording.Read.All`, `Files.ReadWrite.All`,
+   poi **Concedi consenso amministratore**.
+3. **Certificati e segreti → Nuovo segreto client**: copiare il *Valore*.
+4. **Entra → Utenti →** l'account che crea le riunioni: copiare l'*ID oggetto*.
+5. Policy di Teams per l'app (PowerShell, modulo `MicrosoftTeams`):
+   ```powershell
+   Connect-MicrosoftTeams
+   New-CsApplicationAccessPolicy -Identity Simulatore-Registrazioni -AppIds "<ID applicazione>" -Description "Simulatore: registrazioni delle lezioni"
+   Grant-CsApplicationAccessPolicy -PolicyName Simulatore-Registrazioni -Identity "<ID oggetto organizzatore>"
+   ```
+   Può metterci fino a 30 minuti ad attivarsi.
+6. **SharePoint admin → Criteri → Condivisione**: OneDrive almeno su «Chiunque».
+7. Su **Vercel → Settings → Environment Variables** (Production):
+   `MS_TENANT_ID`, `MS_CLIENT_ID`, `MS_CLIENT_SECRET`, `MS_ORGANIZZATORE_ID`, poi un redeploy.
+
+Senza queste variabili il sito funziona lo stesso: a lezione finita mostra
+«la registrazione arriva a breve» e non cerca niente.

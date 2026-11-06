@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { requireStudentTrack } from "@/lib/track-session";
-import { durata, lezioniPubblicate, urlDirettaValido, urlLettore } from "@/lib/lezioni";
+import { durata, lezioneFinita, lezioniPubblicate, quandoLezione, urlDirettaValido, urlLettore } from "@/lib/lezioni";
+import { urlRegistrazioneValido } from "@/lib/registrazioni";
+import { AttendiRegistrazione } from "@/components/AttendiRegistrazione";
 import { publishedNoteTopics } from "@/lib/notes";
 import { topicLabel } from "@/lib/topics";
 import { EVENTO } from "@/lib/open-day-evento";
@@ -37,6 +39,11 @@ export default async function StudentLezionePage({ params }: { params: Promise<{
     lezione.fornitore && lezione.videoId ? urlLettore(lezione.fornitore, lezione.videoId) : null;
   if (!lettore && !diretta) notFound();
 
+  // Una diretta ha tre momenti: prima e durante c'è il pulsante per entrare;
+  // finita, si aspetta la registrazione; poi c'è il pulsante per guardarla.
+  const registrazione = urlRegistrazioneValido(lezione.urlRegistrazione);
+  const finita = diretta !== null && lezioneFinita(lezione);
+
   const quanto = durata(lezione.durataMinuti);
   const appunto = lezione.topic ? (await publishedNoteTopics(track.id))[lezione.topic] : undefined;
   const conAppunto = appunto !== undefined;
@@ -49,11 +56,7 @@ export default async function StudentLezionePage({ params }: { params: Promise<{
         </Link>
         <h1 className="page-title mt-2">{lezione.titolo}</h1>
         <p className="mt-1 text-sm text-muted">
-          {new Date(lezione.data).toLocaleDateString("it-IT", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })}
+          {quandoLezione(lezione.data, diretta !== null)}
           {quanto && <> · {quanto}</>}
           {lezione.subject && <> · {lezione.subject}</>}
         </p>
@@ -77,7 +80,41 @@ export default async function StudentLezionePage({ params }: { params: Promise<{
       {/* La diretta non si incorpora: Teams rifiuta di farsi mettere in un
           iframe e rimanda comunque all'app. Quindi non si finge un lettore —
           si dice dove si va e ci si va. */}
-      {diretta && (
+      {diretta && registrazione && (
+        <div className="card border-brand/40 bg-brand-tint p-6 sm:p-8">
+          <p className="pill pill-brand">Registrazione</p>
+          <p className="mt-3 font-display text-xl font-bold tracking-tight">
+            La registrazione della lezione è pronta
+          </p>
+          <p className="mt-1 text-sm leading-relaxed text-muted">
+            Il pulsante apre il video in una finestra nuova. Puoi riguardarlo quante volte vuoi.
+          </p>
+          <a
+            href={registrazione}
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-brand mt-5 w-full py-3.5 text-base sm:w-auto"
+          >
+            Guarda la registrazione
+          </a>
+        </div>
+      )}
+
+      {diretta && !registrazione && finita && (
+        <div className="card p-6 sm:p-8">
+          <AttendiRegistrazione lezioni={[lezione.id]} />
+          <p className="pill">Lezione terminata</p>
+          <p className="mt-3 font-display text-xl font-bold tracking-tight">
+            La registrazione arriva a breve
+          </p>
+          <p className="mt-1 text-sm leading-relaxed text-muted">
+            Appena Teams l&apos;ha pronta compare qui, di solito entro un&apos;ora dalla fine. Non serve
+            ricaricare: questa pagina si aggiorna da sola.
+          </p>
+        </div>
+      )}
+
+      {diretta && !registrazione && !finita && (
         <div className="card border-brand/40 bg-brand-tint p-6 sm:p-8">
           <p className="pill pill-brand">In diretta</p>
           <p className="mt-3 font-display text-xl font-bold tracking-tight">

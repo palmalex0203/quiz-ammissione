@@ -4,7 +4,7 @@ import { revalidatePath, updateTag } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { requireTeacher } from "@/lib/permissions";
 import { requireTeacherTrack } from "@/lib/track-docente";
-import { LEZIONI_TAG, leggiVideo, urlDirettaValido } from "@/lib/lezioni";
+import { LEZIONI_TAG, leggiVideo, oraItaliana, urlDirettaValido } from "@/lib/lezioni";
 import { isKnownTopic, topicSubject, topicTrack } from "@/lib/topics";
 
 /*
@@ -50,7 +50,8 @@ export async function creaLezione(_prec: StatoLezione, formData: FormData): Prom
     };
   }
 
-  const data = quando ? new Date(quando) : null;
+  // Il modulo dà data e ora senza fuso: sono ore italiane, non del server.
+  const data = quando ? oraItaliana(quando) : null;
   if (!data || Number.isNaN(data.getTime())) return { errore: "La data non è valida." };
 
   const durataMinuti = durataGrezza ? Number(durataGrezza) : null;

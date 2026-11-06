@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { requireStudentTrack } from "@/lib/track-session";
 import { EmptyState } from "@/components/EmptyState";
-import { durata, lezioniPubblicate, urlDirettaValido } from "@/lib/lezioni";
+import { durata, lezioneFinita, lezioniPubblicate, quandoLezione, urlDirettaValido } from "@/lib/lezioni";
+import { aspettaRegistrazione } from "@/lib/registrazioni";
+import { AttendiRegistrazione } from "@/components/AttendiRegistrazione";
 import { topicLabel } from "@/lib/topics";
 import { iconaMateria } from "@/lib/appunti-materie";
 
@@ -21,6 +23,10 @@ export default async function StudentLezioniPage() {
   // a quella si partecipa a un'ora precisa, non la si riguarda quando si vuole.
   const conDirette = lezioni.some((l) => urlDirettaValido(l.urlDiretta) !== null);
 
+  // Le dirette finite che aspettano ancora il video: la pagina chiede al server
+  // se sono pronte, e si ricarica da sola quando una arriva.
+  const inAttesa = lezioni.filter((l) => aspettaRegistrazione(l)).map((l) => l.id);
+
   const sottotitolo =
     lezioni.length === 0
       ? `Le lezioni di ${track.label}: ancora nessuna pubblicata.`
@@ -34,6 +40,8 @@ export default async function StudentLezioniPage() {
         <h1 className="page-title">Lezioni</h1>
         <p className="mt-1 text-sm text-muted">{sottotitolo}</p>
       </div>
+
+      {inAttesa.length > 0 && <AttendiRegistrazione lezioni={inAttesa} />}
 
       {lezioni.length === 0 ? (
         <EmptyState
@@ -61,14 +69,12 @@ export default async function StudentLezioniPage() {
                       {l.titolo}
                     </span>
                     {inDiretta && (
-                      <span className="pill pill-brand mt-1.5">In diretta</span>
+                      <span className="pill pill-brand mt-1.5">
+                        {l.urlRegistrazione ? "Registrazione" : lezioneFinita(l) ? "Terminata" : "In diretta"}
+                      </span>
                     )}
                     <span className="mt-1 block text-xs text-muted">
-                      {new Date(l.data).toLocaleDateString("it-IT", {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                      })}
+                      {quandoLezione(l.data, inDiretta)}
                       {quanto && <> · {quanto}</>}
                       {l.topic && <> · {topicLabel(l.topic) ?? l.topic}</>}
                     </span>

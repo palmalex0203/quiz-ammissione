@@ -320,6 +320,11 @@ model Lezione {
   // un fornitore riconosciuto: vedi `urlDirettaValido` in src/lib/lezioni.ts.
   urlDiretta String?
 
+  // Finita la diretta: il link alla registrazione nel OneDrive della scuola.
+  // Lo scrive il sito da solo quando Teams l'ha pronta (src/lib/registrazioni.ts),
+  // non lo incolla nessuno.
+  urlRegistrazione String?
+
   // Come per gli appunti: una lezione la vedono gli studenti solo quando
   // l'insegnante l'ha riguardata e pubblicata.
   isPublished Boolean  @default(false)
