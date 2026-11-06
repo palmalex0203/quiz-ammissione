@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { requireStudentTrack } from "@/lib/track-session";
 import { publishedNotes } from "@/lib/notes";
-import { topicLabel, topicsOf } from "@/lib/topics";
+import { argomentoDi, topicLabel, topicsOf } from "@/lib/topics";
 import { iconaMateria } from "@/lib/appunti-materie";
 
 /*
@@ -35,6 +35,9 @@ export default async function AppuntiMateriaPage({
   if (voci.length === 0) notFound();
 
   const totale = topicsOf(track.id, nome).length;
+  // Un argomento può avere più dispense (una per lezione): si contano gli
+  // argomenti coperti, non le righe.
+  const coperti = new Set(voci.map((n) => argomentoDi(n.topic))).size;
 
   return (
     <div className="flex flex-col gap-6">
@@ -50,7 +53,7 @@ export default async function AppuntiMateriaPage({
           <div className="min-w-0">
             <h1 className="page-title">{nome}</h1>
             <p className="text-sm text-muted">
-              {voci.length} {voci.length === 1 ? "argomento" : "argomenti"} su {totale}
+              {coperti} {coperti === 1 ? "argomento" : "argomenti"} su {totale}
             </p>
           </div>
         </div>

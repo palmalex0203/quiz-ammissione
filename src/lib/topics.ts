@@ -121,6 +121,19 @@ export function isKnownTopic(code: string): boolean {
   return ALL_TOPICS.has(code);
 }
 
+/**
+ * L'argomento a cui appartiene un appunto.
+ *
+ * Di solito un appunto copre un argomento intero e il suo codice è quello
+ * dell'argomento ("SF-BIO-01"). Le dispense del docente invece seguono le
+ * lezioni, e più lezioni cadono nello stesso argomento: quelle si distinguono
+ * con un suffisso ("SF-BIO-01-L01", "SF-BIO-01-L02"), che qui si toglie per
+ * risalire all'argomento (domande, lezioni, esercitazioni mirate).
+ */
+export function argomentoDi(codiceAppunto: string): string {
+  return codiceAppunto.replace(/-L\d+$/, "");
+}
+
 // Quante domande contiene un'esercitazione mirata su un singolo argomento. Se
 // l'argomento ne ha meno, l'esercitazione si accorcia invece di fallire.
 export const TOPIC_PRACTICE_SIZE = 15;

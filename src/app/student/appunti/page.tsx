@@ -2,7 +2,7 @@ import Link from "next/link";
 import { requireStudentTrack } from "@/lib/track-session";
 import { EmptyState } from "@/components/EmptyState";
 import { publishedNotes } from "@/lib/notes";
-import { topicsOf } from "@/lib/topics";
+import { argomentoDi, topicsOf } from "@/lib/topics";
 import { iconaMateria, percorsoMateria } from "@/lib/appunti-materie";
 
 /*
@@ -28,10 +28,12 @@ export default async function StudentAppuntiPage() {
     breve: m.short,
     icona: iconaMateria(m.name),
     totale: topicsOf(track.id, m.name).length,
-    pronti: note.filter((n) => n.subject === m.name).length,
+    // Argomenti coperti, non appunti: le dispense di più lezioni dello stesso
+    // argomento contano una volta.
+    pronti: new Set(note.filter((n) => n.subject === m.name).map((n) => argomentoDi(n.topic))).size,
   }));
 
-  const pronti = note.length;
+  const pronti = materie.reduce((n, m) => n + m.pronti, 0);
   const argomenti = materie.reduce((n, m) => n + m.totale, 0);
 
   return (

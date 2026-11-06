@@ -2,6 +2,7 @@ import { unstable_cache } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { indiceDi, renderMarkdown, type VoceIndice } from "@/lib/markdown";
 import type { TrackId } from "@/lib/tracks";
+import { argomentoDi } from "@/lib/topics";
 
 /*
  * Gli appunti pubblicati, tenuti da parte fra una richiesta e l'altra.
@@ -72,7 +73,7 @@ export const publishedNote = unstable_cache(
       updatedAt: nota.updatedAt.toISOString(),
     };
   },
-  ["appunto-pubblicato"],
+  ["appunto-pubblicato-2"],
   { tags: [NOTES_TAG], revalidate: UN_ORA }
 );
 
@@ -108,22 +109,27 @@ export const publishedNotes = unstable_cache(
       parole: r.body.trim().split(/\s+/).filter(Boolean).length,
     }));
   },
-  ["appunti-pubblicati"],
+  ["appunti-pubblicati-2"],
   { tags: [NOTES_TAG], revalidate: UN_ORA }
 );
 
 /**
- * I codici degli argomenti che hanno un appunto pubblicato in questo percorso:
- * servono a "Esercitati" per mostrare il collegamento "Ripassa".
+ * Gli argomenti che hanno almeno un appunto pubblicato in questo percorso, ognuno
+ * con l'appunto da aprire: servono a "Esercitati" e alle lezioni per mostrare il
+ * collegamento "Ripassa". Se un argomento ha più appunti (le dispense delle
+ * singole lezioni) si apre il primo, cioè la lezione 1.
  */
 export const publishedNoteTopics = unstable_cache(
-  async (trackId: TrackId): Promise<string[]> => {
+  async (trackId: TrackId): Promise<Record<string, string>> => {
     const righe = await prisma.topicNote.findMany({
       where: { track: trackId, isPublished: true },
+      orderBy: { topic: "asc" },
       select: { topic: true },
     });
-    return righe.map((r) => r.topic);
+    const primo: Record<string, string> = {};
+    for (const { topic } of righe) primo[argomentoDi(topic)] ??= topic;
+    return primo;
   },
-  ["appunti-pubblicati-elenco"],
+  ["appunti-pubblicati-per-argomento"],
   { tags: [NOTES_TAG], revalidate: UN_ORA }
 );

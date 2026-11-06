@@ -38,7 +38,8 @@ export default async function StudentLezionePage({ params }: { params: Promise<{
   if (!lettore && !diretta) notFound();
 
   const quanto = durata(lezione.durataMinuti);
-  const conAppunto = lezione.topic ? (await publishedNoteTopics(track.id)).includes(lezione.topic) : false;
+  const appunto = lezione.topic ? (await publishedNoteTopics(track.id))[lezione.topic] : undefined;
+  const conAppunto = appunto !== undefined;
 
   return (
     <div className="flex flex-col gap-6">
@@ -116,7 +117,7 @@ export default async function StudentLezionePage({ params }: { params: Promise<{
             </p>
           </div>
           {conAppunto && (
-            <Link href={`/student/appunti/${lezione.topic}`} className="btn btn-soft shrink-0">
+            <Link href={`/student/appunti/${appunto}`} className="btn btn-soft shrink-0">
               Vai all&apos;appunto
             </Link>
           )}

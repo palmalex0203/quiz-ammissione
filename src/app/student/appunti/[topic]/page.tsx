@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { requireStudentTrack } from "@/lib/track-session";
 import { SubmitButton } from "@/components/SubmitButton";
 import { publishedNote } from "@/lib/notes";
-import { topicLabel, MIN_TOPIC_QUESTIONS } from "@/lib/topics";
+import { argomentoDi, topicLabel, MIN_TOPIC_QUESTIONS } from "@/lib/topics";
 import { poolCounts } from "@/lib/question-pool";
 import { percorsoMateria } from "@/lib/appunti-materie";
 import { durata, lezioniDiArgomento } from "@/lib/lezioni";
@@ -20,17 +20,20 @@ import { generateTopicPractice } from "@/app/student/dashboard/actions";
 export default async function StudentNotePage({ params }: { params: Promise<{ topic: string }> }) {
   const { topic } = await params;
   const { track } = await requireStudentTrack();
+  // Le dispense delle singole lezioni ("SF-BIO-01-L02") condividono domande,
+  // lezioni ed esercitazione con il loro argomento ("SF-BIO-01").
+  const argomento = argomentoDi(topic);
 
   const [nota, pool, lezioni] = await Promise.all([
     publishedNote(topic),
     poolCounts(track.id),
-    lezioniDiArgomento(track.id, topic),
+    lezioniDiArgomento(track.id, argomento),
   ]);
 
   // Una bozza, o un appunto di un altro percorso, per lo studente non esiste.
   if (!nota || nota.track !== track.id) notFound();
 
-  const domande = pool.byTopic.get(topic) ?? 0;
+  const domande = pool.byTopic.get(argomento) ?? 0;
 
   return (
     <div className="flex flex-col gap-6">
@@ -113,7 +116,7 @@ export default async function StudentNotePage({ params }: { params: Promise<{ to
                 </p>
               </div>
               <form action={generateTopicPractice}>
-                <input type="hidden" name="topic" value={nota.topic} />
+                <input type="hidden" name="topic" value={argomento} />
                 <SubmitButton pendingText="Preparo l'esercitazione…" className="btn btn-on-brand w-full sm:w-auto">
                   Allenati su questo argomento
                 </SubmitButton>

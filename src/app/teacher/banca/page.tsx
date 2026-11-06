@@ -35,7 +35,7 @@ export default async function TeacherBancaPage({
     lezioniPubblicate(trackId),
   ]);
 
-  const appunti = new Set(conAppunto);
+  const appunti = new Set(Object.keys(conAppunto));
   const lezioniPerArgomento = new Map<string, number>();
   for (const l of lezioni) {
     if (l.topic) lezioniPerArgomento.set(l.topic, (lezioniPerArgomento.get(l.topic) ?? 0) + 1);

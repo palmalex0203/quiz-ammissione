@@ -4,11 +4,14 @@
 // Formato JSON atteso: un array di domande
 // [{ subject: string, text: string, options: [{ text: string, isCorrect: boolean }] }, ...]
 //
-// Uso: npx tsx scripts/import-test.ts <percorso-questions.json> "<Titolo del test>" ["<descrizione>"] ["<kind>"] ["<folder>"]
+// Uso: npx tsx scripts/import-test.ts <percorso-questions.json> "<Titolo del test>" ["<descrizione>"] ["<kind>"] ["<folder>"] ["<track>"]
 // kind: SIMULAZIONE (default) o ESERCITAZIONE. folder: etichetta di raggruppamento (es. "Chimica").
+// track: PROFESSIONI_SANITARIE (default) o SEMESTRE_FILTRO. Senza, un test del semestre
+// filtro finirebbe nell'altro percorso e i suoi studenti non lo vedrebbero.
 import "dotenv/config";
 import { readFileSync } from "node:fs";
 import { prisma } from "../src/lib/prisma";
+import { isTrackId } from "../src/lib/tracks";
 
 type ImportedOption = { text: string; isCorrect: boolean };
 type ImportedQuestion = {
@@ -19,7 +22,8 @@ type ImportedQuestion = {
 };
 
 async function main() {
-  const [jsonPath, title, description, kind, folder] = process.argv.slice(2);
+  const [jsonPath, title, description, kind, folder, track] = process.argv.slice(2);
+  if (track && !isTrackId(track)) throw new Error(`Percorso sconosciuto: ${track}`);
   if (!jsonPath || !title) {
     console.error('Uso: npx tsx scripts/import-test.ts <percorso-questions.json> "<Titolo del test>" ["<descrizione>"]');
     process.exit(1);
@@ -45,7 +49,8 @@ async function main() {
       createdById: teacher.id,
       isPublished: true,
       kind: kind ?? "SIMULAZIONE",
-      folder: folder ?? null,
+      folder: folder || null,
+      ...(track ? { track } : {}),
       questions: {
         create: questions.map((q, i) => ({
           type: q.type ?? "MULTIPLE_CHOICE",

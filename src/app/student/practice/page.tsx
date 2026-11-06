@@ -60,7 +60,7 @@ export default async function StudentPracticePage({
     }),
   ]);
 
-  const conAppunto = new Set(appunti);
+  const conAppunto = new Map(Object.entries(appunti));
 
   const subjectPct = new Map(
     subjectTotals
@@ -230,7 +230,7 @@ export default async function StudentPracticePage({
                         </span>
                       )}
                       {conAppunto.has(topic.code) && (
-                        <Link href={`/student/appunti/${topic.code}`} className="btn btn-sm btn-soft">
+                        <Link href={`/student/appunti/${conAppunto.get(topic.code)}`} className="btn btn-sm btn-soft">
                           Ripassa
                         </Link>
                       )}

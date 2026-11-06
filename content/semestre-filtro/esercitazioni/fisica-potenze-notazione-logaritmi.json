@@ -1,0 +1,522 @@
+[
+  {
+    "subject": "Fisica",
+    "text": "Calcola: 2⁵ · 2³",
+    "options": [
+      {
+        "text": "2⁸",
+        "isCorrect": true
+      },
+      {
+        "text": "2¹⁵",
+        "isCorrect": false
+      },
+      {
+        "text": "2²",
+        "isCorrect": false
+      },
+      {
+        "text": "2⁵",
+        "isCorrect": false
+      },
+      {
+        "text": "2¹⁰",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "(3²)⁴ è uguale a:",
+    "options": [
+      {
+        "text": "3⁶",
+        "isCorrect": false
+      },
+      {
+        "text": "3⁸",
+        "isCorrect": true
+      },
+      {
+        "text": "3⁴",
+        "isCorrect": false
+      },
+      {
+        "text": "9⁸",
+        "isCorrect": false
+      },
+      {
+        "text": "3¹⁶",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "10⁻³ corrisponde a:",
+    "options": [
+      {
+        "text": "10",
+        "isCorrect": false
+      },
+      {
+        "text": "0.01",
+        "isCorrect": false
+      },
+      {
+        "text": "1000",
+        "isCorrect": false
+      },
+      {
+        "text": "0.0001",
+        "isCorrect": false
+      },
+      {
+        "text": "0.001",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "Scrivi 4500 in notazione scientifica (ricordati che è preferibile che la parte non in potenza di 10 sia compresa tra 1 e 10…):",
+    "options": [
+      {
+        "text": "0.45×10⁴",
+        "isCorrect": false
+      },
+      {
+        "text": "45×10¹",
+        "isCorrect": false
+      },
+      {
+        "text": "4.5×10³",
+        "isCorrect": true
+      },
+      {
+        "text": "4.5×10⁴",
+        "isCorrect": false
+      },
+      {
+        "text": "45×10³",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "(2³ · 5³) è uguale a:",
+    "options": [
+      {
+        "text": "10³",
+        "isCorrect": true
+      },
+      {
+        "text": "7³",
+        "isCorrect": false
+      },
+      {
+        "text": "2⁶",
+        "isCorrect": false
+      },
+      {
+        "text": "5⁶",
+        "isCorrect": false
+      },
+      {
+        "text": "8³",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "log₁₀(1000) vale:",
+    "options": [
+      {
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "text": "3",
+        "isCorrect": true
+      },
+      {
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "text": "0",
+        "isCorrect": false
+      },
+      {
+        "text": "10",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "log₁₀(0.01) vale:",
+    "options": [
+      {
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "text": "-1",
+        "isCorrect": false
+      },
+      {
+        "text": "-2",
+        "isCorrect": true
+      },
+      {
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "text": "0",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "log₂(8) vale:",
+    "options": [
+      {
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "text": "3",
+        "isCorrect": true
+      },
+      {
+        "text": "4",
+        "isCorrect": false
+      },
+      {
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "text": "8",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "15⁰ – 5⁰ fa:",
+    "options": [
+      {
+        "text": "-1",
+        "isCorrect": false
+      },
+      {
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "text": "10",
+        "isCorrect": false
+      },
+      {
+        "text": "0",
+        "isCorrect": true
+      },
+      {
+        "text": "indefinito",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "10⁵ / 10² =",
+    "options": [
+      {
+        "text": "10¹⁰",
+        "isCorrect": false
+      },
+      {
+        "text": "10⁷",
+        "isCorrect": false
+      },
+      {
+        "text": "10²",
+        "isCorrect": false
+      },
+      {
+        "text": "10³",
+        "isCorrect": true
+      },
+      {
+        "text": "10⁵",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "(4×10²)(2×10³) =",
+    "options": [
+      {
+        "text": "8×10⁶",
+        "isCorrect": false
+      },
+      {
+        "text": "6×10⁵",
+        "isCorrect": false
+      },
+      {
+        "text": "8×10⁵",
+        "isCorrect": true
+      },
+      {
+        "text": "6×10⁶",
+        "isCorrect": false
+      },
+      {
+        "text": "8×10⁴",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "log(a·b) =",
+    "options": [
+      {
+        "text": "log a + log b",
+        "isCorrect": true
+      },
+      {
+        "text": "log a - log b",
+        "isCorrect": false
+      },
+      {
+        "text": "log(a/b)",
+        "isCorrect": false
+      },
+      {
+        "text": "(log a)(log b)",
+        "isCorrect": false
+      },
+      {
+        "text": "log aᵇ",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "log(aᵇ) =",
+    "options": [
+      {
+        "text": "b log a",
+        "isCorrect": true
+      },
+      {
+        "text": "log a + log b",
+        "isCorrect": false
+      },
+      {
+        "text": "log a / log b",
+        "isCorrect": false
+      },
+      {
+        "text": "a log b",
+        "isCorrect": false
+      },
+      {
+        "text": "log(a+b)",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "2⁻² =",
+    "options": [
+      {
+        "text": "4",
+        "isCorrect": false
+      },
+      {
+        "text": "-4",
+        "isCorrect": false
+      },
+      {
+        "text": "1/4",
+        "isCorrect": true
+      },
+      {
+        "text": "-1/4",
+        "isCorrect": false
+      },
+      {
+        "text": "2",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "0.00056 in notazione scientifica (vale quanto detto nella domanda 4):",
+    "options": [
+      {
+        "text": "5.6×10⁻⁵",
+        "isCorrect": false
+      },
+      {
+        "text": "5.6×10⁻³",
+        "isCorrect": false
+      },
+      {
+        "text": "56×10⁻⁵",
+        "isCorrect": false
+      },
+      {
+        "text": "0.56×10⁻³",
+        "isCorrect": false
+      },
+      {
+        "text": "5.6×10⁻⁴",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "log₁₀(1) =",
+    "options": [
+      {
+        "text": "1",
+        "isCorrect": false
+      },
+      {
+        "text": "0",
+        "isCorrect": true
+      },
+      {
+        "text": "-1",
+        "isCorrect": false
+      },
+      {
+        "text": "10",
+        "isCorrect": false
+      },
+      {
+        "text": "indefinito",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "3⁴ · 3⁻² =",
+    "options": [
+      {
+        "text": "3⁶",
+        "isCorrect": false
+      },
+      {
+        "text": "3²",
+        "isCorrect": true
+      },
+      {
+        "text": "3⁻⁶",
+        "isCorrect": false
+      },
+      {
+        "text": "3⁻²",
+        "isCorrect": false
+      },
+      {
+        "text": "1",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "(10³)⁻² =",
+    "options": [
+      {
+        "text": "10000",
+        "isCorrect": false
+      },
+      {
+        "text": "100000",
+        "isCorrect": false
+      },
+      {
+        "text": "1000000",
+        "isCorrect": false
+      },
+      {
+        "text": "10",
+        "isCorrect": false
+      },
+      {
+        "text": "0.000001",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "log₂(1/8) =",
+    "options": [
+      {
+        "text": "-3",
+        "isCorrect": true
+      },
+      {
+        "text": "3",
+        "isCorrect": false
+      },
+      {
+        "text": "-2",
+        "isCorrect": false
+      },
+      {
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "text": "0",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "subject": "Fisica",
+    "text": "(6×10⁻²)/(3×10⁻⁴) =",
+    "options": [
+      {
+        "text": "2×10⁴",
+        "isCorrect": false
+      },
+      {
+        "text": "2×10⁻²",
+        "isCorrect": false
+      },
+      {
+        "text": "3×10²",
+        "isCorrect": false
+      },
+      {
+        "text": "2×10²",
+        "isCorrect": true
+      },
+      {
+        "text": "2×10⁶",
+        "isCorrect": false
+      }
+    ]
+  }
+]

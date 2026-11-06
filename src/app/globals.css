@@ -265,8 +265,31 @@ body {
     font-weight: 700;
     margin-top: 1.75rem;
   }
+  .prose h4 {
+    font-weight: 700;
+    margin-top: 1.5rem;
+  }
   .prose h1 {
     display: none; /* il titolo è già nell'intestazione della pagina */
+  }
+  /* Le figure delle dispense: schemi su fondo bianco. Restano bianche anche
+     col tema scuro (sono disegnate così), con un bordo che le stacca. */
+  .prose img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-inline: auto;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 0.75rem;
+  }
+  /* La didascalia sta nel paragrafo subito sotto la figura, in corsivo. */
+  .prose p:has(> img) + p > em:only-child {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--muted);
+    text-align: center;
+    margin-top: -0.25rem;
   }
   .prose ul,
   .prose ol {

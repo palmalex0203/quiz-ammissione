@@ -21,7 +21,7 @@ import "dotenv/config";
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { prisma } from "../src/lib/prisma";
-import { isKnownTopic, topicLabel } from "../src/lib/topics";
+import { argomentoDi, isKnownTopic, topicLabel } from "../src/lib/topics";
 import { isTrackId } from "../src/lib/tracks";
 
 const RADICE = "content/appunti";
@@ -90,7 +90,8 @@ async function main() {
   for (const f of file) {
     const { testata, corpo } = leggiTestata(readFileSync(f, "utf-8"), f);
 
-    if (!isKnownTopic(testata.codice)) {
+    // "SF-BIO-01-L02" è la dispensa della lezione 2 dentro l'argomento SF-BIO-01.
+    if (!isKnownTopic(argomentoDi(testata.codice))) {
       throw new Error(`${f}: argomento sconosciuto "${testata.codice}" (vedi src/lib/topics.ts)`);
     }
     if (!isTrackId(testata.percorso)) {
@@ -124,7 +125,7 @@ async function main() {
     const parole = testo.split(/\s+/).length;
     const stato = esistente ? (esistente.isPublished ? "aggiornato, resta pubblicato" : "aggiornato, resta bozza") : "nuovo, come bozza";
     console.log(
-      `${testata.codice} — ${topicLabel(testata.codice) ?? testata.titolo}: ${parole} parole (${stato})` +
+      `${testata.codice} — ${testata.titolo ?? topicLabel(testata.codice)}: ${parole} parole (${stato})` +
         (revisione ? " · note di revisione separate" : "")
     );
   }
