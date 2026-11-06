@@ -135,6 +135,18 @@ export default async function TeacherLezioniPage() {
                 </div>
 
                 <div className="flex shrink-0 flex-wrap items-center justify-end gap-2">
+                  {/* Il docente entra dalla stessa riunione degli studenti. Resta
+                      anche a lezione finita, più discreto: una lezione può sforare. */}
+                  {inDiretta && (
+                    <a
+                      href={urlDirettaValido(l.urlDiretta)!}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`btn btn-sm ${lezioneFinita(l) ? "btn-soft" : "btn-brand"}`}
+                    >
+                      Entra nella diretta
+                    </a>
+                  )}
                   <form action={cambiaPubblicazioneLezione}>
                     <input type="hidden" name="id" value={l.id} />
                     <button type="submit" className={`btn btn-sm ${l.isPublished ? "btn-soft" : "btn-brand"}`}>
