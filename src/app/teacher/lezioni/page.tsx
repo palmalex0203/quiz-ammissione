@@ -41,9 +41,11 @@ export default async function TeacherLezioniPage() {
     },
   });
 
-  // Gli argomenti del percorso, raggruppati per materia: sono le voci del menu
-  // a tendina del modulo. La materia si ricava dall'argomento, quindi non la si
-  // chiede a parte — chiederla due volte vuol dire poterla contraddire.
+  // Gli argomenti del percorso, raggruppati per materia: sono le voci dei due
+  // menu a tendina del modulo, quello della materia e quello dell'argomento.
+  // Si possono contraddire, e per questo nell'azione l'argomento ha la
+  // precedenza: la materia la si chiede perché quasi nessuna lezione sta su un
+  // solo argomento, e senza materia non si può dividere l'elenco per materia.
   const gruppi = Object.entries(TOPICS_BY_TRACK[trackId]).map(([materia, argomenti]) => ({
     materia,
     argomenti: argomenti.map((a) => ({ code: a.code, label: a.label })),

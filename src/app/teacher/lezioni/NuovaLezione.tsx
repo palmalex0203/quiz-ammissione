@@ -117,10 +117,29 @@ export function NuovaLezione({ gruppi }: { gruppi: GruppoMateria[] }) {
           </Campo>
         </div>
 
+        {/* La materia è quella che divide le lezioni nell'elenco degli
+            studenti: senza, una lezione finisce in fondo fra le «altre». Si
+            chiede qui e non si ricava dal titolo, perché «Lezione 2» non dice
+            di che materia è. */}
+        <Campo
+          id="lez-materia"
+          etichetta="Materia"
+          aiuto="Divide le lezioni nell'elenco degli studenti. Se indichi un argomento qui sotto, la materia si ricava da quello."
+        >
+          <select id="lez-materia" name="materia" className="field" defaultValue="">
+            <option value="">Nessuna — non è di una materia</option>
+            {gruppi.map((g) => (
+              <option key={g.materia} value={g.materia}>
+                {g.materia}
+              </option>
+            ))}
+          </select>
+        </Campo>
+
         <Campo
           id="lez-argomento"
           etichetta="Argomento del programma"
-          aiuto="Facoltativo. Se lo indichi, la lezione compare anche sotto l'appunto di quell'argomento."
+          aiuto="Facoltativo. Se lo indichi, la lezione compare anche sotto l'appunto di quell'argomento — e la materia la decide lui."
         >
           <select id="lez-argomento" name="argomento" className="field" defaultValue="">
             <option value="">Nessuno — lezione introduttiva</option>

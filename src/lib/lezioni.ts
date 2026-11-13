@@ -230,9 +230,29 @@ export function oraItaliana(campo: string): Date | null {
   return new Date(comeUtc - scartoRoma(prima) * 60_000);
 }
 
+/** Se una lezione cade nel giorno di oggi, all'ora italiana. */
+export function lezioneDiOggi(data: string | Date, adesso: Date = new Date()): boolean {
+  const giorno = (d: Date) => d.toLocaleDateString("en-CA", { timeZone: FUSO });
+  return giorno(new Date(data)) === giorno(adesso);
+}
+
 /** Se la lezione è già finita adesso. */
 export function lezioneFinita(l: { data: string | Date; durataMinuti: number | null }): boolean {
   return fineLezione(l).getTime() <= Date.now();
+}
+
+/**
+ * Se la lezione deve ancora cominciare.
+ *
+ * L'ora la legge questa funzione e non chi la chiama: `Date.now()` dentro il
+ * corpo di un componente è una lettura impura, e il controllo di React la
+ * rifiuta. Qui dentro invece è al suo posto.
+ */
+export function lezioneDaVenire(
+  l: { data: string | Date },
+  adesso: number = Date.now()
+): boolean {
+  return new Date(l.data).getTime() > adesso;
 }
 
 /**

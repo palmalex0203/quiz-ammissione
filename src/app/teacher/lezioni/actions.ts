@@ -30,7 +30,7 @@ function cacheDaRifare(trackId: string) {
 }
 
 export async function creaLezione(_prec: StatoLezione, formData: FormData): Promise<StatoLezione> {
-  const { trackId } = await requireTeacherTrack();
+  const { trackId, track } = await requireTeacherTrack();
 
   const titolo = String(formData.get("titolo") ?? "").trim();
   const descrizione = String(formData.get("descrizione") ?? "").trim();
@@ -39,6 +39,7 @@ export async function creaLezione(_prec: StatoLezione, formData: FormData): Prom
   const quando = String(formData.get("quando") ?? "");
   const durataGrezza = String(formData.get("durataMinuti") ?? "").trim();
   const argomento = String(formData.get("argomento") ?? "").trim();
+  const materia = String(formData.get("materia") ?? "").trim();
 
   if (!titolo) return { errore: "Il titolo è obbligatorio." };
   if (!indirizzo) {
@@ -59,8 +60,11 @@ export async function creaLezione(_prec: StatoLezione, formData: FormData): Prom
     return { errore: "La durata dev'essere un numero di minuti." };
   }
 
-  // L'argomento decide anche la materia: sono legati, e chiederli due volte
-  // vuol dire poterli contraddire.
+  // La materia serve a raggruppare le lezioni nell'elenco degli studenti, e
+  // quasi nessuna lezione sta su un solo argomento del programma: per questo si
+  // può indicare da sola. Se però l'argomento c'è, la materia la decide lui —
+  // sono legati, e due valori che possono contraddirsi sono un errore che
+  // aspetta di succedere.
   let subject: string | null = null;
   if (argomento) {
     if (!isKnownTopic(argomento)) return { errore: "Argomento sconosciuto." };
@@ -68,6 +72,11 @@ export async function creaLezione(_prec: StatoLezione, formData: FormData): Prom
       return { errore: "Quell'argomento è dell'altro percorso." };
     }
     subject = topicSubject(argomento) ?? null;
+  } else if (materia) {
+    if (!track.subjects.some((m) => m.name === materia)) {
+      return { errore: "Materia sconosciuta." };
+    }
+    subject = materia;
   }
 
   let fornitore: string | null = null;
