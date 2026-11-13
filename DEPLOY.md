@@ -40,8 +40,35 @@ L'account insegnante viene creato una sola volta dal seed (passo 3). Gli account
 ## Registrazioni automatiche delle lezioni (Teams → simulatore)
 
 Finita una lezione in diretta, il sito chiede a Microsoft la registrazione e,
-quando è pronta, mette nella scheda il pulsante «Guarda la registrazione»
-(link OneDrive "chiunque abbia il link"). Il codice è in `src/lib/registrazioni.ts`.
+quando è pronta, mette nella scheda il pulsante «Guarda la registrazione».
+Il codice è in `src/lib/registrazioni.ts`.
+
+Il video lo cerca in tre posti, e si ferma al primo che lo ha: la raccolta
+documenti del team dove si tengono le lezioni (`MS_RACCOLTA_LEZIONI`), le
+cartelle delle registrazioni nel OneDrive dell'organizzatore, e in ultimo la
+ricerca su tutto il 365. Serve perché il posto dipende dal tipo di riunione:
+una riunione di canale finisce nel team, una riunione normale nel OneDrive di
+chi la organizza.
+
+Il link si chiede prima «per chiunque» e, se il sito ha la condivisione esterna
+disattivata, «per l'organizzazione» — che va bene se gli studenti sono membri
+del team.
+
+Chi chiede, e quando:
+
+- **la pagina di una lezione finita**, appena uno studente la apre e poi ogni
+  tre minuti finché resta aperta: così il video compare pochi minuti dopo la
+  fine;
+- **un controllo una volta al giorno**, alle 20:00 UTC (`crons` in
+  `vercel.json`): 21:00 italiane d'inverno, 22:00 d'estate, e sul piano Hobby
+  Vercel lo lancia entro l'ora successiva. Serve perché la registrazione si
+  agganci anche se nessuno apre quella pagina. Richiede `CRON_SECRET` fra le
+  variabili d'ambiente, ed essendo letta al momento della build va messa
+  **prima** del deploy.
+
+Una volta al giorno e non più spesso perché il database si paga a tempo
+accesso: nei giorni senza lezioni finite il controllo legge l'elenco dalla
+cache, non trova niente e chiude senza aprirlo.
 
 Serve, una volta sola, nel Microsoft 365 della scuola (da amministratore):
 
@@ -59,9 +86,12 @@ Serve, una volta sola, nel Microsoft 365 della scuola (da amministratore):
    Grant-CsApplicationAccessPolicy -PolicyName Simulatore-Registrazioni -Identity "<ID oggetto organizzatore>"
    ```
    Può metterci fino a 30 minuti ad attivarsi.
-6. **SharePoint admin → Criteri → Condivisione**: OneDrive almeno su «Chiunque».
+6. Solo per i link aperti a chiunque: **SharePoint admin → Criteri →
+   Condivisione** sul tenant, e la condivisione del singolo sito del team, su
+   «Chiunque». Senza, il link resta per i soli account della scuola.
 7. Su **Vercel → Settings → Environment Variables** (Production):
-   `MS_TENANT_ID`, `MS_CLIENT_ID`, `MS_CLIENT_SECRET`, `MS_ORGANIZZATORE_ID`, poi un redeploy.
+   `MS_TENANT_ID`, `MS_CLIENT_ID`, `MS_CLIENT_SECRET`, `MS_ORGANIZZATORE_ID`,
+   `MS_RACCOLTA_LEZIONI`, `CRON_SECRET`, poi un redeploy.
 
 Senza queste variabili il sito funziona lo stesso: a lezione finita mostra
 «la registrazione arriva a breve» e non cerca niente.
