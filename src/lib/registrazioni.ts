@@ -2,6 +2,11 @@ import { revalidateTag, unstable_cache } from "next/cache";
 import { prisma } from "@/lib/prisma";
 import { TRACK_IDS } from "@/lib/tracks";
 import { FUSO, LEZIONI_TAG, fineLezione, lezioniPubblicate, urlDirettaValido } from "@/lib/lezioni";
+import {
+  configMicrosoft as configurazione,
+  graph,
+  type ConfigMicrosoft as Configurazione,
+} from "@/lib/microsoft";
 
 /*
  * Dalla diretta alla registrazione, da solo.
@@ -41,72 +46,14 @@ import { FUSO, LEZIONI_TAG, fineLezione, lezioniPubblicate, urlDirettaValido } f
  * video si trova subito invece di aspettare la ricerca di Microsoft.
  */
 
-const GRAPH = "https://graph.microsoft.com/v1.0";
-
 /** Quanto si aspetta fra una domanda a Microsoft e la successiva, per lezione. */
 const OGNI_CINQUE_MINUTI = 5 * 60;
 
 /** Oltre questo, una lezione senza registrazione non la si cerca più. */
 const GIORNI_DI_RICERCA = 7;
 
-type Configurazione = {
-  tenant: string;
-  client: string;
-  segreto: string;
-  organizzatore: string;
-  /** La raccolta documenti del team dove si tengono le lezioni, se c'è. */
-  raccolta: string | null;
-};
-
-function configurazione(): Configurazione | null {
-  const tenant = process.env.MS_TENANT_ID;
-  const client = process.env.MS_CLIENT_ID;
-  const segreto = process.env.MS_CLIENT_SECRET;
-  const organizzatore = process.env.MS_ORGANIZZATORE_ID;
-  if (!tenant || !client || !segreto || !organizzatore) return null;
-  return { tenant, client, segreto, organizzatore, raccolta: process.env.MS_RACCOLTA_LEZIONI ?? null };
-}
-
 export function registrazioniAttive(): boolean {
   return configurazione() !== null;
-}
-
-// Il gettone dura un'ora: lo si tiene finché la funzione resta viva.
-let gettone: { valore: string; scade: number } | null = null;
-
-async function gettoneGraph(c: Configurazione): Promise<string> {
-  if (gettone && gettone.scade > Date.now() + 60_000) return gettone.valore;
-
-  const r = await fetch(`https://login.microsoftonline.com/${c.tenant}/oauth2/v2.0/token`, {
-    method: "POST",
-    headers: { "content-type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({
-      client_id: c.client,
-      client_secret: c.segreto,
-      scope: "https://graph.microsoft.com/.default",
-      grant_type: "client_credentials",
-    }),
-    cache: "no-store",
-  });
-  if (!r.ok) throw new Error(`Accesso a Microsoft rifiutato (${r.status}): ${await r.text()}`);
-
-  const j = (await r.json()) as { access_token: string; expires_in: number };
-  gettone = { valore: j.access_token, scade: Date.now() + j.expires_in * 1000 };
-  return gettone.valore;
-}
-
-async function graph<T>(c: Configurazione, percorso: string, init?: RequestInit): Promise<T> {
-  const r = await fetch(`${GRAPH}${percorso}`, {
-    ...init,
-    headers: {
-      authorization: `Bearer ${await gettoneGraph(c)}`,
-      "content-type": "application/json",
-      ...init?.headers,
-    },
-    cache: "no-store",
-  });
-  if (!r.ok) throw new Error(`Graph ${percorso} → ${r.status}: ${await r.text()}`);
-  return (await r.json()) as T;
 }
 
 type Riunione = { id: string; subject: string | null };

@@ -6,6 +6,7 @@ import { requireTeacher } from "@/lib/permissions";
 import { requireTeacherTrack } from "@/lib/track-docente";
 import { LEZIONI_TAG, leggiVideo, oraItaliana, urlDirettaValido } from "@/lib/lezioni";
 import { isKnownTopic, topicSubject, topicTrack } from "@/lib/topics";
+import { riunioniInCalendario } from "@/lib/calendario";
 
 /*
  * Le lezioni dall'area insegnante.
@@ -153,4 +154,65 @@ export async function eliminaLezione(formData: FormData): Promise<void> {
 
   await prisma.lezione.delete({ where: { id: lezione.id } });
   cacheDaRifare(trackId);
+}
+
+/**
+ * Una lezione dalla riunione già fissata sul calendario del team.
+ *
+ * Dal modulo arrivano soltanto il titolo e la materia — le due cose che il
+ * docente decide. Data, durata e link di partecipazione si rileggono dal
+ * calendario, non si accettano da chi invia il modulo: un'azione come questa è
+ * raggiungibile anche fuori dalla pagina, e un link arrivato da fuori
+ * diventerebbe il pulsante «Entra nella diretta» di tutta la classe.
+ *
+ * Come ogni lezione, nasce in bozza: importare non è pubblicare.
+ */
+export async function importaDalCalendario(
+  _prec: StatoLezione,
+  formData: FormData
+): Promise<StatoLezione> {
+  const { trackId, track } = await requireTeacherTrack();
+
+  const chiave = String(formData.get("chiave") ?? "").trim();
+  const titolo = String(formData.get("titolo") ?? "").trim();
+  const materia = String(formData.get("materia") ?? "").trim();
+
+  if (!chiave) return { errore: "Non ho capito quale riunione." };
+  if (!titolo) return { errore: "Il titolo è obbligatorio." };
+
+  const riunione = (await riunioniInCalendario()).find((r) => r.chiave === chiave);
+  if (!riunione) {
+    return { errore: "Quella riunione non è più sul calendario del team. Ricarica la pagina." };
+  }
+
+  let subject: string | null = null;
+  if (materia) {
+    if (!track.subjects.some((m) => m.name === materia)) return { errore: "Materia sconosciuta." };
+    subject = materia;
+  }
+
+  // Due clic sullo stesso pulsante, o due schede aperte, non devono fare due
+  // lezioni. Il controllo c'è anche nel database (riunioneId è unico): questo
+  // serve a dire perché, invece di mostrare un errore di Postgres.
+  const gia = await prisma.lezione.findFirst({
+    where: { riunioneId: chiave },
+    select: { titolo: true },
+  });
+  if (gia) return { errore: `Quella riunione è già caricata, come «${gia.titolo}».` };
+
+  await prisma.lezione.create({
+    data: {
+      titolo,
+      track: trackId,
+      subject,
+      data: riunione.inizio,
+      durataMinuti: riunione.durataMinuti,
+      urlDiretta: riunione.urlDiretta,
+      riunioneId: chiave,
+      isPublished: false,
+    },
+  });
+
+  cacheDaRifare(trackId);
+  return { creata: titolo };
 }

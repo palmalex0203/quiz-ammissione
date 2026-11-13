@@ -75,8 +75,15 @@ Serve, una volta sola, nel Microsoft 365 della scuola (da amministratore):
 1. **Entra → Registrazioni app → Nuova registrazione**, nome «Simulatore Profor».
    Annotare *ID applicazione (client)* e *ID directory (tenant)*.
 2. **Autorizzazioni API → Microsoft Graph → Autorizzazioni applicazione**:
-   `OnlineMeetings.Read.All`, `OnlineMeetingRecording.Read.All`, `Files.ReadWrite.All`,
+   `OnlineMeetings.Read.All`, `OnlineMeetingRecording.Read.All`, `Files.ReadWrite.All`
+   per le registrazioni, `Group.Read.All` per il calendario del team,
    poi **Concedi consenso amministratore**.
+
+   `Calendars.Read` non serve: si legge il calendario del *team*, che è una
+   risorsa del gruppo. Leggere invece il calendario personale
+   dell'organizzatore vorrebbe dire `Calendars.Read`, cioè il permesso di
+   leggere il calendario di chiunque nell'organizzazione — molto più larga di
+   quel che serve, per lo stesso risultato.
 3. **Certificati e segreti → Nuovo segreto client**: copiare il *Valore*.
 4. **Entra → Utenti →** l'account che crea le riunioni: copiare l'*ID oggetto*.
 5. Policy di Teams per l'app (PowerShell, modulo `MicrosoftTeams`):
@@ -95,3 +102,34 @@ Serve, una volta sola, nel Microsoft 365 della scuola (da amministratore):
 
 Senza queste variabili il sito funziona lo stesso: a lezione finita mostra
 «la registrazione arriva a breve» e non cerca niente.
+
+## Lezioni dal calendario del team
+
+Le riunioni fissate su Teams compaiono nell'area insegnante, in **Dal
+calendario del team**: un pulsante le trasforma in lezioni in bozza, già con
+data, ora, durata e link di partecipazione. Il codice è in
+`src/lib/calendario.ts`.
+
+Cosa arriva da Teams e cosa no:
+
+- **Da Teams**: data, ora, durata e link. Sono le tre cose che si sbagliano a
+  incollarle a mano, e un link sbagliato manda la classe da un'altra parte.
+- **Dal docente**: la materia e il titolo per gli studenti. Sul calendario del
+  team finiscono anche riunioni che non sono lezioni, e «LEZIONE 2 FISICA» va
+  bene fra colleghi ma non in pagina. Il modulo propone «Fisica · Lezione 2» e
+  la materia indovinata dal titolo: entrambe modificabili.
+- **Da nessuno**: la pubblicazione. Come ogni lezione, nasce in bozza.
+
+Dettagli che non si vedono:
+
+- Il gruppo del team si ricava dalla raccolta documenti
+  (`MS_RACCOLTA_LEZIONI`): nessuna variabile d'ambiente in più da copiare.
+- Gli orari arrivano in UTC (si chiede `Prefer: outlook.timezone="UTC"`) e la
+  conversione all'ora italiana si fa in un punto solo.
+- Una riunione già caricata non ricompare: la lezione ne ricorda
+  l'identificativo (`Lezione.riunioneId`, unico). Le lezioni scritte a mano
+  prima di questo riquadro si riconoscono dall'istante di inizio.
+- Data, durata e link **non** si leggono dal modulo inviato ma si rileggono dal
+  calendario: un'azione del server è raggiungibile anche fuori dalla pagina.
+- Se Microsoft non risponde, il riquadro non compare e il resto dell'area
+  insegnante funziona come sempre.

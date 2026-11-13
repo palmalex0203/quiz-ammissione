@@ -325,6 +325,12 @@ model Lezione {
   // non lo incolla nessuno.
   urlRegistrazione String?
 
+  // La riunione sul calendario del team da cui è stata importata, se è
+  // arrivata da lì (src/lib/calendario.ts). Serve a non importarla due
+  // volte: il link non basta, perché quello del calendario e quello che si
+  // incolla a mano sono due forme diverse della stessa riunione.
+  riunioneId String? @unique
+
   // Come per gli appunti: una lezione la vedono gli studenti solo quando
   // l'insegnante l'ha riguardata e pubblicata.
   isPublished Boolean  @default(false)

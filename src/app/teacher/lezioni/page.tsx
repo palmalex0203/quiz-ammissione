@@ -3,10 +3,12 @@ import { EmptyState } from "@/components/EmptyState";
 import { requireTeacherTrack } from "@/lib/track-docente";
 import { FUSO, durata, lezioneFinita, urlDirettaValido } from "@/lib/lezioni";
 import { aspettaRegistrazione, registrazioniAttive } from "@/lib/registrazioni";
+import { proposta, riunioniInCalendario } from "@/lib/calendario";
 import { AttendiRegistrazione } from "@/components/AttendiRegistrazione";
 import { TOPICS_BY_TRACK, topicLabel } from "@/lib/topics";
 import { cambiaPubblicazioneLezione } from "./actions";
 import { NuovaLezione } from "./NuovaLezione";
+import { DalCalendario, type VoceCalendario } from "./DalCalendario";
 import { EliminaLezione } from "./EliminaLezione";
 
 /*
@@ -36,6 +38,7 @@ export default async function TeacherLezioniPage() {
       durataMinuti: true,
       fornitore: true,
       urlDiretta: true,
+      riunioneId: true,
       urlRegistrazione: true,
       isPublished: true,
     },
@@ -50,6 +53,45 @@ export default async function TeacherLezioniPage() {
     materia,
     argomenti: argomenti.map((a) => ({ code: a.code, label: a.label })),
   }));
+
+  // Le riunioni del team non ancora diventate lezioni.
+  //
+  // Una riunione si considera già caricata in due casi: se una lezione la
+  // ricorda (riunioneId), o se una lezione comincia nello stesso istante. Il
+  // secondo serve alle lezioni scritte a mano prima che esistesse questo
+  // riquadro, che altrimenti ricomparirebbero qui come se mancassero.
+  //
+  // Se Microsoft non risponde il riquadro semplicemente non c'è: l'area
+  // insegnante deve funzionare comunque, a maggior ragione il giorno in cui
+  // qualcosa su Teams non va.
+  const istanti = new Set(lezioni.map((l) => l.data.getTime()));
+  const chiavi = new Set(lezioni.map((l) => l.riunioneId).filter(Boolean));
+
+  let daCaricare: VoceCalendario[] = [];
+  try {
+    daCaricare = (await riunioniInCalendario())
+      .filter((r) => !chiavi.has(r.chiave) && !istanti.has(r.inizio.getTime()))
+      .map((r) => {
+        const p = proposta(r.titolo, track.subjects);
+        return {
+          chiave: r.chiave,
+          titoloTeams: r.titolo,
+          titolo: p.titolo,
+          materia: p.materia,
+          quando: r.inizio.toLocaleString("it-IT", {
+            timeZone: FUSO,
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            hour: "2-digit",
+            minute: "2-digit",
+          }),
+          durata: durata(r.durataMinuti),
+        };
+      });
+  } catch (e) {
+    console.error("Calendario del team non raggiungibile:", e);
+  }
 
   const pubblicate = lezioni.filter((l) => l.isPublished).length;
   const inAttesa = lezioni.filter((l) => l.isPublished && aspettaRegistrazione(l)).map((l) => l.id);
@@ -68,6 +110,7 @@ export default async function TeacherLezioniPage() {
         </p>
       </div>
 
+      <DalCalendario riunioni={daCaricare} materie={[...track.subjects]} />
       <NuovaLezione gruppi={gruppi} />
       {inAttesa.length > 0 && <AttendiRegistrazione lezioni={inAttesa} />}
 
