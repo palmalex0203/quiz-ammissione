@@ -12,7 +12,7 @@ fonti:
 
 **Che cosa significa misurare, quanto ci si può fidare di una misura, e perché per certe grandezze un numero non basta.** Lezione 2 del corso di Fisica.
 
-**Come usare questa dispensa:** le sezioni 10, 11 e 12 vanno rifatte con la calcolatrice in mano, perché sono conti che all'esame si chiedono; le sezioni 7 e 13 sono strumenti che tornano utili per tutto il resto del corso. Alla fine, le domande della sezione 18 e le soluzioni nella 19. Se non hai ancora letto **Basi matematica 1**, leggila prima: qui si danno per noti le potenze e il calcolo con le lettere.
+**Come usare questa dispensa:** le sezioni 10, 11 e 12 vanno rifatte con la calcolatrice in mano, perché sono conti che all'esame si chiedono; le sezioni 7 e 13 sono strumenti che tornano utili per tutto il resto del corso. Alla fine, gli esercizi svolti della sezione 18, le domande della 20 e le soluzioni nella 21. Se non hai ancora letto **Basi matematica 1**, leggila prima: qui si danno per noti le potenze e il calcolo con le lettere.
 
 ## 1. La fisica è una scienza sperimentale
 
@@ -411,9 +411,98 @@ Quando i due vettori sono **paralleli o opposti** (θ = 0° o 180°) il seno val
 >
 > Dove uno è massimo, l'altro è nullo. Se ricordi questa riga non puoi confondere le due formule.
 
-## 18. Mettiti alla prova
+## 18. Esercizi svolti
 
-Rispondi senza guardare le soluzioni, poi controlla nella sezione 19.
+Qui il procedimento è scritto per intero: leggi il testo, prova a risolverlo da solo, e solo dopo confronta.
+
+**1. Due vettori la cui somma ha modulo |a − b|.**
+
+*La somma di due vettori a⃗ e b⃗ produce un vettore di modulo |a⃗ − b⃗|. Che cosa puoi dire dei due vettori?*
+
+Il testo dice che il modulo della **somma** è uguale al modulo della **differenza**. Uguagliamo ed eleviamo al quadrato entrambi i membri — si può, perché i moduli sono positivi:
+
+|a⃗ + b⃗|² = |a⃗ − b⃗|²
+
+a² + 2(a⃗ · b⃗) + b² = a² − 2(a⃗ · b⃗) + b²
+
+4(a⃗ · b⃗) = 0, quindi a⃗ · b⃗ = 0
+
+Il prodotto scalare è nullo, quindi **i due vettori sono perpendicolari** (sezione 16).
+
+> **Cosa ti chiedono**
+>
+> È la domanda 5 di Fisica del 2º appello 2025/2026. Il tranello sta nel leggere «|a − b|» come la *differenza dei moduli* invece che il *modulo della differenza*: in quel caso la risposta sarebbe «stessa direzione e versi opposti», che è infatti una delle alternative. Guarda dove sono le barre del valore assoluto.
+
+**2. Spostamento risultante.**
+
+*Una nave percorre in successione 10 km verso Nord, 6 km verso Est e infine 18 km verso Sud. Quanto vale il modulo dello spostamento risultante?*
+
+Si scompone tutto in componenti, come nella sezione 14. Prendiamo Nord ed Est come versi positivi:
+
+- componente Est–Ovest: +6 km
+- componente Nord–Sud: +10 − 18 = −8 km, cioè 8 km verso Sud
+
+Il segno negativo dice solo il verso; per il modulo si usa Pitagora:
+
+s = √(6² + 8²) = √(36 + 64) = √100 = **10 km**
+
+Due osservazioni che valgono più dell'esercizio. Primo: lo **spostamento** (10 km) non è il **cammino percorso** (10 + 6 + 18 = 34 km) — il primo è un vettore e dipende solo da dove parti e dove arrivi, il secondo è uno scalare e dipende da tutta la strada fatta. Secondo: il triangolo 6-8-10 è il 3-4-5 raddoppiato, e nei test i numeri sono quasi sempre scelti così, per far venire radici esatte.
+
+**3. Dimensioni di una costante.**
+
+*Nella legge di Hooke F = −kx, che dimensioni ha la costante elastica k?*
+
+Si usa la seconda regola dell'analisi dimensionale (sezione 7): i due membri hanno le stesse dimensioni. Quindi [k][L] = [F], da cui
+
+[k] = [F] / [L] = [M][L][t]⁻² / [L] = **[M][t]⁻²**
+
+In unità S.I.: N/m, cioè kg·s⁻².
+
+**4. Conversione composta.**
+
+*Una densità di 0,8 g/cm³ quanto vale in kg/m³?*
+
+Si moltiplica per due frazioni che valgono 1, una per la massa e una per il volume:
+
+0,8 g/cm³ × (10⁻³ kg / 1 g) × (10⁶ cm³ / 1 m³) = 0,8 × 10³ = **800 kg/m³**
+
+Nota che il fattore del volume è 10⁶ e non 10², perché è un volume: è l'avvertimento della sezione 5. La scorciatoia da ricordare: **da g/cm³ a kg/m³ si moltiplica per 1000**. Serve in ogni esercizio sul galleggiamento, dove la densità dell'acqua va usata come 1000 kg/m³.
+
+**5. Scomposizione di una forza.**
+
+*Un corpo di massa 10 kg sta su un piano inclinato di 30°. Quanto vale la componente del peso parallela al piano? (g = 9,8 m/s²)*
+
+Il peso è mg = 10 × 9,8 = 98 N, diretto verticalmente verso il basso. Scomponendolo lungo il piano e perpendicolarmente a esso:
+
+F∥ = mg · sen θ = 98 × sen 30° = 98 × 0,5 = **49 N**
+
+La componente perpendicolare è mg · cos 30° = 98 × 0,87 ≈ 85 N.
+
+> **Attenzione all'esame · Come non confondersi fra seno e coseno**
+>
+> Lungo il piano va il **seno** dell'angolo di inclinazione. Il controllo di buon senso: se l'inclinazione è zero, cioè su un piano orizzontale, non deve esserci nessuna componente che fa scivolare — e infatti sen 0° = 0. Se fosse il coseno verrebbe 98 N su un piano piatto, che è assurdo.
+
+**6. Stima per ordini di grandezza.**
+
+*Quante volte batte il cuore in una vita di 80 anni?*
+
+Si arrotonda tutto, come nella sezione 6. Circa 70 battiti al minuto, diciamo 10² al minuto come ordine di grandezza. Minuti in 80 anni: 80 × 365 × 24 × 60 ≈ 4 × 10⁷. Prodotto: 10² × 4 × 10⁷ = 4 × 10⁹, cioè **qualche miliardo**.
+
+Non serve il numero esatto: serve escludere le alternative che stanno tre ordini di grandezza più in là.
+
+## 19. Parole da saper scrivere
+
+In Fisica, delle 31 domande della prova, **16 sono a completamento**: la risposta la scrivi tu nella griglia, e un errore di ortografia la annulla. Spesso sono numeri o unità, ma non sempre. Da questa lezione:
+
+`adimensionale` · `scalare` · `vettoriale` · `modulo` · `direzione` · `verso` · `componente` · `perpendicolari` · `paralleli` · `newton` · `pascal` · `joule` · `watt` · `kelvin` · `ampere` · `candela` · `mole` · `estensiva` · `intensiva` · `ipotenusa` · `cateto` · `densità` · `spostamento` · `sensibilità` · `sistematico` · `casuale`
+
+> **Attenzione all'esame · Maiuscole e minuscole nelle unità**
+>
+> I nomi delle unità si scrivono **minuscoli** quando sono parole: un newton, dieci joule, 300 kelvin. Ma il **simbolo è maiuscolo** quando l'unità deriva da un nome di persona: N, J, W, K, A, Pa. Il metro e il secondo, che non vengono da nomi propri, hanno il simbolo minuscolo: m, s. E il kelvin non vuole il simbolo di grado: si scrive 300 K, mai 300 °K.
+
+## 20. Mettiti alla prova
+
+Rispondi senza guardare le soluzioni, poi controlla nella sezione 21.
 
 1. Misurare la velocità media di un'auto cronometrando il tempo impiegato a percorrere un chilometro: misura diretta o indiretta?
 2. Quali sono le dimensioni della forza? E quelle della densità?
@@ -434,7 +523,7 @@ Rispondi senza guardare le soluzioni, poi controlla nella sezione 19.
 17. Un vettore ha modulo 10 e forma un angolo di 30° con l'asse x. Quanto valgono le sue componenti?
 18. Due forze di 3 N e 4 N agiscono sullo stesso corpo. Fra quali valori può stare il modulo della risultante?
 
-## 19. Soluzioni
+## 21. Soluzioni
 
 **1.** **Indiretta.** Non si confronta la velocità con un campione di velocità: si misurano una lunghezza e un tempo, e si ricava la velocità dalla relazione v = s/t.
 
@@ -484,5 +573,9 @@ Note per l'insegnante, non visibili agli studenti.
 - **I numeri dell'esempio sono stati verificati.** Dalle venti misure della diapositiva 7 ho ricalcolato media (2,146 cm) e deviazione standard (0,0116 cm come deviazione di popolazione, 0,0119 come deviazione campionaria): entrambe arrotondano a 0,012 cm, come scrive la slide. La dispensa non specifica quale delle due definizioni si usa, perché a questo livello la differenza non si vede: se a lezione è stata data una formula precisa, va allineata.
 - **Figure non importate.** L'istogramma e la curva gaussiana nelle slide sono disegni. Nella dispensa l'istogramma è reso come tabella delle frequenze, che si legge bene anche da telefono, e la gaussiana è descritta a parole con la tabella 68/95/99. Mancano anche lo schema del triangolo rettangolo (sezione 13) e il disegno della somma punta-coda (sezione 15), che a parole si capiscono ma con una figura si capirebbero meglio. Se vuoi i disegni vanno aggiunti a parte.
 - **Che cosa è stato fuso dalla bozza SF-FIS-01.** Le sezioni **6 (ordini di grandezza), 7 (analisi dimensionale), 8 (estensive e intensive), 13 (trigonometria)**, la sottosezione **Le componenti** e la sezione **15 (somma e differenza di vettori)**, più il metodo di conversione della sezione 5, vengono dall'appunto SF-FIS-01 scritto in precedenza, non dalle slide del docente. Sono argomenti che il syllabus richiede e che servono al resto del corso — senza trigonometria non si scompone un vettore — ma **vanno riletti sapendo che non sono farina del sacco del docente**, e tagliati se a lezione non sono stati trattati.
-- **La bozza SF-FIS-01 ora è ridondante.** Dopo questa fusione contiene solo materiale già presente qui, più alcuni esercizi svolti. Resta in bozza e non l'ho toccata: da decidere se archiviarla o tenerla come raccolta di esercizi.
-- **Nessuna esercitazione collegata.** La prima dispensa rimanda a «Equazioni e sistemi»; per questa non c'è ancora un'esercitazione in piattaforma. Le diciotto domande della sezione 18 sono scritte da me e coprono i punti principali, ma non sostituiscono un compito del docente.
+- **Che cosa è stato spostato qui da SF-FIS-01.** Oltre alle sezioni fuse in precedenza, ora ci sono anche la **18 (esercizi svolti)** e la **19 (parole da saper scrivere)**, che venivano da quell'appunto. L'appunto SF-FIS-01 è stato **nascosto agli studenti** il 13 novembre 2026: non è stato cancellato e si ripubblica con un clic, ma dopo questo spostamento non contiene più niente che non sia qui, tranne la sezione «Errori tipici».
+- **«Errori tipici» non è stato spostato, di proposito.** Era un elenco di dodici errori frequenti, e undici erano già scritti nei riquadri «Attenzione all'esame» sparsi nelle sezioni — dove servono di più, perché si leggono mentre si studia l'argomento invece che in fondo. L'unico punto non ancora coperto, maiuscole e minuscole nei simboli delle unità, è diventato il riquadro in fondo alla sezione 19. Se preferisci avere comunque l'elenco riassuntivo in coda, si rimette in cinque minuti.
+- **Il valore di g.** Negli esercizi svolti è usato g = 9,8 m/s². Le prove ufficiali a volte usano 9,81 e a volte approssimano a 10. **Da chiedere alla professoressa quale convenzione adottare**, per non confondere gli studenti fra dispensa ed esercitazioni.
+- **L'esercizio 1 della sezione 18 merita una rilettura della professoressa.** È la domanda 5 di Fisica del 2º appello 2025/2026, e la chiave nella nostra banca dati **era sbagliata**: diceva «stessa direzione e versi opposti». È stata corretta il 14 ottobre 2026 dopo il confronto con la correzione commentata di Alpha Test. Il testo si presta davvero a due letture a seconda di dove si mettono le barre del valore assoluto, quindi vale la pena che la veda lei.
+- **I riquadri «Cosa ti chiedono»** citano domande reali dei due appelli 2025/2026, ma **le risposte corrette sono state ricavate da noi** e non sono chiavi ministeriali.
+- **Nessuna esercitazione collegata.** La prima dispensa rimanda a «Equazioni e sistemi»; per questa non c'è ancora un'esercitazione in piattaforma. Le diciotto domande della sezione 20 sono scritte da me e coprono i punti principali, ma non sostituiscono un compito del docente.
