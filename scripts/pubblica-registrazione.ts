@@ -23,10 +23,14 @@ async function main() {
 
   console.log("2. provo ad aprirlo senza essere collegato…");
   const r = await fetch(url, { redirect: "follow" });
-  const finale = new URL(r.url);
-  const login = /login\.microsoftonline|\/_layouts\/15\/(Authenticate|signin)/i.test(r.url);
-  console.log(`   ${r.status} → ${finale.host}${finale.pathname.slice(0, 40)}`);
-  console.log(`   ${login ? "chiede l'accesso (link per l'organizzazione)" : "si apre senza accesso"}\n`);
+  const chiedeAccesso =
+    r.status === 401 ||
+    r.status === 403 ||
+    /login\.microsoftonline|\/_layouts\/15\/(Authenticate|signin)/i.test(r.url);
+  console.log(`   HTTP ${r.status}`);
+  console.log(
+    `   ${chiedeAccesso ? "chiede l'accesso: link per i soli account della scuola" : "si apre a chiunque"}\n`
+  );
 
   console.log("3. salvo il link nella lezione…");
   await prisma.lezione.update({ where: { id: l.id }, data: { urlRegistrazione: url } });
