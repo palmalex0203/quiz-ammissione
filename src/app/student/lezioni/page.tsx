@@ -39,14 +39,17 @@ function RigaLezione({ lezione }: { lezione: LezionePubblicata }) {
   const quanto = durata(lezione.durataMinuti);
 
   // Su una diretta finita lo stato è l'informazione utile: il video c'è o sta
-  // arrivando. Su una lezione registrata non c'è niente da dire.
+  // arrivando. Su una lezione che deve ancora tenersi non si scrive niente —
+  // «In diretta» su una lezione di domani dice il falso, e la data è lì sotto.
   const stato = !inDiretta
     ? null
     : lezione.urlRegistrazione
       ? "Registrazione"
       : lezioneFinita(lezione)
         ? "Registrazione in arrivo"
-        : "In diretta";
+        : lezioneDaVenire(lezione)
+          ? null
+          : "In diretta ora";
 
   return (
     <li>
