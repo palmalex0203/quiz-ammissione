@@ -12,6 +12,8 @@ fonti:
 
 **Come usare questa dispensa:** guarda la videolezione, studia un capitolo alla volta (le figure sono quelle delle slide), rispondi alle domande del capitolo 13 senza guardare le soluzioni, poi controllale nel capitolo 14.
 
+📑 **[Le slide proiettate a lezione](/appunti/slide/sf-bio-01-l02.pdf)** — 24 diapositive in PDF, si aprono in una scheda nuova. Servono per il ripasso veloce: la dispensa spiega, le slide riassumono.
+
 ## Obiettivi formativi
 
 La lezione copre il punto dell'Unità didattica 1 del syllabus dedicato alle basi della struttura e della funzione delle macromolecole biologiche (zuccheri e carboidrati, lipidi, amminoacidi, legame peptidico, proteine con domini e siti attivi, enzimi e loro regolazione, modificazioni post-traduzionali, nucleotidi e acidi nucleici, modello di Watson e Crick, RNA codificanti e non codificanti) e agli aspetti di base del metabolismo. Al termine lo studente sarà in grado di:

@@ -12,6 +12,8 @@ fonti:
 
 **Come usare questa dispensa:** guarda la videolezione, studia una sezione alla volta (le figure sono quelle delle slide), rispondi alle domande della sezione 14 senza guardare le soluzioni, poi controllale nella sezione 15.
 
+📑 **[Le slide proiettate a lezione](/appunti/slide/sf-bio-01-l01.pdf)** — 16 diapositive in PDF, si aprono in una scheda nuova. Servono per il ripasso veloce: la dispensa spiega, le slide riassumono.
+
 ## 2. Obiettivi formativi
 
 La lezione copre il primo obiettivo dell'Unità didattica 1 del syllabus («Descrivere e interpretare: l'albero della vita. Gli organismi e la teoria cellulare. Le proprietà fondamentali della materia vivente»). Al termine dello studio lo studente sarà in grado di:

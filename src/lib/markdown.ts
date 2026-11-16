@@ -16,9 +16,25 @@ export function renderMarkdown(source: string): string {
   // Una tabella di quattro colonne non ci sta in un telefono: invece di schiacciarla
   // o di far scorrere tutta la pagina di lato, la si chiude in un riquadro che
   // scorre per conto suo.
-  return ancoraTitoli(html)
+  return linkEsterni(ancoraTitoli(html))
     .replace(/<table>/g, '<div class="prose-table-scroll"><table>')
     .replace(/<\/table>/g, "</table></div>");
+}
+
+/**
+ * I collegamenti che portano fuori dall'appunto si aprono in una scheda nuova.
+ *
+ * Sono due casi: le slide della lezione, che sono PDF, e i rimandi a siti
+ * esterni. In entrambi, aprirli al posto dell'appunto vuol dire far perdere il
+ * segno a chi stava studiando: torna indietro e si ritrova in cima alla pagina.
+ * I collegamenti interni al sito — un altro appunto, una lezione — restano
+ * invece dove sono, perché lì la navigazione del sito funziona come deve.
+ */
+function linkEsterni(html: string): string {
+  return html.replace(/<a href="([^"]+)">/g, (intero, href: string) => {
+    const fuori = /^https?:\/\//i.test(href) || /\.pdf$/i.test(href);
+    return fuori ? `<a href="${href}" target="_blank" rel="noreferrer">` : intero;
+  });
 }
 
 /**
