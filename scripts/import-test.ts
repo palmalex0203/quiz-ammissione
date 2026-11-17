@@ -18,6 +18,14 @@ type ImportedQuestion = {
   subject: string;
   text: string;
   type?: "MULTIPLE_CHOICE" | "TRUE_FALSE";
+  /**
+   * L'argomento a cui la domanda appartiene. Per le esercitazioni ricavate da
+   * una dispensa è il codice intero della dispensa (SF-BIO-01-L01), che è anche
+   * il legame con cui la pagina dell'appunto ritrova la sua esercitazione.
+   * Non sporca i conteggi della banca dati: quelli guardano solo il test POOL
+   * (vedi src/lib/question-pool.ts).
+   */
+  topic?: string;
   options: ImportedOption[];
 };
 
@@ -55,6 +63,7 @@ async function main() {
         create: questions.map((q, i) => ({
           type: q.type ?? "MULTIPLE_CHOICE",
           subject: q.subject,
+          topic: q.topic ?? null,
           text: q.text,
           order: i + 1,
           options: {

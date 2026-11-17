@@ -7,6 +7,7 @@ import { argomentoDi, topicLabel, MIN_TOPIC_QUESTIONS } from "@/lib/topics";
 import { poolCounts } from "@/lib/question-pool";
 import { percorsoMateria } from "@/lib/appunti-materie";
 import { durata, lezioniDiArgomento } from "@/lib/lezioni";
+import { esercitazioneDellaDispensa } from "@/lib/esercitazione-dispensa";
 import { generateTopicPractice } from "@/app/student/dashboard/actions";
 
 /*
@@ -24,10 +25,11 @@ export default async function StudentNotePage({ params }: { params: Promise<{ to
   // lezioni ed esercitazione con il loro argomento ("SF-BIO-01").
   const argomento = argomentoDi(topic);
 
-  const [nota, pool, lezioni] = await Promise.all([
+  const [nota, pool, lezioni, suaEsercitazione] = await Promise.all([
     publishedNote(topic),
     poolCounts(track.id),
     lezioniDiArgomento(track.id, argomento),
+    esercitazioneDellaDispensa(track.id, topic),
   ]);
 
   // Una bozza, o un appunto di un altro percorso, per lo studente non esiste.
@@ -107,17 +109,48 @@ export default async function StudentNotePage({ params }: { params: Promise<{ to
 
           <article className="card prose p-6 sm:p-8" dangerouslySetInnerHTML={{ __html: nota.html }} />
 
-          {domande >= MIN_TOPIC_QUESTIONS && (
+          {/* Le domande scritte per questa lezione vengono prima di quelle pescate
+              a caso dalla banca: sono costruite su quello che si è appena letto,
+              e sono le stesse che prima stavano in fondo alla dispensa con la
+              soluzione due righe sotto. */}
+          {suaEsercitazione && (
             <div className="flex flex-col justify-between gap-3 rounded-3xl bg-brand p-6 text-white sm:flex-row sm:items-center">
               <div>
                 <p className="font-display text-lg font-bold">Ora provaci</p>
                 <p className="mt-0.5 text-sm text-white/90">
-                  {domande} domande su questo argomento, pescate a caso: il modo più rapido per capire se è entrato.
+                  Le {suaEsercitazione.domande} domande di questa lezione, una alla volta. La correzione
+                  commentata arriva alla fine.
+                </p>
+              </div>
+              <Link
+                href={`/student/tests/${suaEsercitazione.id}/take`}
+                className="btn btn-on-brand w-full text-center sm:w-auto"
+              >
+                Comincia
+              </Link>
+            </div>
+          )}
+
+          {domande >= MIN_TOPIC_QUESTIONS && (
+            <div
+              className={`flex flex-col justify-between gap-3 rounded-3xl p-6 sm:flex-row sm:items-center ${
+                suaEsercitazione ? "border border-line" : "bg-brand text-white"
+              }`}
+            >
+              <div>
+                <p className="font-display text-lg font-bold">
+                  {suaEsercitazione ? "Ancora domande su questo argomento" : "Ora provaci"}
+                </p>
+                <p className={`mt-0.5 text-sm ${suaEsercitazione ? "text-muted" : "text-white/90"}`}>
+                  Pescate a caso dalla banca dati: ogni volta diverse, anche dalle lezioni vicine.
                 </p>
               </div>
               <form action={generateTopicPractice}>
                 <input type="hidden" name="topic" value={argomento} />
-                <SubmitButton pendingText="Preparo l'esercitazione…" className="btn btn-on-brand w-full sm:w-auto">
+                <SubmitButton
+                  pendingText="Preparo l'esercitazione…"
+                  className={`btn w-full sm:w-auto ${suaEsercitazione ? "btn-soft" : "btn-on-brand"}`}
+                >
                   Allenati su questo argomento
                 </SubmitButton>
               </form>
