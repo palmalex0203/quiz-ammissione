@@ -242,6 +242,11 @@ body {
    */
   .prose {
     line-height: 1.7;
+    /* Una parola più lunga del riquadro va a capo invece di sfondarlo. Senza
+       questa riga un indirizzo web in bibliografia — una sola "parola" di
+       novanta caratteri — allargava l'intera pagina e la faceva scorrere di
+       lato: le tabelle avevano già il loro riquadro che scorre, le parole no. */
+    overflow-wrap: break-word;
   }
   .prose > * + * {
     margin-top: 1rem;
@@ -349,6 +354,9 @@ body {
   .prose a {
     color: var(--brand-strong);
     text-decoration: underline;
+    /* Più permissivo di break-word: un indirizzo web si spezza dove capita,
+       perché non ha punti di taglio naturali e altrimenti resta intero. */
+    overflow-wrap: anywhere;
   }
 
   /* Le tabelle larghe scorrono invece di allargare la pagina. */
