@@ -1,0 +1,618 @@
+[
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Quale delle seguenti è un'interazione non covalente?",
+  "options": [
+   {
+    "text": "Il legame peptidico",
+    "isCorrect": false
+   },
+   {
+    "text": "Il legame glicosidico",
+    "isCorrect": false
+   },
+   {
+    "text": "Il legame a idrogeno tra basi del DNA",
+    "isCorrect": true
+   },
+   {
+    "text": "Il legame fosfodiesterico",
+    "isCorrect": false
+   },
+   {
+    "text": "Il legame tra C e H in un acido grasso",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Una molecola anfipatica, posta in acqua, tende a:",
+  "options": [
+   {
+    "text": "rivolgere le parti polari verso l'acqua e le apolari tra loro",
+    "isCorrect": true
+   },
+   {
+    "text": "sciogliersi completamente come il glucosio",
+    "isCorrect": false
+   },
+   {
+    "text": "depositarsi sul fondo senza alcuna organizzazione",
+    "isCorrect": false
+   },
+   {
+    "text": "legarsi covalentemente alle molecole d'acqua",
+    "isCorrect": false
+   },
+   {
+    "text": "rivolgere le code apolari verso l'acqua",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Quale affermazione su condensazione e idrolisi è corretta?",
+  "options": [
+   {
+    "text": "Nell'idrolisi si libera una molecola d'acqua",
+    "isCorrect": false
+   },
+   {
+    "text": "La condensazione rompe i polimeri in monomeri",
+    "isCorrect": false
+   },
+   {
+    "text": "I trigliceridi sono polimeri formati per condensazione di glicerolo ripetuto",
+    "isCorrect": false
+   },
+   {
+    "text": "Condensazione e anabolismo sono sinonimi in ogni contesto",
+    "isCorrect": false
+   },
+   {
+    "text": "Nella condensazione si libera acqua; nell'idrolisi si consuma",
+    "isCorrect": true
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Il lattosio è formato da:",
+  "options": [
+   {
+    "text": "glucosio e fruttosio",
+    "isCorrect": false
+   },
+   {
+    "text": "galattosio e glucosio, legame β(1→4)",
+    "isCorrect": true
+   },
+   {
+    "text": "due molecole di glucosio con legame α(1→4)",
+    "isCorrect": false
+   },
+   {
+    "text": "galattosio e fruttosio",
+    "isCorrect": false
+   },
+   {
+    "text": "glucosio e ribosio",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Amido e cellulosa sono entrambi polimeri di glucosio. Perché l'uomo digerisce l'amido ma non la cellulosa?",
+  "options": [
+   {
+    "text": "Perché la cellulosa contiene fruttosio",
+    "isCorrect": false
+   },
+   {
+    "text": "Perché la cellulosa è un lipide",
+    "isCorrect": false
+   },
+   {
+    "text": "Perché l'amido non ha legami glicosidici",
+    "isCorrect": false
+   },
+   {
+    "text": "Perché i nostri enzimi non idrolizzano i legami β(1→4)",
+    "isCorrect": true
+   },
+   {
+    "text": "Perché la cellulosa è molto più piccola dell'amido",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Nell'intolleranza al lattosio i sintomi sono dovuti principalmente a:",
+  "options": [
+   {
+    "text": "ridotta attività della lattasi intestinale",
+    "isCorrect": true
+   },
+   {
+    "text": "una reazione immunitaria contro le proteine del latte",
+    "isCorrect": false
+   },
+   {
+    "text": "eccessiva produzione di lattasi",
+    "isCorrect": false
+   },
+   {
+    "text": "incapacità di assorbire il glucosio",
+    "isCorrect": false
+   },
+   {
+    "text": "presenza di legami α nel lattosio",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "A temperatura ambiente un grasso ricco di acidi grassi insaturi cis tende a essere liquido perché:",
+  "options": [
+   {
+    "text": "contiene più legami a idrogeno tra le code",
+    "isCorrect": false
+   },
+   {
+    "text": "gli acidi grassi insaturi sono più lunghi",
+    "isCorrect": false
+   },
+   {
+    "text": "i doppi legami cis piegano le catene",
+    "isCorrect": true
+   },
+   {
+    "text": "contiene glicerolo in più",
+    "isCorrect": false
+   },
+   {
+    "text": "è un polimero di acidi grassi",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Quale affermazione distingue correttamente colesterolo e trigliceridi?",
+  "options": [
+   {
+    "text": "Sono la stessa molecola misurata in due modi",
+    "isCorrect": false
+   },
+   {
+    "text": "Il colesterolo è formato da glicerolo e tre acidi grassi",
+    "isCorrect": false
+   },
+   {
+    "text": "I trigliceridi sono precursori degli ormoni steroidei",
+    "isCorrect": false
+   },
+   {
+    "text": "Il colesterolo è assente dalle membrane animali",
+    "isCorrect": false
+   },
+   {
+    "text": "Il colesterolo è uno steroide; i trigliceridi no",
+    "isCorrect": true
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Che cosa distingue un amminoacido dall'altro?",
+  "options": [
+   {
+    "text": "Il gruppo amminico",
+    "isCorrect": false
+   },
+   {
+    "text": "La catena laterale (gruppo R)",
+    "isCorrect": true
+   },
+   {
+    "text": "Il gruppo carbossilico",
+    "isCorrect": false
+   },
+   {
+    "text": "Il numero di carboni α",
+    "isCorrect": false
+   },
+   {
+    "text": "La presenza del legame peptidico",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Nella sequenza H₃N⁺–Ser–Leu–Thr–COO⁻:",
+  "options": [
+   {
+    "text": "la treonina è N-terminale",
+    "isCorrect": false
+   },
+   {
+    "text": "H₃N⁺–Thr–Leu–Ser–COO⁻ è la stessa molecola",
+    "isCorrect": false
+   },
+   {
+    "text": "sono presenti tre legami peptidici",
+    "isCorrect": false
+   },
+   {
+    "text": "la serina è N-terminale, la treonina C-terminale",
+    "isCorrect": true
+   },
+   {
+    "text": "la leucina ha un gruppo amminico libero",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "I legami a idrogeno che stabilizzano l'α-elica si formano:",
+  "options": [
+   {
+    "text": "tra C=O e N–H di residui distanti quattro posizioni",
+    "isCorrect": true
+   },
+   {
+    "text": "tra le catene laterali di amminoacidi carichi",
+    "isCorrect": false
+   },
+   {
+    "text": "tra due cisteine",
+    "isCorrect": false
+   },
+   {
+    "text": "tra filamenti di catene diverse disposti affiancati",
+    "isCorrect": false
+   },
+   {
+    "text": "tra le catene laterali apolari e l'acqua",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Quale affermazione sulla denaturazione ordinaria di una proteina è corretta?",
+  "options": [
+   {
+    "text": "Vengono idrolizzati i legami peptidici",
+    "isCorrect": false
+   },
+   {
+    "text": "È sempre reversibile",
+    "isCorrect": false
+   },
+   {
+    "text": "Si perde la forma, non i legami peptidici",
+    "isCorrect": true
+   },
+   {
+    "text": "Cambia la sequenza degli amminoacidi",
+    "isCorrect": false
+   },
+   {
+    "text": "Aumenta l'attività biologica",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "La struttura quaternaria esiste:",
+  "options": [
+   {
+    "text": "in tutte le proteine",
+    "isCorrect": false
+   },
+   {
+    "text": "solo nelle proteine fibrose",
+    "isCorrect": false
+   },
+   {
+    "text": "quando la proteina contiene ponti disolfuro",
+    "isCorrect": false
+   },
+   {
+    "text": "solo negli enzimi",
+    "isCorrect": false
+   },
+   {
+    "text": "solo nelle proteine con più catene",
+    "isCorrect": true
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Un enzima:",
+  "options": [
+   {
+    "text": "sposta l'equilibrio verso i prodotti",
+    "isCorrect": false
+   },
+   {
+    "text": "abbassa l'energia di attivazione",
+    "isCorrect": true
+   },
+   {
+    "text": "rende favorevole una reazione sfavorevole",
+    "isCorrect": false
+   },
+   {
+    "text": "viene consumato nella reazione",
+    "isCorrect": false
+   },
+   {
+    "text": "aumenta l'energia di attivazione",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Un effettore allosterico:",
+  "options": [
+   {
+    "text": "è il substrato dell'enzima",
+    "isCorrect": false
+   },
+   {
+    "text": "si lega covalentemente in modo irreversibile",
+    "isCorrect": false
+   },
+   {
+    "text": "è sempre un attivatore",
+    "isCorrect": false
+   },
+   {
+    "text": "si lega a un sito diverso dal sito attivo",
+    "isCorrect": true
+   },
+   {
+    "text": "agisce solo sulla struttura primaria",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Quale affermazione sulla fosforilazione delle proteine è corretta?",
+  "options": [
+   {
+    "text": "Può attivare o inibire",
+    "isCorrect": true
+   },
+   {
+    "text": "Attiva sempre la proteina",
+    "isCorrect": false
+   },
+   {
+    "text": "È catalizzata dalle fosfatasi",
+    "isCorrect": false
+   },
+   {
+    "text": "Avviene solo su residui di lisina",
+    "isCorrect": false
+   },
+   {
+    "text": "È irreversibile",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "La poliubiquitinazione di una proteina:",
+  "options": [
+   {
+    "text": "la indirizza sempre alla secrezione",
+    "isCorrect": false
+   },
+   {
+    "text": "consiste nell'aggiunta di un fosfato",
+    "isCorrect": false
+   },
+   {
+    "text": "la indirizza al proteasoma",
+    "isCorrect": true
+   },
+   {
+    "text": "è catalizzata dalle deubiquitinasi",
+    "isCorrect": false
+   },
+   {
+    "text": "avviene sul DNA",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Un nucleoside è formato da:",
+  "options": [
+   {
+    "text": "base azotata + pentoso + fosfato",
+    "isCorrect": false
+   },
+   {
+    "text": "pentoso + fosfato",
+    "isCorrect": false
+   },
+   {
+    "text": "due basi appaiate",
+    "isCorrect": false
+   },
+   {
+    "text": "base azotata + fosfato",
+    "isCorrect": false
+   },
+   {
+    "text": "base azotata + pentoso",
+    "isCorrect": true
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Un filamento di DNA ha sequenza 5′-ATGC-3′. Il filamento complementare, scritto 5′→3′, è:",
+  "options": [
+   {
+    "text": "5′-TACG-3′",
+    "isCorrect": false
+   },
+   {
+    "text": "5′-GCAT-3′",
+    "isCorrect": true
+   },
+   {
+    "text": "5′-ATGC-3′",
+    "isCorrect": false
+   },
+   {
+    "text": "5′-UACG-3′",
+    "isCorrect": false
+   },
+   {
+    "text": "5′-CGTA-3′",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Perché un DNA ricco di coppie G–C ha una temperatura di fusione più alta?",
+  "options": [
+   {
+    "text": "Perché G e C sono legate da legami covalenti",
+    "isCorrect": false
+   },
+   {
+    "text": "Perché contiene uracile",
+    "isCorrect": false
+   },
+   {
+    "text": "Perché ha meno legami fosfodiesterici",
+    "isCorrect": false
+   },
+   {
+    "text": "Perché G≡C ha tre legami a idrogeno",
+    "isCorrect": true
+   },
+   {
+    "text": "Perché è a singolo filamento",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Quale affermazione sugli RNA è corretta?",
+  "options": [
+   {
+    "text": "Esistono RNA non codificanti, come rRNA e tRNA",
+    "isCorrect": true
+   },
+   {
+    "text": "Tutti gli RNA vengono tradotti in proteine",
+    "isCorrect": false
+   },
+   {
+    "text": "L'RNA contiene timina e desossiribosio",
+    "isCorrect": false
+   },
+   {
+    "text": "L'RNA non può ripiegarsi su se stesso",
+    "isCorrect": false
+   },
+   {
+    "text": "I miRNA trasportano gli amminoacidi",
+    "isCorrect": false
+   }
+  ]
+ },
+ {
+  "subject": "Biologia",
+  "topic": "SF-BIO-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "L'idrolisi dell'ATP in ADP + Pᵢ libera energia perché:",
+  "options": [
+   {
+    "text": "la rottura del legame fosfoanidridico libera l'energia in esso immagazzinata",
+    "isCorrect": false
+   },
+   {
+    "text": "l'ATP è un polimero",
+    "isCorrect": false
+   },
+   {
+    "text": "i prodotti sono complessivamente più stabili dei reagenti",
+    "isCorrect": true
+   },
+   {
+    "text": "l'enzima che la catalizza fornisce energia",
+    "isCorrect": false
+   },
+   {
+    "text": "si forma un legame covalente nuovo con l'acqua senza rompere legami",
+    "isCorrect": false
+   }
+  ]
+ }
+]
