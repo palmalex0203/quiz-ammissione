@@ -201,6 +201,15 @@ export default async function StudentPracticePage({
               {topics.map((topic) => {
                 const stat = stats.get(topic.code);
                 const pct = stat && stat.total > 0 ? Math.round((stat.correct / stat.total) * 100) : null;
+                const sottotitolo = [
+                  // Senza domande a sufficienza il pulsante "Allenati" non c'è: va
+                  // detto perché, altrimenti la riga sembra rotta. Si dice però
+                  // cosa si può fare, non quante domande mancano.
+                  abbastanzaDomande(topic.code) ? null : "Per ora solo il ripasso",
+                  pct != null ? `${stat!.correct} giuste su ${stat!.total} già svolte` : null,
+                ]
+                  .filter(Boolean)
+                  .join(" · ");
                 return (
                   <div
                     key={topic.code}
@@ -208,12 +217,12 @@ export default async function StudentPracticePage({
                   >
                     <div className="min-w-0">
                       <p className="text-sm font-semibold">{topic.label}</p>
-                      <p className="mt-0.5 text-xs text-muted">
-                        {abbastanzaDomande(topic.code)
-                          ? `${pool.byTopic.get(topic.code)} domande disponibili`
-                          : "Nessuna domanda per ora"}
-                        {pct != null && ` · ${stat!.correct} giuste su ${stat!.total} già svolte`}
-                      </p>
+                      {/* Quanto sia grande la banca dati non riguarda lo studente: è
+                          un numero che non cambia quello che può fare, e che invita
+                          a confrontare gli argomenti fra loro invece che a studiarli.
+                          Qui resta solo ciò che parla di lui: come sta andando, e se
+                          su questo argomento può allenarsi o soltanto ripassare. */}
+                      {sottotitolo && <p className="mt-0.5 text-xs text-muted">{sottotitolo}</p>}
                     </div>
                     <div className="flex shrink-0 items-center gap-3">
                       {pct != null && (
@@ -335,13 +344,13 @@ export default async function StudentPracticePage({
               {subjectPct.has(subject) && <ProgressRing value={subjectPct.get(subject)!} size={48} />}
               <div>
                 <p className="font-display text-lg font-bold leading-tight">{subject}</p>
-                <p className="mt-1 text-xs text-muted">
-                  {details.length > 0
-                    ? details.join(" · ")
-                    : available > 0
-                      ? `${available} domande disponibili`
-                      : "In preparazione"}
-                </p>
+                {/* Anche qui niente conteggi: se la materia ha qualcosa da fare si
+                    entra e lo si vede, se non ha niente lo si dice. */}
+                {(details.length > 0 || available === 0) && (
+                  <p className="mt-1 text-xs text-muted">
+                    {details.length > 0 ? details.join(" · ") : "In preparazione"}
+                  </p>
+                )}
               </div>
             </Link>
           );
