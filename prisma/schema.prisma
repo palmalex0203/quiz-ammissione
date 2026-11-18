@@ -90,6 +90,13 @@ model Question {
   order   Int
   points  Int          @default(1)
 
+  /// Perché la risposta giusta è giusta, e perché le altre non lo sono.
+  /// Si mostra nella correzione, dopo la consegna, mai durante la prova.
+  /// Senza, una banca dati misura ma non insegna: lo studente scopre di aver
+  /// sbagliato e non scopre dove. Viene dalle soluzioni commentate che i
+  /// docenti scrivono in fondo alle dispense.
+  spiegazione String?
+
   options       AnswerOption[]
   answerRecords AnswerRecord[]
   usiNeiTest    TestQuestion[]

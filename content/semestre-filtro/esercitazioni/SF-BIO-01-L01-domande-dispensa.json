@@ -1,562 +1,582 @@
 [
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Nella nomenclatura binomiale, che cosa indica il secondo termine di un nome scientifico, come *sapiens* in *Homo sapiens*?",
-  "options": [
-   {
-    "text": "È il nome del genere",
-    "isCorrect": false
-   },
-   {
-    "text": "È l'epiteto specifico, non il nome della specie",
-    "isCorrect": true
-   },
-   {
-    "text": "Indica la famiglia di appartenenza",
-    "isCorrect": false
-   },
-   {
-    "text": "Si scrive con l'iniziale maiuscola",
-    "isCorrect": false
-   },
-   {
-    "text": "Può essere usato da solo come nome della specie",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Quale sequenza di categorie tassonomiche è ordinata dalla più inclusiva alla meno inclusiva?",
-  "options": [
-   {
-    "text": "Regno, dominio, phylum, classe, ordine, famiglia, genere, specie",
-    "isCorrect": false
-   },
-   {
-    "text": "Dominio, regno, classe, phylum, ordine, famiglia, genere, specie",
-    "isCorrect": false
-   },
-   {
-    "text": "Dominio, regno, phylum, ordine, classe, famiglia, genere, specie",
-    "isCorrect": false
-   },
-   {
-    "text": "Dominio, regno, phylum, classe, ordine, famiglia, genere, specie",
-    "isCorrect": true
-   },
-   {
-    "text": "Dominio, regno, phylum, classe, famiglia, ordine, genere, specie",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Quale affermazione descrive correttamente il rapporto tra tassonomia, sistematica e filogenesi?",
-  "options": [
-   {
-    "text": "La tassonomia è una parte della sistematica; la filogenesi è la storia evolutiva",
-    "isCorrect": true
-   },
-   {
-    "text": "Sono tre sinonimi che indicano la classificazione degli organismi",
-    "isCorrect": false
-   },
-   {
-    "text": "La filogenesi è la disciplina che assegna i nomi scientifici alle specie",
-    "isCorrect": false
-   },
-   {
-    "text": "La sistematica è una parte della tassonomia",
-    "isCorrect": false
-   },
-   {
-    "text": "La tassonomia si occupa soltanto degli organismi fossili",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Secondo il modello dei tre domini, quale affermazione è corretta?",
-  "options": [
-   {
-    "text": "Gli Archaea sono eucarioti, perché sono vicini agli Eukarya",
-    "isCorrect": false
-   },
-   {
-    "text": "Bacteria e Archaea formano un unico dominio perché entrambi procarioti",
-    "isCorrect": false
-   },
-   {
-    "text": "Il dominio Eukarya comprende soltanto organismi pluricellulari",
-    "isCorrect": false
-   },
-   {
-    "text": "I funghi appartengono al dominio Bacteria",
-    "isCorrect": false
-   },
-   {
-    "text": "Archaea ed Eukarya sono più imparentati fra loro che con i Bacteria",
-    "isCorrect": true
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Perché la classificazione in sei regni è considerata oggi un modello didattico tradizionale e non una descrizione definitiva della filogenesi?",
-  "options": [
-   {
-    "text": "Perché le piante sono state riclassificate tra i procarioti",
-    "isCorrect": false
-   },
-   {
-    "text": "Perché i regni sono stati sostituiti dai tre domini e quindi non esistono più",
-    "isCorrect": false
-   },
-   {
-    "text": "Perché gruppi come i «Protisti» non raccolgono tutti e soli i discendenti di un antenato",
-    "isCorrect": true
-   },
-   {
-    "text": "Perché non utilizza la nomenclatura binomiale",
-    "isCorrect": false
-   },
-   {
-    "text": "Perché la classificazione moderna si basa ormai solo sulla morfologia",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Nel modello darwiniano, su che cosa agisce la selezione naturale?",
-  "options": [
-   {
-    "text": "Sulla variabilità ereditaria già presente in una popolazione",
-    "isCorrect": true
-   },
-   {
-    "text": "Sui caratteri acquisiti durante la vita e poi trasmessi ai figli",
-    "isCorrect": false
-   },
-   {
-    "text": "Sulla produzione intenzionale delle mutazioni necessarie all'ambiente",
-    "isCorrect": false
-   },
-   {
-    "text": "Sul singolo individuo, che si trasforma per adattarsi",
-    "isCorrect": false
-   },
-   {
-    "text": "Soltanto sui caratteri non ereditari",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "In un albero filogenetico coccodrillo e uccello si separano da un nodo esclusivo; la lucertola si separa da questo gruppo in un nodo più vicino alla radice; il topo ancora prima. Quale conclusione è corretta?",
-  "options": [
-   {
-    "text": "La lucertola è l'antenata del coccodrillo",
-    "isCorrect": false
-   },
-   {
-    "text": "L'uccello è più evoluto del topo",
-    "isCorrect": false
-   },
-   {
-    "text": "Il coccodrillo è più imparentato con la lucertola perché le somiglia di più",
-    "isCorrect": false
-   },
-   {
-    "text": "Il coccodrillo è più imparentato con l'uccello che con la lucertola",
-    "isCorrect": true
-   },
-   {
-    "text": "Ruotando i rami attorno al nodo coccodrillo–uccello le parentele cambierebbero",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Quale coppia rappresenta strutture analoghe?",
-  "options": [
-   {
-    "text": "Arto anteriore dell'uomo e ala del pipistrello",
-    "isCorrect": false
-   },
-   {
-    "text": "Ala di un uccello e ala di una farfalla",
-    "isCorrect": true
-   },
-   {
-    "text": "Pinna pettorale della balena e arto anteriore del cavallo",
-    "isCorrect": false
-   },
-   {
-    "text": "Colonna vertebrale di un pesce e di un mammifero",
-    "isCorrect": false
-   },
-   {
-    "text": "Ala di un uccello e arto anteriore di un coccodrillo",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Una sequenza di DNA omologa mostra una divergenza dell'1,7% tra uomo e scimpanzé e del 24,6% tra uomo e tarsio. Quale conclusione è più corretta?",
-  "options": [
-   {
-    "text": "La divergenza uomo–tarsio è avvenuta esattamente 14,5 volte prima di quella uomo–scimpanzé",
-    "isCorrect": false
-   },
-   {
-    "text": "Lo scimpanzé è l'antenato dell'uomo",
-    "isCorrect": false
-   },
-   {
-    "text": "Il tarsio è meno evoluto dell'uomo",
-    "isCorrect": false
-   },
-   {
-    "text": "Una differenza così alta dimostra che uomo e tarsio non hanno un antenato comune",
-    "isCorrect": false
-   },
-   {
-    "text": "L'uomo ha un antenato comune più recente con lo scimpanzé che con il tarsio",
-    "isCorrect": true
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Che cosa osservò Robert Hooke nel 1665?",
-  "options": [
-   {
-    "text": "La divisione delle cellule nei tessuti animali",
-    "isCorrect": false
-   },
-   {
-    "text": "Il nucleo delle cellule vegetali",
-    "isCorrect": false
-   },
-   {
-    "text": "Cavità in una fetta di sughero, che chiamò «cellule»",
-    "isCorrect": true
-   },
-   {
-    "text": "I primi microrganismi vivi",
-    "isCorrect": false
-   },
-   {
-    "text": "Che ogni cellula deriva da una cellula preesistente",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Quale fu il contributo principale di Schleiden e Schwann?",
-  "options": [
-   {
-    "text": "Le piante (Schleiden) e gli animali (Schwann) sono fatti di cellule",
-    "isCorrect": true
-   },
-   {
-    "text": "Dimostrare che gli animali (Schleiden) e le piante (Schwann) sono fatti di cellule",
-    "isCorrect": false
-   },
-   {
-    "text": "Formulare il principio «omnis cellula e cellula»",
-    "isCorrect": false
-   },
-   {
-    "text": "Introdurre la nomenclatura binomiale",
-    "isCorrect": false
-   },
-   {
-    "text": "Descrivere i tre domini della vita",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Il principio «omnis cellula e cellula», diffuso da Virchow, implica che:",
-  "options": [
-   {
-    "text": "tutte le cellule possiedono un nucleo",
-    "isCorrect": false
-   },
-   {
-    "text": "le cellule di un organismo hanno tutte la stessa forma",
-    "isCorrect": false
-   },
-   {
-    "text": "la cellula è la più piccola unità di materia",
-    "isCorrect": false
-   },
-   {
-    "text": "le cellule derivano dalla divisione di cellule preesistenti",
-    "isCorrect": true
-   },
-   {
-    "text": "i virus sono cellule",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Quale insieme di elementi è condiviso sia dalle cellule procariotiche sia da quelle eucariotiche?",
-  "options": [
-   {
-    "text": "Nucleo, mitocondri e membrana plasmatica",
-    "isCorrect": false
-   },
-   {
-    "text": "Membrana plasmatica, citoplasma, DNA e ribosomi",
-    "isCorrect": true
-   },
-   {
-    "text": "Parete cellulare, membrana plasmatica e nucleoide",
-    "isCorrect": false
-   },
-   {
-    "text": "Nucleo, DNA e citoplasma",
-    "isCorrect": false
-   },
-   {
-    "text": "Membrana plasmatica, organelli delimitati da membrana e DNA",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "L'eritrocita maturo dei mammiferi è privo di nucleo. Quale affermazione è corretta?",
-  "options": [
-   {
-    "text": "È una cellula procariotica, perché manca il nucleo",
-    "isCorrect": false
-   },
-   {
-    "text": "Non è una cellula, perché non si divide",
-    "isCorrect": false
-   },
-   {
-    "text": "Contraddice il principio secondo cui ogni cellula deriva da una cellula",
-    "isCorrect": false
-   },
-   {
-    "text": "Contiene il DNA libero in un nucleoide",
-    "isCorrect": false
-   },
-   {
-    "text": "È una cellula eucariotica che perde il nucleo maturando",
-    "isCorrect": true
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Quale affermazione sulla composizione chimica degli esseri viventi è corretta?",
-  "options": [
-   {
-    "text": "Contengono elementi chimici che non esistono nella materia non vivente",
-    "isCorrect": false
-   },
-   {
-    "text": "Sono costituiti principalmente da ferro e silicio",
-    "isCorrect": false
-   },
-   {
-    "text": "Sono fatti degli stessi elementi della materia non vivente",
-    "isCorrect": true
-   },
-   {
-    "text": "Contengono una «forza vitale» che li distingue dalla materia inerte",
-    "isCorrect": false
-   },
-   {
-    "text": "Non obbediscono alle leggi della chimica",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Perché la capacità di riprodursi, da sola, non basta a definire un organismo vivente?",
-  "options": [
-   {
-    "text": "Perché esistono organismi vivi che non si riproducono, come un mulo sterile",
-    "isCorrect": true
-   },
-   {
-    "text": "Perché tutti gli oggetti non viventi si riproducono",
-    "isCorrect": false
-   },
-   {
-    "text": "Perché la riproduzione riguarda soltanto i procarioti",
-    "isCorrect": false
-   },
-   {
-    "text": "Perché la riproduzione non comporta la trasmissione di informazione genetica",
-    "isCorrect": false
-   },
-   {
-    "text": "Perché gli organismi pluricellulari non si riproducono",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Una persona si trasferisce in alta quota e dopo alcune settimane produce più globuli rossi. Come si classifica correttamente il fenomeno?",
-  "options": [
-   {
-    "text": "Evoluzione della popolazione",
-    "isCorrect": false
-   },
-   {
-    "text": "Selezione naturale",
-    "isCorrect": false
-   },
-   {
-    "text": "Omeostasi a feedback positivo",
-    "isCorrect": false
-   },
-   {
-    "text": "Adattamento fisiologico individuale (acclimatazione)",
-    "isCorrect": true
-   },
-   {
-    "text": "Comparsa di una mutazione indotta dall'altitudine e trasmessa alla prole",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Quale esempio illustra meglio il concetto di proprietà emergente?",
-  "options": [
-   {
-    "text": "La massa di una proteina, pari alla somma delle masse dei suoi amminoacidi",
-    "isCorrect": false
-   },
-   {
-    "text": "La contrazione coordinata del cuore",
-    "isCorrect": true
-   },
-   {
-    "text": "Il numero atomico del carbonio",
-    "isCorrect": false
-   },
-   {
-    "text": "La presenza di DNA in una cellula",
-    "isCorrect": false
-   },
-   {
-    "text": "Il nome binomiale di una specie",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Durante una terapia antibiotica l'infezione migliora, poi ricompare e non risponde più allo stesso farmaco. Quale spiegazione è coerente con la selezione naturale?",
-  "options": [
-   {
-    "text": "I batteri hanno sviluppato la resistenza perché ne avevano bisogno",
-    "isCorrect": false
-   },
-   {
-    "text": "Le cellule del paziente sono diventate resistenti all'antibiotico",
-    "isCorrect": false
-   },
-   {
-    "text": "I batteri sensibili sono stati eliminati, i resistenti sono sopravvissuti",
-    "isCorrect": true
-   },
-   {
-    "text": "L'antibiotico si è trasformato in una sostanza nutritiva per i batteri",
-    "isCorrect": false
-   },
-   {
-    "text": "Il sistema immunitario ha prodotto i batteri resistenti",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L01",
-  "type": "MULTIPLE_CHOICE",
-  "text": "Perché alcuni antibiotici, come le penicilline, danneggiano i batteri ma in larga misura non le cellule umane?",
-  "options": [
-   {
-    "text": "Perché le cellule umane non hanno membrana plasmatica",
-    "isCorrect": false
-   },
-   {
-    "text": "Perché i batteri hanno un nucleo e le cellule umane no",
-    "isCorrect": false
-   },
-   {
-    "text": "Perché agiscono solo sulle cellule prive di DNA",
-    "isCorrect": false
-   },
-   {
-    "text": "Perché le cellule umane hanno una parete più spessa che le protegge",
-    "isCorrect": false
-   },
-   {
-    "text": "Perché la parete di peptidoglicano è assente nelle cellule umane",
-    "isCorrect": true
-   }
-  ]
- }
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Nella nomenclatura binomiale, che cosa indica il secondo termine di un nome scientifico, come sapiens in Homo sapiens?",
+    "options": [
+      {
+        "text": "È il nome del genere",
+        "isCorrect": false
+      },
+      {
+        "text": "È l'epiteto specifico, non il nome della specie",
+        "isCorrect": true
+      },
+      {
+        "text": "Indica la famiglia di appartenenza",
+        "isCorrect": false
+      },
+      {
+        "text": "Si scrive con l'iniziale maiuscola",
+        "isCorrect": false
+      },
+      {
+        "text": "Può essere usato da solo come nome della specie",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Il nome della specie è il binomio genere + epiteto; l'epiteto isolato non ha valore identificativo. La regola di Linneo assegna a ogni specie un nome di due parole latine in corsivo: il genere (maiuscola) e l'epiteto specifico (minuscola). Solo il binomio completo identifica la specie.\n\nLe altre: A) Il genere è il primo termine (Homo), scritto con iniziale maiuscola. C) La famiglia (Hominidae) non compare nel nome binomiale. D) L'epiteto specifico si scrive sempre con l'iniziale minuscola. E) Lo stesso epiteto (es. sapiens, vulgaris) può comparire in generi diversi: da solo è ambiguo."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Quale sequenza di categorie tassonomiche è ordinata dalla più inclusiva alla meno inclusiva?",
+    "options": [
+      {
+        "text": "Regno, dominio, phylum, classe, ordine, famiglia, genere, specie",
+        "isCorrect": false
+      },
+      {
+        "text": "Dominio, regno, classe, phylum, ordine, famiglia, genere, specie",
+        "isCorrect": false
+      },
+      {
+        "text": "Dominio, regno, phylum, ordine, classe, famiglia, genere, specie",
+        "isCorrect": false
+      },
+      {
+        "text": "Dominio, regno, phylum, classe, ordine, famiglia, genere, specie",
+        "isCorrect": true
+      },
+      {
+        "text": "Dominio, regno, phylum, classe, famiglia, ordine, genere, specie",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "È la gerarchia corretta, illustrata nella lezione con Homo sapiens. Ogni categoria comprende quelle sottostanti: scendendo, i gruppi sono più ristretti e i loro membri condividono più caratteristiche.\n\nLe altre: A) Il dominio è la categoria più ampia e precede il regno. B) Il phylum è più inclusivo della classe, non viceversa. C) La classe comprende gli ordini: viene prima dell'ordine. E) L'ordine comprende le famiglie: viene prima della famiglia."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Quale affermazione descrive correttamente il rapporto tra tassonomia, sistematica e filogenesi?",
+    "options": [
+      {
+        "text": "La tassonomia è una parte della sistematica; la filogenesi è la storia evolutiva",
+        "isCorrect": true
+      },
+      {
+        "text": "Sono tre sinonimi che indicano la classificazione degli organismi",
+        "isCorrect": false
+      },
+      {
+        "text": "La filogenesi è la disciplina che assegna i nomi scientifici alle specie",
+        "isCorrect": false
+      },
+      {
+        "text": "La sistematica è una parte della tassonomia",
+        "isCorrect": false
+      },
+      {
+        "text": "La tassonomia si occupa soltanto degli organismi fossili",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Sono tre concetti distinti e collegati, come definito nella lezione e nel manuale. La sistematica è il campo più ampio; la tassonomia ne è la parte che descrive, nomina e classifica; la filogenesi è l'oggetto ricostruito: la storia evolutiva, rappresentata dagli alberi.\n\nLe altre: B) I tre termini hanno significati diversi: confonderli è un errore frequente. C) Denominare le specie è compito della tassonomia, secondo regole codificate (es. ICZN). D) È il contrario: la tassonomia fa parte della sistematica. E) La tassonomia classifica sia organismi attuali sia fossili."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Secondo il modello dei tre domini, quale affermazione è corretta?",
+    "options": [
+      {
+        "text": "Gli Archaea sono eucarioti, perché sono vicini agli Eukarya",
+        "isCorrect": false
+      },
+      {
+        "text": "Bacteria e Archaea formano un unico dominio perché entrambi procarioti",
+        "isCorrect": false
+      },
+      {
+        "text": "Il dominio Eukarya comprende soltanto organismi pluricellulari",
+        "isCorrect": false
+      },
+      {
+        "text": "I funghi appartengono al dominio Bacteria",
+        "isCorrect": false
+      },
+      {
+        "text": "Archaea ed Eukarya sono più imparentati fra loro che con i Bacteria",
+        "isCorrect": true
+      }
+    ],
+    "spiegazione": "Nell'albero, Archaea ed Eukarya si separano da un nodo comune, successivo alla divergenza dei Bacteria. Il confronto delle sequenze di rRNA (Woese e collaboratori) ha mostrato che Archaea ed Eukarya sono più vicini tra loro che ai Bacteria, nonostante gli Archaea abbiano organizzazione procariotica. L'affermazione resta vera anche nei modelli filogenomici, ancora discussi, in cui gli eucarioti emergono all'interno degli Archaea.\n\nLe altre: A) Gli Archaea sono procarioti: la vicinanza filogenetica non implica la presenza di un nucleo. B) Essere procarioti è un tipo di organizzazione cellulare, non un gruppo filogenetico unico: sono due domini distinti. C) Eukarya comprende anche molti unicellulari, come lieviti e numerosi protisti. D) I funghi sono eucarioti e appartengono al dominio Eukarya."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Perché la classificazione in sei regni è considerata oggi un modello didattico tradizionale e non una descrizione definitiva della filogenesi?",
+    "options": [
+      {
+        "text": "Perché le piante sono state riclassificate tra i procarioti",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché i regni sono stati sostituiti dai tre domini e quindi non esistono più",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché gruppi come i «Protisti» non raccolgono tutti e soli i discendenti di un antenato",
+        "isCorrect": true
+      },
+      {
+        "text": "Perché non utilizza la nomenclatura binomiale",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché la classificazione moderna si basa ormai solo sulla morfologia",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Un gruppo naturale deve comprendere un antenato e tutti i suoi discendenti; i «Protisti» non soddisfano questo criterio. I dati molecolari hanno mostrato che alcuni raggruppamenti tradizionali non corrispondono a linee di discendenza: il modello dei sei regni resta utile per orientarsi, ma non rappresenta fedelmente l'albero.\n\nLe altre: A) Le piante sono eucarioti: nessuna analisi le colloca tra i procarioti. B) Domini e regni sono livelli diversi: i domini stanno sopra i regni, non li sostituiscono. D) La nomenclatura binomiale riguarda il nome delle specie, non il numero dei regni. E) È il contrario: i dati molecolari hanno un ruolo crescente nella ricostruzione delle parentele."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Nel modello darwiniano, su che cosa agisce la selezione naturale?",
+    "options": [
+      {
+        "text": "Sulla variabilità ereditaria già presente in una popolazione",
+        "isCorrect": true
+      },
+      {
+        "text": "Sui caratteri acquisiti durante la vita e poi trasmessi ai figli",
+        "isCorrect": false
+      },
+      {
+        "text": "Sulla produzione intenzionale delle mutazioni necessarie all'ambiente",
+        "isCorrect": false
+      },
+      {
+        "text": "Sul singolo individuo, che si trasforma per adattarsi",
+        "isCorrect": false
+      },
+      {
+        "text": "Soltanto sui caratteri non ereditari",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "La selezione favorisce varianti preesistenti: non le produce. Variabilità ereditaria + sopravvivenza e riproduzione differenziali = cambiamento della frequenza dei caratteri nella popolazione.\n\nLe altre: B) È l'ipotesi di Lamarck, non confermata. C) Le mutazioni sono casuali rispetto ai bisogni dell'organismo. D) L'individuo non evolve: cambia la composizione della popolazione. E) Un carattere non ereditario non può aumentare di frequenza nelle generazioni successive."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "In un albero filogenetico coccodrillo e uccello si separano da un nodo esclusivo; la lucertola si separa da questo gruppo in un nodo più vicino alla radice; il topo ancora prima. Quale conclusione è corretta?",
+    "options": [
+      {
+        "text": "La lucertola è l'antenata del coccodrillo",
+        "isCorrect": false
+      },
+      {
+        "text": "L'uccello è più evoluto del topo",
+        "isCorrect": false
+      },
+      {
+        "text": "Il coccodrillo è più imparentato con la lucertola perché le somiglia di più",
+        "isCorrect": false
+      },
+      {
+        "text": "Il coccodrillo è più imparentato con l'uccello che con la lucertola",
+        "isCorrect": true
+      },
+      {
+        "text": "Ruotando i rami attorno al nodo coccodrillo–uccello le parentele cambierebbero",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Coccodrillo e uccello condividono l'antenato comune più recente (il nodo esclusivo). La parentela si legge dai nodi: due gruppi sono più imparentati quanto più recente è il loro antenato comune.\n\nLe altre: A) Le specie attuali alle punte non sono antenate l'una dell'altra. B) Un albero non è una scala del progresso: tutte le punte hanno lo stesso tempo evolutivo alle spalle. C) La somiglianza esterna non misura la parentela: contano i nodi. E) La rotazione attorno a un nodo non modifica le relazioni rappresentate."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Quale coppia rappresenta strutture analoghe?",
+    "options": [
+      {
+        "text": "Arto anteriore dell'uomo e ala del pipistrello",
+        "isCorrect": false
+      },
+      {
+        "text": "Ala di un uccello e ala di una farfalla",
+        "isCorrect": true
+      },
+      {
+        "text": "Pinna pettorale della balena e arto anteriore del cavallo",
+        "isCorrect": false
+      },
+      {
+        "text": "Colonna vertebrale di un pesce e di un mammifero",
+        "isCorrect": false
+      },
+      {
+        "text": "Ala di un uccello e arto anteriore di un coccodrillo",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Svolgono la stessa funzione ma si sono evolute in modo indipendente in linee lontane. Gli analoghi derivano da evoluzione indipendente di funzioni simili; solo gli omologhi sono utili per ricostruire le parentele.\n\nLe altre: A) Sono omologhi: condividono la stessa struttura ossea di base, ereditata da un antenato comune. C) Sono omologhi: arti anteriori di mammiferi. D) La colonna vertebrale è omologa in tutti i vertebrati (esempio del manuale). E) Sono entrambi arti anteriori di vertebrati tetrapodi, quindi omologhi come arti."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Una sequenza di DNA omologa mostra una divergenza dell'1,7% tra uomo e scimpanzé e del 24,6% tra uomo e tarsio. Quale conclusione è più corretta?",
+    "options": [
+      {
+        "text": "La divergenza uomo–tarsio è avvenuta esattamente 14,5 volte prima di quella uomo–scimpanzé",
+        "isCorrect": false
+      },
+      {
+        "text": "Lo scimpanzé è l'antenato dell'uomo",
+        "isCorrect": false
+      },
+      {
+        "text": "Il tarsio è meno evoluto dell'uomo",
+        "isCorrect": false
+      },
+      {
+        "text": "Una differenza così alta dimostra che uomo e tarsio non hanno un antenato comune",
+        "isCorrect": false
+      },
+      {
+        "text": "L'uomo ha un antenato comune più recente con lo scimpanzé che con il tarsio",
+        "isCorrect": true
+      }
+    ],
+    "spiegazione": "Più differenze indicano una divergenza più antica, ma il rapporto con il tempo non è automatico. I dati molecolari ordinano le parentele; il valore percentuale dipende dal gene e dal metodo, e trasformarlo in date richiede modelli e calibrazioni (orologio molecolare), non una semplice proporzione.\n\nLe altre: A) Il rapporto tra le percentuali non è un rapporto tra tempi: velocità variabili, saturazione e calibrazione lo impediscono. B) Uomo e scimpanzé sono specie attuali con un antenato comune; nessuna discende dall'altra. C) Tutte le specie attuali hanno alle spalle lo stesso tempo evolutivo. D) Le sequenze sono omologhe proprio perché derivano da un gene ancestrale comune."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Che cosa osservò Robert Hooke nel 1665?",
+    "options": [
+      {
+        "text": "La divisione delle cellule nei tessuti animali",
+        "isCorrect": false
+      },
+      {
+        "text": "Il nucleo delle cellule vegetali",
+        "isCorrect": false
+      },
+      {
+        "text": "Cavità in una fetta di sughero, che chiamò «cellule»",
+        "isCorrect": true
+      },
+      {
+        "text": "I primi microrganismi vivi",
+        "isCorrect": false
+      },
+      {
+        "text": "Che ogni cellula deriva da una cellula preesistente",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Erano le pareti di cellule vegetali morte: nacque il termine, non ancora la teoria. Hooke coniò il termine «cellula» osservando il sughero con un microscopio rudimentale (Micrographia, 1665).\n\nLe altre: A) La divisione come origine delle cellule fu descritta nell'Ottocento (Remak). B) Hooke vide pareti di cellule morte, prive di contenuto. D) Furono osservati da van Leeuwenhoek, negli anni successivi. E) È il principio diffuso da Virchow nel 1855."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Quale fu il contributo principale di Schleiden e Schwann?",
+    "options": [
+      {
+        "text": "Le piante (Schleiden) e gli animali (Schwann) sono fatti di cellule",
+        "isCorrect": true
+      },
+      {
+        "text": "Dimostrare che gli animali (Schleiden) e le piante (Schwann) sono fatti di cellule",
+        "isCorrect": false
+      },
+      {
+        "text": "Formulare il principio «omnis cellula e cellula»",
+        "isCorrect": false
+      },
+      {
+        "text": "Introdurre la nomenclatura binomiale",
+        "isCorrect": false
+      },
+      {
+        "text": "Descrivere i tre domini della vita",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Dalla generalizzazione dei loro risultati nasce la teoria cellulare. Schleiden e Schwann estesero a tutti i viventi l'idea che la cellula sia l'unità costitutiva degli organismi.\n\nLe altre: B) I ruoli sono invertiti: Schleiden era botanico, Schwann zoologo. C) È associato a Virchow (1855), e la formula era già stata usata da Raspail. D) È opera di Linneo, nel XVIII secolo. E) I tre domini furono proposti da Woese e collaboratori nel Novecento."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Il principio «omnis cellula e cellula», diffuso da Virchow, implica che:",
+    "options": [
+      {
+        "text": "tutte le cellule possiedono un nucleo",
+        "isCorrect": false
+      },
+      {
+        "text": "le cellule di un organismo hanno tutte la stessa forma",
+        "isCorrect": false
+      },
+      {
+        "text": "la cellula è la più piccola unità di materia",
+        "isCorrect": false
+      },
+      {
+        "text": "le cellule derivano dalla divisione di cellule preesistenti",
+        "isCorrect": true
+      },
+      {
+        "text": "i virus sono cellule",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "È il terzo principio della teoria cellulare. Ogni cellula proviene da una cellula: la continuità della vita passa attraverso la divisione cellulare.\n\nLe altre: A) I procarioti non hanno nucleo; il principio non riguarda la struttura interna. B) Il differenziamento produce forme diverse a partire dallo stesso genoma. C) La cellula è la più piccola unità vivente, non la più piccola unità di materia. E) I virus non sono cellule e si replicano solo all'interno di cellule ospiti."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Quale insieme di elementi è condiviso sia dalle cellule procariotiche sia da quelle eucariotiche?",
+    "options": [
+      {
+        "text": "Nucleo, mitocondri e membrana plasmatica",
+        "isCorrect": false
+      },
+      {
+        "text": "Membrana plasmatica, citoplasma, DNA e ribosomi",
+        "isCorrect": true
+      },
+      {
+        "text": "Parete cellulare, membrana plasmatica e nucleoide",
+        "isCorrect": false
+      },
+      {
+        "text": "Nucleo, DNA e citoplasma",
+        "isCorrect": false
+      },
+      {
+        "text": "Membrana plasmatica, organelli delimitati da membrana e DNA",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Sono gli elementi comuni a entrambi i tipi di organizzazione cellulare. Nella lezione: tutte le cellule hanno membrana, citoplasma, materiale genetico e ribosomi; nucleo e organelli membranosi caratterizzano gli eucarioti.\n\nLe altre: A) Nucleo e mitocondri sono assenti nei procarioti. C) Il nucleoide è tipico dei procarioti; molte cellule eucariotiche (es. animali) non hanno parete. D) Il nucleo manca nei procarioti. E) Gli organelli delimitati da membrana sono tipici degli eucarioti."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "L'eritrocita maturo dei mammiferi è privo di nucleo. Quale affermazione è corretta?",
+    "options": [
+      {
+        "text": "È una cellula procariotica, perché manca il nucleo",
+        "isCorrect": false
+      },
+      {
+        "text": "Non è una cellula, perché non si divide",
+        "isCorrect": false
+      },
+      {
+        "text": "Contraddice il principio secondo cui ogni cellula deriva da una cellula",
+        "isCorrect": false
+      },
+      {
+        "text": "Contiene il DNA libero in un nucleoide",
+        "isCorrect": false
+      },
+      {
+        "text": "È una cellula eucariotica che perde il nucleo maturando",
+        "isCorrect": true
+      }
+    ],
+    "spiegazione": "Deriva da precursori nucleati: l'assenza del nucleo è il risultato di una specializzazione. L'esempio mostra perché non si deve dire che «tutte le cellule hanno un nucleo»: la forma senza nucleo serve alla funzione di trasporto dei gas.\n\nLe altre: A) Procariote ed eucariote indicano tipi di organizzazione e linee evolutive, non la sola presenza attuale del nucleo. B) È una cellula a tutti gli effetti, con membrana e citoplasma; molte cellule differenziate non si dividono. C) Deriva da cellule precursori del midollo osseo: il principio è rispettato. D) L'eritrocita maturo non ha nucleoide: il DNA viene eliminato con il nucleo."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Quale affermazione sulla composizione chimica degli esseri viventi è corretta?",
+    "options": [
+      {
+        "text": "Contengono elementi chimici che non esistono nella materia non vivente",
+        "isCorrect": false
+      },
+      {
+        "text": "Sono costituiti principalmente da ferro e silicio",
+        "isCorrect": false
+      },
+      {
+        "text": "Sono fatti degli stessi elementi della materia non vivente",
+        "isCorrect": true
+      },
+      {
+        "text": "Contengono una «forza vitale» che li distingue dalla materia inerte",
+        "isCorrect": false
+      },
+      {
+        "text": "Non obbediscono alle leggi della chimica",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "C, H, O, N, P, S sono presenti anche nel mondo non vivente. La vita non dipende da una materia speciale ma da come la materia è organizzata e mantenuta grazie a un flusso di energia.\n\nLe altre: A) Non esistono elementi esclusivi dei viventi. B) Gli elementi più abbondanti nei viventi sono C, H, O, N. D) Il vitalismo non trova riscontro: i processi vitali seguono le leggi della chimica e della fisica. E) Tutte le reazioni biologiche obbediscono alle leggi della chimica."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Perché la capacità di riprodursi, da sola, non basta a definire un organismo vivente?",
+    "options": [
+      {
+        "text": "Perché esistono organismi vivi che non si riproducono, come un mulo sterile",
+        "isCorrect": true
+      },
+      {
+        "text": "Perché tutti gli oggetti non viventi si riproducono",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché la riproduzione riguarda soltanto i procarioti",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché la riproduzione non comporta la trasmissione di informazione genetica",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché gli organismi pluricellulari non si riproducono",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Nessuna proprietà isolata è sufficiente o necessaria per ogni singolo individuo. Definire la vita con un'unica proprietà porta a controesempi: serve l'insieme integrato di organizzazione, metabolismo, omeostasi, ereditarietà e le altre proprietà.\n\nLe altre: B) Gli oggetti non viventi non si riproducono; alcuni mostrano singole proprietà come la crescita (cristalli). C) Si riproducono sia procarioti sia eucarioti. D) La riproduzione trasmette proprio l'informazione genetica. E) Gli organismi pluricellulari si riproducono, sessualmente o asessualmente."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Una persona si trasferisce in alta quota e dopo alcune settimane produce più globuli rossi. Come si classifica correttamente il fenomeno?",
+    "options": [
+      {
+        "text": "Evoluzione della popolazione",
+        "isCorrect": false
+      },
+      {
+        "text": "Selezione naturale",
+        "isCorrect": false
+      },
+      {
+        "text": "Omeostasi a feedback positivo",
+        "isCorrect": false
+      },
+      {
+        "text": "Adattamento fisiologico individuale (acclimatazione)",
+        "isCorrect": true
+      },
+      {
+        "text": "Comparsa di una mutazione indotta dall'altitudine e trasmessa alla prole",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Avviene nel singolo, in giorni–settimane, senza modificare il patrimonio ereditario. Omeostasi (rapida, individuale), adattamento fisiologico (più lento, individuale, non ereditato) ed evoluzione (popolazioni, generazioni) sono tre livelli distinti.\n\nLe altre: A) L'evoluzione richiede generazioni e un cambiamento delle frequenze dei caratteri ereditari. B) Non c'è sopravvivenza o riproduzione differenziale tra individui. C) La risposta riduce lo squilibrio tra fabbisogno e trasporto di ossigeno; inoltre l'omeostasi indica la regolazione rapida, non un aggiustamento di settimane. E) Non c'è alcuna mutazione: è una risposta regolata dell'organismo."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Quale esempio illustra meglio il concetto di proprietà emergente?",
+    "options": [
+      {
+        "text": "La massa di una proteina, pari alla somma delle masse dei suoi amminoacidi",
+        "isCorrect": false
+      },
+      {
+        "text": "La contrazione coordinata del cuore",
+        "isCorrect": true
+      },
+      {
+        "text": "Il numero atomico del carbonio",
+        "isCorrect": false
+      },
+      {
+        "text": "La presenza di DNA in una cellula",
+        "isCorrect": false
+      },
+      {
+        "text": "Il nome binomiale di una specie",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Una proprietà emergente nasce dall'interazione organizzata delle parti. A ogni livello di organizzazione compaiono proprietà che i componenti isolati non possiedono: è il senso della frase «il tutto è più della somma delle parti».\n\nLe altre: A) È una proprietà additiva: si ottiene sommando le parti, quindi non è emergente. C) È una proprietà di un singolo atomo, non di un sistema organizzato. D) Indica un componente della cellula, non una proprietà che emerge dall'organizzazione. E) È una convenzione della nomenclatura, non una proprietà biologica."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Durante una terapia antibiotica l'infezione migliora, poi ricompare e non risponde più allo stesso farmaco. Quale spiegazione è coerente con la selezione naturale?",
+    "options": [
+      {
+        "text": "I batteri hanno sviluppato la resistenza perché ne avevano bisogno",
+        "isCorrect": false
+      },
+      {
+        "text": "Le cellule del paziente sono diventate resistenti all'antibiotico",
+        "isCorrect": false
+      },
+      {
+        "text": "I batteri sensibili sono stati eliminati, i resistenti sono sopravvissuti",
+        "isCorrect": true
+      },
+      {
+        "text": "L'antibiotico si è trasformato in una sostanza nutritiva per i batteri",
+        "isCorrect": false
+      },
+      {
+        "text": "Il sistema immunitario ha prodotto i batteri resistenti",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "L'antibiotico agisce come pressione selettiva sulle varianti resistenti presenti nella popolazione. È lo stesso meccanismo della falena delle betulle, su tempi molto più brevi: è la popolazione batterica a cambiare composizione. Oltre alle varianti preesistenti, possono contribuire nuove mutazioni spontanee durante la terapia e geni di resistenza acquisiti da altri batteri; in tutti i casi l'antibiotico agisce come pressione selettiva, non come causa intenzionale della mutazione.\n\nLe altre: A) Le mutazioni non compaiono in risposta a un bisogno: la selezione agisce su ciò che già esiste. B) La resistenza antibiotica riguarda i batteri, non le cellule del paziente. D) Non c'è alcuna trasformazione del farmaco alla base del fenomeno descritto. E) Il sistema immunitario non produce batteri."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L01",
+    "type": "MULTIPLE_CHOICE",
+    "text": "Perché alcuni antibiotici, come le penicilline, danneggiano i batteri ma in larga misura non le cellule umane?",
+    "options": [
+      {
+        "text": "Perché le cellule umane non hanno membrana plasmatica",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché i batteri hanno un nucleo e le cellule umane no",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché agiscono solo sulle cellule prive di DNA",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché le cellule umane hanno una parete più spessa che le protegge",
+        "isCorrect": false
+      },
+      {
+        "text": "Perché la parete di peptidoglicano è assente nelle cellule umane",
+        "isCorrect": true
+      }
+    ],
+    "spiegazione": "La selettività sfrutta una differenza strutturale tra cellule procariotiche e cellule umane. Bersagli presenti solo nei batteri, o diversi dai nostri (parete, ribosomi batterici), sono la base della tossicità selettiva degli antibiotici.\n\nLe altre: A) Tutte le cellule hanno una membrana plasmatica. B) È il contrario: i batteri non hanno nucleo. C) I batteri possiedono DNA (nel nucleoide). D) Le cellule animali non hanno parete cellulare."
+  }
 ]

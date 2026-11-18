@@ -1,407 +1,422 @@
 [
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "Che cos'è un virione?",
-  "options": [
-   {
-    "text": "l'acido nucleico libero nel citoplasma della cellula infettata",
-    "isCorrect": false
-   },
-   {
-    "text": "la particella virale completa e infettiva",
-    "isCorrect": true
-   },
-   {
-    "text": "il solo capside, privo di genoma",
-    "isCorrect": false
-   },
-   {
-    "text": "il virus durante la fase di replicazione intracellulare",
-    "isCorrect": false
-   },
-   {
-    "text": "l'envelope con le sue glicoproteine",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "Perché gli antibiotici sono inefficaci contro i virus?",
-  "options": [
-   {
-    "text": "perché i virus sviluppano rapidamente resistenza",
-    "isCorrect": false
-   },
-   {
-    "text": "perché i virus si trovano solo all'interno del nucleo",
-    "isCorrect": false
-   },
-   {
-    "text": "perché gli antibiotici sono inattivati dal capside",
-    "isCorrect": false
-   },
-   {
-    "text": "perché nei virus mancano i bersagli degli antibiotici",
-    "isCorrect": true
-   },
-   {
-    "text": "perché i virus sono troppo piccoli per essere raggiunti",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "Dell'envelope di un virus animale, che cosa è codificato dal virus?",
-  "options": [
-   {
-    "text": "le glicoproteine, ma non i lipidi",
-    "isCorrect": true
-   },
-   {
-    "text": "i lipidi, ma non le glicoproteine",
-    "isCorrect": false
-   },
-   {
-    "text": "sia i lipidi sia le glicoproteine",
-    "isCorrect": false
-   },
-   {
-    "text": "nessuna delle due componenti",
-    "isCorrect": false
-   },
-   {
-    "text": "solo la proteina del capside",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "Quale tra i seguenti virus è nudo, con genoma a dsDNA circolare?",
-  "options": [
-   {
-    "text": "adenovirus",
-    "isCorrect": false
-   },
-   {
-    "text": "herpesvirus",
-    "isCorrect": false
-   },
-   {
-    "text": "virus dell'influenza",
-    "isCorrect": false
-   },
-   {
-    "text": "HIV",
-    "isCorrect": false
-   },
-   {
-    "text": "papillomavirus",
-    "isCorrect": true
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "Qual è il criterio di classificazione di Baltimore?",
-  "options": [
-   {
-    "text": "la forma del virione",
-    "isCorrect": false
-   },
-   {
-    "text": "la malattia causata",
-    "isCorrect": false
-   },
-   {
-    "text": "come ottiene il proprio mRNA",
-    "isCorrect": true
-   },
-   {
-    "text": "la specie ospite",
-    "isCorrect": false
-   },
-   {
-    "text": "la presenza dell'envelope",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "Perché l'RNA genomico purificato di un virus a ssRNA(+) può avviare un'infezione?",
-  "options": [
-   {
-    "text": "perché il genoma è già mRNA e viene tradotto",
-    "isCorrect": true
-   },
-   {
-    "text": "perché contiene già nel genoma la trascrittasi inversa",
-    "isCorrect": false
-   },
-   {
-    "text": "perché si integra nel genoma cellulare",
-    "isCorrect": false
-   },
-   {
-    "text": "perché è complementare all'mRNA",
-    "isCorrect": false
-   },
-   {
-    "text": "perché la cellula possiede una RdRp",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "Quale virus ha genoma ssRNA(−) e porta nel virione la RNA polimerasi RNA-dipendente?",
-  "options": [
-   {
-    "text": "poliovirus",
-    "isCorrect": false
-   },
-   {
-    "text": "virus dell'epatite C",
-    "isCorrect": false
-   },
-   {
-    "text": "virus dell'influenza",
-    "isCorrect": true
-   },
-   {
-    "text": "papillomavirus",
-    "isCorrect": false
-   },
-   {
-    "text": "parvovirus",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "Perché i poxvirus, virus a DNA, portano nel virione un proprio sistema di trascrizione?",
-  "options": [
-   {
-    "text": "perché il loro DNA è a singolo filamento",
-    "isCorrect": false
-   },
-   {
-    "text": "perché replicano nel citoplasma",
-    "isCorrect": true
-   },
-   {
-    "text": "perché hanno un genoma a RNA",
-    "isCorrect": false
-   },
-   {
-    "text": "perché si integrano nel cromosoma",
-    "isCorrect": false
-   },
-   {
-    "text": "perché non hanno envelope",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "Che cosa caratterizza un fago temperato?",
-  "options": [
-   {
-    "text": "compie sempre il ciclo litico",
-    "isCorrect": false
-   },
-   {
-    "text": "non possiede capside",
-    "isCorrect": false
-   },
-   {
-    "text": "infetta solo cellule eucariotiche",
-    "isCorrect": false
-   },
-   {
-    "text": "può integrarsi come profago",
-    "isCorrect": true
-   },
-   {
-    "text": "è privo di acido nucleico",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "Nell'induzione di un profago λ, quale evento è corretto?",
-  "options": [
-   {
-    "text": "cI si accumula e blocca Cro",
-    "isCorrect": false
-   },
-   {
-    "text": "la cellula batterica si divide e il profago è degradato",
-    "isCorrect": false
-   },
-   {
-    "text": "il DNA del fago si trasforma in RNA",
-    "isCorrect": false
-   },
-   {
-    "text": "il fago acquisisce l'envelope",
-    "isCorrect": false
-   },
-   {
-    "text": "RecA favorisce l'autoclivaggio di cI e Cro prevale",
-    "isCorrect": true
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "Che cos'è il provirus?",
-  "options": [
-   {
-    "text": "DNA retrovirale integrato nel genoma ospite",
-    "isCorrect": true
-   },
-   {
-    "text": "il genoma a RNA di HIV libero nel citoplasma",
-    "isCorrect": false
-   },
-   {
-    "text": "il DNA di un fago integrato nel cromosoma batterico",
-    "isCorrect": false
-   },
-   {
-    "text": "un virione immaturo",
-    "isCorrect": false
-   },
-   {
-    "text": "l'envelope di un retrovirus",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "Quali corecettori usa HIV-1 insieme a CD4?",
-  "options": [
-   {
-    "text": "ACE2 o TMPRSS2",
-    "isCorrect": false
-   },
-   {
-    "text": "acido sialico",
-    "isCorrect": false
-   },
-   {
-    "text": "CCR5 o CXCR4",
-    "isCorrect": true
-   },
-   {
-    "text": "clatrina",
-    "isCorrect": false
-   },
-   {
-    "text": "catepsina L",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "Quale affermazione sulla gemmazione di HIV è corretta?",
-  "options": [
-   {
-    "text": "il virione che gemma è già pienamente infettivo",
-    "isCorrect": false
-   },
-   {
-    "text": "l'envelope deriva dalla membrana nucleare",
-    "isCorrect": false
-   },
-   {
-    "text": "la gemmazione avviene sempre con lisi della cellula",
-    "isCorrect": false
-   },
-   {
-    "text": "l'envelope viene dalla membrana plasmatica",
-    "isCorrect": true
-   },
-   {
-    "text": "la proteasi agisce prima dell'ingresso nella cellula",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "A quale gruppo di Baltimore appartiene il virus dell'epatite B?",
-  "options": [
-   {
-    "text": "VII (dsDNA parziale con RT)",
-    "isCorrect": true
-   },
-   {
-    "text": "VI (ssRNA(+) con trascrittasi inversa)",
-    "isCorrect": false
-   },
-   {
-    "text": "I (dsDNA senza trascrittasi inversa)",
-    "isCorrect": false
-   },
-   {
-    "text": "IV (ssRNA(+))",
-    "isCorrect": false
-   },
-   {
-    "text": "V (ssRNA(−))",
-    "isCorrect": false
-   }
-  ]
- },
- {
-  "subject": "Biologia",
-  "topic": "SF-BIO-01-L04",
-  "text": "Che ruolo ha il pH acido dell'endosoma nell'ingresso del virus dell'influenza?",
-  "options": [
-   {
-    "text": "degrada il genoma virale",
-    "isCorrect": false
-   },
-   {
-    "text": "fa cambiare forma all'emoagglutinina",
-    "isCorrect": true
-   },
-   {
-    "text": "è necessario per il legame all'acido sialico",
-    "isCorrect": false
-   },
-   {
-    "text": "impedisce la fusione",
-    "isCorrect": false
-   },
-   {
-    "text": "permette l'integrazione nel DNA cellulare",
-    "isCorrect": false
-   }
-  ]
- }
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "Che cos'è un virione?",
+    "options": [
+      {
+        "text": "l'acido nucleico libero nel citoplasma della cellula infettata",
+        "isCorrect": false
+      },
+      {
+        "text": "la particella virale completa e infettiva",
+        "isCorrect": true
+      },
+      {
+        "text": "il solo capside, privo di genoma",
+        "isCorrect": false
+      },
+      {
+        "text": "il virus durante la fase di replicazione intracellulare",
+        "isCorrect": false
+      },
+      {
+        "text": "l'envelope con le sue glicoproteine",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Il virione è la particella completa e infettiva; nella cellula, durante la replicazione, non esiste più come tale."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "Perché gli antibiotici sono inefficaci contro i virus?",
+    "options": [
+      {
+        "text": "perché i virus sviluppano rapidamente resistenza",
+        "isCorrect": false
+      },
+      {
+        "text": "perché i virus si trovano solo all'interno del nucleo",
+        "isCorrect": false
+      },
+      {
+        "text": "perché gli antibiotici sono inattivati dal capside",
+        "isCorrect": false
+      },
+      {
+        "text": "perché nei virus mancano i bersagli degli antibiotici",
+        "isCorrect": true
+      },
+      {
+        "text": "perché i virus sono troppo piccoli per essere raggiunti",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Gli antibiotici colpiscono bersagli batterici assenti nei virus; non è una questione di resistenza."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "Dell'envelope di un virus animale, che cosa è codificato dal virus?",
+    "options": [
+      {
+        "text": "le glicoproteine, ma non i lipidi",
+        "isCorrect": true
+      },
+      {
+        "text": "i lipidi, ma non le glicoproteine",
+        "isCorrect": false
+      },
+      {
+        "text": "sia i lipidi sia le glicoproteine",
+        "isCorrect": false
+      },
+      {
+        "text": "nessuna delle due componenti",
+        "isCorrect": false
+      },
+      {
+        "text": "solo la proteina del capside",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "I lipidi sono di origine cellulare, le glicoproteine sono codificate dal virus."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "Quale tra i seguenti virus è nudo, con genoma a dsDNA circolare?",
+    "options": [
+      {
+        "text": "adenovirus",
+        "isCorrect": false
+      },
+      {
+        "text": "herpesvirus",
+        "isCorrect": false
+      },
+      {
+        "text": "virus dell'influenza",
+        "isCorrect": false
+      },
+      {
+        "text": "HIV",
+        "isCorrect": false
+      },
+      {
+        "text": "papillomavirus",
+        "isCorrect": true
+      }
+    ],
+    "spiegazione": "HPV è nudo con dsDNA circolare. Adenovirus è nudo ma con DNA lineare; herpes è rivestito; influenza e HIV sono a RNA."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "Qual è il criterio di classificazione di Baltimore?",
+    "options": [
+      {
+        "text": "la forma del virione",
+        "isCorrect": false
+      },
+      {
+        "text": "la malattia causata",
+        "isCorrect": false
+      },
+      {
+        "text": "come ottiene il proprio mRNA",
+        "isCorrect": true
+      },
+      {
+        "text": "la specie ospite",
+        "isCorrect": false
+      },
+      {
+        "text": "la presenza dell'envelope",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Baltimore classifica secondo il percorso genoma → mRNA."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "Perché l'RNA genomico purificato di un virus a ssRNA(+) può avviare un'infezione?",
+    "options": [
+      {
+        "text": "perché il genoma è già mRNA e viene tradotto",
+        "isCorrect": true
+      },
+      {
+        "text": "perché contiene già nel genoma la trascrittasi inversa",
+        "isCorrect": false
+      },
+      {
+        "text": "perché si integra nel genoma cellulare",
+        "isCorrect": false
+      },
+      {
+        "text": "perché è complementare all'mRNA",
+        "isCorrect": false
+      },
+      {
+        "text": "perché la cellula possiede una RdRp",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Il genoma (+) è già mRNA: viene tradotto e produce la RdRp necessaria alla replicazione."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "Quale virus ha genoma ssRNA(−) e porta nel virione la RNA polimerasi RNA-dipendente?",
+    "options": [
+      {
+        "text": "poliovirus",
+        "isCorrect": false
+      },
+      {
+        "text": "virus dell'epatite C",
+        "isCorrect": false
+      },
+      {
+        "text": "virus dell'influenza",
+        "isCorrect": true
+      },
+      {
+        "text": "papillomavirus",
+        "isCorrect": false
+      },
+      {
+        "text": "parvovirus",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "L'influenza è ssRNA(−) e porta la RdRp nel virione; poliovirus ed HCV sono (+); HPV e parvovirus sono a DNA."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "Perché i poxvirus, virus a DNA, portano nel virione un proprio sistema di trascrizione?",
+    "options": [
+      {
+        "text": "perché il loro DNA è a singolo filamento",
+        "isCorrect": false
+      },
+      {
+        "text": "perché replicano nel citoplasma",
+        "isCorrect": true
+      },
+      {
+        "text": "perché hanno un genoma a RNA",
+        "isCorrect": false
+      },
+      {
+        "text": "perché si integrano nel cromosoma",
+        "isCorrect": false
+      },
+      {
+        "text": "perché non hanno envelope",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Il citoplasma non contiene le polimerasi nucleari: i poxvirus codificano e trasportano il proprio sistema enzimatico."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "Che cosa caratterizza un fago temperato?",
+    "options": [
+      {
+        "text": "compie sempre il ciclo litico",
+        "isCorrect": false
+      },
+      {
+        "text": "non possiede capside",
+        "isCorrect": false
+      },
+      {
+        "text": "infetta solo cellule eucariotiche",
+        "isCorrect": false
+      },
+      {
+        "text": "può integrarsi come profago",
+        "isCorrect": true
+      },
+      {
+        "text": "è privo di acido nucleico",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "I fagi temperati possono scegliere tra lisogenia (profago) e ciclo litico."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "Nell'induzione di un profago λ, quale evento è corretto?",
+    "options": [
+      {
+        "text": "cI si accumula e blocca Cro",
+        "isCorrect": false
+      },
+      {
+        "text": "la cellula batterica si divide e il profago è degradato",
+        "isCorrect": false
+      },
+      {
+        "text": "il DNA del fago si trasforma in RNA",
+        "isCorrect": false
+      },
+      {
+        "text": "il fago acquisisce l'envelope",
+        "isCorrect": false
+      },
+      {
+        "text": "RecA favorisce l'autoclivaggio di cI e Cro prevale",
+        "isCorrect": true
+      }
+    ],
+    "spiegazione": "Il danno al DNA attiva RecA, che favorisce l'autoclivaggio di cI; la caduta di cI libera i geni litici, Cro prevale e Int/Xis staccano il profago."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "Che cos'è il provirus?",
+    "options": [
+      {
+        "text": "DNA retrovirale integrato nel genoma ospite",
+        "isCorrect": true
+      },
+      {
+        "text": "il genoma a RNA di HIV libero nel citoplasma",
+        "isCorrect": false
+      },
+      {
+        "text": "il DNA di un fago integrato nel cromosoma batterico",
+        "isCorrect": false
+      },
+      {
+        "text": "un virione immaturo",
+        "isCorrect": false
+      },
+      {
+        "text": "l'envelope di un retrovirus",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Il provirus è DNA derivato da un retrovirus integrato in una cellula animale (C descrive il profago)."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "Quali corecettori usa HIV-1 insieme a CD4?",
+    "options": [
+      {
+        "text": "ACE2 o TMPRSS2",
+        "isCorrect": false
+      },
+      {
+        "text": "acido sialico",
+        "isCorrect": false
+      },
+      {
+        "text": "CCR5 o CXCR4",
+        "isCorrect": true
+      },
+      {
+        "text": "clatrina",
+        "isCorrect": false
+      },
+      {
+        "text": "catepsina L",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "HIV-1 usa CD4 più CCR5 o CXCR4; ACE2 appartiene a SARS-CoV-2, l'acido sialico all'influenza."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "Quale affermazione sulla gemmazione di HIV è corretta?",
+    "options": [
+      {
+        "text": "il virione che gemma è già pienamente infettivo",
+        "isCorrect": false
+      },
+      {
+        "text": "l'envelope deriva dalla membrana nucleare",
+        "isCorrect": false
+      },
+      {
+        "text": "la gemmazione avviene sempre con lisi della cellula",
+        "isCorrect": false
+      },
+      {
+        "text": "l'envelope viene dalla membrana plasmatica",
+        "isCorrect": true
+      },
+      {
+        "text": "la proteasi agisce prima dell'ingresso nella cellula",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "L'envelope viene dalla membrana plasmatica; il virione che gemma è immaturo e diventa infettivo dopo il taglio proteolitico operato dalla proteasi."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "A quale gruppo di Baltimore appartiene il virus dell'epatite B?",
+    "options": [
+      {
+        "text": "VII (dsDNA parziale con RT)",
+        "isCorrect": true
+      },
+      {
+        "text": "VI (ssRNA(+) con trascrittasi inversa)",
+        "isCorrect": false
+      },
+      {
+        "text": "I (dsDNA senza trascrittasi inversa)",
+        "isCorrect": false
+      },
+      {
+        "text": "IV (ssRNA(+))",
+        "isCorrect": false
+      },
+      {
+        "text": "V (ssRNA(−))",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "HBV è un virus a DNA parzialmente a doppio filamento che usa un intermedio a RNA e la trascrittasi inversa (gruppo VII)."
+  },
+  {
+    "subject": "Biologia",
+    "topic": "SF-BIO-01-L04",
+    "text": "Che ruolo ha il pH acido dell'endosoma nell'ingresso del virus dell'influenza?",
+    "options": [
+      {
+        "text": "degrada il genoma virale",
+        "isCorrect": false
+      },
+      {
+        "text": "fa cambiare forma all'emoagglutinina",
+        "isCorrect": true
+      },
+      {
+        "text": "è necessario per il legame all'acido sialico",
+        "isCorrect": false
+      },
+      {
+        "text": "impedisce la fusione",
+        "isCorrect": false
+      },
+      {
+        "text": "permette l'integrazione nel DNA cellulare",
+        "isCorrect": false
+      }
+    ],
+    "spiegazione": "Il pH acido innesca il cambiamento conformazionale dell'emoagglutinina e la fusione con la membrana dell'endosoma."
+  }
 ]

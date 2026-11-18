@@ -26,6 +26,8 @@ type ImportedQuestion = {
    * (vedi src/lib/question-pool.ts).
    */
   topic?: string;
+  /** Perche la risposta giusta e giusta: si mostra solo nella correzione. */
+  spiegazione?: string;
   options: ImportedOption[];
 };
 
@@ -64,6 +66,7 @@ async function main() {
           type: q.type ?? "MULTIPLE_CHOICE",
           subject: q.subject,
           topic: q.topic ?? null,
+          spiegazione: q.spiegazione ?? null,
           text: q.text,
           order: i + 1,
           options: {

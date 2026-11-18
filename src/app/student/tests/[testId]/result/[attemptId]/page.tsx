@@ -272,6 +272,19 @@ export default async function AttemptResultPage({
                   })}
                 </ul>
               )}
+
+              {/* La spiegazione sta qui e non altrove: dopo le alternative, dove
+                  lo studente ha appena visto che cosa aveva scelto e che cosa
+                  era giusto. È il momento in cui la domanda «perché?» esiste
+                  davvero. Durante la prova non si vede mai. */}
+              {answer.question.spiegazione && (
+                <div className="mt-3 rounded-2xl bg-brand-tint px-4 py-3">
+                  <p className="text-xs font-bold uppercase tracking-wide text-brand-strong">Perché</p>
+                  <p className="mt-1 whitespace-pre-line text-sm leading-relaxed">
+                    {answer.question.spiegazione}
+                  </p>
+                </div>
+              )}
             </div>
           );
         })}
