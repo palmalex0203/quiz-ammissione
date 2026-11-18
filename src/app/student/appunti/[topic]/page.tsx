@@ -8,7 +8,7 @@ import { poolCounts } from "@/lib/question-pool";
 import { percorsoMateria } from "@/lib/appunti-materie";
 import { durata, lezioniDiArgomento } from "@/lib/lezioni";
 import { esercitazioneDellaDispensa } from "@/lib/esercitazione-dispensa";
-import { generateTopicPractice } from "@/app/student/dashboard/actions";
+import { generateTopicPractice, startAttempt } from "@/app/student/dashboard/actions";
 
 /*
  * L'appunto di ripasso di un argomento. In fondo c'è il pulsante per allenarsi
@@ -119,15 +119,19 @@ export default async function StudentNotePage({ params }: { params: Promise<{ to
                 <p className="font-display text-lg font-bold">Ora provaci</p>
                 <p className="mt-0.5 text-sm text-white/90">
                   Le {suaEsercitazione.domande} domande di questa lezione, una alla volta. La correzione
-                  commentata arriva alla fine.
+                  arriva alla fine.
                 </p>
               </div>
-              <Link
-                href={`/student/tests/${suaEsercitazione.id}/take`}
-                className="btn btn-on-brand w-full text-center sm:w-auto"
-              >
-                Comincia
-              </Link>
+              {/* Un'esercitazione non si apre andando al suo indirizzo: la pagina
+                  della prova pretende un tentativo già aperto, e senza rimanda
+                  alla schermata iniziale. Il tentativo lo crea startAttempt, la
+                  stessa azione usata dalle schede in Esercitati. */}
+              <form action={startAttempt}>
+                <input type="hidden" name="testId" value={suaEsercitazione.id} />
+                <SubmitButton pendingText="Preparo le domande…" className="btn btn-on-brand w-full sm:w-auto">
+                  Comincia
+                </SubmitButton>
+              </form>
             </div>
           )}
 

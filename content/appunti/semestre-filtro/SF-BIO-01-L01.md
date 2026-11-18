@@ -10,7 +10,7 @@ fonti:
 
 **L'albero della vita, gli organismi e la teoria cellulare. Le proprietà fondamentali della materia vivente.** Unità didattica 1: Le basi dell'organizzazione biologica e molecolare della vita.
 
-**Come usare questa dispensa:** guarda la videolezione, studia una sezione alla volta (le figure sono quelle delle slide), e quando arrivi in fondo premi «Ora provaci»: le venti domande di questa lezione, una alla volta, con la correzione commentata alla fine.
+**Come usare questa dispensa:** guarda la videolezione, studia una sezione alla volta (le figure sono quelle delle slide), e quando arrivi in fondo premi «Ora provaci»: le venti domande di questa lezione, una alla volta, e la correzione alla fine.
 
 📑 **[Le slide proiettate a lezione](/appunti/slide/sf-bio-01-l01.pdf)** — 16 diapositive in PDF, si aprono in una scheda nuova. Servono per il ripasso veloce: la dispensa spiega, le slide riassumono.
 
@@ -597,7 +597,7 @@ Ciascun collegamento serve a comprendere meglio un concetto biologico della lezi
 
 ## 14. Mettiti alla prova
 
-Le 20 domande di questa lezione non stanno più qui sotto: le trovi nel riquadro **«Ora provaci»** in fondo alla pagina, una alla volta, con la correzione commentata alla fine.
+Le 20 domande di questa lezione non stanno più qui sotto: le trovi nel riquadro **«Ora provaci»** in fondo alla pagina, una alla volta, e la correzione alla fine.
 
 Era un cambiamento necessario. Con domanda e soluzione sulla stessa pagina l'occhio arriva alla risposta prima che il ragionamento sia finito, e si esce convinti di aver capito senza essersi mai messi alla prova. Le stesse domande, somministrate una per volta, dicono la verità.
 
