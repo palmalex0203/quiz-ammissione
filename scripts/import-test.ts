@@ -17,7 +17,7 @@ type ImportedOption = { text: string; isCorrect: boolean };
 type ImportedQuestion = {
   subject: string;
   text: string;
-  type?: "MULTIPLE_CHOICE" | "TRUE_FALSE";
+  type?: "MULTIPLE_CHOICE" | "TRUE_FALSE" | "COMPLETAMENTO";
   /**
    * L'argomento a cui la domanda appartiene. Per le esercitazioni ricavate da
    * una dispensa è il codice intero della dispensa (SF-BIO-01-L01), che è anche
@@ -42,10 +42,24 @@ async function main() {
   const questions: ImportedQuestion[] = JSON.parse(readFileSync(jsonPath, "utf-8"));
 
   for (const q of questions) {
-    if (q.options.length < 2) throw new Error(`Domanda con meno di 2 opzioni: ${q.text.slice(0, 60)}`);
-    const correctCount = q.options.filter((o) => o.isCorrect).length;
-    if (correctCount !== 1) {
-      throw new Error(`Domanda con ${correctCount} risposte corrette (attesa 1): ${q.text.slice(0, 60)}`);
+    const dove = q.text.slice(0, 60);
+    const corrette = q.options.filter((o) => o.isCorrect).length;
+
+    if (q.type === "COMPLETAMENTO") {
+      // Qui lo studente scrive: in `options` non ci sono alternative fra cui
+      // scegliere ma le forme di risposta che si accettano — «3,2» e «3.2»,
+      // «kelvin» e «K» — tutte corrette, la prima è quella mostrata nella
+      // correzione. Una sola riga va benissimo.
+      if (q.options.length === 0) throw new Error(`Domanda a completamento senza risposte accettate: ${dove}`);
+      if (corrette !== q.options.length) {
+        throw new Error(`Domanda a completamento con una risposta non corretta: ${dove}`);
+      }
+      continue;
+    }
+
+    if (q.options.length < 2) throw new Error(`Domanda con meno di 2 opzioni: ${dove}`);
+    if (corrette !== 1) {
+      throw new Error(`Domanda con ${corrette} risposte corrette (attesa 1): ${dove}`);
     }
   }
 

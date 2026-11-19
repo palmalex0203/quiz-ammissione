@@ -10,7 +10,7 @@ fonti:
 
 **Il linguaggio con cui si scrive la fisica: lettere al posto dei numeri, e uguaglianze da risolvere.** Lezione 1 del corso di Fisica, parte di matematica.
 
-**Come usare questa dispensa:** leggila una sezione alla volta, con carta e penna accanto — la matematica non si impara guardandola. Alla fine di ogni sezione rifai da solo gli esempi, coprendo il procedimento. Poi rispondi alle domande della sezione 16 senza guardare le soluzioni, e controllale nella 17. Quando hai finito, fai l'esercitazione **«Equazioni e sistemi»** che trovi in Esercitati.
+**Come usare questa dispensa:** leggila una sezione alla volta, con carta e penna accanto — la matematica non si impara guardandola. Alla fine di ogni sezione rifai da solo gli esempi, coprendo il procedimento. Quando arrivi in fondo premi **«Ora provaci»**: le undici domande di questa lezione, una alla volta, con la spiegazione alla fine. Poi, in Esercitati, c'è anche **«Equazioni e sistemi»** del docente.
 
 ## 1. Perché la matematica in un corso di fisica
 
@@ -546,46 +546,19 @@ Esempio: per quali k l'equazione x² = k + 2 ha due radici reali distinte? È un
 
 ## 16. Mettiti alla prova
 
-Rispondi senza guardare le soluzioni, poi controlla nella sezione 17.
+Le domande di questa lezione non stanno più qui sotto: le trovi nel riquadro **«Ora provaci»** in fondo alla pagina, una alla volta, con la correzione e la spiegazione alla fine. Sei sono a scelta multipla, cinque chiedono di scrivere la risposta — come le domande a completamento della prova vera.
 
-1. Riduci in forma normale: 5a²b − 3ab² + 2a²b
-2. Calcola (−3x²y)³
-3. Sviluppa (2a − 3b)²
-4. Scomponi 9x² − 25
-5. Qual è il resto della divisione (x³ + 2x − 3) : (x − 1)? Il polinomio è divisibile?
-6. Risolvi: 3(x − 2) = 5x + 4
-7. Determina il dominio e risolvi: 2/(x − 3) = 1
-8. Risolvi il sistema: 3x + y = 10 e x − 2y = −6
-9. Risolvi: 2x² − 7x + 3 = 0
-10. Senza risolverla, di' quante soluzioni reali ha x² − 4x + 7 = 0
-11. Due numeri hanno somma 7 e prodotto 12. Quali sono?
-12. Discuti al variare di a: (a − 2)x = a² − 4
+Era un cambiamento necessario. Con domanda e soluzione sulla stessa pagina l'occhio arriva alla risposta prima che il ragionamento sia finito, e si esce convinti di aver capito senza essersi mai messi alla prova.
 
-## 17. Soluzioni
+Le ritrovi anche in **Esercitati → Fisica**, insieme all'esercitazione **«Equazioni e sistemi»** del docente.
 
-**1.** 5a²b e 2a²b sono simili, perché hanno la stessa parte letterale a²b, e si sommano; −3ab² non è simile a nessuno dei due e resta dove sta. Quindi **7a²b − 3ab²**.
+### Una domanda che resta qui
 
-**2.** Esponente a tutto, segno compreso: (−3)³ = −27, e gli esponenti si moltiplicano. **−27x⁶y³**.
+Questa chiede un ragionamento disteso, e una risposta da scrivere a mano non si può correggere in automatico.
 
-**3.** Quadrato del primo, quadrato del secondo, doppio prodotto col segno: **4a² − 12ab + 9b²**.
+**Discuti al variare di a l'equazione (a − 2)x = a² − 4.**
 
-**4.** È una differenza di quadrati, 9x² = (3x)² e 25 = 5²: **(3x − 5)(3x + 5)**.
-
-**5.** Per il teorema del resto basta calcolare P(1) = 1 + 2 − 3 = **0**. Resto zero, quindi **sì, è divisibile** per (x − 1).
-
-**6.** 3x − 6 = 5x + 4 → 3x − 5x = 4 + 6 → −2x = 10 → **x = −5**.
-
-**7.** Condizione di esistenza: x ≠ 3, quindi D = R − {3}. Moltiplicando per (x − 3): 2 = x − 3 → **x = 5**, che è accettabile perché diverso da 3.
-
-**8.** Dalla prima: y = 10 − 3x. Sostituendo: x − 2(10 − 3x) = −6 → x − 20 + 6x = −6 → 7x = 14 → **x = 2**, e quindi **y = 4**. Verifica: 3·2 + 4 = 10 ✓ e 2 − 8 = −6 ✓.
-
-**9.** Δ = 49 − 24 = 25, √25 = 5. x = (7 ± 5)/4, cioè **x = 3** e **x = ½**.
-
-**10.** Δ = 16 − 28 = −12, negativo: **nessuna soluzione reale**. Non serve calcolare altro.
-
-**11.** Sono le soluzioni di x² − 7x + 12 = 0, cioè **3 e 4**.
-
-**12.** Per ricavare x bisogna dividere per (a − 2), che può valere zero. Se a ≠ 2, allora x = (a² − 4)/(a − 2) = ((a − 2)(a + 2))/(a − 2) = **a + 2**. Se a = 2, l'equazione diventa 0 · x = 0, vera per ogni x: è **indeterminata**.
+*Risposta.* Per ricavare x bisogna dividere per (a − 2), che può valere zero. Se a ≠ 2, allora x = (a² − 4)/(a − 2) = ((a − 2)(a + 2))/(a − 2) = **a + 2**. Se a = 2, l'equazione diventa 0 · x = 0, vera per ogni x: è **indeterminata**.
 
 ## Da verificare prima di pubblicare
 

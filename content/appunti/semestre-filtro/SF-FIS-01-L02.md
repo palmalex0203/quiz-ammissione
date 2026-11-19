@@ -12,7 +12,7 @@ fonti:
 
 **Che cosa significa misurare, quanto ci si può fidare di una misura, e perché per certe grandezze un numero non basta.** Lezione 2 del corso di Fisica.
 
-**Come usare questa dispensa:** le sezioni 10, 11 e 12 vanno rifatte con la calcolatrice in mano, perché sono conti che all'esame si chiedono; le sezioni 7 e 13 sono strumenti che tornano utili per tutto il resto del corso. Alla fine, gli esercizi svolti della sezione 18, le domande della 20 e le soluzioni nella 21. Se non hai ancora letto **Basi matematica 1**, leggila prima: qui si danno per noti le potenze e il calcolo con le lettere.
+**Come usare questa dispensa:** le sezioni 10, 11 e 12 vanno rifatte con la calcolatrice in mano, perché sono conti che all'esame si chiedono; le sezioni 7 e 13 sono strumenti che tornano utili per tutto il resto del corso. Alla fine ci sono gli esercizi svolti della sezione 18; per le domande, premi **«Ora provaci»** in fondo alla pagina. Se non hai ancora letto **Basi matematica 1**, leggila prima: qui si danno per noti le potenze e il calcolo con le lettere.
 
 ## 1. La fisica è una scienza sperimentale
 
@@ -502,64 +502,11 @@ In Fisica, delle 31 domande della prova, **16 sono a completamento**: la rispost
 
 ## 20. Mettiti alla prova
 
-Rispondi senza guardare le soluzioni, poi controlla nella sezione 21.
+Le diciotto domande di questa lezione non stanno più qui sotto: le trovi nel riquadro **«Ora provaci»** in fondo alla pagina, una alla volta, con la correzione e la spiegazione alla fine. Cinque sono a scelta multipla, tredici chiedono di scrivere la risposta — come le domande a completamento della prova vera, che sono dieci su trentuno.
 
-1. Misurare la velocità media di un'auto cronometrando il tempo impiegato a percorrere un chilometro: misura diretta o indiretta?
-2. Quali sono le dimensioni della forza? E quelle della densità?
-3. Una bilancia è tarata male e segna sempre 2 g in più. Che tipo di errore produce? Ripetere la pesata serve?
-4. Da venti misure si ottiene un valore medio di 2,146 cm e una deviazione standard di 0,012 cm. Come si scrive il risultato?
-5. Una misura è scritta l = 3,40 m, senza errore esplicito. Quanto vale l'incertezza sottintesa?
-6. Quale delle due misure è più precisa: (1 ± 0,01) kg oppure (100 ± 0,1) kg?
-7. In una distribuzione gaussiana, che percentuale delle misure cade fra l̄ − σ e l̄ + σ?
-8. La temperatura è una grandezza scalare o vettoriale? E la velocità?
-9. Il prodotto scalare di due vettori non nulli vale zero. Che cosa puoi dire dei due vettori?
-10. Due vettori hanno moduli 3 e 4 e sono perpendicolari. Quanto vale il modulo del loro prodotto vettoriale? E il loro prodotto scalare?
-11. Converti 72 km/h in metri al secondo.
-12. Ricava l'unità di misura S.I. della pressione partendo da forza diviso superficie.
-13. Qual è l'ordine di grandezza di 7,2 × 10⁵?
-14. La formula v = √(2gh) è dimensionalmente corretta per una velocità?
-15. La densità è una grandezza estensiva o intensiva? E la massa?
-16. Quanto valgono sen 30° e cos 60°? E quanto fa sen²θ + cos²θ?
-17. Un vettore ha modulo 10 e forma un angolo di 30° con l'asse x. Quanto valgono le sue componenti?
-18. Due forze di 3 N e 4 N agiscono sullo stesso corpo. Fra quali valori può stare il modulo della risultante?
+Con domanda e soluzione sulla stessa pagina l'occhio arriva alla risposta prima che il ragionamento sia finito: si esce convinti di aver capito senza essersi mai messi alla prova.
 
-## 21. Soluzioni
-
-**1.** **Indiretta.** Non si confronta la velocità con un campione di velocità: si misurano una lunghezza e un tempo, e si ricava la velocità dalla relazione v = s/t.
-
-**2.** Forza = massa × accelerazione = **[M][L][t]⁻²**. Densità = massa / volume = **[M][L]⁻³**.
-
-**3.** È un errore **sistematico**: avviene sempre nello stesso verso. **Ripetere non serve a niente** — tutte le pesate saranno sbagliate di 2 g e la media anche. Si scopre solo cambiando bilancia o azzerandola.
-
-**4.** l = (2,146 ± 0,012) cm, che approssimato si scrive **(2,15 ± 0,01) cm**. Valore e incertezza devono avere la stessa ultima cifra decimale.
-
-**5.** **± 0,01 m.** Senza errore esplicito si intende una unità sull'ultima cifra scritta, e l'ultima cifra è il centesimo. Attenzione: 3,40 m non è la stessa misura di 3,4 m, che varrebbe ± 0,1 m.
-
-**6.** Errori percentuali: (0,01/1)×100 = 1% e (0,1/100)×100 = 0,1%. **La seconda**, pur avendo un errore assoluto dieci volte maggiore.
-
-**7.** Circa il **68%**. Entro 2σ circa il 95%, entro 3σ circa il 99%.
-
-**8.** La temperatura è **scalare**: basta un numero con l'unità. La velocità è **vettoriale**: 50 km/h verso nord e 50 km/h verso sud sono due velocità diverse, anche se il tachimetro segna lo stesso numero.
-
-**9.** Che sono **perpendicolari**. Se a⃗ · b⃗ = |a⃗||b⃗| cos θ è zero e nessuno dei due moduli lo è, allora cos θ = 0, cioè θ = 90°.
-
-**10.** Prodotto vettoriale: |c⃗| = 3 · 4 · sen 90° = 3 · 4 · 1 = **12**. Prodotto scalare: 3 · 4 · cos 90° = **0**. È la regola del riquadro della sezione 17: dove uno è massimo, l'altro è nullo.
-
-**11.** 72 km/h × (10³ m / 1 km) × (1 h / 3600 s) = 72000/3600 = **20 m/s**. In pratica si divide per 3,6: è una conversione che conviene saper fare a mente, perché ricorre in tutti i problemi di cinematica.
-
-**12.** Pressione = forza / superficie = (kg·m·s⁻²) / m² = **kg·m⁻¹·s⁻²**, che si chiama **pascal (Pa)**. Dividendo per m² l'esponente della m passa da +1 a −1.
-
-**13.** Il coefficiente è 7,2, maggiore di 5, quindi si sale di una potenza: l'ordine di grandezza è **10⁶**.
-
-**14.** Sì. g è un'accelerazione, [L][t]⁻², e h una lunghezza, [L]. Il 2 è un numero puro e non ha dimensioni. Quindi √([L][t]⁻² · [L]) = √([L]²[t]⁻²) = **[L][t]⁻¹**, che sono proprio le dimensioni di una velocità.
-
-**15.** La densità è **intensiva**: mezzo litro d'acqua e dieci litri hanno la stessa densità. La massa è **estensiva**: se unisci due corpi, si somma. Coerente con la regola: densità = massa/volume, cioè il rapporto fra due estensive.
-
-**16.** sen 30° = **1/2** e cos 60° = **1/2**: sono uguali perché 30° e 60° sono complementari. sen²θ + cos²θ = **1**, per qualunque θ.
-
-**17.** aₓ = 10 · cos 30° = 10 · 0,87 ≈ **8,7**; a_y = 10 · sen 30° = 10 · 0,5 = **5**. Controllo con Pitagora: √(8,7² + 5²) = √(75,7 + 25) ≈ √100,7 ≈ 10 ✓.
-
-**18.** Fra **1 N e 7 N**: il minimo |4 − 3| = 1 N quando sono opposte, il massimo 4 + 3 = 7 N quando sono concordi. Se fossero perpendicolari varrebbe √(9 + 16) = 5 N.
+Le ritrovi anche in **Esercitati → Fisica**.
 
 ## Da verificare prima di pubblicare
 
@@ -578,4 +525,4 @@ Note per l'insegnante, non visibili agli studenti.
 - **Il valore di g.** Negli esercizi svolti è usato g = 9,8 m/s². Le prove ufficiali a volte usano 9,81 e a volte approssimano a 10. **Da chiedere alla professoressa quale convenzione adottare**, per non confondere gli studenti fra dispensa ed esercitazioni.
 - **L'esercizio 1 della sezione 18 merita una rilettura della professoressa.** È la domanda 5 di Fisica del 2º appello 2025/2026, e la chiave nella nostra banca dati **era sbagliata**: diceva «stessa direzione e versi opposti». È stata corretta il 14 ottobre 2026 dopo il confronto con la correzione commentata di Alpha Test. Il testo si presta davvero a due letture a seconda di dove si mettono le barre del valore assoluto, quindi vale la pena che la veda lei.
 - **I riquadri «Cosa ti chiedono»** citano domande reali dei due appelli 2025/2026, ma **le risposte corrette sono state ricavate da noi** e non sono chiavi ministeriali.
-- **Nessuna esercitazione collegata.** La prima dispensa rimanda a «Equazioni e sistemi»; per questa non c'è ancora un'esercitazione in piattaforma. Le diciotto domande della sezione 20 sono scritte da me e coprono i punti principali, ma non sostituiscono un compito del docente.
+- **Le diciotto domande dell'esercitazione sono scritte da me**, non dal docente, e così le alternative sbagliate delle cinque a scelta multipla. Coprono i punti principali della lezione ma non sostituiscono un compito suo: vanno rilette con quello in mente.

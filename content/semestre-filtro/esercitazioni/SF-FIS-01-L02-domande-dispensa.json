@@ -1,0 +1,340 @@
+[
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "COMPLETAMENTO",
+  "text": "Misurare la velocità media di un'auto cronometrando il tempo impiegato a percorrere un chilometro è una misura ……",
+  "options": [
+   {
+    "text": "indiretta",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Non si confronta la velocità con un campione di velocità: si misurano una lunghezza e un tempo, e la velocità si ricava dalla relazione v = s/t. Una misura è diretta solo quando la grandezza viene confrontata con il proprio campione, come una lunghezza con un metro graduato."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Quali sono le dimensioni della forza e quelle della densità?",
+  "options": [
+   {
+    "text": "[M][L][t]⁻¹ e [M][L]⁻³",
+    "isCorrect": false
+   },
+   {
+    "text": "[M][L][t]⁻² e [M][L]⁻³",
+    "isCorrect": true
+   },
+   {
+    "text": "[M][L][t]⁻² e [M][L]³",
+    "isCorrect": false
+   },
+   {
+    "text": "[M][L]²[t]⁻² e [M][L]³",
+    "isCorrect": false
+   },
+   {
+    "text": "[L][t]⁻² e [M][L]⁻³",
+    "isCorrect": false
+   }
+  ],
+  "spiegazione": "La forza è massa per accelerazione: [M] · [L][t]⁻² = [M][L][t]⁻². La densità è massa diviso volume: [M] / [L]³ = [M][L]⁻³.\n\nLe altre: [t]⁻¹ darebbe una quantità di moto; [L]³ al positivo sarebbe un volume per unità di massa, cioè l'inverso della densità; e togliere [M] alla forza lascerebbe una semplice accelerazione."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "COMPLETAMENTO",
+  "text": "Una bilancia tarata male segna sempre 2 g in più. Il tipo di errore che produce si dice ……",
+  "options": [
+   {
+    "text": "sistematico",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Avviene sempre nello stesso verso, quindi è sistematico. È la differenza che conta di più: gli errori casuali si riducono ripetendo la misura, perché gli scarti in più e in meno si compensano; quelli sistematici no.\n\nRipetere mille volte la pesata darebbe mille valori sbagliati di 2 g, con una media altrettanto sbagliata — e per di più con poca dispersione, che darebbe la falsa impressione di una misura precisa."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Da venti misure si ottiene un valore medio di 2,146 cm e una deviazione standard di 0,012 cm. Come si scrive il risultato?",
+  "options": [
+   {
+    "text": "(2,1 ± 0,1) cm",
+    "isCorrect": false
+   },
+   {
+    "text": "(2,15 ± 0,12) cm",
+    "isCorrect": false
+   },
+   {
+    "text": "(2,15 ± 0,01) cm",
+    "isCorrect": true
+   },
+   {
+    "text": "(2,146 ± 0,01) cm",
+    "isCorrect": false
+   },
+   {
+    "text": "(2,15 ± 0,001) cm",
+    "isCorrect": false
+   }
+  ],
+  "spiegazione": "Il risultato si scrive come valore medio seguito dall'incertezza, e le due parti devono avere la stessa ultima cifra decimale: arrotondando, 2,146 diventa 2,15 e 0,012 diventa 0,01.\n\nLe altre: (2,1 ± 0,1) butta via una cifra che la misura garantisce; (2,15 ± 0,12) sbaglia di un fattore dieci l'incertezza, e (2,15 ± 0,001) la sbaglia nell'altro verso, promettendo una precisione che non c'è; (2,146 ± 0,01) scrive il valore con una cifra in più dell'incertezza, che è proprio l'incoerenza da evitare."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "COMPLETAMENTO",
+  "text": "Se una misura è scritta l = 3,40 m, senza errore esplicito, l'incertezza sottintesa vale ± …… m",
+  "options": [
+   {
+    "text": "0,01",
+    "isCorrect": true
+   },
+   {
+    "text": "0.01",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Senza errore esplicito si intende una unità sull'ultima cifra scritta, e qui l'ultima cifra è il centesimo.\n\nAttenzione: 3,40 m non è la stessa misura di 3,4 m, che varrebbe ± 0,1 m. Lo zero finale non è decorativo — dice che lo strumento arrivava al centimetro."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Quale delle due misure è più precisa: (1 ± 0,01) kg oppure (100 ± 0,1) kg?",
+  "options": [
+   {
+    "text": "(1 ± 0,01) kg",
+    "isCorrect": false
+   },
+   {
+    "text": "sono ugualmente precise",
+    "isCorrect": false
+   },
+   {
+    "text": "dipende dallo strumento",
+    "isCorrect": false
+   },
+   {
+    "text": "(100 ± 0,1) kg",
+    "isCorrect": true
+   },
+   {
+    "text": "non si possono confrontare",
+    "isCorrect": false
+   }
+  ],
+  "spiegazione": "Per confrontare misure diverse serve l'errore percentuale, che è un numero puro: (0,01/1) × 100 = 1% per la prima, (0,1/100) × 100 = 0,1% per la seconda.\n\nLa seconda ha un errore assoluto dieci volte più grande — 100 g contro 10 g — ed è dieci volte più precisa. Confrontare gli errori assoluti avrebbe dato la risposta opposta: è proprio il motivo per cui esiste l'errore percentuale."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "COMPLETAMENTO",
+  "text": "In una distribuzione gaussiana, fra la media meno σ e la media più σ cade circa il ……% delle misure",
+  "options": [
+   {
+    "text": "68",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Circa due misure su tre. Entro 2σ sale a circa il 95%, entro 3σ a circa il 99%.\n\nÈ il motivo per cui scrivere (2,15 ± 0,01) cm ha un significato preciso e non è una formula di cortesia: dichiara dentro quale intervallo cade la maggior parte delle misure."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "COMPLETAMENTO",
+  "text": "La temperatura è una grandezza ……",
+  "options": [
+   {
+    "text": "scalare",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Basta un numero con la sua unità: 20 °C è un'informazione completa.\n\nLa velocità invece è vettoriale: 50 km/h verso nord e 50 km/h verso sud sono due velocità diverse, anche se il tachimetro segna lo stesso numero."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "COMPLETAMENTO",
+  "text": "Se il prodotto scalare di due vettori non nulli vale zero, i due vettori sono ……",
+  "options": [
+   {
+    "text": "perpendicolari",
+    "isCorrect": true
+   },
+   {
+    "text": "ortogonali",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Il prodotto scalare vale |a||b| cos θ. Se è zero e nessuno dei due moduli lo è, allora cos θ = 0, cioè θ = 90°.\n\nÈ il controllo di perpendicolarità più rapido che esista, e compare spesso nelle domande d'esame sotto forma di «che cosa puoi dire dei due vettori?»."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "COMPLETAMENTO",
+  "text": "Due vettori hanno moduli 3 e 4 e sono perpendicolari: il modulo del loro prodotto vettoriale vale ……",
+  "options": [
+   {
+    "text": "12",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Il modulo del prodotto vettoriale è |a||b| sen θ: con θ = 90° il seno vale 1, quindi 3 × 4 × 1 = 12.\n\nNello stesso caso il prodotto scalare vale zero, perché cos 90° = 0. I due prodotti sono complementari: dove uno è massimo, l'altro è nullo."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "COMPLETAMENTO",
+  "text": "Una velocità di 72 km/h espressa in metri al secondo vale ……",
+  "options": [
+   {
+    "text": "20",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "72 × 1000 m diviso 3600 s = 72000/3600 = 20 m/s. In pratica si divide per 3,6.\n\nConviene saperla fare a mente: ricorre in tutti i problemi di cinematica, e sbagliare la conversione significa sbagliare il problema pur avendolo capito."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "COMPLETAMENTO",
+  "text": "L'unità di misura S.I. della pressione, ricavata da forza diviso superficie, si chiama ……",
+  "options": [
+   {
+    "text": "pascal",
+    "isCorrect": true
+   },
+   {
+    "text": "Pa",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Pressione = forza / superficie = (kg·m·s⁻²) / m² = kg·m⁻¹·s⁻², che prende il nome di pascal.\n\nNota che dividendo per m² l'esponente della m passa da +1 a −1: è il passaggio dove si sbaglia più spesso, e la tabella delle dispense riporta proprio qui un refuso da correggere."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "COMPLETAMENTO",
+  "text": "L'ordine di grandezza di 7,2 × 10⁵ è 10 elevato a ……",
+  "options": [
+   {
+    "text": "6",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Il coefficiente 7,2 è maggiore di 5, quindi si sale di una potenza: l'ordine di grandezza è 10⁶.\n\nSe il coefficiente fosse stato minore di 5 — per esempio 3,2 × 10⁵ — l'ordine di grandezza sarebbe rimasto 10⁵."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "COMPLETAMENTO",
+  "text": "La formula v = √(2gh) è dimensionalmente corretta per una velocità? Rispondi sì o no: ……",
+  "options": [
+   {
+    "text": "sì",
+    "isCorrect": true
+   },
+   {
+    "text": "si",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "g è un'accelerazione, [L][t]⁻², e h una lunghezza, [L]; il 2 è un numero puro e non ha dimensioni. Quindi √([L][t]⁻² · [L]) = √([L]²[t]⁻²) = [L][t]⁻¹, che sono proprio le dimensioni di una velocità.\n\nÈ il metodo per scartare le formule sbagliate senza ricordarle: se le dimensioni non tornano, la formula è sbagliata e non serve controllare altro."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "COMPLETAMENTO",
+  "text": "La densità è una grandezza ……",
+  "options": [
+   {
+    "text": "intensiva",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Non dipende da quanta materia c'è: mezzo litro d'acqua ha la stessa densità di dieci litri. La massa invece è estensiva, perché unendo due corpi si somma.\n\nLa regola che fa risparmiare memoria: il rapporto fra due grandezze estensive è intensivo, e la densità è massa diviso volume."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "COMPLETAMENTO",
+  "text": "Quanto vale sen 30°? Scrivi il risultato come frazione o come decimale: ……",
+  "options": [
+   {
+    "text": "1/2",
+    "isCorrect": true
+   },
+   {
+    "text": "0,5",
+    "isCorrect": true
+   },
+   {
+    "text": "0.5",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "È uno dei valori da sapere a memoria, insieme a cos 60°, che vale lo stesso: 30° e 60° sono complementari, e il seno di un angolo è il coseno del suo complementare.\n\nVale sempre anche l'identità fondamentale sen²θ + cos²θ = 1, per qualunque angolo."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Un vettore ha modulo 10 e forma un angolo di 30° con l'asse x. Quanto valgono le sue componenti?",
+  "options": [
+   {
+    "text": "5 lungo x e circa 8,7 lungo y",
+    "isCorrect": false
+   },
+   {
+    "text": "10 lungo x e 0 lungo y",
+    "isCorrect": false
+   },
+   {
+    "text": "circa 8,7 su entrambi gli assi",
+    "isCorrect": false
+   },
+   {
+    "text": "3 lungo x e 4 lungo y",
+    "isCorrect": false
+   },
+   {
+    "text": "circa 8,7 lungo x e 5 lungo y",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "La componente lungo x è a·cos θ = 10 × 0,87 ≈ 8,7; quella lungo y è a·sen θ = 10 × 0,5 = 5.\n\nIl controllo con Pitagora: √(8,7² + 5²) ≈ √100,7 ≈ 10, cioè il modulo di partenza. Invertire seno e coseno è l'errore classico, ed è quello della seconda risposta."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L02",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Due forze di 3 N e 4 N agiscono sullo stesso corpo. Fra quali valori può stare il modulo della risultante?",
+  "options": [
+   {
+    "text": "fra 1 N e 7 N",
+    "isCorrect": true
+   },
+   {
+    "text": "fra 3 N e 4 N",
+    "isCorrect": false
+   },
+   {
+    "text": "fra 0 N e 12 N",
+    "isCorrect": false
+   },
+   {
+    "text": "vale sempre 7 N",
+    "isCorrect": false
+   },
+   {
+    "text": "vale sempre 5 N",
+    "isCorrect": false
+   }
+  ],
+  "spiegazione": "Il minimo è |4 − 3| = 1 N, quando le due forze sono opposte; il massimo è 4 + 3 = 7 N, quando sono concordi. Fra questi due estremi c'è tutto il resto, secondo l'angolo.\n\nLe altre: 7 N e 5 N sono casi particolari — vettori concordi e vettori perpendicolari — non il valore generale; e 12 N sarebbe il prodotto, non una somma."
+ }
+]

@@ -1,0 +1,257 @@
+[
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L01",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Riduci in forma normale: 5a²b − 3ab² + 2a²b",
+  "options": [
+   {
+    "text": "7a²b − 3ab²",
+    "isCorrect": true
+   },
+   {
+    "text": "7a²b + 3ab²",
+    "isCorrect": false
+   },
+   {
+    "text": "4a²b² − 3ab",
+    "isCorrect": false
+   },
+   {
+    "text": "7a⁴b − 3ab²",
+    "isCorrect": false
+   },
+   {
+    "text": "2a³b³ − 3ab",
+    "isCorrect": false
+   }
+  ],
+  "spiegazione": "5a²b e 2a²b sono simili, perché hanno la stessa parte letterale a²b, e si sommano: 5 + 2 = 7. Il termine −3ab² non è simile a nessuno dei due e resta dov'è.\n\nLe altre: sommare monomi non cambia la parte letterale, quindi gli esponenti restano a²b e ab²; e il segno di −3ab² non si tocca, perché non è coinvolto nella somma."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L01",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Calcola (−3x²y)³",
+  "options": [
+   {
+    "text": "−9x⁶y³",
+    "isCorrect": false
+   },
+   {
+    "text": "−27x⁶y³",
+    "isCorrect": true
+   },
+   {
+    "text": "27x⁶y³",
+    "isCorrect": false
+   },
+   {
+    "text": "−27x⁵y³",
+    "isCorrect": false
+   },
+   {
+    "text": "−3x⁶y³",
+    "isCorrect": false
+   }
+  ],
+  "spiegazione": "L'esponente va dato a tutto, segno compreso: (−3)³ = −27. Gli esponenti delle lettere si moltiplicano per 3, quindi x² diventa x⁶ e y diventa y³.\n\nLe altre: −9 verrebbe da (−3)², non dal cubo; +27 richiederebbe un esponente pari, che cancella il meno; x⁵ verrebbe sommando invece di moltiplicare; e lasciare −3 significa non aver elevato il coefficiente."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L01",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Sviluppa (2a − 3b)²",
+  "options": [
+   {
+    "text": "4a² − 6ab + 9b²",
+    "isCorrect": false
+   },
+   {
+    "text": "4a² − 12ab − 9b²",
+    "isCorrect": false
+   },
+   {
+    "text": "4a² − 12ab + 9b²",
+    "isCorrect": true
+   },
+   {
+    "text": "2a² − 12ab + 3b²",
+    "isCorrect": false
+   },
+   {
+    "text": "4a² + 9b²",
+    "isCorrect": false
+   }
+  ],
+  "spiegazione": "Quadrato del primo (2a)² = 4a², quadrato del secondo (−3b)² = +9b², più il doppio prodotto 2·(2a)·(−3b) = −12ab.\n\nLe altre: −6ab è il prodotto semplice, non il doppio; il quadrato del secondo è sempre positivo, anche se il termine era negativo; 2a² e 3b² non elevano i coefficienti; e l'ultima dimentica del tutto il doppio prodotto, che è l'errore più frequente di tutti."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L01",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Scomponi 9x² − 25",
+  "options": [
+   {
+    "text": "(3x − 5)²",
+    "isCorrect": false
+   },
+   {
+    "text": "(3x + 5)²",
+    "isCorrect": false
+   },
+   {
+    "text": "(9x − 25)(9x + 25)",
+    "isCorrect": false
+   },
+   {
+    "text": "(3x − 5)(3x + 5)",
+    "isCorrect": true
+   },
+   {
+    "text": "non si scompone",
+    "isCorrect": false
+   }
+  ],
+  "spiegazione": "È una differenza di quadrati: 9x² = (3x)² e 25 = 5². La regola a² − b² = (a + b)(a − b) dà subito (3x − 5)(3x + 5).\n\nLe altre: i quadrati di binomio svilupperebbero un doppio prodotto che qui non c'è; (9x − 25)(9x + 25) applica la regola ai coefficienti invece che ai quadrati, e darebbe 81x² − 625; e la differenza di due quadrati è sempre scomponibile — a non esserlo è la somma."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L01",
+  "type": "COMPLETAMENTO",
+  "text": "Il resto della divisione (x³ + 2x − 3) : (x − 1) vale ……",
+  "options": [
+   {
+    "text": "0",
+    "isCorrect": true
+   },
+   {
+    "text": "zero",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Per il teorema del resto basta sostituire: il resto della divisione per (x − 1) è P(1) = 1 + 2 − 3 = 0. Non serve eseguire la divisione.\n\nResto zero significa anche che il polinomio è divisibile per (x − 1): è il teorema di Ruffini."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L01",
+  "type": "COMPLETAMENTO",
+  "text": "Risolvi 3(x − 2) = 5x + 4. La soluzione è x = ……",
+  "options": [
+   {
+    "text": "−5",
+    "isCorrect": true
+   },
+   {
+    "text": "-5",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Si svolge la parentesi: 3x − 6 = 5x + 4. Si portano le x a sinistra e i numeri a destra cambiando segno: 3x − 5x = 4 + 6, cioè −2x = 10. Dividendo per −2 si ottiene x = −5."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L01",
+  "type": "COMPLETAMENTO",
+  "text": "Nell'equazione 2/(x − 3) = 1 il dominio esclude x = 3. La soluzione è x = ……",
+  "options": [
+   {
+    "text": "5",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Moltiplicando entrambi i membri per (x − 3) si ottiene 2 = x − 3, da cui x = 5.\n\nIl passaggio che si dimentica è l'ultimo: confrontare la soluzione con i valori esclusi. Qui 5 è diverso da 3, quindi è accettabile. Se fosse venuto x = 3 la soluzione andava scartata e l'equazione sarebbe stata impossibile."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L01",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Risolvi il sistema: 3x + y = 10 e x − 2y = −6",
+  "options": [
+   {
+    "text": "x = 4, y = 2",
+    "isCorrect": false
+   },
+   {
+    "text": "x = 2, y = −4",
+    "isCorrect": false
+   },
+   {
+    "text": "x = 3, y = 1",
+    "isCorrect": false
+   },
+   {
+    "text": "x = −2, y = 4",
+    "isCorrect": false
+   },
+   {
+    "text": "x = 2, y = 4",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Dalla prima equazione si ricava y = 10 − 3x. Sostituendo nella seconda: x − 2(10 − 3x) = −6, cioè x − 20 + 6x = −6, quindi 7x = 14 e x = 2. Da lì y = 10 − 6 = 4.\n\nLa verifica è il modo più rapido per scartare le altre: 3·2 + 4 = 10 ✓ e 2 − 8 = −6 ✓. Nessuna delle altre coppie soddisfa entrambe le equazioni."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L01",
+  "type": "MULTIPLE_CHOICE",
+  "text": "Risolvi: 2x² − 7x + 3 = 0",
+  "options": [
+   {
+    "text": "x = 3, x = ½",
+    "isCorrect": true
+   },
+   {
+    "text": "x = 3, x = 2",
+    "isCorrect": false
+   },
+   {
+    "text": "x = −3, x = −½",
+    "isCorrect": false
+   },
+   {
+    "text": "x = 7, x = 3",
+    "isCorrect": false
+   },
+   {
+    "text": "nessuna soluzione reale",
+    "isCorrect": false
+   }
+  ],
+  "spiegazione": "Il discriminante vale Δ = 49 − 24 = 25, e √25 = 5. La formula risolutiva dà x = (7 ± 5)/4, cioè x = 12/4 = 3 e x = 2/4 = ½.\n\nLe altre: i segni negativi richiederebbero b positivo; 7 e 3 sono i coefficienti, non le soluzioni; e l'ultima è esclusa perché Δ è positivo."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L01",
+  "type": "COMPLETAMENTO",
+  "text": "Quante soluzioni reali ha l'equazione x² − 4x + 7 = 0? ……",
+  "options": [
+   {
+    "text": "nessuna",
+    "isCorrect": true
+   },
+   {
+    "text": "0",
+    "isCorrect": true
+   },
+   {
+    "text": "zero",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "Δ = b² − 4ac = 16 − 28 = −12, cioè negativo. Una radice quadrata di un numero negativo non esiste fra i numeri reali, quindi l'equazione non ha soluzioni reali.\n\nNon serve calcolare altro: il segno del discriminante basta a rispondere, ed è il motivo per cui molte domande d'esame si risolvono in dieci secondi."
+ },
+ {
+  "subject": "Fisica",
+  "topic": "SF-FIS-01-L01",
+  "type": "COMPLETAMENTO",
+  "text": "Due numeri hanno somma 7 e prodotto 12. Il maggiore dei due vale ……",
+  "options": [
+   {
+    "text": "4",
+    "isCorrect": true
+   }
+  ],
+  "spiegazione": "I due numeri sono le soluzioni di x² − sx + p = 0, cioè x² − 7x + 12 = 0: sono 3 e 4, e il maggiore è 4.\n\nSi può anche fare a mente, cercando due numeri che sommati diano 7 e moltiplicati 12 — è proprio l'uso pratico delle relazioni fra somma, prodotto e coefficienti."
+ }
+]
