@@ -10,7 +10,7 @@ fonti:
 
 **Struttura, classificazione, cicli replicativi e interazione con la cellula ospite.** Unità didattica 1: Le basi dell'organizzazione biologica e molecolare della vita.
 
-**Come usare questa dispensa:** è pensata per essere studiata anche senza la videolezione. Ogni capitolo contiene definizioni, meccanismi, schemi, confronti, collegamenti clinici ed errori frequenti. I paragrafi segnati come **approfondimento** — variabilità genetica, viroidi e prioni — sono materiale integrativo e non fanno parte del nucleo della lezione. Quando arrivi in fondo premi **«Ora provaci»**: le quindici domande a scelta multipla di questa lezione, una alla volta. Le domande di ragionamento, di riconoscimento e di confronto restano qui nel capitolo 12, perché richiedono una risposta scritta.
+**Come usare questa dispensa:** è pensata per essere studiata anche senza la videolezione. Ogni capitolo contiene definizioni, meccanismi, schemi, confronti, collegamenti clinici ed errori frequenti. I paragrafi segnati come **approfondimento** — variabilità genetica, viroidi e prioni — sono materiale integrativo e non fanno parte del nucleo della lezione. Quando arrivi in fondo premi **«Ora provaci»**: le ventisette domande di questa lezione, una alla volta, con la spiegazione alla fine.
 
 ## 1. Introduzione ai virus
 
@@ -471,63 +471,13 @@ Un virus ha acido nucleico e proteine; un viroide solo acido nucleico; un prione
 
 ## 12. Mettiti alla prova
 
-Le **quindici domande a scelta multipla** di questa lezione non stanno più qui: le trovi nel riquadro **«Ora provaci»** in fondo alla pagina, una alla volta, e anche in **Esercitati → Biologia**. Con domanda e risposta sulla stessa pagina l'occhio arriva alla soluzione prima che il ragionamento sia finito.
+Le domande di questa lezione non stanno più qui sotto: le trovi tutte nel riquadro **«Ora provaci»** in fondo alla pagina, una alla volta, con la correzione e la spiegazione alla fine. Sono ventisette — venti a scelta multipla e sette da scrivere, come le domande a completamento della prova vera.
 
-Le domande che seguono richiedono invece una risposta **scritta**: tienile qui, con carta e penna. Le risposte sono subito dopo: scrivi la tua prima di leggerle.
+Con domanda e risposta sulla stessa pagina l'occhio arriva alla soluzione prima che il ragionamento sia finito, e si esce convinti di aver capito senza essersi mai messi alla prova.
 
-### 12.1 Cinque domande di ragionamento
+Anche le domande di ragionamento, di riconoscimento e di confronto sono diventate domande dell'esercitazione: dove chiedevano un discorso lungo sono state spezzate in più domande brevi, ciascuna con la sua spiegazione. Per esempio «identifica il virus, il gruppo di Baltimore e i tre enzimi» è diventata una domanda sul virus e una sul gruppo, e il resto sta nella spiegazione.
 
-**R1.** Un virus a ssRNA(−) e uno a ssRNA(+) hanno ciascuno la propria RNA polimerasi RNA-dipendente. Perché solo nel primo caso la polimerasi deve trovarsi già nel virione?
-
-**R2.** Spiega perché nei batteriofagi entra solo il DNA mentre nei virus animali spesso entra l'intero nucleocapside.
-
-**R3.** Un paziente HIV-positivo ha una carica virale ridotta dalla terapia. Perché la terapia non elimina l'infezione, e perché si associano più farmaci?
-
-**R4.** Perché un disinfettante a base alcolica inattiva molti virus rivestiti ma non necessariamente quelli nudi?
-
-**R5.** L'HBV è un virus a DNA, ma è trattato con inibitori della trascrittasi inversa. Come si spiega?
-
-### 12.2 Tre esercizi di riconoscimento
-
-**E1.** Un genoma a DNA lineare entra in un batterio, si circolarizza grazie a estremità complementari, si integra per ricombinazione sito-specifica tra *attP* e *attB* e viene replicato a ogni divisione. Quale ciclo e quale fago sono descritti? Che cosa accade se la cellula riceve una dose di raggi UV?
-
-**E2.** Un virus rivestito lega CD4 e CCR5, si fonde con la membrana plasmatica, retrotrascrive il genoma in DNA, che si integra nel nucleo. Identifica il virus, il gruppo di Baltimore e i tre enzimi virali coinvolti nel ciclo.
-
-**E3.** Un virus si lega all'acido sialico, viene internalizzato in una fossetta rivestita, l'endosoma si acidifica, l'envelope si fonde con la membrana endosomiale. Identifica la modalità di ingresso e un esempio di virus.
-
-### 12.3 Due domande di confronto
-
-**C1.** Confronta virus a RNA(+) (gruppo IV) e RNA(−) (gruppo V) quanto a: infettività del genoma, ordine traduzione/trascrizione, presenza della polimerasi nel virione.
-
-**C2.** Confronta profago e provirus: ospite, origine del DNA, sito di integrazione, destino.
-
-## 13. Le risposte, da leggere dopo
-
-### 13.1 Domande di ragionamento
-
-**R1.** Il genoma (+) è già mRNA: viene tradotto dai ribosomi e produce la polimerasi. Il genoma (−) non può essere tradotto e la cellula non ha una RdRp per trascriverlo: la polimerasi deve quindi essere nel virione per avviare la trascrizione.
-
-**R2.** I fagi devono attraversare una parete batterica: iniettano il DNA e lasciano il capside all'esterno. Le cellule animali non hanno parete; il virus entra per fusione o endocitosi e spesso porta all'interno il nucleocapside, che contiene anche enzimi o proteine utili alle fasi successive.
-
-**R3.** I farmaci agiscono sui cicli in corso; il provirus integrato nelle cellule a lunga vita, latente, non è raggiunto e forma un serbatoio. L'alta variabilità, dovuta alla trascrittasi inversa senza correzione di bozze, selezionerebbe rapidamente varianti resistenti a un singolo farmaco: l'associazione di più farmaci ne riduce la probabilità.
-
-**R4.** L'alcol dissolve l'envelope lipidico, indispensabile per l'infettività dei virus rivestiti. I virus nudi non hanno lipidi e il capside proteico è in generale più robusto, con differenze secondo il disinfettante e la concentrazione.
-
-**R5.** HBV appartiene al gruppo VII: il genoma è DNA, ma la replicazione passa attraverso un RNA pregenomico retrotrascritto in DNA. L'enzima è dunque un bersaglio.
-
-### 13.2 Esercizi di riconoscimento
-
-**E1.** Ciclo lisogenico del fago λ, un fago temperato. Con i raggi UV si attiva la risposta SOS: RecA favorisce l'autoclivaggio del repressore cI, il profago viene indotto, si stacca dal cromosoma (Int e Xis) e inizia il ciclo litico con lisi.
-
-**E2.** HIV-1, gruppo VI di Baltimore. Enzimi: trascrittasi inversa (conversione RNA → DNA), integrasi (inserimento nel genoma), proteasi (maturazione dopo la gemmazione).
-
-**E3.** Endocitosi clatrina-dipendente seguita da fusione nell'endosoma a pH acido; esempio: virus dell'influenza A.
-
-### 13.3 Confronti
-
-**C1.** RNA(+): genoma infettivo, ordine traduzione → replicazione, RdRp prodotta dopo la traduzione e non necessariamente presente nel virione. RNA(−): genoma non infettivo da solo, ordine trascrizione → traduzione, RdRp già nel virione.
-
-**C2.** **Profago**: ospite batterio; DNA di un fago temperato; integrazione sito-specifica (*attP* × *attB*); quiescente, può essere indotto da stress (SOS). **Provirus**: cellula animale; DNA ottenuto da RNA retrovirale per trascrittasi inversa; integrazione in siti variabili per opera dell'integrasi; latente o trascritto, persiste come serbatoio.
+Le ritrovi anche in **Esercitati → Biologia**, fra le esercitazioni del docente.
 
 ## Da verificare prima di pubblicare
 
@@ -538,5 +488,5 @@ Note per l'insegnante, non visibili agli studenti.
 - **Otto tabelle ricostruite a mano.** Nel PDF le tabelle dei capitoli 1, 2 (due), 3, 4, 7, 10 e 11 escono con le colonne mescolate. Le ho ricomposte seguendo l'ordine delle voci. **Le due più fitte meritano un controllo riga per riga: il glossario e soprattutto la tabella dei sette gruppi di Baltimore del capitolo 11**, che ha sette colonne e nel PDF era la più disordinata di tutte.
 - **Le quindici domande a scelta multipla sono state riequilibrate.** Com'erano nel PDF, la risposta giusta era la più lunga nell'80% dei casi e lunga 71 caratteri contro i 31 dei distrattori: chi sceglieva sempre la più lunga prendeva otto su dieci senza sapere niente. Ho riscritto tredici risposte togliendo la spiegazione e tenendo il fatto che discrimina. Ora la giusta è la più lunga nel 20% dei casi, con rapporto 1,09; `verifica-banca.ts` dà «Va bene». **Le tredici riscritture vanno rilette**, perché accorciando una risposta si può perdere una precisazione che la rendeva inequivocabile.
 - **Le spiegazioni delle risposte non sono nella piattaforma.** Le soluzioni commentate del capitolo 13 originale, per le domande a scelta multipla, non hanno un posto dove stare: la tabella delle domande non ha un campo per la spiegazione. Al momento lo studente, finita l'esercitazione, vede qual era la risposta giusta ma non perché. Vale per tutte e tre le esercitazioni ricavate dalle dispense, non solo per questa.
-- **Le domande aperte restano nella dispensa** (capitoli 12 e 13), perché la piattaforma gestisce solo scelta multipla e completamento. Le risposte sono in un capitolo separato, dopo le domande, come nell'originale.
+- **Le dieci domande aperte sono state convertite**, non scartate: cinque ragionamenti sono diventati domande a scelta multipla e i riconoscimenti domande da scrivere, spezzando in più domande quelle che ne chiedevano tre insieme. Le alternative sbagliate di quelle cinque **le ho scritte io**, non il docente, e vanno rilette con quello in mente.
 - **Nessuna presentazione.** Per questa lezione non sono state fornite le slide: il riquadro con il link, presente nelle lezioni 1, 2 e 3, qui non c'è.
